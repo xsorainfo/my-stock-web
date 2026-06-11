@@ -44,11 +44,21 @@
           const changeColor = stock.isUp ? "#e53e3e" : "#00b060"; 
           const cardHtml = `
             <div class="stock-card">
-              <div class="card-header">
-                <span class="stock-code">${stock.code}</span>
-                <span class="stock-name">${stock.name}</span>
+              <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                  <span class="stock-code">${stock.code}</span>
+                  <span class="stock-name">${stock.name}</span>
+                </div>
+                <span style="font-size: 11px; color: #718096; background: #e2e8f0; padding: 2px 6px; border-radius: 4px;">
+                  ${stock.industry}
+                </span>
               </div>
-              <div class="price-section">
+              
+              <div style="font-size: 12px; color: #4a5568; background: #f7fafc; padding: 8px 12px; border-radius: 8px; margin: 8px 0; border-left: 3px solid #3182ce;">
+                <strong>特色：</strong>${stock.feature}
+              </div>
+          
+              <div class="price-section" style="margin-top: 12px;">
                 <div class="current-price">${stock.price}</div>
                 <div style="color: ${changeColor}; font-weight: 500;">${stock.change}</div>
               </div>
