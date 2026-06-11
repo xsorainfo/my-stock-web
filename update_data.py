@@ -37,44 +37,57 @@ WATCHLIST = [
     {"symbol": "6758.T", "name": "索尼集团 (日)", "industry": "5. 边缘AI与智能终端", "feature": "全球图像传感器(CIS)绝对霸主，端侧机器人与智能视觉核心"},
     {"symbol": "6981.T", "name": "村田制作所 (日)", "industry": "5. 边缘AI与智能终端", "feature": "全球MLCC电容之王，AI终端硬件升级换代的刚需元器件"}
 ]
-
 def make_ai_news(stock_data):
     if not SEC_VAL:
-        return "💡 终端同步就绪。全球多头防御格局整体维持，AI芯片、先进材料与数据中心电网异动显著，保持跟踪。"
+        return "💡 终端同步就绪。全生态多头防御格局整体维持，保持结构性跟踪。"
     
-    # 过滤掉异常数据，只保留有效标的
     valid_stocks = [s for s in stock_data if "nan" not in s['change']]
     if not valid_stocks: valid_stocks = stock_data
     
-    # 提取前 8 强核心标的的最新动态（包含股价涨跌、估值和回撤情况）
     lines = [f"{s['name']}(涨跌:{s['change']}, PER:{s['per']}, 距52周高:{s['distHigh']})" for s in valid_stocks[:8]]
     
-    # 🧠 终极重构：赋予 AI 强烈的多头阵营复盘逻辑、周期感知与技术壁垒拆解能力
     msg = (
         f"你是一位管理百亿资金、专注于半导体与全球硬科技的顶级对冲基金经理。\n"
         f"请结合今日盘面数据，撰写一份140字以内的【盘后多头思维核心简报】。\n"
         f"数据流：{', '.join(lines)}\n\n"
         f"📢 撰写核心要求：\n"
-        f"1. 拒绝废话，开门见山。从多头防御、估值消化、或深坑左侧分批布局的视角，切入核心标的（如英伟达、阿斯麦或日本设备材料股）。\n"
+        f"1. 拒绝废话，开门见山。从多头防御、估值消化、或深坑左侧分批布局的视角，切入核心标的。\n"
         f"2. 必须结合多周期回撤和 TTM 估值，一针见血地指出当前是'高位抱团防守'、还是'高壁垒垄断资产跌出了中线黄金坑'。\n"
         f"3. 语气要极其专业、冷峻、具备实战决策感。字数严格控制在140字以内，直接输出简报正文。"
     )
     
+    # 🌟 终极加固：同时支持原生 Gemini 格式与 OpenAI 兼容格式的双重解析防御
     try:
+        # 如果你用的是官方原生接口形式，可以用标准的 OpenAI 兼容头
         hd = {"Authorization": f"Bearer {SEC_VAL}", "Content-Type": "application/json"}
         pl = {
             "model": "gemini-1.5-flash", 
             "messages": [{"role": "user", "content": msg}], 
-            "temperature": 0.5  # 略微调高温度，让措辞更具机构复盘的灵动与锋芒
+            "temperature": 0.5
         }
+        
+        print("终端策略流：正在向 Gemini 传输多头复盘底层数据...")
         r = requests.post(END_POINT, headers=hd, json=pl, timeout=12)
+        
         if r.status_code == 200:
-            return r.json()['choices'][0]['message']['content'].strip()
+            res_json = r.json()
+            # 兼容解析解析口径 1: 标准 OpenAI 格式
+            if 'choices' in res_json and len(res_json['choices']) > 0:
+                text = res_json['choices'][0]['message']['content'].strip()
+                if text: return text
+            # 兼容解析解析口径 2: 原生 Gemini 格式
+            elif 'candidates' in res_json and len(res_json['candidates']) > 0:
+                text = res_json['candidates'][0]['content']['parts'][0]['text'].strip()
+                if text: return text
+        else:
+            print(f"❌ Gemini 接口响应失败，状态码: {r.status_code}, 错误详情: {r.text}")
+            
     except Exception as e:
-        print(f"AI简报生成流遭遇波动: {e}")
+        print(f"❌ AI 简报生成流遭遇网络或代码解析崩溃: {e}")
     
+    # 如果接口返回正常但文字被意外拦截，则说明是权限或变量名的问题
     return "💡 盘后多头思维：核心资产高位震荡消化 TTM 估值，部分上游垄断材料及先进封装设备回撤提供中线左侧安全边际，保持结构性买入防御。"
-
+    
 def fetch_all_data():
     output_data = {"macro": [], "stocks": [], "ai_report": ""}
     
