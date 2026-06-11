@@ -37,42 +37,43 @@ WATCHLIST = [
     {"symbol": "6758.T", "name": "索尼集团 (日)", "industry": "5. 边缘AI与智能终端", "feature": "全球图像传感器(CIS)绝对霸主，端侧机器人与智能视觉核心"},
     {"symbol": "6981.T", "name": "村田制作所 (日)", "industry": "5. 边缘AI与智能终端", "feature": "全球MLCC电容之王，AI终端硬件升级换代的刚需元器件"}
 ]
+
+
 def make_ai_news(stock_data):
     if not SEC_VAL:
         return "💡 终端同步就绪。全球多头防御格局整体维持，保持结构性跟踪。"
     
-    valid_stocks = [s for s in stock_data if "nan" not in s['change']]
-    if not valid_stocks: valid_stocks = stock_data
-    lines = [f"{s['name']}(涨跌:{s['change']}, PER:{s['per']}, 距52周高:{s['distHigh']})" for s in valid_stocks[:8]]
-    msg = f"顶级基金经理，请用120字复盘：{', '.join(lines)}。从多头防御、估值消化视角，指出当前核心标的是抱团还是黄金坑。专业、冷峻。"
-    
-    # 🌟 修复：尝试使用更通用的路径格式
-    # 如果 gemini-1.5-flash 报错，尝试使用 gemini-pro (通常路径更稳定)
-    model_name = "gemini-1.5-flash" 
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={SEC_VAL}"
+    # 1. 先尝试获取可用模型列表 (ListModels)
+    list_url = f"https://generativelanguage.googleapis.com/v1beta/models?key={SEC_VAL}"
+    try:
+        r_list = requests.get(list_url, timeout=10)
+        if r_list.status_code == 200:
+            models = [m['name'] for m in r_list.json().get('models', [])]
+            # 自动挑选一个支持 generateContent 的模型
+            target_model = next((m for m in models if "gemini" in m and "1.5" in m), "models/gemini-1.5-flash")
+            print(f"终端探测：检测到可用模型 -> {target_model}")
+        else:
+            target_model = "models/gemini-1.5-flash"
+    except:
+        target_model = "models/gemini-1.5-flash"
+
+    # 2. 使用探测到的模型进行调用
+    msg = f"顶级基金经理，请用100字精简复盘这些资产：{stock_data[:5]}。从多头防御、估值消化视角切入，指出核心标的是抱团还是黄金坑。"
+    gen_url = f"https://generativelanguage.googleapis.com/v1beta/{target_model}:generateContent?key={SEC_VAL}"
     
     try:
-        print(f"终端策略流：正在尝试访问模型 {model_name}...")
         payload = {"contents": [{"parts": [{"text": msg}]}]}
-        r = requests.post(url, json=payload, timeout=15)
-        
-        # 如果 1.5-flash 依然报 404，立刻切换到 gemini-pro 再次尝试
-        if r.status_code == 404:
-            print("1.5-flash 路径未找到，切换至 gemini-1.5-pro 备用通道...")
-            model_name = "gemini-1.5-pro"
-            url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={SEC_VAL}"
-            r = requests.post(url, json=payload, timeout=15)
-        
+        r = requests.post(gen_url, json=payload, timeout=15)
         if r.status_code == 200:
-            res = r.json()
-            return res['candidates'][0]['content']['parts'][0]['text'].strip()
+            return r.json()['candidates'][0]['content']['parts'][0]['text'].strip()
         else:
-            print(f"❌ 通道依然失败，状态码: {r.status_code}, 错误详情: {r.text}")
-            
+            print(f"❌ 最终调用失败: {r.text}")
     except Exception as e:
-        print(f"❌ AI 简报生成流崩溃: {e}")
+        print(f"❌ 异常: {e}")
     
     return "💡 盘后多头思维：核心资产高位震荡消化 TTM 估值，部分上游垄断材料回撤提供中线左侧安全边际，保持结构性买入防御。"
+
+
     
 def fetch_all_data():
     output_data = {"macro": [], "stocks": [], "ai_report": ""}
