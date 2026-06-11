@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的轻便股票看板</title>
+  <style>
+    /* 把之前 CSS 框里的代码直接贴在这里 */
+    body { background-color: #f5f7fa; font-family: -apple-system, sans-serif; padding: 20px; margin: 0; }
+    .stock-list { display: flex; flex-direction: column; gap: 16px; max-width: 360px; margin: 0 auto; }
+    .stock-card { background: #ffffff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); padding: 24px; }
+    .card-header { margin-bottom: 12px; }
+    .stock-code { font-size: 14px; background: #edf2f7; padding: 4px 8px; border-radius: 6px; color: #4a5568; font-weight: bold; }
+    .stock-name { font-size: 18px; font-weight: 600; color: #1a202c; margin-left: 8px; }
+    .price-section { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 16px; }
+    .current-price { font-size: 36px; font-weight: bold; color: #2d3748; }
+    .divider { border: none; border-top: 1px solid #edf2f7; margin: 16px 0; }
+    .metrics-grid { display: flex; justify-content: space-between; }
+    .metric-item { display: flex; flex-direction: column; }
+    .label { font-size: 12px; color: #a0aec0; margin-bottom: 4px; }
+    .value { font-size: 15px; font-weight: 600; color: #2d3748; }
+    .loading { text-align: center; color: #a0aec0; margin-top: 50px; }
+  </style>
+</head>
+<body>
+
+  <div class="stock-list" id="stock-list-container">
+    <div class="loading">正在加载自选股数据...</div>
+  </div>
+
+  <script>
+    // 核心改变：我们不把数据写死在这里了，让网页直接去读取同目录下的 data.json 文件
+    // 这叫异步请求（Fetch API）
+    async function loadStockData() {
+      try {
+        // 去读取数据文件
+        const response = await fetch('./data.json');
+        const myWatchlist = await response.json();
+        
+        const container = document.getElementById("stock-list-container");
+        container.innerHTML = ""; 
+        
+        myWatchlist.forEach(stock => {
+          const changeColor = stock.isUp ? "#e53e3e" : "#00b060"; 
+          const cardHtml = `
+            <div class="stock-card">
+              <div class="card-header">
+                <span class="stock-code">${stock.code}</span>
+                <span class="stock-name">${stock.name}</span>
+              </div>
+              <div class="price-section">
+                <div class="current-price">${stock.price}</div>
+                <div style="color: ${changeColor}; font-weight: 500;">${stock.change}</div>
+              </div>
+              <hr class="divider">
+              <div class="metrics-grid">
+                <div class="metric-item"><span class="label">市盈率 PER</span><span class="value">${stock.per}</span></div>
+                <div class="metric-item"><span class="label">市净率 PBR</span><span class="value">${stock.pbr}</span></div>
+              </div>
+            </div>
+          `;
+          container.innerHTML += cardHtml;
+        });
+      } catch (error) {
+        document.getElementById("stock-list-container").innerHTML = "数据加载失败，请检查 data.json 是否生成。";
+      }
+    }
+
+    // 页面一打开就运行
+    loadStockData();
+  </script>
+</body>
+</html>
