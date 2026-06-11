@@ -43,7 +43,6 @@ def make_ai_news(stock_data):
     if not SEC_VAL:
         return "💡 终端同步就绪。全球多头防御格局整体维持，AI芯片、先进材料与数据中心电网异动显著，保持跟踪。"
     
-    # 抽取前 6 个主要资产的当前变动作为参考素材
     lines = [f"{s['name']}: {s['change']}" for s in stock_data[:6]]
     msg = f"你是一个顶级宏观对冲基金经理，请用120字精炼复盘今日全球AI硬科技动向，语气要专业老练。数据参考：{', '.join(lines)}"
     
