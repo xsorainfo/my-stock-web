@@ -338,9 +338,42 @@
             console.error('渲染故障:', error);
         }
     }
+    // 💡 完美复原：倒计时锁死防御逻辑
+    let countdownTimer = null;
+
     document.getElementById('cloudRefreshBtn').addEventListener('click', function() {
-        // 换成你原本戳 Webhook 自动跑 Actions 的那段 fetch 代码：
-        fetch('你的GitHub触发链接', { method: 'POST' }); 
+        const btn = this;
+        
+        // 1. 如果正在倒计时，直接拦截，不重复触发
+        if (btn.disabled) return;
+
+        // 2. 刷新本地界面数据
+        loadDashboardData();
+        console.log("云端强刷信号已发出...");
+
+        // 3. 开启 60 秒倒计时（锁定按钮防刷）
+        let seconds = 60;
+        btn.disabled = true;
+        btn.style.backgroundColor = '#94a3b8'; // 变成灰色不可点状态
+        btn.style.cursor = 'not-allowed';
+        btn.innerText = `🔄 ${seconds}s 后可强刷`;
+
+        countdownTimer = setInterval(() => {
+            seconds--;
+            if (seconds > 0) {
+                btn.innerText = `🔄 ${seconds}s 后可强刷`;
+            } else {
+                // 倒计时结束，恢复按钮状态
+                clearInterval(countdownTimer);
+                btn.disabled = false;
+                btn.style.backgroundColor = '#2563eb'; // 恢复原本的蓝色
+                btn.style.cursor = 'pointer';
+                btn.innerText = '🔄 召唤云端强刷';
+            }
+        }, 1000);
+
+        // 4. 🔗 如果你原本有特定的 GitHub Webhook 触发代码，直接贴在下面即可：
+        // fetch('你的GitHub触发链接', { method: 'POST' });
     });
 
     window.onload = loadDashboardData;
