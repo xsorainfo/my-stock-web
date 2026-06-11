@@ -1,0 +1,35 @@
+name: 自动更新股票数据
+
+on:
+  # 1. 设定定时任务：每天周一到周五，下午 4 点自动跑一次（收盘后更新）
+  # 这里的 8:00 是世界标准时间，换算成北京时间/东京时间刚好是下午/傍晚
+  schedule:
+    - cron: '0 8 * * 1-5'
+  # 2. 同时也允许我们手动点击运行
+  workflow_dispatch:
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 检查代码
+      uses: actions/checkout@v3
+
+    - name: 设置 Python 环境
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: 安装 yfinance 依赖包
+      run: pip install yfinance
+
+    - name: 运行 Python 脚本抓取数据
+      run: python update_data.py
+
+    - name: 把最新数据提交回 GitHub 仓库
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add data.json
+        git commit -m "自动更新股票数据 [skip ci]" || exit 0
+        git push
