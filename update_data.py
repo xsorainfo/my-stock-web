@@ -4,7 +4,6 @@ import time
 import random
 import os
 import requests
-import traceback
 
 # Gemini 1.5 官方接口标准端点与密钥配置
 END_POINT = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
@@ -42,26 +41,22 @@ WATCHLIST = [
 def make_ai_news(stock_data):
     if not SEC_VAL:
         return "💡 终端同步就绪。全球多头防御格局整体维持，AI芯片、先进材料与数据中心电网异动显著，保持跟踪。"
-    
     valid_stocks = [s for s in stock_data if "nan" not in s['change']]
     if not valid_stocks: valid_stocks = stock_data
-        
     lines = [f"{s['name']}: {s['change']}" for s in valid_stocks[:6]]
-    msg = f"你是一个顶级宏观对冲基金经理，请用120字精炼复盘今日全球AI硬科技动向，语气要专业老练。数据参考：{', '.join(lines)}"
-    
+    msg = f"你是一个顶级宏观对冲基金经理，请用120字精炼复盘今日全球AI硬科技动向。数据参考：{', '.join(lines)}"
     try:
         hd = {"Authorization": f"Bearer {SEC_VAL}", "Content-Type": "application/json"}
         pl = {"model": "gemini-1.5-flash", "messages": [{"role": "user", "content": msg}], "temperature": 0.4}
         r = requests.post(END_POINT, headers=hd, json=pl, timeout=12)
         if r.status_code == 200:
             return r.json()['choices'][0]['message']['content'].strip()
-    except Exception as e:
-        print(f"AI 生成遇到微调跳过: {e}")
+    except:
+        pass
     return "💡 盘后策略：核心资产呈现机构抱团和多头防御特征，建议密切关注产业链高壁垒标的盘面结构表现。"
 
 def fetch_all_data():
     output_data = {"macro": [], "stocks": [], "ai_report": ""}
-    
     session = requests.Session()
     session.headers.update({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'})
 
@@ -69,23 +64,16 @@ def fetch_all_data():
     for m in MACRO_LIST:
         try:
             stock = yf.Ticker(m["symbol"], session=session)
-            current, prev_close = None, None
+            h_df = stock.history(period="10d")
+            # 🌟 终极防空：先剔除还未开盘、或者没有收盘价的 NaN 脏行
+            h_df = h_df.dropna(subset=['Close'])
             
-            # 【一级防御】优先拿 fast_info 快速数据
-            try:
-                current = stock.fast_info['last_price']
-                prev_close = stock.fast_info['previous_close']
-            except:
-                pass
+            if len(h_df) >= 2:
+                # 🌟 终极防空：转换为标准纯 Python 列表，彻底脱离 Pandas 时区行数索引干扰
+                closes = h_df['Close'].tail(2).tolist()
+                current = closes[1]
+                prev_close = closes[0]
                 
-            # 【二级防御】fast_info 为空时，通过 history 严格去空提取
-            if current is None or prev_close is None:
-                h_df = stock.history(period="7d").dropna(subset=['Close'])
-                if not h_df.empty and len(h_df) >= 2:
-                    current = float(h_df['Close'].iloc[-1])
-                    prev_close = float(h_df['Close'].iloc[-2])
-            
-            if current is not None and prev_close is not None:
                 diff = current - prev_close
                 pct = (diff / prev_close) * 100
                 sign = "+" if diff > 0 else ""
@@ -95,33 +83,25 @@ def fetch_all_data():
                 })
             time.sleep(0.2)
         except Exception as e:
-            print(f"大盘 {m['name']} 抓取微调: {e}")
+            print(f"大盘 {m['name']} 异常: {e}")
 
     # 2. 抓取自选个股
     for item in WATCHLIST:
         symbol = item["symbol"]
         try:
-            print(f"正在同步决策面：{item['name']}...")
+            print(f"正在智能对齐交易时区：{item['name']}...")
             stock = yf.Ticker(symbol, session=session)
-            current_price, prev_close = None, None
             
-            # 【一级防御】
-            try:
-                current_price = stock.fast_info['last_price']
-                prev_close = stock.fast_info['previous_close']
-            except:
-                pass
-                
-            # 【二级防御】
-            h_df = stock.history(period="7d").dropna(subset=['Close'])
-            if current_price is None or prev_close is None:
-                if not h_df.empty and len(h_df) >= 2:
-                    current_price = float(h_df['Close'].iloc[-1])
-                    prev_close = float(h_df['Close'].iloc[-2])
+            h_df = stock.history(period="10d")
+            # 🌟 终极防空：强行清洗未开盘的空数据
+            h_df = h_df.dropna(subset=['Close'])
             
-            if current_price is None or prev_close is None:
-                print(f"跳过无价格标的：{item['name']}")
+            if h_df.empty or len(h_df) < 2:
                 continue
+                
+            closes = h_df['Close'].tail(2).tolist()
+            current_price = closes[1]
+            prev_close = closes[0]
                 
             diff = current_price - prev_close
             percent = (diff / prev_close) * 100
@@ -143,7 +123,7 @@ def fetch_all_data():
             except:
                 pass
 
-            ma20 = h_df['Close'].mean() if not h_df.empty else current_price
+            ma20 = h_df['Close'].mean()
             trend_label = "牛市多头" if current_price >= ma20 else "熊市空头"
 
             output_data["stocks"].append({
@@ -152,17 +132,16 @@ def fetch_all_data():
                 "price": f"{current_price:.2f}", "change": f"{sign}{diff:.2f} ({sign}{percent:.2f}%)", "isUp": diff > 0,
                 "per": per_display, "pbr": pbr_display, "distHigh": dist_high_str, "trend": trend_label
             })
-            time.sleep(random.uniform(0.2, 0.5))
+            time.sleep(random.uniform(0.1, 0.3))
         except Exception as e:
             print(f"跳过 {item['name']}: {e}")
 
-    # 3. 实时注入 AI 简报
-    print("正在召集 AI 首席复盘官编写策略简报...")
+    # 3. 注入 AI 简报
     output_data["ai_report"] = make_ai_news(output_data["stocks"])
 
     with open('data.json', 'w', encoding='utf-8') as f:
         json.dump(output_data, f, ensure_ascii=False, indent=2)
-    print("🎉 全财务指标 + AI 策略简报数据流打包完成！")
+    print("🎉 时区防御重构完成，数据已打包！")
 
 if __name__ == "__main__":
     fetch_all_data()
