@@ -116,7 +116,6 @@
         const industries = [...new Set(stocks.map(s => s.industry))].sort();
         
         industries.forEach(ind => {
-          // 安全提取行业前缀数字作为唯一ID，彻底避免中文和空格报错
           const industryId = ind.split('.')[0].trim(); 
           let sectionHtml = `
             <div class="industry-section">
@@ -132,56 +131,45 @@
           const industryId = stock.industry.split('.')[0].trim();
           const grid = document.getElementById(`grid-sec-${industryId}`);
           const changeColor = stock.isUp ? "#e53e3e" : "#00b060"; 
-          const trendClass = stock.trend === "牛市多头" ? "badge-bull" : "badge-bear";
           
-          let highBadgeHtml = "";
-          if (stock.distHigh !== "--" && parseFloat(stock.distHigh) > -6.0) {
-            highBadgeHtml = `<span class="badge badge-high">🎯 临近高点</span>`;
+          // 🧠 核心：根据美股和日股，智能自动拼接最专业的日足 K 线查看链接
+          let klineUrl = "";
+          if (stock.symbol.endsWith(".T")) {
+            // 日本股市：跳转到 Yahoo Finance JP
+            klineUrl = `https://finance.yahoo.co.jp/quote/${stock.code}`;
+          } else {
+            // 美国股市：跳转到 TradingView 
+            klineUrl = `https://www.tradingview.com/symbols/${stock.code}/`;
           }
 
-          const historyStr = stock.history ? stock.history.join(",") : "";
-
           const cardHtml = `
-            <div class="stock-card">
+            <div class="stock-card" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
               <div>
                 <div class="card-header">
                   <span class="stock-name">${stock.name}</span>
-                  <span class="stock-code">${stock.code}</span>
+                  <span class="stock-code" style="background: #edf2f7; padding: 2px 6px; border-radius: 4px; font-size: 11px;">${stock.code}</span>
                 </div>
-                <div class="feature-box">${stock.feature}</div>
-                
-                <div class="badge-row">
-                  <span class="badge ${trendClass}">${stock.trend}</span>
-                  ${highBadgeHtml}
-                  
-                  <div class="sparkline-box">
-                    <span class="peity-line" data-peity='{ "fill": "rgba(235, 248, 255, 0.4)", "stroke": "${changeColor}", "width": 110, "height": 28, "strokeWidth": 2 }'>${historyStr}</span>
-                    
-                  </div>
-                </div>
+                <div class="feature-box" style="margin-top: 8px; color: #4a5568; font-size: 12px; line-height: 1.5; min-height: 36px;">${stock.feature}</div>
               </div>
-              <div>
-                <div class="price-section">
-                  <div class="current-price">${stock.price}</div>
-                  <div style="color: ${changeColor}; font-weight: 500; font-size: 13px;">${stock.change}</div>
+              
+              <div style="margin-top: 15px;">
+                <div class="price-section" style="display: flex; justify-content: space-between; align-items: flex-end;">
+                  <div class="current-price" style="font-size: 22px; font-weight: 700; font-family: monospace;">${stock.price}</div>
+                  <div style="color: ${changeColor}; font-weight: 600; font-size: 14px; margin-bottom: 2px;">${stock.change}</div>
                 </div>
-                <hr class="divider">
-                <div class="metrics-grid">
-                  <div class="metric-item"><span class="label">PER</span><span class="value">${stock.per}</span></div>
-                  <div class="metric-item"><span class="label">PBR</span><span class="value">${stock.pbr}</span></div>
-                  <div class="metric-item" style="grid-column: span 2;"><span class="label">距52周最高</span><span class="value">${stock.distHigh}</span></div>
-                </div>
+                <hr class="divider" style="border: 0; border-top: 1px solid #edf2f7; margin: 10px 0;">
+                
+                <a href="${klineUrl}" target="_blank" style="display: flex; align-items: center; justify-content: center; background: #ebf8ff; color: #2b6cb0; text-decoration: none; font-size: 12px; font-weight: 500; padding: 6px 0; border-radius: 6px; width: 100%; transition: all 0.2s;">
+                  📊 查看专业日足 K 线
+                </a>
               </div>
             </div>
           `;
           if(grid) grid.innerHTML += cardHtml;
         });
 
-        // 4. 触发微型折线图绘制
-        $(".peity-line").peity("line");
-
       } catch (error) {
-        console.error(error); // 在浏览器后台打印具体错误
+        console.error(error);
         document.getElementById("dashboard").innerHTML = "数据加载失败，请检查数据流。";
       }
     }
