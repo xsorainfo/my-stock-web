@@ -121,13 +121,23 @@ def fetch_all_data():
             diff = current_price - prev_close
             percent = (diff / prev_close) * 100
             sign = "+" if diff > 0 else ""
-            
-            # --- 核心：提取过去30天的历史价格列表用来画小趋势图 ---
+
+            # 抓取最近一个月的历史K线
             hist = stock.history(period="1mo")
             history_prices = []
             if not hist.empty:
-                # 提取最近20-22个交易日的收盘价，保留2位小数
-                history_prices = [round(float(p), 2) for p in hist['Close'].tolist()]
+                # 🧠 核心：强制按照时间轴从旧到新排序（保证折线从左往右画）
+                hist = hist.sort_index(ascending=True)
+                
+                # 提取过去 20 个交易日的收盘价
+                raw_prices = hist['Close'].tolist()
+                
+                # 如果数据太长，截取最近的 20 个数据点，确保在前端展示时波动致密
+                if len(raw_prices) > 20:
+                    raw_prices = raw_prices[-20:]
+                    
+                history_prices = [round(float(p), 2) for p in raw_prices]
+                
 
             high_52w = info.get('fiftyTwoWeekHigh')
             dist_high_str = f"{((current_price - high_52w) / high_52w) * 100:.1f}%" if high_52w else "--"
