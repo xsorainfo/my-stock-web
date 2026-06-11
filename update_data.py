@@ -94,15 +94,24 @@ def run_job():
             cl_min, cl_max = min(cl_list), max(cl_list)
             trend_norm = [int((v - cl_min)/(cl_max - cl_min)*100) if cl_max != cl_min else 50 for v in cl_list]
 
-            # 估值深度指标
-            inf = tk.info
-            per = inf.get('trailingPE', inf.get('forwardPE', '-'))
-            pbr = inf.get('priceToBook', '-')
-            h52 = inf.get('fiftyTwoWeekHigh', cur)
+            # 🌟【加固防御】：全面重构财务信息提取，防止因接口变动引发 exit code 1 崩溃
+            per_str = "-"
+            pbr_str = "-"
+            dist_high = "0.0%"
+            trend_lbl = "多头跟踪"
             
-            per_str = f"{float(per):.2f}" if isinstance(per, (int, float)) else "-"
-            pbr_str = f"{float(pbr):.2f}" if isinstance(pbr, (int, float)) else "-"
-            dist_high = f"-{((h52 - cur) / h52 * 100):.1f}%" if h52 and h52 >= cur else "0.0%"
+            try:
+                inf = tk.info
+                if isinstance(inf, dict):
+                    per = inf.get('trailingPE', inf.get('forwardPE', '-'))
+                    pbr = inf.get('priceToBook', '-')
+                    h52 = inf.get('fiftyTwoWeekHigh', cur)
+                    
+                    per_str = f"{float(per):.2f}" if isinstance(per, (int, float)) else "-"
+                    pbr_str = f"{float(pbr):.2f}" if isinstance(pbr, (int, float)) else "-"
+                    dist_high = f"-{((h52 - cur) / h52 * 100):.1f}%" if h52 and h52 >= cur else "0.0%"
+            except Exception as inner_e:
+                print(f"指标解析微调跳过 {sb}: {inner_e}")
 
             # 技术线标签
             ma20 = h_df['Close'].mean()
@@ -113,9 +122,10 @@ def run_job():
                 "price": f"{cur:.2f}", "change": f"{'+' if df>0 else ''}{df:.2f} ({'+' if df>0 else ''}{pc:.2f}%)", "isUp": df > 0,
                 "per": per_str, "pbr": pbr_str, "distHigh": dist_high, "trend": trend_lbl, "history": trend_norm
             })
-            time.sleep(0.3)
+            time.sleep(0.5) # 轻微加大延时，规避Yahoo频率限制
         except Exception as e:
-            print(f"Error loading {sb}: {e}")
+            print(f"核心加载跳过 {sb}: {e}")
+
 
     res["ai_report"] = make_ai_news(res["stocks"])
 
