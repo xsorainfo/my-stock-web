@@ -23,7 +23,7 @@ WATCHLIST = [
     {"symbol": "5801.T", "name": "古河电工 (日)", "industry": "2. AI数据中心与光缆", "feature": "下一代光电共封装(CPO)技术与光电子器件先驱"},
     {"symbol": "5802.T", "name": "住友电工 (日)", "industry": "2. AI数据中心与光缆", "feature": "全球高带宽连接器与特种光通信线缆行业龙头"},
     {"symbol": "3110.T", "name": "日東紡績 (日)", "industry": "3. 半导体核心先进材料", "feature": "全球高频半导体基板用「超薄玻璃纤维布」垄断巨头"},
-    {"symbol": "4063.T", "name": "信越化学 (日)", "industry": "3. 半导体核心先进材料", "feature": "全球大硅片与光刻胶绝对霸主，行业风向标"},
+    {"symbol": "4063.T", "name": "信越化学 (日)", "industry": "3. 半导体核心先进材料", "feature": "全球大硅片 wiggle 与光刻胶绝对霸主，行业风向标"},
     {"symbol": "4186.T", "name": "东京应化 (日)", "industry": "3. 半导体核心先进材料", "feature": "先进EUV光刻胶全球隐形冠军，技术壁垒极高"},
     {"symbol": "CEG", "name": "星座能源 (美)", "industry": "4. AI核能与电力设施", "feature": "美国最大核电运营商，直接向微软数据中心独家供电"},
     {"symbol": "GE", "name": "通用电气 (美)", "industry": "4. AI核能与电力设施", "feature": "全球电网电缆与重型燃气轮机巨头，电力短缺直接受益者"},
@@ -37,82 +37,113 @@ WATCHLIST = [
 def fetch_all_data():
     output_data = {"macro": [], "stocks": []}
     
-    # 建立一个具有迷惑性的浏览器 Session 头，防止高频访问被封
     session = yf.utils.get_default_session()
     session.headers.update({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'})
 
-    # 1. 抓取宏观环境数据
+    # 1. 抓取宏观环境数据（使用最健壮的 history 接口，弃用废弃的 fast_info）
     for m in MACRO_LIST:
         try:
             stock = yf.Ticker(m["symbol"], session=session)
-            fast = stock.fast_info
-            current = fast.last_price
-            prev_close = fast.previous_close
+            h_df = stock.history(period="2d")
+            if h_df.empty:
+                continue
+            
+            current = float(h_df['Close'].iloc[-1])
+            prev_close = float(h_df['Open'].iloc[-1]) if len(h_df) < 2 else float(h_df['Close'].iloc[-2])
+            
             diff = current - prev_close
             pct = (diff / prev_close) * 100
             sign = "+" if diff > 0 else ""
+            
             output_data["macro"].append({
                 "name": m["name"],
                 "price": f"{current:.2f}",
                 "change": f"{sign}{diff:.2f} ({sign}{pct:.2f}%)",
                 "isUp": diff > 0
             })
-            time.sleep(random.uniform(0.5, 1.5)) # 随机歇一会
-        except:
-            pass
+            time.sleep(random.uniform(0.5, 1.2))
+        except Exception as e:
+            print(f"宏观数据抓取跳过 {m['name']}: {e}")
 
     # 2. 抓取股票核心数据
     for item in WATCHLIST:
         symbol = item["symbol"]
         try:
-            print(f"正在高频安全扫描 {item['name']}...")
+            print(f"正在安全扫描资产： {item['name']}...")
             stock = yf.Ticker(symbol, session=session)
-            info = stock.info
-            fast = stock.fast_info
             
-            current_price = fast.last_price
-            prev_close = fast.previous_close
+            # 使用 20 天历史确保完美计算价格与 15 日微型折线图数组
+            h_df = stock.history(period="20d")
+            if h_df.empty or len(h_df) < 2:
+                print(f"警告：未取到 {item['name']} 的历史价格，跳过")
+                continue
+                
+            current_price = float(h_df['Close'].iloc[-1])
+            prev_close = float(h_df['Close'].iloc[-2])
             diff = current_price - prev_close
             percent = (diff / prev_close) * 100
             sign = "+" if diff > 0 else ""
             
-            high_52w = info.get('fiftyTwoWeekHigh')
-            if high_52w:
-                dist_high = ((current_price - high_52w) / high_52w) * 100
-                dist_high_str = f"{dist_high:.1f}%"
-            else:
-                dist_high_str = "--"
+            # 提取 15 天迷你趋势图序列
+            cl_list = h_df['Close'].tolist()[-15:]
+            cl_min, cl_max = min(cl_list), max(cl_list)
+            trend_norm = [int((v - cl_min)/(cl_max - cl_min)*100) if cl_max != cl_min else 50 for v in cl_list]
 
-            ma200 = fast.get('twoHundredDayAverage') or info.get('twoHundredDayAverage')
-            trend_label = "牛市多头" if ma200 and current_price > ma200 else ("熊市左侧" if ma200 else "趋势未知")
+            # 🌟【超级防御环】：将不稳定的 info 指标提取隔离开，防止单股缺失导致全盘崩溃
+            per_display = "--"
+            pbr_display = "--"
+            dist_high_str = "--"
+            trend_label = "多头防御"
+            
+            try:
+                info = stock.info
+                if isinstance(info, dict):
+                    # 52周最高及回撤计算
+                    high_52w = info.get('fiftyTwoWeekHigh')
+                    if high_52w and float(high_52w) >= current_price:
+                        dist_high = ((current_price - float(high_52w)) / float(high_52w)) * 100
+                        dist_high_str = f"{dist_high:.1f}%"
+                    
+                    # 估值提取
+                    per = info.get('forwardPE') or info.get('trailingPE')
+                    if per and isinstance(per, (int, float)):
+                        per_display = f"{per:.2f}"
+                        
+                    pbr = info.get('priceToBook')
+                    if pbr and isinstance(pbr, (int, float)):
+                        pbr_display = f"{pbr:.2f}"
+            except Exception as info_err:
+                print(f"提示：{item['name']} 基础财务指标未完全同步 (已跳过微调): {info_err}")
 
-            per = info.get('forwardPE') or info.get('trailingPE') or "--"
-            per_display = f"{per:.2f}" if isinstance(per, (int, float)) else str(per)
-            pbr = info.get('priceToBook') or "--"
-            pbr_display = f"{pbr:.2f}" if isinstance(pbr, (int, float)) else str(pbr)
+            # 趋势标签判定（使用20日均线代替废弃的 ma200，既防崩溃又更具高频灵敏度）
+            ma20 = h_df['Close'].mean()
+            trend_label = "牛市多头" if current_price >= ma20 else "熊市空头"
 
             output_data["stocks"].append({
                 "code": symbol.split('.')[0] if '.' in symbol else symbol,
                 "name": item["name"],
                 "industry": item["industry"],
                 "feature": item["feature"],
-                "price": f"{current_price:.2f}" if isinstance(current_price, (int,float)) else str(current_price),
+                "price": f"{current_price:.2f}",
                 "change": f"{sign}{diff:.2f} ({sign}{percent:.2f}%)",
                 "isUp": diff > 0,
                 "per": per_display,
                 "pbr": pbr_display,
                 "distHigh": dist_high_str,
-                "trend": trend_label
+                "trend": trend_label,
+                "history": trend_norm
             })
             
-            # 【核心安全机制】每次抓完一只股票，随机休息 1 到 2.5 秒，模拟真人浏览
-            time.sleep(random.uniform(1.0, 2.5))
+            # 每次运行平稳歇息，规避反爬
+            time.sleep(random.uniform(0.8, 1.8))
             
         except Exception as e:
-            print(f"失败: {e}")
+            print(f"个股核心解析重大跳过 {item['name']}: {e}")
 
+    # 3. 稳固安全写出
     with open('data.json', 'w', encoding='utf-8') as f:
         json.dump(output_data, f, ensure_ascii=False, indent=2)
+    print("🎉 经典全财务数据流成功离线同步构建完毕！")
 
 if __name__ == "__main__":
     fetch_all_data()
