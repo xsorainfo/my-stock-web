@@ -39,31 +39,36 @@ WATCHLIST = [
 ]
 def make_ai_news(stock_data):
     if not SEC_VAL:
-        return "💡 终端同步就绪。全生态多头防御格局整体维持，保持结构性跟踪。"
+        return "💡 终端同步就绪。全球多头防御格局整体维持，保持结构性跟踪。"
     
     valid_stocks = [s for s in stock_data if "nan" not in s['change']]
     if not valid_stocks: valid_stocks = stock_data
     lines = [f"{s['name']}(涨跌:{s['change']}, PER:{s['per']}, 距52周高:{s['distHigh']})" for s in valid_stocks[:8]]
     msg = f"顶级基金经理，请用120字复盘：{', '.join(lines)}。从多头防御、估值消化视角，指出当前核心标的是抱团还是黄金坑。专业、冷峻。"
     
-    # 🌟 修复：直接使用 Google Gemini 官方原生 v1beta 接口地址
-    # 替换原本的 OpenAI 兼容端点
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={SEC_VAL}"
+    # 🌟 修复：尝试使用更通用的路径格式
+    # 如果 gemini-1.5-flash 报错，尝试使用 gemini-pro (通常路径更稳定)
+    model_name = "gemini-1.5-flash" 
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={SEC_VAL}"
     
     try:
-        print("终端策略流：正在走官方原生通道传输数据...")
-        payload = {
-            "contents": [{"parts": [{"text": msg}]}]
-        }
-        r = requests.post(url, json=payload, timeout=12)
+        print(f"终端策略流：正在尝试访问模型 {model_name}...")
+        payload = {"contents": [{"parts": [{"text": msg}]}]}
+        r = requests.post(url, json=payload, timeout=15)
+        
+        # 如果 1.5-flash 依然报 404，立刻切换到 gemini-pro 再次尝试
+        if r.status_code == 404:
+            print("1.5-flash 路径未找到，切换至 gemini-1.5-pro 备用通道...")
+            model_name = "gemini-1.5-pro"
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={SEC_VAL}"
+            r = requests.post(url, json=payload, timeout=15)
         
         if r.status_code == 200:
             res = r.json()
-            # 官方原生解析路径
-            text = res['candidates'][0]['content']['parts'][0]['text']
-            return text.strip()
+            return res['candidates'][0]['content']['parts'][0]['text'].strip()
         else:
-            print(f"❌ 原生通道响应失败，状态码: {r.status_code}, 错误详情: {r.text}")
+            print(f"❌ 通道依然失败，状态码: {r.status_code}, 错误详情: {r.text}")
+            
     except Exception as e:
         print(f"❌ AI 简报生成流崩溃: {e}")
     
