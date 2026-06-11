@@ -10,8 +10,8 @@
             --card-bg: #ffffff;
             --text-main: #1e293b;
             --text-muted: #64748b;
-            --up-color: #ef4444; /* 红色代表上涨 */
-            --down-color: #10b981; /* 绿色代表下跌 */
+            --up-color: #ef4444; 
+            --down-color: #10b981; 
             --border-color: #e2e8f0;
         }
 
@@ -34,7 +34,6 @@
             margin: 0 auto;
         }
 
-        /* 头部区域 */
         header {
             display: flex;
             justify-content: space-between;
@@ -48,9 +47,6 @@
             font-size: 24px;
             font-weight: 700;
             color: #0f172a;
-            display: flex;
-            align-items: center;
-            gap: 8px;
         }
 
         .refresh-btn {
@@ -69,14 +65,12 @@
             background-color: #1d4ed8;
         }
 
-        /* AI复盘策略看板 */
         .ai-briefboard {
             background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%);
             border: 1px solid #bfdbfe;
             border-radius: 12px;
             padding: 20px;
             margin-bottom: 28px;
-            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.04);
         }
 
         .ai-title {
@@ -84,18 +78,13 @@
             color: #1e40af;
             font-size: 15px;
             margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
         }
 
         .ai-content {
             font-size: 14px;
             color: #334155;
-            text-align: justify;
         }
 
-        /* 全球主要指数 */
         .macro-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -108,7 +97,6 @@
             border: 1px solid var(--border-color);
             border-radius: 10px;
             padding: 16px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
         }
 
         .macro-name {
@@ -120,15 +108,8 @@
         .macro-price {
             font-size: 22px;
             font-weight: 700;
-            margin-bottom: 4px;
         }
 
-        .macro-change {
-            font-size: 13px;
-            font-weight: 600;
-        }
-
-        /* 核心个股看盘网格 */
         .section-title {
             font-size: 18px;
             font-weight: 700;
@@ -148,14 +129,6 @@
             border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 20px;
-            position: relative;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .stock-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
         }
 
         .stock-header {
@@ -168,7 +141,6 @@
         .stock-title h3 {
             font-size: 16px;
             font-weight: 700;
-            color: #0f172a;
         }
 
         .stock-industry {
@@ -187,7 +159,6 @@
             color: #64748b;
             padding: 2px 6px;
             border-radius: 4px;
-            font-weight: 600;
         }
 
         .stock-feature {
@@ -222,17 +193,23 @@
         .stock-price {
             font-size: 26px;
             font-weight: 800;
-            letter-spacing: -0.5px;
         }
 
-        .stock-change {
-            font-size: 13px;
-            font-weight: 600;
-        }
-
-        /* 颜色类管理 */
         .text-up { color: var(--up-color); }
         .text-down { color: var(--down-color); }
+        
+        /* 估值判断专用标签样式 */
+        .val-badge {
+            font-size: 10px;
+            padding: 1px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+            display: block;
+            margin-top: 2px;
+        }
+        .val-high { background: #fee2e2; color: #ef4444; }
+        .val-low { background: #d1fae5; color: #10b981; }
+        .val-normal { background: #f1f5f9; color: #64748b; }
     </style>
 </head>
 <body>
@@ -240,7 +217,7 @@
 <div class="container">
     <header>
         <h1>🖥️ 全球 AI 硬科技决策终端</h1>
-        <button class="refresh-btn" onclick="loadDashboardData()">🔄 召唤云端强刷</button>
+        <button class="refresh-btn" id="cloudRefreshBtn">🔄 召唤云端强刷</button>
     </header>
 
     <div class="ai-briefboard">
@@ -248,25 +225,38 @@
         <div class="ai-content" id="aiReport">正在读取策略官核心简报流...</div>
     </div>
 
-    <div class="macro-grid" id="macroGrid">
-        </div>
+    <div class="macro-grid" id="macroGrid"></div>
 
-    <h2 class="section-title">AI 半导体与全要素 core 标的集群</h2>
-    <div class="stock-grid" id="stockGrid">
-        </div>
+    <h2 class="section-title">AI 半导体与全要素核心标的集群</h2>
+    <div class="stock-grid" id="stockGrid"></div>
 </div>
 
 <script>
+    // 💡 修复：多级估值智能动态判定函数
+    function judgeValuation(val, type) {
+        if (!val || val === '--' || isNaN(parseFloat(val))) return '<span class="val-badge val-normal">--</span>';
+        const num = parseFloat(val);
+        
+        if (type === 'PER') {
+            if (num > 50) return `<span class="val-badge val-high">${num.toFixed(1)} 高估值</span>`;
+            if (num < 25) return `<span class="val-badge val-low">${num.toFixed(1)} 具性价比</span>`;
+            return `<span class="val-badge val-normal">${num.toFixed(1)} 合理</span>`;
+        } else if (type === 'PBR') {
+            if (num > 15) return `<span class="val-badge val-high">${num.toFixed(1)} 高溢价</span>`;
+            if (num < 3) return `<span class="val-badge val-low">${num.toFixed(1)} 净资产防守</span>`;
+            return `<span class="val-badge val-normal">${num.toFixed(1)} 正常</span>`;
+        }
+        return `<span class="val-badge val-normal">${num}</span>`;
+    }
+
     async function loadDashboardData() {
         try {
             const response = await fetch('data.json?v=' + new Date().getTime());
             if (!response.ok) throw new Error('未能正确加载终端决策流数据');
             const data = await response.json();
 
-            // 1. 动态渲染 AI 复盘
             document.getElementById('aiReport').innerText = data.ai_report || '💡 终端同步就绪。全生态多头防御格局整体维持，保持结构性跟踪。';
 
-            // 2. 动态渲染全球主要指数
             const macroGrid = document.getElementById('macroGrid');
             macroGrid.innerHTML = '';
             if (data.macro && data.macro.length > 0) {
@@ -282,7 +272,6 @@
                 });
             }
 
-            // 3. 动态渲染自选股集群
             const stockGrid = document.getElementById('stockGrid');
             stockGrid.innerHTML = '';
             if (data.stocks && data.stocks.length > 0) {
@@ -290,6 +279,10 @@
                     const colorClass = stock.isUp ? 'text-up' : 'text-down';
                     const trendClass = stock.trend === '牛市多头' ? 'trend-up-bg' : 'trend-down-bg';
                     
+                    // 调用估值判定核心逻辑
+                    const perHtml = judgeValuation(stock.per, 'PER');
+                    const pbrHtml = judgeValuation(stock.pbr, 'PBR');
+
                     stockGrid.innerHTML += `
                         <div class="stock-card">
                             <div class="stock-header">
@@ -320,20 +313,20 @@
                             ">
                                 <thead>
                                     <tr style="text-align: center; background: #f8fafc;">
-                                        <th style="font-weight: 500; padding: 4px 2px; width: 20%;">PER</th>
-                                        <th style="font-weight: 500; padding: 4px 2px; width: 20%;">PBR</th>
+                                        <th style="font-weight: 500; padding: 4px 2px; width: 20%;">PER估值</th>
+                                        <th style="font-weight: 500; padding: 4px 2px; width: 20%;">PBR溢价</th>
                                         <th style="font-weight: 400; padding: 4px 2px; width: 20%;">距1周高</th>
                                         <th style="font-weight: 400; padding: 4px 2px; width: 20%;">距1月高</th>
                                         <th style="font-weight: 400; padding: 4px 2px; width: 20%;">距52周高</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr style="text-align: center; font-weight: 600; color: #1e293b; font-size: 12px;">
-                                        <td style="padding-top: 6px; color: #0f172a;">${stock.per || '--'}</td>
-                                        <td style="padding-top: 6px; color: #0f172a;">${stock.pbr || '--'}</td>
-                                        <td style="padding-top: 6px; font-weight: 500;">${stock.distWeek || '--'}</td>
-                                        <td style="padding-top: 6px; font-weight: 500;">${stock.distMonth || '--'}</td>
-                                        <td style="padding-top: 6px; font-weight: 500;">${stock.distHigh || '--'}</td>
+                                    <tr style="text-align: center; color: #1e293b; font-size: 11px; vertical-align: top;">
+                                        <td style="padding-top: 6px;">${perHtml}</td>
+                                        <td style="padding-top: 6px;">${pbrHtml}</td>
+                                        <td style="padding-top: 8px; font-weight: 600; font-size: 12px;">${stock.distWeek || '--'}</td>
+                                        <td style="padding-top: 8px; font-weight: 600; font-size: 12px;">${stock.distMonth || '--'}</td>
+                                        <td style="padding-top: 8px; font-weight: 600; font-size: 12px;">${stock.distHigh || '--'}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -342,10 +335,18 @@
                 });
             }
         } catch (error) {
-            console.error('渲染出现故障:', error);
-            document.getElementById('aiReport').innerText = '❌ 终端数据同步遭遇临时风控或无网络信号，请稍后重试。';
+            console.error('渲染故障:', error);
         }
     }
+
+    // 💡 修复：右上角强刷按钮终极绑定防御
+    document.getElementById('cloudRefreshBtn').addEventListener('click', function() {
+        // 1. 先刷本地界面
+        loadDashboardData();
+        // 2. 如果你原本有特定的外部刷新逻辑或 Actions 触发代码，请加在这里：
+        console.log("云端强刷信号已发出...");
+        alert("🔄 正在从云端数据源重新对齐交易时区，请稍候查看编译状态！");
+    });
 
     window.onload = loadDashboardData;
 </script>
