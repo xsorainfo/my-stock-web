@@ -43,50 +43,31 @@ def make_ai_news(stock_data):
     
     valid_stocks = [s for s in stock_data if "nan" not in s['change']]
     if not valid_stocks: valid_stocks = stock_data
-    
     lines = [f"{s['name']}(涨跌:{s['change']}, PER:{s['per']}, 距52周高:{s['distHigh']})" for s in valid_stocks[:8]]
+    msg = f"顶级基金经理，请用120字复盘：{', '.join(lines)}。从多头防御、估值消化视角，指出当前核心标的是抱团还是黄金坑。专业、冷峻。"
     
-    msg = (
-        f"你是一位管理百亿资金、专注于半导体与全球硬科技的顶级对冲基金经理。\n"
-        f"请结合今日盘面数据，撰写一份140字以内的【盘后多头思维核心简报】。\n"
-        f"数据流：{', '.join(lines)}\n\n"
-        f"📢 撰写核心要求：\n"
-        f"1. 拒绝废话，开门见山。从多头防御、估值消化、或深坑左侧分批布局的视角，切入核心标的。\n"
-        f"2. 必须结合多周期回撤和 TTM 估值，一针见血地指出当前是'高位抱团防守'、还是'高壁垒垄断资产跌出了中线黄金坑'。\n"
-        f"3. 语气要极其专业、冷峻、具备实战决策感。字数严格控制在140字以内，直接输出简报正文。"
-    )
+    # 🌟 修复：直接使用 Google Gemini 官方原生 v1beta 接口地址
+    # 替换原本的 OpenAI 兼容端点
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={SEC_VAL}"
     
-    # 🌟 终极加固：同时支持原生 Gemini 格式与 OpenAI 兼容格式的双重解析防御
     try:
-        # 如果你用的是官方原生接口形式，可以用标准的 OpenAI 兼容头
-        hd = {"Authorization": f"Bearer {SEC_VAL}", "Content-Type": "application/json"}
-        pl = {
-            "model": "gemini-1.5-flash", 
-            "messages": [{"role": "user", "content": msg}], 
-            "temperature": 0.5
+        print("终端策略流：正在走官方原生通道传输数据...")
+        payload = {
+            "contents": [{"parts": [{"text": msg}]}]
         }
-        
-        print("终端策略流：正在向 Gemini 传输多头复盘底层数据...")
-        r = requests.post(END_POINT, headers=hd, json=pl, timeout=12)
+        r = requests.post(url, json=payload, timeout=12)
         
         if r.status_code == 200:
-            res_json = r.json()
-            # 兼容解析解析口径 1: 标准 OpenAI 格式
-            if 'choices' in res_json and len(res_json['choices']) > 0:
-                text = res_json['choices'][0]['message']['content'].strip()
-                if text: return text
-            # 兼容解析解析口径 2: 原生 Gemini 格式
-            elif 'candidates' in res_json and len(res_json['candidates']) > 0:
-                text = res_json['candidates'][0]['content']['parts'][0]['text'].strip()
-                if text: return text
+            res = r.json()
+            # 官方原生解析路径
+            text = res['candidates'][0]['content']['parts'][0]['text']
+            return text.strip()
         else:
-            print(f"❌ Gemini 接口响应失败，状态码: {r.status_code}, 错误详情: {r.text}")
-            
+            print(f"❌ 原生通道响应失败，状态码: {r.status_code}, 错误详情: {r.text}")
     except Exception as e:
-        print(f"❌ AI 简报生成流遭遇网络或代码解析崩溃: {e}")
+        print(f"❌ AI 简报生成流崩溃: {e}")
     
-    # 如果接口返回正常但文字被意外拦截，则说明是权限或变量名的问题
-    return "💡 盘后多头思维：核心资产高位震荡消化 TTM 估值，部分上游垄断材料及先进封装设备回撤提供中线左侧安全边际，保持结构性买入防御。"
+    return "💡 盘后多头思维：核心资产高位震荡消化 TTM 估值，部分上游垄断材料回撤提供中线左侧安全边际，保持结构性买入防御。"
     
 def fetch_all_data():
     output_data = {"macro": [], "stocks": [], "ai_report": ""}
