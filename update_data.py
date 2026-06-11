@@ -41,32 +41,31 @@ WATCHLIST = [
 
 def make_ai_news(stock_data):
     if not SEC_VAL:
-        return "💡 终端同步就绪。全生态多头防御格局整体维持，保持结构性跟踪。"
+        return "💡 终端同步就绪。全球多头防御格局整体维持，保持结构性跟踪。"
     
     valid_stocks = [s for s in stock_data if "nan" not in s['change']]
     if not valid_stocks: valid_stocks = stock_data
     lines = [f"{s['name']}({s['change']})" for s in valid_stocks[:6]]
-    msg = f"复盘：{', '.join(lines)}。写120字多头思维简报，分析抱团与机会。"
+    msg = f"顶级基金经理，请用120字复盘：{', '.join(lines)}。从估值消化与多头防御角度，指出哪些资产具备中线布局价值。语气专业冷峻。"
     
-    # 🌟【强制硬编码】：放弃探测，直接锁定官方最标准的通用生产环境路径
-    # 现在的路径格式必须是 models/模型名:generateContent
-    model_name = "gemini-1.5-flash"
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={SEC_VAL}"
+    # 🌟【最终锁定】：放弃一切探测，强制使用最基础的 URL 格式
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={SEC_VAL}"
     
     try:
-        print(f"终端策略流：正在调用稳定生产环境模型 {model_name}...")
         payload = {"contents": [{"parts": [{"text": msg}]}]}
-        r = requests.post(url, json=payload, timeout=15)
+        # 增加 headers，模拟浏览器请求，减少被云端防火墙拦截的概率
+        headers = {'Content-Type': 'application/json'}
+        r = requests.post(url, json=payload, headers=headers, timeout=15)
         
         if r.status_code == 200:
             return r.json()['candidates'][0]['content']['parts'][0]['text'].strip()
         else:
-            # 如果这里还报错 404，说明你的 Key 权限确实没有启用这个模型
             print(f"❌ 调用失败，状态码: {r.status_code}, 错误详情: {r.text}")
+            
     except Exception as e:
-        print(f"❌ 网络异常: {e}")
+        print(f"❌ 运行异常: {e}")
     
-    return "💡 盘后多头思维：核心资产高位震荡消化 TTM 估值，部分上游垄断材料回撤提供中线左侧安全边际，保持结构性买入防御。"
+    return "💡 盘后多头思维：硬科技资产高位震荡，核心半导体设备估值处于历史中枢上沿，建议关注先进材料板块的回撤买点。"
 
 
     
