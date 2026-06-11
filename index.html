@@ -3,80 +3,162 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>我的轻便股票看板</title>
+  <title>我的大盘研究看板</title>
   <style>
-    /* 把之前 CSS 框里的代码直接贴在这里 */
-    body { background-color: #f5f7fa; font-family: -apple-system, sans-serif; padding: 20px; margin: 0; }
-    .stock-list { display: flex; flex-direction: column; gap: 16px; max-width: 360px; margin: 0 auto; }
-    .stock-card { background: #ffffff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); padding: 24px; }
-    .card-header { margin-bottom: 12px; }
-    .stock-code { font-size: 14px; background: #edf2f7; padding: 4px 8px; border-radius: 6px; color: #4a5568; font-weight: bold; }
-    .stock-name { font-size: 18px; font-weight: 600; color: #1a202c; margin-left: 8px; }
-    .price-section { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 16px; }
-    .current-price { font-size: 36px; font-weight: bold; color: #2d3748; }
-    .divider { border: none; border-top: 1px solid #edf2f7; margin: 16px 0; }
+    body { 
+      background-color: #f5f7fa; 
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; 
+      padding: 30px; 
+      margin: 0; 
+    }
+
+    /* 整个网页的主容器，限制最大宽度 */
+    .dashboard-container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    /* 行业区块的样式 */
+    .industry-section {
+      margin-bottom: 40px;
+    }
+
+    /* 行业大标题 */
+    .industry-title {
+      font-size: 22px;
+      font-weight: bold;
+      color: #2d3748;
+      margin-bottom: 16px;
+      padding-left: 10px;
+      border-left: 5px solid #3182ce; /* 蓝色的行业小竖条 */
+    }
+
+    /* 核心：卡片网格系统 */
+    .stock-grid {
+      display: grid;
+      /* 核心魔法：自动填满，每个卡片最小 260px。如果屏幕够宽，一行自动排 4-5 个；屏幕窄（如手机）自动变 1 个 */
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px; /* 卡片之间的间距 */
+    }
+
+    /* 股票卡片美化（稍微缩小了一点点体积，方便横向排更多） */
+    .stock-card { 
+      background: #ffffff; 
+      border-radius: 12px; 
+      box-shadow: 0 4px 15px rgba(0,0,0,0.04); 
+      padding: 18px; 
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s;
+    }
+    /* 鼠标悬停在卡片上时有一个微微浮起的效果 */
+    .stock-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    .card-header { 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center;
+      margin-bottom: 8px; 
+    }
+    .stock-code { font-size: 12px; background: #edf2f7; padding: 2px 6px; border-radius: 4px; color: #4a5568; font-weight: bold; }
+    .stock-name { font-size: 16px; font-weight: 600; color: #1a202c; }
+    
+    .feature-box { 
+      font-size: 11px; 
+      color: #718096; 
+      background: #f7fafc; 
+      padding: 6px 10px; 
+      border-radius: 6px; 
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .price-section { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 8px; }
+    .current-price { font-size: 28px; font-weight: bold; color: #2d3748; }
+    .divider { border: none; border-top: 1px solid #edf2f7; margin: 10px 0; }
     .metrics-grid { display: flex; justify-content: space-between; }
     .metric-item { display: flex; flex-direction: column; }
-    .label { font-size: 12px; color: #a0aec0; margin-bottom: 4px; }
-    .value { font-size: 15px; font-weight: 600; color: #2d3748; }
+    .label { font-size: 11px; color: #a0aec0; margin-bottom: 2px; }
+    .value { font-size: 13px; font-weight: 600; color: #2d3748; }
     .loading { text-align: center; color: #a0aec0; margin-top: 50px; }
   </style>
 </head>
 <body>
 
-  <div class="stock-list" id="stock-list-container">
-    <div class="loading">正在加载自选股数据...</div>
+  <div class="dashboard-container" id="dashboard">
+    <div class="loading">正在归类并加载自选股看板...</div>
   </div>
 
   <script>
-    // 核心改变：我们不把数据写死在这里了，让网页直接去读取同目录下的 data.json 文件
-    // 这叫异步请求（Fetch API）
     async function loadStockData() {
       try {
-        // 去读取数据文件
         const response = await fetch('./data.json');
-        const myWatchlist = await response.json();
+        const stocks = await response.json();
         
-        const container = document.getElementById("stock-list-container");
-        container.innerHTML = ""; 
+        const dashboard = document.getElementById("dashboard");
+        dashboard.innerHTML = ""; // 清空加载提示
         
-        myWatchlist.forEach(stock => {
+        // 1. 核心算法：在前端对股票按照“行业（industry）”进行自动分组
+        const groups = {};
+        stocks.forEach(stock => {
+          if (!groups[stock.industry]) {
+            groups[stock.industry] = [];
+          }
+          groups[stock.industry].push(stock);
+        });
+        
+        // 2. 循环每个行业，把行业区块和里面的卡片画出来
+        for (const industry in groups) {
+          // 创建行业区块 HTML
+          let sectionHtml = `
+            <div class="industry-section">
+              <div class="industry-title">${industry}</div>
+              <div class="stock-grid" id="grid-${industry}"></div>
+            </div>
+          `;
+          dashboard.innerHTML += sectionHtml;
+        }
+
+        // 3. 把股票卡片精准塞进各自的行业网格（Grid）里
+        stocks.forEach(stock => {
+          const grid = document.getElementById(`grid-${stock.industry}`);
           const changeColor = stock.isUp ? "#e53e3e" : "#00b060"; 
+          
           const cardHtml = `
             <div class="stock-card">
-              <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
-                <div>
-                  <span class="stock-code">${stock.code}</span>
+              <div>
+                <div class="card-header">
                   <span class="stock-name">${stock.name}</span>
+                  <span class="stock-code">${stock.code}</span>
                 </div>
-                <span style="font-size: 11px; color: #718096; background: #e2e8f0; padding: 2px 6px; border-radius: 4px;">
-                  ${stock.industry}
-                </span>
+                <div class="feature-box">${stock.feature}</div>
               </div>
-              
-              <div style="font-size: 12px; color: #4a5568; background: #f7fafc; padding: 8px 12px; border-radius: 8px; margin: 8px 0; border-left: 3px solid #3182ce;">
-                <strong>特色：</strong>${stock.feature}
-              </div>
-          
-              <div class="price-section" style="margin-top: 12px;">
-                <div class="current-price">${stock.price}</div>
-                <div style="color: ${changeColor}; font-weight: 500;">${stock.change}</div>
-              </div>
-              <hr class="divider">
-              <div class="metrics-grid">
-                <div class="metric-item"><span class="label">市盈率 PER</span><span class="value">${stock.per}</span></div>
-                <div class="metric-item"><span class="label">市净率 PBR</span><span class="value">${stock.pbr}</span></div>
+              <div>
+                <div class="price-section">
+                  <div class="current-price">${stock.price}</div>
+                  <div style="color: ${changeColor}; font-weight: 500; font-size: 14px;">${stock.change}</div>
+                </div>
+                <hr class="divider">
+                <div class="metrics-grid">
+                  <div class="metric-item"><span class="label">PER</span><span class="value">${stock.per}</span></div>
+                  <div class="metric-item"><span class="label">PBR</span><span class="value">${stock.pbr}</span></div>
+                </div>
               </div>
             </div>
           `;
-          container.innerHTML += cardHtml;
+          grid.innerHTML += cardHtml;
         });
+
       } catch (error) {
-        document.getElementById("stock-list-container").innerHTML = "数据加载失败，请检查 data.json 是否生成。";
+        document.getElementById("dashboard").innerHTML = "数据加载失败，请检查数据流。";
+        console.error(error);
       }
     }
 
-    // 页面一打开就运行
     loadStockData();
   </script>
 </body>
