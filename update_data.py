@@ -38,7 +38,7 @@ WATCHLIST = [
     {"symbol": "6981.T", "name": "村田制作所 (日)", "industry": "5. 边缘AI与智能终端", "feature": "全球MLCC电容之王，AI终端硬件升级换代的刚需元器件"}
 ]
 
-def make_ai_news(macro_data, stock_data):
+def make_ai_news(stock_data):
     if not SEC_VAL:
         return "💡 决策终端数据同步就绪。硬科技多头动能整体维持，建议紧盯高壁垒半导体先进封装设备及核心材料的盘面异动。"
     lines = [f"{s['name']}: {s['change']}" for s in stock_data[:6]]
@@ -46,24 +46,24 @@ def make_ai_news(macro_data, stock_data):
     try:
         hd = {"Authorization": f"Bearer {SEC_VAL}", "Content-Type": "application/json"}
         pl = {"model": "gemini-1.5-flash", "messages": [{"role": "user", "content": msg}], "temperature": 0.4}
-        r = requests.post(END_POINT, headers=hd, json=pl, timeout=12)
+        r = requests.post(END_POINT, headers=hd, json=pl, timeout=10)
         if r.status_code == 200:
             return r.json()['choices'][0]['message']['content'].strip()
     except:
         pass
-    return "💡 盘后复盘：美日硬科技核心资产高位震荡，算力供应链及先进材料展现出较强的机构抱团防御特征。"
+    return "💡 盘后复盘：全球AI硬科技资产高位震荡，算力供应链及先进先进设备材料呈现明显的机构抱团和多头防御特征。"
 
 def run_job():
     res = {"macro": [], "stocks": [], "ai_report": ""}
     ss = yf.utils.get_default_session()
     ss.headers.update({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'})
 
-    # 1. 宏观数据抓取
+    # 1. 抓取大盘
     for m in MACRO_LIST:
         try:
             tk = yf.Ticker(m["symbol"], session=ss)
             h_df = tk.history(period="2d")
-            if not h_df.empty and len(h_df) >= 1:
+            if not h_df.empty:
                 cur = float(h_df['Close'].iloc[-1])
                 prv = float(h_df['Open'].iloc[-1]) if len(h_df) == 1 else float(h_df['Close'].iloc[-2])
                 df = cur - prv
@@ -72,74 +72,44 @@ def run_job():
                     "name": m["name"], "price": f"{cur:.2f}",
                     "change": f"{'+' if df>0 else ''}{df:.2f} ({'+' if df>0 else ''}{pc:.2f}%)", "isUp": df > 0
                 })
-            time.sleep(0.5)
         except:
             pass
 
-    # 2. 个股数据抓取（全隔离纯历史流）
-    today = datetime.datetime.now()
-    past = today - datetime.timedelta(days=45)
-
+    # 2. 抓取个股（不看任何详情和历史，只要最近两天的收盘价计算涨跌）
     for item in WATCHLIST:
         sb = item["symbol"]
         try:
-            print(f"正在全解析: {item['name']}")
             tk = yf.Ticker(sb, session=ss)
-            
-            # 🧠 强行拉取1个半月的历史K线，所有核心指标全部从这里清洗
-            chart_data = tk.history(start=past.strftime('%Y-%m-%d'), end=today.strftime('%Y-%m-%d'))
-            if chart_data.empty or len(chart_data) < 2:
-                raise ValueError("历史图表截断")
+            h_df = tk.history(period="5d") # 抓5天确保跨越周末
+            if h_df.empty or len(h_df) < 2:
+                continue
                 
-            chart_data = chart_data.sort_index(ascending=True)
-            raw_close = [float(p) for p in chart_data['Close'].tolist()]
-            
-            # 精准剥离基础报价
-            cur = raw_close[-1]
-            prv = raw_close[-2]
+            cur = float(h_df['Close'].iloc[-1])
+            prv = float(h_df['Close'].iloc[-2])
             df = cur - prv
             pc = (df / prv) * 100
-            
-            # 生成平滑不为绝对直线的 K 线微型点阵
-            if len(set(raw_close)) <= 1:
-                raw_close = [p * (1 + random.uniform(-0.005, 0.005)) for p in raw_close]
-            pts = [round(p, 2) for p in raw_close[-20:]]
-            
-            # 52周最高与牛熊趋势粗算
-            high_52 = max(raw_close)
-            dh = f"{((cur - high_52) / high_52) * 100:.1f}%"
-            
-            # 趋势判断保底
-            trnd = "牛市多头" if cur >= raw_close[0] else "熊市左侧"
-            
+
             res["stocks"].append({
-                "code": sb.split('.')[0], "name": item["name"], "industry": item["industry"], "feature": item["feature"],
-                "price": f"{cur:.2f}", "change": f"{'+' if df>0 else ''}{df:.2f} ({'+' if df>0 else ''}{pc:.2f}%)", "isUp": df > 0,
-                "per": "--", "pbr": "--", # 彻底舍弃高频报错的估值API，用标准占位符保底
-                "distHigh": dh, "trend": trnd,
-                "history": pts
+                "code": sb.split('.')[0], 
+                "symbol": sb, # 留给前端拼接K线链接使用
+                "name": item["name"], 
+                "industry": item["industry"], 
+                "feature": item["feature"],
+                "price": f"{cur:.2f}", 
+                "change": f"{'+' if df>0 else ''}{df:.2f} ({'+' if df>0 else ''}{pc:.2f}%)", 
+                "isUp": df > 0
             })
-            time.sleep(random.uniform(0.5, 1.0))
+            time.sleep(0.2)
         except Exception as e:
-            # 🌟 终极护盾：如果某只股票完全挂了，手动注入一个安全的、绝对不触发异常的硬编码保底卡片
-            print(f"激活防流产护盾 {sb}: {e}")
-            res["stocks"].append({
-                "code": sb.split('.')[0], "name": item["name"], "industry": item["industry"], "feature": item["feature"],
-                "price": "--", "change": "0.00 (0.00%)", "isUp": True,
-                "per": "--", "pbr": "--", "distHigh": "--", "trend": "盘后盘整",
-                "history": [10, 10, 10, 10, 10]
-            })
+            print(f"跳过 {sb}: {e}")
 
-    # 3. 策略简报
-    try:
-        res["ai_report"] = make_ai_news(res["macro"], res["stocks"])
-    except:
-        res["ai_report"] = "💡 全球科技链提示：大盘收盘数据已顺利广播，AI网络连线稍后重试。"
+    # 3. 生成大模型快报
+    res["ai_report"] = make_ai_news(res["stocks"])
 
-    # 4. 落地写入
+    # 4. 稳妥写入
     with open('data.json', 'w', encoding='utf-8') as f:
         json.dump(res, f, ensure_ascii=False, indent=2)
-    print("防震舱数据已强制广播，退出码：0")
+    print("极简盘面数据同步成功！")
 
 if __name__ == "__main__":
     run_job()
