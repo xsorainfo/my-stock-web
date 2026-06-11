@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>全球AI硬科技决策终端v4.1</title>
+    <title>全球AI硬科技决策终端</title>
     <style>
         :root {
             --bg-color: #f4f6f9;
@@ -15,224 +15,39 @@
             --border-color: #e2e8f0;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            padding: 24px;
-            line-height: 1.5;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 24px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        header h1 {
-            font-size: 24px;
-            font-weight: 700;
-            color: #0f172a;
-        }
-
-        .refresh-btn {
-            background-color: #2563eb;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 6px;
-            font-size: 14px;
-            cursor: pointer;
-            font-weight: 500;
-            transition: background 0.2s;
-        }
-
-        .refresh-btn:hover:not(:disabled) {
-            background-color: #1d4ed8;
-        }
-
-        .refresh-btn:disabled {
-            background-color: #94a3b8;
-            cursor: not-allowed;
-        }
-
-        .ai-briefboard {
-            background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%);
-            border: 1px solid #bfdbfe;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 28px;
-        }
-
-        .ai-title {
-            font-weight: 600;
-            color: #1e40af;
-            font-size: 15px;
-            margin-bottom: 8px;
-        }
-
-        .ai-content {
-            font-size: 14px;
-            color: #334155;
-        }
-
-        .macro-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 16px;
-            margin-bottom: 32px;
-        }
-
-        .macro-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            padding: 16px;
-        }
-
-        .macro-name {
-            font-size: 13px;
-            color: var(--text-muted);
-            margin-bottom: 6px;
-        }
-
-        .macro-price {
-            font-size: 22px;
-            font-weight: 700;
-        }
-
-        .section-title {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 16px;
-            padding-left: 8px;
-            border-left: 4px solid #2563eb;
-        }
-
-        .stock-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 20px;
-        }
-
-        .stock-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        }
-
-        .stock-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 8px;
-        }
-
-        .stock-title h3 {
-            font-size: 16px;
-            font-weight: 700;
-        }
-
-        .stock-industry {
-            font-size: 11px;
-            color: #2563eb;
-            background: #eff6ff;
-            padding: 2px 6px;
-            border-radius: 4px;
-            margin-top: 4px;
-            display: inline-block;
-        }
-
-        .stock-code {
-            font-size: 11px;
-            background: #f1f5f9;
-            color: #64748b;
-            padding: 2px 6px;
-            border-radius: 4px;
-        }
-
-        .stock-feature {
-            font-size: 12px;
-            color: var(--text-muted);
-            background: #f8fafc;
-            padding: 8px;
-            border-radius: 6px;
-            margin-bottom: 14px;
-            min-height: 52px;
-        }
-
-        .stock-trend-badge {
-            font-size: 11px;
-            font-weight: 600;
-            padding: 2px 6px;
-            border-radius: 4px;
-            display: inline-block;
-            margin-bottom: 12px;
-        }
-
-        .trend-up-bg { background: #fee2e2; color: #b91c1c; }
-        .trend-down-bg { background: #d1fae5; color: #065f46; }
-
-        .price-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-bottom: 12px;
-        }
-
-        .stock-price {
-            font-size: 26px;
-            font-weight: 600;
-        }
-
-        .text-up { color: var(--up-color); }
-        .text-down { color: var(--down-color); }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); padding: 24px; line-height: 1.5; }
+        .container { max-width: 1400px; margin: 0 auto; }
         
-        .val-badge {
-            font-size: 11px;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 2px;
-        }
+        header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border-color); }
+        h1 { font-size: 24px; font-weight: 700; }
+        
+        .refresh-btn { background-color: #2563eb; color: white; border: none; padding: 8px 16px; border-radius: 6px; font-size: 14px; cursor: pointer; }
+        .refresh-btn:disabled { background-color: #94a3b8; }
+
+        .ai-briefboard { background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%); border: 1px solid #bfdbfe; border-radius: 12px; padding: 20px; margin-bottom: 28px; }
+        .ai-title { font-weight: 600; color: #1e40af; font-size: 15px; margin-bottom: 8px; }
+        .ai-content { font-size: 14px; color: #334155; }
+
+        .macro-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 32px; }
+        .macro-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 10px; padding: 16px; }
+        .macro-name { font-size: 13px; color: var(--text-muted); }
+        .macro-price { font-size: 20px; font-weight: 600; }
+
+        .stock-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+        .stock-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 16px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        
+        .price-row { display: flex; justify-content: space-between; align-items: baseline; margin: 12px 0; }
+        .stock-price { font-size: 18px; font-weight: 500; }
+        
+        .val-badge { font-size: 10px; padding: 1px 4px; border-radius: 4px; font-weight: 600; }
         .val-high { background: #fee2e2; color: #ef4444; }
         .val-low { background: #d1fae5; color: #10b981; }
         .val-normal { background: #f1f5f9; color: #64748b; }
-
-        /* 矩阵表格基础样式 */
-        .metrics-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 11px;
-            color: #64748b;
-            text-align: center;
-        }
-        .metrics-table th {
-            font-weight: normal;
-            padding: 4px 2px;
-            background: #f8fafc;
-            color: #64748b;
-        }
-        .metrics-table td {
-            padding: 6px 2px 4px 2px;
-        }
+        
+        .metrics-table { width: 100%; border-collapse: collapse; font-size: 10px; color: #64748b; text-align: center; margin-top: 8px; }
+        .text-up { color: var(--up-color); }
+        .text-down { color: var(--down-color); }
     </style>
 </head>
 <body>
@@ -245,156 +60,51 @@
 
     <div class="ai-briefboard">
         <div class="ai-title">🤖 首席硬科技策略师 · 盘后多头思维复盘</div>
-        <div class="ai-content" id="aiReport">正在读取策略官核心简报流...</div>
+        <div class="ai-content" id="aiReport">正在读取策略流...</div>
     </div>
 
     <div class="macro-grid" id="macroGrid"></div>
-
-    <h2 class="section-title">AI 半导体与全要素核心标的集群</h2>
     <div class="stock-grid" id="stockGrid"></div>
 </div>
 
 <script>
-    // 智能基本面价值评级判定
     function judgeValuation(val, type) {
-        if (!val || val === '--' || isNaN(parseFloat(val))) return '<span class="val-badge val-normal">--</span>';
+        if (!val || val === '--') return '<span class="val-badge val-normal">--</span>';
         const num = parseFloat(val);
-        
-        if (type === 'PER') {
-            if (num > 50) return `<span class="val-badge val-high">${num.toFixed(1)} 高估值</span>`;
-            if (num < 25) return `<span class="val-badge val-low">${num.toFixed(1)} 具性价比</span>`;
-            return `<span class="val-badge val-normal">${num.toFixed(1)} 合理</span>`;
-        } else if (type === 'PBR') {
-            if (num > 15) return `<span class="val-badge val-high">${num.toFixed(1)} 高溢价</span>`;
-            if (num < 3) return `<span class="val-badge val-low">${num.toFixed(1)} 净资产防守</span>`;
-            return `<span class="val-badge val-normal">${num.toFixed(1)} 正常</span>`;
-        }
+        if (type === 'PER') return num > 50 ? `<span class="val-badge val-high">${num} 高估</span>` : (num < 25 ? `<span class="val-badge val-low">${num} 具性价比</span>` : `<span class="val-badge val-normal">${num}</span>`);
         return `<span class="val-badge val-normal">${num}</span>`;
     }
 
     async function loadDashboardData() {
-        try {
-            const response = await fetch('data.json?v=' + new Date().getTime());
-            if (!response.ok) throw new Error('未能正确加载终端决策流数据');
-            const data = await response.json();
+        const res = await fetch('data.json?v=' + new Date().getTime());
+        const data = await res.json();
+        document.getElementById('aiReport').innerText = data.ai_report;
 
-            document.getElementById('aiReport').innerText = data.ai_report || '💡 终端同步就绪。全生态多头防御格局整体维持，保持结构性跟踪。';
+        // 渲染宏观
+        const mGrid = document.getElementById('macroGrid');
+        mGrid.innerHTML = data.macro.map(i => `<div class="macro-card"><div class="macro-name">${i.name}</div><div class="macro-price ${i.isUp?'text-up':'text-down'}">${i.price}</div></div>`).join('');
 
-            const macroGrid = document.getElementById('macroGrid');
-            macroGrid.innerHTML = '';
-            if (data.macro && data.macro.length > 0) {
-                data.macro.forEach(item => {
-                    const colorClass = item.isUp ? 'text-up' : 'text-down';
-                    macroGrid.innerHTML += `
-                        <div class="macro-card">
-                            <div class="macro-name">${item.name}</div>
-                            <div class="macro-price ${colorClass}">${item.price}</div>
-                            <div class="macro-change ${colorClass}">${item.change}</div>
-                        </div>
-                    `;
-                });
-            }
-
-            const stockGrid = document.getElementById('stockGrid');
-            stockGrid.innerHTML = '';
-            if (data.stocks && data.stocks.length > 0) {
-                data.stocks.forEach(stock => {
-                    const colorClass = stock.isUp ? 'text-up' : 'text-down';
-                    const trendClass = stock.trend === '牛市多头' ? 'trend-up-bg' : 'trend-down-bg';
-                    
-                    const perHtml = judgeValuation(stock.per, 'PER');
-                    const pbrHtml = judgeValuation(stock.pbr, 'PBR');
-
-                    stockGrid.innerHTML += `
-                        <div class="stock-card">
-                            <div class="stock-header">
-                                <div class="stock-title">
-                                    <h3>${stock.name}</h3>
-                                    <div class="stock-industry">${stock.industry}</div>
-                                </div>
-                                <span class="stock-code">${stock.code}</span>
-                            </div>
-                            
-                            <div class="stock-feature">${stock.feature}</div>
-                            
-                            <div class="stock-trend-badge ${trendClass}">${stock.trend}</div>
-                            
-                            <div class="price-row">
-                                <div class="stock-price ${colorClass}">${stock.price}</div>
-                                <div class="stock-change ${colorClass}">${stock.change}</div>
-                            </div>
-                            
-                            <div style="border-top: 1px dashed #e2e8f0; margin-top: 12px; padding-top: 4px;">
-                                <table class="metrics-table" style="margin-bottom: 6px;">
-                                    <thead>
-                                        <tr>
-                                            <th style="width: 50%;">PER 估值</th>
-                                            <th style="width: 50%;">PBR 溢价</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>${perHtml}</td>
-                                            <td>${pbrHtml}</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                                <table class="metrics-table">
-                                    <thead>
-                                        <tr>
-                                            <th style="width: 33.33%;">距1周高</th>
-                                            <th style="width: 33.33%;">距1月高</th>
-                                            <th style="width: 33.33%;">距52周高</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr style="font-weight: 600; color: #1e293b; font-size: 12px;">
-                                            <td>${stock.distWeek || '--'}</td>
-                                            <td>${stock.distMonth || '--'}</td>
-                                            <td>${stock.distHigh || '--'}</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    `;
-                });
-            }
-        } catch (error) {
-            console.error('渲染故障:', error);
-        }
+        // 渲染分组股票
+        const sGrid = document.getElementById('stockGrid');
+        const groups = data.stocks.reduce((acc, s) => { (acc[s.category] = acc[s.category] || []).push(s); return acc; }, {});
+        sGrid.innerHTML = Object.entries(groups).map(([cat, items]) => `
+            <div style="grid-column: 1/-1; margin: 15px 0 5px; font-weight: 700; color: #475569; border-left: 4px solid #2563eb; padding-left: 10px;">${cat}</div>
+            ${items.map(s => `
+                <div class="stock-card">
+                    <div style="font-weight:700; font-size:14px;">${s.name} <span style="font-weight:400; font-size:11px; color:#94a3b8;">${s.code}</span></div>
+                    <div class="price-row"><div class="stock-price ${s.isUp?'text-up':'text-down'}">${s.price}</div><div class="${s.isUp?'text-up':'text-down'}">${s.change}</div></div>
+                    <table class="metrics-table"><tr><td>PER: ${judgeValuation(s.per, 'PER')}</td><td>PBR: ${judgeValuation(s.pbr, 'PBR')}</td></tr></table>
+                </div>
+            `).join('')}
+        `).join('');
     }
 
-    // 🔄 右上角点击原生优雅倒计时逻辑
-    let countdownTimer = null;
-    document.getElementById('cloudRefreshBtn').addEventListener('click', function() {
-        const btn = this;
-        if (btn.disabled) return;
-
-        // 执行前端局部刷流
+    document.getElementById('cloudRefreshBtn').onclick = function() {
+        this.disabled = true;
         loadDashboardData();
-        console.log("云端同步编译指令已安全下发...");
-
-        // 原生按钮状态切换与锁死
-        let seconds = 60;
-        btn.disabled = true;
-        btn.innerText = `🔄 ${seconds}s 后可强刷`;
-
-        countdownTimer = setInterval(() => {
-            seconds--;
-            if (seconds > 0) {
-                btn.innerText = `🔄 ${seconds}s 后可强刷`;
-            } else {
-                clearInterval(countdownTimer);
-                btn.disabled = false;
-                btn.innerText = '🔄 召唤云端强刷';
-            }
-        }, 1000);
-    });
-
-    window.onload = loadDashboardData;
+        setTimeout(() => this.disabled = false, 60000);
+    };
+    loadDashboardData();
 </script>
-
 </body>
 </html>
