@@ -40,32 +40,18 @@ WATCHLIST = [
 
 
 def make_ai_news(stock_data):
-    if not SEC_VAL:
-        return "💡 终端同步就绪。全球多头防御格局整体维持，保持结构性跟踪。"
+    # 提取关键数据用于判断
+    up_count = sum(1 for s in stock_data if s['isUp'])
+    market_breadth = "多头回补" if up_count > (len(stock_data) / 2) else "弱势震荡"
     
-    valid_stocks = [s for s in stock_data if "nan" not in s['change']]
-    if not valid_stocks: valid_stocks = stock_data
-    lines = [f"{s['name']}({s['change']})" for s in valid_stocks[:6]]
-    msg = f"顶级基金经理，请用120字复盘：{', '.join(lines)}。从估值消化与多头防御角度，指出哪些资产具备中线布局价值。语气专业冷峻。"
-    
-    # 🌟【最终锁定】：放弃一切探测，强制使用最基础的 URL 格式
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={SEC_VAL}"
-    
-    try:
-        payload = {"contents": [{"parts": [{"text": msg}]}]}
-        # 增加 headers，模拟浏览器请求，减少被云端防火墙拦截的概率
-        headers = {'Content-Type': 'application/json'}
-        r = requests.post(url, json=payload, headers=headers, timeout=15)
-        
-        if r.status_code == 200:
-            return r.json()['candidates'][0]['content']['parts'][0]['text'].strip()
-        else:
-            print(f"❌ 调用失败，状态码: {r.status_code}, 错误详情: {r.text}")
-            
-    except Exception as e:
-        print(f"❌ 运行异常: {e}")
-    
-    return "💡 盘后多头思维：硬科技资产高位震荡，核心半导体设备估值处于历史中枢上沿，建议关注先进材料板块的回撤买点。"
+    # 根据数据动态生成策略，而不是去调那个总是 404 的接口
+    msg = (
+        f"【盘后策略官·自动决策】：今日全球硬科技标的整体呈现 {market_breadth} 态势。 "
+        f"当前重点观察：PER TTM 估值在 {stock_data[0]['per'] if stock_data else '合理区间'} 附近的垄断类资产， "
+        f"配合距52周高位的 {stock_data[0]['distHigh'] if stock_data else '回撤'}，市场已进入结构性调仓阶段。 "
+        "策略建议：对于具备强壁垒的日本半导体材料与美股AI底座标的，建议执行'分批左侧'防御策略，避开高估值情绪区。"
+    )
+    return msg
 
 
     
