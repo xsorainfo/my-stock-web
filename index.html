@@ -12,9 +12,9 @@
     .refresh-btn { background: #3182ce; color: #fff; border: none; padding: 10px 18px; border-radius: 6px; font-size: 14px; font-weight: 500; cursor: pointer; transition: background 0.2s; }
     .refresh-btn:hover { background: #2b6cb0; }
     
-    /* AI简报样式 */
+    /* AI策略简报 */
     .report-box { background: #fff; border-left: 5px solid #4c51bf; border-radius: 8px; padding: 20px; margin-bottom: 25px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-    .report-title { font-weight: 700; color: #4c51bf; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+    .report-title { font-weight: 700; color: #4c51bf; margin-bottom: 8px; }
     .report-p { font-size: 14px; color: #4a5568; line-height: 1.6; }
 
     /* 大盘仪表盘 */
@@ -23,13 +23,13 @@
     .macro-name { font-size: 13px; color: #718096; margin-bottom: 6px; }
     .macro-val { font-size: 20px; font-weight: 700; font-family: monospace; }
 
-    /* 行业与股票网格 */
+    /* 行业区块与网格 */
     .industry-section { margin-bottom: 35px; }
     .industry-title { font-size: 18px; font-weight: 700; color: #2d3748; margin-bottom: 15px; padding-left: 8px; border-left: 4px solid #3182ce; }
     .stock-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
     
     /* 股票卡片 */
-    .stock-card { background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.04); border: 1px solid #edf2f7; display: flex; flex-direction: column; justify-content: space-between; min-height: 220px; transition: transform 0.2s, box-shadow 0.2s; }
+    .stock-card { background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.04); border: 1px solid #edf2f7; display: flex; flex-direction: column; justify-content: space-between; min-height: 225px; transition: transform 0.2s, box-shadow 0.2s; }
     .stock-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
     .card-header { display: flex; justify-content: space-between; align-items: flex-start; }
     .stock-name { font-size: 16px; font-weight: 700; color: #1a202c; }
@@ -42,9 +42,9 @@
     
     .divider { border: 0; border-top: 1px solid #edf2f7; margin: 12px 0; }
     
-    /* K线按钮 */
-    .kline-btn { display: flex; align-items: center; justify-content: center; gap: 4px; background: #ebf8ff; color: #2b6cb0; text-decoration: none; font-size: 12px; font-weight: 600; padding: 8px 0; border-radius: 6px; width: 100%; transition: background 0.2s; }
-    .kline-btn:hover { background: #dee2e6; background-color: #bee3f8; }
+    /* 直达K线按钮 */
+    .kline-btn { display: flex; align-items: center; justify-content: center; background: #ebf8ff; color: #2b6cb0; text-decoration: none; font-size: 12px; font-weight: 600; padding: 8px 0; border-radius: 6px; width: 100%; transition: background 0.2s; }
+    .kline-btn:hover { background: #bee3f8; }
   </style>
 </head>
 <body>
@@ -60,24 +60,22 @@
   </div>
 
   <div class="macro-container" id="macro-bar"></div>
-
   <div id="dashboard">正在初始化终端数据流...</div>
 
   <script>
     async function loadStockData() {
       try {
-        // 使用时间戳防止缓存机制导致数据不更新
         const response = await fetch('./data.json?t=' + Date.now());
-        if (!response.ok) throw new Error('数据源读取失败');
+        if (!response.ok) throw new Error('未能正确读取核心数据文件');
         const data = await response.json();
         
         // 1. 渲染AI简报
         document.getElementById("ai-report-content").innerText = data.ai_report || "当前无简报数据，请等待盘后自动更新。";
         
-        // 2. 渲染大盘仪表盘
+        // 2. 原生渲染大盘
         const macroBar = document.getElementById("macro-bar");
         macroBar.innerHTML = "";
-        if (data.macro && data.macro.length > 0) {
+        if (data.macro) {
           data.macro.forEach(m => {
             const color = m.isUp ? "#e53e3e" : "#00b060";
             macroBar.innerHTML += `
@@ -90,20 +88,20 @@
           });
         }
 
-        // 3. 分类渲染股票行业
+        // 3. 原生渲染分类行业与个股
         const dashboard = document.getElementById("dashboard");
         dashboard.innerHTML = ""; 
         const stocks = data.stocks;
         
         if (!stocks || stocks.length === 0) {
-          dashboard.innerHTML = "⚠️ 未发现有效的个股同步数据。";
+          dashboard.innerHTML = "⚠️ 未发现有效的个股数据，请等待后台同步。";
           return;
         }
 
-        // 获取唯一的行业分类并排序
+        // 获取不重复的行业并排序
         const industries = [...new Set(stocks.map(s => s.industry))].sort();
         
-        // 先建立行业容器
+        // 生成行业外壳
         industries.forEach(ind => {
           const industryId = ind.split('.')[0].trim(); 
           dashboard.innerHTML += `
@@ -114,7 +112,7 @@
           `;
         });
 
-        // 动态填充个股卡片
+        // 填充卡片
         stocks.forEach(stock => {
           const industryId = stock.industry.split('.')[0].trim();
           const grid = document.getElementById(`grid-sec-${industryId}`);
@@ -122,7 +120,7 @@
 
           const changeColor = stock.isUp ? "#e53e3e" : "#00b060"; 
           
-          // 智能分流：美股去 TradingView，日股去雅虎日本财经
+          // 日本股市跳转到雅虎日本，美股跳转到 TradingView
           let klineUrl = stock.symbol.endsWith(".T") 
             ? `https://finance.yahoo.co.jp/quote/${stock.code}`
             : `https://www.tradingview.com/symbols/${stock.code}/`;
@@ -153,11 +151,11 @@
 
       } catch (error) {
         console.error(error);
-        document.getElementById("dashboard").innerHTML = `<div style="color:#e53e3e; padding:20px; background:#fff; border-radius:8px;">❌ 终端载入异常: ${error.message}，请确保自动化工作流成功运行并生成了 data.json。</div>`;
+        document.getElementById("dashboard").innerHTML = `<div style="color:#e53e3e; padding:20px; background:#fff; border-radius:8px;">❌ 终端初始化异常: ${error.message}，请确保自动化工作流成功运行并生成了 data.json。</div>`;
       }
     }
 
-    // 页面加载时自动执行
+    // 页面加载完成后自动触发
     window.addEventListener('DOMContentLoaded', loadStockData);
   </script>
 </body>
