@@ -1,5 +1,7 @@
 import json
 import yfinance as yf
+import time
+import random
 
 # 宏观风向标清单
 MACRO_LIST = [
@@ -35,10 +37,14 @@ WATCHLIST = [
 def fetch_all_data():
     output_data = {"macro": [], "stocks": []}
     
+    # 建立一个具有迷惑性的浏览器 Session 头，防止高频访问被封
+    session = yf.utils.get_default_session()
+    session.headers.update({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'})
+
     # 1. 抓取宏观环境数据
     for m in MACRO_LIST:
         try:
-            stock = yf.Ticker(m["symbol"])
+            stock = yf.Ticker(m["symbol"], session=session)
             fast = stock.fast_info
             current = fast.last_price
             prev_close = fast.previous_close
@@ -51,15 +57,16 @@ def fetch_all_data():
                 "change": f"{sign}{diff:.2f} ({sign}{pct:.2f}%)",
                 "isUp": diff > 0
             })
+            time.sleep(random.uniform(0.5, 1.5)) # 随机歇一会
         except:
             pass
 
-    # 2. 抓取股票核心数据 + 技术面趋势
+    # 2. 抓取股票核心数据
     for item in WATCHLIST:
         symbol = item["symbol"]
         try:
-            print(f"正在分析 {item['name']}...")
-            stock = yf.Ticker(symbol)
+            print(f"正在高频安全扫描 {item['name']}...")
+            stock = yf.Ticker(symbol, session=session)
             info = stock.info
             fast = stock.fast_info
             
@@ -69,7 +76,6 @@ def fetch_all_data():
             percent = (diff / prev_close) * 100
             sign = "+" if diff > 0 else ""
             
-            # 计算距离52周高点的距离
             high_52w = info.get('fiftyTwoWeekHigh')
             if high_52w:
                 dist_high = ((current_price - high_52w) / high_52w) * 100
@@ -77,16 +83,9 @@ def fetch_all_data():
             else:
                 dist_high_str = "--"
 
-            # 计算200日均线状态 (MA200)
             ma200 = fast.get('twoHundredDayAverage') or info.get('twoHundredDayAverage')
-            if ma200 and current_price > ma200:
-                trend_label = "牛市多头"
-            elif ma200:
-                trend_label = "熊市左侧"
-            else:
-                trend_label = "趋势未知"
+            trend_label = "牛市多头" if ma200 and current_price > ma200 else ("熊市左侧" if ma200 else "趋势未知")
 
-            # PER/PBR 状态
             per = info.get('forwardPE') or info.get('trailingPE') or "--"
             per_display = f"{per:.2f}" if isinstance(per, (int, float)) else str(per)
             pbr = info.get('priceToBook') or "--"
@@ -105,6 +104,10 @@ def fetch_all_data():
                 "distHigh": dist_high_str,
                 "trend": trend_label
             })
+            
+            # 【核心安全机制】每次抓完一只股票，随机休息 1 到 2.5 秒，模拟真人浏览
+            time.sleep(random.uniform(1.0, 2.5))
+            
         except Exception as e:
             print(f"失败: {e}")
 
