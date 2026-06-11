@@ -123,6 +123,11 @@
             margin-bottom: 4px;
         }
 
+        .macro-change {
+            font-size: 13px;
+            font-weight: 600;
+        }
+
         /* 核心个股看盘网格 */
         .section-title {
             font-size: 18px;
@@ -230,39 +235,12 @@
             gap: 16px;
             font-size: 12px;
             color: var(--text-muted);
-            padding-bottom: 10px;
+            padding-bottom: 2px;
         }
 
         .fundamental-row span {
             color: var(--text-main);
             font-weight: 600;
-        }
-
-        /* 💡 核心修复：极致对齐的横向多周期回撤组件 */
-        .multi-period-metrics {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 11px;
-            color: var(--text-muted);
-            margin-top: 10px;
-            padding-top: 10px;
-            border-top: 1px dashed #e2e8f0;
-        }
-
-        .metric-item {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .metric-item.left { text-align: left; }
-        .metric-item.center { text-align: center; }
-        .metric-item.right { text-align: right; }
-
-        .metric-item span {
-            color: #1e293b;
-            font-weight: 600;
-            margin-top: 2px;
         }
 
         /* 颜色类管理 */
@@ -351,17 +329,30 @@
                                 <div>PBR: <span>${stock.pbr || '--'}</span></div>
                             </div>
                             
-                            <div class="multi-period-metrics">
-                                <div class="metric-item left">
-                                    距1周高 <span>${stock.distWeek || '--'}</span>
-                                </div>
-                                <div class="metric-item center">
-                                    距1月高 <span>${stock.distMonth || '--'}</span>
-                                </div>
-                                <div class="metric-item right">
-                                    距52周高 <span>${stock.distHigh || '--'}</span>
-                                </div>
-                            </div>
+                            <table style="
+                                width: 100%; 
+                                margin-top: 12px; 
+                                padding-top: 8px; 
+                                border-top: 1px dashed #e2e8f0; 
+                                border-collapse: collapse;
+                                font-size: 11px;
+                                color: #64748b;
+                            ">
+                                <thead>
+                                    <tr style="text-align: center;">
+                                        <th style="font-weight: normal; padding-bottom: 2px; width: 33.3%;">距1周高</th>
+                                        <th style="font-weight: normal; padding-bottom: 2px; width: 33.3%;">距1月高</th>
+                                        <th style="font-weight: normal; padding-bottom: 2px; width: 33.3%;">距52周高</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="text-align: center; font-weight: 600; color: #1e293b; font-size: 12px;">
+                                        <td style="padding-top: 2px;">${stock.distWeek || '--'}</td>
+                                        <td style="padding-top: 2px;">${stock.distMonth || '--'}</td>
+                                        <td style="padding-top: 2px;">${stock.distHigh || '--'}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     `;
                 });
