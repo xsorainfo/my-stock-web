@@ -1,40 +1,41 @@
-name: Auto Update Data
+name: 自动更新股票数据
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: '0 10 * * *'
+    # 每 15 分钟触发一次
+    # 早盘：北京时间 08:00 - 10:30（东京 09:00 - 11:30）
+    # 午盘：北京时间 11:30 - 14:30（东京 12:30 - 15:30）
+    - cron: '0,15,30,45 0,1,2,4,5,6 * * 1-5'
+    - cron: '0,15,30 3 * * 1-5'
+    - cron: '0,15,30,45 3 * * 1-5'
 
-# 🌟 核心强制：给运行此工作流的 GitHub 机器人授予显式对仓库的写入修改权限
-permissions:
-  contents: write
+  repository_dispatch:
+    types: [web_refresh]
+    
+  workflow_dispatch:
 
 jobs:
   update-data:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout Code
-      uses: actions/checkout@v4
+    - name: 检查代码
+      uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v5
+    - name: 设置 Python 环境
+      uses: actions/setup-python@v4
       with:
         python-version: '3.10'
 
-    - name: Install Dependencies
-      run: |
-        pip install yfinance requests
+    - name: 安装 yfinance 依赖包
+      run: pip install yfinance
 
-    - name: Run Script
-      env:
-        AI_API_KEY: ${{ secrets.AI_API_KEY }}
+    - name: 运行 Python 脚本抓取数据
       run: python update_data.py
 
-    - name: Commit and Push Changes
+    - name: 把最新数据提交回 GitHub 仓库
       run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
         git add data.json
-        git pull --rebase origin main
-        git commit -m "Automated data sync" || exit 0
-        git push origin main
+        git commit -m "自动更新股票数据 [skip ci]" || exit 0
+        git push
