@@ -100,32 +100,31 @@
         const stocks = await response.json();
         
         const dashboard = document.getElementById("dashboard");
-        dashboard.innerHTML = ""; // 清空加载提示
+        dashboard.innerHTML = ""; 
         
-        // 1. 核心算法：在前端对股票按照“行业（industry）”进行自动分组
-        const groups = {};
-        stocks.forEach(stock => {
-          if (!groups[stock.industry]) {
-            groups[stock.industry] = [];
-          }
-          groups[stock.industry].push(stock);
-        });
+        // 1. 提取所有不重复的行业名称
+        const industries = [...new Set(stocks.map(s => s.industry))];
+        // 核心排序：按照我们在 Python 里定好的序号（1, 2, 3）进行严格升序排列
+        industries.sort();
         
-        // 2. 循环每个行业，把行业区块和里面的卡片画出来
-        for (const industry in groups) {
-          // 创建行业区块 HTML
+        // 2. 先把有序的行业大盒子画好
+        industries.forEach(ind => {
+          // 显示时把前面的“1. ”数字切掉，保持视觉干净优雅
+          const displayName = ind.substring(3); 
           let sectionHtml = `
             <div class="industry-section">
-              <div class="industry-title">${industry}</div>
-              <div class="stock-grid" id="grid-${industry}"></div>
+              <div class="industry-title">${displayName}</div>
+              <div class="stock-grid" id="grid-${ind.replace(/\./g, '')}"></div>
             </div>
           `;
           dashboard.innerHTML += sectionHtml;
-        }
-
-        // 3. 把股票卡片精准塞进各自的行业网格（Grid）里
+        });
+    
+        // 3. 把股票卡片精准塞进各自的行业网格
         stocks.forEach(stock => {
-          const grid = document.getElementById(`grid-${stock.industry}`);
+          // 匹配无点的 ID
+          const gridId = `grid-${stock.industry.replace(/\./g, '')}`;
+          const grid = document.getElementById(gridId);
           const changeColor = stock.isUp ? "#e53e3e" : "#00b060"; 
           
           const cardHtml = `
@@ -150,9 +149,9 @@
               </div>
             </div>
           `;
-          grid.innerHTML += cardHtml;
+          if(grid) grid.innerHTML += cardHtml;
         });
-
+    
       } catch (error) {
         document.getElementById("dashboard").innerHTML = "数据加载失败，请检查数据流。";
         console.error(error);
