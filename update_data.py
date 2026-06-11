@@ -64,12 +64,10 @@ def fetch_all_data():
     for m in MACRO_LIST:
         try:
             stock = yf.Ticker(m["symbol"], session=session)
-            h_df = stock.history(period="10d")
-            # 🌟 终极防空：先剔除还未开盘、或者没有收盘价的 NaN 脏行
-            h_df = h_df.dropna(subset=['Close'])
+            # 为了计算1个月的数据，这里将个股周期拉长到 1mo 
+            h_df = stock.history(period="1mo").dropna(subset=['Close'])
             
             if len(h_df) >= 2:
-                # 🌟 终极防空：转换为标准纯 Python 列表，彻底脱离 Pandas 时区行数索引干扰
                 closes = h_df['Close'].tail(2).tolist()
                 current = closes[1]
                 prev_close = closes[0]
@@ -81,7 +79,7 @@ def fetch_all_data():
                     "name": m["name"], "price": f"{current:.2f}",
                     "change": f"{sign}{diff:.2f} ({sign}{pct:.2f}%)", "isUp": diff > 0
                 })
-            time.sleep(0.2)
+            time.sleep(0.1)
         except Exception as e:
             print(f"大盘 {m['name']} 异常: {e}")
 
@@ -89,12 +87,11 @@ def fetch_all_data():
     for item in WATCHLIST:
         symbol = item["symbol"]
         try:
-            print(f"正在智能对齐交易时区：{item['name']}...")
+            print(f"正在进行多周期高点对齐清洗：{item['name']}...")
             stock = yf.Ticker(symbol, session=session)
             
-            h_df = stock.history(period="10d")
-            # 🌟 终极防空：强行清洗未开盘的空数据
-            h_df = h_df.dropna(subset=['Close'])
+            # 拉取 1 个月的数据来覆盖周度、月度计算
+            h_df = stock.history(period="1mo").dropna(subset=['High', 'Close'])
             
             if h_df.empty or len(h_df) < 2:
                 continue
@@ -107,11 +104,28 @@ def fetch_all_data():
             percent = (diff / prev_close) * 100
             sign = "+" if diff > 0 else ""
             
-            per_display, pbr_display, dist_high_str = "--", "--", "--"
+            # 💡 核心新增：多周期高点比例计算
+            dist_high_str = "--"  # 52周
+            dist_week_str = "--"  # 1周
+            dist_month_str = "--" # 1个月
             
+            # 1周高点（通常取最后5个交易日）
+            high_1w = h_df['High'].tail(5).max()
+            if high_1w and high_1w >= current_price:
+                dist_week = ((current_price - high_1w) / high_1w) * 100
+                dist_week_str = f"{dist_week:.1f}%"
+                
+            # 1个月高点（取整张表 1mo 的最高价）
+            high_1m = h_df['High'].max()
+            if high_1m and high_1m >= current_price:
+                dist_month = ((current_price - high_1m) / high_1m) * 100
+                dist_month_str = f"{dist_month:.1f}%"
+
+            per_display, pbr_display = "--", "--"
             try:
                 info = stock.info
                 if isinstance(info, dict):
+                    # 52周最高
                     high_52w = info.get('fiftyTwoWeekHigh')
                     if high_52w and float(high_52w) >= current_price:
                         dist_high = ((current_price - float(high_52w)) / float(high_52w)) * 100
@@ -130,9 +144,13 @@ def fetch_all_data():
                 "code": symbol.split('.')[0] if '.' in symbol else symbol,
                 "name": item["name"], "industry": item["industry"], "feature": item["feature"],
                 "price": f"{current_price:.2f}", "change": f"{sign}{diff:.2f} ({sign}{percent:.2f}%)", "isUp": diff > 0,
-                "per": per_display, "pbr": pbr_display, "distHigh": dist_high_str, "trend": trend_label
+                "per": per_display, "pbr": pbr_display, 
+                "distHigh": dist_high_str,       # 52周
+                "distWeek": dist_week_str,       # 新增最近1周
+                "distMonth": dist_month_str,     # 新增最近1个月
+                "trend": trend_label
             })
-            time.sleep(random.uniform(0.1, 0.3))
+            time.sleep(random.uniform(0.1, 0.2))
         except Exception as e:
             print(f"跳过 {item['name']}: {e}")
 
@@ -141,7 +159,7 @@ def fetch_all_data():
 
     with open('data.json', 'w', encoding='utf-8') as f:
         json.dump(output_data, f, ensure_ascii=False, indent=2)
-    print("🎉 时区防御重构完成，数据已打包！")
+    print("🎉 多周期高点数据流打包成功！")
 
 if __name__ == "__main__":
     fetch_all_data()
