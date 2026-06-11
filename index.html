@@ -92,9 +92,18 @@ async function loadDashboardData() {
                        <div class="${s.isUp?'text-up':'text-down'}">${s.change}</div>
                    </div>
                    <table class="metrics-table">
-                       <tr><td>PER: ${judgeValuation(s.per, 'PER')}</td><td>PBR: ${judgeValuation(s.pbr, 'PBR')}</td></tr>
-                       <tr style="font-weight:600; color:#1e293b;"><td>${s.distWeek}</td><td>${s.distHigh}</td></tr>
-                   </table>
+                        <tr>
+                            <td style="color:#64748b">PER: ${judgeValuation(s.per, 'PER')}</td>
+                            <td style="color:#64748b">PBR: ${judgeValuation(s.pbr, 'PBR')}</td>
+                        </tr>
+                        <tr style="font-weight:600; color:#1e293b;">
+                            <td>1周回撤: <span style="color:#ef4444">${s.distWeek}</span></td>
+                            <td>52周回撤: <span style="color:#ef4444">${s.distHigh}</span></td>
+                        </tr>
+                        <tr style="color:#94a3b8;">
+                            <td colspan="2">月度回撤: ${s.distMonth}</td>
+                        </tr>
+                    </table>
                </div>
            `).join('')}
         </div>
