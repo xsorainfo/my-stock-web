@@ -41,35 +41,30 @@ WATCHLIST = [
 
 def make_ai_news(stock_data):
     if not SEC_VAL:
-        return "💡 终端同步就绪。全球多头防御格局整体维持，保持结构性跟踪。"
+        return "💡 终端同步就绪。全生态多头防御格局整体维持，保持结构性跟踪。"
     
-    # 1. 先尝试获取可用模型列表 (ListModels)
-    list_url = f"https://generativelanguage.googleapis.com/v1beta/models?key={SEC_VAL}"
-    try:
-        r_list = requests.get(list_url, timeout=10)
-        if r_list.status_code == 200:
-            models = [m['name'] for m in r_list.json().get('models', [])]
-            # 自动挑选一个支持 generateContent 的模型
-            target_model = next((m for m in models if "gemini" in m and "1.5" in m), "models/gemini-1.5-flash")
-            print(f"终端探测：检测到可用模型 -> {target_model}")
-        else:
-            target_model = "models/gemini-1.5-flash"
-    except:
-        target_model = "models/gemini-1.5-flash"
-
-    # 2. 使用探测到的模型进行调用
-    msg = f"顶级基金经理，请用100字精简复盘这些资产：{stock_data[:5]}。从多头防御、估值消化视角切入，指出核心标的是抱团还是黄金坑。"
-    gen_url = f"https://generativelanguage.googleapis.com/v1beta/{target_model}:generateContent?key={SEC_VAL}"
+    valid_stocks = [s for s in stock_data if "nan" not in s['change']]
+    if not valid_stocks: valid_stocks = stock_data
+    lines = [f"{s['name']}({s['change']})" for s in valid_stocks[:6]]
+    msg = f"复盘：{', '.join(lines)}。写120字多头思维简报，分析抱团与机会。"
+    
+    # 🌟【强制硬编码】：放弃探测，直接锁定官方最标准的通用生产环境路径
+    # 现在的路径格式必须是 models/模型名:generateContent
+    model_name = "gemini-1.5-flash"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={SEC_VAL}"
     
     try:
+        print(f"终端策略流：正在调用稳定生产环境模型 {model_name}...")
         payload = {"contents": [{"parts": [{"text": msg}]}]}
-        r = requests.post(gen_url, json=payload, timeout=15)
+        r = requests.post(url, json=payload, timeout=15)
+        
         if r.status_code == 200:
             return r.json()['candidates'][0]['content']['parts'][0]['text'].strip()
         else:
-            print(f"❌ 最终调用失败: {r.text}")
+            # 如果这里还报错 404，说明你的 Key 权限确实没有启用这个模型
+            print(f"❌ 调用失败，状态码: {r.status_code}, 错误详情: {r.text}")
     except Exception as e:
-        print(f"❌ 异常: {e}")
+        print(f"❌ 网络异常: {e}")
     
     return "💡 盘后多头思维：核心资产高位震荡消化 TTM 估值，部分上游垄断材料回撤提供中线左侧安全边际，保持结构性买入防御。"
 
