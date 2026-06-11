@@ -2,32 +2,40 @@ name: 自动更新股票数据
 
 on:
   schedule:
-    # 每 15 分钟触发一次
-    # 早盘：北京时间 08:00 - 10:30（东京 09:00 - 11:30）
-    # 午盘：北京时间 11:30 - 14:30（东京 12:30 - 15:30）
+    # 早盘：北京时间 08:00 - 10:30（UTC 00:00 - 02:30）
+    # 午盘：北京时间 11:30 - 14:30（UTC 03:30 - 06:30）
     - cron: '0,15,30,45 0,1,2,4,5,6 * * 1-5'
-    - cron: '0,15,30 3 * * 1-5'
-    - cron: '0,15,30,45 3 * * 1-5'
+    - cron: '30,45 3 * * 1-5' # 修正重复冲突，仅保留 11:30 之后的下半小时触发
 
   repository_dispatch:
     types: [web_refresh]
     
   workflow_dispatch:
 
+# 🌟【超级核心加固】：彻底解决 git push 报 exit code 1 的权限拉闸问题
+permissions:
+  contents: write
+
+# 🌟【体验加固】：强制开启官方推荐的 Node.js 24 容器，彻底抹除讨厌的黄色警告
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   update-data:
     runs-on: ubuntu-latest
     steps:
+    # 升级到高版本 checkout，配合 permissions 顺畅读写
     - name: 检查代码
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: 设置 Python 环境
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.10'
 
-    - name: 安装 yfinance 依赖包
-      run: pip install yfinance
+    # yfinance 如果要请求大盘和 AI，通常也需要 requests 库作为底层依赖
+    - name: 安装 yfinance 及网络依赖包
+      run: pip install yfinance requests
 
     - name: 运行 Python 脚本抓取数据
       run: python update_data.py
@@ -37,5 +45,6 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add data.json
+        # 如果没有数据变化，优雅退出，不抛出异常崩溃
         git commit -m "自动更新股票数据 [skip ci]" || exit 0
         git push
