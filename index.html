@@ -133,42 +133,39 @@
     }
 
     // 核心功能：点击按钮远程惊醒 GitHub 机器人
+    // 升级版：安全的远程惊醒机器人功能
     async function triggerCloudRobot() {
       const btn = document.getElementById("refresh-btn");
-      btn.disabled = True;
+      btn.disabled = true;
       btn.innerHTML = "⚡ 机器人正在赶往交易所(约40秒)...";
-
+    
       try {
-        const url = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/dispatches`;
-        const response = await fetch(url, {
-          method: "POST",
-          headers: {
-            "Accept": "application/vnd.github.v3+json",
-            "Authorization": `token ${GITHUB_TOKEN}`
-          },
-          body: JSON.stringify({ event_type: "web_refresh" })
+        // 网页不再直接联系 GitHub，而是直接呼叫我们自己的 Vercel 后端安全接口
+        const response = await fetch('/api/refresh', {
+          method: "POST"
         });
-
-        if (response.status === 24) {
-          // 发送成功后，倒计时 40 秒后自动刷新页面看成果
+    
+        if (response.ok) {
+          // 发送成功，进入 40 秒倒计时
           let seconds = 40;
           const timer = setInterval(() => {
             seconds--;
             if (seconds <= 0) {
               clearInterval(timer);
-              window.location.reload(); // 倒计时结束，自动刷新网页
+              window.location.reload(); 
             } else {
               btn.innerHTML = `⏳ 请等待 ${seconds} 秒后查看结果...`;
             }
           }, 1000);
         } else {
-          alert("召唤失败，请检查配置里的用户名、仓库名或 Token 是否填错。");
-          btn.disabled = False;
+          const resData = await response.json();
+          alert("召唤失败：" + (resData.error || "未知后端错误"));
+          btn.disabled = false;
           btn.innerHTML = "🔄 召唤云端强刷";
         }
       } catch (e) {
         alert("网络错误：" + e);
-        btn.disabled = False;
+        btn.disabled = false;
         btn.innerHTML = "🔄 召唤云端强刷";
       }
     }
