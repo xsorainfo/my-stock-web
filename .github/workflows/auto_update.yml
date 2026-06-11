@@ -3,17 +3,18 @@ name: Auto Update Data
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 10 * * *' # 每天自动运行
+    - cron: '0 10 * * *'
 
+# 🌟 核心强制：给运行此工作流的 GitHub 机器人授予显式对仓库的写入修改权限
 permissions:
-  contents: write # 🌟 核心：强行开启 GitHub 仓库的写入权限，防止机器人提交被拒
+  contents: write
 
 jobs:
   update-data:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Code
-      uses: actions/checkout@v4 # 升级到最新稳妥版本
+      uses: actions/checkout@v4
 
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -34,7 +35,6 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git add data.json
-        # 🧠 先同步远程最新代码，防止网页端修改导致版本冲突流产
         git pull --rebase origin main
         git commit -m "Automated data sync" || exit 0
         git push origin main
