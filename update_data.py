@@ -4,6 +4,7 @@ import time
 import random
 import os
 import requests
+import traceback
 
 # Gemini 1.5 官方接口标准端点与密钥配置
 END_POINT = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
@@ -39,33 +40,29 @@ WATCHLIST = [
 ]
 
 def make_ai_news(stock_data):
-    """通过云端大模型，全自动生成精炼复盘简报"""
     if not SEC_VAL:
-        return "💡 终端同步就绪。全球多头防御格局整体维持，AI芯片、先进材料与数据中心电网异动显著，保持跟踪。"
-    
+        return "💡 终端同步就绪。全球多头防御格局整体维持，保持跟踪。"
     lines = [f"{s['name']}: {s['change']}" for s in stock_data[:6]]
-    msg = f"你是一个顶级宏观对冲基金经理，请用120字精炼复盘今日全球AI硬科技动向，语气要专业老练。数据参考：{', '.join(lines)}"
-    
+    msg = f"请用120字精炼复盘今日全球AI硬科技动向。数据参考：{', '.join(lines)}"
     try:
         hd = {"Authorization": f"Bearer {SEC_VAL}", "Content-Type": "application/json"}
-        pl = {
-            "model": "gemini-1.5-flash", 
-            "messages": [{"role": "user", "content": msg}], 
-            "temperature": 0.4
-        }
+        pl = {"model": "gemini-1.5-flash", "messages": [{"role": "user", "content": msg}], "temperature": 0.4}
         r = requests.post(END_POINT, headers=hd, json=pl, timeout=12)
         if r.status_code == 200:
             return r.json()['choices'][0]['message']['content'].strip()
     except Exception as e:
-        print(f"AI 生成遇到微调跳过: {e}")
-    return "💡 盘后策略：核心资产呈现机构抱团和多头防御特征，建议密切关注产业链高壁垒标的盘面结构表现。"
+        print(f"【调试提示】AI简报模块生成跳过: {e}")
+    return "💡 盘后策略：核心资产呈现多头防御特征，建议密切关注产业链结构表现。"
 
 def fetch_all_data():
     output_data = {"macro": [], "stocks": [], "ai_report": ""}
-    session = yf.utils.get_default_session()
+    
+    # 🌟 核心修复：弃用旧版 yf.utils.get_default_session()
+    # 改用全新、安全的 requests 标准 Session 注入浏览器伪装头
+    session = requests.Session()
     session.headers.update({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'})
 
-    # 1. 抓取大盘
+    # 1. 大盘抓取
     for m in MACRO_LIST:
         try:
             stock = yf.Ticker(m["symbol"], session=session)
@@ -80,15 +77,13 @@ def fetch_all_data():
                 "name": m["name"], "price": f"{current:.2f}",
                 "change": f"{sign}{diff:.2f} ({sign}{pct:.2f}%)", "isUp": diff > 0
             })
-            time.sleep(0.3)
-        except:
-            pass
+        except Exception as e:
+            print(f"【调试提示】大盘 {m['name']} 抓取失败: {e}")
 
-    # 2. 抓取自选个股
+    # 2. 个股抓取
     for item in WATCHLIST:
         symbol = item["symbol"]
         try:
-            print(f"正在同步决策面：{item['name']}...")
             stock = yf.Ticker(symbol, session=session)
             h_df = stock.history(period="5d")
             if h_df.empty or len(h_df) < 2: continue
@@ -112,8 +107,8 @@ def fetch_all_data():
                     if per and isinstance(per, (int, float)): per_display = f"{per:.2f}"
                     pbr = info.get('priceToBook')
                     if pbr and isinstance(pbr, (int, float)): pbr_display = f"{pbr:.2f}"
-            except:
-                pass
+            except Exception as e:
+                print(f"【调试提示】个股财务指标读取跳过 {item['name']}: {e}")
 
             ma20 = h_df['Close'].mean()
             trend_label = "牛市多头" if current_price >= ma20 else "熊市空头"
@@ -124,17 +119,22 @@ def fetch_all_data():
                 "price": f"{current_price:.2f}", "change": f"{sign}{diff:.2f} ({sign}{percent:.2f}%)", "isUp": diff > 0,
                 "per": per_display, "pbr": pbr_display, "distHigh": dist_high_str, "trend": trend_label
             })
-            time.sleep(random.uniform(0.4, 1.0))
+            time.sleep(random.uniform(0.3, 0.8))
         except Exception as e:
-            print(f"跳过 {item['name']}: {e}")
+            print(f"【调试提示】个股核心流解析跳过 {item['name']}: {e}")
 
-    # 3. 实时注入 AI 简报
-    print("正在召集 AI 首席复盘官编写策略简报...")
+    # 3. AI 简报生成
     output_data["ai_report"] = make_ai_news(output_data["stocks"])
 
+    # 4. 写出数据
     with open('data.json', 'w', encoding='utf-8') as f:
         json.dump(output_data, f, ensure_ascii=False, indent=2)
-    print("🎉 全财务指标 + AI 策略简报数据流打包完成！")
 
 if __name__ == "__main__":
-    fetch_all_data()
+    try:
+        fetch_all_data()
+        print("🎉 离线数据与AI简报同步成功完成！")
+    except Exception as main_err:
+        print("\n💥💥💥【核心崩溃日志警报】引发致命死机的位置如下：\n")
+        traceback.print_exc()
+        print("\n💥💥💥----------------------------------------\n")
