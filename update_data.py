@@ -2,8 +2,20 @@ import json
 import yfinance as yf
 import time
 import random
+import os
+import requests
 
-# 宏观风向标清单
+
+
+# 如果用 Gemini，请把顶部的两个配置改成这样：
+AI_API_URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
+# 模型的名字建议用速度飞快且免费的 flash
+payload = {
+    "model": "gemini-1.5-flash", 
+    "messages": [{"role": "user", "content": prompt}],
+    "temperature": 0.3
+}
+
 MACRO_LIST = [
     {"symbol": "^SOX", "name": "费城半导体指数"},
     {"symbol": "JPY=X", "name": "美元/日元 (汇率)"},
@@ -11,7 +23,6 @@ MACRO_LIST = [
     {"symbol": "^GSPC", "name": "标普 500"}
 ]
 
-# 核心自选股清单
 WATCHLIST = [
     {"symbol": "NVDA", "name": "英伟达 (美)", "industry": "1. AI半导体与核心设备", "feature": "全球AI算力GPU绝对霸主，万亿AI生态的缔造者"},
     {"symbol": "ASML", "name": "阿斯麦 (美)", "industry": "1. AI半导体与核心设备", "feature": "全球高端光刻机独家垄断者，芯片制造的物理极限"},
@@ -34,12 +45,47 @@ WATCHLIST = [
     {"symbol": "6981.T", "name": "村田制作所 (日)", "industry": "5. 边缘AI与智能终端", "feature": "全球MLCC电容之王，AI终端硬件升级换代的刚需元器件"}
 ]
 
-def fetch_all_data():
-    output_data = {"macro": [], "stocks": []}
+def generate_ai_report(macro_data, stock_data):
+    """把今天的数据打包塞给大模型，让大模型生成犀利的首席简报"""
+    if not AI_KEY:
+        return "⚠️ AI_API_KEY 未配置，无法生成盘后智能简报。"
     
-    # 建立一个具有迷惑性的浏览器 Session 头，防止高频访问被封
+    # 将今日的异动股票进行简单文字罗列
+    stock_summary = []
+    for s in stock_data:
+        stock_summary.append(f"{s['name']}({s['code']}): 涨跌幅 {s['change']}, 趋势:{s['trend']}, 距新高:{s['distHigh']}")
+    
+    prompt = f"""
+    你是一位顶级的对冲基金宏观策略师，说话一针见血、逻辑严密。请根据今天最新的美日AI产业链市况数据，为我生成一份300字以内的【盘后首席指引】。
+    
+    【今日宏观天气】：{json.dumps(macro_data, ensure_ascii=False)}
+    【核心个股异动】：{', '.join(stock_summary[:10])} （仅展示部分核心）
+    
+    要求：
+    1. 不要讲废话。直接指出今天哪个题材（如：半导体设备、数据中心电力、先进材料）表现最强或遭遇危机。
+    2. 结合美元日元汇率，用极度精炼的语言给出一个明天盯着哪个方向的交易建议。
+    3. 语言要专业、犀利、充满洞察力。
+    """
+    
+    try:
+        headers = {"Authorization": f"Bearer {AI_KEY}", "Content-Type": "application/json"}
+        payload = {
+            "model": "deepseek-chat", # 根据你的AI型号换名字，比如 gemini-1.5-flash 等
+            "messages": [{"role": "user", "content": prompt}],
+            "temperature": 0.3
+        }
+        response = requests.post(AI_API_URL, headers=headers, json=payload, timeout=30)
+        if response.status_code == 200:
+            return response.json()['choices'][0]['message']['content'].strip()
+        else:
+            return f"AI 秘书今天罢工了，错误码: {response.status_code}"
+    except Exception as e:
+        return f"召唤 AI 策略师失败: {str(e)}"
+
+def fetch_all_data():
+    output_data = {"macro": [], "stocks": [], "ai_report": "暂无今日简报"}
     session = yf.utils.get_default_session()
-    session.headers.update({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'})
+    session.headers.update({'User-Agent': 'Mozilla/5.0'})
 
     # 1. 抓取宏观环境数据
     for m in MACRO_LIST:
@@ -57,15 +103,15 @@ def fetch_all_data():
                 "change": f"{sign}{diff:.2f} ({sign}{pct:.2f}%)",
                 "isUp": diff > 0
             })
-            time.sleep(random.uniform(0.5, 1.5)) # 随机歇一会
+            time.sleep(random.uniform(0.3, 1.0))
         except:
             pass
 
-    # 2. 抓取股票核心数据
+    # 2. 抓取股票数据 + 历史30天趋势图数据
     for item in WATCHLIST:
         symbol = item["symbol"]
         try:
-            print(f"正在高频安全扫描 {item['name']}...")
+            print(f"正在高频安全扫描及提取历史K线: {item['name']}...")
             stock = yf.Ticker(symbol, session=session)
             info = stock.info
             fast = stock.fast_info
@@ -76,13 +122,15 @@ def fetch_all_data():
             percent = (diff / prev_close) * 100
             sign = "+" if diff > 0 else ""
             
-            high_52w = info.get('fiftyTwoWeekHigh')
-            if high_52w:
-                dist_high = ((current_price - high_52w) / high_52w) * 100
-                dist_high_str = f"{dist_high:.1f}%"
-            else:
-                dist_high_str = "--"
+            # --- 核心：提取过去30天的历史价格列表用来画小趋势图 ---
+            hist = stock.history(period="1mo")
+            history_prices = []
+            if not hist.empty:
+                # 提取最近20-22个交易日的收盘价，保留2位小数
+                history_prices = [round(float(p), 2) for p in hist['Close'].tolist()]
 
+            high_52w = info.get('fiftyTwoWeekHigh')
+            dist_high_str = f"{((current_price - high_52w) / high_52w) * 100:.1f}%" if high_52w else "--"
             ma200 = fast.get('twoHundredDayAverage') or info.get('twoHundredDayAverage')
             trend_label = "牛市多头" if ma200 and current_price > ma200 else ("熊市左侧" if ma200 else "趋势未知")
 
@@ -102,17 +150,20 @@ def fetch_all_data():
                 "per": per_display,
                 "pbr": pbr_display,
                 "distHigh": dist_high_str,
-                "trend": trend_label
+                "trend": trend_label,
+                "history": history_prices # 把这串历史价格数组塞进数据包里！
             })
-            
-            # 【核心安全机制】每次抓完一只股票，随机休息 1 到 2.5 秒，模拟真人浏览
-            time.sleep(random.uniform(1.0, 2.5))
-            
+            time.sleep(random.uniform(0.5, 1.5))
         except Exception as e:
             print(f"失败: {e}")
 
+    # 3. 核心：在收盘或者刷数据时，顺便生成AI深度复盘
+    print("正在连线云端 AI 策略师生成今日复盘简报...")
+    output_data["ai_report"] = generate_ai_report(output_data["macro"], output_data["stocks"])
+
     with open('data.json', 'w', encoding='utf-8') as f:
         json.dump(output_data, f, ensure_ascii=False, indent=2)
+    print("全部多维决策数据更新完毕！")
 
 if __name__ == "__main__":
     fetch_all_data()
