@@ -338,14 +338,9 @@
             console.error('渲染故障:', error);
         }
     }
-
-    // 💡 修复：右上角强刷按钮终极绑定防御
     document.getElementById('cloudRefreshBtn').addEventListener('click', function() {
-        // 1. 先刷本地界面
-        loadDashboardData();
-        // 2. 如果你原本有特定的外部刷新逻辑或 Actions 触发代码，请加在这里：
-        console.log("云端强刷信号已发出...");
-        alert("🔄 正在从云端数据源重新对齐交易时区，请稍候查看编译状态！");
+        // 换成你原本戳 Webhook 自动跑 Actions 的那段 fetch 代码：
+        fetch('你的GitHub触发链接', { method: 'POST' }); 
     });
 
     window.onload = loadDashboardData;
