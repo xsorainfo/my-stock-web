@@ -5,78 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>我的大盘研究看板</title>
   <style>
-    body { 
-      background-color: #f5f7fa; 
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; 
-      padding: 30px; 
-      margin: 0; 
-    }
-
-    /* 整个网页的主容器，限制最大宽度 */
-    .dashboard-container {
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
-    /* 行业区块的样式 */
-    .industry-section {
-      margin-bottom: 40px;
-    }
-
-    /* 行业大标题 */
-    .industry-title {
-      font-size: 22px;
-      font-weight: bold;
-      color: #2d3748;
-      margin-bottom: 16px;
-      padding-left: 10px;
-      border-left: 5px solid #3182ce; /* 蓝色的行业小竖条 */
-    }
-
-    /* 核心：卡片网格系统 */
-    .stock-grid {
-      display: grid;
-      /* 核心魔法：自动填满，每个卡片最小 260px。如果屏幕够宽，一行自动排 4-5 个；屏幕窄（如手机）自动变 1 个 */
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 20px; /* 卡片之间的间距 */
-    }
-
-    /* 股票卡片美化（稍微缩小了一点点体积，方便横向排更多） */
-    .stock-card { 
-      background: #ffffff; 
-      border-radius: 12px; 
-      box-shadow: 0 4px 15px rgba(0,0,0,0.04); 
-      padding: 18px; 
+    body { background-color: #f5f7fa; font-family: -apple-system, sans-serif; padding: 30px; margin: 0; }
+    .dashboard-container { max-width: 1400px; margin: 0 auto; }
+    
+    /* 顶部导航栏，用来放按钮 */
+    .header-bar {
       display: flex;
-      flex-direction: column;
       justify-content: space-between;
-      transition: transform 0.2s;
-    }
-    /* 鼠标悬停在卡片上时有一个微微浮起的效果 */
-    .stock-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    }
-
-    .card-header { 
-      display: flex; 
-      justify-content: space-between; 
       align-items: center;
-      margin-bottom: 8px; 
+      margin-bottom: 30px;
     }
+    .page-title { font-size: 24px; font-weight: bold; color: #1a202c; margin: 0; }
+    
+    /* 强刷按钮样式 */
+    .refresh-btn {
+      background-color: #3182ce;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s;
+    }
+    .refresh-btn:hover { background-color: #2b6cb0; }
+    .refresh-btn:disabled { background-color: #cbd5e0; cursor: not-allowed; }
+
+    .industry-section { margin-bottom: 40px; }
+    .industry-title { font-size: 22px; font-weight: bold; color: #2d3748; margin-bottom: 16px; padding-left: 10px; border-left: 5px solid #3182ce; }
+    .stock-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+    .stock-card { background: #ffffff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); padding: 18px; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.2s; }
+    .stock-card:hover { transform: translateY(-4px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+    .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
     .stock-code { font-size: 12px; background: #edf2f7; padding: 2px 6px; border-radius: 4px; color: #4a5568; font-weight: bold; }
     .stock-name { font-size: 16px; font-weight: 600; color: #1a202c; }
-    
-    .feature-box { 
-      font-size: 11px; 
-      color: #718096; 
-      background: #f7fafc; 
-      padding: 6px 10px; 
-      border-radius: 6px; 
-      margin-bottom: 12px;
-      line-height: 1.4;
-    }
-
+    .feature-box { font-size: 11px; color: #718096; background: #f7fafc; padding: 6px 10px; border-radius: 6px; margin-bottom: 12px; line-height: 1.4; }
     .price-section { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 8px; }
     .current-price { font-size: 28px; font-weight: bold; color: #2d3748; }
     .divider { border: none; border-top: 1px solid #edf2f7; margin: 10px 0; }
@@ -89,27 +55,39 @@
 </head>
 <body>
 
-  <div class="dashboard-container" id="dashboard">
-    <div class="loading">正在归类并加载自选股看板...</div>
+  <div class="dashboard-container">
+    <!-- 顶部状态栏 -->
+    <div class="header-bar">
+      <h1 class="page-title">硬科技与半导体深度看板</h1>
+      <button class="refresh-btn" id="refresh-btn" onclick="triggerCloudRobot()">
+        <span>🔄 召唤云端强刷</span>
+      </button>
+    </div>
+
+    <!-- 看板主大厅 -->
+    <div id="dashboard">
+      <div class="loading">正在归类并加载自选股看板...</div>
+    </div>
   </div>
 
   <script>
+    // 【配置区】请把下面的信息换成你自己的
+    const GITHUB_USER = "你的GitHub用户名"; 
+    const GITHUB_REPO = "my-stock-web";
+    // 把刚才复制的 ghp_ 开头的通行证贴在下面
+    const GITHUB_TOKEN = "ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; 
+
     async function loadStockData() {
       try {
-        const response = await fetch('./data.json');
+        const response = await fetch('./data.json?t=' + ImgDate = new Date().getTime()); // 加个时间戳防止浏览器缓存死数据
         const stocks = await response.json();
         
         const dashboard = document.getElementById("dashboard");
         dashboard.innerHTML = ""; 
         
-        // 1. 提取所有不重复的行业名称
-        const industries = [...new Set(stocks.map(s => s.industry))];
-        // 核心排序：按照我们在 Python 里定好的序号（1, 2, 3）进行严格升序排列
-        industries.sort();
+        const industries = [...new Set(stocks.map(s => s.industry))].sort();
         
-        // 2. 先把有序的行业大盒子画好
         industries.forEach(ind => {
-          // 显示时把前面的“1. ”数字切掉，保持视觉干净优雅
           const displayName = ind.substring(3); 
           let sectionHtml = `
             <div class="industry-section">
@@ -119,10 +97,8 @@
           `;
           dashboard.innerHTML += sectionHtml;
         });
-    
-        // 3. 把股票卡片精准塞进各自的行业网格
+
         stocks.forEach(stock => {
-          // 匹配无点的 ID
           const gridId = `grid-${stock.industry.replace(/\./g, '')}`;
           const grid = document.getElementById(gridId);
           const changeColor = stock.isUp ? "#e53e3e" : "#00b060"; 
@@ -151,10 +127,49 @@
           `;
           if(grid) grid.innerHTML += cardHtml;
         });
-    
       } catch (error) {
         document.getElementById("dashboard").innerHTML = "数据加载失败，请检查数据流。";
-        console.error(error);
+      }
+    }
+
+    // 核心功能：点击按钮远程惊醒 GitHub 机器人
+    async function triggerCloudRobot() {
+      const btn = document.getElementById("refresh-btn");
+      btn.disabled = True;
+      btn.innerHTML = "⚡ 机器人正在赶往交易所(约40秒)...";
+
+      try {
+        const url = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/dispatches`;
+        const response = await fetch(url, {
+          method: "POST",
+          headers: {
+            "Accept": "application/vnd.github.v3+json",
+            "Authorization": `token ${GITHUB_TOKEN}`
+          },
+          body: JSON.stringify({ event_type: "web_refresh" })
+        });
+
+        if (response.status === 24) {
+          // 发送成功后，倒计时 40 秒后自动刷新页面看成果
+          let seconds = 40;
+          const timer = setInterval(() => {
+            seconds--;
+            if (seconds <= 0) {
+              clearInterval(timer);
+              window.location.reload(); // 倒计时结束，自动刷新网页
+            } else {
+              btn.innerHTML = `⏳ 请等待 ${seconds} 秒后查看结果...`;
+            }
+          }, 1000);
+        } else {
+          alert("召唤失败，请检查配置里的用户名、仓库名或 Token 是否填错。");
+          btn.disabled = False;
+          btn.innerHTML = "🔄 召唤云端强刷";
+        }
+      } catch (e) {
+        alert("网络错误：" + e);
+        btn.disabled = False;
+        btn.innerHTML = "🔄 召唤云端强刷";
       }
     }
 
