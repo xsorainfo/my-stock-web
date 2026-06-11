@@ -230,19 +230,6 @@
             font-weight: 600;
         }
 
-        .fundamental-row {
-            display: flex;
-            gap: 16px;
-            font-size: 12px;
-            color: var(--text-muted);
-            padding-bottom: 2px;
-        }
-
-        .fundamental-row span {
-            color: var(--text-main);
-            font-weight: 600;
-        }
-
         /* 颜色类管理 */
         .text-up { color: var(--up-color); }
         .text-down { color: var(--down-color); }
@@ -264,16 +251,14 @@
     <div class="macro-grid" id="macroGrid">
         </div>
 
-    <h2 class="section-title">AI 半导体与全要素核心标的集群</h2>
+    <h2 class="section-title">AI 半导体与全要素 core 标的集群</h2>
     <div class="stock-grid" id="stockGrid">
         </div>
 </div>
 
 <script>
-    // 异步加载打包数据逻辑
     async function loadDashboardData() {
         try {
-            // 默认加载由 Python 自动同步吐出的 data.json
             const response = await fetch('data.json?v=' + new Date().getTime());
             if (!response.ok) throw new Error('未能正确加载终端决策流数据');
             const data = await response.json();
@@ -297,7 +282,7 @@
                 });
             }
 
-            // 3. 动态渲染全要素自选股集群
+            // 3. 动态渲染自选股集群
             const stockGrid = document.getElementById('stockGrid');
             stockGrid.innerHTML = '';
             if (data.stocks && data.stocks.length > 0) {
@@ -324,11 +309,6 @@
                                 <div class="stock-change ${colorClass}">${stock.change}</div>
                             </div>
                             
-                            <div class="fundamental-row">
-                                <div>PER: <span>${stock.per || '--'}</span></div>
-                                <div>PBR: <span>${stock.pbr || '--'}</span></div>
-                            </div>
-                            
                             <table style="
                                 width: 100%; 
                                 margin-top: 12px; 
@@ -339,17 +319,21 @@
                                 color: #64748b;
                             ">
                                 <thead>
-                                    <tr style="text-align: center;">
-                                        <th style="font-weight: normal; padding-bottom: 2px; width: 33.3%;">距1周高</th>
-                                        <th style="font-weight: normal; padding-bottom: 2px; width: 33.3%;">距1月高</th>
-                                        <th style="font-weight: normal; padding-bottom: 2px; width: 33.3%;">距52周高</th>
+                                    <tr style="text-align: center; background: #f8fafc;">
+                                        <th style="font-weight: 500; padding: 4px 2px; width: 20%;">PER</th>
+                                        <th style="font-weight: 500; padding: 4px 2px; width: 20%;">PBR</th>
+                                        <th style="font-weight: 400; padding: 4px 2px; width: 20%;">距1周高</th>
+                                        <th style="font-weight: 400; padding: 4px 2px; width: 20%;">距1月高</th>
+                                        <th style="font-weight: 400; padding: 4px 2px; width: 20%;">距52周高</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr style="text-align: center; font-weight: 600; color: #1e293b; font-size: 12px;">
-                                        <td style="padding-top: 2px;">${stock.distWeek || '--'}</td>
-                                        <td style="padding-top: 2px;">${stock.distMonth || '--'}</td>
-                                        <td style="padding-top: 2px;">${stock.distHigh || '--'}</td>
+                                        <td style="padding-top: 6px; color: #0f172a;">${stock.per || '--'}</td>
+                                        <td style="padding-top: 6px; color: #0f172a;">${stock.pbr || '--'}</td>
+                                        <td style="padding-top: 6px; font-weight: 500;">${stock.distWeek || '--'}</td>
+                                        <td style="padding-top: 6px; font-weight: 500;">${stock.distMonth || '--'}</td>
+                                        <td style="padding-top: 6px; font-weight: 500;">${stock.distHigh || '--'}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -363,7 +347,6 @@
         }
     }
 
-    // 页面初始化时自动拉取
     window.onload = loadDashboardData;
 </script>
 
