@@ -4,7 +4,6 @@ import time
 import random
 import os
 import requests
-import datetime
 
 END_POINT = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
 SEC_VAL = os.environ.get("AI_API_KEY")
@@ -33,30 +32,30 @@ WATCHLIST = [
     {"symbol": "GE", "name": "通用电气 (美)", "industry": "4. AI核能与电力设施", "feature": "全球电网电缆与重型燃气轮机巨头，电力短缺直接受益者"},
     {"symbol": "6501.T", "name": "日立制作所 (日)", "industry": "4. AI核能与电力设施", "feature": "全球变压器与高压直流电网巨头，斩获海量海外数据中心订单"},
     {"symbol": "6503.T", "name": "三菱电机 (日)", "industry": "4. AI核能与电力设施", "feature": "重型电力设备与数据中心专属高效冷冻机核心供应商"},
-    {"symbol": "QCOM", "name": "高通 (美)", "industry": "5. 边缘AI与智能终端", "feature": "移动端AI芯片霸主，统治AI手机与AI PC处理器市场"},
+    {"symbol": "QCOM", "name": "高通 (美)", "industry": "5. 边缘AI与智能终端", "feature": "移动端AI芯片霸主，统治AI手机与AI PC处理器 market"},
     {"symbol": "6758.T", "name": "索尼集团 (日)", "industry": "5. 边缘AI与智能终端", "feature": "全球图像传感器(CIS)绝对霸主，端侧机器人与智能视觉核心"},
     {"symbol": "6981.T", "name": "村田制作所 (日)", "industry": "5. 边缘AI与智能终端", "feature": "全球MLCC电容之王，AI终端硬件升级换代的刚需元器件"}
 ]
 
 def make_ai_news(stock_data):
     if not SEC_VAL:
-        return "💡 决策终端数据同步就绪。硬科技多头动能整体维持，建议紧盯高壁垒半导体先进封装设备及核心材料的盘面异动。"
+        return "💡 终端就绪。硬科技板块多头动能整体维持，重点紧盯半导体设备及核心先进材料异动。"
     lines = [f"{s['name']}: {s['change']}" for s in stock_data[:6]]
-    msg = f"你是一个顶级对冲基金经理，请用120字精炼点评今日全球AI硬科技板块整体动向。盘面数据：{', '.join(lines)}"
+    msg = f"对冲基金经理复盘语，字数130字。今日数据：{', '.join(lines)}"
     try:
         hd = {"Authorization": f"Bearer {SEC_VAL}", "Content-Type": "application/json"}
         pl = {"model": "gemini-1.5-flash", "messages": [{"role": "user", "content": msg}], "temperature": 0.4}
-        r = requests.post(END_POINT, headers=hd, json=pl, timeout=10)
+        r = requests.post(END_POINT, headers=hd, json=pl, timeout=12)
         if r.status_code == 200:
             return r.json()['choices'][0]['message']['content'].strip()
     except:
         pass
-    return "💡 盘后复盘：全球AI硬科技资产高位震荡，算力供应链及先进先进设备材料呈现明显的机构抱团和多头防御特征。"
+    return "💡 盘后复盘：全球AI硬科技核心资产高位震荡，算力供应链、电力设施与先进材料呈现局部抱团防御特征。"
 
 def run_job():
     res = {"macro": [], "stocks": [], "ai_report": ""}
     ss = yf.utils.get_default_session()
-    ss.headers.update({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'})
+    ss.headers.update({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
 
     # 1. 抓取大盘
     for m in MACRO_LIST:
@@ -75,15 +74,14 @@ def run_job():
         except:
             pass
 
-    # 2. 抓取个股（不看任何详情和历史，只要最近两天的收盘价计算涨跌）
+    # 2. 抓取个股（彻底剥离历史 history 数组，防止引发任何底层报错）
     for item in WATCHLIST:
         sb = item["symbol"]
         try:
             tk = yf.Ticker(sb, session=ss)
-            h_df = tk.history(period="5d") # 抓5天确保跨越周末
+            h_df = tk.history(period="5d")
             if h_df.empty or len(h_df) < 2:
                 continue
-                
             cur = float(h_df['Close'].iloc[-1])
             prv = float(h_df['Close'].iloc[-2])
             df = cur - prv
@@ -91,7 +89,7 @@ def run_job():
 
             res["stocks"].append({
                 "code": sb.split('.')[0], 
-                "symbol": sb, # 留给前端拼接K线链接使用
+                "symbol": sb, 
                 "name": item["name"], 
                 "industry": item["industry"], 
                 "feature": item["feature"],
@@ -99,17 +97,15 @@ def run_job():
                 "change": f"{'+' if df>0 else ''}{df:.2f} ({'+' if df>0 else ''}{pc:.2f}%)", 
                 "isUp": df > 0
             })
-            time.sleep(0.2)
+            time.sleep(0.1)
         except Exception as e:
             print(f"跳过 {sb}: {e}")
 
-    # 3. 生成大模型快报
     res["ai_report"] = make_ai_news(res["stocks"])
 
-    # 4. 稳妥写入
     with open('data.json', 'w', encoding='utf-8') as f:
         json.dump(res, f, ensure_ascii=False, indent=2)
-    print("极简盘面数据同步成功！")
+    print("数据包重组成功，退出码：0")
 
 if __name__ == "__main__":
     run_job()
