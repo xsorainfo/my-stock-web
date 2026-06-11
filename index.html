@@ -6,28 +6,29 @@
     <title>全球AI硬科技决策终端</title>
     <style>
         :root { --bg-color: #f4f6f9; --card-bg: #ffffff; --text-main: #1e293b; --text-muted: #64748b; --up-color: #ef4444; --down-color: #10b981; --border-color: #e2e8f0; }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, sans-serif; }
-        body { background-color: var(--bg-color); color: var(--text-main); padding: 24px; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); padding: 24px; line-height: 1.5; }
         .container { max-width: 1400px; margin: 0 auto; }
-        
-        /* 标题层级 */
-        .section-title { font-size: 20px; font-weight: 800; margin: 35px 0 15px; padding-left: 12px; border-left: 6px solid #2563eb; color: #0f172a; }
-        .sub-title { font-size: 15px; font-weight: 600; margin: 20px 0 12px 12px; color: #475569; display: flex; align-items: center; }
-        
-        /* 卡片网格 */
-        .stock-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; margin-bottom: 20px; }
+        header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border-color); }
+        h1 { font-size: 24px; font-weight: 700; }
+        .refresh-btn { background-color: #2563eb; color: white; border: none; padding: 8px 16px; border-radius: 6px; font-size: 14px; cursor: pointer; transition: background 0.2s; }
+        .refresh-btn:disabled { background-color: #94a3b8; cursor: not-allowed; }
+        .ai-briefboard { background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%); border: 1px solid #bfdbfe; border-radius: 12px; padding: 20px; margin-bottom: 28px; }
+        .ai-title { font-weight: 600; color: #1e40af; font-size: 15px; margin-bottom: 8px; }
+        .ai-content { font-size: 14px; color: #334155; }
+        .macro-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 32px; }
+        .macro-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 10px; padding: 16px; }
+        .stock-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; margin-bottom: 30px; }
         .stock-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
-        
         .stock-header { display: flex; justify-content: space-between; margin-bottom: 8px; }
+        .stock-industry { font-size: 11px; color: #2563eb; background: #eff6ff; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-top: 4px; }
         .stock-feature { font-size: 12px; color: var(--text-muted); background: #f8fafc; padding: 8px; border-radius: 6px; margin: 10px 0; min-height: 48px; }
         .stock-trend-badge { font-size: 11px; font-weight: 600; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 8px; }
         .trend-up-bg { background: #fee2e2; color: #b91c1c; }
         .trend-down-bg { background: #d1fae5; color: #065f46; }
-
         .price-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
         .stock-price { font-size: 18px; font-weight: 600; }
-        .metrics-table { width: 100%; border-collapse: collapse; font-size: 11px; text-align: center; }
-        .val-badge { font-size: 10px; padding: 2px 4px; border-radius: 4px; font-weight: bold; }
+        .metrics-table { width: 100%; border-collapse: collapse; font-size: 10px; color: #64748b; text-align: center; margin-top: 8px; }
         .text-up { color: var(--up-color); }
         .text-down { color: var(--down-color); }
     </style>
@@ -35,58 +36,77 @@
 <body>
 
 <div class="container">
-    <h1>🖥️ 全球 AI 硬科技决策终端</h1>
-    <div id="dashboardRoot"></div>
+    <header>
+        <h1>🖥️ 全球 AI 硬科技决策终端</h1>
+        <button class="refresh-btn" id="cloudRefreshBtn">🔄 召唤云端强刷</button>
+    </header>
+
+    <div class="ai-briefboard">
+        <div class="ai-title">🤖 首席硬科技策略师 · 盘后多头思维复盘</div>
+        <div class="ai-content" id="aiReport">正在读取策略流...</div>
+    </div>
+
+    <div class="macro-grid" id="macroGrid"></div>
+    <div id="stockContainer"></div>
 </div>
 
 <script>
-    function judgeValuation(val, type) {
-        if (!val || val === '--') return '<span class="val-badge" style="background:#f1f5f9;color:#64748b">--</span>';
-        const num = parseFloat(val);
-        return `<span class="val-badge" style="background:${num>50?'#fee2e2':'#d1fae5'};color:${num>50?'#ef4444':'#10b981'}">${num.toFixed(1)}</span>`;
-    }
+function judgeValuation(val, type) {
+    if (!val || val === '--') return '<span style="color:#64748b">--</span>';
+    const num = parseFloat(val);
+    const color = num > 50 ? '#ef4444' : '#10b981';
+    return `<span style="font-weight:bold; color:${color}">${num}</span>`;
+}
 
-    async function loadDashboardData() {
-        const res = await fetch('data.json?v=' + new Date().getTime());
-        const data = await res.json();
-        const root = document.getElementById('dashboardRoot');
-        
-        // 按行业(Industry)和子类(SubCategory)分组
-        const grouped = data.stocks.reduce((acc, s) => {
-            if (!acc[s.industry]) acc[s.industry] = {};
-            if (!acc[s.industry][s.subCategory]) acc[s.industry][s.subCategory] = [];
-            acc[s.industry][s.subCategory].push(s);
-            return acc;
-        }, {});
+async function loadDashboardData() {
+    const res = await fetch('data.json?v=' + new Date().getTime());
+    const data = await res.json();
+    document.getElementById('aiReport').innerText = data.ai_report || "同步就绪";
 
-        root.innerHTML = Object.entries(grouped).map(([ind, subGroups]) => `
-            <div class="section-title">${ind}</div>
-            ${Object.entries(subGroups).map(([sub, stocks]) => `
-                <div class="sub-title">📂 ${sub}</div>
-                <div class="stock-grid">
-                    ${stocks.map(s => `
-                        <div class="stock-card">
-                            <div class="stock-header">
-                                <h3>${s.name}</h3>
-                                <span style="font-size:11px; background:#f1f5f9; padding:2px 6px; border-radius:4px; color:#64748b">${s.code}</span>
-                            </div>
-                            <div class="stock-feature">${s.feature}</div>
-                            <div class="stock-trend-badge ${s.trend === '牛市多头' ? 'trend-up-bg' : 'trend-down-bg'}">${s.trend}</div>
-                            <div class="price-row">
-                                <div class="stock-price ${s.isUp?'text-up':'text-down'}">${s.price}</div>
-                                <div class="${s.isUp?'text-up':'text-down'}">${s.change}</div>
-                            </div>
-                            <table class="metrics-table">
-                                <tr><td>PER: ${judgeValuation(s.per, 'PER')}</td><td>PBR: ${judgeValuation(s.pbr, 'PBR')}</td></tr>
-                                <tr style="font-weight:600; color:#1e293b; padding-top:5px;"><td>${s.distWeek}</td><td>${s.distHigh}</td></tr>
-                            </table>
-                        </div>
-                    `).join('')}
-                </div>
-            `).join('')}
-        `).join('');
-    }
+    // 渲染宏观
+    document.getElementById('macroGrid').innerHTML = data.macro.map(i => 
+        `<div class="macro-card"><div style="font-size:13px; color:#64748b">${i.name}</div><div class="macro-price ${i.isUp?'text-up':'text-down'}">${i.price}</div></div>`
+    ).join('');
+
+    // 渲染分组股票 (这里处理 subCategory 或 industry)
+    const container = document.getElementById('stockContainer');
+    const groups = data.stocks.reduce((acc, s) => {
+        const key = s.subCategory || s.industry || "未分类";
+        (acc[key] = acc[key] || []).push(s);
+        return acc;
+    }, {});
+
+    container.innerHTML = Object.entries(groups).map(([cat, items]) => `
+        <div style="margin: 25px 0 10px; font-weight: 800; color: #1e293b; border-left: 4px solid #2563eb; padding-left: 10px;">${cat}</div>
+        <div class="stock-grid">
+           ${items.map(s => `
+               <div class="stock-card">
+                   <div class="stock-header">
+                       <div><h3>${s.name}</h3><div class="stock-industry">${s.industry}</div></div>
+                       <span style="font-size:11px; background:#f1f5f9; padding:2px 6px; border-radius:4px; color:#64748b">${s.code}</span>
+                   </div>
+                   <div class="stock-feature">${s.feature}</div>
+                   <div class="stock-trend-badge ${s.trend === '牛市多头' ? 'trend-up-bg' : 'trend-down-bg'}">${s.trend}</div>
+                   <div class="price-row">
+                       <div class="stock-price ${s.isUp?'text-up':'text-down'}">${s.price}</div>
+                       <div class="${s.isUp?'text-up':'text-down'}">${s.change}</div>
+                   </div>
+                   <table class="metrics-table">
+                       <tr><td>PER: ${judgeValuation(s.per, 'PER')}</td><td>PBR: ${judgeValuation(s.pbr, 'PBR')}</td></tr>
+                       <tr style="font-weight:600; color:#1e293b;"><td>${s.distWeek}</td><td>${s.distHigh}</td></tr>
+                   </table>
+               </div>
+           `).join('')}
+        </div>
+    `).join('');
+}
+
+document.getElementById('cloudRefreshBtn').onclick = function() {
+    this.disabled = true;
     loadDashboardData();
+    setTimeout(() => this.disabled = false, 60000);
+};
+loadDashboardData();
 </script>
 </body>
 </html>
