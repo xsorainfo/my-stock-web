@@ -1,193 +1,380 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>全球AI硬科技决策终端</title>
-  <style>
-    body { background-color: #f4f6f9; font-family: -apple-system, sans-serif; padding: 25px; margin: 0; }
-    .dashboard-container { max-width: 1450px; margin: 0 auto; }
-    
-    .header-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-    .page-title { font-size: 24px; font-weight: bold; color: #1a202c; }
-    
-    .refresh-btn { background-color: #3182ce; color: white; border: none; padding: 10px 18px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: background 0.2s; }
-    .refresh-btn:hover { background-color: #2b6cb0; }
-    .refresh-btn:disabled { background-color: #cbd5e0; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全球AI硬科技决策终端</title>
+    <style>
+        :root {
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --up-color: #ef4444; /* 红色代表上涨 */
+            --down-color: #10b981; /* 绿色代表下跌 */
+            --border-color: #e2e8f0;
+        }
 
-    /* 🌟 新增：高级 AI 简报面板样式 */
-    .ai-report-box { background: #ffffff; border-left: 5px solid #5a67d8; border-radius: 8px; padding: 18px 22px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
-    .ai-report-title { font-size: 14px; font-weight: bold; color: #5a67d8; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
-    .ai-report-content { font-size: 13px; color: #4a5568; line-height: 1.6; font-weight: 500; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
 
-    .macro-bar { display: flex; gap: 15px; margin-bottom: 30px; flex-wrap: wrap; }
-    .macro-card { background: white; padding: 12px 20px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.02); display: flex; flex-direction: column; min-width: 180px; flex: 1; border-top: 4px solid #4a5568; }
-    .macro-name { font-size: 12px; color: #718096; margin-bottom: 4px; }
-    .macro-val { font-size: 18px; font-weight: bold; color: #2d3748; }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            padding: 24px;
+            line-height: 1.5;
+        }
 
-    .industry-section { margin-bottom: 35px; }
-    .industry-title { font-size: 20px; font-weight: bold; color: #2d3748; margin-bottom: 15px; padding-left: 10px; border-left: 5px solid #3182ce; }
-    .stock-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 18px; }
-    
-    .stock-card { background: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); padding: 16px; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.2s, box-shadow 0.2s; border: 1px solid #edf2f7; }
-    .stock-card:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
-    
-    .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
-    .stock-name { font-size: 15px; font-weight: 600; color: #1a202c; }
-    .stock-code { font-size: 11px; background: #edf2f7; padding: 1px 5px; border-radius: 4px; color: #4a5568; font-weight: bold; }
-    
-    .feature-box { font-size: 11px; color: #4a5568; background: #f7fafc; padding: 6px 10px; border-radius: 6px; margin-bottom: 10px; line-height: 1.4; height: 32px; display: flex; align-items: center; }
-    
-    .badge-row { display: flex; gap: 5px; margin-bottom: 10px; }
-    .badge { font-size: 10px; padding: 2px 6px; border-radius: 4px; font-weight: bold; }
-    .badge-bull { background-color: #ebf8ff; color: #2b6cb0; }
-    .badge-bear { background-color: #fff5f5; color: #c53030; }
-    .badge-high { background-color: #feebc8; color: #dd6b20; }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
 
-    .price-section { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px; }
-    .current-price { font-size: 24px; font-weight: bold; color: #1a202c; }
-    
-    .divider { border: none; border-top: 1px solid #edf2f7; margin: 8px 0; }
-    .metrics-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
-    .metric-item { display: flex; justify-content: space-between; background: #f8fafc; padding: 4px 8px; border-radius: 4px; font-size: 11px; }
-    .label { color: #718096; }
-    .value { font-weight: 600; color: #2d3748; }
-    .loading { text-align: center; color: #a0aec0; margin-top: 50px; }
-  </style>
+        /* 头部区域 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0f172a;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .refresh-btn {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .refresh-btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        /* AI复盘策略看板 */
+        .ai-briefboard {
+            background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%);
+            border: 1px solid #bfdbfe;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 28px;
+            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.04);
+        }
+
+        .ai-title {
+            font-weight: 600;
+            color: #1e40af;
+            font-size: 15px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .ai-content {
+            font-size: 14px;
+            color: #334155;
+            text-align: justify;
+        }
+
+        /* 全球主要指数 */
+        .macro-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .macro-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .macro-name {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+
+        .macro-price {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        /* 核心个股看盘网格 */
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            padding-left: 8px;
+            border-left: 4px solid #2563eb;
+        }
+
+        .stock-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .stock-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            position: relative;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .stock-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+        }
+
+        .stock-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .stock-title h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .stock-industry {
+            font-size: 11px;
+            color: #2563eb;
+            background: #eff6ff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-top: 4px;
+            display: inline-block;
+        }
+
+        .stock-code {
+            font-size: 11px;
+            background: #f1f5f9;
+            color: #64748b;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .stock-feature {
+            font-size: 12px;
+            color: var(--text-muted);
+            background: #f8fafc;
+            padding: 8px;
+            border-radius: 6px;
+            margin-bottom: 14px;
+            min-height: 52px;
+        }
+
+        .stock-trend-badge {
+            font-size: 11px;
+            font-weight: 600;
+            padding: 2px 6px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+        .trend-up-bg { background: #fee2e2; color: #b91c1c; }
+        .trend-down-bg { background: #d1fae5; color: #065f46; }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 12px;
+        }
+
+        .stock-price {
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .stock-change {
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .fundamental-row {
+            display: flex;
+            gap: 16px;
+            font-size: 12px;
+            color: var(--text-muted);
+            padding-bottom: 10px;
+        }
+
+        .fundamental-row span {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        /* 💡 核心修复：极致对齐的横向多周期回撤组件 */
+        .multi-period-metrics {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        .metric-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .metric-item.left { text-align: left; }
+        .metric-item.center { text-align: center; }
+        .metric-item.right { text-align: right; }
+
+        .metric-item span {
+            color: #1e293b;
+            font-weight: 600;
+            margin-top: 2px;
+        }
+
+        /* 颜色类管理 */
+        .text-up { color: var(--up-color); }
+        .text-down { color: var(--down-color); }
+    </style>
 </head>
 <body>
 
-  <div class="dashboard-container">
-    <div class="header-bar">
-      <h1 class="page-title">全球AI硬科技决策终端</h1>
-      <button class="refresh-btn" id="refresh-btn" onclick="triggerCloudRobot()">🔄 召唤云端强刷</button>
+<div class="container">
+    <header>
+        <h1>🖥️ 全球 AI 硬科技决策终端</h1>
+        <button class="refresh-btn" onclick="loadDashboardData()">🔄 召唤云端强刷</button>
+    </header>
+
+    <div class="ai-briefboard">
+        <div class="ai-title">🤖 首席硬科技策略师 · 盘后多头思维复盘</div>
+        <div class="ai-content" id="aiReport">正在读取策略官核心简报流...</div>
     </div>
 
-    <div class="ai-report-box">
-      <div class="ai-report-title">🤖 首席硬科技策略师 · 盘后多头思维复盘</div>
-      <div class="ai-report-content" id="ai-report-content">正在全网捕获宏观情绪面与AI数据链特征...</div>
-    </div>
+    <div class="macro-grid" id="macroGrid">
+        </div>
 
-    <div class="macro-bar" id="macro-bar"></div>
-    <div id="dashboard"><div class="loading">正在全盘扫描并加载决策面数据...</div></div>
-  </div>
+    <h2 class="section-title">AI 半导体与全要素核心标的集群</h2>
+    <div class="stock-grid" id="stockGrid">
+        </div>
+</div>
 
-  <script>
-    async function loadStockData() {
-      try {
-        const response = await fetch('./data.json?t=' + new Date().getTime());
-        const data = await response.json();
-        
-        // 0. 渲染 AI 简报
-        document.getElementById("ai-report-content").innerText = data.ai_report || "当前时段无离线简报，请等待开盘后定时同步。";
-        
-        // 1. 渲染宏观仪表盘
-        const macroBar = document.getElementById("macro-bar");
-        macroBar.innerHTML = "";
-        if (data.macro && Array.isArray(data.macro)) {
-          data.macro.forEach(m => {
-            const color = m.isUp ? "#e53e3e" : "#00b060";
-            macroBar.innerHTML += `
-              <div class="macro-card">
-                <span class="macro-name">${m.name}</span>
-                <span class="macro-val">${m.price}</span>
-                <span style="font-size:12px; color:${color}; font-weight:500; margin-top:2px;">${m.change}</span>
-              </div>
-            `;
-          });
+<script>
+    // 异步加载打包数据逻辑
+    async function loadDashboardData() {
+        try {
+            // 默认加载由 Python 自动同步吐出的 data.json
+            const response = await fetch('data.json?v=' + new Date().getTime());
+            if (!response.ok) throw new Error('未能正确加载终端决策流数据');
+            const data = await response.json();
+
+            // 1. 动态渲染 AI 复盘
+            document.getElementById('aiReport').innerText = data.ai_report || '💡 终端同步就绪。全生态多头防御格局整体维持，保持结构性跟踪。';
+
+            // 2. 动态渲染全球主要指数
+            const macroGrid = document.getElementById('macroGrid');
+            macroGrid.innerHTML = '';
+            if (data.macro && data.macro.length > 0) {
+                data.macro.forEach(item => {
+                    const colorClass = item.isUp ? 'text-up' : 'text-down';
+                    macroGrid.innerHTML += `
+                        <div class="macro-card">
+                            <div class="macro-name">${item.name}</div>
+                            <div class="macro-price ${colorClass}">${item.price}</div>
+                            <div class="macro-change ${colorClass}">${item.change}</div>
+                        </div>
+                    `;
+                });
+            }
+
+            // 3. 动态渲染全要素自选股集群
+            const stockGrid = document.getElementById('stockGrid');
+            stockGrid.innerHTML = '';
+            if (data.stocks && data.stocks.length > 0) {
+                data.stocks.forEach(stock => {
+                    const colorClass = stock.isUp ? 'text-up' : 'text-down';
+                    const trendClass = stock.trend === '牛市多头' ? 'trend-up-bg' : 'trend-down-bg';
+                    
+                    stockGrid.innerHTML += `
+                        <div class="stock-card">
+                            <div class="stock-header">
+                                <div class="stock-title">
+                                    <h3>${stock.name}</h3>
+                                    <div class="stock-industry">${stock.industry}</div>
+                                </div>
+                                <span class="stock-code">${stock.code}</span>
+                            </div>
+                            
+                            <div class="stock-feature">${stock.feature}</div>
+                            
+                            <div class="stock-trend-badge ${trendClass}">${stock.trend}</div>
+                            
+                            <div class="price-row">
+                                <div class="stock-price ${colorClass}">${stock.price}</div>
+                                <div class="stock-change ${colorClass}">${stock.change}</div>
+                            </div>
+                            
+                            <div class="fundamental-row">
+                                <div>PER: <span>${stock.per || '--'}</span></div>
+                                <div>PBR: <span>${stock.pbr || '--'}</span></div>
+                            </div>
+                            
+                            <div class="multi-period-metrics">
+                                <div class="metric-item left">
+                                    距1周高 <span>${stock.distWeek || '--'}</span>
+                                </div>
+                                <div class="metric-item center">
+                                    距1月高 <span>${stock.distMonth || '--'}</span>
+                                </div>
+                                <div class="metric-item right">
+                                    距52周高 <span>${stock.distHigh || '--'}</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+            }
+        } catch (error) {
+            console.error('渲染出现故障:', error);
+            document.getElementById('aiReport').innerText = '❌ 终端数据同步遭遇临时风控或无网络信号，请稍后重试。';
         }
-
-        // 2. 渲染股票网格
-        const dashboard = document.getElementById("dashboard");
-        dashboard.innerHTML = ""; 
-        const stocks = data.stocks || [];
-        const industries = [...new Set(stocks.map(s => s.industry))].sort();
-        
-        industries.forEach(ind => {
-          const cleanId = ind.replace(/[^a-zA-Z0-9\u4e00-\u9fa5]/g, '');
-          let sectionHtml = `
-            <div class="industry-section">
-              <div class="industry-title">${ind.substring(3)}</div>
-              <div class="stock-grid" id="grid-${cleanId}"></div>
-            </div>
-          `;
-          dashboard.innerHTML += sectionHtml;
-        });
-
-        stocks.forEach(stock => {
-          const cleanId = stock.industry.replace(/[^a-zA-Z0-9\u4e00-\u9fa5]/g, '');
-          const grid = document.getElementById(`grid-${cleanId}`);
-          const changeColor = stock.isUp ? "#e53e3e" : "#00b060"; 
-          
-          const trendClass = stock.trend === "牛市多头" ? "badge-bull" : "badge-bear";
-          
-          let highBadgeHtml = "";
-          if (stock.distHigh !== "--" && parseFloat(stock.distHigh) > -6.0) {
-            highBadgeHtml = `<span class="badge badge-high">🎯 临近高点</span>`;
-          }
-
-          const cardHtml = `
-            <div class="stock-card">
-              <div>
-                <div class="card-header">
-                  <span class="stock-name">${stock.name}</span>
-                  <span class="stock-code">${stock.code}</span>
-                </div>
-                <div class="feature-box">${stock.feature}</div>
-                <div class="badge-row">
-                  <span class="badge ${trendClass}">${stock.trend}</span>
-                  ${highBadgeHtml}
-                </div>
-              </div>
-              <div>
-                <div class="price-section">
-                  <div class="current-price">${stock.price}</div>
-                  <div style="color: ${changeColor}; font-weight: 500; font-size: 13px;">${stock.change}</div>
-                </div>
-                <hr class="divider">
-                <div class="metrics-grid">
-                  <div class="metric-item"><span class="label">PER</span><span class="value">${stock.per}</span></div>
-                  <div class="metric-item"><span class="label">PBR</span><span class="value">${stock.pbr}</span></div>
-                  <div class="meta-row" style="display: flex; justify-content: space-between; font-size: 12px; color: #666; margin-top: 4px;">
-                    <div>距1周高: <span style="color: #333; font-weight: 500;">${stock.distWeek}</span></div>
-                    <div>距1月高: <span style="color: #333; font-weight: 500;">${stock.distMonth}</span></div>
-                    <div>距52周高: <span style="color: #333; font-weight: 500;">${stock.distHigh}</span></div>
-                </div>
-                  
-                </div>
-              </div>
-            </div>
-          `;
-          if(grid) grid.innerHTML += cardHtml;
-        });
-      } catch (error) {
-        console.error("加载细节报错：", error);
-        document.getElementById("dashboard").innerHTML = "数据加载失败，请检查数据流。";
-      }
     }
 
-    async function triggerCloudRobot() {
-      const btn = document.getElementById("refresh-btn");
-      btn.disabled = true;
-      btn.innerHTML = "⚡ 正在全网调度核心数据...";
-      try {
-        const response = await fetch('/api/refresh', { method: "POST" });
-        if (response.ok) {
-          let seconds = 45;
-          const timer = setInterval(() => {
-            seconds--;
-            if (seconds <= 0) { clearInterval(timer); window.location.reload(); }
-            else { btn.innerHTML = `⏳ 请等待 ${seconds} 秒...`; }
-          }, 1000);
-        } else {
-          alert("召唤失败"); btn.disabled = false; btn.innerHTML = "🔄 召唤云端强刷";
-        }
-      } catch (e) {
-        alert("网络错误"); btn.disabled = false; btn.innerHTML = "🔄 召唤云端强刷";
-      }
-    }
+    // 页面初始化时自动拉取
+    window.onload = loadDashboardData;
+</script>
 
-    loadStockData();
-  </script>
 </body>
 </html>
