@@ -107,24 +107,30 @@
           `;
         });
 
-        // 2. 渲染股票网格
+        // 2. 渲染股票网格容器
         const dashboard = document.getElementById("dashboard");
         dashboard.innerHTML = ""; 
         const stocks = data.stocks;
+        
+        // 提取并排序所有行业
         const industries = [...new Set(stocks.map(s => s.industry))].sort();
         
         industries.forEach(ind => {
+          // 安全提取行业前缀数字作为唯一ID，彻底避免中文和空格报错
+          const industryId = ind.split('.')[0].trim(); 
           let sectionHtml = `
             <div class="industry-section">
               <div class="industry-title">${ind.substring(3)}</div>
-              <div class="stock-grid" id="grid-${ind.replace(/\./g, '')}"></div>
+              <div class="stock-grid" id="grid-sec-${industryId}"></div>
             </div>
           `;
           dashboard.innerHTML += sectionHtml;
         });
 
+        // 3. 渲染个股卡片
         stocks.forEach(stock => {
-          const grid = document.getElementById(`grid-${stock.industry.replace(/\./g, '')}`);
+          const industryId = stock.industry.split('.')[0].trim();
+          const grid = document.getElementById(`grid-sec-${industryId}`);
           const changeColor = stock.isUp ? "#e53e3e" : "#00b060"; 
           const trendClass = stock.trend === "牛市多头" ? "badge-bull" : "badge-bear";
           
@@ -133,7 +139,6 @@
             highBadgeHtml = `<span class="badge badge-high">🎯 临近高点</span>`;
           }
 
-          // 将过去30天的历史价格列表拼接成逗号分隔的字符串，丢给画图插件
           const historyStr = stock.history ? stock.history.join(",") : "";
 
           const cardHtml = `
@@ -171,10 +176,11 @@
           if(grid) grid.innerHTML += cardHtml;
         });
 
-        // 3. 核心：触发 Peity 插件，将文本数字瞬间变成柔和的趋势折线图
+        // 4. 触发微型折线图绘制
         $(".peity-line").peity("line");
 
       } catch (error) {
+        console.error(error); // 在浏览器后台打印具体错误
         document.getElementById("dashboard").innerHTML = "数据加载失败，请检查数据流。";
       }
     }
