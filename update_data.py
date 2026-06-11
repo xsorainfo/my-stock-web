@@ -4,6 +4,7 @@ import time
 import random
 import os
 import requests
+import datetime
 
 END_POINT = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
 SEC_VAL = os.environ.get("AI_API_KEY")
@@ -32,32 +33,32 @@ WATCHLIST = [
     {"symbol": "GE", "name": "通用电气 (美)", "industry": "4. AI核能与电力设施", "feature": "全球电网电缆与重型燃气轮机巨头，电力短缺直接受益者"},
     {"symbol": "6501.T", "name": "日立制作所 (日)", "industry": "4. AI核能与电力设施", "feature": "全球变压器与高压直流电网巨头，斩获海量海外数据中心订单"},
     {"symbol": "6503.T", "name": "三菱电机 (日)", "industry": "4. AI核能与电力设施", "feature": "重型电力设备与数据中心专属高效冷冻机核心供应商"},
-    {"symbol": "QCOM", "name": "高通 (美)", "industry": "5. 边缘AI与智能终端", "feature": "移动端AI芯片霸主，统治AI手机与AI PC处理器 market"},
+    {"symbol": "QCOM", "name": "高通 (美)", "industry": "5. 边缘AI与智能终端", "feature": "移动端AI芯片霸主，统治AI手机与AI PC处理器市场"},
     {"symbol": "6758.T", "name": "索尼集团 (日)", "industry": "5. 边缘AI与智能终端", "feature": "全球图像传感器(CIS)绝对霸主，端侧机器人与智能视觉核心"},
     {"symbol": "6981.T", "name": "村田制作所 (日)", "industry": "5. 边缘AI与智能终端", "feature": "全球MLCC电容之王，AI终端硬件升级换代的刚需元器件"}
 ]
 
 def make_ai_news(stock_data):
     if not SEC_VAL:
-        return "💡 终端就绪。硬科技板块多头动能整体维持，重点紧盯半导体设备及核心先进材料异动。"
+        return "💡 终端同步就绪。多头防御格局整体维持，AI芯片算力、先进材料与数据中心电网异动显著，保持紧密跟踪。"
     lines = [f"{s['name']}: {s['change']}" for s in stock_data[:6]]
-    msg = f"对冲基金经理复盘语，字数130字。今日数据：{', '.join(lines)}"
+    msg = f"你是一个首席基金经理，请用120字精炼复盘今日全球AI硬科技动向。数据参考：{', '.join(lines)}"
     try:
         hd = {"Authorization": f"Bearer {SEC_VAL}", "Content-Type": "application/json"}
         pl = {"model": "gemini-1.5-flash", "messages": [{"role": "user", "content": msg}], "temperature": 0.4}
-        r = requests.post(END_POINT, headers=hd, json=pl, timeout=12)
+        r = requests.post(END_POINT, headers=hd, json=pl, timeout=10)
         if r.status_code == 200:
             return r.json()['choices'][0]['message']['content'].strip()
     except:
         pass
-    return "💡 盘后复盘：全球AI硬科技核心资产高位震荡，算力供应链、电力设施与先进材料呈现局部抱团防御特征。"
+    return "💡 盘后复盘：核心资产呈现机构抱团和多头防御特征，建议密切关注产业链高壁垒标的盘面表现。"
 
 def run_job():
     res = {"macro": [], "stocks": [], "ai_report": ""}
     ss = yf.utils.get_default_session()
     ss.headers.update({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
 
-    # 1. 抓取大盘
+    # 1. 大盘抓取
     for m in MACRO_LIST:
         try:
             tk = yf.Ticker(m["symbol"], session=ss)
@@ -74,30 +75,46 @@ def run_job():
         except:
             pass
 
-    # 2. 抓取个股（彻底剥离历史 history 数组，防止引发任何底层报错）
+    # 2. 个股深度抓取（完整恢复微折线图所需的 trend 趋势数组及各项估值指标）
     for item in WATCHLIST:
         sb = item["symbol"]
         try:
             tk = yf.Ticker(sb, session=ss)
-            h_df = tk.history(period="5d")
+            h_df = tk.history(period="20d")
             if h_df.empty or len(h_df) < 2:
                 continue
+            
+            # 计算基础数据
             cur = float(h_df['Close'].iloc[-1])
             prv = float(h_df['Close'].iloc[-2])
             df = cur - prv
             pc = (df / prv) * 100
 
+            # 提取历史趋势数组（做微型折线图使用）
+            cl_list = h_df['Close'].tolist()[-15:]
+            cl_min, cl_max = min(cl_list), max(cl_list)
+            trend_norm = [int((v - cl_min)/(cl_max - cl_min)*100) if cl_max != cl_min else 50 for v in cl_list]
+
+            # 获取基础估值指标
+            inf = tk.info
+            per = inf.get('trailingPE', inf.get('forwardPE', '-'))
+            pbr = inf.get('priceToBook', '-')
+            h52 = inf.get('fiftyTwoWeekHigh', cur)
+            
+            per_str = f"{float(per):.2f}" if isinstance(per, (int, float)) else "-"
+            pbr_str = f"{float(pbr):.2f}" if isinstance(pbr, (int, float)) else "-"
+            dist_high = f"-{((h52 - cur) / h52 * 100):.1f}%" if h52 and h52 >= cur else "0.0%"
+
+            # 均线技术趋势推断
+            ma20 = h_df['Close'].mean()
+            trend_lbl = "牛市多头" if cur >= ma20 else "熊市空头"
+
             res["stocks"].append({
-                "code": sb.split('.')[0], 
-                "symbol": sb, 
-                "name": item["name"], 
-                "industry": item["industry"], 
-                "feature": item["feature"],
-                "price": f"{cur:.2f}", 
-                "change": f"{'+' if df>0 else ''}{df:.2f} ({'+' if df>0 else ''}{pc:.2f}%)", 
-                "isUp": df > 0
+                "code": sb.split('.')[0], "name": item["name"], "industry": item["industry"], "feature": item["feature"],
+                "price": f"{cur:.2f}", "change": f"{'+' if df>0 else ''}{df:.2f} ({'+' if df>0 else ''}{pc:.2f}%)", "isUp": df > 0,
+                "per": per_str, "pbr": pbr_str, "distHigh": dist_high, "trend": trend_lbl, "history": trend_norm
             })
-            time.sleep(0.1)
+            time.sleep(0.3)
         except Exception as e:
             print(f"跳过 {sb}: {e}")
 
@@ -105,7 +122,7 @@ def run_job():
 
     with open('data.json', 'w', encoding='utf-8') as f:
         json.dump(res, f, ensure_ascii=False, indent=2)
-    print("数据包重组成功，退出码：0")
+    print("经典完整数据包同步成功！")
 
 if __name__ == "__main__":
     run_job()
