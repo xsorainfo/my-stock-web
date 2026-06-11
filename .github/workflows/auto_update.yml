@@ -1,41 +1,40 @@
-name: １．自动更新股票卡片数据
+name: Auto Update Data
 
 on:
-  schedule:
-    # 每 15 分钟触发一次
-    # 早盘：北京时间 08:00 - 10:30（东京 09:00 - 11:30）
-    # 午盘：北京时间 11:30 - 14:30（东京 12:30 - 15:30）
-    - cron: '0,15,30,45 0,1,2,4,5,6 * * 1-5'
-    - cron: '0,15,30 3 * * 1-5'
-    - cron: '0,15,30,45 3 * * 1-5'
-
-  repository_dispatch:
-    types: [web_refresh]
-    
   workflow_dispatch:
-    
+  schedule:
+    - cron: '0 10 * * *' # 每天自动运行
+
+permissions:
+  contents: write # 🌟 核心：强行开启 GitHub 仓库的写入权限，防止机器人提交被拒
+
 jobs:
   update-data:
     runs-on: ubuntu-latest
     steps:
-    - name: 检查代码
-      uses: actions/checkout@v3
+    - name: Checkout Code
+      uses: actions/checkout@v4 # 升级到最新稳妥版本
 
-    - name: 设置 Python 环境
-      uses: actions/setup-python@v4
+    - name: Set up Python
+      uses: actions/setup-python@v5
       with:
         python-version: '3.10'
 
-    - name: 安装 yfinance 依赖包
-      run: pip install yfinance
+    - name: Install Dependencies
+      run: |
+        pip install yfinance requests
 
-    - name: 运行 Python 脚本抓取数据
+    - name: Run Script
+      env:
+        AI_API_KEY: ${{ secrets.AI_API_KEY }}
       run: python update_data.py
 
-    - name: 把最新数据提交回 GitHub 仓库
+    - name: Commit and Push Changes
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git add data.json
-        git commit -m "自动更新股票数据 [skip ci]" || exit 0
-        git push
+        # 🧠 先同步远程最新代码，防止网页端修改导致版本冲突流产
+        git pull --rebase origin main
+        git commit -m "Automated data sync" || exit 0
+        git push origin main
