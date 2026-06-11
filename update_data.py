@@ -38,13 +38,22 @@ def fetch_stock_data():
             # 提取 PER 和 PBR
             per = info.get('forwardPE') or info.get('trailingPE') or "--"
             pbr = info.get('priceToBook') or "--"
+
+
             
             # 格式化数字，免得小数点后面太长
             per_display = f"{per:.2f}" if isinstance(per, (int, float)) else str(per)
             pbr_display = f"{pbr:.2f}" if isinstance(pbr, (int, float)) else str(pbr)
-            if isinstance(pbr, (int, float)) and pbr < 1:
-                pbr_display += " (低估)"
 
+                
+            if isinstance(pbr, (int, float)):
+                if pbr < 1.0:
+                    pbr_display += " (低估)"
+                elif 1.0 <= pbr <= 3.0:
+                    pbr_display += " (合理)"
+                else:
+                    pbr_display += " (偏高)"
+                    
             # 组装成网页需要的格式
             updated_list.append({
                 "code": symbol.split('.')[0], # 去掉尾巴，只要数字代码
