@@ -35,17 +35,24 @@ def fetch_stock_data():
                 change_str = "--"
                 is_up = False
                 
-            # 提取 PER 和 PBR
+            # 提取 PER 并根据数值打上不同的状态标签
             per = info.get('forwardPE') or info.get('trailingPE') or "--"
-            pbr = info.get('priceToBook') or "--"
-
-
-            
-            # 格式化数字，免得小数点后面太长
             per_display = f"{per:.2f}" if isinstance(per, (int, float)) else str(per)
-            pbr_display = f"{pbr:.2f}" if isinstance(pbr, (int, float)) else str(pbr)
+            
+            if isinstance(per, (int, float)):
+                if per < 0:
+                    per_display += " (亏损)"
+                elif per < 15.0:
+                    per_display += " (低估)"
+                elif 15.0 <= per <= 35.0:
+                    per_display += " (合理)"
+                else:
+                    per_display += " (偏高)"
 
-                
+            # 提取 PBR 并根据数值打上不同的状态标签
+            pbr = info.get('priceToBook') or "--"
+            pbr_display = f"{pbr:.2f}" if isinstance(pbr, (int, float)) else str(pbr)
+            
             if isinstance(pbr, (int, float)):
                 if pbr < 1.0:
                     pbr_display += " (低估)"
@@ -53,6 +60,7 @@ def fetch_stock_data():
                     pbr_display += " (合理)"
                 else:
                     pbr_display += " (偏高)"
+            
                     
             # 组装成网页需要的格式
             updated_list.append({
