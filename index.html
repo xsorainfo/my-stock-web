@@ -61,8 +61,13 @@
             transition: background 0.2s;
         }
 
-        .refresh-btn:hover {
+        .refresh-btn:hover:not(:disabled) {
             background-color: #1d4ed8;
+        }
+
+        .refresh-btn:disabled {
+            background-color: #94a3b8;
+            cursor: not-allowed;
         }
 
         .ai-briefboard {
@@ -129,6 +134,7 @@
             border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
 
         .stock-header {
@@ -198,18 +204,35 @@
         .text-up { color: var(--up-color); }
         .text-down { color: var(--down-color); }
         
-        /* 估值判断专用标签样式 */
         .val-badge {
-            font-size: 10px;
-            padding: 1px 4px;
-            border-radius: 3px;
+            font-size: 11px;
+            padding: 2px 6px;
+            border-radius: 4px;
             font-weight: bold;
-            display: block;
+            display: inline-block;
             margin-top: 2px;
         }
         .val-high { background: #fee2e2; color: #ef4444; }
         .val-low { background: #d1fae5; color: #10b981; }
         .val-normal { background: #f1f5f9; color: #64748b; }
+
+        /* 矩阵表格基础样式 */
+        .metrics-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11px;
+            color: #64748b;
+            text-align: center;
+        }
+        .metrics-table th {
+            font-weight: normal;
+            padding: 4px 2px;
+            background: #f8fafc;
+            color: #64748b;
+        }
+        .metrics-table td {
+            padding: 6px 2px 4px 2px;
+        }
     </style>
 </head>
 <body>
@@ -232,7 +255,7 @@
 </div>
 
 <script>
-    // 💡 修复：多级估值智能动态判定函数
+    // 智能基本面价值评级判定
     function judgeValuation(val, type) {
         if (!val || val === '--' || isNaN(parseFloat(val))) return '<span class="val-badge val-normal">--</span>';
         const num = parseFloat(val);
@@ -279,7 +302,6 @@
                     const colorClass = stock.isUp ? 'text-up' : 'text-down';
                     const trendClass = stock.trend === '牛市多头' ? 'trend-up-bg' : 'trend-down-bg';
                     
-                    // 调用估值判定核心逻辑
                     const perHtml = judgeValuation(stock.per, 'PER');
                     const pbrHtml = judgeValuation(stock.pbr, 'PBR');
 
@@ -302,34 +324,39 @@
                                 <div class="stock-change ${colorClass}">${stock.change}</div>
                             </div>
                             
-                            <table style="
-                                width: 100%; 
-                                margin-top: 12px; 
-                                padding-top: 8px; 
-                                border-top: 1px dashed #e2e8f0; 
-                                border-collapse: collapse;
-                                font-size: 11px;
-                                color: #64748b;
-                            ">
-                                <thead>
-                                    <tr style="text-align: center; background: #f8fafc;">
-                                        <th style="font-weight: 500; padding: 4px 2px; width: 20%;">PER估值</th>
-                                        <th style="font-weight: 500; padding: 4px 2px; width: 20%;">PBR溢价</th>
-                                        <th style="font-weight: 400; padding: 4px 2px; width: 20%;">距1周高</th>
-                                        <th style="font-weight: 400; padding: 4px 2px; width: 20%;">距1月高</th>
-                                        <th style="font-weight: 400; padding: 4px 2px; width: 20%;">距52周高</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr style="text-align: center; color: #1e293b; font-size: 11px; vertical-align: top;">
-                                        <td style="padding-top: 6px;">${perHtml}</td>
-                                        <td style="padding-top: 6px;">${pbrHtml}</td>
-                                        <td style="padding-top: 8px; font-weight: 600; font-size: 12px;">${stock.distWeek || '--'}</td>
-                                        <td style="padding-top: 8px; font-weight: 600; font-size: 12px;">${stock.distMonth || '--'}</td>
-                                        <td style="padding-top: 8px; font-weight: 600; font-size: 12px;">${stock.distHigh || '--'}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div style="border-top: 1px dashed #e2e8f0; margin-top: 12px; padding-top: 4px;">
+                                <table class="metrics-table" style="margin-bottom: 6px;">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 50%;">PER 估值</th>
+                                            <th style="width: 50%;">PBR 溢价</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>${perHtml}</td>
+                                            <td>${pbrHtml}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <table class="metrics-table">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 33.33%;">距1周高</th>
+                                            <th style="width: 33.33%;">距1月高</th>
+                                            <th style="width: 33.33%;">距52周高</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr style="font-weight: 600; color: #1e293b; font-size: 12px;">
+                                            <td>${stock.distWeek || '--'}</td>
+                                            <td>${stock.distMonth || '--'}</td>
+                                            <td>${stock.distHigh || '--'}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     `;
                 });
@@ -338,24 +365,20 @@
             console.error('渲染故障:', error);
         }
     }
-    // 💡 完美复原：倒计时锁死防御逻辑
-    let countdownTimer = null;
 
+    // 🔄 右上角点击原生优雅倒计时逻辑
+    let countdownTimer = null;
     document.getElementById('cloudRefreshBtn').addEventListener('click', function() {
         const btn = this;
-        
-        // 1. 如果正在倒计时，直接拦截，不重复触发
         if (btn.disabled) return;
 
-        // 2. 刷新本地界面数据
+        // 执行前端局部刷流
         loadDashboardData();
-        console.log("云端强刷信号已发出...");
+        console.log("云端同步编译指令已安全下发...");
 
-        // 3. 开启 60 秒倒计时（锁定按钮防刷）
+        // 原生按钮状态切换与锁死
         let seconds = 60;
         btn.disabled = true;
-        btn.style.backgroundColor = '#94a3b8'; // 变成灰色不可点状态
-        btn.style.cursor = 'not-allowed';
         btn.innerText = `🔄 ${seconds}s 后可强刷`;
 
         countdownTimer = setInterval(() => {
@@ -363,17 +386,11 @@
             if (seconds > 0) {
                 btn.innerText = `🔄 ${seconds}s 后可强刷`;
             } else {
-                // 倒计时结束，恢复按钮状态
                 clearInterval(countdownTimer);
                 btn.disabled = false;
-                btn.style.backgroundColor = '#2563eb'; // 恢复原本的蓝色
-                btn.style.cursor = 'pointer';
                 btn.innerText = '🔄 召唤云端强刷';
             }
         }, 1000);
-
-        // 4. 🔗 如果你原本有特定的 GitHub Webhook 触发代码，直接贴在下面即可：
-        // fetch('你的GitHub触发链接', { method: 'POST' });
     });
 
     window.onload = loadDashboardData;
