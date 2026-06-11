@@ -37,7 +37,10 @@ jobs:
     - name: 安装 yfinance 及网络依赖包
       run: pip install yfinance requests
 
+    # 🛠️【终极修复】：在这里把通道正式打通，将 GitHub 后台的 Secret 送进 Python
     - name: 运行 Python 脚本抓取数据
+      env:
+        AI_API_KEY: ${{ secrets.AI_API_KEY }}
       run: python update_data.py
 
     - name: 把最新数据提交回 GitHub 仓库
