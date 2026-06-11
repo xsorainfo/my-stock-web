@@ -79,7 +79,9 @@
 
     async function loadStockData() {
       try {
-        const response = await fetch('./data.json?t=' + ImgDate = new Date().getTime()); // 加个时间戳防止浏览器缓存死数据
+
+        const response = await fetch('./data.json?t=' + new Date().getTime());
+        
         const stocks = await response.json();
         
         const dashboard = document.getElementById("dashboard");
