@@ -9,26 +9,41 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
         body { background-color: var(--bg-color); color: var(--text-main); padding: 24px; line-height: 1.5; }
         .container { max-width: 1400px; margin: 0 auto; }
+        
         header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border-color); }
         h1 { font-size: 24px; font-weight: 700; }
+        
         .refresh-btn { background-color: #2563eb; color: white; border: none; padding: 8px 16px; border-radius: 6px; font-size: 14px; cursor: pointer; transition: background 0.2s; }
         .refresh-btn:disabled { background-color: #94a3b8; cursor: not-allowed; }
+        
         .ai-briefboard { background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%); border: 1px solid #bfdbfe; border-radius: 12px; padding: 20px; margin-bottom: 28px; }
         .ai-title { font-weight: 600; color: #1e40af; font-size: 15px; margin-bottom: 8px; }
         .ai-content { font-size: 14px; color: #334155; }
+        
         .macro-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 32px; }
         .macro-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 10px; padding: 16px; }
+        
         .stock-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; margin-bottom: 30px; }
-        .stock-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
-        .stock-header { display: flex; justify-content: space-between; margin-bottom: 8px; }
-        .stock-industry { font-size: 11px; color: #2563eb; background: #eff6ff; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-top: 4px; }
-        .stock-feature { font-size: 12px; color: var(--text-muted); background: #f8fafc; padding: 8px; border-radius: 6px; margin: 10px 0; min-height: 48px; }
-        .stock-trend-badge { font-size: 11px; font-weight: 600; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 8px; }
+        .stock-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); display: flex; flex-direction: column; gap: 12px; }
+        
+        .stock-header { display: flex; justify-content: space-between; align-items: flex-start; }
+        .stock-industry { font-size: 11px; color: #2563eb; background: #eff6ff; padding: 2px 8px; border-radius: 4px; display: inline-block; margin-top: 4px; }
+        .stock-feature { font-size: 12px; color: var(--text-muted); background: #f8fafc; padding: 8px; border-radius: 6px; height: 3.2em; overflow: hidden; }
+        
+        .stock-trend-badge { font-size: 11px; font-weight: 600; padding: 2px 6px; border-radius: 4px; display: inline-block; }
         .trend-up-bg { background: #fee2e2; color: #b91c1c; }
         .trend-down-bg { background: #d1fae5; color: #065f46; }
-        .price-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
-        .stock-price { font-size: 18px; font-weight: 600; }
-        .metrics-table { width: 100%; border-collapse: collapse; font-size: 10px; color: #64748b; text-align: center; margin-top: 8px; }
+        
+        .price-row { display: flex; align-items: baseline; gap: 12px; margin: 4px 0; }
+        .stock-price { font-size: 22px; font-weight: 700; }
+        
+        /* 核心指标表格布局 */
+        .metrics-container { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; border-top: 1px solid #f1f5f9; padding-top: 10px; }
+        .metric-box { font-size: 11px; color: #64748b; }
+        .retreat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; text-align: center; margin-top: 8px; border-top: 1px solid #f8fafc; padding-top: 8px; }
+        .retreat-item { font-size: 10px; color: #64748b; }
+        .retreat-val { display: block; font-weight: 700; color: #1e293b; margin-top: 2px; }
+        
         .text-up { color: var(--up-color); }
         .text-down { color: var(--down-color); }
     </style>
@@ -51,13 +66,6 @@
 </div>
 
 <script>
-function judgeValuation(val, type) {
-    if (!val || val === '--') return '<span style="color:#64748b">--</span>';
-    const num = parseFloat(val);
-    const color = num > 50 ? '#ef4444' : '#10b981';
-    return `<span style="font-weight:bold; color:${color}">${num}</span>`;
-}
-
 async function loadDashboardData() {
     const res = await fetch('data.json?v=' + new Date().getTime());
     const data = await res.json();
@@ -65,10 +73,10 @@ async function loadDashboardData() {
 
     // 渲染宏观
     document.getElementById('macroGrid').innerHTML = data.macro.map(i => 
-        `<div class="macro-card"><div style="font-size:13px; color:#64748b">${i.name}</div><div class="macro-price ${i.isUp?'text-up':'text-down'}">${i.price}</div></div>`
+        `<div class="macro-card"><div style="font-size:13px; color:#64748b">${i.name}</div><div style="font-size:20px; font-weight:600" class="${i.isUp?'text-up':'text-down'}">${i.price}</div></div>`
     ).join('');
 
-    // 渲染分组股票 (这里处理 subCategory 或 industry)
+    // 渲染股票
     const container = document.getElementById('stockContainer');
     const groups = data.stocks.reduce((acc, s) => {
         const key = s.subCategory || s.industry || "未分类";
@@ -77,33 +85,34 @@ async function loadDashboardData() {
     }, {});
 
     container.innerHTML = Object.entries(groups).map(([cat, items]) => `
-        <div style="margin: 25px 0 10px; font-weight: 800; color: #1e293b; border-left: 4px solid #2563eb; padding-left: 10px;">${cat}</div>
+        <div style="margin: 30px 0 15px; font-weight: 800; font-size: 18px; color: #1e293b; border-left: 5px solid #2563eb; padding-left: 12px;">${cat}</div>
         <div class="stock-grid">
            ${items.map(s => `
                <div class="stock-card">
                    <div class="stock-header">
-                       <div><h3>${s.name}</h3><div class="stock-industry">${s.industry}</div></div>
+                       <div>
+                           <div style="font-weight:700; font-size:15px;">${s.name}</div>
+                           <div class="stock-industry">${s.industry}</div>
+                       </div>
                        <span style="font-size:11px; background:#f1f5f9; padding:2px 6px; border-radius:4px; color:#64748b">${s.code}</span>
                    </div>
                    <div class="stock-feature">${s.feature}</div>
                    <div class="stock-trend-badge ${s.trend === '牛市多头' ? 'trend-up-bg' : 'trend-down-bg'}">${s.trend}</div>
+                   
                    <div class="price-row">
                        <div class="stock-price ${s.isUp?'text-up':'text-down'}">${s.price}</div>
-                       <div class="${s.isUp?'text-up':'text-down'}">${s.change}</div>
+                       <div class="${s.isUp?'text-up':'text-down'}" style="font-size:14px; font-weight:600;">${s.change}</div>
                    </div>
-                   <table class="metrics-table">
-                        <tr>
-                            <td style="color:#64748b">PER: ${judgeValuation(s.per, 'PER')}</td>
-                            <td style="color:#64748b">PBR: ${judgeValuation(s.pbr, 'PBR')}</td>
-                        </tr>
-                        <tr style="font-weight:600; color:#1e293b;">
-                            <td>1周回撤: <span style="color:#ef4444">${s.distWeek}</span></td>
-                            <td>52周回撤: <span style="color:#ef4444">${s.distHigh}</span></td>
-                        </tr>
-                        <tr style="color:#94a3b8;">
-                            <td colspan="2">月度回撤: ${s.distMonth}</td>
-                        </tr>
-                    </table>
+
+                   <div class="metrics-container">
+                       <div class="metric-box">PER: <span style="font-weight:700; color:#1e293b">${s.per}</span></div>
+                       <div class="metric-box">PBR: <span style="font-weight:700; color:#1e293b">${s.pbr}</span></div>
+                   </div>
+                   <div class="retreat-grid">
+                       <div class="retreat-item">1周<span class="retreat-val">${s.distWeek}</span></div>
+                       <div class="retreat-item">1月<span class="retreat-val">${s.distMonth}</span></div>
+                       <div class="retreat-item">52周<span class="retreat-val">${s.distHigh}</span></div>
+                   </div>
                </div>
            `).join('')}
         </div>
