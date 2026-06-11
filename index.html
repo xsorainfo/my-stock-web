@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>全球 AI 硬科技决策终端</title>
   
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/peity/3.3.0/jquery.peity.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/peity@3.3.0/jquery.peity.min.js"></script>
 
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -28,7 +28,7 @@
     .industry-title { font-size: 18px; font-weight: 700; color: #2d3748; margin-bottom: 15px; padding-left: 8px; border-left: 4px solid #3182ce; }
     .stock-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
     
-    /* 恢复经典股票卡片美学 */
+    /* 完美复原经典卡片样式 */
     .stock-card { background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.04); border: 1px solid #edf2f7; display: flex; flex-direction: column; justify-content: space-between; }
     .card-header { display: flex; justify-content: space-between; align-items: flex-start; }
     .stock-name { font-size: 16px; font-weight: 700; color: #1a202c; }
@@ -39,13 +39,13 @@
     .status-up { background-color: #ebf8ff; color: #2b6cb0; }
     .status-down { background-color: #f7fafc; color: #4a5568; }
     
-    /* 折线图包裹器 */
+    /* 原版迷你折线走势图 */
     .sparkline-container { margin: 15px 0; text-align: right; height: 25px; }
     
     .price-section { display: flex; justify-content: space-between; align-items: flex-end; }
     .current-price { font-size: 24px; font-weight: 700; font-family: monospace; }
     
-    /* 财务面指标矩阵面板 */
+    /* 核心经典财务面板 */
     .metrics-panel { display: grid; grid-template-columns: repeat(3, 1fr); background: #f7fafc; border-radius: 6px; padding: 8px; margin-top: 12px; gap: 4px; text-align: center; }
     .metric-item { display: flex; flex-direction: column; }
     .metric-lbl { font-size: 10px; color: #a0aec0; text-transform: uppercase; }
@@ -65,7 +65,7 @@
   </div>
 
   <div class="macro-container" id="macro-bar"></div>
-  <div id="dashboard">正在读取经典核心资产数据流...</div>
+  <div id="dashboard">正在读取终端核心资产数据流...</div>
 
   <script>
     async function loadStockData() {
@@ -89,7 +89,7 @@
           `;
         });
 
-        // 渲染个股外壳
+        // 按行业建立卡片外壳
         const dashboard = document.getElementById("dashboard");
         dashboard.innerHTML = ""; 
         const stocks = data.stocks;
@@ -105,7 +105,7 @@
           `;
         });
 
-        // 完美填充经典指标与动态迷你折线
+        // 填充经典指标与走势图
         stocks.forEach(stock => {
           const industryId = stock.industry.split('.')[0].trim();
           const grid = document.getElementById(`grid-sec-${industryId}`);
@@ -145,12 +145,12 @@
           if(grid) grid.innerHTML += cardHtml;
         });
 
-        // 🌟 触发迷你折线图绘制组件
+        // 🌟 重新唤醒迷你趋势组件渲染
         $(".peity-line").peity("line");
 
       } catch (error) {
         console.error(error);
-        document.getElementById("dashboard").innerHTML = "❌ 数据流还原失败，请前往 Actions 页面手动运行一次。";
+        document.getElementById("dashboard").innerHTML = "❌ 核心资产数据包未就绪，请等待后端 Workflow 运行完毕。";
       }
     }
 
