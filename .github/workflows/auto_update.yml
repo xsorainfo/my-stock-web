@@ -47,7 +47,19 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
+
+        # 调试：查看当前分支状态
+        git status
+        
         git add data.json
-        # 如果没有数据变化，优雅退出，不抛出异常崩溃
-        git commit -m "自动更新股票数据 [skip ci]" || exit 0
-        git push
+        
+        # 调试：查看是否有改动需要提交
+        if git diff --cached --quiet; then
+          echo "没有数据变化，跳过提交"
+        else
+          git commit -m "自动更新股票数据 [skip ci]"
+          # 增加 -v 参数可以看到 push 时的详细交互，有助于分析权限错误
+          git push -v origin main
+        fi
+
+  
