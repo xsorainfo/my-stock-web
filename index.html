@@ -275,6 +275,7 @@
     async function loadDashboardData() {
         try {
             const response = await fetch('data.json?v=' + new Date().getTime());
+
             if (!response.ok) throw new Error('未能正确加载终端决策流数据');
             const data = await response.json();
 
