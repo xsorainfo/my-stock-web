@@ -126,7 +126,7 @@
             for (const [industry, stocks] of Object.entries(grouped)) {
                 const section = document.createElement('div');
                 section.className = 'industry-section';
-                section.innerHTML = `<h3 class="industry-title">${industry.replace(/^\d+\.\s*/, '')}</h3>`;
+                section.innerHTML = `<h3 class="industry-title">${industry}</h3>`;
                 
                 const grid = document.createElement('div');
                 grid.className = 'stock-grid';
