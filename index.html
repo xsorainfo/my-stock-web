@@ -371,34 +371,20 @@
     let countdownTimer = null;
     document.getElementById('cloudRefreshBtn').addEventListener('click', async function() {
         const btn = this;
-        // 使用 GitHub 提供的 API，这里我们通过 fetch 发送 POST 请求
-        // 注意：为了安全性，这里的 Token 依然不能直接写。
-        // 如果你这是个人私有页面，且你信任这个环境，可以临时尝试以下（再次提醒：有泄露风险）：
-        
-        const GITHUB_TOKEN = 'MY_REPO_TOKEN'; // ⚠️仅建议在极度私有的环境使用
-        const REPO = 'xsorainfo/my-stock-web';
-    
         btn.disabled = true;
         btn.innerText = "正在发送指令...";
     
         try {
-            const response = await fetch(`https://api.github.com/repos/${REPO}/dispatches`, {
-                method: 'POST',
-                headers: {
-                    'Authorization': `token ${GITHUB_TOKEN}`,
-                    'Accept': 'application/vnd.github.v3+json'
-                },
-                body: JSON.stringify({ event_type: 'web_refresh' })
-            });
-    
+            // 请求你自己的 API
+            const response = await fetch('/api/refresh', { method: 'POST' });
+            
             if (response.ok) {
-                alert("✅ 同步指令已发送！数据将在 1-2 分钟内更新，请稍候手动刷新页面。");
+                alert("✅ 指令已发送，云端开始抓取数据，请稍后刷新！");
             } else {
-                alert("❌ 发送失败，请检查控制台。");
+                alert("❌ 发送失败，请检查 API 配置。");
             }
         } catch (e) {
-            console.error(e);
-            alert("网络请求错误。");
+            alert("网络错误。");
         } finally {
             btn.disabled = false;
             btn.innerText = '🔄 召唤云端强刷';
