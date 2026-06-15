@@ -1,15 +1,14 @@
 name: 自动更新股票数据
 
 on:
+  repository_dispatch:
+    types: [web_refresh] # 这一行非常重要
   schedule:
     # 早盘：北京时间 08:00 - 10:30（UTC 00:00 - 02:30）
     # 午盘：北京时间 11:30 - 14:30（UTC 03:30 - 06:30）
     - cron: '0,15,30,45 0,1,2,4,5,6 * * 1-5'
     - cron: '30,45 3 * * 1-5' # 修正重复冲突，仅保留 11:30 之后的下半小时触发
-
-  repository_dispatch:
-    types: [web_refresh]
-    
+   
   workflow_dispatch:
 
 # 🌟【超级核心加固】：彻底解决 git push 报 exit code 1 的权限拉闸问题
