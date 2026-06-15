@@ -6,7 +6,7 @@ export default async function handler(req, res) {
   }
 
   // 1. 从刚才的保险箱里取出隐藏的钥匙
-  const token = process.env.MY_GITHUB_TOKEN;
+  const token = process.env.MY_REPO_TOKEN;
   
   // 【配置区】换成你自己的 GitHub 用户名和仓库名
   const owner = "xsorainfo"; 
