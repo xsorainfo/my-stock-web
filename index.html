@@ -148,9 +148,31 @@
                                 <div class="stock-price ${colorClass}">${stock.price}</div>
                                 <div class="stock-change ${colorClass}">${stock.change}</div>
                             </div>
+                            
+                            <table class="metrics-table" style="margin-bottom: 6px;">
+                                <thead>
+                                    <tr><th style="width: 50%;">PER 估值</th><th style="width: 50%;">PBR 溢价</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>${judgeValuation(stock.per, 'PER')}</td><td>${judgeValuation(stock.pbr, 'PBR')}</td></tr>
+                                </tbody>
+                            </table>
+
                             <table class="metrics-table">
-                                <thead><tr><th>PER 估值</th><th>PBR 溢价</th></tr></thead>
-                                <tbody><tr><td>${judgeValuation(stock.per, 'PER')}</td><td>${judgeValuation(stock.pbr, 'PBR')}</td></tr></tbody>
+                                <thead>
+                                    <tr>
+                                        <th style="width: 33.33%;">距1周高</th>
+                                        <th style="width: 33.33%;">距1月高</th>
+                                        <th style="width: 33.33%;">距52周高</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="font-weight: 600; color: #1e293b; font-size: 12px;">
+                                        <td>${stock.distWeek || '--'}</td>
+                                        <td>${stock.distMonth || '--'}</td>
+                                        <td>${stock.distHigh || '--'}</td>
+                                    </tr>
+                                </tbody>
                             </table>
                         </div>`;
                 });
