@@ -371,21 +371,39 @@
     let countdownTimer = null;
     document.getElementById('cloudRefreshBtn').addEventListener('click', async function() {
         const btn = this;
+        if (btn.disabled) return;
+    
+        // 1. 发送触发请求到你的后端 API
         btn.disabled = true;
         btn.innerText = "正在发送指令...";
     
         try {
-            // 请求你自己的 API
             const response = await fetch('/api/refresh', { method: 'POST' });
             
             if (response.ok) {
-                alert("✅ 指令已发送，云端开始抓取数据，请稍后刷新！");
+                // 2. 发送成功，开始倒计时
+                let seconds = 45; // 建议设为 30-60 秒，给 Action 留出启动时间
+                btn.innerText = `🔄 等待 ${seconds}s 后刷新...`;
+                
+                const timer = setInterval(() => {
+                    seconds--;
+                    if (seconds > 0) {
+                        btn.innerText = `🔄 等待 ${seconds}s 后刷新...`;
+                    } else {
+                        clearInterval(timer);
+                        // 3. 倒计时结束，强制刷新页面
+                        window.location.reload(); 
+                    }
+                }, 1000);
+                
             } else {
-                alert("❌ 发送失败，请检查 API 配置。");
+                alert("❌ 指令发送失败，请检查 API 配置。");
+                btn.disabled = false;
+                btn.innerText = '🔄 召唤云端强刷';
             }
         } catch (e) {
+            console.error(e);
             alert("网络错误。");
-        } finally {
             btn.disabled = false;
             btn.innerText = '🔄 召唤云端强刷';
         }
