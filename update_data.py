@@ -107,7 +107,7 @@ def fetch_all_data():
                 dist_month = ((current_price - high_1m) / high_1m) * 100
                 dist_month_str = f"{dist_month:.1f}%"
 
-            per_display, forward_per_display，pbr_display = "--", "--", "--"
+            per_display, forward_per_display, pbr_display = "--", "--", "--"
             try:
                 info = stock.info
                 if isinstance(info, dict):
