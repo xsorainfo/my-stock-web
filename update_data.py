@@ -15,6 +15,7 @@ def fetch_av_data(symbol):
     url = f"https://www.alphavantage.co/query?function=OVERVIEW&symbol={av_symbol}&apikey={API_KEY}"
     try:
         response = requests.get(url).json()
+        print(f"DEBUG AV Response for {symbol}: {response}") # 加上这一行看看终端输出
         return response.get("ForwardPE", "--")
     except:
         return "--"
