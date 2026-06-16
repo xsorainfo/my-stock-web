@@ -84,12 +84,22 @@ def fetch_all_data():
     for m in MACRO_LIST:
         try:
             stock = yf.Ticker(m["symbol"], session=session)
-            h_df = stock.history(period="1mo").dropna(subset=['Close'])
+            h_df = stock.history(period="1mo")
+            h_df = h_df.dropna(subset=['Close'])
+            
             if len(h_df) >= 2:
-                curr, prev = h_df['Close'].iloc[-1], h_df['Close'].iloc[-2]
-                diff = curr - prev
-                pct = (diff / prev) * 100
-                output_data["macro"].append({"name": m["name"], "price": f"{curr:.2f}", "change": f"{diff:+.2f} ({pct:+.2f}%)", "isUp": diff > 0})
+                closes = h_df['Close'].tail(2).tolist()
+                current = closes[1]
+                prev_close = closes[0]
+                
+                diff = current - prev_close
+                pct = (diff / prev_close) * 100
+                sign = "+" if diff > 0 else ""
+                output_data["macro"].append({
+                    "name": m["name"], "price": f"{current:.2f}",
+                    "change": f"{sign}{diff:.2f} ({sign}{pct:.2f}%)", "isUp": diff > 0
+                })
+            time.sleep(0.1)
         except Exception as e:
             print(f"大盘 {m['name']} 异常: {e}")
 
@@ -106,15 +116,20 @@ def fetch_all_data():
         
         try:
             print(f"终端同步：正在抓取并对齐多周期时区 {item['name']}...")
-            h_df = stock.history(period="1mo").dropna(subset=['High', 'Close'])
-            if h_df.empty or len(h_df) < 2: continue
             
-            # 明确变量定义
-            current_price = h_df['Close'].iloc[-1]
-            prev_close = h_df['Close'].iloc[-2]
-            high_1m = h_df['High'].max()
-            high_1w = h_df['High'].tail(5).max()
+            h_df = stock.history(period="1mo")
+            h_df = h_df.dropna(subset=['High', 'Close'])
             
+            if h_df.empty or len(h_df) < 2:
+                continue
+                
+            closes = h_df['Close'].tail(2).tolist()
+            current_price = closes[1]
+            prev_close = closes[0]
+                
+            diff = current_price - prev_close
+            percent = (diff / prev_close) * 100
+            sign = "+" if diff > 0 else ""            
             # 多周期回撤比例计算
             dist_high_str = "--"  # 52周
             dist_week_str = "--"  # 1周
@@ -173,8 +188,7 @@ def fetch_all_data():
                 "distMonth": dist_month_str,     
                 "trend": trend_label,
                 "source": source, # 🌟 来源标记
-                "is_us": is_us,
-                "isUp": current_price >= prev_close
+                "is_us": is_us
             })
             time.sleep(random.uniform(0.1, 0.2))
         except Exception as e:
