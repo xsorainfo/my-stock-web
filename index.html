@@ -42,7 +42,23 @@
         .stock-title h3 { font-size: 16px; font-weight: 700; }
         .stock-industry { font-size: 11px; color: #2563eb; background: #eff6ff; padding: 2px 6px; border-radius: 4px; margin-top: 4px; display: inline-block; }
         .stock-code { font-size: 11px; background: #f1f5f9; color: #64748b; padding: 2px 6px; border-radius: 4px; }
-        .stock-feature { font-size: 12px; color: var(--text-muted); background: #f8fafc; padding: 8px; border-radius: 6px; margin-bottom: 14px; min-height: 52px; }
+        /*.stock-feature { font-size: 12px; color: var(--text-muted); background: #f8fafc; padding: 8px; border-radius: 6px; margin-bottom: 14px; min-height: 52px; }*/
+        .stock-feature { 
+            font-size: 12px; 
+            color: #64748b; 
+            background: #f8fafc; 
+            padding: 8px; 
+            border-radius: 6px; 
+            margin-bottom: 14px; 
+            min-height: 52px; 
+        }
+        
+        /* 关键：给加粗文字定义高亮色 */
+        .stock-feature strong {
+            color: #1e293b;      /* 深灰色，比普通文字更深 */
+            font-weight: 700;    /* 加粗 */
+        }
+        
         .stock-trend-badge { font-size: 11px; font-weight: 600; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 12px; }
         .trend-up-bg { background: #fee2e2; color: #b91c1c; }
         .trend-down-bg { background: #d1fae5; color: #065f46; }
@@ -132,6 +148,8 @@
                 grid.className = 'stock-grid';
                 
                 stocks.forEach(stock => {
+                    // 预处理 feature，支持 **加粗**
+                    const formattedFeature = stock.feature.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
                     const colorClass = stock.isUp ? 'text-up' : 'text-down';
                     const trendClass = stock.trend === '牛市多头' ? 'trend-up-bg' : 'trend-down-bg';
                     grid.innerHTML += `
@@ -142,7 +160,7 @@
                                 </div>
                                 <span class="stock-code">${stock.code}</span>
                             </div>
-                            <div class="stock-feature">${stock.feature}</div>
+                            <div class="stock-feature">${formattedFeature}</div>
                             <div class="stock-trend-badge ${trendClass}">${stock.trend}</div>
                             <div class="price-row">
                                 <div class="stock-price ${colorClass}">${stock.price}</div>
