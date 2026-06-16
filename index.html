@@ -86,6 +86,11 @@
             if (num > 50) return `<span class="val-badge val-high">${num.toFixed(1)} 高估值</span>`;
             if (num < 25) return `<span class="val-badge val-low">${num.toFixed(1)} 具性价比</span>`;
             return `<span class="val-badge val-normal">${num.toFixed(1)} 合理</span>`;
+        } else if (type === 'forward_per') {
+            if (num > 50) return `<span class="val-badge val-high">${num.toFixed(1)} 高估值</span>`;
+            if (num < 25) return `<span class="val-badge val-low">${num.toFixed(1)} 具性价比</span>`;
+            return `<span class="val-badge val-normal">${num.toFixed(1)} 合理</span>`;
+        }
         } else if (type === 'PBR') {
             if (num > 15) return `<span class="val-badge val-high">${num.toFixed(1)} 高溢价</span>`;
             if (num < 3) return `<span class="val-badge val-low">${num.toFixed(1)} 净资产防守</span>`;
@@ -151,10 +156,18 @@
                             
                             <table class="metrics-table" style="margin-bottom: 6px;">
                                 <thead>
-                                    <tr><th style="width: 50%;">PER 估值</th><th style="width: 50%;">PBR 溢价</th></tr>
+                                    <tr>
+                                        <th style="width: 33%;">PER 估值</th>
+                                        <th style="width: 34%;">预想 PER</th>
+                                        <th style="width: 33%;">PBR 溢价</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
-                                    <tr><td>${judgeValuation(stock.per, 'PER')}</td><td>${judgeValuation(stock.pbr, 'PBR')}</td></tr>
+                                    <tr>
+                                        <td>${judgeValuation(stock.per, 'PER')}</td>
+                                        <td>${judgeValuation(stock.forward_per, 'forward_per')}</td>
+                                        <td>${judgeValuation(stock.pbr, 'PBR')}</td>
+                                    </tr>
                                 </tbody>
                             </table>
 
