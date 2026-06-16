@@ -90,7 +90,7 @@ def fetch_all_data():
                 diff = curr - prev
                 pct = (diff / prev) * 100
                 output_data["macro"].append({"name": m["name"], "price": f"{curr:.2f}", "change": f"{diff:+.2f} ({pct:+.2f}%)", "isUp": diff > 0})
-        except: pass
+        except Exception as e:
             print(f"大盘 {m['name']} 异常: {e}")
 
     # 2. 抓取自选个股数据
@@ -106,21 +106,13 @@ def fetch_all_data():
         
         try:
             print(f"终端同步：正在抓取并对齐多周期时区 {item['name']}...")
+            h_df = stock.history(period="1mo").dropna(subset=['High', 'Close'])
+            if h_df.empty or len(h_df) < 2: continue
             
-            h_df = stock.history(period="1mo")
-            h_df = h_df.dropna(subset=['High', 'Close'])
-            
-
-            if h_df.empty or len(h_df) < 2:
-                continue
-            curr = h_df['Close'].iloc[-1]      
-            closes = h_df['Close'].tail(2).tolist()
-            current_price = closes[1]
-            prev_close = closes[0]
-                
-            diff = current_price - prev_close
-            percent = (diff / prev_close) * 100
-            sign = "+" if diff > 0 else ""
+            curr = h_df['Close'].iloc[-1]
+            prev = h_df['Close'].iloc[-2]
+            high_1m = h_df['High'].max()
+            high_1w = h_df['High'].tail(5).max()
             
             # 多周期回撤比例计算
             dist_high_str = "--"  # 52周
