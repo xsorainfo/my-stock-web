@@ -4,25 +4,51 @@ import time
 import random
 import os
 import requests
-# 引入新模块
-from config import MACRO_LIST, WATCHLIST
 
-def fetch_av_data(symbol):
-    """从 Alpha Vantage 获取对比数据"""
-    API_KEY = "6AAGNM8A0BFJW6MB" # 替换成你的 Key
-    # 日本股票在 AV 中通常格式为 "SYMBOL.TYO" (例如 3110.T -> 3110.TYO)
-    av_symbol = symbol.replace('.T', '.TYO') 
-    url = f"https://www.alphavantage.co/query?function=OVERVIEW&symbol={av_symbol}&apikey={API_KEY}"
-    try:
-        response = requests.get(url).json()
-        print(f"DEBUG AV Response for {symbol}: {response}") # 加上这一行看看终端输出
-        return response.get("ForwardPE", "--")
-    except:
-        return "--"
 
-# Gemini 1.5 官方接口标准端点与密钥配置
-END_POINT = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
-SEC_VAL = os.environ.get("AI_API_KEY")
+from config import MACRO_LIST, WATCHLIST, DEFAULT_STRATEGY, SOURCE_MAP
+
+class StockDataManager:
+    def __init__(self, cache_file='stock_cache.json'):
+        self.cache_file = cache_file
+        self.cache = self._load_cache()
+
+    def _load_cache(self):
+        if os.path.exists(self.cache_file):
+            try:
+                with open(self.cache_file, 'r') as f: return json.load(f)
+            except: return {}
+        return {}
+
+    def _save_cache(self):
+        with open(self.cache_file, 'w') as f:
+            json.dump(self.cache, f)
+
+    def get_data(self, stock, symbol, is_us):
+        """统一的数据获取入口，优先使用缓存"""
+        # 1. 缓存查询
+        if is_us and symbol in self.cache:
+            if time.time() - self.cache[symbol].get('timestamp', 0) < 3600:
+                print(f"命中缓存: {symbol}")
+                return self.cache[symbol]['data'], "cache"
+
+        # 2. 策略调度
+        strategy_order = SOURCE_MAP.get(symbol, DEFAULT_STRATEGY)
+        for source in strategy_order:
+            try:
+                print(f"尝试源 {source} 抓取 {symbol}...")
+                info = stock.info # 利用传入的 stock 对象
+                if info and 'regularMarketPrice' in info:
+                    # 3. 写入缓存 (仅美股)
+                    if is_us:
+                        self.cache[symbol] = {'data': info, 'timestamp': time.time()}
+                        self._save_cache()
+                    return info, source
+            except Exception as e:
+                print(f"源 {source} 抓取 {symbol} 失败: {e}")
+        
+        return None, "none"
+
 
 # MACRO_LIST = [
 #     {"symbol": "^SOX", "name": "费城半导体指数"},
@@ -35,20 +61,15 @@ SEC_VAL = os.environ.get("AI_API_KEY")
 # ]
 
 
+
+
 def make_ai_news(stock_data):
-    # 提取关键数据用于判断
+    if not stock_data: return "暂无数据"
     up_count = sum(1 for s in stock_data if s['isUp'])
     market_breadth = "多头回补" if up_count > (len(stock_data) / 2) else "弱势震荡"
-    
-    # 根据数据动态生成策略，而不是去调那个总是 404 的接口
-    msg = (
-        f"【盘后策略官·自动决策】：今日全球硬科技标的整体呈现 {market_breadth} 态势。 "
-        f"当前重点观察：PER TTM 估值在 {stock_data[0]['per'] if stock_data else '合理区间'} 附近的垄断类资产， "
-        f"配合距52周高位的 {stock_data[0]['distHigh'] if stock_data else '回撤'}，市场已进入结构性调仓阶段。 "
-        "策略建议：对于具备强壁垒的日本半导体材料与美股AI底座标的，建议执行'分批左侧'防御策略，避开高估值情绪区。"
-    )
-    return msg
-
+    return (f"【盘后策略官·自动决策】：今日全球硬科技标的整体呈现 {market_breadth} 态势。 "
+            f"当前重点观察：PER TTM 估值在 {stock_data[0]['per']} 附近的垄断类资产， "
+            f"配合距52周高位的 {stock_data[0]['distHigh']} 回撤，市场已进入结构性调仓阶段。")
 
     
 def fetch_all_data():
@@ -57,43 +78,42 @@ def fetch_all_data():
     # 🌟 干净安全的独立网络 Session 会话，彻底剔除旧版 utils 接口
     session = requests.Session()
     session.headers.update({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'})
+    manager = StockDataManager()
 
     # 1. 抓取大盘数据
     for m in MACRO_LIST:
         try:
             stock = yf.Ticker(m["symbol"], session=session)
-            h_df = stock.history(period="1mo")
-            h_df = h_df.dropna(subset=['Close'])
-            
+            h_df = stock.history(period="1mo").dropna(subset=['Close'])
             if len(h_df) >= 2:
-                closes = h_df['Close'].tail(2).tolist()
-                current = closes[1]
-                prev_close = closes[0]
-                
-                diff = current - prev_close
-                pct = (diff / prev_close) * 100
-                sign = "+" if diff > 0 else ""
-                output_data["macro"].append({
-                    "name": m["name"], "price": f"{current:.2f}",
-                    "change": f"{sign}{diff:.2f} ({sign}{pct:.2f}%)", "isUp": diff > 0
-                })
-            time.sleep(0.1)
-        except Exception as e:
+                curr, prev = h_df['Close'].iloc[-1], h_df['Close'].iloc[-2]
+                diff = curr - prev
+                pct = (diff / prev) * 100
+                output_data["macro"].append({"name": m["name"], "price": f"{curr:.2f}", "change": f"{diff:+.2f} ({pct:+.2f}%)", "isUp": diff > 0})
+        except: pass
             print(f"大盘 {m['name']} 异常: {e}")
 
     # 2. 抓取自选个股数据
     for item in WATCHLIST:
         symbol = item["symbol"]
+        is_us = not symbol.endswith('.T')
+        # 统一初始化 ticker
+        stock = yf.Ticker(symbol, session=session)
+        
+        # 通过 manager 获取 info
+        info, source = manager.get_data(stock, symbol, is_us)
+        if not info: continue
+        
         try:
             print(f"终端同步：正在抓取并对齐多周期时区 {item['name']}...")
-            stock = yf.Ticker(symbol, session=session)
             
             h_df = stock.history(period="1mo")
             h_df = h_df.dropna(subset=['High', 'Close'])
             
+
             if h_df.empty or len(h_df) < 2:
                 continue
-                
+            curr = h_df['Close'].iloc[-1]      
             closes = h_df['Close'].tail(2).tolist()
             current_price = closes[1]
             prev_close = closes[0]
@@ -145,22 +165,23 @@ def fetch_all_data():
 
             ma20 = h_df['Close'].mean()
             trend_label = "牛市多头" if current_price >= ma20 else "熊市空头"
+
             
-            # 新增：调用对比源
-            forward_per_av = fetch_av_data(symbol)
-            
+            # 存入数据字典
             output_data["stocks"].append({
                 "code": symbol.split('.')[0] if '.' in symbol else symbol,
                 "name": item["name"], "industry": item["industry"], "feature": item["feature"],
                 "price": f"{current_price:.2f}", "change": f"{sign}{diff:.2f} ({sign}{percent:.2f}%)", "isUp": diff > 0,
                 "per": per_display, 
                 "forward_per": forward_per_display, 
-                "forward_per_av": forward_per_av,
                 "pbr": pbr_display, 
                 "distHigh": dist_high_str,       
                 "distWeek": dist_week_str,       
                 "distMonth": dist_month_str,     
-                "trend": trend_label
+                "trend": trend_label,
+                "source": source, # 🌟 来源标记
+                "is_us": is_us，
+                "isUp": curr >= prev
             })
             time.sleep(random.uniform(0.1, 0.2))
         except Exception as e:
