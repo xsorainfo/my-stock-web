@@ -82,15 +82,10 @@
     function judgeValuation(val, type) {
         if (!val || val === '--' || isNaN(parseFloat(val))) return '<span class="val-badge val-normal">--</span>';
         const num = parseFloat(val);
-        if (type === 'PER') {
+        if (type === 'PER'|| type === 'forward_per') {
             if (num > 50) return `<span class="val-badge val-high">${num.toFixed(1)} 高估值</span>`;
             if (num < 25) return `<span class="val-badge val-low">${num.toFixed(1)} 具性价比</span>`;
             return `<span class="val-badge val-normal">${num.toFixed(1)} 合理</span>`;
-        } else if (type === 'forward_per') {
-            if (num > 50) return `<span class="val-badge val-high">${num.toFixed(1)} 高估值</span>`;
-            if (num < 25) return `<span class="val-badge val-low">${num.toFixed(1)} 具性价比</span>`;
-            return `<span class="val-badge val-normal">${num.toFixed(1)} 合理</span>`;
-        }
         } else if (type === 'PBR') {
             if (num > 15) return `<span class="val-badge val-high">${num.toFixed(1)} 高溢价</span>`;
             if (num < 3) return `<span class="val-badge val-low">${num.toFixed(1)} 净资产防守</span>`;
