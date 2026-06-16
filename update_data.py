@@ -172,7 +172,7 @@ def fetch_all_data():
                 "distMonth": dist_month_str,     
                 "trend": trend_label,
                 "source": source, # 🌟 来源标记
-                "is_us": is_us，
+                "is_us": is_us,
                 "isUp": curr >= prev
             })
             time.sleep(random.uniform(0.1, 0.2))
