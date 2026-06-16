@@ -109,8 +109,9 @@ def fetch_all_data():
             h_df = stock.history(period="1mo").dropna(subset=['High', 'Close'])
             if h_df.empty or len(h_df) < 2: continue
             
-            curr = h_df['Close'].iloc[-1]
-            prev = h_df['Close'].iloc[-2]
+            # 明确变量定义
+            current_price = h_df['Close'].iloc[-1]
+            prev_close = h_df['Close'].iloc[-2]
             high_1m = h_df['High'].max()
             high_1w = h_df['High'].tail(5).max()
             
@@ -173,7 +174,7 @@ def fetch_all_data():
                 "trend": trend_label,
                 "source": source, # 🌟 来源标记
                 "is_us": is_us,
-                "isUp": curr >= prev
+                "isUp": current_price >= prev_close
             })
             time.sleep(random.uniform(0.1, 0.2))
         except Exception as e:
