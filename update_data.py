@@ -7,6 +7,17 @@ import requests
 # 引入新模块
 from config import MACRO_LIST, WATCHLIST
 
+def fetch_av_data(symbol):
+    """从 Alpha Vantage 获取对比数据"""
+    API_KEY = "6AAGNM8A0BFJW6MB" # 替换成你的 Key
+    # 日本股票在 AV 中通常格式为 "SYMBOL.TYO" (例如 3110.T -> 3110.TYO)
+    av_symbol = symbol.replace('.T', '.TYO') 
+    url = f"https://www.alphavantage.co/query?function=OVERVIEW&symbol={av_symbol}&apikey={API_KEY}"
+    try:
+        response = requests.get(url).json()
+        return response.get("ForwardPE", "--")
+    except:
+        return "--"
 
 # Gemini 1.5 官方接口标准端点与密钥配置
 END_POINT = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
@@ -133,13 +144,17 @@ def fetch_all_data():
 
             ma20 = h_df['Close'].mean()
             trend_label = "牛市多头" if current_price >= ma20 else "熊市空头"
-
+            
+            # 新增：调用对比源
+            forward_per_av = fetch_av_data(symbol)
+            
             output_data["stocks"].append({
                 "code": symbol.split('.')[0] if '.' in symbol else symbol,
                 "name": item["name"], "industry": item["industry"], "feature": item["feature"],
                 "price": f"{current_price:.2f}", "change": f"{sign}{diff:.2f} ({sign}{percent:.2f}%)", "isUp": diff > 0,
                 "per": per_display, 
                 "forward_per": forward_per_display, 
+                "forward_per_av": forward_per_av,
                 "pbr": pbr_display, 
                 "distHigh": dist_high_str,       
                 "distWeek": dist_week_str,       
