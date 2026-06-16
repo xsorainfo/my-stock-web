@@ -1,4 +1,11 @@
 # config.py
+DEFAULT_STRATEGY = ["yfinance"]
+
+# 只有需要特殊处理的标的才写在这里
+SOURCE_MAP = {
+    "NVDA": ["yfinance", "alphavantage"],  # 美股对比源
+    "3110.T": ["yfinance"]                 # 日股目前只用 yfinance
+}
 
 MACRO_LIST = [
     {"symbol": "^SOX", "name": "费城半导体指数"},
