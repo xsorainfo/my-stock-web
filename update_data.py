@@ -107,7 +107,7 @@ def fetch_all_data():
                 dist_month = ((current_price - high_1m) / high_1m) * 100
                 dist_month_str = f"{dist_month:.1f}%"
 
-            per_display, pbr_display = "--", "--"
+            per_display, forward_per_display，pbr_display = "--", "--", "--"
             try:
                 info = stock.info
                 if isinstance(info, dict):
@@ -121,7 +121,11 @@ def fetch_all_data():
                     # 如果不存在（比如刚上市或高增长导致无前四季度对比），则采用 forwardPE 进行防御对齐
                     per = info.get('trailingPE') or info.get('forwardPE') or info.get('regularMarketTrailingPE')
                     if per and isinstance(per, (int, float)): per_display = f"{per:.2f}"
-                    
+
+                    # 增加预想 PER (Forward PE)
+                    forward_per = info.get('forwardPE') 
+                    if forward_per and isinstance(forward_per, (int, float)): forward_per_display = f"{forward_per:.2f}"
+
                     pbr = info.get('priceToBook')
                     if pbr and isinstance(pbr, (int, float)): pbr_display = f"{pbr:.2f}"
             except Exception as inf_e:
@@ -134,7 +138,9 @@ def fetch_all_data():
                 "code": symbol.split('.')[0] if '.' in symbol else symbol,
                 "name": item["name"], "industry": item["industry"], "feature": item["feature"],
                 "price": f"{current_price:.2f}", "change": f"{sign}{diff:.2f} ({sign}{percent:.2f}%)", "isUp": diff > 0,
-                "per": per_display, "pbr": pbr_display, 
+                "per": per_display, 
+                "forward_per": forward_per_display, 
+                "pbr": pbr_display, 
                 "distHigh": dist_high_str,       
                 "distWeek": dist_week_str,       
                 "distMonth": dist_month_str,     
