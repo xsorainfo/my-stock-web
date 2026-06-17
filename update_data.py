@@ -25,21 +25,33 @@ class StockDataManager:
         with open(self.cache_file, 'w') as f:
             json.dump(self.cache, f)
 
-    def _fetch_from_alphavantage(self, symbol):
-        # 记得替换成你自己的 API KEY
-        API_KEY = "YOUR_API_KEY"
-        url = f"https://www.alphavantage.co/query?function=OVERVIEW&symbol={symbol}&apikey={API_KEY}"
-        response = requests.get(url).json()
-        
-        # 将 Alpha Vantage 的返回格式转换为 yfinance 的 info 格式
-        # 这样你的主程序就不用大改了
-        if "Symbol" in response:
-            return {
-                "regularMarketPrice": float(response.get("股价字段", 0)),
-                "trailingPE": float(response.get("TrailingPE", 0)),
-                # ... 映射其他字段
+
+    import akshare as ak
+
+    # 在你的 StockDataManager 类中添加此方法
+    def get_a_stock_data(self, symbol):
+        """
+        使用 AkShare 获取 A 股实时行情
+        AkShare 的 symbol 只需要纯数字代码，例如 '601989'
+        """
+        try:
+            # 去掉后缀，只保留纯数字代码
+            clean_code = symbol.split('.')[0]
+            # 获取实时行情数据
+            df = ak.stock_individual_spot_em(symbol=clean_code)
+            
+            # 将 AkShare 返回的 DataFrame 转换为类似 yfinance info 的字典结构
+            # 这样你的前端渲染逻辑就完全不用变了
+            data = {
+                'regularMarketPrice': float(df.loc[df['名称'] == '最新价', 'value'].values[0] if 'value' in df.columns else df.iloc[0]['最新价']),
+                'trailingPE': float(df.loc[df['名称'] == '市盈率-动态', 'value'].values[0] if '市盈率-动态' in df.columns else 0),
+                'priceToBook': float(df.loc[df['名称'] == '市净率', 'value'].values[0] if '市净率' in df.columns else 0),
+                # 补全其他你需要的字段
             }
-        return None
+            return data, "akshare"
+        except Exception as e:
+            print(f"AkShare 抓取 {symbol} 失败: {e}")
+            return None, "none"
         
     def get_data(self, stock, symbol, is_us):
         """统一的数据获取入口，优先使用缓存"""
