@@ -212,4 +212,22 @@ WATCHLIST = [
     {"symbol": "IRDM", "name": "铱星通信", "market": "美股", "sector": "4. 前沿航天与深科技", "industry": "航天/卫星", "feature": "**全球卫星通信运营商**，66颗低轨卫星星座，全球卫星通信服务核心提供商"},
     
     # 日股
-    {"symbol": "9348.T", "name": "ispace", "market": "日股", "sector": "4. 前沿航天与深科技
+    {"symbol": "9348.T", "name": "ispace", "market": "日股", "sector": "4. 前沿航天与深科技", "industry": "航天/卫星", "feature": "**日本首家月球探测商业公司**，月球着陆器技术领先，NASA商业月球载荷计划核心合作伙伴"},
+    {"symbol": "186A.T", "name": "Astroscale", "market": "日股", "sector": "4. 前沿航天与深科技", "industry": "航天/卫星", "feature": "**全球轨道碎片治理先驱**，ELSA-d技术领先，太空可持续性解决方案领导者"},
+    {"symbol": "6613.T", "name": "QDレーザ( QD激光)", "market": "日股", "sector": "4. 前沿航天与深科技", "industry": "航天/卫星", "feature": "**半导体激光器先驱**，高功率激光二极管技术领先，航天通信与探测核心器件供应商"},
+
+    # --- 航空航天 ---
+    # 美股
+    {"symbol": "GE", "name": "GE Aerospace", "market": "美股", "sector": "4. 前沿航天与深科技", "industry": "航空航天", "feature": "**全球航空发动机巨头**，商用航空发动机市占率超50%，国防航空动力核心供应商"},
+    {"symbol": "RTX", "name": "RTX Corporation", "market": "美股", "sector": "4. 前沿航天与深科技", "industry": "航空航天", "feature": "**全球顶级防务与航天系统集成商**，导弹与雷达系统市占率全球领先"},
+    {"symbol": "BA", "name": "波音", "market": "美股", "sector": "4. 前沿航天与深科技", "industry": "航空航天", "feature": "**全球航空制造双寡头之一**，737MAX/787核心机型制造商，NASA商业载人航天核心合作伙伴"},
+    {"symbol": "EADSY", "name": "空客", "market": "美股", "sector": "4. 前沿航天与深科技", "industry": "航空航天", "feature": "**全球航空制造双寡头之一**，A320/A350核心机型制造商，欧洲航天产业链核心"},
+    
+    # A股
+    {"symbol": "601989.SH", "name": "中国重工", "market": "A股", "sector": "4. 前沿航天与深科技", "industry": "航空航天", "feature": "**中国高端装备制造平台**，航母与大型舰船核心制造商，航天配套装备供应商"},
+    
+    # 日股
+    {"symbol": "7011.T", "name": "三菱重工", "market": "日股", "sector": "4. 前沿航天与深科技", "industry": "航空航天", "feature": "**日本航空航天重工巨头**，H-IIA火箭制造商，航空发动机与防务装备核心供应商"},
+    {"symbol": "7013.T", "name": "IHI", "market": "日股", "sector": "4. 前沿航天与深科技", "industry": "航空航天", "feature": "**航空发动机核心厂商**，日本唯一航空发动机整机制造商，军用与民用推进系统领先"},
+    {"symbol": "5631.T", "name": "日本製鋼所", "market": "日股", "sector": "4. 前沿航天与深科技", "industry": "航空航天", "feature": "**大型铸锻件专家**，核工业与航空航天锻件核心供应商，特种材料技术领先"}
+]
