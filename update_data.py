@@ -1,6 +1,5 @@
 import json
 import yfinance as yf
-import akshare as ak
 import time
 import random
 import os
@@ -144,41 +143,6 @@ class StockDataManager:
             print(f"❌ [腾讯API] 抓取 {symbol} 异常: {e}")
             return None, "none"
 
-    def get_a_stock_data_akshare(self, symbol):
-        """使用 AkShare 获取 A 股数据（备用方案）"""
-        try:
-            clean_code = symbol.split('.')[0]
-            print(f"🔄 [AkShare] 正在获取 {clean_code} 数据...")
-            
-            time.sleep(random.uniform(0.5, 1.0))
-            df = ak.stock_zh_a_spot_em()
-            
-            stock_info = df[df['代码'] == clean_code]
-            if stock_info.empty:
-                print(f"⚠️ [AkShare] 未找到股票 {clean_code}")
-                return None, "none"
-            
-            row = stock_info.iloc[0]
-            data = {
-                'regularMarketPrice': self.safe_float(row.get('最新价', 0)),
-                'trailingPE': self.safe_float(row.get('市盈率-动态', row.get('市盈率(动态)', 0))),
-                'priceToBook': self.safe_float(row.get('市净率', 0)),
-                'name': row.get('名称', ''),
-                'changePercent': self.safe_float(row.get('涨跌幅', 0)),
-                'volume': self.safe_float(row.get('成交量', 0)),
-                'high': self.safe_float(row.get('最高', 0)),
-                'low': self.safe_float(row.get('最低', 0)),
-                'open': self.safe_float(row.get('开盘', 0)),
-                'prev_close': self.safe_float(row.get('昨收', 0)),
-            }
-            
-            print(f"✅ [AkShare] 成功获取 {clean_code}")
-            return data, "akshare"
-            
-        except Exception as e:
-            print(f"❌ [AkShare] 抓取 {symbol} 异常: {e}")
-            return None, "none"
-
     def get_a_stock_data(self, symbol):
         """
         A 股数据获取主入口：多数据源降级策略
@@ -197,11 +161,7 @@ class StockDataManager:
         if data is not None:
             return data, source
         
-        # 方案3：AkShare
-        print(f"🔄 降级到 AkShare...")
-        data, source = self.get_a_stock_data_akshare(symbol)
-        if data is not None:
-            return data, source
+        # 方案3：Yahoo
         
         print(f"❌ 所有 A 股数据源均失败: {symbol}")
         return None, "none"
