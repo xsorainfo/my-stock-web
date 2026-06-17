@@ -214,12 +214,31 @@
     };
 
     // 获取 TradingView 专属链接
-    const getTradingViewUrl = (stock) => {
+    const getTradingViewUrlOld = (stock) => {
         // TradingView 的搜索规则通常是：市场:代码
         // 美股: NASDAQ:NVDA, NYSE:GE 等
         // A股: SHSE:600905, SZSE:000000
         // 日股: JPX:6981
         return `https://www.tradingview.com/chart/?symbol=${stock.code}`;
+    };
+
+    const getTradingViewUrl = (stock) => {
+        // 处理逻辑：根据市场类型动态构建 TV 识别码
+        let symbol = stock.code;
+        
+        if (stock.market_type === '日股') {
+            // 信越化学等日股在 TV 使用 TSE:代码 格式
+            // 假设你的 code 里包含了 .T 后缀，需要把它去掉
+            const cleanCode = stock.code.split('.')[0];
+            return `https://jp.tradingview.com/symbols/TSE-${cleanCode}/`;
+        } 
+        else if (stock.market_type === 'A股') {
+            const prefix = stock.code.startsWith('6') ? "SHSE" : "SZSE";
+            return `https://www.tradingview.com/symbols/${prefix}-${stock.code}/`;
+        }
+        
+        // 美股默认直接跳转
+        return `https://www.tradingview.com/symbols/${stock.code}/`;
     };
     
     async function loadDashboardData() {
