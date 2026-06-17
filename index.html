@@ -169,7 +169,20 @@
         };
         return map[type] || '';
     }
-
+    // 在循环渲染中，动态生成跳转链接
+    const getYahooUrl = (stock) => {
+        // 1. 如果是日股，跳转到 finance.yahoo.co.jp
+        if (stock.market_type === '日股') {
+            // 日股链接通常是 finance.yahoo.co.jp/quote/XXXX.T
+            return `https://finance.yahoo.co.jp/quote/${stock.code}`;
+        }
+        // 2. 如果是A股，雅虎财经（美版）对A股支持有限，可跳转到新浪财经或保留原样
+        if (stock.market_type === 'A股') {
+            return `https://finance.sina.com.cn/realstock/company/${stock.code}/nc.shtml`;
+        }
+        // 3. 默认（美股等）跳转到 finance.yahoo.com
+        return `https://finance.yahoo.com/quote/${stock.code}`;
+    };
     async function loadDashboardData() {
         try {
             const response = await fetch('data.json?v=' + new Date().getTime());
@@ -235,7 +248,7 @@
                             <div class="stock-card">
                                 <div class="stock-header">
                                     <div class="stock-title">
-                                        <a href="https://finance.yahoo.com/quote/${stock.code}" target="_blank" style="text-decoration: none; color: inherit;">
+                                        <a href="${getYahooUrl(stock)}" target="_blank" style="text-decoration: none; color: inherit;">
                                             <h3>${getMarketBadge(stock.market_type)} ${stock.name}</h3>
                                         </a>
                                        
