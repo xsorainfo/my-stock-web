@@ -182,6 +182,7 @@ def fetch_all_data():
                 "sector": item.get("sector", "未分类板块"),  # 新增 sector 字段，默认值
                 "industry": item["industry"], 
                 "feature": item["feature"],
+                "market_type": "美股" if is_us else ("日股" if symbol.endswith('.T') else "A股"),
                 "price": f"{current_price:.2f}", 
                 "change": f"{sign}{diff:.2f} ({sign}{percent:.2f}%)", 
                 "isUp": diff > 0,
