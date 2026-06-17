@@ -32,9 +32,33 @@
         .macro-price { font-size: 22px; font-weight: 700; }
         .section-title { font-size: 18px; font-weight: 700; margin-bottom: 16px; padding-left: 8px; border-left: 4px solid #2563eb; }
         
-        /* 二级标题样式 */
-        .industry-section { margin-bottom: 32px; }
-        .industry-title { font-size: 16px; color: #ffffff; margin-bottom: 16px; padding-left: 10px; border-left: 3px solid #0f172a; background: #334155; padding: 5px 10px; border-radius: 4px; }
+        /* 一级分组标题样式 - sector */
+        .sector-section { margin-bottom: 40px; }
+        .sector-title { 
+            font-size: 20px; 
+            font-weight: 700; 
+            color: #0f172a; 
+            margin-bottom: 16px; 
+            padding: 10px 16px; 
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            border-radius: 8px;
+            border-left: 4px solid #2563eb;
+            color: #ffffff;
+        }
+        
+        /* 二级分组标题样式 - industry */
+        .industry-section { margin-bottom: 28px; margin-left: 16px; }
+        .industry-title { 
+            font-size: 16px; 
+            color: #1e293b; 
+            margin-bottom: 14px; 
+            padding-left: 12px; 
+            border-left: 3px solid #64748b;
+            font-weight: 600;
+            background: #f1f5f9;
+            padding: 6px 12px;
+            border-radius: 4px;
+        }
         
         .stock-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
         .stock-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
@@ -42,7 +66,6 @@
         .stock-title h3 { font-size: 16px; font-weight: 700; }
         .stock-industry { font-size: 11px; color: #2563eb; background: #eff6ff; padding: 2px 6px; border-radius: 4px; margin-top: 4px; display: inline-block; }
         .stock-code { font-size: 11px; background: #f1f5f9; color: #64748b; padding: 2px 6px; border-radius: 4px; }
-        /*.stock-feature { font-size: 12px; color: var(--text-muted); background: #f8fafc; padding: 8px; border-radius: 6px; margin-bottom: 14px; min-height: 52px; }*/
         .stock-feature { 
             font-size: 12px; 
             color: #64748b; 
@@ -131,79 +154,102 @@
                     </div>`;
             });
 
-            // 行业分组渲染
+            // 两层分组：先按 sector（一级），再按 industry（二级）
             const container = document.getElementById('industryContainer');
             container.innerHTML = '';
-            const grouped = data.stocks.reduce((acc, stock) => {
-                (acc[stock.industry] = acc[stock.industry] || []).push(stock);
+            
+            // 按 sector 分组
+            const sectorGroups = data.stocks.reduce((acc, stock) => {
+                const sectorKey = stock.sector || '未分类板块';
+                if (!acc[sectorKey]) acc[sectorKey] = [];
+                acc[sectorKey].push(stock);
                 return acc;
             }, {});
 
-            for (const [industry, stocks] of Object.entries(grouped)) {
-                const section = document.createElement('div');
-                section.className = 'industry-section';
-                section.innerHTML = `<h3 class="industry-title">${industry}</h3>`;
+            // 遍历每个 sector
+            for (const [sector, sectorStocks] of Object.entries(sectorGroups)) {
+                const sectorDiv = document.createElement('div');
+                sectorDiv.className = 'sector-section';
+                sectorDiv.innerHTML = `<h2 class="sector-title">${sector}</h2>`;
                 
-                const grid = document.createElement('div');
-                grid.className = 'stock-grid';
-                
-                stocks.forEach(stock => {
-                    // 预处理 feature，支持 **加粗**
-                    const formattedFeature = stock.feature.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-                    const colorClass = stock.isUp ? 'text-up' : 'text-down';
-                    const trendClass = stock.trend === '牛市多头' ? 'trend-up-bg' : 'trend-down-bg';
-                    grid.innerHTML += `
-                        <div class="stock-card">
-                            <div class="stock-header">
-                                <div class="stock-title">
-                                    <h3>${stock.name}</h3>
-                                </div>
-                                <span class="stock-code">${stock.code}</span>
-                            </div>
-                            <div class="stock-feature">${formattedFeature}</div>
-                            <div class="stock-trend-badge ${trendClass}">${stock.trend}</div>
-                            <div class="price-row">
-                                <div class="stock-price ${colorClass}">${stock.price}</div>
-                                <div class="stock-change ${colorClass}">${stock.change}</div>
-                            </div>
-                            
-                            <table class="metrics-table" style="margin-bottom: 6px;">
-                                <thead>
-                                    <tr>
-                                        <th style="width: 33%;">PER 估值</th>
-                                        <th style="width: 34%;">预想 PER</th>
-                                        <th style="width: 33%;">PBR 溢价</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>${judgeValuation(stock.per, 'PER')}</td>
-                                        <td>${judgeValuation(stock.forward_per, 'forward_per')}</td>
-                                        <td>${judgeValuation(stock.pbr, 'PBR')}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                // 在 sector 内部按 industry 分组
+                const industryGroups = sectorStocks.reduce((acc, stock) => {
+                    const industryKey = stock.industry || '其他';
+                    if (!acc[industryKey]) acc[industryKey] = [];
+                    acc[industryKey].push(stock);
+                    return acc;
+                }, {});
 
-                            <table class="metrics-table">
-                                <thead>
-                                    <tr>
-                                        <th style="width: 33.33%;">距1周高</th>
-                                        <th style="width: 33.33%;">距1月高</th>
-                                        <th style="width: 33.33%;">距52周高</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr style="font-weight: 600; color: #1e293b; font-size: 12px;">
-                                        <td>${stock.distWeek || '--'}</td>
-                                        <td>${stock.distMonth || '--'}</td>
-                                        <td>${stock.distHigh || '--'}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>`;
-                });
-                section.appendChild(grid);
-                container.appendChild(section);
+                // 遍历每个 industry
+                for (const [industry, industryStocks] of Object.entries(industryGroups)) {
+                    const industryDiv = document.createElement('div');
+                    industryDiv.className = 'industry-section';
+                    industryDiv.innerHTML = `<h3 class="industry-title">${industry}</h3>`;
+                    
+                    const grid = document.createElement('div');
+                    grid.className = 'stock-grid';
+                    
+                    industryStocks.forEach(stock => {
+                        // 预处理 feature，支持 **加粗**
+                        const formattedFeature = stock.feature.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                        const colorClass = stock.isUp ? 'text-up' : 'text-down';
+                        const trendClass = stock.trend === '牛市多头' ? 'trend-up-bg' : 'trend-down-bg';
+                        grid.innerHTML += `
+                            <div class="stock-card">
+                                <div class="stock-header">
+                                    <div class="stock-title">
+                                        <h3>${stock.name}</h3>
+                                    </div>
+                                    <span class="stock-code">${stock.code}</span>
+                                </div>
+                                <div class="stock-feature">${formattedFeature}</div>
+                                <div class="stock-trend-badge ${trendClass}">${stock.trend}</div>
+                                <div class="price-row">
+                                    <div class="stock-price ${colorClass}">${stock.price}</div>
+                                    <div class="stock-change ${colorClass}">${stock.change}</div>
+                                </div>
+                                
+                                <table class="metrics-table" style="margin-bottom: 6px;">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 33%;">PER 估值</th>
+                                            <th style="width: 34%;">预想 PER</th>
+                                            <th style="width: 33%;">PBR 溢价</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>${judgeValuation(stock.per, 'PER')}</td>
+                                            <td>${judgeValuation(stock.forward_per, 'forward_per')}</td>
+                                            <td>${judgeValuation(stock.pbr, 'PBR')}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <table class="metrics-table">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 33.33%;">距1周高</th>
+                                            <th style="width: 33.33%;">距1月高</th>
+                                            <th style="width: 33.33%;">距52周高</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr style="font-weight: 600; color: #1e293b; font-size: 12px;">
+                                            <td>${stock.distWeek || '--'}</td>
+                                            <td>${stock.distMonth || '--'}</td>
+                                            <td>${stock.distHigh || '--'}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>`;
+                    });
+                    
+                    industryDiv.appendChild(grid);
+                    sectorDiv.appendChild(industryDiv);
+                }
+                
+                container.appendChild(sectorDiv);
             }
         } catch (error) { console.error(error); }
     }
