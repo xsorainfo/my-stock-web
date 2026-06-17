@@ -1,5 +1,6 @@
 import json
 import yfinance as yf
+import akshare as ak
 import time
 import random
 import os
@@ -24,6 +25,22 @@ class StockDataManager:
         with open(self.cache_file, 'w') as f:
             json.dump(self.cache, f)
 
+    def _fetch_from_alphavantage(self, symbol):
+        # 记得替换成你自己的 API KEY
+        API_KEY = "YOUR_API_KEY"
+        url = f"https://www.alphavantage.co/query?function=OVERVIEW&symbol={symbol}&apikey={API_KEY}"
+        response = requests.get(url).json()
+        
+        # 将 Alpha Vantage 的返回格式转换为 yfinance 的 info 格式
+        # 这样你的主程序就不用大改了
+        if "Symbol" in response:
+            return {
+                "regularMarketPrice": float(response.get("股价字段", 0)),
+                "trailingPE": float(response.get("TrailingPE", 0)),
+                # ... 映射其他字段
+            }
+        return None
+        
     def get_data(self, stock, symbol, is_us):
         """统一的数据获取入口，优先使用缓存"""
         # 1. 缓存查询
