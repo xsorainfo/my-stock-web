@@ -56,8 +56,8 @@ class StockDataManager:
 # ]
 
 # WATCHLIST = [
-#     {"symbol": "NVDA", "name": "英伟达 (美)", "industry": "1. AI半导体与核心设备", "feature": "全球AI算力GPU绝对霸主，万亿AI生态的缔造者"},
-#     {"symbol": "6981.T", "name": "村田制作所 (日)", "industry": "5. 边缘AI与智能终端", "feature": "全球MLCC电容之王，AI终端硬件升级换代的刚需元器件"}
+#     {"symbol": "NVDA", "name": "英伟达 (美)", "sector": "AI半导体", "industry": "AI芯片与GPU", "feature": "全球AI算力GPU绝对霸主，万亿AI生态的缔造者"},
+#     {"symbol": "6981.T", "name": "村田制作所 (日)", "sector": "智能终端", "industry": "被动元器件", "feature": "全球MLCC电容之王，AI终端硬件升级换代的刚需元器件"},
 # ]
 
 
@@ -175,11 +175,16 @@ def fetch_all_data():
             trend_label = "牛市多头" if current_price >= ma20 else "熊市空头"
 
             
-            # 存入数据字典
+            # 存入数据字典 - 添加 sector 字段
             output_data["stocks"].append({
                 "code": symbol.split('.')[0] if '.' in symbol else symbol,
-                "name": item["name"], "industry": item["industry"], "feature": item["feature"],
-                "price": f"{current_price:.2f}", "change": f"{sign}{diff:.2f} ({sign}{percent:.2f}%)", "isUp": diff > 0,
+                "name": item["name"], 
+                "sector": item.get("sector", "未分类板块"),  # 新增 sector 字段，默认值
+                "industry": item["industry"], 
+                "feature": item["feature"],
+                "price": f"{current_price:.2f}", 
+                "change": f"{sign}{diff:.2f} ({sign}{percent:.2f}%)", 
+                "isUp": diff > 0,
                 "per": per_display, 
                 "forward_per": forward_per_display, 
                 "pbr": pbr_display, 
