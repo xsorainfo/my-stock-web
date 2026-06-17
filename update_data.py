@@ -106,7 +106,19 @@ def fetch_all_data():
     # 2. 抓取自选个股数据
     for item in WATCHLIST:
         symbol = item["symbol"]
-        is_us = not symbol.endswith('.T')
+
+        # 精准判定逻辑
+        if symbol.endswith('.T'):
+            market_type = "日股"
+            is_us = False
+        elif symbol.endswith('.SS') or symbol.endswith('.SZ') or symbol.endswith('.SH') or '.' not in symbol and len(symbol) == 6:
+            # 兼容处理：.SS/.SZ 结尾或者是纯6位数字代码（A股特征）
+            market_type = "A股"
+            is_us = False
+        else:
+            market_type = "美股"
+            is_us = True
+            
         # 统一初始化 ticker
         stock = yf.Ticker(symbol, session=session)
         
