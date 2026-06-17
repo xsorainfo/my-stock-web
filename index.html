@@ -67,12 +67,18 @@
         .stock-industry { font-size: 11px; color: #2563eb; background: #eff6ff; padding: 2px 6px; border-radius: 4px; margin-top: 4px; display: inline-block; }
         .stock-code {
             font-size: 11px;
-            font-family: 'Monaco', 'Consolas', monospace; /* 使用等宽字体，更像终端代码 */
-            background: #334155;           /* 深蓝灰色背景 */
-            color: #f8fafc;                /* 白色文字，极高对比度 */
+            color: #475569;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;     /* 边框色比背景深 */
             padding: 2px 6px;
             border-radius: 4px;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.1); /* 增加一点微弱阴影，让它看起来像个实体按键 */
+            transition: all 0.2s ease;     /* 增加悬停反馈 */
+        }
+        
+        /* 增加悬停效果，让用户知道这是可点击或可观察的元数据 */
+        .stock-code:hover {
+            background: #e2e8f0;
+            cursor: default;
         }
         .stock-feature { 
             font-size: 12px; 
