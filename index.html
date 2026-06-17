@@ -178,10 +178,12 @@
         }
         // 2. 如果是A股，雅虎财经（美版）对A股支持有限，可跳转到新浪财经或保留原样
         if (stock.market_type === 'A股') {
-            return `https://finance.sina.com.cn/realstock/company/${stock.code}/nc.shtml`;
+            const code = stock.code;
+            const prefix = (code.startsWith('6')) ? 'sh' : 'sz';
+            return `https://finance.sina.com.cn/realstock/company/${prefix}${code}/nc.shtml`;
         }
-        // 3. 默认（美股等）跳转到 finance.yahoo.com
-        return `https://finance.yahoo.com/quote/${stock.code}`;
+        // 3. 默认（美股等）跳转到 finance.yahoo.co.jp
+        return `https://finance.yahoo.co.jp/quote/${stock.code}`;
     };
     async function loadDashboardData() {
         try {
