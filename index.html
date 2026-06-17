@@ -235,8 +235,10 @@
                             <div class="stock-card">
                                 <div class="stock-header">
                                     <div class="stock-title">
-                                        
-                                        <h3>${getMarketBadge(stock.market_type)} ${stock.name}</h3>
+                                        <a href="https://finance.yahoo.com/quote/${stock.code}" target="_blank" style="text-decoration: none; color: inherit;">
+                                            <h3>${getMarketBadge(stock.market_type)} ${stock.name}</h3>
+                                        </a>
+                                       
                                     </div>
                                     <span class="stock-code" onclick="copyToClipboard('${stock.code}')">
                                         ${stock.code}
