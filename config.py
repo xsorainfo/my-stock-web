@@ -20,114 +20,114 @@ WATCHLIST = [
     # 1. 算力芯片+先进封装+存储 (Compute, HBM, Packaging)
     # ============================================================
     # --- 美股 ---
-    {"symbol": "NVDA", "name": "NVIDIA(英伟达)", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI芯片/算力", "feature": "全球AI算力芯片霸主"},
-    {"symbol": "AMD", "name": "AMD(超威半导体)", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI芯片/算力", "feature": "GPU算力第二极"},
-    {"symbol": "ASML", "name": "ASML(阿斯麦)", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "全球EUV光刻机垄断者"},
-    {"symbol": "QCOM", "name": "高通", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI芯片/算力", "feature": "AI手机与AI PC处理器龙头"},
+    {"symbol": "NVDA", "name": "NVIDIA(英伟达)", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI芯片/算力", "feature": "**全球AI芯片绝对霸主**，数据中心GPU市占率超80%，CUDA生态壁垒极高，AI训练芯片垄断地位"},
+    {"symbol": "AMD", "name": "AMD(超威半导体)", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI芯片/算力", "feature": "**GPU算力第二极**，MI300系列AI芯片性能对标NVIDIA，CPU+GPU双轮驱动，数据中心份额持续提升"},
+    {"symbol": "ASML", "name": "ASML(阿斯麦)", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "**全球EUV光刻机绝对垄断**，市占率100%，先进制程（7nm以下）芯片制造核心设备供应商"},
+    {"symbol": "QCOM", "name": "高通", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI芯片/算力", "feature": "**AI端侧芯片龙头**，Android旗舰手机芯片市占率超60%，AI手机与AI PC处理器核心玩家"},
     
     # --- A股 ---
-    {"symbol": "600584.SH", "name": "长电科技", "market": "A股", "sector": "1. 算力芯片+先进封装+存储", "industry": "封测/封装", "feature": "中国先进封装制造核心"},
-    {"symbol": "002049.SZ", "name": "紫光国微", "market": "A股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI芯片/算力", "feature": "核心芯片研发"},
+    {"symbol": "600584.SH", "name": "长电科技", "market": "A股", "sector": "1. 算力芯片+先进封装+存储", "industry": "封测/封装", "feature": "**中国封测龙头**，全球封测市占率约10%，先进封装技术布局完善，Chiplet封装核心供应商"},
+    {"symbol": "002049.SZ", "name": "紫光国微", "market": "A股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI芯片/算力", "feature": "**中国特种IC龙头**，FPGA芯片国内领先，智能卡芯片市占率超30%，国产替代核心标的"},
     
     # --- 日股 ---
-    {"symbol": "8035.T", "name": "東京エレクトロン(东京电子)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "AI芯片制造设备"},
-    {"symbol": "6857.T", "name": "アドバンテスト(爱德万测试)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "HBM测试机霸主"},
-    {"symbol": "4063.T", "name": "信越化学", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "半导体材料霸主"},
-    {"symbol": "3110.T", "name": "日東紡績", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "基板材料核心供应商"},
-    {"symbol": "6920.T", "name": "レーザーテック(激光技术)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "EUV检测独家"},
-    {"symbol": "6146.T", "name": "ディスコ(迪斯科)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "先进封装切割设备"},
-    {"symbol": "4186.T", "name": "東京応化", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "高端光刻胶冠军"},
-    {"symbol": "4062.T", "name": "イビデン(揖斐电)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "封测/封装", "feature": "数据中心级基板"},
-    {"symbol": "6971.T", "name": "京セラ(京瓷)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "封测/封装", "feature": "陶瓷元器件制造"},
-    {"symbol": "6315.T", "name": "TOWA", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "压缩成型封装"},
-    {"symbol": "6963.T", "name": "ローム(罗姆)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI芯片/算力", "feature": "SiC功率模块"},
-    {"symbol": "6525.T", "name": "KOKUSAI ELECTRIC", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "半导体成膜设备核心厂商"},
-    {"symbol": "6723.T", "name": "ルネサス(瑞萨电子)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI芯片/算力", "feature": "车载与工业芯片龙头"},
-    {"symbol": "7735.T", "name": "SCREENホールディングス", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "全球晶圆清洗设备领先厂商"},
-    {"symbol": "6526.T", "name": "ソシオネクスト(Socionext)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI芯片/算力", "feature": "先进制程SoC设计"},
-    {"symbol": "6871.T", "name": "日本マイクロニクス(日本微米尼克斯)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "晶圆测试探针卡厂商"},
-    {"symbol": "6890.T", "name": "FERROTEC", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "真空密封与石英制品"},
-    {"symbol": "6590.T", "name": "芝浦メカトロニクス(芝浦机电)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "晶圆处理与封装设备"},
-    {"symbol": "6855.T", "name": "日本電子材料", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "半导体测试探针卡专业厂"},
-    {"symbol": "6754.T", "name": "アンリツ(安立)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "高速通信测试设备"},
-    {"symbol": "285A.T", "name": "キオクシア(铠侠)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "存储/HBM", "feature": "全球闪存厂商"},
-    {"symbol": "6976.T", "name": "太陽誘電", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "存储/HBM", "feature": "高性能电子元件"},
-    {"symbol": "6752.T", "name": "パナソニック(松下)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI芯片/算力", "feature": "工业电池与电子方案"},
-    {"symbol": "6701.T", "name": "NEC(日本电气)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI芯片/算力", "feature": "AI系统与网络基础设施"},
-    {"symbol": "6702.T", "name": "富士通", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI芯片/算力", "feature": "高性能计算与企业AI"},
-    {"symbol": "6965.T", "name": "浜松ホトニクス(浜松光子)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "光传感器与光探测设备"},
-    {"symbol": "6779.T", "name": "日本電波工業", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "频率控制元件龙头"},
-    {"symbol": "6787.T", "name": "メイコー(MEIKO)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "封测/封装", "feature": "高端印刷电路板制造商"},
-    {"symbol": "6479.T", "name": "ミネベアミツミ(美蓓亚三美)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "轴承与精密电机龙头"},
-    {"symbol": "7751.T", "name": "キヤノン(佳能)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "纳米压印光刻技术布局"},
-    {"symbol": "6740.T", "name": "ジャパンディスプレイ(日本显示器)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI芯片/算力", "feature": "车载与中小尺寸显示"},
-    {"symbol": "6997.T", "name": "日本ケミコン(日本化工)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "铝电解电容龙头"},
+    {"symbol": "8035.T", "name": "東京エレクトロン(东京电子)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "**全球涂布显影设备龙头**，市占率超80%，半导体制造前道工序核心设备供应商"},
+    {"symbol": "6857.T", "name": "アドバンテスト(爱德万测试)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "**HBM测试机霸主**，DRAM测试设备市占率超50%，AI芯片测试核心设备供应商"},
+    {"symbol": "4063.T", "name": "信越化学", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "**半导体材料霸主**，全球硅片市占率超30%，光刻胶市占率超20%，半导体材料全方位布局"},
+    {"symbol": "3110.T", "name": "日東紡績", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "**高端玻璃纤维布核心供应商**，半导体封装基板材料市占率领先，AI芯片封装不可或缺材料"},
+    {"symbol": "6920.T", "name": "レーザーテック(激光技术)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "**EUV光罩检测独家供应商**，市占率超90%，EUV光刻配套检测设备垄断地位"},
+    {"symbol": "6146.T", "name": "ディスコ(迪斯科)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "**晶圆切割设备龙头**，全球市占率超70%，先进封装切割设备核心供应商"},
+    {"symbol": "4186.T", "name": "東京応化", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "**高端光刻胶冠军**，ArF光刻胶市占率超30%，EUV光刻胶布局领先"},
+    {"symbol": "4062.T", "name": "イビデン(揖斐电)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "封测/封装", "feature": "**数据中心级封装基板龙头**，CPU/GPU封装基板核心供应商，AI服务器基板市占率领先"},
+    {"symbol": "6971.T", "name": "京セラ(京瓷)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "封测/封装", "feature": "**精密陶瓷元器件巨头**，半导体封装陶瓷材料核心供应商，市占率全球前三"},
+    {"symbol": "6315.T", "name": "TOWA", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "**压缩成型封装设备龙头**，全球市占率超60%，先进封装塑封设备核心供应商"},
+    {"symbol": "6963.T", "name": "ローム(罗姆)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI芯片/算力", "feature": "**SiC功率模块先驱**，碳化硅功率器件市占率全球前三，AI服务器电源管理核心器件"},
+    {"symbol": "6525.T", "name": "KOKUSAI ELECTRIC", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "**半导体成膜设备核心厂商**，CVD/ALD设备市占率全球前列，逻辑/存储芯片制造核心设备"},
+    {"symbol": "6723.T", "name": "ルネサス(瑞萨电子)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI芯片/算力", "feature": "**车载与工业芯片龙头**，全球MCU市占率超15%，AI边缘计算芯片核心供应商"},
+    {"symbol": "7735.T", "name": "SCREENホールディングス", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "**晶圆清洗设备龙头**，全球市占率超40%，半导体制造清洗工序核心设备供应商"},
+    {"symbol": "6526.T", "name": "ソシオネクスト(Socionext)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI芯片/算力", "feature": "**先进制程SoC设计龙头**，5nm/3nm定制芯片设计能力，AI边缘计算核心方案商"},
+    {"symbol": "6871.T", "name": "日本マイクロニクス(日本微米尼克斯)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "**晶圆测试探针卡专业厂**，高端探针卡市占率全球前列，AI芯片测试关键供应商"},
+    {"symbol": "6890.T", "name": "FERROTEC", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "**真空密封与石英制品龙头**，半导体制造真空腔体核心供应商，技术壁垒极高"},
+    {"symbol": "6590.T", "name": "芝浦メカトロニクス(芝浦机电)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "**晶圆处理与封装设备核心厂商**，先进封装湿制程设备市占率领先"},
+    {"symbol": "6855.T", "name": "日本電子材料", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "**半导体测试探针卡专业厂**，MEMS探针卡技术领先，AI芯片测试关键供应商"},
+    {"symbol": "6754.T", "name": "アンリツ(安立)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "**高速通信测试设备龙头**，400G/800G光通信测试市占率全球领先"},
+    {"symbol": "285A.T", "name": "キオクシア(铠侠)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "存储/HBM", "feature": "**全球闪存厂商之一**，NAND Flash市占率约15%，AI存储需求核心受益者"},
+    {"symbol": "6976.T", "name": "太陽誘電", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "存储/HBM", "feature": "**高性能MLCC龙头**，电容市占率全球前三，AI服务器被动元件核心供应商"},
+    {"symbol": "6752.T", "name": "パナソニック(松下)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI芯片/算力", "feature": "**工业电池与电子巨头**，AI数据中心储能方案核心供应商"},
+    {"symbol": "6701.T", "name": "NEC(日本电气)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI芯片/算力", "feature": "**AI系统与网络基础设施巨头**，日本AI算力网络核心建设者"},
+    {"symbol": "6702.T", "name": "富士通", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI芯片/算力", "feature": "**高性能计算与企业AI龙头**，日本超级计算机核心制造商"},
+    {"symbol": "6965.T", "name": "浜松ホトニクス(浜松光子)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "**光电器件全球龙头**，光电倍增管市占率超80%，半导体检测核心器件供应商"},
+    {"symbol": "6779.T", "name": "日本電波工業", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "**频率控制元件龙头**，晶振市占率全球前列，AI服务器时钟器件核心供应商"},
+    {"symbol": "6787.T", "name": "メイコー(MEIKO)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "封测/封装", "feature": "**高端PCB制造商**，高多层PCB技术领先，AI服务器电路板核心供应商"},
+    {"symbol": "6479.T", "name": "ミネベアミツミ(美蓓亚三美)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "**轴承与精密电机龙头**，微型轴承全球市占率超60%，半导体设备精密零部件供应商"},
+    {"symbol": "7751.T", "name": "キヤノン(佳能)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "**纳米压印光刻技术布局者**，光刻技术第二路线，先进制程潜在替代方案"},
+    {"symbol": "6740.T", "name": "ジャパンディスプレイ(日本显示器)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI芯片/算力", "feature": "**车载与中小尺寸显示龙头**，车用OLED市占率全球前三，AI人机交互显示核心供应商"},
+    {"symbol": "6997.T", "name": "日本ケミコン(日本化工)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备/材料", "feature": "**铝电解电容龙头**，全球市占率超20%，AI服务器电源滤波核心器件供应商"},
 
     # ============================================================
     # 2. 工业自动化与机器人 (Factory Automation)
     # ============================================================
     # --- 美股 ---
-    {"symbol": "ROK", "name": "罗克韦尔自动化", "market": "美股", "sector": "2. 工业自动化与机器人", "industry": "工业自动化", "feature": "工业自动化集成方案"},
+    {"symbol": "ROK", "name": "罗克韦尔自动化", "market": "美股", "sector": "2. 工业自动化与机器人", "industry": "工业自动化", "feature": "**工业自动化集成方案巨头**，美国工业自动化市占率前三，智能制造核心方案商"},
     
     # --- A股 ---
-    {"symbol": "688037.SH", "name": "埃斯顿", "market": "A股", "sector": "2. 工业自动化与机器人", "industry": "工业自动化", "feature": "中国工业机器人龙头"},
-    {"symbol": "002008.SZ", "name": "大族激光", "market": "A股", "sector": "2. 工业自动化与机器人", "industry": "工业自动化", "feature": "精密制造与激光自动化"},
+    {"symbol": "688037.SH", "name": "埃斯顿", "market": "A股", "sector": "2. 工业自动化与机器人", "industry": "工业自动化", "feature": "**中国工业机器人龙头**，伺服系统与控制器核心技术自主可控，国产替代主力军"},
+    {"symbol": "002008.SZ", "name": "大族激光", "market": "A股", "sector": "2. 工业自动化与机器人", "industry": "工业自动化", "feature": "**激光加工设备龙头**，中国激光设备市占率超20%，智能制造激光加工核心方案商"},
     
     # --- 日股 ---
-    {"symbol": "6861.T", "name": "キーエンス(基恩士)", "market": "日股", "sector": "2. 工业自动化与机器人", "industry": "工业自动化", "feature": "高精度传感系统"},
-    {"symbol": "6954.T", "name": "ファナック(发那科)", "market": "日股", "sector": "2. 工业自动化与机器人", "industry": "工业自动化", "feature": "自动化机器人核心"},
-    {"symbol": "6273.T", "name": "SMC", "market": "日股", "sector": "2. 工业自动化与机器人", "industry": "工业自动化", "feature": "全球气动元件霸主"},
-    {"symbol": "6324.T", "name": "ハーモニック(Harmonic)", "market": "日股", "sector": "2. 工业自动化与机器人", "industry": "工业自动化", "feature": "精密减速器标杆"},
-    {"symbol": "6506.T", "name": "安川電機", "market": "日股", "sector": "2. 工业自动化与机器人", "industry": "工业自动化", "feature": "电机与运动控制"},
-    {"symbol": "6594.T", "name": "ニデック(尼得科)", "market": "日股", "sector": "2. 工业自动化与机器人", "industry": "工业自动化", "feature": "电机驱动技术龙头"},
-    {"symbol": "6645.T", "name": "オムロン(欧姆龙)", "market": "日股", "sector": "2. 工业自动化与机器人", "industry": "工业自动化", "feature": "工业自动化方案"},
+    {"symbol": "6861.T", "name": "キーエンス(基恩士)", "market": "日股", "sector": "2. 工业自动化与机器人", "industry": "工业自动化", "feature": "**高精度传感系统霸主**，全球传感器市占率超40%，盈利能力冠绝工业自动化行业"},
+    {"symbol": "6954.T", "name": "ファナック(发那科)", "market": "日股", "sector": "2. 工业自动化与机器人", "industry": "工业自动化", "feature": "**工业机器人四大家族之一**，全球CNC市占率超50%，工厂自动化绝对龙头"},
+    {"symbol": "6273.T", "name": "SMC", "market": "日股", "sector": "2. 工业自动化与机器人", "industry": "工业自动化", "feature": "**全球气动元件霸主**，市占率超30%，工业自动化核心零部件供应商"},
+    {"symbol": "6324.T", "name": "ハーモニック(Harmonic)", "market": "日股", "sector": "2. 工业自动化与机器人", "industry": "工业自动化", "feature": "**精密减速器标杆**，谐波减速器全球市占率超50%，机器人关节核心部件供应商"},
+    {"symbol": "6506.T", "name": "安川電機", "market": "日股", "sector": "2. 工业自动化与机器人", "industry": "工业自动化", "feature": "**伺服驱动与机器人巨头**，全球伺服电机市占率前三，工业机器人四大家族之一"},
+    {"symbol": "6594.T", "name": "ニデック(尼得科)", "market": "日股", "sector": "2. 工业自动化与机器人", "industry": "工业自动化", "feature": "**全球电机霸主**，微型电机全球市占率超50%，机器人关节电机核心供应商"},
+    {"symbol": "6645.T", "name": "オムロン(欧姆龙)", "market": "日股", "sector": "2. 工业自动化与机器人", "industry": "工业自动化", "feature": "**传感与控制技术巨头**，PLC/传感器市占率全球前列，工业自动化方案核心供应商"},
 
     # ============================================================
     # 3. 高速通信与数据中心基础设施 (Optics, CPO, Power, Data Center)
     # ============================================================
     # --- 美股 ---
-    {"symbol": "MSFT", "name": "微软", "market": "美股", "sector": "3. 高速通信与数据中心", "industry": "云计算/AI底座", "feature": "全球最大的云与AI基础设施"},
-    {"symbol": "CEG", "name": "星座能源", "market": "美股", "sector": "3. 高速通信与数据中心", "industry": "能源/电力", "feature": "AI数据中心核电直供"},
+    {"symbol": "MSFT", "name": "微软", "market": "美股", "sector": "3. 高速通信与数据中心", "industry": "云计算/AI底座", "feature": "**全球云服务龙头之一**，Azure云市占率超20%，AI基础设施投资领先"},
+    {"symbol": "CEG", "name": "星座能源", "market": "美股", "sector": "3. 高速通信与数据中心", "industry": "能源/电力", "feature": "**AI数据中心核电直供商**，美国最大核电运营商，AI算力清洁能源核心供应商"},
     
     # --- A股 ---
-    {"symbol": "300308.SZ", "name": "中际旭创", "market": "A股", "sector": "3. 高速通信与数据中心", "industry": "光通信/CPO", "feature": "全球高端光模块龙头"},
-    {"symbol": "600487.SH", "name": "亨通光电", "market": "A股", "sector": "3. 高速通信与数据中心", "industry": "光通信/CPO", "feature": "全球光纤光缆核心供应"},
+    {"symbol": "300308.SZ", "name": "中际旭创", "market": "A股", "sector": "3. 高速通信与数据中心", "industry": "光通信/CPO", "feature": "**全球高端光模块龙头**，400G/800G光模块市占率超30%，AI数据中心互联核心供应商"},
+    {"symbol": "600487.SH", "name": "亨通光电", "market": "A股", "sector": "3. 高速通信与数据中心", "industry": "光通信/CPO", "feature": "**全球光纤光缆核心供应商**，通信光缆市占率全球前三，AI数据中心传输基础建设者"},
     
     # --- 日股 ---
-    {"symbol": "5801.T", "name": "古河電気工業", "market": "日股", "sector": "3. 高速通信与数据中心", "industry": "光通信/CPO", "feature": "高性能光学互联"},
-    {"symbol": "5802.T", "name": "住友電気工業", "market": "日股", "sector": "3. 高速通信与数据中心", "industry": "光通信/CPO", "feature": "精密连接器龙头"},
-    {"symbol": "5803.T", "name": "フジクラ(藤仓)", "market": "日股", "sector": "3. 高速通信与数据中心", "industry": "光通信/CPO", "feature": "数据中心光缆核心"},
-    {"symbol": "6501.T", "name": "日立製作所", "market": "日股", "sector": "3. 高速通信与数据中心", "industry": "能源/电力", "feature": "基础设施能源巨头"},
-    {"symbol": "6367.T", "name": "ダイキン工業(大金)", "market": "日股", "sector": "3. 高速通信与数据中心", "industry": "能源/电力", "feature": "数据中心高效冷却技术"},
-    {"symbol": "6834.T", "name": "精工技研", "market": "日股", "sector": "3. 高速通信与数据中心", "industry": "光通信/CPO", "feature": "精密光学组件"},
-    {"symbol": "6777.T", "name": "santec", "market": "日股", "sector": "3. 高速通信与数据中心", "industry": "光通信/CPO", "feature": "光通信组件先驱"},
-    {"symbol": "6981.T", "name": "村田製作所", "market": "日股", "sector": "3. 高速通信与数据中心", "industry": "被动元件/传感器", "feature": "全球被动元器件霸主"},
-    {"symbol": "6762.T", "name": "TDK", "market": "日股", "sector": "3. 高速通信与数据中心", "industry": "被动元件/传感器", "feature": "电子元器件巨头"},
-    {"symbol": "485A.T", "name": "PowerX", "market": "日股", "sector": "3. 高速通信与数据中心", "industry": "能源/电力", "feature": "新型储能电池与能源管理"},
-    {"symbol": "6996.T", "name": "ニチコン(尼吉康)", "market": "日股", "sector": "3. 高速通信与数据中心", "industry": "能源/电力", "feature": "储能/充电系统"},
-    {"symbol": "6503.T", "name": "三菱電機", "market": "日股", "sector": "3. 高速通信与数据中心", "industry": "能源/电力", "feature": "重型电力设备与数据中心基础设施"},
-    {"symbol": "6504.T", "name": "富士電機", "market": "日股", "sector": "3. 高速通信与数据中心", "industry": "能源/电力", "feature": "能源基础设施与变流设备"},
+    {"symbol": "5801.T", "name": "古河電気工業", "market": "日股", "sector": "3. 高速通信与数据中心", "industry": "光通信/CPO", "feature": "**高性能光学互联方案商**，光通信器件技术领先，CPO光电共封装核心供应商"},
+    {"symbol": "5802.T", "name": "住友電気工業", "market": "日股", "sector": "3. 高速通信与数据中心", "industry": "光通信/CPO", "feature": "**精密连接器龙头**，高速连接器市占率全球前三，数据中心互联核心供应商"},
+    {"symbol": "5803.T", "name": "フジクラ(藤仓)", "market": "日股", "sector": "3. 高速通信与数据中心", "industry": "光通信/CPO", "feature": "**高速光缆与光纤龙头**，光纤预制棒技术领先，数据中心光缆核心供应商"},
+    {"symbol": "6501.T", "name": "日立製作所", "market": "日股", "sector": "3. 高速通信与数据中心", "industry": "能源/电力", "feature": "**基础设施能源巨头**，电网/变压器市占率全球前列，AI数据中心电力基础设施核心"},
+    {"symbol": "6367.T", "name": "ダイキン工業(大金)", "market": "日股", "sector": "3. 高速通信与数据中心", "industry": "能源/电力", "feature": "**数据中心高效冷却龙头**，全球空调市占率超20%，液冷技术领先"},
+    {"symbol": "6834.T", "name": "精工技研", "market": "日股", "sector": "3. 高速通信与数据中心", "industry": "光通信/CPO", "feature": "**精密光学组件供应商**，光通信连接器与适配器技术领先"},
+    {"symbol": "6777.T", "name": "santec", "market": "日股", "sector": "3. 高速通信与数据中心", "industry": "光通信/CPO", "feature": "**光通信测试先驱**，高性能光学元器件与测试设备供应商"},
+    {"symbol": "6981.T", "name": "村田製作所", "market": "日股", "sector": "3. 高速通信与数据中心", "industry": "被动元件/传感器", "feature": "**全球被动元器件霸主**，MLCC市占率超40%，AI服务器核心元器件供应商"},
+    {"symbol": "6762.T", "name": "TDK", "market": "日股", "sector": "3. 高速通信与数据中心", "industry": "被动元件/传感器", "feature": "**电子元器件巨头**，磁性材料与传感器全球领先，AI数据中心元器件核心供应商"},
+    {"symbol": "485A.T", "name": "PowerX", "market": "日股", "sector": "3. 高速通信与数据中心", "industry": "能源/电力", "feature": "**新型储能电池先锋**，AI数据中心储能方案新锐供应商"},
+    {"symbol": "6996.T", "name": "ニチコン(尼吉康)", "market": "日股", "sector": "3. 高速通信与数据中心", "industry": "能源/电力", "feature": "**储能与充电系统供应商**，薄膜电容器技术领先，数据中心电源方案商"},
+    {"symbol": "6503.T", "name": "三菱電機", "market": "日股", "sector": "3. 高速通信与数据中心", "industry": "能源/电力", "feature": "**重型电力设备巨头**，数据中心电力基础设施核心供应商，电力电子技术领先"},
+    {"symbol": "6504.T", "name": "富士電機", "market": "日股", "sector": "3. 高速通信与数据中心", "industry": "能源/电力", "feature": "**能源基础设施与变流设备龙头**，功率半导体与电源方案核心供应商"},
 
     # ============================================================
     # 4. 前沿航天与深科技 (Space & Deep Tech)
     # ============================================================
     # --- 美股 ---
-    {"symbol": "SPCX", "name": "SpaceX", "market": "美股", "sector": "4. 前沿航天与深科技", "industry": "航天/卫星", "feature": "**全球航天龙头**，Starlink底座"},
-    {"symbol": "RKLB", "name": "Rocket Lab", "market": "美股", "sector": "4. 前沿航天与深科技", "industry": "航天/卫星", "feature": "**轻型火箭发射龙头**，端到端空间系统"},
-    {"symbol": "GE", "name": "GE Aerospace", "market": "美股", "sector": "4. 前沿航天与深科技", "industry": "航空航天", "feature": "**全球航空动力巨头**，商用航空核心"},
-    {"symbol": "RTX", "name": "RTX Corporation", "market": "美股", "sector": "4. 前沿航天与深科技", "industry": "航空航天", "feature": "全球顶级航空航天系统集成商"},
-    {"symbol": "ASTS", "name": "AST SpaceMobile", "market": "美股", "sector": "4. 前沿航天与深科技", "industry": "航天/卫星", "feature": "太空蜂窝通信网络先驱"},
+    {"symbol": "SPCX", "name": "SpaceX", "market": "美股", "sector": "4. 前沿航天与深科技", "industry": "航天/卫星", "feature": "**全球航天发射龙头**，Starlink在轨卫星超6000颗，商业航天估值超2000亿美元"},
+    {"symbol": "RKLB", "name": "Rocket Lab", "market": "美股", "sector": "4. 前沿航天与深科技", "industry": "航天/卫星", "feature": "**轻型火箭发射龙头**，Electron火箭发射次数全球第二，端到端航天系统方案商"},
+    {"symbol": "GE", "name": "GE Aerospace", "market": "美股", "sector": "4. 前沿航天与深科技", "industry": "航空航天", "feature": "**全球航空发动机巨头**，商用航空发动机市占率超50%，国防航空动力核心供应商"},
+    {"symbol": "RTX", "name": "RTX Corporation", "market": "美股", "sector": "4. 前沿航天与深科技", "industry": "航空航天", "feature": "**全球顶级防务与航天系统集成商**，导弹与雷达系统市占率全球领先"},
+    {"symbol": "ASTS", "name": "AST SpaceMobile", "market": "美股", "sector": "4. 前沿航天与深科技", "industry": "航天/卫星", "feature": "**太空蜂窝通信网络先驱**，全球首家实现手机直连卫星通信的商业航天公司"},
     
     # --- A股 ---
-    {"symbol": "601989.SH", "name": "中国重工", "market": "A股", "sector": "4. 前沿航天与深科技", "industry": "航空航天", "feature": "高端重型制造平台"},
+    {"symbol": "601989.SH", "name": "中国重工", "market": "A股", "sector": "4. 前沿航天与深科技", "industry": "航空航天", "feature": "**中国高端装备制造平台**，航母与大型舰船核心制造商，航天配套装备供应商"},
     
     # --- 日股 ---
-    {"symbol": "9348.T", "name": "ispace", "market": "日股", "sector": "4. 前沿航天与深科技", "industry": "航天/卫星", "feature": "月球商业探测"},
-    {"symbol": "186A.T", "name": "Astroscale", "market": "日股", "sector": "4. 前沿航天与深科技", "industry": "航天/卫星", "feature": "轨道治理先驱"},
-    {"symbol": "7011.T", "name": "三菱重工", "market": "日股", "sector": "4. 前沿航天与深科技", "industry": "航空航天", "feature": "重型装备制造"},
-    {"symbol": "7013.T", "name": "IHI", "market": "日股", "sector": "4. 前沿航天与深科技", "industry": "航空航天", "feature": "喷气推进系统"},
-    {"symbol": "5631.T", "name": "日本製鋼所", "market": "日股", "sector": "4. 前沿航天与深科技", "industry": "航空航天", "feature": "大型工业铸锻件"},
-    {"symbol": "6613.T", "name": "QDレーザ( QD激光)", "market": "日股", "sector": "4. 前沿航天与深科技", "industry": "航天/卫星", "feature": "半导体激光器先驱"}
+    {"symbol": "9348.T", "name": "ispace", "market": "日股", "sector": "4. 前沿航天与深科技", "industry": "航天/卫星", "feature": "**日本首家月球探测商业公司**，月球着陆器技术领先，NASA商业月球载荷计划核心合作伙伴"},
+    {"symbol": "186A.T", "name": "Astroscale", "market": "日股", "sector": "4. 前沿航天与深科技", "industry": "航天/卫星", "feature": "**全球轨道碎片治理先驱**，ELSA-d技术领先，太空可持续性解决方案领导者"},
+    {"symbol": "7011.T", "name": "三菱重工", "market": "日股", "sector": "4. 前沿航天与深科技", "industry": "航空航天", "feature": "**日本航空航天重工巨头**，H-IIA火箭制造商，航空发动机与防务装备核心供应商"},
+    {"symbol": "7013.T", "name": "IHI", "market": "日股", "sector": "4. 前沿航天与深科技", "industry": "航空航天", "feature": "**航空发动机核心厂商**，日本唯一航空发动机整机制造商，军用与民用推进系统领先"},
+    {"symbol": "5631.T", "name": "日本製鋼所", "market": "日股", "sector": "4. 前沿航天与深科技", "industry": "航空航天", "feature": "**大型铸锻件专家**，核工业与航空航天锻件核心供应商，特种材料技术领先"},
+    {"symbol": "6613.T", "name": "QDレーザ( QD激光)", "market": "日股", "sector": "4. 前沿航天与深科技", "industry": "航天/卫星", "feature": "**半导体激光器先驱**，高功率激光二极管技术领先，航天通信与探测核心器件供应商"}
 ]
 
 
