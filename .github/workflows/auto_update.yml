@@ -34,7 +34,10 @@ jobs:
 
     # yfinance 如果要请求大盘和 AI，通常也需要 requests 库作为底层依赖
     - name: 安装 yfinance 及网络依赖包
-      run: pip install yfinance requests
+      run:     
+        pip install --upgrade pip
+        pip install yfinance requests
+        pip install akshare
 
     # 🛠️【终极修复】：在这里把通道正式打通，将 GitHub 后台的 Secret 送进 Python
     - name: 运行 Python 脚本抓取数据
