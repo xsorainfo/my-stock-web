@@ -150,12 +150,15 @@ def fetch_all_data():
         else:
             market_type = "美股"
             is_us = True
-            
-        # 统一初始化 ticker
-        stock = yf.Ticker(symbol, session=session)
-        
-        # 通过 manager 获取 info
-        info, source = manager.get_data(stock, symbol, is_us)
+
+        # 🌟 核心分流：根据市场选择调用工具
+        if market_type == "A股":
+            # 使用 AkShare 获取
+            info, source = manager.get_a_stock_data(symbol)
+        else:
+            # 使用原有的 yfinance 逻辑
+            stock = yf.Ticker(symbol, session=session)
+            info, source = manager.get_data(stock, symbol, is_us)    
         if not info: continue
         
         try:
