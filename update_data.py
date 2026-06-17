@@ -6,7 +6,7 @@ import os
 import requests
 
 
-from config import MACRO_LIST, WATCHLIST, DEFAULT_STRATEGY, SOURCE_MAP
+from config import MACRO_LIST, WATCHLIST, DEFAULT_STRATEGY, A_STOCK_STRATEGY, SOURCE_MAP
 
 class StockDataManager:
     def __init__(self, cache_file='stock_cache.json'):
