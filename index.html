@@ -67,18 +67,26 @@
         .stock-industry { font-size: 11px; color: #2563eb; background: #eff6ff; padding: 2px 6px; border-radius: 4px; margin-top: 4px; display: inline-block; }
         .stock-code {
             font-size: 11px;
-            color: #475569;
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;     /* 边框色比背景深 */
-            padding: 2px 6px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+            background: #334155;           /* 初始：深蓝灰色 */
+            color: #f8fafc;                /* 白色文字 */
+            padding: 3px 8px;              /* 稍微加大一点内边距 */
             border-radius: 4px;
-            transition: all 0.2s ease;     /* 增加悬停反馈 */
+            letter-spacing: 0.5px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            
+            /* 增加过渡效果 */
+            transition: all 0.25s ease-in-out;
+            cursor: pointer;               /* 鼠标移入显示可点击手势 */
+            user-select: none;             /* 防止文字被选中，看起来更像 UI 按钮 */
         }
         
-        /* 增加悬停效果，让用户知道这是可点击或可观察的元数据 */
+        /* 悬停反馈效果 */
         .stock-code:hover {
-            background: #e2e8f0;
-            cursor: default;
+            background: #0f172a;           /* 悬停：变为更深邃的黑蓝色 */
+            transform: translateY(-1px);   /* 悬停：轻微上浮，增加物理感 */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2); /* 悬停：增加阴影深度 */
+            color: #38bdf8;                /* 悬停：文字变为亮蓝色，点亮科技感 */
         }
         .stock-feature { 
             font-size: 12px; 
