@@ -133,6 +133,16 @@
         return `<span class="val-badge val-normal">${num}</span>`;
     }
 
+    // 辅助函数：根据市场类型返回对应的 HTML 标签
+    function getMarketBadge(type) {
+        const map = {
+            '美股': '<span class="badge us">🇺🇸</span>',
+            '日股': '<span class="badge jp">🇯🇵</span>',
+            'A股':  '<span class="badge cn">🇨🇳</span>'
+        };
+        return map[type] || '';
+    }
+
     async function loadDashboardData() {
         try {
             const response = await fetch('data.json?v=' + new Date().getTime());
@@ -198,6 +208,7 @@
                             <div class="stock-card">
                                 <div class="stock-header">
                                     <div class="stock-title">
+                                        ${getMarketBadge(stock.market_type)}
                                         <h3>${stock.name}</h3>
                                     </div>
                                     <span class="stock-code">${stock.code}</span>
