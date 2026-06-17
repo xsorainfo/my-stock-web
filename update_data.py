@@ -30,27 +30,29 @@ class StockDataManager:
 
     # 在你的 StockDataManager 类中添加此方法
     def get_a_stock_data(self, symbol):
-        """
-        使用 AkShare 获取 A 股实时行情
-        AkShare 的 symbol 只需要纯数字代码，例如 '601989'
-        """
         try:
-            # 去掉后缀，只保留纯数字代码
             clean_code = symbol.split('.')[0]
-            # 获取实时行情数据
-            df = ak.stock_individual_spot_em(symbol=clean_code)
+            # 修正后的接口名称
+            df = ak.stock_zh_a_spot_em() 
             
-            # 将 AkShare 返回的 DataFrame 转换为类似 yfinance info 的字典结构
-            # 这样你的前端渲染逻辑就完全不用变了
+            # 从返回的大表中筛选出目标股票
+            stock_info = df[df['代码'] == clean_code]
+            
+            if stock_info.empty:
+                print(f"AkShare 未找到股票 {clean_code}")
+                return None, "none"
+            
+            # 映射数据
+            row = stock_info.iloc[0]
             data = {
-                'regularMarketPrice': float(df.loc[df['名称'] == '最新价', 'value'].values[0] if 'value' in df.columns else df.iloc[0]['最新价']),
-                'trailingPE': float(df.loc[df['名称'] == '市盈率-动态', 'value'].values[0] if '市盈率-动态' in df.columns else 0),
-                'priceToBook': float(df.loc[df['名称'] == '市净率', 'value'].values[0] if '市净率' in df.columns else 0),
-                # 补全其他你需要的字段
+                'regularMarketPrice': float(row['最新价']),
+                'trailingPE': float(row['市盈率-动态']),
+                'priceToBook': float(row['市净率']),
+                # 还可以提取 row['名称'], row['涨跌幅'] 等
             }
             return data, "akshare"
         except Exception as e:
-            print(f"AkShare 抓取 {symbol} 失败: {e}")
+            print(f"AkShare 抓取 {symbol} 异常: {e}")
             return None, "none"
         
     def get_data(self, stock, symbol, is_us):
