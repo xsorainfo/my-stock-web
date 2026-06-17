@@ -33,7 +33,10 @@ class StockDataManager:
                 return self.cache[symbol]['data'], "cache"
 
         # 2. 策略调度
-        strategy_order = SOURCE_MAP.get(symbol, DEFAULT_STRATEGY)
+        # strategy_order = SOURCE_MAP.get(symbol, DEFAULT_STRATEGY)
+        is_a_stock = symbol.endswith(('.SS', '.SZ', '.SH'))
+        strategy_order = A_STOCK_STRATEGY if is_a_stock else SOURCE_MAP.get(symbol, DEFAULT_STRATEGY)
+        
         for source in strategy_order:
             try:
                 print(f"尝试源 {source} 抓取 {symbol}...")
