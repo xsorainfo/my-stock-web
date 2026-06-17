@@ -1,6 +1,6 @@
 # config.py
 DEFAULT_STRATEGY = ["yfinance"]
-A_STOCK_STRATEGY = ["alphavantage"] # A股专用策略
+
 
 # 只有需要特殊处理的标的才写在这里
 SOURCE_MAP = {
