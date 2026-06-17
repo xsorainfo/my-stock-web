@@ -5,7 +5,7 @@ import random
 import os
 import requests
 
-from config import MACRO_LIST, WATCHLIST, DEFAULT_STRATEGY, A_STOCK_STRATEGY, SOURCE_MAP
+from config import MACRO_LIST, WATCHLIST, DEFAULT_STRATEGY, SOURCE_MAP
 
 class StockDataManager:
     def __init__(self, cache_file='stock_cache.json'):
@@ -190,7 +190,7 @@ class StockDataManager:
                 return self.cache[symbol]['data'], "cache"
 
         is_a_stock = symbol.endswith(('.SS', '.SZ', '.SH'))
-        strategy_order = A_STOCK_STRATEGY if is_a_stock else SOURCE_MAP.get(symbol, DEFAULT_STRATEGY)
+        strategy_order = SOURCE_MAP.get(symbol, DEFAULT_STRATEGY)
         
         for source in strategy_order:
             try:
