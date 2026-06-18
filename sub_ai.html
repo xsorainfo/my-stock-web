@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>主题别 - 全球AI硬科技</title>
+    </head>
+<body>
+    <div class="container">
+        <header><h1>📊 硬科技 - 主题别分析</h1></header>
+        <nav class="top-navbar">
+            <a href="index.html" class="nav-item">首页</a>
+            <a href="finance.html" class="nav-item" style="color: #38bdf8; border-bottom: 2px solid #38bdf8;">テーマ別</a>
+        </nav>
+        <div id="themeContainer"></div>
+    </div>
+    
+    <script>
+        // 在这里写针对主题的渲染逻辑
+        async function loadThemeData() {
+            const res = await fetch('data.json');
+            const data = await res.json();
+            // 这里可以按 theme 而非 sector 分组
+            // 渲染逻辑与 index.html 类似...
+        }
+        window.onload = loadThemeData;
+    </script>
+</body>
+</html>
