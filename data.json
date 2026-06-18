@@ -8,8 +8,8 @@
     },
     {
       "name": "美元/日元 (汇率)",
-      "price": "160.87",
-      "change": "+0.45 (+0.28%)",
+      "price": "160.94",
+      "change": "+0.52 (+0.32%)",
       "isUp": true
     },
     {
@@ -31,9 +31,10 @@
       "name": "NVIDIA(英伟达)",
       "sector": "1. 算力芯片+先进封装+存储",
       "industry": "AI处理器/算力芯片",
-      "feature": "**全球AI芯片绝对霸主（绝对垄断）**，数据中心GPU市占率超80%，CUDA生态壁垒极高，AI训练芯片垄断地位",
+      "feature": "**全球AI芯片绝对霸主（绝对垄断）**，数据中心GPU市占率超80%，CUDA生态壁垒极高，AI训练芯片垄断地位。同时以Vera CPU进军CPU市场，成最危险新进入者。Agentic AI时代CPU工作量占比从20%暴增至70-80%",
       "tags": [
-        "GPU"
+        "GPU",
+        "CPU"
       ],
       "tag_themes": [
         {
@@ -41,6 +42,13 @@
           "theme_path": [
             "3. 算力芯片",
             "GPU"
+          ]
+        },
+        {
+          "tag": "CPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU"
           ]
         }
       ],
@@ -62,7 +70,7 @@
       "name": "AMD(超威半导体)",
       "sector": "1. 算力芯片+先进封装+存储",
       "industry": "AI处理器/算力芯片",
-      "feature": "**GPU市场的“万年老二”（追赶者）**但差距悬殊，MI300系列AI芯片性能对标NVIDIA，CPU+GPU双轮驱动，数据中心份额持续提升，但集成显卡（iGPU）市场仍有显著份额",
+      "feature": "**GPU市场的万年老二（追赶者）**但差距悬殊，MI300系列AI芯片性能对标NVIDIA，CPU+GPU双轮驱动，数据中心份额持续提升，但集成显卡（iGPU）市场仍有显著份额",
       "tags": [
         "GPU",
         "CPU"
@@ -101,7 +109,7 @@
       "name": "英特尔",
       "sector": "1. 算力芯片+先进封装+存储",
       "industry": "AI处理器/算力芯片",
-      "feature": "**x86架构霸主**，AI加速器Gaudi3性能对标H100，晶圆代工业务转型中，美国芯片法案核心受益者",
+      "feature": "**x86架构霸主-触底反弹**，服务器CPU市占率59%，AI加速器Gaudi3性能对标H100，晶圆代工业务转型中，美国芯片法案核心受益者",
       "tags": [
         "CPU",
         "ASIC"
@@ -233,7 +241,7 @@
       "name": "ARM Holdings",
       "sector": "1. 算力芯片+先进封装+存储",
       "industry": "AI处理器/算力芯片",
-      "feature": "**全球芯片IP架构霸主**，手机/PC/AI芯片指令集市占率超90%，AI PC与边缘计算核心受益者",
+      "feature": "**全球芯片IP架构霸主**，手机/PC/AI芯片指令集市占率超90%，服务器CPU市占率16%,，英伟达Vera/谷歌/亚马逊均采用ARM架构，2030年份额预计达27%,AI PC与边缘计算核心受益者",
       "tags": [
         "CPU"
       ],
@@ -257,6 +265,76 @@
       "distWeek": "-5.8%",
       "distMonth": "-5.8%",
       "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "QCOM",
+      "name": "高通",
+      "sector": "1. 算力芯片+先进封装+存储",
+      "industry": "AI处理器/算力芯片",
+      "feature": "**ARM PC CPU赛道龙头**，骁龙X Elite PC处理器性能对标苹果M系列，目标到2029年占据非x86 AI笔记本30-50%份额",
+      "tags": [
+        "AI SoC",
+        "CPU"
+      ],
+      "tag_themes": [
+        {
+          "tag": "AI SoC",
+          "theme_path": [
+            "3. 算力芯片",
+            "AI SoC"
+          ]
+        },
+        {
+          "tag": "CPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "212.97",
+      "change": "-1.10 (-0.51%)",
+      "isUp": false,
+      "per": "22.92",
+      "forward_per": "19.97",
+      "pbr": "8.27",
+      "distHigh": "-18.1%",
+      "distWeek": "-7.9%",
+      "distMonth": "-17.8%",
+      "trend": "熊市空头",
+      "source": "cache"
+    },
+    {
+      "code": "AAPL",
+      "name": "苹果",
+      "sector": "1. 算力芯片+先进封装+存储",
+      "industry": "AI处理器/算力芯片",
+      "feature": "**ARM PC浪潮开启者**，M系列芯片成功证明ARM在PC端性能潜力，Mac全系已切换至自研ARM芯片，PC CPU市占率约15-20%",
+      "tags": [
+        "CPU"
+      ],
+      "tag_themes": [
+        {
+          "tag": "CPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "295.95",
+      "change": "-3.29 (-1.10%)",
+      "isUp": false,
+      "per": "35.83",
+      "forward_per": "30.84",
+      "pbr": "40.76",
+      "distHigh": "-6.8%",
+      "distWeek": "-2.0%",
+      "distMonth": "-6.8%",
+      "trend": "熊市空头",
       "source": "yfinance"
     },
     {
@@ -2394,14 +2472,14 @@
         }
       ],
       "market_type": "德股",
-      "price": "275.55",
-      "change": "+2.45 (+0.90%)",
+      "price": "275.30",
+      "change": "+2.20 (+0.81%)",
       "isUp": true,
-      "per": "28.50",
-      "forward_per": "21.59",
-      "pbr": "3.33",
+      "per": "28.47",
+      "forward_per": "21.57",
+      "pbr": "3.32",
       "distHigh": "-1.7%",
-      "distWeek": "-0.6%",
+      "distWeek": "-0.7%",
       "distMonth": "-1.7%",
       "trend": "牛市多头",
       "source": "yfinance"
