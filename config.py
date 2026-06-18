@@ -50,13 +50,15 @@ WATCHLIST = [
     # 1. 算力芯片+先进封装+存储 (Compute, HBM, Packaging)
     # ============================================================
     # --- 美股 AI处理器/算力芯片 ---
-    {"symbol": "NVDA", "name": "NVIDIA(英伟达)", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**全球AI芯片绝对霸主（绝对垄断）**，数据中心GPU市占率超80%，CUDA生态壁垒极高，AI训练芯片垄断地位", "tags": ["GPU"]},
-    {"symbol": "AMD", "name": "AMD(超威半导体)", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**GPU市场的“万年老二”（追赶者）**但差距悬殊，MI300系列AI芯片性能对标NVIDIA，CPU+GPU双轮驱动，数据中心份额持续提升，但集成显卡（iGPU）市场仍有显著份额", "tags": ["GPU", "CPU"]},
-    {"symbol": "INTC", "name": "英特尔", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**x86架构霸主**，AI加速器Gaudi3性能对标H100，晶圆代工业务转型中，美国芯片法案核心受益者", "tags": ["CPU", "ASIC"]},
+    {"symbol": "NVDA", "name": "NVIDIA(英伟达)", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**全球AI芯片绝对霸主（绝对垄断）**，数据中心GPU市占率超80%，CUDA生态壁垒极高，AI训练芯片垄断地位。同时以Vera CPU进军CPU市场，成最危险新进入者。Agentic AI时代CPU工作量占比从20%暴增至70-80%", "tags": ["GPU", "CPU"]},
+    {"symbol": "AMD", "name": "AMD(超威半导体)", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**GPU市场的万年老二（追赶者）**但差距悬殊，MI300系列AI芯片性能对标NVIDIA，CPU+GPU双轮驱动，数据中心份额持续提升，但集成显卡（iGPU）市场仍有显著份额", "tags": ["GPU", "CPU"]},
+    {"symbol": "INTC", "name": "英特尔", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**x86架构霸主-触底反弹**，服务器CPU市占率59%，AI加速器Gaudi3性能对标H100，晶圆代工业务转型中，美国芯片法案核心受益者", "tags": ["CPU", "ASIC"]},
     {"symbol": "QCOM", "name": "高通", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**AI端侧芯片龙头**，Android旗舰手机芯片市占率超60%，AI手机与AI PC处理器核心玩家", "tags": ["AI SoC"]},
     {"symbol": "AVGO", "name": "博通", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**AI网络芯片与ASIC龙头**，全球AI数据中心以太网芯片市占率超70%，谷歌TPU核心ASIC设计合作伙伴", "tags": ["ASIC"]},
     {"symbol": "MRVL", "name": "美满电子", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**数据中心互联与AI芯片核心玩家**，高速SerDes技术领先，AI数据中心互联芯片市占率全球前三", "tags": ["ASIC"]},
-    {"symbol": "ARM", "name": "ARM Holdings", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**全球芯片IP架构霸主**，手机/PC/AI芯片指令集市占率超90%，AI PC与边缘计算核心受益者", "tags": ["CPU"]},
+    {"symbol": "ARM", "name": "ARM Holdings", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**全球芯片IP架构霸主**，手机/PC/AI芯片指令集市占率超90%，服务器CPU市占率16%,，英伟达Vera/谷歌/亚马逊均采用ARM架构，2030年份额预计达27%,AI PC与边缘计算核心受益者", "tags": ["CPU"]},
+    {"symbol": "QCOM", "name": "高通", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**ARM PC CPU赛道龙头**，骁龙X Elite PC处理器性能对标苹果M系列，目标到2029年占据非x86 AI笔记本30-50%份额", "tags": ["AI SoC", "CPU"]},    
+    {"symbol": "AAPL", "name": "苹果", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**ARM PC浪潮开启者**，M系列芯片成功证明ARM在PC端性能潜力，Mac全系已切换至自研ARM芯片，PC CPU市占率约15-20%", "tags": ["CPU"]},
     
     # --- A股 AI处理器/算力芯片 ---
     # ============================================================
