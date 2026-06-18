@@ -320,9 +320,9 @@
         if (!tags || tags.length === 0) return '';
         return tags.map(tag => `
             <span class="stock-tag clickable-tag" data-tag="${encodeURIComponent(tag)}" onclick="navigateToTheme('${encodeURIComponent(tag)}')">
-                ${tag}
+                ${tag} 
             </span>
-        `).join(' ');
+        `).join('');
     }
     
     // 新增：跳转到 sub_ai.html 并传递 tag 参数（新窗口打开）
