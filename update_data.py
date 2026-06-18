@@ -277,11 +277,12 @@ def make_ai_news(stock_data):
 
 
 def get_market_type(symbol):
-    """根据代码后缀判断市场类型"""
     if symbol.endswith('.T'):
         return "日股"
     elif symbol.endswith(('.SS', '.SZ', '.SH')):
         return "A股"
+    elif symbol.endswith('.HK'):  # ⭐ 新增港股支持
+        return "港股"
     elif symbol.endswith('.KS'):
         return "韩股"
     elif symbol.endswith('.DE'):
