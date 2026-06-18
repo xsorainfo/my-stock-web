@@ -8,7 +8,7 @@
     },
     {
       "name": "美元/日元 (汇率)",
-      "price": "160.94",
+      "price": "160.93",
       "change": "+0.52 (+0.32%)",
       "isUp": true
     },
@@ -148,9 +148,10 @@
       "name": "高通",
       "sector": "1. 算力芯片+先进封装+存储",
       "industry": "AI处理器/算力芯片",
-      "feature": "**AI端侧芯片龙头**，Android旗舰手机芯片市占率超60%，AI手机与AI PC处理器核心玩家",
+      "feature": "**AI端ARM PC CPU赛道龙头**，Android旗舰手机芯片市占率超60%，AI手机与AI PC处理器核心玩家,骁龙X Elite PC处理器性能对标苹果M系列，目标到2029年占据非x86 AI笔记本30-50%份额",
       "tags": [
-        "AI SoC"
+        "AI SoC",
+        "CPU"
       ],
       "tag_themes": [
         {
@@ -158,6 +159,13 @@
           "theme_path": [
             "3. 算力芯片",
             "AI SoC"
+          ]
+        },
+        {
+          "tag": "CPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU"
           ]
         }
       ],
@@ -408,14 +416,108 @@
       "source": "sina"
     },
     {
+      "code": "688041",
+      "name": "海光信息",
+      "sector": "1. 算力芯片+先进封装+存储",
+      "industry": "AI处理器/算力芯片",
+      "feature": "**A股国产CPU第一股**，x86（AMD Zen授权）技术路线，生态兼容性最强，信创服务器CPU主力供应商，国产替代核心受益者",
+      "tags": [
+        "CPU"
+      ],
+      "tag_themes": [
+        {
+          "tag": "CPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "328.00",
+      "change": "+19.78 (+6.42%)",
+      "isUp": true,
+      "per": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "distWeek": "-2.4%",
+      "distMonth": "-4.9%",
+      "trend": "牛市多头",
+      "source": "sina"
+    },
+    {
+      "code": "688047",
+      "name": "龙芯中科",
+      "sector": "1. 算力芯片+先进封装+存储",
+      "industry": "AI处理器/算力芯片",
+      "feature": "**完全自主指令集（LoongArch）CPU**，纯国产CPU代表，党政信创核心供应商，摆脱x86/ARM授权束缚",
+      "tags": [
+        "CPU"
+      ],
+      "tag_themes": [
+        {
+          "tag": "CPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "146.49",
+      "change": "+2.99 (+2.08%)",
+      "isUp": true,
+      "per": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "distWeek": "-1.4%",
+      "distMonth": "-16.0%",
+      "trend": "牛市多头",
+      "source": "sina"
+    },
+    {
+      "code": "688262",
+      "name": "国芯科技",
+      "sector": "1. 算力芯片+先进封装+存储",
+      "industry": "AI处理器/算力芯片",
+      "feature": "**国内唯一同时掌握三大指令集（RISC-V/PowerPC/M*Core）的嵌入式CPU厂商**，RISC-V第一梯队，车规/工控高可靠CPU龙头，信创替代核心标的",
+      "tags": [
+        "CPU"
+      ],
+      "tag_themes": [
+        {
+          "tag": "CPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "39.63",
+      "change": "+1.33 (+3.47%)",
+      "isUp": true,
+      "per": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "distWeek": "-1.8%",
+      "distMonth": "-9.9%",
+      "trend": "牛市多头",
+      "source": "sina"
+    },
+    {
       "code": "6723",
       "name": "ルネサス(瑞萨电子)",
       "sector": "1. 算力芯片+先进封装+存储",
       "industry": "AI处理器/算力芯片",
-      "feature": "**车载与工业芯片龙头**，全球MCU市占率超15%，AI边缘计算芯片核心供应商，（非)GPU产业链核心供应商",
+      "feature": "**车载与工业MCU龙头**，全球MCU市占率超15%，ARM生态重要伙伴，AI边缘计算芯片核心供应商,（非)GPU产业链核心供应商",
       "tags": [
         "AI SoC",
-        "GPU"
+        "GPU",
+        "CPU"
       ],
       "tag_themes": [
         {
@@ -430,6 +532,13 @@
           "theme_path": [
             "3. 算力芯片",
             "GPU"
+          ]
+        },
+        {
+          "tag": "CPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU"
           ]
         }
       ],
@@ -2472,15 +2581,15 @@
         }
       ],
       "market_type": "德股",
-      "price": "275.30",
-      "change": "+2.20 (+0.81%)",
+      "price": "275.20",
+      "change": "+2.10 (+0.77%)",
       "isUp": true,
-      "per": "28.47",
-      "forward_per": "21.57",
+      "per": "28.46",
+      "forward_per": "21.56",
       "pbr": "3.32",
-      "distHigh": "-1.7%",
+      "distHigh": "-1.8%",
       "distWeek": "-0.7%",
-      "distMonth": "-1.7%",
+      "distMonth": "-1.8%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
