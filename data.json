@@ -2542,15 +2542,15 @@
         }
       ],
       "market_type": "德股",
-      "price": "275.35",
-      "change": "+2.25 (+0.82%)",
+      "price": "276.00",
+      "change": "+2.90 (+1.06%)",
       "isUp": true,
-      "per": "28.47",
-      "forward_per": "21.58",
-      "pbr": "3.32",
-      "distHigh": "-1.7%",
-      "distWeek": "-0.7%",
-      "distMonth": "-1.7%",
+      "per": "28.54",
+      "forward_per": "21.63",
+      "pbr": "3.33",
+      "distHigh": "-1.5%",
+      "distWeek": "-0.4%",
+      "distMonth": "-1.5%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -3742,6 +3742,430 @@
       "distWeek": "-4.3%",
       "distMonth": "-4.3%",
       "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "7731",
+      "name": "ニコン(尼康)",
+      "sector": "1. 算力芯片+先进封装+存储",
+      "industry": "半导体设备",
+      "feature": "**全球光刻机双雄之一**，与ASML构成光刻机市场双寡头，先进光刻技术布局深厚，日本半导体设备核心厂商",
+      "tags": [
+        "光刻机"
+      ],
+      "tag_themes": [
+        {
+          "tag": "光刻机",
+          "theme_path": [
+            "1. 半导体设备",
+            "光刻机"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "2132.00",
+      "change": "+27.50 (+1.31%)",
+      "isUp": true,
+      "per": "20.13",
+      "forward_per": "20.13",
+      "pbr": "1.20",
+      "distHigh": "-10.8%",
+      "distWeek": "-1.2%",
+      "distMonth": "-4.5%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "LIN",
+      "name": "林德集团",
+      "sector": "1. 算力芯片+先进封装+存储",
+      "industry": "半导体材料",
+      "feature": "**全球工业气体与电子特气龙头**，全球最大工业气体供应商，半导体制造核心特种气体供应商",
+      "tags": [
+        "电子特气"
+      ],
+      "tag_themes": [
+        {
+          "tag": "电子特气",
+          "theme_path": [
+            "2. 半导体材料",
+            "制造材料",
+            "电子特气"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "515.85",
+      "change": "-2.32 (-0.45%)",
+      "isUp": false,
+      "per": "34.21",
+      "forward_per": "26.17",
+      "pbr": "6.19",
+      "distHigh": "-1.9%",
+      "distWeek": "-1.9%",
+      "distMonth": "-1.9%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "4091",
+      "name": "大陽日酸(大阳日酸)",
+      "sector": "1. 算力芯片+先进封装+存储",
+      "industry": "半导体材料",
+      "feature": "**日本电子特气龙头**，高纯度电子特气市占率日本第一，半导体制造关键气体供应商",
+      "tags": [
+        "电子特气"
+      ],
+      "tag_themes": [
+        {
+          "tag": "电子特气",
+          "theme_path": [
+            "2. 半导体材料",
+            "制造材料",
+            "电子特气"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "5567.00",
+      "change": "-23.00 (-0.41%)",
+      "isUp": false,
+      "per": "19.46",
+      "forward_per": "20.12",
+      "pbr": "1.98",
+      "distHigh": "-14.5%",
+      "distWeek": "-3.3%",
+      "distMonth": "-14.5%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "4092",
+      "name": "関東化学(关东化学)",
+      "sector": "1. 算力芯片+先进封装+存储",
+      "industry": "半导体材料",
+      "feature": "**湿电子化学品龙头**，超高纯度化学品全球领先，半导体清洗/刻蚀工序核心材料供应商",
+      "tags": [
+        "湿电子化学品"
+      ],
+      "tag_themes": [
+        {
+          "tag": "湿电子化学品",
+          "theme_path": [
+            "2. 半导体材料",
+            "制造材料",
+            "湿电子化学品"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "5520.00",
+      "change": "+260.00 (+4.94%)",
+      "isUp": true,
+      "per": "16.65",
+      "forward_per": "14.32",
+      "pbr": "0.95",
+      "distHigh": "-13.2%",
+      "distWeek": "-3.8%",
+      "distMonth": "-13.2%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "4901",
+      "name": "富士フイルム(富士胶片)",
+      "sector": "1. 算力芯片+先进封装+存储",
+      "industry": "半导体材料",
+      "feature": "**CMP浆料与光刻胶核心供应商**，半导体材料业务全球领先，CMP浆料市占率居前",
+      "tags": [
+        "抛光材料 (CMP)"
+      ],
+      "tag_themes": [
+        {
+          "tag": "抛光材料 (CMP)",
+          "theme_path": [
+            "2. 半导体材料",
+            "制造材料",
+            "抛光材料 (CMP)"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "3424.00",
+      "change": "+47.00 (+1.39%)",
+      "isUp": true,
+      "per": "15.24",
+      "forward_per": "14.76",
+      "pbr": "1.07",
+      "distHigh": "-9.6%",
+      "distWeek": "-3.2%",
+      "distMonth": "-4.2%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "PLAB",
+      "name": "Photronics(福尼克斯)",
+      "sector": "1. 算力芯片+先进封装+存储",
+      "industry": "半导体材料",
+      "feature": "**全球光掩模龙头之一**，与TOPPAN/大日本印刷并列全球光掩模三巨头，先进制程光掩模核心供应商",
+      "tags": [
+        "掩膜版"
+      ],
+      "tag_themes": [
+        {
+          "tag": "掩膜版",
+          "theme_path": [
+            "2. 半导体材料",
+            "制造材料",
+            "掩膜版"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "31.01",
+      "change": "+0.58 (+1.91%)",
+      "isUp": true,
+      "per": "11.44",
+      "forward_per": "15.31",
+      "pbr": "1.45",
+      "distHigh": "-44.6%",
+      "distWeek": "-8.4%",
+      "distMonth": "-44.4%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "688008",
+      "name": "澜起科技",
+      "sector": "1. 算力芯片+先进封装+存储",
+      "industry": "存储/HBM",
+      "feature": "**全球内存接口芯片龙头**，DDR5内存接口芯片市占率全球领先，津逮服务器CPU国产替代核心标的",
+      "tags": [
+        "内存接口",
+        "CPU"
+      ],
+      "tag_themes": [
+        {
+          "tag": "内存接口",
+          "theme_path": [
+            "4. 高带宽内存",
+            "内存接口"
+          ]
+        },
+        {
+          "tag": "CPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "269.90",
+      "change": "+7.40 (+2.82%)",
+      "isUp": true,
+      "per": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "distWeek": "-2.0%",
+      "distMonth": "-6.5%",
+      "trend": "牛市多头",
+      "source": "sina"
+    },
+    {
+      "code": "688498",
+      "name": "源杰科技",
+      "sector": "3. 高速通信与数据中心",
+      "industry": "光通信/CPO",
+      "feature": "**国产光芯片龙头**，高速激光器芯片技术领先，100G EML光芯片国产替代核心标的，AI数据中心互联上游",
+      "tags": [
+        "光芯片"
+      ],
+      "tag_themes": [
+        {
+          "tag": "光芯片",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "1673.36",
+      "change": "+61.36 (+3.81%)",
+      "isUp": true,
+      "per": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "distWeek": "-2.3%",
+      "distMonth": "-2.3%",
+      "trend": "牛市多头",
+      "source": "sina"
+    },
+    {
+      "code": "ETN",
+      "name": "伊顿",
+      "sector": "3. 高速通信与数据中心",
+      "industry": "能源/电力",
+      "feature": "**全球电力管理巨头**，数据中心UPS/配电系统市占率全球前列，AI数据中心电力基础设施核心供应商",
+      "tags": [
+        "电力系统"
+      ],
+      "tag_themes": [
+        {
+          "tag": "电力系统",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "电力系统"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "409.64",
+      "change": "+1.93 (+0.47%)",
+      "isUp": true,
+      "per": "40.04",
+      "forward_per": "26.06",
+      "pbr": "8.07",
+      "distHigh": "-5.9%",
+      "distWeek": "-2.3%",
+      "distMonth": "-4.0%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "VRT",
+      "name": "Vertiv(维谛技术)",
+      "sector": "3. 高速通信与数据中心",
+      "industry": "能源/电力",
+      "feature": "**数据中心液冷与热管理龙头**，全球数据中心热管理市占率领先，AI算力液冷方案核心供应商",
+      "tags": [
+        "液冷设备",
+        "电力系统"
+      ],
+      "tag_themes": [
+        {
+          "tag": "液冷设备",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "液冷设备"
+          ]
+        },
+        {
+          "tag": "电力系统",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "电力系统"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "317.58",
+      "change": "+17.98 (+6.00%)",
+      "isUp": true,
+      "per": "79.79",
+      "forward_per": "35.88",
+      "pbr": "30.82",
+      "distHigh": "-16.4%",
+      "distWeek": "-3.7%",
+      "distMonth": "-14.2%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "PLTR",
+      "name": "Palantir",
+      "sector": "9. 云・模型・应用",
+      "industry": "云计算/AI底座",
+      "feature": "**AI数据分析龙头**，政府/企业级AI决策平台，AIP平台赋能企业AI转型，AI应用赛道标杆",
+      "tags": [
+        "AI应用"
+      ],
+      "tag_themes": [
+        {
+          "tag": "AI应用",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "130.63",
+      "change": "-2.62 (-1.97%)",
+      "isUp": false,
+      "per": "146.78",
+      "forward_per": "62.79",
+      "pbr": "37.06",
+      "distHigh": "-37.1%",
+      "distWeek": "-4.0%",
+      "distMonth": "-20.2%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "NXPI",
+      "name": "恩智浦",
+      "sector": "1. 算力芯片+先进封装+存储",
+      "industry": "AI处理器/算力芯片",
+      "feature": "**全球汽车与边缘AI SoC龙头**，车载芯片市占率全球前列，AI边缘计算核心方案商",
+      "tags": [
+        "AI SoC"
+      ],
+      "tag_themes": [
+        {
+          "tag": "AI SoC",
+          "theme_path": [
+            "3. 算力芯片",
+            "AI SoC"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "298.20",
+      "change": "-4.69 (-1.55%)",
+      "isUp": false,
+      "per": "28.54",
+      "forward_per": "16.92",
+      "pbr": "6.89",
+      "distHigh": "-12.3%",
+      "distWeek": "-7.1%",
+      "distMonth": "-12.3%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "IPGP",
+      "name": "IPG Photonics",
+      "sector": "1. 算力芯片+先进封装+存储",
+      "industry": "半导体设备",
+      "feature": "**全球光纤激光器龙头**，半导体激光退火设备核心供应商，先进制程关键设备制造商",
+      "tags": [
+        "薄膜沉积设备"
+      ],
+      "tag_themes": [
+        {
+          "tag": "薄膜沉积设备",
+          "theme_path": [
+            "1. 半导体设备",
+            "薄膜沉积设备"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "113.64",
+      "change": "-1.64 (-1.42%)",
+      "isUp": false,
+      "per": "167.12",
+      "forward_per": "49.16",
+      "pbr": "2.28",
+      "distHigh": "-27.1%",
+      "distWeek": "-6.6%",
+      "distMonth": "-15.8%",
+      "trend": "熊市空头",
       "source": "yfinance"
     }
   ],
