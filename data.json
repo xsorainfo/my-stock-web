@@ -8,8 +8,8 @@
     },
     {
       "name": "美元/日元 (汇率)",
-      "price": "160.73",
-      "change": "+0.31 (+0.20%)",
+      "price": "160.75",
+      "change": "+0.33 (+0.21%)",
       "isUp": true
     },
     {
@@ -2300,15 +2300,15 @@
         }
       ],
       "market_type": "德股",
-      "price": "274.20",
-      "change": "+1.10 (+0.40%)",
+      "price": "274.50",
+      "change": "+1.40 (+0.51%)",
       "isUp": true,
-      "per": "28.36",
-      "forward_per": "21.49",
+      "per": "28.39",
+      "forward_per": "21.51",
       "pbr": "3.31",
-      "distHigh": "-2.1%",
-      "distWeek": "-1.1%",
-      "distMonth": "-2.1%",
+      "distHigh": "-2.0%",
+      "distWeek": "-1.0%",
+      "distMonth": "-2.0%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
