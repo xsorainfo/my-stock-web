@@ -364,6 +364,7 @@ def fetch_all_data():
                 "sector": item.get("sector", "未分类板块"),
                 "industry": item["industry"], 
                 "feature": item["feature"],
+                "tags": item.get("tags", []), # 确保这里把配置里的 tags 传给前端
                 "market_type": market_type,
                 "price": f"{current_price:.2f}", 
                 "change": f"{sign}{diff:.2f} ({sign}{percent:.2f}%)", 
