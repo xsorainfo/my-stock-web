@@ -50,8 +50,8 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
 
-        # 调试：查看当前分支状态
-        git status
+        # ⭐ 先拉取远程最新代码（自动合并）
+        git pull origin $(git branch --show-current) --no-rebase
         
         git add data.json
         
