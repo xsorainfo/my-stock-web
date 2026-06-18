@@ -300,8 +300,20 @@
     // 1. 先定义一个生成标签 HTML 的辅助函数
     function renderTags(tags) {
         if (!tags || tags.length === 0) return '';
-        return tags.map(tag => `<span class="stock-tag">${tag}</span>`).join('');
+        return tags.map(tag => `
+            <span class="stock-tag clickable-tag" data-tag="${encodeURIComponent(tag)}" onclick="navigateToTheme('${encodeURIComponent(tag)}')">
+                ${tag}
+            </span>
+        `).join('');
     }
+    
+    // 新增：跳转到 sub_ai.html 并传递 tag 参数
+    function navigateToTheme(tag) {
+        // 解码 tag（因为 encodeURIComponent 会编码特殊字符）
+        const decodedTag = decodeURIComponent(tag);
+        window.location.href = `sub_ai.html?tag=${encodeURIComponent(decodedTag)}`;
+    }
+    
     
     async function loadDashboardData() {
         try {
