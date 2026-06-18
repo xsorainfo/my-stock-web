@@ -50,8 +50,8 @@ WATCHLIST = [
     # 1. 算力芯片+先进封装+存储 (Compute, HBM, Packaging)
     # ============================================================
     # --- 美股 AI处理器/算力芯片 ---
-    {"symbol": "NVDA", "name": "NVIDIA(英伟达)", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**全球AI芯片绝对霸主**，数据中心GPU市占率超80%，CUDA生态壁垒极高，AI训练芯片垄断地位", "tags": ["GPU"]},
-    {"symbol": "AMD", "name": "AMD(超威半导体)", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**GPU算力第二极**，MI300系列AI芯片性能对标NVIDIA，CPU+GPU双轮驱动，数据中心份额持续提升", "tags": ["GPU", "CPU"]},
+    {"symbol": "NVDA", "name": "NVIDIA(英伟达)", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**全球AI芯片绝对霸主（绝对垄断）**，数据中心GPU市占率超80%，CUDA生态壁垒极高，AI训练芯片垄断地位", "tags": ["GPU"]},
+    {"symbol": "AMD", "name": "AMD(超威半导体)", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**GPU市场的“万年老二”（追赶者）**但差距悬殊，MI300系列AI芯片性能对标NVIDIA，CPU+GPU双轮驱动，数据中心份额持续提升，但集成显卡（iGPU）市场仍有显著份额", "tags": ["GPU", "CPU"]},
     {"symbol": "INTC", "name": "英特尔", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**x86架构霸主**，AI加速器Gaudi3性能对标H100，晶圆代工业务转型中，美国芯片法案核心受益者", "tags": ["CPU", "ASIC"]},
     {"symbol": "QCOM", "name": "高通", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**AI端侧芯片龙头**，Android旗舰手机芯片市占率超60%，AI手机与AI PC处理器核心玩家", "tags": ["AI SoC"]},
     {"symbol": "AVGO", "name": "博通", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**AI网络芯片与ASIC龙头**，全球AI数据中心以太网芯片市占率超70%，谷歌TPU核心ASIC设计合作伙伴", "tags": ["ASIC"]},
@@ -59,10 +59,18 @@ WATCHLIST = [
     {"symbol": "ARM", "name": "ARM Holdings", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**全球芯片IP架构霸主**，手机/PC/AI芯片指令集市占率超90%，AI PC与边缘计算核心受益者", "tags": ["CPU"]},
     
     # --- A股 AI处理器/算力芯片 ---
+    # ============================================================
     {"symbol": "002049.SZ", "name": "紫光国微", "market": "A股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**中国特种IC龙头**，FPGA芯片国内领先，智能卡芯片市占率超30%，国产替代核心标的", "tags": ["FPGA"]},
+    # 国产 GPU 四小龙
+    # ============================================================
+    {"symbol": "688802.SH", "name": "沐曦股份", "market": "A股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**国产GPU营收第一**，2025年营收16.44亿元，毛利率56.5%，国产AI训练芯片核心供应商，性能对标NVIDIA A100", "tags": ["GPU", "ASIC"]},
+    {"symbol": "688795.SH", "name": "摩尔线程", "market": "A股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**全功能GPU国产替代龙头**，2025年营收15.06亿元，毛利率约69%，MTT S4000系列AI芯片性能比肩国际主流产品", "tags": ["GPU"]},
+    {"symbol": "06082.HK", "name": "壁仞科技", "market": "A股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**国产高性能GPU标杆**，2025年营收10.35亿元，研发投入占比142.6%，BR100系列AI芯片算力达国际领先水平", "tags": ["GPU", "ASIC"]},
+    {"symbol": "09903.HK", "name": "天数智芯", "market": "A股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**国产GPGPU先行者**，2025年营收10.34亿元，亏损收窄32.1%，天垓100系列AI训练芯片已实现规模化商用", "tags": ["GPU"]},
+
     
     # --- 日股 AI处理器/算力芯片 ---
-    {"symbol": "6723.T", "name": "ルネサス(瑞萨电子)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**车载与工业芯片龙头**，全球MCU市占率超15%，AI边缘计算芯片核心供应商", "tags": ["AI SoC"]},
+    {"symbol": "6723.T", "name": "ルネサス(瑞萨电子)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**车载与工业芯片龙头**，全球MCU市占率超15%，AI边缘计算芯片核心供应商，（非)GPU产业链核心供应商", "tags": ["AI SoC", "GPU"]},
     {"symbol": "6526.T", "name": "ｿｼｵﾈｸｽﾄ(Socionext)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**先进制程SoC设计龙头**，5nm/3nm定制芯片设计能力，AI边缘计算核心方案商", "tags": ["ASIC"]},
     {"symbol": "6963.T", "name": "ローム(罗姆)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**SiC功率模块先驱**，碳化硅功率器件市占率全球前三，AI服务器电源管理核心器件", "tags": ["碳化硅 (SiC)"]},
     {"symbol": "6752.T", "name": "パナソニック(松下)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**工业电池与电子巨头**，AI数据中心储能方案核心供应商，特斯拉电池核心合作伙伴", "tags": ["数据中心架构"]},
@@ -82,8 +90,8 @@ WATCHLIST = [
     {"symbol": "688012.SH", "name": "中微公司", "market": "A股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备", "feature": "**中国刻蚀设备龙头**，CCP刻蚀设备国内市占率超80%，5nm制程设备已进入台积电供应链", "tags": ["刻蚀设备"]},
     
     # --- 日股 半导体设备 ---
-    {"symbol": "8035.T", "name": "東京エレクトロン", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备", "feature": "**全球涂布显影设备龙头**，市占率超80%，刻蚀/沉积全球前三，半导体制造前道工序核心设备供应商", "tags": ["光刻机", "刻蚀设备"]},
-    {"symbol": "6857.T", "name": "アドバンテスト(爱德万)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备", "feature": "**HBM测试机霸主**，DRAM测试设备市占率超50%，AI芯片测试核心设备供应商", "tags": ["量测检测设备"]},
+    {"symbol": "8035.T", "name": "東京エレクトロン", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备", "feature": "**全球涂布显影设备龙头**，市占率超80%，刻蚀/沉积全球前三，半导体制造前道工序核心设备供应商，（非)GPU产业链核心供应商", "tags": ["光刻机", "刻蚀设备", "GPU"]},
+    {"symbol": "6857.T", "name": "アドバンテスト(爱德万)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备", "feature": "**HBM测试机霸主**，DRAM测试设备市占率超50%，AI芯片测试核心设备供应商，（非)GPU产业链核心供应商", "tags": ["量测检测设备", "GPU"]},
     {"symbol": "6146.T", "name": "ディスコ(迪斯科)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备", "feature": "**晶圆切割设备龙头**，全球市占率超70%，先进封装切割设备核心供应商", "tags": ["量测检测设备"]},
     {"symbol": "7735.T", "name": "SCREENホールディングス", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备", "feature": "**晶圆清洗设备龙头**，全球市占率超40%，半导体制造清洗工序核心设备供应商", "tags": ["量测检测设备"]},
     {"symbol": "6525.T", "name": "KOKUSAI ELECTRIC", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "半导体设备", "feature": "**半导体成膜设备核心厂商**，CVD/ALD设备市占率全球前列，逻辑/存储芯片制造核心设备", "tags": ["薄膜沉积设备"]},
