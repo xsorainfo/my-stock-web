@@ -53,7 +53,8 @@ WATCHLIST = [
     {"symbol": "NVDA", "name": "NVIDIA(英伟达)", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**全球AI芯片绝对霸主（绝对垄断）**，数据中心GPU市占率超80%，CUDA生态壁垒极高，AI训练芯片垄断地位。同时以Vera CPU进军CPU市场，成最危险新进入者。Agentic AI时代CPU工作量占比从20%暴增至70-80%", "tags": ["GPU", "CPU"]},
     {"symbol": "AMD", "name": "AMD(超威半导体)", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**GPU市场的万年老二（追赶者）**但差距悬殊，MI300系列AI芯片性能对标NVIDIA，CPU+GPU双轮驱动，数据中心份额持续提升，但集成显卡（iGPU）市场仍有显著份额", "tags": ["GPU", "CPU"]},
     {"symbol": "INTC", "name": "英特尔", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**x86架构霸主-触底反弹**，服务器CPU市占率59%，AI加速器Gaudi3性能对标H100，晶圆代工业务转型中，美国芯片法案核心受益者", "tags": ["CPU", "ASIC"]},
-    {"symbol": "QCOM", "name": "高通", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**AI端侧芯片龙头**，Android旗舰手机芯片市占率超60%，AI手机与AI PC处理器核心玩家", "tags": ["AI SoC"]},
+    {"symbol": "QCOM", "name": "高通", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**AI端ARM PC CPU赛道龙头**，Android旗舰手机芯片市占率超60%，AI手机与AI PC处理器核心玩家,骁龙X Elite PC处理器性能对标苹果M系列，目标到2029年占据非x86 AI笔记本30-50%份额", "tags": ["AI SoC", "CPU"]},
+
     {"symbol": "AVGO", "name": "博通", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**AI网络芯片与ASIC龙头**，全球AI数据中心以太网芯片市占率超70%，谷歌TPU核心ASIC设计合作伙伴", "tags": ["ASIC"]},
     {"symbol": "MRVL", "name": "美满电子", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**数据中心互联与AI芯片核心玩家**，高速SerDes技术领先，AI数据中心互联芯片市占率全球前三", "tags": ["ASIC"]},
     {"symbol": "ARM", "name": "ARM Holdings", "market": "美股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**全球芯片IP架构霸主**，手机/PC/AI芯片指令集市占率超90%，服务器CPU市占率16%,，英伟达Vera/谷歌/亚马逊均采用ARM架构，2030年份额预计达27%,AI PC与边缘计算核心受益者", "tags": ["CPU"]},
@@ -67,10 +68,13 @@ WATCHLIST = [
     # ============================================================
     {"symbol": "688802.SH", "name": "沐曦股份", "market": "A股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**国产GPU营收第一**，2025年营收16.44亿元，毛利率56.5%，国产AI训练芯片核心供应商，性能对标NVIDIA A100", "tags": ["GPU", "ASIC"]},
     {"symbol": "688795.SH", "name": "摩尔线程", "market": "A股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**全功能GPU国产替代龙头**，2025年营收15.06亿元，毛利率约69%，MTT S4000系列AI芯片性能比肩国际主流产品", "tags": ["GPU"]},
+    {"symbol": "688041.SH", "name": "海光信息", "market": "A股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**A股国产CPU第一股**，x86（AMD Zen授权）技术路线，生态兼容性最强，信创服务器CPU主力供应商，国产替代核心受益者", "tags": ["CPU"]},
+    {"symbol": "688047.SH", "name": "龙芯中科", "market": "A股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**完全自主指令集（LoongArch）CPU**，纯国产CPU代表，党政信创核心供应商，摆脱x86/ARM授权束缚", "tags": ["CPU"]},
+    {"symbol": "688262.SH", "name": "国芯科技", "market": "A股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**国内唯一同时掌握三大指令集（RISC-V/PowerPC/M*Core）的嵌入式CPU厂商**，RISC-V第一梯队，车规/工控高可靠CPU龙头，信创替代核心标的", "tags": ["CPU"]},
 
     
     # --- 日股 AI处理器/算力芯片 ---
-    {"symbol": "6723.T", "name": "ルネサス(瑞萨电子)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**车载与工业芯片龙头**，全球MCU市占率超15%，AI边缘计算芯片核心供应商，（非)GPU产业链核心供应商", "tags": ["AI SoC", "GPU"]},
+    {"symbol": "6723.T", "name": "ルネサス(瑞萨电子)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**车载与工业MCU龙头**，全球MCU市占率超15%，ARM生态重要伙伴，AI边缘计算芯片核心供应商,（非)GPU产业链核心供应商", "tags": ["AI SoC", "GPU", "CPU"]},
     {"symbol": "6526.T", "name": "ｿｼｵﾈｸｽﾄ(Socionext)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**先进制程SoC设计龙头**，5nm/3nm定制芯片设计能力，AI边缘计算核心方案商", "tags": ["ASIC"]},
     {"symbol": "6963.T", "name": "ローム(罗姆)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**SiC功率模块先驱**，碳化硅功率器件市占率全球前三，AI服务器电源管理核心器件", "tags": ["碳化硅 (SiC)"]},
     {"symbol": "6752.T", "name": "パナソニック(松下)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**工业电池与电子巨头**，AI数据中心储能方案核心供应商，特斯拉电池核心合作伙伴", "tags": ["数据中心架构"]},
