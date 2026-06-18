@@ -39,6 +39,31 @@
             background: #334155;
             color: #38bdf8;
         }
+
+        /* 容器布局 */
+        .tag-container {
+          display: flex;
+          flex-wrap: wrap; /* 保证如果标签多，会自动换行 */
+          gap: 8px;        /* 标签之间的间距 */
+          margin-top: 10px;
+        }
+        
+        /* 标签样式 */
+        .stock-tag {
+          background-color: #e0f2f1; /* 浅青色背景 */
+          color: #00796b;            /* 深青色文字 */
+          font-size: 12px;
+          font-weight: 500;
+          padding: 3px 8px;
+          border-radius: 4px;        /* 微圆角，符合你现有卡片风格 */
+          border: 1px solid #b2dfdb;
+          white-space: nowrap;
+        }
+
+        /* 示例：不同类别的标签自动变色 */
+        .stock-tag.type-hard { background: #ffebee; color: #c62828; } /* 硬件/设备类 */
+        .stock-tag.type-soft { background: #e3f2fd; color: #1565c0; } /* 软件/数据类 */
+        
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
         body { background-color: var(--bg-color); color: var(--text-main); padding: 24px; line-height: 1.5; }
         .container { max-width: 1400px; margin: 0 auto; }
@@ -352,7 +377,15 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="stock-feature">${formattedFeature}</div>
+                                <div class="card">
+                                    <p class="feature-text">${formattedFeature}</p>
+                                
+                                    <div class="tag-container">
+                                        <span v-for="tag in stock.tags" :key="tag" class="stock-tag">
+                                            {{ tag }}
+                                        </span>
+                                    </div>
+                                </div>
                                 <div class="stock-trend-badge ${trendClass}">${stock.trend}</div>
                                 <div class="price-row">
                                     <div class="stock-price ${colorClass}">${stock.price}</div>
