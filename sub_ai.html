@@ -567,3 +567,431 @@
         </div>
 
         <!-- ===== 右侧内容 ===== -->
+        <div class="content-area" id="contentArea">
+            <div class="page-header">
+                <h2 id="pageTitle">📂 请选择左侧主题</h2>
+                <span class="subtitle" id="stockCount"></span>
+            </div>
+            <div id="stockGridContainer">
+                <div class="empty-state">
+                    <div class="emoji">👈</div>
+                    <p>从左侧选择主题查看对应的股票</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // ============================================================
+        // 1. 全局数据
+        // ============================================================
+        let allStocks = [];
+        let themeMapping = {};
+        let currentSelected = null;
+
+        // ============================================================
+        // 2. 工具函数
+        // ============================================================
+        function getMarketBadge(type) {
+            const map = {
+                '美股': '🇺🇸',
+                '日股': '🇯🇵',
+                'A股': '🇨🇳',
+                '韩股': '🇰🇷',
+                '德股': '🇩🇪'
+            };
+            return map[type] || '🌍';
+        }
+
+        function getYahooUrl(stock) {
+            if (stock.market_type === '日股') {
+                return `https://finance.yahoo.co.jp/quote/${stock.code}`;
+            }
+            if (stock.market_type === 'A股') {
+                const prefix = (stock.code.startsWith('6')) ? 'sh' : 'sz';
+                return `https://finance.sina.com.cn/realstock/company/${prefix}${stock.code}/nc.shtml`;
+            }
+            return `https://finance.yahoo.co.jp/quote/${stock.code}`;
+        }
+
+        function getTradingViewUrl(stock) {
+            if (stock.market_type === '日股') {
+                const cleanCode = stock.code.split('.')[0];
+                return `https://jp.tradingview.com/symbols/TSE-${cleanCode}/`;
+            } else if (stock.market_type === 'A股') {
+                const prefix = stock.code.startsWith('6') ? "SHSE" : "SZSE";
+                return `https://www.tradingview.com/symbols/${prefix}-${stock.code}/`;
+            }
+            return `https://www.tradingview.com/symbols/${stock.code}/`;
+        }
+
+        function judgeValuation(val, type) {
+            if (!val || val === '--' || isNaN(parseFloat(val))) {
+                return '<span class="val-badge val-normal">--</span>';
+            }
+            const num = parseFloat(val);
+            if (type === 'PER' || type === 'forward_per') {
+                if (num > 50) return `<span class="val-badge val-high">${num.toFixed(1)} 高估值</span>`;
+                if (num < 25) return `<span class="val-badge val-low">${num.toFixed(1)} 具性价比</span>`;
+                return `<span class="val-badge val-normal">${num.toFixed(1)} 合理</span>`;
+            } else if (type === 'PBR') {
+                if (num > 15) return `<span class="val-badge val-high">${num.toFixed(1)} 高溢价</span>`;
+                if (num < 3) return `<span class="val-badge val-low">${num.toFixed(1)} 净资产防守</span>`;
+                return `<span class="val-badge val-normal">${num.toFixed(1)} 正常</span>`;
+            }
+            return `<span class="val-badge val-normal">${num}</span>`;
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                console.log('已复制: ' + text);
+            }).catch(err => {
+                console.error('复制失败: ', err);
+            });
+        }
+
+        // ============================================================
+        // 3. 渲染左侧菜单（从 data.json 动态读取 theme_mapping）
+        // ============================================================
+        function renderSidebar(themeMapping, stocks) {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.innerHTML = '';
+
+            // 构建 tag → stocks 索引
+            const tagStockMap = {};
+            stocks.forEach(stock => {
+                if (stock.tag_themes) {
+                    stock.tag_themes.forEach(t => {
+                        if (t.theme_path && t.theme_path.length > 0) {
+                            const tag = t.tag;
+                            if (!tagStockMap[tag]) tagStockMap[tag] = [];
+                            tagStockMap[tag].push(stock);
+                        }
+                    });
+                }
+            });
+
+            // 遍历 THEME_MAPPING
+            for (const [level1Key, level1Value] of Object.entries(themeMapping)) {
+                const menuDiv = document.createElement('div');
+                menuDiv.className = 'menu-level1';
+
+                // ---- 统计该一级下所有标签的股票总数 ----
+                let totalCount = 0;
+                const allTags = [];
+
+                if (Array.isArray(level1Value)) {
+                    level1Value.forEach(tag => {
+                        allTags.push(tag);
+                        if (tagStockMap[tag]) totalCount += tagStockMap[tag].length;
+                    });
+                } else if (typeof level1Value === 'object') {
+                    for (const subKey of Object.keys(level1Value)) {
+                        if (Array.isArray(level1Value[subKey])) {
+                            level1Value[subKey].forEach(tag => {
+                                allTags.push(tag);
+                                if (tagStockMap[tag]) totalCount += tagStockMap[tag].length;
+                            });
+                        }
+                    }
+                }
+
+                // ---- 一级菜单头 ----
+                const header = document.createElement('div');
+                header.className = 'menu-level1-header';
+                header.dataset.level1 = level1Key;
+
+                header.innerHTML = `
+                    <span class="icon">📂</span>
+                    <span>${level1Key}</span>
+                    <span class="count">(${totalCount})</span>
+                    <span class="arrow">▶</span>
+                `;
+
+                header.addEventListener('click', function() {
+                    const container = this.nextElementSibling;
+                    const isOpen = container.classList.contains('open');
+                    container.classList.toggle('open');
+                    this.querySelector('.arrow').classList.toggle('open');
+                    if (!isOpen) {
+                        const firstItem = container.querySelector('.menu-level2-item');
+                        if (firstItem) {
+                            firstItem.click();
+                        }
+                    }
+                });
+
+                menuDiv.appendChild(header);
+
+                // ---- 二级菜单容器 ----
+                const container = document.createElement('div');
+                container.className = 'menu-level2-container';
+
+                if (Array.isArray(level1Value)) {
+                    // 扁平列表
+                    level1Value.forEach(tag => {
+                        const count = tagStockMap[tag] ? tagStockMap[tag].length : 0;
+                        const item = createMenuItem(tag, count, level1Key, tag);
+                        container.appendChild(item);
+                    });
+                } else if (typeof level1Value === 'object') {
+                    // 有二级分组
+                    for (const [subKey, subValue] of Object.entries(level1Value)) {
+                        if (Array.isArray(subValue)) {
+                            const groupLabel = document.createElement('div');
+                            groupLabel.className = 'menu-group-label';
+                            groupLabel.textContent = subKey;
+                            container.appendChild(groupLabel);
+
+                            subValue.forEach(tag => {
+                                const count = tagStockMap[tag] ? tagStockMap[tag].length : 0;
+                                const item = createMenuItem(tag, count, level1Key, tag);
+                                container.appendChild(item);
+                            });
+                        }
+                    }
+                }
+
+                menuDiv.appendChild(container);
+                sidebar.appendChild(menuDiv);
+            }
+
+            // 默认展开第一个一级菜单
+            const firstHeader = sidebar.querySelector('.menu-level1-header');
+            if (firstHeader) {
+                const container = firstHeader.nextElementSibling;
+                container.classList.add('open');
+                firstHeader.querySelector('.arrow').classList.add('open');
+                const firstItem = container.querySelector('.menu-level2-item');
+                if (firstItem) {
+                    firstItem.click();
+                }
+            }
+        }
+
+        function createMenuItem(tag, count, level1Key, level2Key) {
+            const item = document.createElement('div');
+            item.className = 'menu-level2-item';
+            item.dataset.tag = tag;
+            item.dataset.level1 = level1Key;
+            item.dataset.level2 = level2Key;
+
+            item.innerHTML = `
+                <span>🏷️</span>
+                <span>${tag}</span>
+                <span class="count">${count}</span>
+            `;
+
+            item.addEventListener('click', function() {
+                document.querySelectorAll('.menu-level2-item').forEach(el => el.classList.remove('active'));
+                this.classList.add('active');
+
+                const tagName = this.dataset.tag;
+                const level1 = this.dataset.level1;
+
+                currentSelected = { level1, tag: tagName };
+
+                document.getElementById('pageTitle').textContent = `🏷️ ${level1} › ${tagName}`;
+                displayStocksByTag(tagName);
+            });
+
+            return item;
+        }
+
+        // ============================================================
+        // 4. 显示股票
+        // ============================================================
+        function displayStocksByTag(tagName) {
+            const container = document.getElementById('stockGridContainer');
+            const countEl = document.getElementById('stockCount');
+
+            const matched = allStocks.filter(stock => {
+                if (!stock.tag_themes) return false;
+                return stock.tag_themes.some(t => t.tag === tagName && t.theme_path && t.theme_path.length > 0);
+            });
+
+            countEl.textContent = `共 ${matched.length} 只标的`;
+
+            if (matched.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="emoji">🔍</div>
+                        <p>该主题下暂无匹配的股票</p>
+                    </div>
+                `;
+                return;
+            }
+
+            let html = '<div class="stock-grid">';
+            matched.forEach(stock => {
+                const colorClass = stock.isUp ? 'text-up' : 'text-down';
+                const trendClass = stock.trend === '牛市多头' ? 'trend-up-bg' : 'trend-down-bg';
+                const formattedFeature = stock.feature.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+
+                html += `
+                    <div class="stock-card">
+                        <div class="stock-header">
+                            <div class="stock-title">
+                                <a href="${getYahooUrl(stock)}" target="_blank" style="text-decoration: none; color: inherit;">
+                                    <h3>${getMarketBadge(stock.market_type)} ${stock.name}</h3>
+                                </a>
+                                <span class="industry-tag">${stock.industry || '其他'}</span>
+                            </div>
+                            <div class="stock-actions">
+                                <span class="stock-code" onclick="copyToClipboard('${stock.code}')" title="点击复制代码">
+                                    ${stock.code}
+                                </span>
+                                <a href="${getTradingViewUrl(stock)}" target="_blank" class="tv-link" title="在 TradingView 查看走势">
+                                    📈
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="stock-feature">${formattedFeature}</div>
+
+                        <div class="tag-container">
+                            ${stock.tags ? stock.tags.map(t => `<span class="stock-tag">${t}</span>`).join('') : ''}
+                            ${stock.tag_themes ? stock.tag_themes.map(t => {
+                                if (t.theme_path && t.theme_path.length > 0) {
+                                    return `<span class="stock-tag theme-tag" title="${t.theme_path.join(' > ')}">${t.theme_path.join(' › ')}</span>`;
+                                }
+                                return '';
+                            }).join('') : ''}
+                        </div>
+
+                        <div class="stock-trend-badge ${trendClass}">${stock.trend}</div>
+
+                        <div class="price-row">
+                            <div class="stock-price ${colorClass}">${stock.price}</div>
+                            <div class="stock-change ${colorClass}">${stock.change}</div>
+                        </div>
+
+                        <table class="metrics-table" style="margin-bottom: 6px;">
+                            <thead>
+                                <tr>
+                                    <th style="width: 33%;">PER 估值</th>
+                                    <th style="width: 34%;">预想 PER</th>
+                                    <th style="width: 33%;">PBR 溢价</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>${judgeValuation(stock.per, 'PER')}</td>
+                                    <td>${judgeValuation(stock.forward_per, 'forward_per')}</td>
+                                    <td>${judgeValuation(stock.pbr, 'PBR')}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="metrics-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 33.33%;">距1周高</th>
+                                    <th style="width: 33.33%;">距1月高</th>
+                                    <th style="width: 33.33%;">距52周高</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="font-weight: 600; color: #1e293b; font-size: 12px;">
+                                    <td>${stock.distWeek || '--'}</td>
+                                    <td>${stock.distMonth || '--'}</td>
+                                    <td>${stock.distHigh || '--'}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                `;
+            });
+            html += '</div>';
+
+            container.innerHTML = html;
+        }
+
+        // ============================================================
+        // 5. 加载数据（从 data.json 读取 theme_mapping）
+        // ============================================================
+        async function loadData() {
+            try {
+                const response = await fetch('data.json?v=' + new Date().getTime());
+                if (!response.ok) throw new Error('数据加载失败');
+                const data = await response.json();
+
+                allStocks = data.stocks || [];
+                themeMapping = data.theme_mapping || {};
+
+                if (Object.keys(themeMapping).length === 0) {
+                    // 如果 data.json 中没有 theme_mapping，使用默认值（向后兼容）
+                    console.warn('data.json 中未找到 theme_mapping，使用默认值');
+                    themeMapping = {
+                        "1. 半导体设备": ["光刻机", "刻蚀设备", "薄膜沉积设备", "量测检测设备"],
+                        "2. 半导体材料": {
+                            "制造材料": ["硅基材料 (硅片)", "光刻胶及配套", "电子特气", "湿电子化学品", "抛光材料 (CMP)", "靶材", "掩膜版"],
+                            "封装及基板": ["封装基板 (ABF/BT)", "引线框架", "芯片粘接材料", "PCB", "铜箔"],
+                            "无源及核心功能": ["MLCC"],
+                            "第三代半导体": ["碳化硅 (SiC)", "氮化镓 (GaN)"]
+                        },
+                        "3. 算力芯片": ["GPU", "ASIC", "CPU", "FPGA", "AI SoC"],
+                        "4. 高带宽内存": ["HBM", "GDDR6", "SRAM", "内存接口"],
+                        "5. 先进封装": ["2.5D封装", "3D封装", "Chiplet", "封装材料"],
+                        "6. 网络互联": ["NVLink/NVSwitch", "InfiniBand", "RoCE", "PCIe"],
+                        "7. 光通信": ["光模块", "光芯片", "光纤光缆", "硅光子"],
+                        "8. 电力・液冷・数据中心": ["电力系统", "液冷设备", "数据中心架构"],
+                        "9. 云・模型・应用": ["云服务IaaS", "基础模型", "AI应用", "智能体Agent"]
+                    };
+                }
+
+                renderSidebar(themeMapping, allStocks);
+
+            } catch (error) {
+                console.error('加载数据失败:', error);
+                document.getElementById('stockGridContainer').innerHTML = `
+                    <div class="empty-state">
+                        <div class="emoji">⚠️</div>
+                        <p>数据加载失败，请刷新重试</p>
+                    </div>
+                `;
+            }
+        }
+
+        // ============================================================
+        // 6. 刷新功能
+        // ============================================================
+        document.getElementById('cloudRefreshBtn').addEventListener('click', async function() {
+            const btn = this;
+            if (btn.disabled) return;
+            btn.disabled = true;
+            btn.innerText = "正在发送指令...";
+            try {
+                const res = await fetch('/api/refresh', { method: 'POST' });
+                if (res.ok) {
+                    let s = 45;
+                    btn.innerText = `🔄 等待 ${s}s 后刷新...`;
+                    const t = setInterval(() => {
+                        s--;
+                        if (s > 0) btn.innerText = `🔄 等待 ${s}s 后刷新...`;
+                        else { clearInterval(t);
+                            window.location.reload(); }
+                    }, 1000);
+                } else {
+                    btn.disabled = false;
+                    btn.innerText = '🔄 召唤云端强刷';
+                    alert("刷新请求失败");
+                }
+            } catch (e) {
+                btn.disabled = false;
+                btn.innerText = '🔄 召唤云端强刷';
+                alert("网络错误");
+            }
+        });
+
+        // ============================================================
+        // 7. 启动
+        // ============================================================
+        document.addEventListener('DOMContentLoaded', loadData);
+
+        window.copyToClipboard = copyToClipboard;
+    </script>
+
+</body>
+</html>
