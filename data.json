@@ -2339,17 +2339,17 @@
       "code": "6779",
       "name": "日本電波工業",
       "sector": "2. 半导体材料",
-      "industry": "封装基板",
+      "industry": "MLCC",
       "feature": "**频率控制元件龙头**，晶振市占率全球前列，AI服务器时钟器件核心供应商",
       "tags": [
-        "封装基板"
+        "MLCC"
       ],
       "tag_themes": [
         {
-          "tag": "封装基板",
+          "tag": "MLCC",
           "theme_path": [
             "2. 半导体材料",
-            "封装基板"
+            "MLCC"
           ]
         }
       ],
@@ -2370,17 +2370,17 @@
       "code": "6997",
       "name": "日本ケミコン(日本化工)",
       "sector": "2. 半导体材料",
-      "industry": "封装基板",
+      "industry": "MLCC",
       "feature": "**铝电解电容龙头**，全球市占率超20%，AI服务器电源滤波核心器件",
       "tags": [
-        "封装基板"
+        "MLCC"
       ],
       "tag_themes": [
         {
-          "tag": "封装基板",
+          "tag": "MLCC",
           "theme_path": [
             "2. 半导体材料",
-            "封装基板"
+            "MLCC"
           ]
         }
       ],
@@ -2585,7 +2585,10 @@
       "tag_themes": [
         {
           "tag": "PCB",
-          "theme_path": []
+          "theme_path": [
+            "2. 半导体材料",
+            "PCB"
+          ]
         }
       ],
       "market_type": "日股",
@@ -3557,7 +3560,10 @@
       "tag_themes": [
         {
           "tag": "MLCC",
-          "theme_path": []
+          "theme_path": [
+            "2. 半导体材料",
+            "MLCC"
+          ]
         }
       ],
       "market_type": "日股",
@@ -3585,7 +3591,10 @@
       "tag_themes": [
         {
           "tag": "MLCC",
-          "theme_path": []
+          "theme_path": [
+            "2. 半导体材料",
+            "MLCC"
+          ]
         }
       ],
       "market_type": "日股",
@@ -3613,7 +3622,10 @@
       "tag_themes": [
         {
           "tag": "MLCC",
-          "theme_path": []
+          "theme_path": [
+            "2. 半导体材料",
+            "MLCC"
+          ]
         }
       ],
       "market_type": "日股",
@@ -4425,7 +4437,9 @@
       "EMC塑封料",
       "ABF载板",
       "导电胶",
-      "绝缘膜"
+      "绝缘膜",
+      "MLCC",
+      "PCB"
     ],
     "3. 算力芯片": [
       "GPU",
