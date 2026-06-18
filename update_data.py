@@ -5,7 +5,72 @@ import random
 import os
 import requests
 
-from config import MACRO_LIST, WATCHLIST, DEFAULT_STRATEGY, SOURCE_MAP
+from config import MACRO_LIST, WATCHLIST, DEFAULT_STRATEGY, SOURCE_MAP, THEME_MAPPING
+
+
+def build_tag_theme_mapping(theme_mapping):
+    """
+    根据 THEME_MAPPING 构建 tag → theme_path 的映射字典
+    
+    返回格式:
+    {
+        "光刻机": ["1. 半导体设备", "光刻机"],
+        "硅基材料 (硅片)": ["2. 半导体材料", "制造材料", "硅基材料 (硅片)"],
+        "光刻胶及配套": ["2. 半导体材料", "制造材料", "光刻胶及配套"],
+        ...
+    }
+    """
+    tag_map = {}
+    
+    if not theme_mapping:
+        return tag_map
+    
+    for theme_name, theme_value in theme_mapping.items():
+        # 一级分类是 list（简单列表）
+        if isinstance(theme_value, list):
+            for tag in theme_value:
+                if tag not in tag_map:
+                    tag_map[tag] = [theme_name, tag]
+        
+        # 一级分类是 dict（有二级分类）
+        elif isinstance(theme_value, dict):
+            for sub_theme_name, sub_theme_value in theme_value.items():
+                if isinstance(sub_theme_value, list):
+                    for tag in sub_theme_value:
+                        if tag not in tag_map:
+                            tag_map[tag] = [theme_name, sub_theme_name, tag]
+    
+    return tag_map
+
+
+# 全局构建 tag → theme_path 映射（在模块加载时执行一次）
+TAG_THEME_MAP = build_tag_theme_mapping(THEME_MAPPING)
+
+
+def get_theme_paths_for_tags(tags, tag_theme_map):
+    """
+    根据 tags 列表，返回每个 tag 对应的 theme_path
+    
+    返回格式:
+    [
+        {"tag": "光刻机", "theme_path": ["1. 半导体设备", "光刻机"]},
+        {"tag": "硅基材料 (硅片)", "theme_path": ["2. 半导体材料", "制造材料", "硅基材料 (硅片)"]},
+        {"tag": "GPU", "theme_path": []},  # 没有匹配
+    ]
+    """
+    result = []
+    if not tags:
+        return result
+    
+    for tag in tags:
+        theme_path = tag_theme_map.get(tag, [])
+        result.append({
+            "tag": tag,
+            "theme_path": theme_path
+        })
+    
+    return result
+
 
 class StockDataManager:
     def __init__(self, cache_file='stock_cache.json'):
@@ -42,7 +107,6 @@ class StockDataManager:
             
             # 判断市场
             market = 'sh' if symbol.endswith(('.SH', '.SS')) else 'sz'
-            
             url = f"https://hq.sinajs.cn/list={market}{clean_code}"
             headers = {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
@@ -173,10 +237,8 @@ class StockDataManager:
             # 使用 yfinance 获取 A 股历史数据
             ticker = yf.Ticker(f"{clean_code}.SS")
             hist = ticker.history(period=period)
-            
             if hist is not None and not hist.empty:
                 return hist
-            
             return None
         except Exception as e:
             print(f"获取历史数据失败: {e}")
@@ -189,7 +251,6 @@ class StockDataManager:
                 print(f"命中缓存: {symbol}")
                 return self.cache[symbol]['data'], "cache"
 
-        is_a_stock = symbol.endswith(('.SS', '.SZ', '.SH'))
         strategy_order = SOURCE_MAP.get(symbol, DEFAULT_STRATEGY)
         
         for source in strategy_order:
@@ -215,6 +276,20 @@ def make_ai_news(stock_data):
     return (f"【盘后策略官·自动决策】：今日全球硬科技标的整体呈现 {market_breadth} 态势。 "
             f"当前重点观察：PER TTM 估值在 {stock_data[0]['per']} 附近的垄断类资产， "
             f"配合距52周高位的 {stock_data[0]['distHigh']} 回撤，市场已进入结构性调仓阶段。")
+
+
+def get_market_type(symbol):
+    """根据代码后缀判断市场类型"""
+    if symbol.endswith('.T'):
+        return "日股"
+    elif symbol.endswith(('.SS', '.SZ', '.SH')):
+        return "A股"
+    elif symbol.endswith('.KS'):
+        return "韩股"
+    elif symbol.endswith('.DE'):
+        return "德股"
+    else:
+        return "美股"
 
 
 def fetch_all_data():
@@ -252,17 +327,7 @@ def fetch_all_data():
     # 2. 抓取自选个股数据
     for item in WATCHLIST:
         symbol = item["symbol"]
-
-        # 判断市场类型
-        if symbol.endswith('.T'):
-            market_type = "日股"
-            is_us = False
-        elif symbol.endswith('.SS') or symbol.endswith('.SZ') or symbol.endswith('.SH') or ('.' not in symbol and len(symbol) == 6):
-            market_type = "A股"
-            is_us = False
-        else:
-            market_type = "美股"
-            is_us = True
+        market_type = get_market_type(symbol)
 
         # 核心分流
         if market_type == "A股":
@@ -270,7 +335,7 @@ def fetch_all_data():
             stock = None
         else:
             stock = yf.Ticker(symbol, session=session)
-            info, source = manager.get_data(stock, symbol, is_us)
+            info, source = manager.get_data(stock, symbol, market_type == "美股")
             
         if not info: 
             print(f"⚠️ 跳过 {item['name']}: 无法获取数据")
@@ -358,13 +423,27 @@ def fetch_all_data():
             ma20 = h_df['Close'].tail(20).mean() if len(h_df) >= 20 else current_price
             trend_label = "牛市多头" if current_price >= ma20 else "熊市空头"
 
-            output_data["stocks"].append({
+            # ⭐⭐⭐ 核心修改：为每个 tag 单独查找 theme_path ⭐⭐⭐
+            tags = item.get("tags", [])
+            tag_theme_list = get_theme_paths_for_tags(tags, TAG_THEME_MAP)
+            
+            # 调试输出
+            if tag_theme_list:
+                for t in tag_theme_list:
+                    if t["theme_path"]:
+                        print(f"  ✅ {item['name']} → {t['tag']} → {' > '.join(t['theme_path'])}")
+                    else:
+                        print(f"  ⚠️ {item['name']} → {t['tag']} → 未找到主题映射")
+
+            # 构建股票数据对象
+            stock_entry = {
                 "code": symbol.split('.')[0] if '.' in symbol else symbol,
                 "name": item["name"], 
                 "sector": item.get("sector", "未分类板块"),
-                "industry": item["industry"], 
+                "industry": item.get("industry", "其他"),
                 "feature": item["feature"],
-                "tags": item.get("tags", []), # 确保这里把配置里的 tags 传给前端
+                "tags": tags,
+                "tag_themes": tag_theme_list,  # ⭐ 新增：每个 tag 及其对应的 theme_path
                 "market_type": market_type,
                 "price": f"{current_price:.2f}", 
                 "change": f"{sign}{diff:.2f} ({sign}{percent:.2f}%)", 
@@ -378,7 +457,9 @@ def fetch_all_data():
                 "trend": trend_label,
                 "source": source,
                 "is_us": is_us
-            })
+            }
+            
+            output_data["stocks"].append(stock_entry)
             
             time.sleep(random.uniform(0.1, 0.2))
             
@@ -393,6 +474,7 @@ def fetch_all_data():
     with open('data.json', 'w', encoding='utf-8') as f:
         json.dump(output_data, f, ensure_ascii=False, indent=2)
     print("🎉 数据打包成功！")
+
 
 if __name__ == "__main__":
     fetch_all_data()
