@@ -456,7 +456,6 @@ def fetch_all_data():
                 "distMonth": dist_month_str,     
                 "trend": trend_label,
                 "source": source,
-                "is_us": is_us
             }
             
             output_data["stocks"].append(stock_entry)
