@@ -8,8 +8,8 @@
     },
     {
       "name": "美元/日元 (汇率)",
-      "price": "160.82",
-      "change": "+0.40 (+0.25%)",
+      "price": "160.87",
+      "change": "+0.45 (+0.28%)",
       "isUp": true
     },
     {
@@ -31,7 +31,7 @@
       "name": "NVIDIA(英伟达)",
       "sector": "1. 算力芯片+先进封装+存储",
       "industry": "AI处理器/算力芯片",
-      "feature": "**全球AI芯片绝对霸主**，数据中心GPU市占率超80%，CUDA生态壁垒极高，AI训练芯片垄断地位",
+      "feature": "**全球AI芯片绝对霸主（绝对垄断）**，数据中心GPU市占率超80%，CUDA生态壁垒极高，AI训练芯片垄断地位",
       "tags": [
         "GPU"
       ],
@@ -62,7 +62,7 @@
       "name": "AMD(超威半导体)",
       "sector": "1. 算力芯片+先进封装+存储",
       "industry": "AI处理器/算力芯片",
-      "feature": "**GPU算力第二极**，MI300系列AI芯片性能对标NVIDIA，CPU+GPU双轮驱动，数据中心份额持续提升",
+      "feature": "**GPU市场的“万年老二”（追赶者）**但差距悬殊，MI300系列AI芯片性能对标NVIDIA，CPU+GPU双轮驱动，数据中心份额持续提升，但集成显卡（iGPU）市场仍有显著份额",
       "tags": [
         "GPU",
         "CPU"
@@ -260,13 +260,84 @@
       "source": "yfinance"
     },
     {
+      "code": "688802",
+      "name": "沐曦股份",
+      "sector": "1. 算力芯片+先进封装+存储",
+      "industry": "AI处理器/算力芯片",
+      "feature": "**国产GPU营收第一**，2025年营收16.44亿元，毛利率56.5%，国产AI训练芯片核心供应商，性能对标NVIDIA A100",
+      "tags": [
+        "GPU",
+        "ASIC"
+      ],
+      "tag_themes": [
+        {
+          "tag": "GPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "GPU"
+          ]
+        },
+        {
+          "tag": "ASIC",
+          "theme_path": [
+            "3. 算力芯片",
+            "ASIC"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "769.89",
+      "change": "+37.39 (+5.10%)",
+      "isUp": true,
+      "per": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "distWeek": "-2.4%",
+      "distMonth": "-6.1%",
+      "trend": "牛市多头",
+      "source": "sina"
+    },
+    {
+      "code": "688795",
+      "name": "摩尔线程",
+      "sector": "1. 算力芯片+先进封装+存储",
+      "industry": "AI处理器/算力芯片",
+      "feature": "**全功能GPU国产替代龙头**，2025年营收15.06亿元，毛利率约69%，MTT S4000系列AI芯片性能比肩国际主流产品",
+      "tags": [
+        "GPU"
+      ],
+      "tag_themes": [
+        {
+          "tag": "GPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "GPU"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "669.00",
+      "change": "+30.00 (+4.69%)",
+      "isUp": true,
+      "per": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "distWeek": "-1.0%",
+      "distMonth": "-10.6%",
+      "trend": "牛市多头",
+      "source": "sina"
+    },
+    {
       "code": "6723",
       "name": "ルネサス(瑞萨电子)",
       "sector": "1. 算力芯片+先进封装+存储",
       "industry": "AI处理器/算力芯片",
-      "feature": "**车载与工业芯片龙头**，全球MCU市占率超15%，AI边缘计算芯片核心供应商",
+      "feature": "**车载与工业芯片龙头**，全球MCU市占率超15%，AI边缘计算芯片核心供应商，（非)GPU产业链核心供应商",
       "tags": [
-        "AI SoC"
+        "AI SoC",
+        "GPU"
       ],
       "tag_themes": [
         {
@@ -274,6 +345,13 @@
           "theme_path": [
             "3. 算力芯片",
             "AI SoC"
+          ]
+        },
+        {
+          "tag": "GPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "GPU"
           ]
         }
       ],
@@ -715,10 +793,11 @@
       "name": "東京エレクトロン",
       "sector": "1. 算力芯片+先进封装+存储",
       "industry": "半导体设备",
-      "feature": "**全球涂布显影设备龙头**，市占率超80%，刻蚀/沉积全球前三，半导体制造前道工序核心设备供应商",
+      "feature": "**全球涂布显影设备龙头**，市占率超80%，刻蚀/沉积全球前三，半导体制造前道工序核心设备供应商，（非)GPU产业链核心供应商",
       "tags": [
         "光刻机",
-        "刻蚀设备"
+        "刻蚀设备",
+        "GPU"
       ],
       "tag_themes": [
         {
@@ -733,6 +812,13 @@
           "theme_path": [
             "1. 半导体设备",
             "刻蚀设备"
+          ]
+        },
+        {
+          "tag": "GPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "GPU"
           ]
         }
       ],
@@ -754,9 +840,10 @@
       "name": "アドバンテスト(爱德万)",
       "sector": "1. 算力芯片+先进封装+存储",
       "industry": "半导体设备",
-      "feature": "**HBM测试机霸主**，DRAM测试设备市占率超50%，AI芯片测试核心设备供应商",
+      "feature": "**HBM测试机霸主**，DRAM测试设备市占率超50%，AI芯片测试核心设备供应商，（非)GPU产业链核心供应商",
       "tags": [
-        "量测检测设备"
+        "量测检测设备",
+        "GPU"
       ],
       "tag_themes": [
         {
@@ -764,6 +851,13 @@
           "theme_path": [
             "1. 半导体设备",
             "量测检测设备"
+          ]
+        },
+        {
+          "tag": "GPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "GPU"
           ]
         }
       ],
@@ -2300,15 +2394,15 @@
         }
       ],
       "market_type": "德股",
-      "price": "274.90",
-      "change": "+1.80 (+0.66%)",
+      "price": "275.55",
+      "change": "+2.45 (+0.90%)",
       "isUp": true,
-      "per": "28.43",
-      "forward_per": "21.54",
-      "pbr": "3.32",
-      "distHigh": "-1.9%",
-      "distWeek": "-0.8%",
-      "distMonth": "-1.9%",
+      "per": "28.50",
+      "forward_per": "21.59",
+      "pbr": "3.33",
+      "distHigh": "-1.7%",
+      "distWeek": "-0.6%",
+      "distMonth": "-1.7%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
