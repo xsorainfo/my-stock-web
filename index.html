@@ -296,6 +296,12 @@
         // 美股默认直接跳转
         return `https://www.tradingview.com/symbols/${stock.code}/`;
     };
+
+    // 1. 先定义一个生成标签 HTML 的辅助函数
+    function renderTags(tags) {
+        if (!tags || tags.length === 0) return '';
+        return tags.map(tag => `<span class="stock-tag">${tag}</span>`).join('');
+    }
     
     async function loadDashboardData() {
         try {
@@ -344,6 +350,8 @@
                     return acc;
                 }, {});
 
+                
+
                 // 遍历每个 industry
                 for (const [industry, industryStocks] of Object.entries(industryGroups)) {
                     const industryDiv = document.createElement('div');
@@ -377,10 +385,12 @@
                                         </a>
                                     </div>
                                 </div>
+
                                 
                                 <div class="card">
                                     <p class="feature-text">${formattedFeature}</p>
-                                    <div class="tag-container" id="tags-${stock.code.replace('.', '_')}">
+                                    <div class="tag-container">
+                                        ${renderTags(stock.tags)}
                                     </div>
                                 </div>
                                 <div class="stock-trend-badge ${trendClass}">${stock.trend}</div>
@@ -424,25 +434,7 @@
                                 </table>
                             </div>`;
                     });
-
-                    // 1. 先定义一个生成标签 HTML 的辅助函数
-                    function renderTags(tags) {
-                        if (!tags || tags.length === 0) return '';
-                        return tags.map(tag => `<span class="stock-tag">${tag}</span>`).join('');
-                    }
-                    
-                    // 2. 在循环渲染 grid.innerHTML += `...` 之后，直接填入标签内容
-                    // 确保你的 stock 对象里有 tags 字段
-                    industryStocks.forEach(stock => {
-                        // ... 前面的代码不变 ...
-                        grid.innerHTML += `
-                            <div class="stock-card">
-                                <div class="tag-container">
-                                    ${renderTags(stock.tags)}
-                                </div>
-                                </div>`;
-                    });
-                                        
+  
                     
                     industryDiv.appendChild(grid);
                     sectorDiv.appendChild(industryDiv);
