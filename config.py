@@ -63,7 +63,7 @@ WATCHLIST = [
     
     # --- 日股 AI处理器/算力芯片 ---
     {"symbol": "6723.T", "name": "ルネサス(瑞萨电子)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**车载与工业芯片龙头**，全球MCU市占率超15%，AI边缘计算芯片核心供应商", "tags": ["AI SoC"]},
-    {"symbol": "6526.T", "name": "ソシオネクスト(Socionext)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**先进制程SoC设计龙头**，5nm/3nm定制芯片设计能力，AI边缘计算核心方案商", "tags": ["ASIC"]},
+    {"symbol": "6526.T", "name": "ｿｼｵﾈｸｽﾄ(Socionext)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**先进制程SoC设计龙头**，5nm/3nm定制芯片设计能力，AI边缘计算核心方案商", "tags": ["ASIC"]},
     {"symbol": "6963.T", "name": "ローム(罗姆)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**SiC功率模块先驱**，碳化硅功率器件市占率全球前三，AI服务器电源管理核心器件", "tags": ["碳化硅 (SiC)"]},
     {"symbol": "6752.T", "name": "パナソニック(松下)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**工业电池与电子巨头**，AI数据中心储能方案核心供应商，特斯拉电池核心合作伙伴", "tags": ["数据中心架构"]},
     {"symbol": "6701.T", "name": "NEC(日本电气)", "market": "日股", "sector": "1. 算力芯片+先进封装+存储", "industry": "AI处理器/算力芯片", "feature": "**AI系统与网络基础设施巨头**，日本AI算力网络核心建设者，生物识别技术全球领先", "tags": ["AI应用"]},
