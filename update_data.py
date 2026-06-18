@@ -16,7 +16,6 @@ def build_tag_theme_mapping(theme_mapping):
     {
         "光刻机": ["1. 半导体设备", "光刻机"],
         "硅基材料 (硅片)": ["2. 半导体材料", "制造材料", "硅基材料 (硅片)"],
-        "光刻胶及配套": ["2. 半导体材料", "制造材料", "光刻胶及配套"],
         ...
     }
     """
@@ -54,8 +53,7 @@ def get_theme_paths_for_tags(tags, tag_theme_map):
     返回格式:
     [
         {"tag": "光刻机", "theme_path": ["1. 半导体设备", "光刻机"]},
-        {"tag": "硅基材料 (硅片)", "theme_path": ["2. 半导体材料", "制造材料", "硅基材料 (硅片)"]},
-        {"tag": "GPU", "theme_path": []},  # 没有匹配
+        {"tag": "GPU", "theme_path": []},
     ]
     """
     result = []
@@ -293,7 +291,12 @@ def get_market_type(symbol):
 
 
 def fetch_all_data():
-    output_data = {"macro": [], "stocks": [], "ai_report": ""}
+    output_data = {
+        "macro": [],
+        "stocks": [],
+        "ai_report": "",
+        "theme_mapping": THEME_MAPPING  # ⭐ 新增：把主题映射写入 data.json
+    }
     
     session = requests.Session()
     session.headers.update({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'})
@@ -423,7 +426,7 @@ def fetch_all_data():
             ma20 = h_df['Close'].tail(20).mean() if len(h_df) >= 20 else current_price
             trend_label = "牛市多头" if current_price >= ma20 else "熊市空头"
 
-            # ⭐⭐⭐ 核心修改：为每个 tag 单独查找 theme_path ⭐⭐⭐
+            # ⭐ 为每个 tag 单独查找 theme_path
             tags = item.get("tags", [])
             tag_theme_list = get_theme_paths_for_tags(tags, TAG_THEME_MAP)
             
@@ -443,7 +446,7 @@ def fetch_all_data():
                 "industry": item.get("industry", "其他"),
                 "feature": item["feature"],
                 "tags": tags,
-                "tag_themes": tag_theme_list,  # ⭐ 新增：每个 tag 及其对应的 theme_path
+                "tag_themes": tag_theme_list,
                 "market_type": market_type,
                 "price": f"{current_price:.2f}", 
                 "change": f"{sign}{diff:.2f} ({sign}{percent:.2f}%)", 
