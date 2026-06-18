@@ -60,6 +60,24 @@
           white-space: nowrap;
         }
 
+        /* 在 index.html 的 style 中添加 */
+        .stock-tag.clickable-tag {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .stock-tag.clickable-tag:hover {
+            background: #2563eb;
+            color: #ffffff;
+            border-color: #2563eb;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+        }
+        
+        .stock-tag.clickable-tag:active {
+            transform: scale(0.95);
+        }
+
         /* 示例：不同类别的标签自动变色 */
         .stock-tag.type-hard { background: #ffebee; color: #c62828; } /* 硬件/设备类 */
         .stock-tag.type-soft { background: #e3f2fd; color: #1565c0; } /* 软件/数据类 */
