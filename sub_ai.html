@@ -626,6 +626,7 @@
             return `https://www.tradingview.com/symbols/${stock.code}/`;
         }
 
+
         function judgeValuation(val, type) {
             if (!val || val === '--' || isNaN(parseFloat(val))) {
                 return '<span class="val-badge val-normal">--</span>';
@@ -909,6 +910,86 @@
         }
 
         // ============================================================
+        // 在 sub_ai.html 的 JavaScript 中添加以下代码
+        // ============================================================
+        
+        // 新增：从 URL 获取 tag 参数
+        function getTagFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('tag');
+        }
+        
+        // 新增：根据 tag 自动展开并选中菜单
+        function autoSelectTag(tagName, themeMapping) {
+            if (!tagName || !themeMapping) return false;
+        
+            // 遍历 themeMapping 查找包含该 tag 的菜单
+            for (const [level1Key, level1Value] of Object.entries(themeMapping)) {
+                let found = false;
+                let level2Key = null;
+        
+                // 检查 tag 是否属于当前一级菜单
+                if (Array.isArray(level1Value)) {
+                    if (level1Value.includes(tagName)) {
+                        found = true;
+                    }
+                } else if (typeof level1Value === 'object') {
+                    for (const [subKey, subValue] of Object.entries(level1Value)) {
+                        if (Array.isArray(subValue) && subValue.includes(tagName)) {
+                            found = true;
+                            level2Key = subKey;
+                            break;
+                        }
+                    }
+                }
+        
+                if (found) {
+                    // 找到对应的菜单项，展开并高亮
+                    const sidebar = document.getElementById('sidebar');
+                    
+                    // 找到对应的一级菜单 header
+                    const headers = sidebar.querySelectorAll('.menu-level1-header');
+                    for (const header of headers) {
+                        if (header.dataset.level1 === level1Key) {
+                            // 展开一级菜单
+                            const container = header.nextElementSibling;
+                            if (container) {
+                                container.classList.add('open');
+                                header.querySelector('.arrow').classList.add('open');
+                            }
+                            
+                            // 查找并点击对应的二级菜单项
+                            const items = container ? container.querySelectorAll('.menu-level2-item') : [];
+                            for (const item of items) {
+                                if (item.dataset.tag === tagName) {
+                                    // 延迟执行，确保 DOM 已更新
+                                    setTimeout(() => {
+                                        item.click();
+                                        // 滚动到该菜单项
+                                        item.scrollIntoView({ block: 'center', behavior: 'smooth' });
+                                    }, 100);
+                                    return true;
+                                }
+                            }
+                            
+                            // 如果没找到精确匹配，但 tag 确实属于这个一级菜单
+                            // 可能是扁平列表（没有二级分类），尝试点击第一个二级项
+                            if (items.length > 0) {
+                                setTimeout(() => {
+                                    items[0].click();
+                                }, 100);
+                                return true;
+                            }
+                        }
+                    }
+                }
+            }
+        
+            return false;
+        }
+
+        
+        // ============================================================
         // 5. 加载数据（从 data.json 读取 theme_mapping）
         // ============================================================
         async function loadData() {
@@ -916,12 +997,11 @@
                 const response = await fetch('data.json?v=' + new Date().getTime());
                 if (!response.ok) throw new Error('数据加载失败');
                 const data = await response.json();
-
+        
                 allStocks = data.stocks || [];
                 themeMapping = data.theme_mapping || {};
-
+        
                 if (Object.keys(themeMapping).length === 0) {
-                    // 如果 data.json 中没有 theme_mapping，使用默认值（向后兼容）
                     console.warn('data.json 中未找到 theme_mapping，使用默认值');
                     themeMapping = {
                         "1. 半导体设备": ["光刻机", "刻蚀设备", "薄膜沉积设备", "量测检测设备"],
@@ -940,9 +1020,28 @@
                         "9. 云・模型・应用": ["云服务IaaS", "基础模型", "AI应用", "智能体Agent"]
                     };
                 }
-
+        
                 renderSidebar(themeMapping, allStocks);
-
+        
+                // ⭐ 从 URL 获取 tag 参数并自动选中
+                const tagFromURL = getTagFromURL();
+                if (tagFromURL) {
+                    setTimeout(() => {
+                        const success = autoSelectTag(tagFromURL, themeMapping);
+                        if (!success) {
+                            document.getElementById('pageTitle').textContent = `🔍 未找到主题: ${tagFromURL}`;
+                            document.getElementById('stockCount').textContent = '';
+                            document.getElementById('stockGridContainer').innerHTML = `
+                                <div class="empty-state">
+                                    <div class="emoji">🔍</div>
+                                    <p>未找到「${tagFromURL}」对应的主题</p>
+                                    <p style="font-size: 13px; color: #94a3b8; margin-top: 8px;">请从左侧菜单选择</p>
+                                </div>
+                            `;
+                        }
+                    }, 200);
+                }
+        
             } catch (error) {
                 console.error('加载数据失败:', error);
                 document.getElementById('stockGridContainer').innerHTML = `
@@ -953,6 +1052,7 @@
                 `;
             }
         }
+
 
         // ============================================================
         // 6. 刷新功能
