@@ -8,8 +8,8 @@
     },
     {
       "name": "美元/日元 (汇率)",
-      "price": "160.75",
-      "change": "+0.33 (+0.21%)",
+      "price": "160.82",
+      "change": "+0.40 (+0.25%)",
       "isUp": true
     },
     {
@@ -292,7 +292,7 @@
     },
     {
       "code": "6526",
-      "name": "ソシオネクスト(Socionext)",
+      "name": "ｿｼｵﾈｸｽﾄ(Socionext)",
       "sector": "1. 算力芯片+先进封装+存储",
       "industry": "AI处理器/算力芯片",
       "feature": "**先进制程SoC设计龙头**，5nm/3nm定制芯片设计能力，AI边缘计算核心方案商",
@@ -448,7 +448,7 @@
     },
     {
       "code": "6740",
-      "name": "ｼﾞｬﾊﾟﾝﾃﾞｨｽﾌﾟﾚｲ(日本显示器)",
+      "name": "JapanDisplay(日本显示器)",
       "sector": "1. 算力芯片+先进封装+存储",
       "industry": "AI处理器/算力芯片",
       "feature": "**车载与中小尺寸显示龙头**，车用OLED市占率全球前三，AI人机交互显示核心供应商",
@@ -2300,15 +2300,15 @@
         }
       ],
       "market_type": "德股",
-      "price": "274.50",
-      "change": "+1.40 (+0.51%)",
+      "price": "274.90",
+      "change": "+1.80 (+0.66%)",
       "isUp": true,
-      "per": "28.39",
-      "forward_per": "21.51",
-      "pbr": "3.31",
-      "distHigh": "-2.0%",
-      "distWeek": "-1.0%",
-      "distMonth": "-2.0%",
+      "per": "28.43",
+      "forward_per": "21.54",
+      "pbr": "3.32",
+      "distHigh": "-1.9%",
+      "distWeek": "-0.8%",
+      "distMonth": "-1.9%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
