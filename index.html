@@ -418,9 +418,7 @@
                                 <div class="stock-feature">${formattedFeature}</div>
                                 
                                 <div class="card">
-                                    <!-- 原有的 tags 展示 -->
-                                    ${stock.tags.map(tag => `<span class="stock-tag">${tag}</span>`).join(' ')}
-                                    
+                                    ${renderTags(stock.tags)}
                                 </div>
 
                                 <div class="stock-trend-badge ${trendClass}">${stock.trend}</div>
