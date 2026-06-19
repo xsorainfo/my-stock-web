@@ -220,11 +220,12 @@
     </style>
 </head>
 <body>
-
+<!-- 导航栏占位符 -->
+<div id="navbar-placeholder"></div>
 <div class="container">
     <header>
         <h1>🖥️ 全球 AI 硬科技决策终端</h1>
-        <button class="refresh-btn" id="cloudRefreshBtn">🔄 召唤云端强刷</button>
+        //<button class="refresh-btn" id="cloudRefreshBtn">🔄 召唤云端强刷</button>
     </header>
     <nav class="top-navbar">
         <div class="nav-logo">→</div>
@@ -244,7 +245,10 @@
     <h2 class="section-title">AI 半导体与全要素核心标的集群</h2>
     <div id="industryContainer"></div>
 </div>
-
+    
+<!-- 在 <script> 最前面引入导航栏组件 -->
+<script src="components/navbar.js"></script>
+    
 <script>
     function judgeValuation(val, type) {
         if (!val || val === '--' || isNaN(parseFloat(val))) return '<span class="val-badge val-normal">--</span>';
