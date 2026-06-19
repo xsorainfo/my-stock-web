@@ -86,16 +86,39 @@
             color: #475569;
         }
         
-        .markdown-body ul, .markdown-body ol {
+        /* 列表样式 */
+        .markdown-body ul {
+            padding-left: 20px;
+            margin-bottom: 12px;
+            list-style-type: disc;
+        }
+        
+        .markdown-body ul ul {
             padding-left: 24px;
-            margin-bottom: 16px;
+            list-style-type: circle;
+        }
+        
+        .markdown-body ul ul ul {
+            padding-left: 24px;
+            list-style-type: square;
+        }
+        
+        .markdown-body ol {
+            padding-left: 20px;
+            margin-bottom: 12px;
         }
         
         .markdown-body li {
-            margin-bottom: 4px;
+            margin-bottom: 2px;
             color: #475569;
+            line-height: 1.7;
         }
         
+        .markdown-body li strong {
+            color: #0f172a;
+        }
+        
+        /* 表格样式 */
         .markdown-body table {
             width: 100%;
             border-collapse: collapse;
@@ -126,6 +149,7 @@
             background: #f1f5f9;
         }
         
+        /* 引用块 */
         .markdown-body blockquote {
             border-left: 4px solid #2563eb;
             padding: 8px 16px;
@@ -135,6 +159,7 @@
             color: #1e40af;
         }
         
+        /* 行内代码 */
         .markdown-body code {
             background: #f1f5f9;
             padding: 2px 6px;
@@ -144,19 +169,26 @@
             font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
         }
         
+        /* ⭐ 代码块 - 浅色背景 */
         .markdown-body pre {
-            background: #1e293b;
-            padding: 16px 20px;
+            background: #f1f5f9;
+            padding: 20px 24px;
             border-radius: 8px;
             overflow-x: auto;
             margin: 16px 0;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            border: 1px solid #e2e8f0;
         }
         
         .markdown-body pre code {
             background: transparent;
-            color: #e2e8f0;
+            color: #1e293b;
             padding: 0;
             font-size: 13px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
         }
         
         .markdown-body hr {
@@ -168,16 +200,6 @@
         .markdown-body strong {
             color: #0f172a;
             font-weight: 700;
-        }
-        
-        .markdown-body .emoji {
-            font-size: 16px;
-        }
-        
-        /* 代码块中的表格特殊处理 */
-        .markdown-body pre:has(code) {
-            background: #1e293b;
-            color: #e2e8f0;
         }
         
         /* 加载状态 */
@@ -251,6 +273,10 @@
             .markdown-body table td {
                 padding: 6px 8px;
             }
+            .markdown-body pre {
+                padding: 12px 16px;
+                font-size: 12px;
+            }
         }
         
         @media (max-width: 480px) {
@@ -267,6 +293,10 @@
             .markdown-body table th,
             .markdown-body table td {
                 padding: 4px 6px;
+            }
+            .markdown-body pre {
+                padding: 8px 12px;
+                font-size: 11px;
             }
         }
     </style>
@@ -294,17 +324,20 @@
             const container = document.getElementById('markdown-content');
             
             try {
-                // 加载 Markdown 文件
                 const response = await fetch('SEMICONDUCTOR_INDUSTRY.md?v=' + new Date().getTime());
                 
                 if (!response.ok) {
                     throw new Error('文件加载失败 (HTTP ' + response.status + ')');
                 }
                 
-                const markdownText = await response.text();
+                let markdownText = await response.text();
                 
-                // 使用 marked 将 Markdown 渲染为 HTML
-                const htmlContent = marked.parse(markdownText);
+                const htmlContent = marked.parse(markdownText, {
+                    gfm: true,
+                    breaks: true,
+                    pedantic: false,
+                    smartLists: true
+                });
                 
                 container.innerHTML = `
                     <div class="markdown-body">
@@ -328,7 +361,6 @@
             }
         }
 
-        // 页面加载后执行
         document.addEventListener('DOMContentLoaded', loadSemiconductorIndustry);
     </script>
 
