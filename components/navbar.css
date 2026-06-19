@@ -1,0 +1,99 @@
+/* components/navbar.css - 共通导航栏样式 */
+
+.top-navbar {
+    display: flex;
+    background: #1e293b;
+    padding: 0 30px;
+    height: 64px;
+    color: #f8fafc;
+    align-items: center;
+    border-bottom: 2px solid #334155;
+    flex-shrink: 0;
+}
+
+.nav-logo {
+    font-size: 18px;
+    font-weight: 700;
+    color: #38bdf8;
+    margin-right: 20px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-item {
+    color: #94a3b8;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.3s;
+    font-size: 14px;
+}
+
+.nav-item:hover {
+    background: #334155;
+    color: #38bdf8;
+}
+
+.nav-item.active {
+    color: #38bdf8;
+    background: #334155;
+    border-bottom: 2px solid #38bdf8;
+}
+
+.nav-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.refresh-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.refresh-btn:hover:not(:disabled) {
+    background-color: #1d4ed8;
+}
+
+.refresh-btn:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .top-navbar {
+        padding: 0 16px;
+    }
+    .nav-item {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-logo {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .nav-item {
+        padding: 4px 8px;
+        font-size: 11px;
+    }
+    .refresh-btn {
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+}
