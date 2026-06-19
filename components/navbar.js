@@ -9,7 +9,7 @@ function loadNavbar() {
                 <a href="index.html" class="nav-item" data-page="index">首页</a>
                 <a href="sub_ai.html" class="nav-item" data-page="sub_ai" target="_blank">テーマ別</a>
                 <a href="settings.html" class="nav-item" data-page="settings">策略配置</a>
-                <a href="WATCHLIST_SUMMARY.md" class="nav-item" data-page="summary" target="_blank">📊 标的总结</a>
+                <a href="watchlist_summary.html" class="nav-item" data-page="summary" target="_blank">📊 标的总结</a>
             </div>
             <div class="nav-right">
                 <button class="refresh-btn" id="cloudRefreshBtn">🔄 召唤云端强刷</button>
@@ -28,7 +28,8 @@ function loadNavbar() {
     const pageMap = {
         'index.html': 'index',
         'sub_ai.html': 'sub_ai',
-        'settings.html': 'settings'
+        'settings.html': 'settings',
+        'watchlist_summary.html': 'summary'
     };
     const currentKey = pageMap[currentPage] || 'index';
 
