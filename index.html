@@ -481,24 +481,7 @@
             console.error('复制失败: ', err);
         });
     }
-    document.getElementById('cloudRefreshBtn').addEventListener('click', async function() {
-        const btn = this;
-        if (btn.disabled) return;
-        btn.disabled = true;
-        btn.innerText = "正在发送指令...";
-        try {
-            const res = await fetch('/api/refresh', { method: 'POST' });
-            if (res.ok) {
-                let s = 45;
-                btn.innerText = `🔄 等待 ${s}s 后刷新...`;
-                const t = setInterval(() => {
-                    s--;
-                    if (s > 0) btn.innerText = `🔄 等待 ${s}s 后刷新...`;
-                    else { clearInterval(t); window.location.reload(); }
-                }, 1000);
-            } else { btn.disabled = false; btn.innerText = '🔄 召唤云端强刷'; alert("失败"); }
-        } catch (e) { btn.disabled = false; btn.innerText = '🔄 召唤云端强刷'; alert("错误"); }
-    });
+    
 
     window.onload = loadDashboardData;
 </script>
