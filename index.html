@@ -17,7 +17,6 @@
             --border-color: #e2e8f0;
         }
 
-
         /* 容器布局 */
         .tag-container {
           display: flex;
@@ -55,46 +54,124 @@
         .stock-tag.clickable-tag:active {
             transform: scale(0.95);
         }
-
+        
         /* 示例：不同类别的标签自动变色 */
-        .stock-tag.type-hard { background: #ffebee; color: #c62828; } /* 硬件/设备类 */
-        .stock-tag.type-soft { background: #e3f2fd; color: #1565c0; } /* 软件/数据类 */
+        .stock-tag.type-hard { background: #ffebee; color: #c62828; }
+        .stock-tag.type-soft { background: #e3f2fd; color: #1565c0; }
         
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
-        body { background-color: var(--bg-color); color: var(--text-main); padding: 24px; line-height: 1.5; }
-        .container { max-width: 1400px; margin: 0 auto; }
-        header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border-color); }
-        header h1 { font-size: 24px; font-weight: 700; color: #0f172a; }
-        .ai-briefboard { background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%); border: 1px solid #bfdbfe; border-radius: 12px; padding: 20px; margin-bottom: 28px; }
-        .ai-title { font-weight: 600; color: #1e40af; font-size: 15px; margin-bottom: 8px; }
-        .ai-content { font-size: 14px; color: #334155; }
-        .macro-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 32px; }
-        .macro-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 10px; padding: 16px; }
-        .macro-name { font-size: 13px; color: var(--text-muted); margin-bottom: 6px; }
-        .macro-price { font-size: 22px; font-weight: 700; }
-        .section-title { font-size: 18px; font-weight: 700; margin-bottom: 16px; padding-left: 8px; border-left: 4px solid #2563eb; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
         
-        /* 一级分组标题样式 - sector */
-        .sector-section { margin-bottom: 40px; }
-        .sector-title { 
-            font-size: 20px; 
-            font-weight: 700; 
-            color: #0f172a; 
-            margin-bottom: 16px; 
-            padding: 10px 16px; 
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            padding: 24px;
+            line-height: 1.5;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+        
+        .ai-briefboard {
+            background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%);
+            border: 1px solid #bfdbfe;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 28px;
+        }
+        
+        .ai-title {
+            font-weight: 600;
+            color: #1e40af;
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+        
+        .ai-content {
+            font-size: 14px;
+            color: #334155;
+        }
+        
+        .macro-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        
+        .macro-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 16px;
+        }
+        
+        .macro-name {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+        
+        .macro-price {
+            font-size: 22px;
+            font-weight: 700;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            padding-left: 8px;
+            border-left: 4px solid #2563eb;
+        }
+        
+        .sector-section {
+            margin-bottom: 40px;
+        }
+        
+        .sector-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 16px;
+            padding: 10px 16px;
             background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
             border-radius: 8px;
             border-left: 4px solid #2563eb;
             color: #ffffff;
         }
-        
         /* 二级分组标题样式 - industry */
-        .industry-section { margin-bottom: 28px; margin-left: 16px; }
-        .industry-title { 
-            font-size: 16px; 
-            color: #1e293b; 
-            margin-bottom: 14px; 
-            padding-left: 12px; 
+        .industry-section {
+            margin-bottom: 28px;
+            margin-left: 16px;
+        }
+        
+        .industry-title {
+            font-size: 16px;
+            color: #1e293b;
+            margin-bottom: 14px;
+            padding-left: 12px;
             border-left: 3px solid #64748b;
             font-weight: 600;
             background: #f1f5f9;
@@ -102,11 +179,42 @@
             border-radius: 4px;
         }
         
-        .stock-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
-        .stock-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
-        .stock-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
-        .stock-title h3 { font-size: 16px; font-weight: 700; }
-        .stock-industry { font-size: 11px; color: #2563eb; background: #eff6ff; padding: 2px 6px; border-radius: 4px; margin-top: 4px; display: inline-block; }
+        .stock-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+        }
+        
+        .stock-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        
+        .stock-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+        
+        .stock-title h3 {
+            font-size: 16px;
+            font-weight: 700;
+        }
+        
+        .stock-industry {
+            font-size: 11px;
+            color: #2563eb;
+            background: #eff6ff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-top: 4px;
+            display: inline-block;
+        }
+        
         .stock-code {
             font-size: 11px;
             font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
@@ -162,14 +270,15 @@
             transform: translateY(-1px);
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .stock-feature { 
-            font-size: 12px; 
-            color: #64748b; 
-            background: #f8fafc; 
-            padding: 8px; 
-            border-radius: 6px; 
-            margin-bottom: 14px; 
-            min-height: 52px; 
+        
+        .stock-feature {
+            font-size: 12px;
+            color: #64748b;
+            background: #f8fafc;
+            padding: 8px;
+            border-radius: 6px;
+            margin-bottom: 14px;
+            min-height: 52px;
         }
         
         /* 关键：给加粗文字定义高亮色 */
@@ -178,38 +287,104 @@
             font-weight: 700;    /* 加粗 */
         }
         
-        .stock-trend-badge { font-size: 11px; font-weight: 600; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 12px; }
-        .trend-up-bg { background: #fee2e2; color: #b91c1c; }
-        .trend-down-bg { background: #d1fae5; color: #065f46; }
-        .price-row { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 12px; }
-        .stock-price { font-size: 26px; font-weight: 600; }
-        .text-up { color: var(--up-color); }
-        .text-down { color: var(--down-color); }
-        .val-badge { font-size: 11px; padding: 2px 6px; border-radius: 4px; font-weight: bold; display: inline-block; margin-top: 2px; }
-        .val-high { background: #fee2e2; color: #ef4444; }
-        .val-low { background: #d1fae5; color: #10b981; }
-        .val-normal { background: #f1f5f9; color: #64748b; }
-        .metrics-table { width: 100%; border-collapse: collapse; font-size: 11px; color: #64748b; text-align: center; }
-        .metrics-table th { font-weight: normal; padding: 4px 2px; background: #f8fafc; color: #64748b; }
-        .metrics-table td { padding: 6px 2px 4px 2px; }
+        .stock-trend-badge {
+            font-size: 11px;
+            font-weight: 600;
+            padding: 2px 6px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+        
+        .trend-up-bg {
+            background: #fee2e2;
+            color: #b91c1c;
+        }
+        
+        .trend-down-bg {
+            background: #d1fae5;
+            color: #065f46;
+        }
+        
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 12px;
+        }
+        
+        .stock-price {
+            font-size: 26px;
+            font-weight: 600;
+        }
+        
+        .text-up {
+            color: var(--up-color);
+        }
+        
+        .text-down {
+            color: var(--down-color);
+        }
+        
+        .val-badge {
+            font-size: 11px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 2px;
+        }
+        
+        .val-high {
+            background: #fee2e2;
+            color: #ef4444;
+        }
+        
+        .val-low {
+            background: #d1fae5;
+            color: #10b981;
+        }
+        
+        .val-normal {
+            background: #f1f5f9;
+            color: #64748b;
+        }
+        
+        .metrics-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11px;
+            color: #64748b;
+            text-align: center;
+        }
+        
+        .metrics-table th {
+            font-weight: normal;
+            padding: 4px 2px;
+            background: #f8fafc;
+            color: #64748b;
+        }
+        
+        .metrics-table td {
+            padding: 6px 2px 4px 2px;
+        }
     </style>
 </head>
 <body>
-<!-- 导航栏占位符 -->
-<div id="navbar-placeholder"></div>
-<div class="container">
+    <!-- 导航栏占位符 -->
+    <div id="navbar-placeholder"></div>
     
-    <div class="ai-briefboard">
-        <div class="ai-title">🤖 首席硬科技策略师 · 盘后多头思维复盘</div>
-        <div class="ai-content" id="aiReport">正在读取策略官核心简报流...</div>
+    <div class="container">
+        <div class="ai-briefboard">
+            <div class="ai-title">🤖 首席硬科技策略师 · 盘后多头思维复盘</div>
+            <div class="ai-content" id="aiReport">正在读取策略官核心简报流...</div>
+        </div>
+
+        <div class="macro-grid" id="macroGrid"></div>
+
+        <h2 class="section-title">AI 半导体与全要素核心标的集群</h2>
+        <div id="industryContainer"></div>
     </div>
-
-    <div class="macro-grid" id="macroGrid"></div>
-
-    <h2 class="section-title">AI 半导体与全要素核心标的集群</h2>
-    <div id="industryContainer"></div>
-</div>
-    
 <!-- 在 <script> 最前面引入导航栏组件 -->
 <script src="components/navbar.js"></script>
     
@@ -457,6 +632,5 @@
     
 
     window.onload = loadDashboardData;
-</script>
-</body>
+</script></body>
 </html>
