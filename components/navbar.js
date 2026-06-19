@@ -7,7 +7,7 @@ function loadNavbar() {
             <div class="nav-logo">🖥️</div>
             <div class="nav-links">
                 <a href="index.html" class="nav-item" data-page="index">首页</a>
-                <a href="sub_ai.html" class="nav-item" data-page="sub_ai">テーマ別</a>
+                <a href="sub_ai.html" class="nav-item" data-page="sub_ai" target="_blank">テーマ別</a>
                 <a href="settings.html" class="nav-item" data-page="settings">策略配置</a>
             </div>
             <div class="nav-right">
@@ -37,7 +37,7 @@ function loadNavbar() {
         }
     });
 
-    // 绑定刷新按钮事件（如果页面有刷新功能）
+    // 绑定刷新按钮事件
     const refreshBtn = document.getElementById('cloudRefreshBtn');
     if (refreshBtn) {
         refreshBtn.addEventListener('click', async function() {
@@ -69,5 +69,9 @@ function loadNavbar() {
     }
 }
 
-// 页面加载完成后自动执行
-document.addEventListener('DOMContentLoaded', loadNavbar);
+// 确保 DOM 完全加载后再执行
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadNavbar);
+} else {
+    loadNavbar();
+}
