@@ -43,7 +43,15 @@
     background: #334155;
     border-bottom: 2px solid #38bdf8;
 }
+/* ⭐ 新增：总结文档特殊样式（可选） */
+.nav-item[data-page="summary"] {
+    /* 可以加个特殊颜色标识 */
+}
 
+.nav-item[data-page="summary"]:hover {
+    background: #334155;
+    color: #fbbf24;  /* 金色，突出显示 */
+}
 .nav-right {
     margin-left: auto;
     display: flex;
