@@ -341,14 +341,22 @@
     
     <script>
         // ============================================================
-        // 文件名 → 显示名称 映射
+        // 从 JSON 文件加载文档标题映射
         // ============================================================
-        const DOC_TITLES = {
-            'WATCHLIST_SUMMARY': '📌📝标的总结',
-            'SEMICONDUCTOR_INDUSTRY': '📌📝半导体产业链全景',
-            // ⭐ 新增文档在这里添加
-            // 'ANOTHER_DOC': '📌 另一个文档标题',
-        };
+        let DOC_TITLES = {};
+
+        async function loadDocTitles() {
+            try {
+                const response = await fetch('docs_index.json?v=' + new Date().getTime());
+                if (response.ok) {
+                    DOC_TITLES = await response.json();
+                } else {
+                    console.warn('docs_index.json 加载失败，使用默认空映射');
+                }
+            } catch (e) {
+                console.warn('docs_index.json 读取失败:', e);
+            }
+        }
 
         // ============================================================
         // 从 URL 获取文件名参数
@@ -364,6 +372,9 @@
         async function loadDoc() {
             const container = document.getElementById('markdown-content');
             const titleEl = document.getElementById('docTitle');
+            
+            // ⭐ 先加载标题映射
+            await loadDocTitles();
             
             const docName = getDocNameFromURL();
             
@@ -381,7 +392,7 @@
                 return;
             }
             
-            // 更新标题
+            // 从 JSON 获取标题，如果没有则使用文件名
             const displayName = DOC_TITLES[docName] || `📄 ${docName}`;
             titleEl.textContent = displayName;
             
