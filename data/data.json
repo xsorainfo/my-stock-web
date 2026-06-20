@@ -2,27 +2,27 @@
   "macro": [
     {
       "name": "费城半导体指数",
-      "price": "14341.78",
-      "change": "+864.71 (+6.42%)",
+      "price": "13477.07",
+      "change": "+182.85 (+1.38%)",
       "isUp": true
     },
     {
       "name": "美元/日元 (汇率)",
-      "price": "161.28",
-      "change": "+0.68 (+0.42%)",
-      "isUp": true
+      "price": "161.27",
+      "change": "-0.01 (-0.01%)",
+      "isUp": false
     },
     {
       "name": "日经 225",
       "price": "71250.06",
-      "change": "+196.57 (+0.28%)",
+      "change": "+1347.81 (+1.93%)",
       "isUp": true
     },
     {
       "name": "标普 500",
-      "price": "7500.58",
-      "change": "+80.48 (+1.08%)",
-      "isUp": true
+      "price": "7420.10",
+      "change": "-91.25 (-1.21%)",
+      "isUp": false
     }
   ],
   "stocks": [
@@ -926,10 +926,41 @@
       "isUp": true,
       "per": "39.74",
       "forward_per": "23.51",
-      "pbr": "70.69",
+      "pbr": "102.76",
       "distHigh": "-0.7%",
       "distWeek": "-0.7%",
       "distMonth": "-0.7%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "ACLS",
+      "name": "Axcelis Technologies",
+      "sector": "1. 半导体设备",
+      "industry": "离子注入",
+      "feature": "**全球离子注入机龙头**，市占率仅次于应用材料，先进制程离子注入设备核心供应商，AI芯片制造关键设备",
+      "tags": [
+        "离子注入机"
+      ],
+      "tag_themes": [
+        {
+          "tag": "离子注入机",
+          "theme_path": [
+            "1. 半导体设备",
+            "离子注入机"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "187.53",
+      "change": "+12.08 (+6.89%)",
+      "isUp": true,
+      "per": "58.24",
+      "forward_per": "40.45",
+      "pbr": "5.52",
+      "distHigh": "-3.2%",
+      "distWeek": "-3.2%",
+      "distMonth": "-3.2%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -1609,15 +1640,15 @@
         }
       ],
       "market_type": "美股",
-      "price": "512.15",
-      "change": "-3.70 (-0.72%)",
+      "price": "515.85",
+      "change": "-2.32 (-0.45%)",
       "isUp": false,
       "per": "33.96",
       "forward_per": "25.98",
       "pbr": "6.14",
-      "distHigh": "-2.6%",
-      "distWeek": "-2.6%",
-      "distMonth": "-2.6%",
+      "distHigh": "-1.9%",
+      "distWeek": "-1.9%",
+      "distMonth": "-1.9%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -1649,6 +1680,68 @@
       "distHigh": "-39.9%",
       "distWeek": "-0.6%",
       "distMonth": "-39.7%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "HOG",
+      "name": "Hoya Corporation(豪雅)",
+      "sector": "2. 半导体材料",
+      "industry": "光刻基板",
+      "feature": "**光刻基板全球龙头**，光掩膜基板(Mask Blank)市占率全球领先，EUV光刻核心材料供应商，与AGC并列双雄",
+      "tags": [
+        "光刻基板"
+      ],
+      "tag_themes": [
+        {
+          "tag": "光刻基板",
+          "theme_path": [
+            "2. 半导体材料",
+            "光刻基板"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "25.41",
+      "change": "-0.21 (-0.82%)",
+      "isUp": false,
+      "per": "13.30",
+      "forward_per": "13.55",
+      "pbr": "0.88",
+      "distHigh": "-18.7%",
+      "distWeek": "-4.0%",
+      "distMonth": "-4.0%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "BAS",
+      "name": "巴斯夫",
+      "sector": "2. 半导体材料",
+      "industry": "高纯化学品",
+      "feature": "**全球高纯化学品龙头**，半导体级高纯试剂/电子化学品全球领先，晶圆清洗/刻蚀工序核心材料供应商",
+      "tags": [
+        "高纯化学品"
+      ],
+      "tag_themes": [
+        {
+          "tag": "高纯化学品",
+          "theme_path": [
+            "2. 半导体材料",
+            "高纯化学品"
+          ]
+        }
+      ],
+      "market_type": "德股",
+      "price": "49.01",
+      "change": "+0.47 (+0.97%)",
+      "isUp": true,
+      "per": "28.83",
+      "forward_per": "16.59",
+      "pbr": "1.26",
+      "distHigh": "-11.0%",
+      "distWeek": "-2.0%",
+      "distMonth": "-7.8%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -2773,6 +2866,37 @@
       "source": "sina"
     },
     {
+      "code": "RGTI",
+      "name": "Rambus",
+      "sector": "1. 算力芯片+先进封装+存储",
+      "industry": "存储/HBM",
+      "feature": "**内存接口与IP龙头**，DDR5内存接口IP全球领先，HBM内存控制器IP核心供应商，AI数据中心内存方案商",
+      "tags": [
+        "内存接口"
+      ],
+      "tag_themes": [
+        {
+          "tag": "内存接口",
+          "theme_path": [
+            "4. 高带宽内存",
+            "内存接口"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "21.36",
+      "change": "+1.11 (+5.51%)",
+      "isUp": true,
+      "per": "-105.05",
+      "forward_per": "-105.05",
+      "pbr": "12.16",
+      "distHigh": "-63.3%",
+      "distWeek": "-9.4%",
+      "distMonth": "-23.9%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
       "code": "ROK",
       "name": "罗克韦尔自动化",
       "sector": "2. 工业自动化与机器人",
@@ -2791,15 +2915,15 @@
         }
       ],
       "market_type": "美股",
-      "price": "473.79",
-      "change": "+15.10 (+3.29%)",
-      "isUp": true,
+      "price": "458.69",
+      "change": "-7.62 (-1.63%)",
+      "isUp": false,
       "per": "49.10",
       "forward_per": "32.61",
       "pbr": "14.97",
-      "distHigh": "-0.4%",
-      "distWeek": "-0.4%",
-      "distMonth": "-0.4%",
+      "distHigh": "-3.6%",
+      "distWeek": "-3.4%",
+      "distMonth": "-3.4%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -3730,15 +3854,15 @@
         }
       ],
       "market_type": "美股",
-      "price": "336.20",
-      "change": "+13.26 (+4.11%)",
+      "price": "322.94",
+      "change": "+6.30 (+1.99%)",
       "isUp": true,
       "per": "36.35",
       "forward_per": "32.64",
-      "pbr": "6.66",
-      "distHigh": "-3.0%",
-      "distWeek": "-3.0%",
-      "distMonth": "-3.0%",
+      "pbr": "6.71",
+      "distHigh": "-6.8%",
+      "distWeek": "-4.7%",
+      "distMonth": "-6.0%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -4296,15 +4420,15 @@
         }
       ],
       "market_type": "美股",
-      "price": "55.00",
-      "change": "+1.53 (+2.86%)",
-      "isUp": true,
+      "price": "53.47",
+      "change": "-0.21 (-0.39%)",
+      "isUp": false,
       "per": "29.89",
       "forward_per": "23.45",
-      "pbr": "5.74",
-      "distHigh": "-14.5%",
-      "distWeek": "-0.7%",
-      "distMonth": "-0.7%",
+      "pbr": "5.73",
+      "distHigh": "-16.9%",
+      "distWeek": "-1.5%",
+      "distMonth": "-1.5%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -4412,6 +4536,7 @@
       "ALD设备",
       "清洗设备",
       "CMP设备",
+      "离子注入机",
       "离子注入机",
       "热处理炉管",
       "检测设备",
