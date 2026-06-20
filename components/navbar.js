@@ -1,6 +1,10 @@
 // components/navbar.js
 // 共通导航栏组件
 
+// ⭐ 添加这一行：获取网站根路径
+const basePath = window.location.origin;
+
+
 function loadNavbar() {
     const navbarHTML = `
         <nav class="top-navbar">
