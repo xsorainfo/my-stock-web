@@ -1073,7 +1073,7 @@
         // ============================================================
         async function loadData() {
             try {
-                const response = await fetch('/data.json?v=' + new Date().getTime());
+                const response = await fetch('/data/data.json?v=' + new Date().getTime());
                 if (!response.ok) throw new Error('数据加载失败');
                 const data = await response.json();
         
