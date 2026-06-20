@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>™️ Watchlist总结</title>
     
-    <!-- ⭐ 引入共通导航栏样式 -->
-    <link rel="stylesheet" href="components/navbar.css">
-    
-    <!-- ⭐ 引入 Markdown 渲染库 (marked.js) -->
+    <!-- ⭐ 路径需要回到上一级 -->
+    <link rel="stylesheet" href="../components/navbar.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     
     <style>
@@ -40,7 +38,6 @@
             border: 1px solid #e2e8f0;
         }
         
-        /* ===== Markdown 内容样式 ===== */
         .markdown-body {
             font-size: 15px;
             color: #1e293b;
@@ -73,20 +70,12 @@
             margin-bottom: 12px;
         }
         
-        .markdown-body h4 {
-            font-size: 15px;
-            font-weight: 600;
-            color: #334155;
-            margin-top: 16px;
-            margin-bottom: 8px;
-        }
-        
         .markdown-body p {
             margin-bottom: 12px;
             color: #475569;
         }
         
-        .markdown-body ul, .markdown-body ol {
+        .markdown-body ul {
             padding-left: 24px;
             margin-bottom: 16px;
         }
@@ -122,10 +111,6 @@
             background: #f8fafc;
         }
         
-        .markdown-body table tr:hover {
-            background: #f1f5f9;
-        }
-        
         .markdown-body blockquote {
             border-left: 4px solid #2563eb;
             padding: 8px 16px;
@@ -146,10 +131,13 @@
         
         .markdown-body pre {
             background: #1e293b;
-            padding: 16px 20px;
+            padding: 20px 24px;
             border-radius: 8px;
             overflow-x: auto;
             margin: 16px 0;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            border: 1px solid #334155;
         }
         
         .markdown-body pre code {
@@ -157,6 +145,9 @@
             color: #e2e8f0;
             padding: 0;
             font-size: 13px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
         }
         
         .markdown-body hr {
@@ -170,11 +161,6 @@
             font-weight: 700;
         }
         
-        .markdown-body .emoji {
-            font-size: 16px;
-        }
-        
-        /* 加载状态 */
         .loading {
             text-align: center;
             padding: 60px 0;
@@ -208,7 +194,22 @@
             margin-bottom: 16px;
         }
         
-        /* 响应式 */
+        .error button {
+            margin-top: 16px;
+            padding: 8px 24px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+        
+        .error button:hover {
+            background: #1d4ed8;
+        }
+        
         @media (max-width: 768px) {
             .summary-card {
                 padding: 24px 16px;
@@ -219,9 +220,6 @@
             .markdown-body h1 {
                 font-size: 22px;
             }
-            .markdown-body h2 {
-                font-size: 18px;
-            }
             .markdown-body table {
                 font-size: 11px;
             }
@@ -230,11 +228,27 @@
                 padding: 6px 8px;
             }
         }
+        
+        @media (max-width: 480px) {
+            .summary-container {
+                padding: 0 12px;
+                margin: 16px auto;
+            }
+            .summary-card {
+                padding: 16px 12px;
+            }
+            .markdown-body table {
+                font-size: 10px;
+            }
+            .markdown-body table th,
+            .markdown-body table td {
+                padding: 4px 6px;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <!-- 导航栏占位符 -->
     <div id="navbar-placeholder"></div>
 
     <div class="summary-container">
@@ -248,14 +262,15 @@
         </div>
     </div>
 
-    <script src="components/navbar.js"></script>
+    <!-- ⭐ 路径回到上一级 -->
+    <script src="../components/navbar.js"></script>
     
     <script>
         async function loadSummary() {
             const container = document.getElementById('markdown-content');
             
             try {
-                // 从 GitHub raw 加载 Markdown 文件
+                // ⭐ 同目录下的 .md 文件
                 const response = await fetch('WATCHLIST_SUMMARY.md?v=' + new Date().getTime());
                 
                 if (!response.ok) {
@@ -263,8 +278,6 @@
                 }
                 
                 const markdownText = await response.text();
-                
-                // 使用 marked 将 Markdown 渲染为 HTML
                 const htmlContent = marked.parse(markdownText);
                 
                 container.innerHTML = `
@@ -283,22 +296,12 @@
                         <p style="margin-top: 8px; font-size: 13px; color: #94a3b8;">
                             请确认 WATCHLIST_SUMMARY.md 文件存在
                         </p>
-                        <button onclick="location.reload()" style="
-                            margin-top: 16px;
-                            padding: 8px 24px;
-                            background: #2563eb;
-                            color: white;
-                            border: none;
-                            border-radius: 6px;
-                            cursor: pointer;
-                            font-size: 14px;
-                        ">🔄 重新加载</button>
+                        <button onclick="location.reload()">🔄 重新加载</button>
                     </div>
                 `;
             }
         }
 
-        // 页面加载后执行
         document.addEventListener('DOMContentLoaded', loadSummary);
     </script>
 
