@@ -1,9 +1,14 @@
+import sys
+import os
 import json
 import yfinance as yf
 import time
 import random
-import os
 import requests
+
+# ⭐ 添加项目根目录到 Python 路径（让 import config 能找到）
+#    os.path.dirname(os.path.dirname(__file__)) 会得到项目根目录
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from config import MACRO_LIST, WATCHLIST, DEFAULT_STRATEGY, SOURCE_MAP, THEME_MAPPING
 
