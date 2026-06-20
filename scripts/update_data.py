@@ -71,7 +71,7 @@ def get_theme_paths_for_tags(tags, tag_theme_map):
 
 
 class StockDataManager:
-    def __init__(self, cache_file='stock_cache.json'):
+    def __init__(self, cache_file='data/stock_cache.json'):
         self.cache_file = cache_file
         self.cache = self._load_cache()
 
@@ -474,7 +474,7 @@ def fetch_all_data():
     # 3. 注入 AI 简报
     output_data["ai_report"] = make_ai_news(output_data["stocks"])
 
-    with open('data.json', 'w', encoding='utf-8') as f:
+    with open('data/data.json', 'w', encoding='utf-8') as f:
         json.dump(output_data, f, ensure_ascii=False, indent=2)
     print("🎉 数据打包成功！")
 
