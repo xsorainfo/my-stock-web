@@ -53,7 +53,7 @@ jobs:
         # ⭐ 先拉取远程最新代码（自动合并）
         git pull origin $(git branch --show-current) --no-rebase
         
-        git add data.json
+        git add data/data.json
         
         # 调试：查看是否有改动需要提交
         if git diff --cached --quiet; then
