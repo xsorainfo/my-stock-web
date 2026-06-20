@@ -25,13 +25,13 @@ function loadNavbar() {
     }
 
     // 高亮当前页面对应的导航项
+    // components/navbar.js 中的高亮部分
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const pageMap = {
         'index.html': 'index',
         'sub_ai.html': 'sub_ai',
         'settings.html': 'settings',
-        'watchlist_summary.html': 'summary',
-        'semiconductor_industry.html': 'semiconductor'
+        'md.html': 'md'
     };
     const currentKey = pageMap[currentPage] || 'index';
 
