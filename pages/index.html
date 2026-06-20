@@ -476,7 +476,7 @@
         // 解码 tag（因为 encodeURIComponent 会编码特殊字符）
         const decodedTag = decodeURIComponent(tag);
         // 使用 window.open 在新标签页打开
-        window.open(`sub_ai.html?tag=${encodeURIComponent(decodedTag)}`, '_blank');
+        window.open(`pages/sub_ai.html?tag=${encodeURIComponent(decodedTag)}`, '_blank');
     }
     
     
