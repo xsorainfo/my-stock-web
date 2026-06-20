@@ -43,7 +43,7 @@ jobs:
     - name: 运行 Python 脚本抓取数据
       env:
         AI_API_KEY: ${{ secrets.AI_API_KEY }}
-      run: python update_data.py
+      run: python scripts/update_data.py
 
     - name: 把最新数据提交回 GitHub 仓库
       run: |
