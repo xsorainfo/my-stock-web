@@ -705,13 +705,27 @@
                 header.addEventListener('click', function() {
                     const container = this.nextElementSibling;
                     const isOpen = container.classList.contains('open');
+                    
+                    // 切换展开/收起
                     container.classList.toggle('open');
                     this.querySelector('.arrow').classList.toggle('open');
+                    
+                    // ⭐ 新增：点击一级菜单时，显示该分类下所有股票
                     if (!isOpen) {
-                        const firstItem = container.querySelector('.menu-level2-item');
-                        if (firstItem) {
-                            firstItem.click();
-                        }
+                        // 获取当前一级菜单下的所有 tag
+                        const level1Key = this.dataset.level1;
+                        const allTags = getAllTagsForLevel1(level1Key, themeMapping);
+                        
+                        // 高亮当前一级菜单
+                        document.querySelectorAll('.menu-level1-header').forEach(el => el.classList.remove('active'));
+                        this.classList.add('active');
+                        
+                        // 取消所有二级菜单的高亮
+                        document.querySelectorAll('.menu-level2-item').forEach(el => el.classList.remove('active'));
+                        
+                        // 显示该分类下所有股票
+                        document.getElementById('pageTitle').textContent = `📂 ${level1Key}`;
+                        displayStocksByTags(allTags);
                     }
                 });
 
@@ -798,14 +812,14 @@
         function displayStocksByTag(tagName) {
             const container = document.getElementById('stockGridContainer');
             const countEl = document.getElementById('stockCount');
-
+        
             const matched = allStocks.filter(stock => {
                 if (!stock.tag_themes) return false;
                 return stock.tag_themes.some(t => t.tag === tagName && t.theme_path && t.theme_path.length > 0);
             });
-
+        
             countEl.textContent = `共 ${matched.length} 只标的`;
-
+        
             if (matched.length === 0) {
                 container.innerHTML = `
                     <div class="empty-state">
@@ -815,13 +829,62 @@
                 `;
                 return;
             }
+        
+            // ⭐ 复用渲染函数
+            renderStockCards(matched, container);
+        }
 
+        // ============================================================
+        // 显示多个 tag 对应的股票（用于一级菜单）
+        // ============================================================
+        function displayStocksByTags(tagNames) {
+            const container = document.getElementById('stockGridContainer');
+            const countEl = document.getElementById('stockCount');
+        
+            if (!tagNames || tagNames.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="emoji">📭</div>
+                        <p>该分类下暂无标的</p>
+                    </div>
+                `;
+                countEl.textContent = '共 0 只标的';
+                return;
+            }
+        
+            const matched = allStocks.filter(stock => {
+                if (!stock.tag_themes) return false;
+                return stock.tag_themes.some(t => 
+                    tagNames.includes(t.tag) && t.theme_path && t.theme_path.length > 0
+                );
+            });
+        
+            countEl.textContent = `共 ${matched.length} 只标的`;
+        
+            if (matched.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="emoji">🔍</div>
+                        <p>该分类下暂无匹配的股票</p>
+                    </div>
+                `;
+                return;
+            }
+        
+            // 复用原来的渲染逻辑（提取为独立函数）
+            renderStockCards(matched, container);
+        }
+        
+        // ============================================================
+        // 提取：渲染股票卡片（复用代码）
+        // ============================================================
+        function renderStockCards(stocks, container) {
             let html = '<div class="stock-grid">';
-            matched.forEach(stock => {
+            stocks.forEach(stock => {
                 const colorClass = stock.isUp ? 'text-up' : 'text-down';
                 const trendClass = stock.trend === '牛市多头' ? 'trend-up-bg' : 'trend-down-bg';
                 const formattedFeature = stock.feature.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-
+        
                 html += `
                     <div class="stock-card">
                         <div class="stock-header">
@@ -840,9 +903,9 @@
                                 </a>
                             </div>
                         </div>
-
+        
                         <div class="stock-feature">${formattedFeature}</div>
-
+        
                         <div class="tag-container">
                             ${stock.tags ? stock.tags.map(t => `<span class="stock-tag">${t}</span>`).join('') : ''}
                             ${stock.tag_themes ? stock.tag_themes.map(t => {
@@ -852,14 +915,14 @@
                                 return '';
                             }).join('') : ''}
                         </div>
-
+        
                         <div class="stock-trend-badge ${trendClass}">${stock.trend}</div>
-
+        
                         <div class="price-row">
                             <div class="stock-price ${colorClass}">${stock.price}</div>
                             <div class="stock-change ${colorClass}">${stock.change}</div>
                         </div>
-
+        
                         <table class="metrics-table" style="margin-bottom: 6px;">
                             <thead>
                                 <tr>
@@ -876,7 +939,7 @@
                                 </tr>
                             </tbody>
                         </table>
-
+        
                         <table class="metrics-table">
                             <thead>
                                 <tr>
@@ -897,7 +960,7 @@
                 `;
             });
             html += '</div>';
-
+        
             container.innerHTML = html;
         }
 
@@ -1011,6 +1074,28 @@
                         "8. 电力・液冷・数据中心": ["电力系统", "液冷设备", "数据中心架构"],
                         "9. 云・模型・应用": ["云服务IaaS", "基础模型", "AI应用", "智能体Agent"]
                     };
+                }
+                // ============================================================
+                // 辅助函数：获取一级菜单下的所有 tag
+                // ============================================================
+                function getAllTagsForLevel1(level1Key, themeMapping) {
+                    const tags = [];
+                    const level1Value = themeMapping[level1Key];
+                    
+                    if (!level1Value) return tags;
+                    
+                    if (Array.isArray(level1Value)) {
+                        // 扁平列表：直接返回所有 tag
+                        return level1Value;
+                    } else if (typeof level1Value === 'object') {
+                        // 有二级分组：遍历所有子分组
+                        for (const subValue of Object.values(level1Value)) {
+                            if (Array.isArray(subValue)) {
+                                tags.push(...subValue);
+                            }
+                        }
+                    }
+                    return tags;
                 }
         
                 renderSidebar(themeMapping, allStocks);
