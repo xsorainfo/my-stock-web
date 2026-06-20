@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>™️半导体产业链全景</title>
     
-    <!-- ⭐ 引入共通导航栏样式 -->
-    <link rel="stylesheet" href="components/navbar.css">
-    
+    <!-- ⭐引入共通导航栏样式  路径需要回到上一级 -->
+    <link rel="stylesheet" href="../components/navbar.css">
     <!-- ⭐ 引入 Markdown 渲染库 (marked.js) -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     
@@ -317,13 +316,15 @@
         </div>
     </div>
 
-    <script src="components/navbar.js"></script>
+    <!-- ⭐ 路径回到上一级 -->
+    <script src="../components/navbar.js"></script>
     
     <script>
         async function loadSemiconductorIndustry() {
             const container = document.getElementById('markdown-content');
             
             try {
+                // ⭐ 同目录下的 .md 文件
                 const response = await fetch('SEMICONDUCTOR_INDUSTRY.md?v=' + new Date().getTime());
                 
                 if (!response.ok) {
