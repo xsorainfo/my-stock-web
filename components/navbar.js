@@ -6,7 +6,7 @@ function loadNavbar() {
         <nav class="top-navbar">
             <div class="nav-logo">🖥️</div>
             <div class="nav-links">
-                <a href="index.html" class="nav-item" data-page="index">首页</a>
+                <a href="/index.html" class="nav-item" data-page="index">首页</a>
                 <a href="/sub_ai.html" class="nav-item" data-page="sub_ai" target="_blank">テーマ別</a>
                 <a href="/settings.html" class="nav-item" data-page="settings">策略配置</a>
                 <a href="/docs/watchlist_summary.html" class="nav-item" data-page="summary" target="_blank">📊 标的总结</a>
