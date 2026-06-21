@@ -521,14 +521,38 @@
         }
     }
     
-    // ✅ 按 sector_id 匹配
+    // ============================================================
+    // 获取 sector_name
+    // ============================================================
+    function getSectorName(sectorId) {
+        if (!sectorMapping || !Array.isArray(sectorMapping) || sectorMapping.length === 0) return sectorId;
+        const found = sectorMapping.find(item => item.sector_id === sectorId);
+        return found ? found.sector_name : sectorId;
+    }
+    
+    // ============================================================
+    // 获取 sector_comment
+    // ============================================================
     function getSectorComment(sectorId) {
         if (!sectorMapping || !Array.isArray(sectorMapping) || sectorMapping.length === 0) return '';
         const found = sectorMapping.find(item => item.sector_id === sectorId);
         return found ? found.sector_comment : '';
     }
     
-    // ✅ 按 sector_id + industry_id 匹配
+    // ============================================================
+    // 获取 industry_name
+    // ============================================================
+    function getIndustryName(sectorId, industryId) {
+        if (!sectorMapping || !Array.isArray(sectorMapping) || sectorMapping.length === 0) return industryId;
+        const sector = sectorMapping.find(item => item.sector_id === sectorId);
+        if (!sector) return industryId;
+        const industry = sector.industries.find(item => item.industry_id === industryId);
+        return industry ? industry.industry_name : industryId;
+    }
+    
+    // ============================================================
+    // 获取 industry_comment
+    // ============================================================
     function getIndustryComment(sectorId, industryId) {
         if (!sectorMapping || !Array.isArray(sectorMapping) || sectorMapping.length === 0) return '';
         const sector = sectorMapping.find(item => item.sector_id === sectorId);
@@ -576,12 +600,13 @@
                 const sectorDiv = document.createElement('div');
                 sectorDiv.className = 'sector-section';
                 
-                // ⭐ 获取 sector_comment
-                const sectorComment = getSectorComment(sector);
+                // ⭐ 获取 sector_name 和 sector_comment
+                const sectorName = getSectorName(sectorId);
+                const sectorComment = getSectorComment(sectorId);
                 
                 
                 sectorDiv.innerHTML = `
-                    <h2 class="sector-title">${sector}</h2>
+                    <h2 class="sector-title">${sectorName}</h2>
                     ${sectorComment ? `<p class="sector-comment">${sectorComment}</p>` : ''}
                 `;
                 
@@ -599,10 +624,11 @@
                     industryDiv.className = 'industry-section';
                     
                     // ⭐ 获取 industry_comment
+                    const industryName = getIndustryName(sectorId, industryId);
                     const industryComment = getIndustryComment(sector, industry);
                     
                     industryDiv.innerHTML = `
-                        <h3 class="industry-title">${industry}</h3>
+                        <h3 class="industry-title">${industryName}</h3>
                         ${industryComment ? `<p class="industry-comment">${industryComment}</p>` : ''}
                     `;
                     
