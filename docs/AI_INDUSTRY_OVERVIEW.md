@@ -9,10 +9,10 @@
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
   
-  <img src="./images/Ai全产业链1.JPG" alt="AI全产业链1" width="50%">
-  <img src="./images/Ai全产业链2.JPG" alt="AI全产业链2" width="50%">
-  <img src="./images/Ai全产业链.JPG" alt="AI全产业链" width="50%">
-  <img src="./images/Ai全产业链3.JPG" alt="AI全产业链3" width="50%">
+  <img src="./images/Ai全产业链1.JPG" alt="AI全产业链1" width="48%">
+  <img src="./images/Ai全产业链2.JPG" alt="AI全产业链2" width="48%">
+  <img src="./images/Ai全产业链.JPG" alt="AI全产业链" width="48%">
+  <img src="./images/Ai全产业链3.JPG" alt="AI全产业链3" width="48%">
 </div>
 
 
