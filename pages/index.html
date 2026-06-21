@@ -521,19 +521,19 @@
         }
     }
     
-    // 根据 sector_name 获取 sector_comment
-    function getSectorComment(sectorName) {
-        if (!sectorMapping || sectorMapping.length === 0) return '';
-        const found = sectorMapping.find(item => item.sector_name === sectorName);
+    // ✅ 按 sector_id 匹配
+    function getSectorComment(sectorId) {
+        if (!sectorMapping || !Array.isArray(sectorMapping) || sectorMapping.length === 0) return '';
+        const found = sectorMapping.find(item => item.sector_id === sectorId);
         return found ? found.sector_comment : '';
     }
     
-    // 根据 sector_name 和 industry_name 获取 industry_comment
-    function getIndustryComment(sectorName, industryName) {
-        if (!sectorMapping || sectorMapping.length === 0) return '';
-        const sector = sectorMapping.find(item => item.sector_name === sectorName);
+    // ✅ 按 sector_id + industry_id 匹配
+    function getIndustryComment(sectorId, industryId) {
+        if (!sectorMapping || !Array.isArray(sectorMapping) || sectorMapping.length === 0) return '';
+        const sector = sectorMapping.find(item => item.sector_id === sectorId);
         if (!sector) return '';
-        const industry = sector.industries.find(item => item.industry_name === industryName);
+        const industry = sector.industries.find(item => item.industry_id === industryId);
         return industry ? industry.industry_comment : '';
     }
 
