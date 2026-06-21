@@ -2,8 +2,8 @@
   "macro": [
     {
       "name": "费城半导体指数",
-      "price": "14341.78",
-      "change": "+864.71 (+6.42%)",
+      "price": "13477.07",
+      "change": "+182.85 (+1.38%)",
       "isUp": true
     },
     {
@@ -15,22 +15,22 @@
     {
       "name": "日经 225",
       "price": "71250.06",
-      "change": "+196.57 (+0.28%)",
+      "change": "+1347.81 (+1.93%)",
       "isUp": true
     },
     {
       "name": "标普 500",
-      "price": "7500.58",
-      "change": "+80.48 (+1.08%)",
-      "isUp": true
+      "price": "7420.10",
+      "change": "-91.25 (-1.21%)",
+      "isUp": false
     }
   ],
   "stocks": [
     {
       "code": "NVDA",
       "name": "NVIDIA(英伟达)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "AI处理器/算力芯片",
+      "sector": "1.1",
+      "industry": "1.1.1",
       "feature": "**全球AI芯片绝对霸主**，GPU市占率80%+，CUDA生态壁垒极高。Vera CPU进军CPU市场，成最危险新进入者",
       "tags": [
         "GPU",
@@ -68,8 +68,8 @@
     {
       "code": "AMD",
       "name": "AMD(超威半导体)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "AI处理器/算力芯片",
+      "sector": "1.1",
+      "industry": "1.1.1",
       "feature": "**CPU大战最大赢家**，x86份额32.6%创历史新高，EPYC出货占比33.2%。MI300系列AI芯片对标NVIDIA",
       "tags": [
         "GPU",
@@ -107,8 +107,8 @@
     {
       "code": "INTC",
       "name": "英特尔",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "AI处理器/算力芯片",
+      "sector": "1.1",
+      "industry": "1.1.1",
       "feature": "**x86龙头触底反弹**，服务器CPU市占率59%。Gaudi3 AI加速器对标H100，IFS代工为第二增长曲线",
       "tags": [
         "CPU",
@@ -146,8 +146,8 @@
     {
       "code": "QCOM",
       "name": "高通",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "AI处理器/算力芯片",
+      "sector": "1.1",
+      "industry": "1.1.1",
       "feature": "**ARM PC CPU赛道龙头**，骁龙X Elite对标苹果M系列，目标2029年占据非x86 AI笔记本30-50%份额",
       "tags": [
         "AI SoC",
@@ -185,8 +185,8 @@
     {
       "code": "AVGO",
       "name": "博通",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "AI处理器/算力芯片",
+      "sector": "1.1",
+      "industry": "1.1.1",
       "feature": "**AI网络芯片与ASIC龙头**，以太网芯片市占率70%+，谷歌TPU核心ASIC设计合作伙伴",
       "tags": [
         "ASIC"
@@ -216,8 +216,8 @@
     {
       "code": "MRVL",
       "name": "美满电子",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "AI处理器/算力芯片",
+      "sector": "1.1",
+      "industry": "1.1.1",
       "feature": "**数据中心互联芯片核心玩家**，高速SerDes技术领先，AI互联芯片市占率全球前三",
       "tags": [
         "ASIC"
@@ -247,8 +247,8 @@
     {
       "code": "ARM",
       "name": "ARM Holdings",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "AI处理器/算力芯片",
+      "sector": "1.1",
+      "industry": "1.1.1",
       "feature": "**全球芯片IP架构霸主**，指令集市占率90%+，服务器CPU市占率16%，2030年预计达27%",
       "tags": [
         "CPU"
@@ -278,8 +278,8 @@
     {
       "code": "AAPL",
       "name": "苹果",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "AI处理器/算力芯片",
+      "sector": "1.1",
+      "industry": "1.1.1",
       "feature": "**ARM PC浪潮开启者**，M系列芯片证明ARM在PC端性能潜力，Mac全系已切换至自研ARM芯片",
       "tags": [
         "CPU"
@@ -309,8 +309,8 @@
     {
       "code": "6723",
       "name": "ルネサス(瑞萨电子)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "AI处理器/算力芯片",
+      "sector": "1.1",
+      "industry": "1.1.1",
       "feature": "**车载与工业MCU龙头**，全球MCU市占率15%+，ARM生态重要伙伴，AI边缘计算芯片核心供应商",
       "tags": [
         "AI SoC",
@@ -356,8 +356,8 @@
     {
       "code": "6526",
       "name": "ソシオネクスト(Socionext)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "AI处理器/算力芯片",
+      "sector": "1.1",
+      "industry": "1.1.1",
       "feature": "**先进制程SoC设计龙头**，5nm/3nm定制芯片设计能力，AI边缘计算核心方案商",
       "tags": [
         "ASIC"
@@ -387,8 +387,8 @@
     {
       "code": "6963",
       "name": "ローム(罗姆)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "AI处理器/算力芯片",
+      "sector": "1.1",
+      "industry": "1.1.1",
       "feature": "**SiC功率模块先驱**，碳化硅功率器件市占率全球前三，AI服务器电源管理核心器件",
       "tags": [
         "碳化硅 (SiC)"
@@ -415,8 +415,8 @@
     {
       "code": "688802",
       "name": "沐曦股份",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "AI处理器/算力芯片",
+      "sector": "1.1",
+      "industry": "1.1.1",
       "feature": "**国产GPU营收第一**，2025年营收16.44亿元，毛利率56.5%，性能对标NVIDIA A100",
       "tags": [
         "GPU",
@@ -454,8 +454,8 @@
     {
       "code": "688795",
       "name": "摩尔线程",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "AI处理器/算力芯片",
+      "sector": "1.1",
+      "industry": "1.1.1",
       "feature": "**全功能GPU国产替代龙头**，2025年营收15.06亿元，毛利率69%，MTT S4000比肩国际主流",
       "tags": [
         "GPU"
@@ -485,8 +485,8 @@
     {
       "code": "688041",
       "name": "海光信息",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "AI处理器/算力芯片",
+      "sector": "1.1",
+      "industry": "1.1.1",
       "feature": "**A股国产CPU第一股**，x86（AMD Zen授权）生态兼容性最强，信创服务器CPU主力供应商",
       "tags": [
         "CPU"
@@ -516,8 +516,8 @@
     {
       "code": "688047",
       "name": "龙芯中科",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "AI处理器/算力芯片",
+      "sector": "1.1",
+      "industry": "1.1.1",
       "feature": "**完全自主指令集LoongArch CPU**，纯国产CPU代表，党政信创核心供应商，摆脱x86/ARM授权",
       "tags": [
         "CPU"
@@ -547,8 +547,8 @@
     {
       "code": "688262",
       "name": "国芯科技",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "AI处理器/算力芯片",
+      "sector": "1.1",
+      "industry": "1.1.1",
       "feature": "**三大指令集嵌入式CPU专家**，国内唯一同时掌握RISC-V/PowerPC/M*Core，车规/工控高可靠龙头",
       "tags": [
         "CPU"
@@ -576,10 +576,1137 @@
       "source": "sina"
     },
     {
+      "code": "MU",
+      "name": "美光科技",
+      "sector": "1.1",
+      "industry": "1.1.2",
+      "feature": "**HBM核心供应商**，全球DRAM市占率约25%，AI训练HBM3E内存核心供应商",
+      "tags": [
+        "HBM"
+      ],
+      "tag_themes": [
+        {
+          "tag": "HBM",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "1133.99",
+      "change": "+90.80 (+8.70%)",
+      "isUp": true,
+      "per": "53.46",
+      "forward_per": "9.61",
+      "pbr": "17.65",
+      "distHigh": "-1.3%",
+      "distWeek": "-1.3%",
+      "distMonth": "-1.3%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "RGTI",
+      "name": "Rambus",
+      "sector": "1.1",
+      "industry": "1.1.2",
+      "feature": "**内存接口与IP龙头**，DDR5内存接口IP全球领先，HBM内存控制器IP核心供应商，AI数据中心内存方案商",
+      "tags": [
+        "内存接口"
+      ],
+      "tag_themes": [
+        {
+          "tag": "内存接口",
+          "theme_path": [
+            "4. 高带宽内存",
+            "内存接口"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "21.36",
+      "change": "+1.11 (+5.51%)",
+      "isUp": true,
+      "per": "-105.05",
+      "forward_per": "-105.05",
+      "pbr": "12.16",
+      "distHigh": "-63.3%",
+      "distWeek": "-9.4%",
+      "distMonth": "-23.9%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "005930",
+      "name": "三星电子",
+      "sector": "1.1",
+      "industry": "1.1.2",
+      "feature": "**全球存储芯片霸主**，DRAM/NAND市占率均超40%，HBM3技术领先，全产业链优势明显",
+      "tags": [
+        "HBM",
+        "GDDR6"
+      ],
+      "tag_themes": [
+        {
+          "tag": "HBM",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM"
+          ]
+        },
+        {
+          "tag": "GDDR6",
+          "theme_path": [
+            "4. 高带宽内存",
+            "GDDR6"
+          ]
+        }
+      ],
+      "market_type": "韩股",
+      "price": "354000.00",
+      "change": "-8500.00 (-2.34%)",
+      "isUp": false,
+      "per": "6.10",
+      "forward_per": "6.10",
+      "pbr": "--",
+      "distHigh": "-5.5%",
+      "distWeek": "-5.5%",
+      "distMonth": "-5.5%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "000660",
+      "name": "SK海力士",
+      "sector": "1.1",
+      "industry": "1.1.2",
+      "feature": "**HBM技术领导者**，HBM3全球市占率超50%，NVIDIA核心HBM供应商，AI训练内存绝对龙头",
+      "tags": [
+        "HBM"
+      ],
+      "tag_themes": [
+        {
+          "tag": "HBM",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM"
+          ]
+        }
+      ],
+      "market_type": "韩股",
+      "price": "2764000.00",
+      "change": "+79000.00 (+2.94%)",
+      "isUp": true,
+      "per": "6.68",
+      "forward_per": "6.68",
+      "pbr": "--",
+      "distHigh": "-4.4%",
+      "distWeek": "-4.4%",
+      "distMonth": "-4.4%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "285A",
+      "name": "キオクシア(铠侠)",
+      "sector": "1.1",
+      "industry": "1.1.2",
+      "feature": "**全球闪存厂商之一**，NAND Flash市占率约15%，AI存储需求核心受益者",
+      "tags": [
+        "存储"
+      ],
+      "tag_themes": [
+        {
+          "tag": "存储",
+          "theme_path": []
+        }
+      ],
+      "market_type": "日股",
+      "price": "108600.00",
+      "change": "+11700.00 (+12.07%)",
+      "isUp": true,
+      "per": "107.53",
+      "forward_per": "--",
+      "pbr": "42.39",
+      "distHigh": "0.0%",
+      "distWeek": "0.0%",
+      "distMonth": "0.0%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "688008",
+      "name": "澜起科技",
+      "sector": "1.1",
+      "industry": "1.1.2",
+      "feature": "**全球内存接口芯片龙头**，DDR5内存接口芯片市占率全球领先，津逮服务器CPU国产替代核心标的",
+      "tags": [
+        "内存接口",
+        "CPU"
+      ],
+      "tag_themes": [
+        {
+          "tag": "内存接口",
+          "theme_path": [
+            "4. 高带宽内存",
+            "内存接口"
+          ]
+        },
+        {
+          "tag": "CPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "269.90",
+      "change": "+7.40 (+2.82%)",
+      "isUp": true,
+      "per": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "distWeek": "-2.0%",
+      "distMonth": "-6.5%",
+      "trend": "牛市多头",
+      "source": "sina"
+    },
+    {
+      "code": "DOW",
+      "name": "陶氏化学",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**CMP抛光垫全球霸主**，全球市占率超70%，半导体CMP工序核心材料供应商",
+      "tags": [
+        "CMP抛光垫"
+      ],
+      "tag_themes": [
+        {
+          "tag": "CMP抛光垫",
+          "theme_path": [
+            "2. 半导体材料",
+            "CMP抛光垫"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "31.73",
+      "change": "-0.77 (-2.37%)",
+      "isUp": false,
+      "per": "14.62",
+      "forward_per": "14.62",
+      "pbr": "1.50",
+      "distHigh": "-25.8%",
+      "distWeek": "-7.2%",
+      "distMonth": "-17.6%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "LIN",
+      "name": "林德集团",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**全球工业气体与电子特气龙头**，全球最大工业气体供应商，半导体制造核心特种气体供应商",
+      "tags": [
+        "电子特气"
+      ],
+      "tag_themes": [
+        {
+          "tag": "电子特气",
+          "theme_path": [
+            "2. 半导体材料",
+            "电子特气"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "515.85",
+      "change": "-2.32 (-0.45%)",
+      "isUp": false,
+      "per": "34.01",
+      "forward_per": "25.98",
+      "pbr": "6.14",
+      "distHigh": "-1.9%",
+      "distWeek": "-1.9%",
+      "distMonth": "-1.9%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "PLAB",
+      "name": "Photronics(福尼克斯)",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**全球光掩模龙头之一**，与TOPPAN/大日本印刷并列全球光掩模三巨头，先进制程光掩模核心供应商",
+      "tags": [
+        "光掩膜"
+      ],
+      "tag_themes": [
+        {
+          "tag": "光掩膜",
+          "theme_path": [
+            "2. 半导体材料",
+            "光掩膜"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "33.63",
+      "change": "+2.62 (+8.45%)",
+      "isUp": true,
+      "per": "12.41",
+      "forward_per": "16.61",
+      "pbr": "1.57",
+      "distHigh": "-39.9%",
+      "distWeek": "-0.6%",
+      "distMonth": "-39.7%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "HOG",
+      "name": "Hoya Corporation(豪雅)",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**光刻基板全球龙头**，光掩膜基板(Mask Blank)市占率全球领先，EUV光刻核心材料供应商，与AGC并列双雄",
+      "tags": [
+        "光刻基板"
+      ],
+      "tag_themes": [
+        {
+          "tag": "光刻基板",
+          "theme_path": [
+            "2. 半导体材料",
+            "光刻基板"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "25.41",
+      "change": "-0.21 (-0.82%)",
+      "isUp": false,
+      "per": "13.30",
+      "forward_per": "13.55",
+      "pbr": "0.88",
+      "distHigh": "-18.7%",
+      "distWeek": "-4.0%",
+      "distMonth": "-4.0%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "BAS",
+      "name": "巴斯夫",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**全球高纯化学品龙头**，半导体级高纯试剂/电子化学品全球领先，晶圆清洗/刻蚀工序核心材料供应商",
+      "tags": [
+        "高纯化学品"
+      ],
+      "tag_themes": [
+        {
+          "tag": "高纯化学品",
+          "theme_path": [
+            "2. 半导体材料",
+            "高纯化学品"
+          ]
+        }
+      ],
+      "market_type": "德股",
+      "price": "49.01",
+      "change": "+0.47 (+0.97%)",
+      "isUp": true,
+      "per": "28.66",
+      "forward_per": "16.60",
+      "pbr": "1.26",
+      "distHigh": "-11.0%",
+      "distWeek": "-2.0%",
+      "distMonth": "-7.8%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "688126",
+      "name": "沪硅产业",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**中国硅片龙头**，12英寸硅片国产替代核心标的，AI芯片制造关键材料供应商",
+      "tags": [
+        "硅晶圆"
+      ],
+      "tag_themes": [
+        {
+          "tag": "硅晶圆",
+          "theme_path": [
+            "2. 半导体材料",
+            "硅晶圆"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "32.20",
+      "change": "-0.20 (-0.62%)",
+      "isUp": false,
+      "per": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "distWeek": "-9.8%",
+      "distMonth": "-9.8%",
+      "trend": "牛市多头",
+      "source": "sina"
+    },
+    {
+      "code": "4063",
+      "name": "信越化学",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**半导体材料霸主**，全球硅片市占率超30%，光刻胶市占率超20%，半导体材料全方位布局",
+      "tags": [
+        "硅晶圆",
+        "光刻胶"
+      ],
+      "tag_themes": [
+        {
+          "tag": "硅晶圆",
+          "theme_path": [
+            "2. 半导体材料",
+            "硅晶圆"
+          ]
+        },
+        {
+          "tag": "光刻胶",
+          "theme_path": [
+            "2. 半导体材料",
+            "光刻胶"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "7310.00",
+      "change": "-149.00 (-2.00%)",
+      "isUp": false,
+      "per": "28.98",
+      "forward_per": "22.17",
+      "pbr": "3.04",
+      "distHigh": "-7.8%",
+      "distWeek": "-5.5%",
+      "distMonth": "-7.8%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "3436",
+      "name": "SUMCO",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**全球半导体硅片第二大供应商**，与信越化学构成行业双寡头，12英寸硅片核心供应商",
+      "tags": [
+        "硅晶圆"
+      ],
+      "tag_themes": [
+        {
+          "tag": "硅晶圆",
+          "theme_path": [
+            "2. 半导体材料",
+            "硅晶圆"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "4254.00",
+      "change": "-66.00 (-1.53%)",
+      "isUp": false,
+      "per": "86.41",
+      "forward_per": "86.41",
+      "pbr": "2.61",
+      "distHigh": "-6.8%",
+      "distWeek": "-5.7%",
+      "distMonth": "-6.8%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "4186",
+      "name": "東京応化工業(东京应化)",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**高端光刻胶冠军**，ArF光刻胶市占率超30%，EUV光刻胶布局领先，全球光刻胶核心供应商",
+      "tags": [
+        "光刻胶"
+      ],
+      "tag_themes": [
+        {
+          "tag": "光刻胶",
+          "theme_path": [
+            "2. 半导体材料",
+            "光刻胶"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "11125.00",
+      "change": "+95.00 (+0.86%)",
+      "isUp": true,
+      "per": "40.00",
+      "forward_per": "57.00",
+      "pbr": "3.25",
+      "distHigh": "-13.9%",
+      "distWeek": "-2.7%",
+      "distMonth": "-5.8%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "7911",
+      "name": "TOPPANホールディングス",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**光掩模全球双雄之一**，全球光掩模市占率领先，EUV光掩模技术布局深厚",
+      "tags": [
+        "光掩膜"
+      ],
+      "tag_themes": [
+        {
+          "tag": "光掩膜",
+          "theme_path": [
+            "2. 半导体材料",
+            "光掩膜"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "4515.00",
+      "change": "-34.00 (-0.75%)",
+      "isUp": false,
+      "per": "19.88",
+      "forward_per": "16.90",
+      "pbr": "0.95",
+      "distHigh": "-23.8%",
+      "distWeek": "-4.3%",
+      "distMonth": "-7.4%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "7912",
+      "name": "大日本印刷(DNP)",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**光掩模全球双雄之一**，与TOPPAN合计占据全球光掩模绝大部分市场份额，先进制程光掩模核心供应商",
+      "tags": [
+        "光掩膜"
+      ],
+      "tag_themes": [
+        {
+          "tag": "光掩膜",
+          "theme_path": [
+            "2. 半导体材料",
+            "光掩膜"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "2736.00",
+      "change": "-26.50 (-0.96%)",
+      "isUp": false,
+      "per": "11.61",
+      "forward_per": "13.94",
+      "pbr": "0.99",
+      "distHigh": "-17.1%",
+      "distWeek": "-2.2%",
+      "distMonth": "-4.4%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "5201",
+      "name": "AGC(旭硝子)",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**光刻基板全球龙头**，光掩膜基板(Mask Blank)市占率全球领先，半导体光刻核心材料供应商",
+      "tags": [
+        "光刻基板"
+      ],
+      "tag_themes": [
+        {
+          "tag": "光刻基板",
+          "theme_path": [
+            "2. 半导体材料",
+            "光刻基板"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "7616.00",
+      "change": "+52.00 (+0.69%)",
+      "isUp": true,
+      "per": "23.36",
+      "forward_per": "18.45",
+      "pbr": "1.08",
+      "distHigh": "-8.4%",
+      "distWeek": "-2.4%",
+      "distMonth": "-8.4%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "4092",
+      "name": "関東化学(关东化学)",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**超高纯半导体化学品龙头**，湿电子化学品/高纯试剂全球领先，半导体清洗/刻蚀工序核心材料供应商",
+      "tags": [
+        "高纯化学品"
+      ],
+      "tag_themes": [
+        {
+          "tag": "高纯化学品",
+          "theme_path": [
+            "2. 半导体材料",
+            "高纯化学品"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "5550.00",
+      "change": "+30.00 (+0.54%)",
+      "isUp": true,
+      "per": "16.75",
+      "forward_per": "14.40",
+      "pbr": "0.96",
+      "distHigh": "-12.7%",
+      "distWeek": "-3.3%",
+      "distMonth": "-12.7%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "4091",
+      "name": "大陽日酸(大阳日酸)",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**日本电子特气龙头**，高纯度电子特气市占率日本第一，半导体制造关键气体供应商",
+      "tags": [
+        "电子特气"
+      ],
+      "tag_themes": [
+        {
+          "tag": "电子特气",
+          "theme_path": [
+            "2. 半导体材料",
+            "电子特气"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "5564.00",
+      "change": "-3.00 (-0.05%)",
+      "isUp": false,
+      "per": "19.46",
+      "forward_per": "20.11",
+      "pbr": "1.98",
+      "distHigh": "-14.5%",
+      "distWeek": "-3.4%",
+      "distMonth": "-14.5%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "4901",
+      "name": "富士フイルム(富士胶片)",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**CMP浆料与光刻胶核心供应商**，半导体材料业务全球领先，CMP浆料市占率居前",
+      "tags": [
+        "CMP浆料"
+      ],
+      "tag_themes": [
+        {
+          "tag": "CMP浆料",
+          "theme_path": [
+            "2. 半导体材料",
+            "CMP浆料"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "3383.00",
+      "change": "-41.00 (-1.20%)",
+      "isUp": false,
+      "per": "15.06",
+      "forward_per": "14.58",
+      "pbr": "1.06",
+      "distHigh": "-10.7%",
+      "distWeek": "-3.2%",
+      "distMonth": "-5.3%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "4920",
+      "name": "日本研磨材",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**CMP抛光材料核心供应商**，半导体CMP研磨材料技术领先，日本CMP材料领域核心厂商",
+      "tags": [
+        "CMP抛光垫"
+      ],
+      "tag_themes": [
+        {
+          "tag": "CMP抛光垫",
+          "theme_path": [
+            "2. 半导体材料",
+            "CMP抛光垫"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "1120.00",
+      "change": "0.00 (0.00%)",
+      "isUp": false,
+      "per": "6.92",
+      "forward_per": "--",
+      "pbr": "0.54",
+      "distHigh": "-13.0%",
+      "distWeek": "-2.3%",
+      "distMonth": "-5.2%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "4062",
+      "name": "イビデン(揖斐电)",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**数据中心级封装基板龙头**，CPU/GPU封装基板核心供应商，AI服务器基板市占率领先",
+      "tags": [
+        "封装基板"
+      ],
+      "tag_themes": [
+        {
+          "tag": "封装基板",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "24560.00",
+      "change": "-1155.00 (-4.49%)",
+      "isUp": false,
+      "per": "113.64",
+      "forward_per": "79.49",
+      "pbr": "12.47",
+      "distHigh": "-9.1%",
+      "distWeek": "-9.1%",
+      "distMonth": "-9.1%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "6971",
+      "name": "京セラ(京瓷)",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**精密陶瓷元器件巨头**，半导体封装陶瓷材料核心供应商，市占率全球前三",
+      "tags": [
+        "封装基板"
+      ],
+      "tag_themes": [
+        {
+          "tag": "封装基板",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "3680.00",
+      "change": "-11.00 (-0.30%)",
+      "isUp": false,
+      "per": "35.84",
+      "forward_per": "41.12",
+      "pbr": "1.45",
+      "distHigh": "-6.0%",
+      "distWeek": "-4.1%",
+      "distMonth": "-6.0%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "6914",
+      "name": "三井ハイテック(三井高科技)",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**引线框架全球龙头**，半导体封装引线框架市占率全球前列，功率器件/IC封装核心材料供应商",
+      "tags": [
+        "引线框架"
+      ],
+      "tag_themes": [
+        {
+          "tag": "引线框架",
+          "theme_path": [
+            "2. 半导体材料",
+            "引线框架"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "4485.00",
+      "change": "+340.00 (+8.20%)",
+      "isUp": true,
+      "per": "24.45",
+      "forward_per": "26.29",
+      "pbr": "2.78",
+      "distHigh": "-5.7%",
+      "distWeek": "-0.2%",
+      "distMonth": "-5.7%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "7955",
+      "name": "千住金属",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**半导体焊接材料龙头**，焊球/焊料/助焊剂技术全球领先，BGA封装核心材料供应商",
+      "tags": [
+        "焊球",
+        "焊料"
+      ],
+      "tag_themes": [
+        {
+          "tag": "焊球",
+          "theme_path": [
+            "2. 半导体材料",
+            "焊球"
+          ]
+        },
+        {
+          "tag": "焊料",
+          "theme_path": [
+            "2. 半导体材料",
+            "焊料"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "907.00",
+      "change": "+15.00 (+1.68%)",
+      "isUp": true,
+      "per": "9.38",
+      "forward_per": "--",
+      "pbr": "0.53",
+      "distHigh": "-17.8%",
+      "distWeek": "0.0%",
+      "distMonth": "-6.2%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "4005",
+      "name": "Resonac Holdings",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**环氧塑封料(EMC)+ABF载板材料全球龙头**，半导体封装核心保护材料+AI服务器CPU/GPU封装关键材料供应商",
+      "tags": [
+        "EMC塑封料",
+        "ABF载板"
+      ],
+      "tag_themes": [
+        {
+          "tag": "EMC塑封料",
+          "theme_path": [
+            "2. 半导体材料",
+            "EMC塑封料"
+          ]
+        },
+        {
+          "tag": "ABF载板",
+          "theme_path": [
+            "2. 半导体材料",
+            "ABF载板"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "542.80",
+      "change": "-25.30 (-4.45%)",
+      "isUp": false,
+      "per": "14.62",
+      "forward_per": "13.94",
+      "pbr": "0.89",
+      "distHigh": "-13.2%",
+      "distWeek": "-8.2%",
+      "distMonth": "-12.4%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "4222",
+      "name": "日立化成(Resonac)",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**半导体封装用导电胶/绝缘膜龙头**，先进封装互连材料核心供应商",
+      "tags": [
+        "导电胶",
+        "绝缘膜"
+      ],
+      "tag_themes": [
+        {
+          "tag": "导电胶",
+          "theme_path": [
+            "2. 半导体材料",
+            "导电胶"
+          ]
+        },
+        {
+          "tag": "绝缘膜",
+          "theme_path": [
+            "2. 半导体材料",
+            "绝缘膜"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "707.00",
+      "change": "+6.00 (+0.86%)",
+      "isUp": true,
+      "per": "0.47",
+      "forward_per": "--",
+      "pbr": "0.39",
+      "distHigh": "-52.6%",
+      "distWeek": "-4.6%",
+      "distMonth": "-21.1%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "3110",
+      "name": "日東紡績",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**高端玻璃纤维布核心供应商**，半导体封装基板材料市占率领先，AI芯片封装不可或缺材料",
+      "tags": [
+        "封装基板 (ABF/BT)"
+      ],
+      "tag_themes": [
+        {
+          "tag": "封装基板 (ABF/BT)",
+          "theme_path": []
+        }
+      ],
+      "market_type": "日股",
+      "price": "19500.00",
+      "change": "+310.00 (+1.62%)",
+      "isUp": true,
+      "per": "17.01",
+      "forward_per": "65.79",
+      "pbr": "4.09",
+      "distHigh": "-40.7%",
+      "distWeek": "-13.3%",
+      "distMonth": "-31.8%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "6920",
+      "name": "レーザーテック(激光技术)",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**EUV光罩检测独家供应商**，市占率超90%，EUV光刻配套检测设备垄断地位",
+      "tags": [
+        "光掩膜"
+      ],
+      "tag_themes": [
+        {
+          "tag": "光掩膜",
+          "theme_path": [
+            "2. 半导体材料",
+            "光掩膜"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "55100.00",
+      "change": "-1350.00 (-2.39%)",
+      "isUp": false,
+      "per": "57.14",
+      "forward_per": "50.45",
+      "pbr": "21.90",
+      "distHigh": "-5.9%",
+      "distWeek": "-5.9%",
+      "distMonth": "-5.9%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "6890",
+      "name": "FERROTEC",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**真空密封与石英制品龙头**，半导体制造真空腔体核心供应商，技术壁垒极高",
+      "tags": [
+        "高纯化学品"
+      ],
+      "tag_themes": [
+        {
+          "tag": "高纯化学品",
+          "theme_path": [
+            "2. 半导体材料",
+            "高纯化学品"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "10470.00",
+      "change": "+190.00 (+1.85%)",
+      "isUp": true,
+      "per": "37.88",
+      "forward_per": "23.79",
+      "pbr": "1.89",
+      "distHigh": "-3.8%",
+      "distWeek": "-3.8%",
+      "distMonth": "-3.8%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "6965",
+      "name": "浜松ホトニクス(浜松光子)",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**光电器件全球龙头**，光电倍增管市占率超80%，半导体检测核心器件供应商",
+      "tags": [
+        "光刻基板"
+      ],
+      "tag_themes": [
+        {
+          "tag": "光刻基板",
+          "theme_path": [
+            "2. 半导体材料",
+            "光刻基板"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "2797.50",
+      "change": "+27.00 (+0.97%)",
+      "isUp": true,
+      "per": "61.35",
+      "forward_per": "33.17",
+      "pbr": "2.53",
+      "distHigh": "-9.8%",
+      "distWeek": "-2.3%",
+      "distMonth": "-9.8%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "6779",
+      "name": "日本電波工業",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**频率控制元件龙头**，晶振市占率全球前列，AI服务器时钟器件核心供应商",
+      "tags": [
+        "MLCC"
+      ],
+      "tag_themes": [
+        {
+          "tag": "MLCC",
+          "theme_path": [
+            "2. 半导体材料",
+            "MLCC"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "4660.00",
+      "change": "+250.00 (+5.67%)",
+      "isUp": true,
+      "per": "51.81",
+      "forward_per": "26.86",
+      "pbr": "3.36",
+      "distHigh": "-7.0%",
+      "distWeek": "-1.4%",
+      "distMonth": "-7.0%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "6997",
+      "name": "日本ケミコン(日本化工)",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**铝电解电容龙头**，全球市占率超20%，AI服务器电源滤波核心器件",
+      "tags": [
+        "MLCC"
+      ],
+      "tag_themes": [
+        {
+          "tag": "MLCC",
+          "theme_path": [
+            "2. 半导体材料",
+            "MLCC"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "5670.00",
+      "change": "+140.00 (+2.53%)",
+      "isUp": true,
+      "per": "82.64",
+      "forward_per": "32.12",
+      "pbr": "2.18",
+      "distHigh": "-4.5%",
+      "distWeek": "-4.5%",
+      "distMonth": "-4.5%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "6479",
+      "name": "ミネベアミツミ(美蓓亚三美)",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**轴承与精密电机龙头**，微型轴承全球市占率超60%，半导体设备精密零部件供应商",
+      "tags": [
+        "封装基板"
+      ],
+      "tag_themes": [
+        {
+          "tag": "封装基板",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "4628.00",
+      "change": "+5.00 (+0.11%)",
+      "isUp": true,
+      "per": "18.76",
+      "forward_per": "21.55",
+      "pbr": "2.07",
+      "distHigh": "-9.0%",
+      "distWeek": "-2.5%",
+      "distMonth": "-9.0%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
       "code": "ASML",
       "name": "ASML(阿斯麦)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体设备",
+      "sector": "1.2",
+      "industry": "1.2.2",
       "feature": "**全球EUV光刻机绝对垄断**，市占率100%，先进制程（7nm以下）芯片制造核心设备供应商",
       "tags": [
         "光刻机"
@@ -609,8 +1736,8 @@
     {
       "code": "AMAT",
       "name": "应用材料",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体设备",
+      "sector": "1.2",
+      "industry": "1.2.2",
       "feature": "**全球最大半导体设备商**，沉积(CVD/PVD)市占率超40%，CMP/离子注入/检测设备核心供应商",
       "tags": [
         "CVD设备",
@@ -664,8 +1791,8 @@
     {
       "code": "LRCX",
       "name": "泛林半导体",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体设备",
+      "sector": "1.2",
+      "industry": "1.2.2",
       "feature": "**刻蚀设备全球龙头**，刻蚀市占率超50%，薄膜沉积技术领先，与TEL直接竞争",
       "tags": [
         "刻蚀设备",
@@ -703,8 +1830,8 @@
     {
       "code": "KLAC",
       "name": "科磊",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体设备",
+      "sector": "1.2",
+      "industry": "1.2.2",
       "feature": "**晶圆检测设备绝对霸主**，过程控制市占率超50%，芯片良率控制核心设备供应商",
       "tags": [
         "检测设备",
@@ -742,8 +1869,8 @@
     {
       "code": "TER",
       "name": "泰瑞达",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体设备",
+      "sector": "1.2",
+      "industry": "1.2.2",
       "feature": "**半导体测试设备龙头**，ATE自动测试设备市占率全球前三，AI芯片测试核心设备供应商",
       "tags": [
         "ATE测试设备"
@@ -773,8 +1900,8 @@
     {
       "code": "ACLS",
       "name": "Axcelis Technologies",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体设备",
+      "sector": "1.2",
+      "industry": "1.2.2",
       "feature": "**全球离子注入机龙头**，市占率仅次于应用材料，先进制程离子注入设备核心供应商，AI芯片制造关键设备",
       "tags": [
         "离子注入机"
@@ -804,8 +1931,8 @@
     {
       "code": "8035",
       "name": "東京エレクトロン(Tokyo Electron)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体设备",
+      "sector": "1.2",
+      "industry": "1.2.2",
       "feature": "**全球涂布显影设备龙头**，市占率超80%，刻蚀/沉积全球前三，半导体前道工序核心设备供应商",
       "tags": [
         "光刻机",
@@ -851,8 +1978,8 @@
     {
       "code": "6857",
       "name": "アドバンテスト(爱德万)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体设备",
+      "sector": "1.2",
+      "industry": "1.2.2",
       "feature": "**HBM测试机霸主**，DRAM测试设备市占率超50%，AI芯片测试核心设备供应商",
       "tags": [
         "ATE测试设备",
@@ -887,8 +2014,8 @@
     {
       "code": "6146",
       "name": "ディスコ(迪斯科)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体设备",
+      "sector": "1.2",
+      "industry": "1.2.2",
       "feature": "**晶圆切割设备龙头**，全球市占率超70%，先进封装切割设备核心供应商",
       "tags": [
         "封装设备"
@@ -918,8 +2045,8 @@
     {
       "code": "7735",
       "name": "SCREENホールディングス(斯库林)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体设备",
+      "sector": "1.2",
+      "industry": "1.2.2",
       "feature": "**晶圆清洗设备龙头**，全球市占率超40%，半导体制造清洗工序核心设备供应商",
       "tags": [
         "清洗设备",
@@ -957,8 +2084,8 @@
     {
       "code": "6525",
       "name": "KOKUSAI ELECTRIC(国际电气)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体设备",
+      "sector": "1.2",
+      "industry": "1.2.2",
       "feature": "**半导体成膜设备核心厂商**，CVD/ALD设备市占率全球前列，逻辑/存储芯片制造核心设备",
       "tags": [
         "CVD设备",
@@ -996,8 +2123,8 @@
     {
       "code": "6315",
       "name": "TOWA",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体设备",
+      "sector": "1.2",
+      "industry": "1.2.2",
       "feature": "**压缩成型封装设备龙头**，全球市占率超60%，先进封装塑封设备核心供应商",
       "tags": [
         "封装设备"
@@ -1027,8 +2154,8 @@
     {
       "code": "6361",
       "name": "荏原製作所(Ebara)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体设备",
+      "sector": "1.2",
+      "industry": "1.2.2",
       "feature": "**CMP设备全球第二**，市占率约37%，半导体平坦化工艺核心设备供应商，仅次于应用材料",
       "tags": [
         "CMP设备"
@@ -1058,8 +2185,8 @@
     {
       "code": "7729",
       "name": "東京精密",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体设备",
+      "sector": "1.2",
+      "industry": "1.2.2",
       "feature": "**晶圆探针台全球顶尖**，与东京电子共同主导探针台市场，晶圆测试关键设备供应商",
       "tags": [
         "量测设备"
@@ -1089,8 +2216,8 @@
     {
       "code": "6323",
       "name": "ローツェ(Rorze)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体设备",
+      "sector": "1.2",
+      "industry": "1.2.2",
       "feature": "**晶圆搬运机器人系统全球No.1**，半导体工厂自动化(FA)核心设备，晶圆传输系统领先",
       "tags": [
         "晶圆搬运自动化"
@@ -1120,8 +2247,8 @@
     {
       "code": "6383",
       "name": "ダイフク(大福)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体设备",
+      "sector": "1.2",
+      "industry": "1.2.2",
       "feature": "**半导体工厂自动化(FA)系统龙头**，晶圆搬运/AMHS系统全球市占率领先，半导体智能制造核心方案商",
       "tags": [
         "晶圆搬运自动化"
@@ -1151,8 +2278,8 @@
     {
       "code": "7995",
       "name": "新川(Shinkawa)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体设备",
+      "sector": "1.2",
+      "industry": "1.2.2",
       "feature": "**半导体封装设备龙头**，固晶机/键合机市占率全球前列，先进封装设备核心供应商",
       "tags": [
         "封装设备"
@@ -1182,8 +2309,8 @@
     {
       "code": "7731",
       "name": "ニコン(尼康)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体设备",
+      "sector": "1.2",
+      "industry": "1.2.2",
       "feature": "**全球光刻机双雄之一**，与ASML构成光刻机市场双寡头，先进光刻技术布局深厚，日本半导体设备核心厂商",
       "tags": [
         "光刻机"
@@ -1213,8 +2340,8 @@
     {
       "code": "6590",
       "name": "芝浦メカトロニクス(芝浦机电)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体设备",
+      "sector": "1.2",
+      "industry": "1.2.2",
       "feature": "**晶圆处理与封装设备核心厂商**，先进封装湿制程设备市占率领先",
       "tags": [
         "封装设备"
@@ -1244,8 +2371,8 @@
     {
       "code": "6855",
       "name": "日本電子材料",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体设备",
+      "sector": "1.2",
+      "industry": "1.2.2",
       "feature": "**半导体测试探针卡专业厂**，MEMS探针卡技术领先，AI芯片测试关键供应商",
       "tags": [
         "检测设备"
@@ -1275,8 +2402,8 @@
     {
       "code": "6871",
       "name": "日本マイクロニクス",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体设备",
+      "sector": "1.2",
+      "industry": "1.2.2",
       "feature": "**晶圆测试探针卡专业厂**，高端探针卡市占率全球前列，AI芯片测试关键供应商",
       "tags": [
         "检测设备"
@@ -1306,8 +2433,8 @@
     {
       "code": "6754",
       "name": "アンリツ(安立)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体设备",
+      "sector": "1.2",
+      "industry": "1.2.2",
       "feature": "**高速通信测试设备龙头**，400G/800G光通信测试市占率全球领先",
       "tags": [
         "ATE测试设备"
@@ -1337,8 +2464,8 @@
     {
       "code": "6834",
       "name": "ニューフレアテクノロジー(纽富来)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体设备",
+      "sector": "1.2",
+      "industry": "1.2.2",
       "feature": "**光罩描画设备全球第二**，市占率约26.3%，先进光罩制造核心设备，EUV光罩关键供应商",
       "tags": [
         "检测设备"
@@ -1368,8 +2495,8 @@
     {
       "code": "6951",
       "name": "日本電子",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体设备",
+      "sector": "1.2",
+      "industry": "1.2.2",
       "feature": "**电子束描画设备领先厂商**，市占率约8.4%，电子显微镜等分析测量领域技术实力雄厚",
       "tags": [
         "量测设备"
@@ -1399,8 +2526,8 @@
     {
       "code": "7751",
       "name": "キヤノン(佳能)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体设备",
+      "sector": "1.2",
+      "industry": "1.2.2",
       "feature": "**纳米压印光刻技术布局者**，光刻技术第二路线，先进制程潜在替代方案",
       "tags": [
         "光刻机"
@@ -1430,8 +2557,8 @@
     {
       "code": "688012",
       "name": "中微公司",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体设备",
+      "sector": "1.2",
+      "industry": "1.2.2",
       "feature": "**中国刻蚀设备龙头**，CCP刻蚀国内市占率超80%，5nm制程设备已进入台积电供应链",
       "tags": [
         "刻蚀设备"
@@ -1459,938 +2586,10 @@
       "source": "sina"
     },
     {
-      "code": "DOW",
-      "name": "陶氏化学",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体材料",
-      "feature": "**CMP抛光垫全球霸主**，全球市占率超70%，半导体CMP工序核心材料供应商",
-      "tags": [
-        "CMP抛光垫"
-      ],
-      "tag_themes": [
-        {
-          "tag": "CMP抛光垫",
-          "theme_path": [
-            "2. 半导体材料",
-            "CMP抛光垫"
-          ]
-        }
-      ],
-      "market_type": "美股",
-      "price": "31.73",
-      "change": "-0.77 (-2.37%)",
-      "isUp": false,
-      "per": "14.62",
-      "forward_per": "14.62",
-      "pbr": "1.50",
-      "distHigh": "-25.8%",
-      "distWeek": "-7.2%",
-      "distMonth": "-17.6%",
-      "trend": "熊市空头",
-      "source": "yfinance"
-    },
-    {
-      "code": "LIN",
-      "name": "林德集团",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体材料",
-      "feature": "**全球工业气体与电子特气龙头**，全球最大工业气体供应商，半导体制造核心特种气体供应商",
-      "tags": [
-        "电子特气"
-      ],
-      "tag_themes": [
-        {
-          "tag": "电子特气",
-          "theme_path": [
-            "2. 半导体材料",
-            "电子特气"
-          ]
-        }
-      ],
-      "market_type": "美股",
-      "price": "512.15",
-      "change": "-3.70 (-0.72%)",
-      "isUp": false,
-      "per": "34.01",
-      "forward_per": "25.98",
-      "pbr": "6.14",
-      "distHigh": "-2.6%",
-      "distWeek": "-2.6%",
-      "distMonth": "-2.6%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "PLAB",
-      "name": "Photronics(福尼克斯)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体材料",
-      "feature": "**全球光掩模龙头之一**，与TOPPAN/大日本印刷并列全球光掩模三巨头，先进制程光掩模核心供应商",
-      "tags": [
-        "光掩膜"
-      ],
-      "tag_themes": [
-        {
-          "tag": "光掩膜",
-          "theme_path": [
-            "2. 半导体材料",
-            "光掩膜"
-          ]
-        }
-      ],
-      "market_type": "美股",
-      "price": "33.63",
-      "change": "+2.62 (+8.45%)",
-      "isUp": true,
-      "per": "12.41",
-      "forward_per": "16.61",
-      "pbr": "1.57",
-      "distHigh": "-39.9%",
-      "distWeek": "-0.6%",
-      "distMonth": "-39.7%",
-      "trend": "熊市空头",
-      "source": "yfinance"
-    },
-    {
-      "code": "HOG",
-      "name": "Hoya Corporation(豪雅)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体材料",
-      "feature": "**光刻基板全球龙头**，光掩膜基板(Mask Blank)市占率全球领先，EUV光刻核心材料供应商，与AGC并列双雄",
-      "tags": [
-        "光刻基板"
-      ],
-      "tag_themes": [
-        {
-          "tag": "光刻基板",
-          "theme_path": [
-            "2. 半导体材料",
-            "光刻基板"
-          ]
-        }
-      ],
-      "market_type": "美股",
-      "price": "25.67",
-      "change": "+0.26 (+1.02%)",
-      "isUp": true,
-      "per": "13.30",
-      "forward_per": "13.55",
-      "pbr": "0.88",
-      "distHigh": "-17.9%",
-      "distWeek": "-3.0%",
-      "distMonth": "-3.0%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "BAS",
-      "name": "巴斯夫",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体材料",
-      "feature": "**全球高纯化学品龙头**，半导体级高纯试剂/电子化学品全球领先，晶圆清洗/刻蚀工序核心材料供应商",
-      "tags": [
-        "高纯化学品"
-      ],
-      "tag_themes": [
-        {
-          "tag": "高纯化学品",
-          "theme_path": [
-            "2. 半导体材料",
-            "高纯化学品"
-          ]
-        }
-      ],
-      "market_type": "德股",
-      "price": "49.01",
-      "change": "+0.47 (+0.97%)",
-      "isUp": true,
-      "per": "28.66",
-      "forward_per": "16.60",
-      "pbr": "1.26",
-      "distHigh": "-11.0%",
-      "distWeek": "-2.0%",
-      "distMonth": "-7.8%",
-      "trend": "熊市空头",
-      "source": "yfinance"
-    },
-    {
-      "code": "688126",
-      "name": "沪硅产业",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体材料",
-      "feature": "**中国硅片龙头**，12英寸硅片国产替代核心标的，AI芯片制造关键材料供应商",
-      "tags": [
-        "硅晶圆"
-      ],
-      "tag_themes": [
-        {
-          "tag": "硅晶圆",
-          "theme_path": [
-            "2. 半导体材料",
-            "硅晶圆"
-          ]
-        }
-      ],
-      "market_type": "A股",
-      "price": "32.20",
-      "change": "-0.20 (-0.62%)",
-      "isUp": false,
-      "per": "--",
-      "forward_per": "--",
-      "pbr": "--",
-      "distHigh": "--",
-      "distWeek": "-9.8%",
-      "distMonth": "-9.8%",
-      "trend": "牛市多头",
-      "source": "sina"
-    },
-    {
-      "code": "4063",
-      "name": "信越化学",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体材料",
-      "feature": "**半导体材料霸主**，全球硅片市占率超30%，光刻胶市占率超20%，半导体材料全方位布局",
-      "tags": [
-        "硅晶圆",
-        "光刻胶"
-      ],
-      "tag_themes": [
-        {
-          "tag": "硅晶圆",
-          "theme_path": [
-            "2. 半导体材料",
-            "硅晶圆"
-          ]
-        },
-        {
-          "tag": "光刻胶",
-          "theme_path": [
-            "2. 半导体材料",
-            "光刻胶"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "7310.00",
-      "change": "-149.00 (-2.00%)",
-      "isUp": false,
-      "per": "28.98",
-      "forward_per": "22.17",
-      "pbr": "3.04",
-      "distHigh": "-7.8%",
-      "distWeek": "-5.5%",
-      "distMonth": "-7.8%",
-      "trend": "熊市空头",
-      "source": "yfinance"
-    },
-    {
-      "code": "3436",
-      "name": "SUMCO",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体材料",
-      "feature": "**全球半导体硅片第二大供应商**，与信越化学构成行业双寡头，12英寸硅片核心供应商",
-      "tags": [
-        "硅晶圆"
-      ],
-      "tag_themes": [
-        {
-          "tag": "硅晶圆",
-          "theme_path": [
-            "2. 半导体材料",
-            "硅晶圆"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "4254.00",
-      "change": "-66.00 (-1.53%)",
-      "isUp": false,
-      "per": "86.41",
-      "forward_per": "86.41",
-      "pbr": "2.61",
-      "distHigh": "-6.8%",
-      "distWeek": "-5.7%",
-      "distMonth": "-6.8%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "4186",
-      "name": "東京応化工業(东京应化)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体材料",
-      "feature": "**高端光刻胶冠军**，ArF光刻胶市占率超30%，EUV光刻胶布局领先，全球光刻胶核心供应商",
-      "tags": [
-        "光刻胶"
-      ],
-      "tag_themes": [
-        {
-          "tag": "光刻胶",
-          "theme_path": [
-            "2. 半导体材料",
-            "光刻胶"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "11125.00",
-      "change": "+95.00 (+0.86%)",
-      "isUp": true,
-      "per": "40.00",
-      "forward_per": "57.00",
-      "pbr": "3.25",
-      "distHigh": "-13.9%",
-      "distWeek": "-2.7%",
-      "distMonth": "-5.8%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "7911",
-      "name": "TOPPANホールディングス",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体材料",
-      "feature": "**光掩模全球双雄之一**，全球光掩模市占率领先，EUV光掩模技术布局深厚",
-      "tags": [
-        "光掩膜"
-      ],
-      "tag_themes": [
-        {
-          "tag": "光掩膜",
-          "theme_path": [
-            "2. 半导体材料",
-            "光掩膜"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "4515.00",
-      "change": "-34.00 (-0.75%)",
-      "isUp": false,
-      "per": "19.88",
-      "forward_per": "16.90",
-      "pbr": "0.95",
-      "distHigh": "-23.8%",
-      "distWeek": "-4.3%",
-      "distMonth": "-7.4%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "7912",
-      "name": "大日本印刷(DNP)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体材料",
-      "feature": "**光掩模全球双雄之一**，与TOPPAN合计占据全球光掩模绝大部分市场份额，先进制程光掩模核心供应商",
-      "tags": [
-        "光掩膜"
-      ],
-      "tag_themes": [
-        {
-          "tag": "光掩膜",
-          "theme_path": [
-            "2. 半导体材料",
-            "光掩膜"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "2736.00",
-      "change": "-26.50 (-0.96%)",
-      "isUp": false,
-      "per": "11.61",
-      "forward_per": "13.94",
-      "pbr": "0.99",
-      "distHigh": "-17.1%",
-      "distWeek": "-2.2%",
-      "distMonth": "-4.4%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "5201",
-      "name": "AGC(旭硝子)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体材料",
-      "feature": "**光刻基板全球龙头**，光掩膜基板(Mask Blank)市占率全球领先，半导体光刻核心材料供应商",
-      "tags": [
-        "光刻基板"
-      ],
-      "tag_themes": [
-        {
-          "tag": "光刻基板",
-          "theme_path": [
-            "2. 半导体材料",
-            "光刻基板"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "7616.00",
-      "change": "+52.00 (+0.69%)",
-      "isUp": true,
-      "per": "23.36",
-      "forward_per": "18.45",
-      "pbr": "1.08",
-      "distHigh": "-8.4%",
-      "distWeek": "-2.4%",
-      "distMonth": "-8.4%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "4092",
-      "name": "関東化学(关东化学)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体材料",
-      "feature": "**超高纯半导体化学品龙头**，湿电子化学品/高纯试剂全球领先，半导体清洗/刻蚀工序核心材料供应商",
-      "tags": [
-        "高纯化学品"
-      ],
-      "tag_themes": [
-        {
-          "tag": "高纯化学品",
-          "theme_path": [
-            "2. 半导体材料",
-            "高纯化学品"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "5550.00",
-      "change": "+30.00 (+0.54%)",
-      "isUp": true,
-      "per": "16.75",
-      "forward_per": "14.40",
-      "pbr": "0.96",
-      "distHigh": "-12.7%",
-      "distWeek": "-3.3%",
-      "distMonth": "-12.7%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "4091",
-      "name": "大陽日酸(大阳日酸)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体材料",
-      "feature": "**日本电子特气龙头**，高纯度电子特气市占率日本第一，半导体制造关键气体供应商",
-      "tags": [
-        "电子特气"
-      ],
-      "tag_themes": [
-        {
-          "tag": "电子特气",
-          "theme_path": [
-            "2. 半导体材料",
-            "电子特气"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "5564.00",
-      "change": "-3.00 (-0.05%)",
-      "isUp": false,
-      "per": "19.46",
-      "forward_per": "20.11",
-      "pbr": "1.98",
-      "distHigh": "-14.5%",
-      "distWeek": "-3.4%",
-      "distMonth": "-14.5%",
-      "trend": "熊市空头",
-      "source": "yfinance"
-    },
-    {
-      "code": "4901",
-      "name": "富士フイルム(富士胶片)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体材料",
-      "feature": "**CMP浆料与光刻胶核心供应商**，半导体材料业务全球领先，CMP浆料市占率居前",
-      "tags": [
-        "CMP浆料"
-      ],
-      "tag_themes": [
-        {
-          "tag": "CMP浆料",
-          "theme_path": [
-            "2. 半导体材料",
-            "CMP浆料"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "3383.00",
-      "change": "-41.00 (-1.20%)",
-      "isUp": false,
-      "per": "15.06",
-      "forward_per": "14.58",
-      "pbr": "1.06",
-      "distHigh": "-10.7%",
-      "distWeek": "-3.2%",
-      "distMonth": "-5.3%",
-      "trend": "熊市空头",
-      "source": "yfinance"
-    },
-    {
-      "code": "4920",
-      "name": "日本研磨材",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体材料",
-      "feature": "**CMP抛光材料核心供应商**，半导体CMP研磨材料技术领先，日本CMP材料领域核心厂商",
-      "tags": [
-        "CMP抛光垫"
-      ],
-      "tag_themes": [
-        {
-          "tag": "CMP抛光垫",
-          "theme_path": [
-            "2. 半导体材料",
-            "CMP抛光垫"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "1120.00",
-      "change": "0.00 (0.00%)",
-      "isUp": false,
-      "per": "6.92",
-      "forward_per": "--",
-      "pbr": "0.54",
-      "distHigh": "-13.0%",
-      "distWeek": "-2.3%",
-      "distMonth": "-5.2%",
-      "trend": "熊市空头",
-      "source": "yfinance"
-    },
-    {
-      "code": "4062",
-      "name": "イビデン(揖斐电)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体材料",
-      "feature": "**数据中心级封装基板龙头**，CPU/GPU封装基板核心供应商，AI服务器基板市占率领先",
-      "tags": [
-        "封装基板"
-      ],
-      "tag_themes": [
-        {
-          "tag": "封装基板",
-          "theme_path": [
-            "2. 半导体材料",
-            "封装基板"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "24560.00",
-      "change": "-1155.00 (-4.49%)",
-      "isUp": false,
-      "per": "113.64",
-      "forward_per": "79.49",
-      "pbr": "12.47",
-      "distHigh": "-9.1%",
-      "distWeek": "-9.1%",
-      "distMonth": "-9.1%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "6971",
-      "name": "京セラ(京瓷)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体材料",
-      "feature": "**精密陶瓷元器件巨头**，半导体封装陶瓷材料核心供应商，市占率全球前三",
-      "tags": [
-        "封装基板"
-      ],
-      "tag_themes": [
-        {
-          "tag": "封装基板",
-          "theme_path": [
-            "2. 半导体材料",
-            "封装基板"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "3680.00",
-      "change": "-11.00 (-0.30%)",
-      "isUp": false,
-      "per": "35.84",
-      "forward_per": "41.12",
-      "pbr": "1.45",
-      "distHigh": "-6.0%",
-      "distWeek": "-4.1%",
-      "distMonth": "-6.0%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "6914",
-      "name": "三井ハイテック(三井高科技)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体材料",
-      "feature": "**引线框架全球龙头**，半导体封装引线框架市占率全球前列，功率器件/IC封装核心材料供应商",
-      "tags": [
-        "引线框架"
-      ],
-      "tag_themes": [
-        {
-          "tag": "引线框架",
-          "theme_path": [
-            "2. 半导体材料",
-            "引线框架"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "4485.00",
-      "change": "+340.00 (+8.20%)",
-      "isUp": true,
-      "per": "24.45",
-      "forward_per": "26.29",
-      "pbr": "2.78",
-      "distHigh": "-5.7%",
-      "distWeek": "-0.2%",
-      "distMonth": "-5.7%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "7955",
-      "name": "千住金属",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体材料",
-      "feature": "**半导体焊接材料龙头**，焊球/焊料/助焊剂技术全球领先，BGA封装核心材料供应商",
-      "tags": [
-        "焊球",
-        "焊料"
-      ],
-      "tag_themes": [
-        {
-          "tag": "焊球",
-          "theme_path": [
-            "2. 半导体材料",
-            "焊球"
-          ]
-        },
-        {
-          "tag": "焊料",
-          "theme_path": [
-            "2. 半导体材料",
-            "焊料"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "907.00",
-      "change": "+15.00 (+1.68%)",
-      "isUp": true,
-      "per": "9.38",
-      "forward_per": "--",
-      "pbr": "0.53",
-      "distHigh": "-17.8%",
-      "distWeek": "0.0%",
-      "distMonth": "-6.2%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "4005",
-      "name": "Resonac Holdings",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体材料",
-      "feature": "**环氧塑封料(EMC)+ABF载板材料全球龙头**，半导体封装核心保护材料+AI服务器CPU/GPU封装关键材料供应商",
-      "tags": [
-        "EMC塑封料",
-        "ABF载板"
-      ],
-      "tag_themes": [
-        {
-          "tag": "EMC塑封料",
-          "theme_path": [
-            "2. 半导体材料",
-            "EMC塑封料"
-          ]
-        },
-        {
-          "tag": "ABF载板",
-          "theme_path": [
-            "2. 半导体材料",
-            "ABF载板"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "542.80",
-      "change": "-25.30 (-4.45%)",
-      "isUp": false,
-      "per": "14.62",
-      "forward_per": "13.94",
-      "pbr": "0.89",
-      "distHigh": "-13.2%",
-      "distWeek": "-8.2%",
-      "distMonth": "-12.4%",
-      "trend": "熊市空头",
-      "source": "yfinance"
-    },
-    {
-      "code": "4222",
-      "name": "日立化成(Resonac)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体材料",
-      "feature": "**半导体封装用导电胶/绝缘膜龙头**，先进封装互连材料核心供应商",
-      "tags": [
-        "导电胶",
-        "绝缘膜"
-      ],
-      "tag_themes": [
-        {
-          "tag": "导电胶",
-          "theme_path": [
-            "2. 半导体材料",
-            "导电胶"
-          ]
-        },
-        {
-          "tag": "绝缘膜",
-          "theme_path": [
-            "2. 半导体材料",
-            "绝缘膜"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "707.00",
-      "change": "+6.00 (+0.86%)",
-      "isUp": true,
-      "per": "0.47",
-      "forward_per": "--",
-      "pbr": "0.39",
-      "distHigh": "-52.6%",
-      "distWeek": "-4.6%",
-      "distMonth": "-21.1%",
-      "trend": "熊市空头",
-      "source": "yfinance"
-    },
-    {
-      "code": "3110",
-      "name": "日東紡績",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体材料",
-      "feature": "**高端玻璃纤维布核心供应商**，半导体封装基板材料市占率领先，AI芯片封装不可或缺材料",
-      "tags": [
-        "封装基板 (ABF/BT)"
-      ],
-      "tag_themes": [
-        {
-          "tag": "封装基板 (ABF/BT)",
-          "theme_path": []
-        }
-      ],
-      "market_type": "日股",
-      "price": "19500.00",
-      "change": "+310.00 (+1.62%)",
-      "isUp": true,
-      "per": "17.01",
-      "forward_per": "65.79",
-      "pbr": "4.09",
-      "distHigh": "-40.7%",
-      "distWeek": "-13.3%",
-      "distMonth": "-31.8%",
-      "trend": "熊市空头",
-      "source": "yfinance"
-    },
-    {
-      "code": "6920",
-      "name": "レーザーテック(激光技术)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体材料",
-      "feature": "**EUV光罩检测独家供应商**，市占率超90%，EUV光刻配套检测设备垄断地位",
-      "tags": [
-        "光掩膜"
-      ],
-      "tag_themes": [
-        {
-          "tag": "光掩膜",
-          "theme_path": [
-            "2. 半导体材料",
-            "光掩膜"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "55100.00",
-      "change": "-1350.00 (-2.39%)",
-      "isUp": false,
-      "per": "57.14",
-      "forward_per": "50.45",
-      "pbr": "21.90",
-      "distHigh": "-5.9%",
-      "distWeek": "-5.9%",
-      "distMonth": "-5.9%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "6890",
-      "name": "FERROTEC",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体材料",
-      "feature": "**真空密封与石英制品龙头**，半导体制造真空腔体核心供应商，技术壁垒极高",
-      "tags": [
-        "高纯化学品"
-      ],
-      "tag_themes": [
-        {
-          "tag": "高纯化学品",
-          "theme_path": [
-            "2. 半导体材料",
-            "高纯化学品"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "10470.00",
-      "change": "+190.00 (+1.85%)",
-      "isUp": true,
-      "per": "37.88",
-      "forward_per": "23.79",
-      "pbr": "1.89",
-      "distHigh": "-3.8%",
-      "distWeek": "-3.8%",
-      "distMonth": "-3.8%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "6965",
-      "name": "浜松ホトニクス(浜松光子)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体材料",
-      "feature": "**光电器件全球龙头**，光电倍增管市占率超80%，半导体检测核心器件供应商",
-      "tags": [
-        "光刻基板"
-      ],
-      "tag_themes": [
-        {
-          "tag": "光刻基板",
-          "theme_path": [
-            "2. 半导体材料",
-            "光刻基板"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "2797.50",
-      "change": "+27.00 (+0.97%)",
-      "isUp": true,
-      "per": "61.35",
-      "forward_per": "33.17",
-      "pbr": "2.53",
-      "distHigh": "-9.8%",
-      "distWeek": "-2.3%",
-      "distMonth": "-9.8%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "6779",
-      "name": "日本電波工業",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体材料",
-      "feature": "**频率控制元件龙头**，晶振市占率全球前列，AI服务器时钟器件核心供应商",
-      "tags": [
-        "MLCC"
-      ],
-      "tag_themes": [
-        {
-          "tag": "MLCC",
-          "theme_path": [
-            "2. 半导体材料",
-            "MLCC"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "4660.00",
-      "change": "+250.00 (+5.67%)",
-      "isUp": true,
-      "per": "51.81",
-      "forward_per": "26.86",
-      "pbr": "3.36",
-      "distHigh": "-7.0%",
-      "distWeek": "-1.4%",
-      "distMonth": "-7.0%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "6997",
-      "name": "日本ケミコン(日本化工)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体材料",
-      "feature": "**铝电解电容龙头**，全球市占率超20%，AI服务器电源滤波核心器件",
-      "tags": [
-        "MLCC"
-      ],
-      "tag_themes": [
-        {
-          "tag": "MLCC",
-          "theme_path": [
-            "2. 半导体材料",
-            "MLCC"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "5670.00",
-      "change": "+140.00 (+2.53%)",
-      "isUp": true,
-      "per": "82.64",
-      "forward_per": "32.12",
-      "pbr": "2.18",
-      "distHigh": "-4.5%",
-      "distWeek": "-4.5%",
-      "distMonth": "-4.5%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "6479",
-      "name": "ミネベアミツミ(美蓓亚三美)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "半导体材料",
-      "feature": "**轴承与精密电机龙头**，微型轴承全球市占率超60%，半导体设备精密零部件供应商",
-      "tags": [
-        "封装基板"
-      ],
-      "tag_themes": [
-        {
-          "tag": "封装基板",
-          "theme_path": [
-            "2. 半导体材料",
-            "封装基板"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "4628.00",
-      "change": "+5.00 (+0.11%)",
-      "isUp": true,
-      "per": "18.76",
-      "forward_per": "21.55",
-      "pbr": "2.07",
-      "distHigh": "-9.0%",
-      "distWeek": "-2.5%",
-      "distMonth": "-9.0%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
       "code": "ASX",
       "name": "日月光",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "封测/封装",
+      "sector": "1.3",
+      "industry": "1.3.1",
       "feature": "**全球封测绝对龙头**，全球市占率超30%，先进封装技术全球领先，AI芯片封装核心供应商",
       "tags": [
         "2.5D封装",
@@ -2428,8 +2627,8 @@
     {
       "code": "AMKR",
       "name": "安靠科技",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "封测/封装",
+      "sector": "1.3",
+      "industry": "1.3.1",
       "feature": "**全球封测第二**，全球市占率约15%，先进封装技术领先，AI芯片封装核心供应商之一",
       "tags": [
         "2.5D封装",
@@ -2467,8 +2666,8 @@
     {
       "code": "600584",
       "name": "长电科技",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "封测/封装",
+      "sector": "1.3",
+      "industry": "1.3.1",
       "feature": "**中国封测龙头**，全球封测市占率约10%，先进封装技术布局完善，Chiplet封装核心供应商",
       "tags": [
         "Chiplet",
@@ -2503,8 +2702,8 @@
     {
       "code": "6787",
       "name": "メイコー(MEIKO)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "封测/封装",
+      "sector": "1.3",
+      "industry": "1.3.2",
       "feature": "**高端PCB制造商**，高多层PCB技术领先，AI服务器电路板核心供应商",
       "tags": [
         "PCB"
@@ -2532,690 +2731,10 @@
       "source": "yfinance"
     },
     {
-      "code": "MU",
-      "name": "美光科技",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "存储/HBM",
-      "feature": "**HBM核心供应商**，全球DRAM市占率约25%，AI训练HBM3E内存核心供应商",
-      "tags": [
-        "HBM"
-      ],
-      "tag_themes": [
-        {
-          "tag": "HBM",
-          "theme_path": [
-            "4. 高带宽内存",
-            "HBM"
-          ]
-        }
-      ],
-      "market_type": "美股",
-      "price": "1133.99",
-      "change": "+90.80 (+8.70%)",
-      "isUp": true,
-      "per": "53.46",
-      "forward_per": "9.61",
-      "pbr": "17.65",
-      "distHigh": "-1.3%",
-      "distWeek": "-1.3%",
-      "distMonth": "-1.3%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "RGTI",
-      "name": "Rambus",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "存储/HBM",
-      "feature": "**内存接口与IP龙头**，DDR5内存接口IP全球领先，HBM内存控制器IP核心供应商，AI数据中心内存方案商",
-      "tags": [
-        "内存接口"
-      ],
-      "tag_themes": [
-        {
-          "tag": "内存接口",
-          "theme_path": [
-            "4. 高带宽内存",
-            "内存接口"
-          ]
-        }
-      ],
-      "market_type": "美股",
-      "price": "21.36",
-      "change": "+1.11 (+5.51%)",
-      "isUp": true,
-      "per": "-105.05",
-      "forward_per": "-105.05",
-      "pbr": "12.16",
-      "distHigh": "-63.3%",
-      "distWeek": "-9.4%",
-      "distMonth": "-23.9%",
-      "trend": "熊市空头",
-      "source": "yfinance"
-    },
-    {
-      "code": "005930",
-      "name": "三星电子",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "存储/HBM",
-      "feature": "**全球存储芯片霸主**，DRAM/NAND市占率均超40%，HBM3技术领先，全产业链优势明显",
-      "tags": [
-        "HBM",
-        "GDDR6"
-      ],
-      "tag_themes": [
-        {
-          "tag": "HBM",
-          "theme_path": [
-            "4. 高带宽内存",
-            "HBM"
-          ]
-        },
-        {
-          "tag": "GDDR6",
-          "theme_path": [
-            "4. 高带宽内存",
-            "GDDR6"
-          ]
-        }
-      ],
-      "market_type": "韩股",
-      "price": "354000.00",
-      "change": "-8500.00 (-2.34%)",
-      "isUp": false,
-      "per": "6.10",
-      "forward_per": "6.10",
-      "pbr": "--",
-      "distHigh": "-5.5%",
-      "distWeek": "-5.5%",
-      "distMonth": "-5.5%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "000660",
-      "name": "SK海力士",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "存储/HBM",
-      "feature": "**HBM技术领导者**，HBM3全球市占率超50%，NVIDIA核心HBM供应商，AI训练内存绝对龙头",
-      "tags": [
-        "HBM"
-      ],
-      "tag_themes": [
-        {
-          "tag": "HBM",
-          "theme_path": [
-            "4. 高带宽内存",
-            "HBM"
-          ]
-        }
-      ],
-      "market_type": "韩股",
-      "price": "2764000.00",
-      "change": "+79000.00 (+2.94%)",
-      "isUp": true,
-      "per": "6.68",
-      "forward_per": "6.68",
-      "pbr": "--",
-      "distHigh": "-4.4%",
-      "distWeek": "-4.4%",
-      "distMonth": "-4.4%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "285A",
-      "name": "キオクシア(铠侠)",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "存储/HBM",
-      "feature": "**全球闪存厂商之一**，NAND Flash市占率约15%，AI存储需求核心受益者",
-      "tags": [
-        "存储"
-      ],
-      "tag_themes": [
-        {
-          "tag": "存储",
-          "theme_path": []
-        }
-      ],
-      "market_type": "日股",
-      "price": "108600.00",
-      "change": "+11700.00 (+12.07%)",
-      "isUp": true,
-      "per": "107.53",
-      "forward_per": "--",
-      "pbr": "42.39",
-      "distHigh": "0.0%",
-      "distWeek": "0.0%",
-      "distMonth": "0.0%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "688008",
-      "name": "澜起科技",
-      "sector": "1. 算力芯片+先进封装+存储",
-      "industry": "存储/HBM",
-      "feature": "**全球内存接口芯片龙头**，DDR5内存接口芯片市占率全球领先，津逮服务器CPU国产替代核心标的",
-      "tags": [
-        "内存接口",
-        "CPU"
-      ],
-      "tag_themes": [
-        {
-          "tag": "内存接口",
-          "theme_path": [
-            "4. 高带宽内存",
-            "内存接口"
-          ]
-        },
-        {
-          "tag": "CPU",
-          "theme_path": [
-            "3. 算力芯片",
-            "CPU"
-          ]
-        }
-      ],
-      "market_type": "A股",
-      "price": "269.90",
-      "change": "+7.40 (+2.82%)",
-      "isUp": true,
-      "per": "--",
-      "forward_per": "--",
-      "pbr": "--",
-      "distHigh": "--",
-      "distWeek": "-2.0%",
-      "distMonth": "-6.5%",
-      "trend": "牛市多头",
-      "source": "sina"
-    },
-    {
-      "code": "ROK",
-      "name": "罗克韦尔自动化",
-      "sector": "2. 工业自动化与机器人",
-      "industry": "工业自动化/机器人",
-      "feature": "**工业自动化集成方案巨头**，美国工业自动化市占率前三，智能制造核心方案商",
-      "tags": [
-        "数据中心架构"
-      ],
-      "tag_themes": [
-        {
-          "tag": "数据中心架构",
-          "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "数据中心架构"
-          ]
-        }
-      ],
-      "market_type": "美股",
-      "price": "473.79",
-      "change": "+15.10 (+3.29%)",
-      "isUp": true,
-      "per": "49.25",
-      "forward_per": "32.61",
-      "pbr": "14.97",
-      "distHigh": "-0.4%",
-      "distWeek": "-0.4%",
-      "distMonth": "-0.4%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "688037",
-      "name": "埃斯顿",
-      "sector": "2. 工业自动化与机器人",
-      "industry": "工业自动化/机器人",
-      "feature": "**中国工业机器人龙头**，伺服系统与控制器核心技术自主可控，国产替代主力军",
-      "tags": [
-        "数据中心架构"
-      ],
-      "tag_themes": [
-        {
-          "tag": "数据中心架构",
-          "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "数据中心架构"
-          ]
-        }
-      ],
-      "market_type": "A股",
-      "price": "293.05",
-      "change": "+5.75 (+2.00%)",
-      "isUp": true,
-      "per": "--",
-      "forward_per": "--",
-      "pbr": "--",
-      "distHigh": "--",
-      "distWeek": "-2.0%",
-      "distMonth": "-11.2%",
-      "trend": "牛市多头",
-      "source": "sina"
-    },
-    {
-      "code": "6861",
-      "name": "キーエンス(基恩士)",
-      "sector": "2. 工业自动化与机器人",
-      "industry": "工业自动化/机器人",
-      "feature": "**高精度传感系统霸主**，全球传感器市占率超40%，盈利能力冠绝工业自动化行业",
-      "tags": [
-        "数据中心架构"
-      ],
-      "tag_themes": [
-        {
-          "tag": "数据中心架构",
-          "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "数据中心架构"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "77700.00",
-      "change": "+180.00 (+0.23%)",
-      "isUp": true,
-      "per": "42.37",
-      "forward_per": "41.61",
-      "pbr": "5.43",
-      "distHigh": "-7.7%",
-      "distWeek": "-0.2%",
-      "distMonth": "-4.5%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "6954",
-      "name": "ファナック(发那科)",
-      "sector": "2. 工业自动化与机器人",
-      "industry": "工业自动化/机器人",
-      "feature": "**工业机器人四大家族之一**，全球CNC市占率超50%，工厂自动化绝对龙头",
-      "tags": [
-        "数据中心架构"
-      ],
-      "tag_themes": [
-        {
-          "tag": "数据中心架构",
-          "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "数据中心架构"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "7473.00",
-      "change": "-123.00 (-1.62%)",
-      "isUp": false,
-      "per": "41.84",
-      "forward_per": "43.17",
-      "pbr": "3.74",
-      "distHigh": "-15.8%",
-      "distWeek": "-3.0%",
-      "distMonth": "-14.1%",
-      "trend": "熊市空头",
-      "source": "yfinance"
-    },
-    {
-      "code": "6273",
-      "name": "SMC",
-      "sector": "2. 工业自动化与机器人",
-      "industry": "工业自动化/机器人",
-      "feature": "**全球气动元件霸主**，市占率超30%，工业自动化核心零部件供应商",
-      "tags": [
-        "数据中心架构"
-      ],
-      "tag_themes": [
-        {
-          "tag": "数据中心架构",
-          "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "数据中心架构"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "72840.00",
-      "change": "+240.00 (+0.33%)",
-      "isUp": true,
-      "per": "27.62",
-      "forward_per": "22.19",
-      "pbr": "2.17",
-      "distHigh": "-16.1%",
-      "distWeek": "-2.4%",
-      "distMonth": "-2.4%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "6324",
-      "name": "ハーモニック(Harmonic)",
-      "sector": "2. 工业自动化与机器人",
-      "industry": "工业自动化/机器人",
-      "feature": "**精密减速器标杆**，谐波减速器全球市占率超50%，机器人关节核心部件供应商",
-      "tags": [
-        "数据中心架构"
-      ],
-      "tag_themes": [
-        {
-          "tag": "数据中心架构",
-          "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "数据中心架构"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "7770.00",
-      "change": "0.00 (0.00%)",
-      "isUp": false,
-      "per": "454.65",
-      "forward_per": "102.66",
-      "pbr": "9.15",
-      "distHigh": "-7.5%",
-      "distWeek": "-5.7%",
-      "distMonth": "-7.5%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "6506",
-      "name": "安川電機",
-      "sector": "2. 工业自动化与机器人",
-      "industry": "工业自动化/机器人",
-      "feature": "**伺服驱动与机器人巨头**，全球伺服电机市占率前三，工业机器人四大家族之一",
-      "tags": [
-        "数据中心架构"
-      ],
-      "tag_themes": [
-        {
-          "tag": "数据中心架构",
-          "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "数据中心架构"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "7128.00",
-      "change": "-125.00 (-1.72%)",
-      "isUp": false,
-      "per": "52.63",
-      "forward_per": "34.79",
-      "pbr": "3.82",
-      "distHigh": "-7.4%",
-      "distWeek": "-3.9%",
-      "distMonth": "-7.4%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "6594",
-      "name": "ニデック(尼得科)",
-      "sector": "2. 工业自动化与机器人",
-      "industry": "工业自动化/机器人",
-      "feature": "**全球电机霸主**，微型电机全球市占率超50%，机器人关节电机核心供应商",
-      "tags": [
-        "数据中心架构"
-      ],
-      "tag_themes": [
-        {
-          "tag": "数据中心架构",
-          "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "数据中心架构"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "2695.00",
-      "change": "-82.00 (-2.95%)",
-      "isUp": false,
-      "per": "25.71",
-      "forward_per": "14.22",
-      "pbr": "1.76",
-      "distHigh": "-18.2%",
-      "distWeek": "-7.7%",
-      "distMonth": "-7.8%",
-      "trend": "熊市空头",
-      "source": "yfinance"
-    },
-    {
-      "code": "6645",
-      "name": "オムロン(欧姆龙)",
-      "sector": "2. 工业自动化与机器人",
-      "industry": "工业自动化/机器人",
-      "feature": "**传感与控制技术巨头**，PLC/传感器市占率全球前列，工业自动化方案核心供应商",
-      "tags": [
-        "数据中心架构"
-      ],
-      "tag_themes": [
-        {
-          "tag": "数据中心架构",
-          "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "数据中心架构"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "6134.00",
-      "change": "+304.00 (+5.21%)",
-      "isUp": true,
-      "per": "35.34",
-      "forward_per": "22.63",
-      "pbr": "1.44",
-      "distHigh": "-3.9%",
-      "distWeek": "-0.4%",
-      "distMonth": "-3.9%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "SIE",
-      "name": "西门子",
-      "sector": "2. 工业自动化与机器人",
-      "industry": "工业自动化/机器人",
-      "feature": "**全球工业自动化巨头**，PLC/工控系统市占率全球第一，数字孪生技术领先，AI+工业制造标杆",
-      "tags": [
-        "数据中心架构"
-      ],
-      "tag_themes": [
-        {
-          "tag": "数据中心架构",
-          "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "数据中心架构"
-          ]
-        }
-      ],
-      "market_type": "德股",
-      "price": "274.50",
-      "change": "-2.30 (-0.83%)",
-      "isUp": false,
-      "per": "28.42",
-      "forward_per": "21.49",
-      "pbr": "3.31",
-      "distHigh": "-2.0%",
-      "distWeek": "-1.4%",
-      "distMonth": "-2.0%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "MSFT",
-      "name": "微软",
-      "sector": "3. 高速通信与数据中心",
-      "industry": "云计算/AI底座",
-      "feature": "**全球云服务龙头之一**，Azure云市占率超20%，AI基础设施投资领先，OpenAI独家合作伙伴",
-      "tags": [
-        "云服务IaaS",
-        "基础模型"
-      ],
-      "tag_themes": [
-        {
-          "tag": "云服务IaaS",
-          "theme_path": [
-            "9. 云・模型・应用",
-            "云服务IaaS"
-          ]
-        },
-        {
-          "tag": "基础模型",
-          "theme_path": [
-            "9. 云・模型・应用",
-            "基础模型"
-          ]
-        }
-      ],
-      "market_type": "美股",
-      "price": "379.40",
-      "change": "+0.49 (+0.13%)",
-      "isUp": true,
-      "per": "22.57",
-      "forward_per": "19.61",
-      "pbr": "6.80",
-      "distHigh": "-31.7%",
-      "distWeek": "-5.6%",
-      "distMonth": "-18.6%",
-      "trend": "熊市空头",
-      "source": "yfinance"
-    },
-    {
-      "code": "AMZN",
-      "name": "亚马逊",
-      "sector": "3. 高速通信与数据中心",
-      "industry": "云计算/AI底座",
-      "feature": "**全球云服务龙头**，AWS云市占率超30%，AI训练芯片Trainium/Inferentia自研，云计算绝对霸主",
-      "tags": [
-        "云服务IaaS"
-      ],
-      "tag_themes": [
-        {
-          "tag": "云服务IaaS",
-          "theme_path": [
-            "9. 云・模型・应用",
-            "云服务IaaS"
-          ]
-        }
-      ],
-      "market_type": "美股",
-      "price": "244.39",
-      "change": "+6.89 (+2.90%)",
-      "isUp": true,
-      "per": "31.66",
-      "forward_per": "24.73",
-      "pbr": "5.95",
-      "distHigh": "-12.3%",
-      "distWeek": "-2.1%",
-      "distMonth": "-11.1%",
-      "trend": "熊市空头",
-      "source": "yfinance"
-    },
-    {
-      "code": "GOOGL",
-      "name": "谷歌",
-      "sector": "3. 高速通信与数据中心",
-      "industry": "云计算/AI底座",
-      "feature": "**AI基础设施巨头**，GCP云+TPU自研芯片，Gemini大模型生态领先，AI算力集群核心建设者",
-      "tags": [
-        "云服务IaaS",
-        "基础模型"
-      ],
-      "tag_themes": [
-        {
-          "tag": "云服务IaaS",
-          "theme_path": [
-            "9. 云・模型・应用",
-            "云服务IaaS"
-          ]
-        },
-        {
-          "tag": "基础模型",
-          "theme_path": [
-            "9. 云・模型・应用",
-            "基础模型"
-          ]
-        }
-      ],
-      "market_type": "美股",
-      "price": "368.03",
-      "change": "+4.24 (+1.17%)",
-      "isUp": true,
-      "per": "28.09",
-      "forward_per": "25.42",
-      "pbr": "9.31",
-      "distHigh": "-9.9%",
-      "distWeek": "-2.1%",
-      "distMonth": "-7.3%",
-      "trend": "熊市空头",
-      "source": "yfinance"
-    },
-    {
-      "code": "CRWV",
-      "name": "CoreWeave",
-      "sector": "3. 高速通信与数据中心",
-      "industry": "云计算/AI底座",
-      "feature": "**AI算力云服务龙头**，NVIDIA GPU算力租赁核心提供商，2025年纳斯达克上市，年营收超62亿美元",
-      "tags": [
-        "云服务IaaS"
-      ],
-      "tag_themes": [
-        {
-          "tag": "云服务IaaS",
-          "theme_path": [
-            "9. 云・模型・应用",
-            "云服务IaaS"
-          ]
-        }
-      ],
-      "market_type": "美股",
-      "price": "117.95",
-      "change": "+2.74 (+2.38%)",
-      "isUp": true,
-      "per": "-145.58",
-      "forward_per": "-145.58",
-      "pbr": "13.19",
-      "distHigh": "-35.9%",
-      "distWeek": "-3.3%",
-      "distMonth": "-10.7%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "PLTR",
-      "name": "Palantir",
-      "sector": "3. 高速通信与数据中心",
-      "industry": "云计算/AI底座",
-      "feature": "**AI数据分析龙头**，政府/企业级AI决策平台，AIP平台赋能企业AI转型，AI应用赛道标杆",
-      "tags": [
-        "AI应用"
-      ],
-      "tag_themes": [
-        {
-          "tag": "AI应用",
-          "theme_path": [
-            "9. 云・模型・应用",
-            "AI应用"
-          ]
-        }
-      ],
-      "market_type": "美股",
-      "price": "128.47",
-      "change": "-2.16 (-1.65%)",
-      "isUp": false,
-      "per": "144.35",
-      "forward_per": "61.75",
-      "pbr": "36.45",
-      "distHigh": "-38.1%",
-      "distWeek": "-5.6%",
-      "distMonth": "-21.5%",
-      "trend": "熊市空头",
-      "source": "yfinance"
-    },
-    {
       "code": "COHR",
       "name": "Coherent",
-      "sector": "3. 高速通信与数据中心",
-      "industry": "光通信/CPO",
+      "sector": "1.4",
+      "industry": "1.4.2",
       "feature": "**全球光通信材料龙头**，光模块/光器件市占率全球前列，AI数据中心互联核心供应商",
       "tags": [
         "光模块",
@@ -3253,8 +2772,8 @@
     {
       "code": "LITE",
       "name": "Lumentum",
-      "sector": "3. 高速通信与数据中心",
-      "industry": "光通信/CPO",
+      "sector": "1.4",
+      "industry": "1.4.2",
       "feature": "**光通信器件龙头**，VCSEL/光芯片技术领先，CPO光电共封装核心方案商",
       "tags": [
         "光芯片",
@@ -3292,8 +2811,8 @@
     {
       "code": "688498",
       "name": "源杰科技",
-      "sector": "3. 高速通信与数据中心",
-      "industry": "光通信/CPO",
+      "sector": "1.4",
+      "industry": "1.4.2",
       "feature": "**国产光芯片龙头**，高速激光器芯片技术领先，100G EML光芯片国产替代核心标的，AI数据中心互联上游",
       "tags": [
         "光芯片"
@@ -3323,8 +2842,8 @@
     {
       "code": "600487",
       "name": "亨通光电",
-      "sector": "3. 高速通信与数据中心",
-      "industry": "光通信/CPO",
+      "sector": "1.4",
+      "industry": "1.4.2",
       "feature": "**全球光纤光缆核心供应商**，通信光缆市占率全球前三，AI数据中心传输基础建设者",
       "tags": [
         "光纤光缆"
@@ -3354,8 +2873,8 @@
     {
       "code": "5801",
       "name": "古河電気工業",
-      "sector": "3. 高速通信与数据中心",
-      "industry": "光通信/CPO",
+      "sector": "1.4",
+      "industry": "1.4.2",
       "feature": "**高性能光学互联方案商**，光通信器件技术领先，CPO光电共封装核心供应商",
       "tags": [
         "硅光子"
@@ -3385,8 +2904,8 @@
     {
       "code": "5802",
       "name": "住友電気工業",
-      "sector": "3. 高速通信与数据中心",
-      "industry": "光通信/CPO",
+      "sector": "1.4",
+      "industry": "1.4.2",
       "feature": "**精密连接器龙头**，高速连接器市占率全球前三，数据中心互联核心",
       "tags": [
         "光模块"
@@ -3416,8 +2935,8 @@
     {
       "code": "5803",
       "name": "フジクラ(藤仓)",
-      "sector": "3. 高速通信与数据中心",
-      "industry": "光通信/CPO",
+      "sector": "1.4",
+      "industry": "1.4.2",
       "feature": "**高速光缆与光纤龙头**，光纤预制棒技术领先，数据中心光缆核心供应商",
       "tags": [
         "光纤光缆"
@@ -3447,8 +2966,8 @@
     {
       "code": "6834",
       "name": "精工技研",
-      "sector": "3. 高速通信与数据中心",
-      "industry": "光通信/CPO",
+      "sector": "1.4",
+      "industry": "1.4.2",
       "feature": "**精密光学组件供应商**，光通信连接器与适配器技术领先",
       "tags": [
         "光模块"
@@ -3478,8 +2997,8 @@
     {
       "code": "6777",
       "name": "santec",
-      "sector": "3. 高速通信与数据中心",
-      "industry": "光通信/CPO",
+      "sector": "1.4",
+      "industry": "1.4.2",
       "feature": "**光通信测试先驱**，高性能光学元器件与测试设备供应商",
       "tags": [
         "光芯片"
@@ -3507,134 +3026,10 @@
       "source": "yfinance"
     },
     {
-      "code": "6981",
-      "name": "村田製作所",
-      "sector": "3. 高速通信与数据中心",
-      "industry": "被动元件/传感器",
-      "feature": "**全球被动元器件霸主**，MLCC市占率超40%，AI服务器核心元器件供应商",
-      "tags": [
-        "MLCC"
-      ],
-      "tag_themes": [
-        {
-          "tag": "MLCC",
-          "theme_path": [
-            "2. 半导体材料",
-            "MLCC"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "11750.00",
-      "change": "+5.00 (+0.04%)",
-      "isUp": true,
-      "per": "91.74",
-      "forward_per": "49.52",
-      "pbr": "7.87",
-      "distHigh": "-8.6%",
-      "distWeek": "-8.6%",
-      "distMonth": "-8.6%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "6762",
-      "name": "TDK",
-      "sector": "3. 高速通信与数据中心",
-      "industry": "被动元件/传感器",
-      "feature": "**电子元器件巨头**，磁性材料与传感器全球领先，AI数据中心元器件核心供应商",
-      "tags": [
-        "MLCC"
-      ],
-      "tag_themes": [
-        {
-          "tag": "MLCC",
-          "theme_path": [
-            "2. 半导体材料",
-            "MLCC"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "3909.00",
-      "change": "+54.00 (+1.40%)",
-      "isUp": true,
-      "per": "38.02",
-      "forward_per": "36.57",
-      "pbr": "3.39",
-      "distHigh": "-9.4%",
-      "distWeek": "-4.5%",
-      "distMonth": "-9.4%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "6976",
-      "name": "太陽誘電",
-      "sector": "3. 高速通信与数据中心",
-      "industry": "被动元件/传感器",
-      "feature": "**高端MLCC与电感龙头**，中高端MLCC市占率全球前五，AI服务器被动元件核心供应商",
-      "tags": [
-        "MLCC"
-      ],
-      "tag_themes": [
-        {
-          "tag": "MLCC",
-          "theme_path": [
-            "2. 半导体材料",
-            "MLCC"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "19315.00",
-      "change": "-545.00 (-2.74%)",
-      "isUp": false,
-      "per": "178.58",
-      "forward_per": "103.13",
-      "pbr": "7.01",
-      "distHigh": "-12.6%",
-      "distWeek": "-12.6%",
-      "distMonth": "-12.6%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "6996",
-      "name": "ニチコン(尼吉康)",
-      "sector": "3. 高速通信与数据中心",
-      "industry": "被动元件/传感器",
-      "feature": "**储能与充电系统供应商**，薄膜电容器技术领先，数据中心电源方案商",
-      "tags": [
-        "电力系统"
-      ],
-      "tag_themes": [
-        {
-          "tag": "电力系统",
-          "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "电力系统"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "4635.00",
-      "change": "-70.00 (-1.49%)",
-      "isUp": false,
-      "per": "49.26",
-      "forward_per": "51.55",
-      "pbr": "2.60",
-      "distHigh": "-6.6%",
-      "distWeek": "-6.6%",
-      "distMonth": "-6.6%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
       "code": "CEG",
       "name": "星座能源",
-      "sector": "3. 高速通信与数据中心",
-      "industry": "能源/电力",
+      "sector": "1.5",
+      "industry": "1.5.1",
       "feature": "**AI数据中心核电直供商**，美国最大核电运营商，AI算力清洁能源核心供应商",
       "tags": [
         "电力系统"
@@ -3664,8 +3059,8 @@
     {
       "code": "SBGSF",
       "name": "施耐德电气",
-      "sector": "3. 高速通信与数据中心",
-      "industry": "能源/电力",
+      "sector": "1.5",
+      "industry": "1.5.1",
       "feature": "**数据中心电力管理龙头**，全球市占率超25%，AI数据中心配电与冷却方案核心供应商",
       "tags": [
         "电力系统",
@@ -3688,23 +3083,23 @@
         }
       ],
       "market_type": "美股",
-      "price": "336.20",
-      "change": "+13.26 (+4.11%)",
+      "price": "322.94",
+      "change": "+6.30 (+1.99%)",
       "isUp": true,
       "per": "36.35",
       "forward_per": "32.64",
-      "pbr": "6.66",
-      "distHigh": "-3.0%",
-      "distWeek": "-3.0%",
-      "distMonth": "-3.0%",
+      "pbr": "6.71",
+      "distHigh": "-6.8%",
+      "distWeek": "-4.7%",
+      "distMonth": "-6.0%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
     {
       "code": "ETN",
       "name": "伊顿",
-      "sector": "3. 高速通信与数据中心",
-      "industry": "能源/电力",
+      "sector": "1.5",
+      "industry": "1.5.1",
       "feature": "**全球电力管理巨头**，数据中心UPS/配电系统市占率全球前列，AI数据中心电力基础设施核心供应商",
       "tags": [
         "电力系统"
@@ -3734,8 +3129,8 @@
     {
       "code": "VRT",
       "name": "Vertiv(维谛技术)",
-      "sector": "3. 高速通信与数据中心",
-      "industry": "能源/电力",
+      "sector": "1.5",
+      "industry": "1.5.1",
       "feature": "**数据中心液冷与热管理龙头**，全球数据中心热管理市占率领先，AI算力液冷方案核心供应商",
       "tags": [
         "液冷设备",
@@ -3773,8 +3168,8 @@
     {
       "code": "6501",
       "name": "日立製作所",
-      "sector": "3. 高速通信与数据中心",
-      "industry": "能源/电力",
+      "sector": "1.5",
+      "industry": "1.5.1",
       "feature": "**基础设施能源巨头**，电网/变压器市占率全球前列，AI数据中心电力基础设施核心",
       "tags": [
         "电力系统"
@@ -3804,8 +3199,8 @@
     {
       "code": "6367",
       "name": "ダイキン工業(大金)",
-      "sector": "3. 高速通信与数据中心",
-      "industry": "能源/电力",
+      "sector": "1.5",
+      "industry": "1.5.2",
       "feature": "**数据中心高效冷却龙头**，全球空调市占率超20%，液冷技术领先",
       "tags": [
         "液冷设备"
@@ -3835,8 +3230,8 @@
     {
       "code": "485A",
       "name": "PowerX",
-      "sector": "3. 高速通信与数据中心",
-      "industry": "能源/电力",
+      "sector": "1.5",
+      "industry": "1.5.1",
       "feature": "**新型储能电池先锋**，AI数据中心储能方案新锐供应商",
       "tags": [
         "电力系统"
@@ -3866,8 +3261,8 @@
     {
       "code": "6503",
       "name": "三菱電機",
-      "sector": "3. 高速通信与数据中心",
-      "industry": "能源/电力",
+      "sector": "1.5",
+      "industry": "1.5.1",
       "feature": "**重型电力设备巨头**，数据中心电力基础设施核心供应商，电力电子技术领先",
       "tags": [
         "电力系统"
@@ -3897,8 +3292,8 @@
     {
       "code": "6504",
       "name": "富士電機",
-      "sector": "3. 高速通信与数据中心",
-      "industry": "能源/电力",
+      "sector": "1.5",
+      "industry": "1.5.1",
       "feature": "**能源基础设施与变流设备龙头**，功率半导体与电源方案核心供应商",
       "tags": [
         "电力系统"
@@ -3926,10 +3321,615 @@
       "source": "yfinance"
     },
     {
+      "code": "6981",
+      "name": "村田製作所",
+      "sector": "1.5",
+      "industry": "1.5.3",
+      "feature": "**全球被动元器件霸主**，MLCC市占率超40%，AI服务器核心元器件供应商",
+      "tags": [
+        "MLCC"
+      ],
+      "tag_themes": [
+        {
+          "tag": "MLCC",
+          "theme_path": [
+            "2. 半导体材料",
+            "MLCC"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "11750.00",
+      "change": "+5.00 (+0.04%)",
+      "isUp": true,
+      "per": "91.74",
+      "forward_per": "49.52",
+      "pbr": "7.87",
+      "distHigh": "-8.6%",
+      "distWeek": "-8.6%",
+      "distMonth": "-8.6%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "6762",
+      "name": "TDK",
+      "sector": "1.5",
+      "industry": "1.5.3",
+      "feature": "**电子元器件巨头**，磁性材料与传感器全球领先，AI数据中心元器件核心供应商",
+      "tags": [
+        "MLCC"
+      ],
+      "tag_themes": [
+        {
+          "tag": "MLCC",
+          "theme_path": [
+            "2. 半导体材料",
+            "MLCC"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "3909.00",
+      "change": "+54.00 (+1.40%)",
+      "isUp": true,
+      "per": "38.02",
+      "forward_per": "36.57",
+      "pbr": "3.39",
+      "distHigh": "-9.4%",
+      "distWeek": "-4.5%",
+      "distMonth": "-9.4%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "6976",
+      "name": "太陽誘電",
+      "sector": "1.5",
+      "industry": "1.5.3",
+      "feature": "**高端MLCC与电感龙头**，中高端MLCC市占率全球前五，AI服务器被动元件核心供应商",
+      "tags": [
+        "MLCC"
+      ],
+      "tag_themes": [
+        {
+          "tag": "MLCC",
+          "theme_path": [
+            "2. 半导体材料",
+            "MLCC"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "19315.00",
+      "change": "-545.00 (-2.74%)",
+      "isUp": false,
+      "per": "178.58",
+      "forward_per": "103.13",
+      "pbr": "7.01",
+      "distHigh": "-12.6%",
+      "distWeek": "-12.6%",
+      "distMonth": "-12.6%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "6996",
+      "name": "ニチコン(尼吉康)",
+      "sector": "1.5",
+      "industry": "1.5.3",
+      "feature": "**储能与充电系统供应商**，薄膜电容器技术领先，数据中心电源方案商",
+      "tags": [
+        "电力系统"
+      ],
+      "tag_themes": [
+        {
+          "tag": "电力系统",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "电力系统"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "4635.00",
+      "change": "-70.00 (-1.49%)",
+      "isUp": false,
+      "per": "49.26",
+      "forward_per": "51.55",
+      "pbr": "2.60",
+      "distHigh": "-6.6%",
+      "distWeek": "-6.6%",
+      "distMonth": "-6.6%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "MSFT",
+      "name": "微软",
+      "sector": "1.6",
+      "industry": "1.6.1",
+      "feature": "**全球云服务龙头之一**，Azure云市占率超20%，AI基础设施投资领先，OpenAI独家合作伙伴",
+      "tags": [
+        "云服务IaaS",
+        "基础模型"
+      ],
+      "tag_themes": [
+        {
+          "tag": "云服务IaaS",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "云服务IaaS"
+          ]
+        },
+        {
+          "tag": "基础模型",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "基础模型"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "379.40",
+      "change": "+0.49 (+0.13%)",
+      "isUp": true,
+      "per": "22.57",
+      "forward_per": "19.61",
+      "pbr": "6.80",
+      "distHigh": "-31.7%",
+      "distWeek": "-5.6%",
+      "distMonth": "-18.6%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "AMZN",
+      "name": "亚马逊",
+      "sector": "1.6",
+      "industry": "1.6.1",
+      "feature": "**全球云服务龙头**，AWS云市占率超30%，AI训练芯片Trainium/Inferentia自研，云计算绝对霸主",
+      "tags": [
+        "云服务IaaS"
+      ],
+      "tag_themes": [
+        {
+          "tag": "云服务IaaS",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "云服务IaaS"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "244.39",
+      "change": "+6.89 (+2.90%)",
+      "isUp": true,
+      "per": "31.66",
+      "forward_per": "24.73",
+      "pbr": "5.95",
+      "distHigh": "-12.3%",
+      "distWeek": "-2.1%",
+      "distMonth": "-11.1%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "GOOGL",
+      "name": "谷歌",
+      "sector": "1.6",
+      "industry": "1.6.1",
+      "feature": "**AI基础设施巨头**，GCP云+TPU自研芯片，Gemini大模型生态领先，AI算力集群核心建设者",
+      "tags": [
+        "云服务IaaS",
+        "基础模型"
+      ],
+      "tag_themes": [
+        {
+          "tag": "云服务IaaS",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "云服务IaaS"
+          ]
+        },
+        {
+          "tag": "基础模型",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "基础模型"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "368.03",
+      "change": "+4.24 (+1.17%)",
+      "isUp": true,
+      "per": "28.09",
+      "forward_per": "25.42",
+      "pbr": "9.31",
+      "distHigh": "-9.9%",
+      "distWeek": "-2.1%",
+      "distMonth": "-7.3%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "CRWV",
+      "name": "CoreWeave",
+      "sector": "1.6",
+      "industry": "1.6.1",
+      "feature": "**AI算力云服务龙头**，NVIDIA GPU算力租赁核心提供商，2025年纳斯达克上市，年营收超62亿美元",
+      "tags": [
+        "云服务IaaS"
+      ],
+      "tag_themes": [
+        {
+          "tag": "云服务IaaS",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "云服务IaaS"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "117.95",
+      "change": "+2.74 (+2.38%)",
+      "isUp": true,
+      "per": "-145.58",
+      "forward_per": "-145.58",
+      "pbr": "13.19",
+      "distHigh": "-35.9%",
+      "distWeek": "-3.3%",
+      "distMonth": "-10.7%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "PLTR",
+      "name": "Palantir",
+      "sector": "1.6",
+      "industry": "1.6.3",
+      "feature": "**AI数据分析龙头**，政府/企业级AI决策平台，AIP平台赋能企业AI转型，AI应用赛道标杆",
+      "tags": [
+        "AI应用"
+      ],
+      "tag_themes": [
+        {
+          "tag": "AI应用",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "128.47",
+      "change": "-2.16 (-1.65%)",
+      "isUp": false,
+      "per": "144.35",
+      "forward_per": "61.75",
+      "pbr": "36.45",
+      "distHigh": "-38.1%",
+      "distWeek": "-5.6%",
+      "distMonth": "-21.5%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "ROK",
+      "name": "罗克韦尔自动化",
+      "sector": "2.1",
+      "industry": "2.1.1",
+      "feature": "**工业自动化集成方案巨头**，美国工业自动化市占率前三，智能制造核心方案商",
+      "tags": [
+        "数据中心架构"
+      ],
+      "tag_themes": [
+        {
+          "tag": "数据中心架构",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "458.69",
+      "change": "-7.62 (-1.63%)",
+      "isUp": false,
+      "per": "49.25",
+      "forward_per": "32.61",
+      "pbr": "14.97",
+      "distHigh": "-3.6%",
+      "distWeek": "-3.4%",
+      "distMonth": "-3.4%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "688037",
+      "name": "埃斯顿",
+      "sector": "2.1",
+      "industry": "2.1.1",
+      "feature": "**中国工业机器人龙头**，伺服系统与控制器核心技术自主可控，国产替代主力军",
+      "tags": [
+        "数据中心架构"
+      ],
+      "tag_themes": [
+        {
+          "tag": "数据中心架构",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "293.05",
+      "change": "+5.75 (+2.00%)",
+      "isUp": true,
+      "per": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "distWeek": "-2.0%",
+      "distMonth": "-11.2%",
+      "trend": "牛市多头",
+      "source": "sina"
+    },
+    {
+      "code": "6861",
+      "name": "キーエンス(基恩士)",
+      "sector": "2.1",
+      "industry": "2.1.1",
+      "feature": "**高精度传感系统霸主**，全球传感器市占率超40%，盈利能力冠绝工业自动化行业",
+      "tags": [
+        "数据中心架构"
+      ],
+      "tag_themes": [
+        {
+          "tag": "数据中心架构",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "77700.00",
+      "change": "+180.00 (+0.23%)",
+      "isUp": true,
+      "per": "42.37",
+      "forward_per": "41.61",
+      "pbr": "5.43",
+      "distHigh": "-7.7%",
+      "distWeek": "-0.2%",
+      "distMonth": "-4.5%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "6954",
+      "name": "ファナック(发那科)",
+      "sector": "2.1",
+      "industry": "2.1.1",
+      "feature": "**工业机器人四大家族之一**，全球CNC市占率超50%，工厂自动化绝对龙头",
+      "tags": [
+        "数据中心架构"
+      ],
+      "tag_themes": [
+        {
+          "tag": "数据中心架构",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "7473.00",
+      "change": "-123.00 (-1.62%)",
+      "isUp": false,
+      "per": "41.84",
+      "forward_per": "43.17",
+      "pbr": "3.74",
+      "distHigh": "-15.8%",
+      "distWeek": "-3.0%",
+      "distMonth": "-14.1%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "6273",
+      "name": "SMC",
+      "sector": "2.1",
+      "industry": "2.1.1",
+      "feature": "**全球气动元件霸主**，市占率超30%，工业自动化核心零部件供应商",
+      "tags": [
+        "数据中心架构"
+      ],
+      "tag_themes": [
+        {
+          "tag": "数据中心架构",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "72840.00",
+      "change": "+240.00 (+0.33%)",
+      "isUp": true,
+      "per": "27.62",
+      "forward_per": "22.19",
+      "pbr": "2.17",
+      "distHigh": "-16.1%",
+      "distWeek": "-2.4%",
+      "distMonth": "-2.4%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "6324",
+      "name": "ハーモニック(Harmonic)",
+      "sector": "2.1",
+      "industry": "2.1.1",
+      "feature": "**精密减速器标杆**，谐波减速器全球市占率超50%，机器人关节核心部件供应商",
+      "tags": [
+        "数据中心架构"
+      ],
+      "tag_themes": [
+        {
+          "tag": "数据中心架构",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "7770.00",
+      "change": "0.00 (0.00%)",
+      "isUp": false,
+      "per": "454.65",
+      "forward_per": "102.66",
+      "pbr": "9.15",
+      "distHigh": "-7.5%",
+      "distWeek": "-5.7%",
+      "distMonth": "-7.5%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "6506",
+      "name": "安川電機",
+      "sector": "2.1",
+      "industry": "2.1.1",
+      "feature": "**伺服驱动与机器人巨头**，全球伺服电机市占率前三，工业机器人四大家族之一",
+      "tags": [
+        "数据中心架构"
+      ],
+      "tag_themes": [
+        {
+          "tag": "数据中心架构",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "7128.00",
+      "change": "-125.00 (-1.72%)",
+      "isUp": false,
+      "per": "52.63",
+      "forward_per": "34.79",
+      "pbr": "3.82",
+      "distHigh": "-7.4%",
+      "distWeek": "-3.9%",
+      "distMonth": "-7.4%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "6594",
+      "name": "ニデック(尼得科)",
+      "sector": "2.1",
+      "industry": "2.1.1",
+      "feature": "**全球电机霸主**，微型电机全球市占率超50%，机器人关节电机核心供应商",
+      "tags": [
+        "数据中心架构"
+      ],
+      "tag_themes": [
+        {
+          "tag": "数据中心架构",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "2695.00",
+      "change": "-82.00 (-2.95%)",
+      "isUp": false,
+      "per": "25.71",
+      "forward_per": "14.22",
+      "pbr": "1.76",
+      "distHigh": "-18.2%",
+      "distWeek": "-7.7%",
+      "distMonth": "-7.8%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "6645",
+      "name": "オムロン(欧姆龙)",
+      "sector": "2.1",
+      "industry": "2.1.1",
+      "feature": "**传感与控制技术巨头**，PLC/传感器市占率全球前列，工业自动化方案核心供应商",
+      "tags": [
+        "数据中心架构"
+      ],
+      "tag_themes": [
+        {
+          "tag": "数据中心架构",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "6134.00",
+      "change": "+304.00 (+5.21%)",
+      "isUp": true,
+      "per": "35.34",
+      "forward_per": "22.63",
+      "pbr": "1.44",
+      "distHigh": "-3.9%",
+      "distWeek": "-0.4%",
+      "distMonth": "-3.9%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "SIE",
+      "name": "西门子",
+      "sector": "2.1",
+      "industry": "2.1.1",
+      "feature": "**全球工业自动化巨头**，PLC/工控系统市占率全球第一，数字孪生技术领先，AI+工业制造标杆",
+      "tags": [
+        "数据中心架构"
+      ],
+      "tag_themes": [
+        {
+          "tag": "数据中心架构",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构"
+          ]
+        }
+      ],
+      "market_type": "德股",
+      "price": "274.50",
+      "change": "-2.30 (-0.83%)",
+      "isUp": false,
+      "per": "28.42",
+      "forward_per": "21.49",
+      "pbr": "3.31",
+      "distHigh": "-2.0%",
+      "distWeek": "-1.4%",
+      "distMonth": "-2.0%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
       "code": "SPCX",
       "name": "SpaceX",
-      "sector": "4. 前沿航天与深科技",
-      "industry": "航天/卫星",
+      "sector": "4.1",
+      "industry": "4.1.1",
       "feature": "**全球航天发射龙头**，Starlink在轨卫星超6000颗，商业航天估值超2000亿美元",
       "tags": [
         "AI应用"
@@ -3959,8 +3959,8 @@
     {
       "code": "RKLB",
       "name": "Rocket Lab",
-      "sector": "4. 前沿航天与深科技",
-      "industry": "航天/卫星",
+      "sector": "4.1",
+      "industry": "4.1.1",
       "feature": "**轻型火箭发射龙头**，Electron火箭发射次数全球第二，端到端航天系统方案商",
       "tags": [
         "AI应用"
@@ -3990,8 +3990,8 @@
     {
       "code": "ASTS",
       "name": "AST SpaceMobile",
-      "sector": "4. 前沿航天与深科技",
-      "industry": "航天/卫星",
+      "sector": "4.1",
+      "industry": "4.1.1",
       "feature": "**太空蜂窝通信网络先驱**，全球首家实现手机直连卫星通信的商业航天公司",
       "tags": [
         "AI应用"
@@ -4021,8 +4021,8 @@
     {
       "code": "IRDM",
       "name": "铱星通信",
-      "sector": "4. 前沿航天与深科技",
-      "industry": "航天/卫星",
+      "sector": "4.1",
+      "industry": "4.1.1",
       "feature": "**全球卫星通信运营商**，66颗低轨卫星星座，全球卫星通信服务核心提供商",
       "tags": [
         "AI应用"
@@ -4052,8 +4052,8 @@
     {
       "code": "9348",
       "name": "ispace",
-      "sector": "4. 前沿航天与深科技",
-      "industry": "航天/卫星",
+      "sector": "4.1",
+      "industry": "4.1.1",
       "feature": "**日本首家月球探测商业公司**，月球着陆器技术领先，NASA商业月球载荷计划核心合作伙伴",
       "tags": [
         "AI应用"
@@ -4083,8 +4083,8 @@
     {
       "code": "186A",
       "name": "Astroscale",
-      "sector": "4. 前沿航天与深科技",
-      "industry": "航天/卫星",
+      "sector": "4.1",
+      "industry": "4.1.1",
       "feature": "**全球轨道碎片治理先驱**，ELSA-d技术领先，太空可持续性解决方案领导者",
       "tags": [
         "AI应用"
@@ -4114,8 +4114,8 @@
     {
       "code": "6613",
       "name": "QDレーザ(QD激光)",
-      "sector": "4. 前沿航天与深科技",
-      "industry": "航天/卫星",
+      "sector": "4.1",
+      "industry": "4.1.1",
       "feature": "**半导体激光器先驱**，高功率激光二极管技术领先，航天通信与探测核心器件供应商",
       "tags": [
         "光芯片"
@@ -4145,8 +4145,8 @@
     {
       "code": "GE",
       "name": "GE Aerospace",
-      "sector": "4. 前沿航天与深科技",
-      "industry": "航空航天",
+      "sector": "4.1",
+      "industry": "4.1.2",
       "feature": "**全球航空发动机巨头**，商用航空发动机市占率超50%，国防航空动力核心供应商",
       "tags": [
         "AI应用"
@@ -4176,8 +4176,8 @@
     {
       "code": "RTX",
       "name": "RTX Corporation",
-      "sector": "4. 前沿航天与深科技",
-      "industry": "航空航天",
+      "sector": "4.1",
+      "industry": "4.1.2",
       "feature": "**全球顶级防务与航天系统集成商**，导弹与雷达系统市占率全球领先",
       "tags": [
         "AI应用"
@@ -4207,8 +4207,8 @@
     {
       "code": "BA",
       "name": "波音",
-      "sector": "4. 前沿航天与深科技",
-      "industry": "航空航天",
+      "sector": "4.1",
+      "industry": "4.1.2",
       "feature": "**全球航空制造双寡头之一**，737MAX/787核心机型制造商，NASA商业载人航天核心合作伙伴",
       "tags": [
         "AI应用"
@@ -4238,8 +4238,8 @@
     {
       "code": "EADSY",
       "name": "空客",
-      "sector": "4. 前沿航天与深科技",
-      "industry": "航空航天",
+      "sector": "4.1",
+      "industry": "4.1.2",
       "feature": "**全球航空制造双寡头之一**，A320/A350核心机型制造商，欧洲航天产业链核心",
       "tags": [
         "AI应用"
@@ -4254,23 +4254,23 @@
         }
       ],
       "market_type": "美股",
-      "price": "55.00",
-      "change": "+1.53 (+2.86%)",
-      "isUp": true,
+      "price": "53.47",
+      "change": "-0.21 (-0.39%)",
+      "isUp": false,
       "per": "29.89",
       "forward_per": "23.45",
-      "pbr": "5.79",
-      "distHigh": "-14.5%",
-      "distWeek": "-0.7%",
-      "distMonth": "-0.7%",
+      "pbr": "5.73",
+      "distHigh": "-16.9%",
+      "distWeek": "-1.5%",
+      "distMonth": "-1.5%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
     {
       "code": "7011",
       "name": "三菱重工",
-      "sector": "4. 前沿航天与深科技",
-      "industry": "航空航天",
+      "sector": "4.1",
+      "industry": "4.1.2",
       "feature": "**日本航空航天重工巨头**，H-IIA火箭制造商，航空发动机与防务装备核心制造商",
       "tags": [
         "AI应用"
@@ -4300,8 +4300,8 @@
     {
       "code": "7013",
       "name": "IHI",
-      "sector": "4. 前沿航天与深科技",
-      "industry": "航空航天",
+      "sector": "4.1",
+      "industry": "4.1.2",
       "feature": "**航空发动机核心厂商**，日本唯一航空发动机整机制造商，军用/民用推进系统领先",
       "tags": [
         "AI应用"
@@ -4331,8 +4331,8 @@
     {
       "code": "5631",
       "name": "日本製鋼所",
-      "sector": "4. 前沿航天与深科技",
-      "industry": "航空航天",
+      "sector": "4.1",
+      "industry": "4.1.2",
       "feature": "**大型铸锻件专家**，核工业与航空航天锻件核心供应商，特种材料技术领先",
       "tags": [
         "AI应用"
