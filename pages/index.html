@@ -601,8 +601,8 @@
                 sectorDiv.className = 'sector-section';
                 
                 // ⭐ 获取 sector_name 和 sector_comment
-                const sectorName = getSectorName(sectorId);
-                const sectorComment = getSectorComment(sectorId);
+                const sectorName = getSectorName(sector);
+                const sectorComment = getSectorComment(sector);
                 
                 
                 sectorDiv.innerHTML = `
@@ -624,7 +624,7 @@
                     industryDiv.className = 'industry-section';
                     
                     // ⭐ 获取 industry_comment
-                    const industryName = getIndustryName(sectorId, industryId);
+                    const industryName = getIndustryName(sector, industry);
                     const industryComment = getIndustryComment(sector, industry);
                     
                     industryDiv.innerHTML = `
