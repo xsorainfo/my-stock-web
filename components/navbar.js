@@ -8,7 +8,9 @@ const basePath = window.location.origin;
 function loadNavbar() {
     const navbarHTML = `
         <nav class="top-navbar">
-            <div class="nav-logo">🖥️</div>
+            <div class="nav-logo">
+                <img src="/assets/images/logo.jpg" alt="Logo" style="height: 32px; width: auto; border-radius: 4px;">
+            </div>
             <div class="nav-links">
                 <a href="${basePath}/pages/index.html" class="nav-item" data-page="index">首页</a>
                 <a href="${basePath}/pages/sub_ai.html" class="nav-item" data-page="sub_ai" target="_blank">テーマ別</a>
