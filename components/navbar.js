@@ -5,10 +5,10 @@
 // ⭐ 网站统一配置（Logo + Favicon 集中管理）
 // ============================================================
 const SITE_CONFIG = {
-    logo: '/assets/images/logo.jpg',
+    logo: '/assets/images/icon1.jpg',
     logoAlt: 'AI 硬科技',
     logoHeight: '32px',
-    favicon: '/assets/images/StockLogo.jpg'
+    favicon: '/assets/images/icon2.jpg'
 };
 
 // ⭐ 添加这一行：获取网站根路径
