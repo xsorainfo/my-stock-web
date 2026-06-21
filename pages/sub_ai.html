@@ -676,6 +676,9 @@
                 const trendClass = stock.trend === '牛市多头' ? 'trend-up-bg' : 'trend-down-bg';
                 const formattedFeature = stock.feature.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
 
+                // ⭐ 获取 industry 的可读名称
+                const industryName = getIndustryName(stock.sector, stock.industry);
+
                 html += `
                     <div class="stock-card">
                         <div class="stock-header">
@@ -683,7 +686,7 @@
                                 <a href="${getYahooUrl(stock)}" target="_blank" style="text-decoration: none; color: inherit;">
                                     <h3>${getMarketBadge(stock.market_type)} ${stock.name}</h3>
                                 </a>
-                                <span class="industry-tag">${stock.industry || '其他'}</span>
+                                <span class="industry-tag">${industryName}</span>
                             </div>
                             <div class="stock-actions">
                                 <span class="stock-code" onclick="copyToClipboard('${stock.code}')" title="点击复制代码">
@@ -1073,6 +1076,9 @@
         // ============================================================
         async function loadData() {
             try {
+                // ⭐ 先加载 sector_mapping
+                await loadSectorMapping();
+                
                 const response = await fetch('/data/data.json?v=' + new Date().getTime());
                 if (!response.ok) throw new Error('数据加载失败');
                 const data = await response.json();
@@ -1101,6 +1107,45 @@
                 }
 
                 renderSidebar(themeMapping, allStocks);
+
+                // ============================================================
+                // 全局变量
+                // ============================================================
+                let allStocks = [];
+                let themeMapping = {};
+                let sectorMapping = [];
+                let currentSelected = null;
+                
+                // ============================================================
+                // 加载 sector_mapping.json
+                // ============================================================
+                async function loadSectorMapping() {
+                    try {
+                        const response = await fetch('/data/sector_mapping.json?v=' + new Date().getTime());
+                        if (response.ok) {
+                            const data = await response.json();
+                            sectorMapping = data.sector_mapping || [];
+                            console.log('📊 sector_mapping 已加载，共', sectorMapping.length, '个板块');
+                        } else {
+                            console.warn('sector_mapping.json 加载失败');
+                            sectorMapping = [];
+                        }
+                    } catch (e) {
+                        console.warn('sector_mapping.json 读取失败:', e);
+                        sectorMapping = [];
+                    }
+                }
+                
+                // ============================================================
+                // 根据 sector_id 和 industry_id 获取 industry_name
+                // ============================================================
+                function getIndustryName(sectorId, industryId) {
+                    if (!sectorMapping || !Array.isArray(sectorMapping) || sectorMapping.length === 0) return industryId;
+                    const sector = sectorMapping.find(item => item.sector_id === sectorId);
+                    if (!sector) return industryId;
+                    const industry = sector.industries.find(item => item.industry_id === industryId);
+                    return industry ? industry.industry_name : industryId;
+                }
         
                 // ⭐ 从 URL 获取 tag 参数并自动选中
                 const tagFromURL = getTagFromURL();
