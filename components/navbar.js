@@ -1,15 +1,51 @@
 // components/navbar.js
 // 共通导航栏组件
 
+// ============================================================
+// ⭐ 网站统一配置（Logo + Favicon 集中管理）
+// ============================================================
+const SITE_CONFIG = {
+    logo: '/assets/images/logo.jpg',
+    logoAlt: 'AI 硬科技',
+    logoHeight: '32px',
+    favicon: '/assets/images/logo.jpg'
+};
+
 // ⭐ 添加这一行：获取网站根路径
 const basePath = window.location.origin;
 
+// ============================================================
+// ⭐ 动态注入 Favicon（所有页面共用）
+// ============================================================
+function injectFavicon() {
+    // 检查是否已存在 favicon 链接
+    if (!document.querySelector('link[rel="icon"]')) {
+        const link = document.createElement('link');
+        link.rel = 'icon';
+        link.type = 'image/jpeg';
+        link.href = SITE_CONFIG.favicon;
+        document.head.appendChild(link);
+        console.log('✅ Favicon 已注入');
+    }
+    if (!document.querySelector('link[rel="apple-touch-icon"]')) {
+        const link = document.createElement('link');
+        link.rel = 'apple-touch-icon';
+        link.href = SITE_CONFIG.favicon;
+        document.head.appendChild(link);
+    }
+}
 
+// ============================================================
+// 加载导航栏
+// ============================================================
 function loadNavbar() {
+    // ⭐ 注入 Favicon
+    injectFavicon();
+
     const navbarHTML = `
         <nav class="top-navbar">
             <div class="nav-logo">
-                <img src="/assets/images/logo.jpg" alt="Logo" style="height: 32px; width: auto; border-radius: 4px;">
+                <img src="${SITE_CONFIG.logo}" alt="${SITE_CONFIG.logoAlt}" style="height: ${SITE_CONFIG.logoHeight}; width: auto; border-radius: 4px;">
             </div>
             <div class="nav-links">
                 <a href="${basePath}/pages/index.html" class="nav-item" data-page="index">首页</a>
