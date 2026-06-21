@@ -8,7 +8,7 @@ const SITE_CONFIG = {
     logo: '/assets/images/logo.jpg',
     logoAlt: 'AI 硬科技',
     logoHeight: '32px',
-    favicon: '/assets/images/logo.jpg'
+    favicon: '/assets/images/Stocklogo.jpg'
 };
 
 // ⭐ 添加这一行：获取网站根路径
