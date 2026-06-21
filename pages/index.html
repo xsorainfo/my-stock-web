@@ -479,6 +479,43 @@
         window.open(`pages/sub_ai.html?tag=${encodeURIComponent(decodedTag)}`, '_blank');
     }
     
+    // pages/index.html
+
+    // 全局变量
+    let sectorMapping = {};
+    
+    // 加载 sector_mapping
+    async function loadSectorMapping() {
+        try {
+            const response = await fetch('/data/sector_mapping.json?v=' + new Date().getTime());
+            if (response.ok) {
+                const data = await response.json();
+                sectorMapping = data.sector_mapping || [];
+                console.log('📊 sector_mapping 已加载:', sectorMapping);
+            } else {
+                console.warn('sector_mapping.json 加载失败，使用默认分组');
+            }
+        } catch (e) {
+            console.warn('sector_mapping.json 读取失败:', e);
+        }
+    }
+    
+    // 根据 sector_name 获取 sector_comment
+    function getSectorComment(sectorName) {
+        if (!sectorMapping || sectorMapping.length === 0) return '';
+        const found = sectorMapping.find(item => item.sector_name === sectorName);
+        return found ? found.sector_comment : '';
+    }
+    
+    // 根据 sector_name 和 industry_name 获取 industry_comment
+    function getIndustryComment(sectorName, industryName) {
+        if (!sectorMapping || sectorMapping.length === 0) return '';
+        const sector = sectorMapping.find(item => item.sector_name === sectorName);
+        if (!sector) return '';
+        const industry = sector.industries.find(item => item.industry_name === industryName);
+        return industry ? industry.industry_comment : '';
+    }
+
     
     async function loadDashboardData() {
         try {
@@ -517,7 +554,14 @@
             for (const [sector, sectorStocks] of Object.entries(sectorGroups)) {
                 const sectorDiv = document.createElement('div');
                 sectorDiv.className = 'sector-section';
-                sectorDiv.innerHTML = `<h2 class="sector-title">${sector}</h2>`;
+                
+                // ⭐ 获取 sector_comment
+                const sectorComment = getSectorComment(sector);
+                
+                sectorDiv.innerHTML = `
+                    <h2 class="sector-title">${sector}</h2>
+                    ${sectorComment ? `<p class="sector-comment">${sectorComment}</p>` : ''}
+                `;
                 
                 // 在 sector 内部按 industry 分组
                 const industryGroups = sectorStocks.reduce((acc, stock) => {
@@ -526,18 +570,24 @@
                     acc[industryKey].push(stock);
                     return acc;
                 }, {});
-
-                
-
+            
                 // 遍历每个 industry
                 for (const [industry, industryStocks] of Object.entries(industryGroups)) {
                     const industryDiv = document.createElement('div');
                     industryDiv.className = 'industry-section';
-                    industryDiv.innerHTML = `<h3 class="industry-title">${industry}</h3>`;
+                    
+                    // ⭐ 获取 industry_comment
+                    const industryComment = getIndustryComment(sector, industry);
+                    
+                    industryDiv.innerHTML = `
+                        <h3 class="industry-title">${industry}</h3>
+                        ${industryComment ? `<p class="industry-comment">${industryComment}</p>` : ''}
+                    `;
                     
                     const grid = document.createElement('div');
                     grid.className = 'stock-grid';
                     
+                    // ... 渲染股票卡片 ...
                     industryStocks.forEach(stock => {
                         // 预处理 feature，支持 **加粗**
                         const formattedFeature = stock.feature.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
@@ -609,8 +659,7 @@
                                 </table>
                             </div>`;
                     });
-  
-                    
+
                     industryDiv.appendChild(grid);
                     sectorDiv.appendChild(industryDiv);
                 }
