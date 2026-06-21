@@ -87,7 +87,7 @@ MACRO_LIST = [
       "industries": [
         { "industry_id": "1.5.1", "industry_name": "电力系统", "industry_comment": "GPU集群功耗极大，涉及电源管理、UPS" },
         { "industry_id": "1.5.2", "industry_name": "液冷/风冷散热", "industry_comment": "解决热密度问题，直接影响集群稳定性" },
-        { "industry_id": "1.5.3", "industry_name": "数据中心（IDC）建设与运维", "industry_comment": "机房、机柜、综合布线" }
+        { "industry_id": "1.5.3", "industry_name": "数据中心（IDC）建设与运维", "industry_comment": "机房、机柜、综合布线、被动元器件配套" }
       ]
     },
     {
@@ -114,7 +114,7 @@ MACRO_LIST = [
       "sector_comment": "",
       "industries": [
         { "industry_id": "4.1.1", "industry_name": "航天/卫星", "industry_comment": "" },
-        { "industry_id": "4.1.2", "industry_name": "航空", "industry_comment": "" }
+        { "industry_id": "4.1.2", "industry_name": "航空航天", "industry_comment": "" }
       ]
     }
   ]
