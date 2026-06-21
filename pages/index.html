@@ -704,6 +704,9 @@
     }
     
 
-    window.onload = loadDashboardData;
+    window.onload = async function() {
+        await loadSectorMapping();     // 先加载注释映射
+        await loadDashboardData();     // 再加载数据
+    };
 </script></body>
 </html>
