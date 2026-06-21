@@ -15,7 +15,7 @@ function loadNavbar() {
                 <a href="${basePath}/pages/settings.html" class="nav-item" data-page="settings">策略配置</a>
                 <a href="${basePath}/docs/md.html?file=WATCHLIST_SUMMARY" class="nav-item" data-page="summary" target="_blank">📝标的总结</a>
                 <a href="${basePath}/docs/md.html?file=SEMICONDUCTOR_INDUSTRY" class="nav-item" data-page="semiconductor" target="_blank">📝半导体产业链</a>
-                <a href="${basePath}/docs/md.html?file=AI_INDUSTRY_OVERVIEW" class="nav-item" data-page="ai_overview" target="_blank">📝 AI产业链全览</a>
+                <a href="${basePath}/docs/md.html?file=AI_INDUSTRY_OVERVIEW" class="nav-item" data-page="ai_overview" target="_blank">🧩 AI产业链全览</a>
             </div>
             <div class="nav-right">
                 <button class="refresh-btn" id="cloudRefreshBtn">🔄 召唤云端强刷</button>
