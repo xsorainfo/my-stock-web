@@ -582,9 +582,41 @@
         let allStocks = [];
         let themeMapping = {};
         let currentSelected = null;
+        let sectorMapping = [];  // ⭐ 全局变量
 
         // ============================================================
-        // 2. 工具函数
+        // 2. 加载 sector_mapping.json
+        // ============================================================
+        async function loadSectorMapping() {
+            try {
+                const response = await fetch('/data/sector_mapping.json?v=' + new Date().getTime());
+                if (response.ok) {
+                    const data = await response.json();
+                    sectorMapping = data.sector_mapping || [];
+                    console.log('📊 sector_mapping 已加载，共', sectorMapping.length, '个板块');
+                } else {
+                    console.warn('sector_mapping.json 加载失败');
+                    sectorMapping = [];
+                }
+            } catch (e) {
+                console.warn('sector_mapping.json 读取失败:', e);
+                sectorMapping = [];
+            }
+        }
+
+        // ============================================================
+        // 3. 根据 sector_id 和 industry_id 获取 industry_name
+        // ============================================================
+        function getIndustryName(sectorId, industryId) {
+            if (!sectorMapping || !Array.isArray(sectorMapping) || sectorMapping.length === 0) return industryId;
+            const sector = sectorMapping.find(item => item.sector_id === sectorId);
+            if (!sector) return industryId;
+            const industry = sector.industries.find(item => item.industry_id === industryId);
+            return industry ? industry.industry_name : industryId;
+        }
+
+        // ============================================================
+        // 4. 工具函数
         // ============================================================
         function getMarketBadge(type) {
             const map = {
@@ -646,7 +678,7 @@
         }
 
         // ============================================================
-        // 3. 获取一级菜单下的所有 tag
+        // 5. 获取一级菜单下的所有 tag
         // ============================================================
         function getAllTagsForLevel1(level1Key, themeMapping) {
             const tags = [];
@@ -667,7 +699,7 @@
         }
 
         // ============================================================
-        // 4. 渲染股票卡片（复用）
+        // 6. 渲染股票卡片
         // ============================================================
         function renderStockCards(stocks, container) {
             let html = '<div class="stock-grid">';
@@ -759,7 +791,7 @@
         }
 
         // ============================================================
-        // 5. 显示股票（按 tag）
+        // 7. 显示股票（按 tag）
         // ============================================================
         function displayStocksByTag(tagName) {
             const container = document.getElementById('stockGridContainer');
@@ -786,7 +818,7 @@
         }
 
         // ============================================================
-        // 6. 显示股票（按多个 tags，用于一级菜单）
+        // 8. 显示股票（按多个 tags）
         // ============================================================
         function displayStocksByTags(tagNames) {
             const container = document.getElementById('stockGridContainer');
@@ -826,7 +858,7 @@
         }
 
         // ============================================================
-        // 7. 渲染左侧菜单
+        // 9. 渲染左侧菜单
         // ============================================================
         function renderSidebar(themeMapping, stocks) {
             const sidebar = document.getElementById('sidebar');
@@ -951,15 +983,12 @@
                 const container = firstHeader.nextElementSibling;
                 container.classList.add('open');
                 firstHeader.querySelector('.arrow').classList.add('open');
-                // ⭐ 默认点击第一个一级菜单显示所有股票
-                setTimeout(() => {
-                    firstHeader.click();
-                }, 100);
+                setTimeout(() => { firstHeader.click(); }, 100);
             }
         }
 
         // ============================================================
-        // 8. 创建二级菜单项
+        // 10. 创建二级菜单项
         // ============================================================
         function createMenuItem(tag, count, level1Key, level2Key) {
             const item = document.createElement('div');
@@ -993,7 +1022,7 @@
         }
 
         // ============================================================
-        // 9. URL 参数处理
+        // 11. URL 参数处理
         // ============================================================
         
         // 新增：从 URL 获取 tag 参数
@@ -1013,9 +1042,7 @@
         
                 // 检查 tag 是否属于当前一级菜单
                 if (Array.isArray(level1Value)) {
-                    if (level1Value.includes(tagName)) {
-                        found = true;
-                    }
+                    if (level1Value.includes(tagName)) found = true;
                 } else if (typeof level1Value === 'object') {
                     for (const subValue of Object.values(level1Value)) {
                         if (Array.isArray(subValue) && subValue.includes(tagName)) {
@@ -1057,9 +1084,7 @@
                             // 如果没找到精确匹配，但 tag 确实属于这个一级菜单
                             // 可能是扁平列表（没有二级分类），尝试点击第一个二级项
                             if (items.length > 0) {
-                                setTimeout(() => {
-                                    items[0].click();
-                                }, 100);
+                                setTimeout(() => { items[0].click(); }, 100);
                                 return true;
                             }
                         }
@@ -1072,7 +1097,7 @@
 
         
         // ============================================================
-        // 10. 加载数据
+        // 12. 加载数据
         // ============================================================
         async function loadData() {
             try {
@@ -1108,46 +1133,6 @@
 
                 renderSidebar(themeMapping, allStocks);
 
-                // ============================================================
-                // 全局变量
-                // ============================================================
-                let allStocks = [];
-                let themeMapping = {};
-                let sectorMapping = [];
-                let currentSelected = null;
-                
-                // ============================================================
-                // 加载 sector_mapping.json
-                // ============================================================
-                async function loadSectorMapping() {
-                    try {
-                        const response = await fetch('/data/sector_mapping.json?v=' + new Date().getTime());
-                        if (response.ok) {
-                            const data = await response.json();
-                            sectorMapping = data.sector_mapping || [];
-                            console.log('📊 sector_mapping 已加载，共', sectorMapping.length, '个板块');
-                        } else {
-                            console.warn('sector_mapping.json 加载失败');
-                            sectorMapping = [];
-                        }
-                    } catch (e) {
-                        console.warn('sector_mapping.json 读取失败:', e);
-                        sectorMapping = [];
-                    }
-                }
-                
-                // ============================================================
-                // 根据 sector_id 和 industry_id 获取 industry_name
-                // ============================================================
-                function getIndustryName(sectorId, industryId) {
-                    if (!sectorMapping || !Array.isArray(sectorMapping) || sectorMapping.length === 0) return industryId;
-                    const sector = sectorMapping.find(item => item.sector_id === sectorId);
-                    if (!sector) return industryId;
-                    const industry = sector.industries.find(item => item.industry_id === industryId);
-                    return industry ? industry.industry_name : industryId;
-                }
-        
-                // ⭐ 从 URL 获取 tag 参数并自动选中
                 const tagFromURL = getTagFromURL();
                 if (tagFromURL) {
                     setTimeout(() => {
@@ -1181,7 +1166,7 @@
        
 
         // ============================================================
-        // 11. 启动
+        // 13. 启动
         // ============================================================
         document.addEventListener('DOMContentLoaded', loadData);
 
