@@ -87,12 +87,12 @@ WATCHLIST = [
     {"symbol": "MRVL", "name": "美满电子", "market": "美股", "sector": "1.1", "industry": "1.1.1", "feature": "**数据中心互联芯片核心玩家**，高速SerDes技术领先，AI互联芯片市占率全球前三", "tags": ["ASIC"]},
     {"symbol": "ARM", "name": "ARM Holdings", "market": "美股", "sector": "1.1", "industry": "1.1.1", "feature": "**全球芯片IP架构霸主**，指令集市占率90%+，服务器CPU市占率16%，2030年预计达27%", "tags": ["CPU"]},
     {"symbol": "AAPL", "name": "苹果", "market": "美股", "sector": "1.1", "industry": "1.1.1", "feature": "**ARM PC浪潮开启者**，M系列芯片证明ARM在PC端性能潜力，Mac全系已切换至自研ARM芯片", "tags": ["CPU"]},
+    {"symbol": "STM", "name": "意法半导体", "market": "美股", "sector": "1.1", "industry": "1.1.1", "feature": "**全球SiC器件营收第一**，2024年SiC器件营收约**11亿美元**，客户含特斯拉、现代汽车，**8英寸产线已启动量产**，与三安光电重庆合资工厂推进中", "tags": ["碳化硅 (SiC)"]},
 
     # --- 日股 AI处理器 ---
     {"symbol": "6723.T", "name": "ルネサス(瑞萨电子)", "market": "日股", "sector": "1.1", "industry": "1.1.1", "feature": "**车载与工业MCU龙头**，全球MCU市占率15%+，ARM生态重要伙伴，AI边缘计算芯片核心供应商", "tags": ["AI SoC", "GPU", "CPU"]},
     {"symbol": "6526.T", "name": "ソシオネクスト(Socionext)", "market": "日股", "sector": "1.1", "industry": "1.1.1", "feature": "**先进制程SoC设计龙头**，5nm/3nm定制芯片设计能力，AI边缘计算核心方案商", "tags": ["ASIC"]},
-    {"symbol": "6963.T", "name": "ローム(罗姆)", "market": "日股", "sector": "1.1", "industry": "1.1.1", "feature": "**SiC功率模块先驱**，碳化硅功率器件市占率全球前三，AI服务器电源管理核心器件", "tags": ["碳化硅 (SiC)"]},
-
+    {"symbol": "6963.T", "name": "ローム(罗姆)", "market": "日股", "sector": "1.1", "industry": "1.1.1", "feature": "**日本SiC全产业链IDM龙头**，旗下SiCrystal为全球SiC衬底主要供应商之一，**已明确8英寸SiC产线升级路线图**，碳化硅功率器件市占率全球前三，AI服务器电源管理核心器件供应商", "tags": ["碳化硅 (SiC)"]},
     # --- A股 AI处理器 ---
     {"symbol": "002049.SZ", "name": "紫光国微", "market": "A股", "sector": "1.1", "industry": "1.1.1", "feature": "**中国特种IC龙头**，FPGA芯片国内领先，智能卡芯片市占率超30%，国产替代核心标的", "tags": ["FPGA"]},
     {"symbol": "688802.SH", "name": "沐曦股份", "market": "A股", "sector": "1.1", "industry": "1.1.1", "feature": "**国产GPU营收第一**，2025年营收16.44亿元，毛利率56.5%，性能对标NVIDIA A100", "tags": ["GPU", "ASIC"]},
@@ -100,6 +100,7 @@ WATCHLIST = [
     {"symbol": "688041.SH", "name": "海光信息", "market": "A股", "sector": "1.1", "industry": "1.1.1", "feature": "**A股国产CPU第一股**，x86（AMD Zen授权）生态兼容性最强，信创服务器CPU主力供应商", "tags": ["CPU"]},
     {"symbol": "688047.SH", "name": "龙芯中科", "market": "A股", "sector": "1.1", "industry": "1.1.1", "feature": "**完全自主指令集LoongArch CPU**，纯国产CPU代表，党政信创核心供应商，摆脱x86/ARM授权", "tags": ["CPU"]},
     {"symbol": "688262.SH", "name": "国芯科技", "market": "A股", "sector": "1.1", "industry": "1.1.1", "feature": "**三大指令集嵌入式CPU专家**，国内唯一同时掌握RISC-V/PowerPC/M*Core，车规/工控高可靠龙头", "tags": ["CPU"]},
+    {"symbol": "600460.SH", "name": "士兰微", "market": "A股", "sector": "1.1", "industry": "1.1.1", "feature": "**国内车规级SiC模块龙头**，SiC MOSFET已迭代至第四代，**主驱模块累计出货超10万颗**，**8英寸产线已通线**，6英寸月产能1万片", "tags": ["碳化硅 (SiC)"]},
 
     # --- 存储/HBM ---
     {"symbol": "MU", "name": "美光科技", "market": "美股", "sector": "1.1", "industry": "1.1.2", "feature": "**HBM核心供应商**，全球DRAM市占率约25%，AI训练HBM3E内存核心供应商", "tags": ["HBM"]},
@@ -115,6 +116,7 @@ WATCHLIST = [
     # ============================================================
 
     # --- 半导体材料 ---
+    {"symbol": "WOLF", "name": "Wolfspeed", "market": "美股", "sector": "1.2", "industry": "1.2.2", "feature": "**全球SiC衬底老牌龙头（IDM）**，2024年全球导电型衬底市占率约33.7%，**全球首座8英寸SiC晶圆厂（莫霍克谷）已投运**，2025年完成破产重组战略聚焦SiC器件", "tags": ["碳化硅 (SiC)"]},
     {"symbol": "DOW", "name": "陶氏化学", "market": "美股", "sector": "1.2", "industry": "1.2.1", "feature": "**CMP抛光垫全球霸主**，全球市占率超70%，半导体CMP工序核心材料供应商", "tags": ["CMP抛光垫"]},
     {"symbol": "AXT","name":"AXT Inc（通美晶体）","market":"美股","sector":"1.2","industry":"1.2.1","feature":"**全球第二大磷化铟衬底供应商（市占率约35%）**，100%产能位于子公司北京通美。InP积压订单超1亿美元，2026Q1营收2690万美元（同比+39%）。计划2026年底产能翻倍、2027年再翻倍，客户覆盖全球一线光模块厂商。获6.325亿美元融资全力扩产[citation:2][citation:4][citation:9]","tags":["磷化铟"]}
     {"symbol": "LIN", "name": "林德集团", "market": "美股", "sector": "1.2", "industry": "1.2.1", "feature": "**全球工业气体与电子特气龙头**，全球最大工业气体供应商，半导体制造核心特种气体供应商", "tags": ["电子特气"]},
@@ -150,6 +152,10 @@ WATCHLIST = [
     {"symbol": "6997.T", "name": "日本ケミコン(日本化工)", "market": "日股", "sector": "1.2", "industry": "1.2.1", "feature": "**铝电解电容龙头**，全球市占率超20%，AI服务器电源滤波核心器件", "tags": ["MLCC"]},
     {"symbol": "6479.T", "name": "ミネベアミツミ(美蓓亚三美)", "market": "日股", "sector": "1.2", "industry": "1.2.1", "feature": "**轴承与精密电机龙头**，微型轴承全球市占率超60%，半导体设备精密零部件供应商", "tags": ["封装基板"]},
     {"symbol": "002428.SZ","name":"云南锗业","market":"A股","sector":"1.2","industry":"1.2.1","feature":"**国内磷化铟衬底龙头**，截至2025年底产能15万片/年（2-4英寸），2025年实际生产10.01万片。2026年计划生产18万片，并实施30万片/年扩产项目（含6英寸），建成后总产能达45万片/年。全球第三个掌握大尺寸制备技术的厂商，深度受益AI数据中心光模块需求爆发","tags":["磷化铟","靶材"]}
+    {"symbol": "688234.SH", "name": "天岳先进", "market": "A股", "sector": "1.2", "industry": "1.2.1", "feature": "**全球碳化硅衬底出货量第一**，2025年全球市占率27.6%，**8英寸市占率51.3%**。客户覆盖英飞凌、博世、特斯拉，**率先推出12英寸衬底**并已向核心客户交付", "tags": ["碳化硅 (SiC)"]},
+    {"symbol": "600703.SH", "name": "三安光电", "market": "A股", "sector": "1.2", "industry": "1.2.1", "feature": "**SiC全产业链IDM龙头**，**与意法半导体8英寸合资项目已进入风险量产阶段**，6英寸衬底月产能1.6万片，SiC芯片累计出货超3亿颗", "tags": ["碳化硅 (SiC)"]},
+    {"symbol": "688478.SH", "name": "晶升股份", "market": "A股", "sector": "1.2", "industry": "1.2.2", "feature": "**碳化硅长晶炉国内龙头**，市占率约28%，**8英寸单晶炉已批量供货**，**在手订单已达去年同期两倍以上**，覆盖国内80%SiC客户", "tags": ["碳化硅 (SiC)"]},
+
     # --- 半导体设备 ---
     {"symbol": "ASML", "name": "ASML(阿斯麦)", "market": "美股", "sector": "1.2", "industry": "1.2.2", "feature": "**全球EUV光刻机绝对垄断**，市占率100%，先进制程（7nm以下）芯片制造核心设备供应商", "tags": ["光刻机"]},
     {"symbol": "AMAT", "name": "应用材料", "market": "美股", "sector": "1.2", "industry": "1.2.2", "feature": "**全球最大半导体设备商**，沉积(CVD/PVD)市占率超40%，CMP/离子注入/检测设备核心供应商", "tags": ["CVD设备", "PVD设备", "CMP设备", "离子注入机"]},
