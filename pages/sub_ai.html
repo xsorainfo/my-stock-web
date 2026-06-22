@@ -759,9 +759,10 @@
                         <table class="metrics-table" style="margin-bottom: 6px;">
                             <thead>
                                 <tr>
-                                    <th style="width: 33%;">PER 估值</th>
-                                    <th style="width: 34%;">预想 PER</th>
-                                    <th style="width: 33%;">PBR 溢价</th>
+                                    <th style="width: 25%;">距1周高</th>
+                                    <th style="width: 25%;">距1月高</th>
+                                    <th style="width: 25%;">距52周高</th>
+                                    <th style="width: 25%;">年初以来</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -769,6 +770,7 @@
                                     <td>${judgeValuation(stock.per, 'PER')}</td>
                                     <td>${judgeValuation(stock.forward_per, 'forward_per')}</td>
                                     <td>${judgeValuation(stock.pbr, 'PBR')}</td>
+                                    <td style="color: ${parseFloat(stock.ytdChange) >= 0 ? 'var(--up-color)' : 'var(--down-color)'};">${stock.ytdChange || '--'}</td>
                                 </tr>
                             </tbody>
                         </table>
