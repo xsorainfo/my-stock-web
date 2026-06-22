@@ -51,11 +51,18 @@ function loadNavbar() {
                 <a href="${basePath}/pages/index.html" class="nav-item" data-page="index">首页</a>
                 <a href="${basePath}/pages/sub_ai.html" class="nav-item" data-page="sub_ai" target="_blank">テーマ別</a>
                 <a href="${basePath}/pages/settings.html" class="nav-item" data-page="settings">策略配置</a>
-                <a href="${basePath}/docs/md.html?file=WATCHLIST_SUMMARY" class="nav-item" data-page="summary" target="_blank">📝标的总结</a>
-                <a href="${basePath}/docs/md.html?file=SEMICONDUCTOR_INDUSTRY" class="nav-item" data-page="semiconductor" target="_blank">📝半导体产业链</a>
-                <a href="${basePath}/docs/md.html?file=AI_INDUSTRY_OVERVIEW" class="nav-item" data-page="ai_overview" target="_blank">🧩 AI产业链全览</a>
-                <a href="${basePath}/pages/medical_devices.html" class="nav-item" data-page="medical_devices" target="_blank">🧩医疗器械产业地图</a>
-                <a href="${basePath}/pages/bond_transmission.html" class="nav-item" data-page="medical_devices" target="_blank">🧩国债发行的资产负债表传导链</a>
+                <!-- ⭐ 下拉菜单：研究文档 -->
+                <div class="dropdown">
+                    <button class="dropbtn nav-item" data-page="docs">📚 研究文档 ▾</button>
+                    <div class="dropdown-content">                        
+                        <a href="${basePath}/docs/md.html?file=SEMICONDUCTOR_INDUSTRY" target="_blank">🧩 半导体产业链</a>
+                        <a href="${basePath}/docs/md.html?file=AI_INDUSTRY_OVERVIEW" target="_blank">🧩 AI产业链全览</a>
+                        <a href="${basePath}/pages/medical_devices.html" target="_blank">🏥 医疗器械产业</a>
+                        <a href="${basePath}/pages/bond_transmission.html" target="_blank">💰 国债传导链</a>
+                        <a href="${basePath}/docs/md.html?file=WATCHLIST_SUMMARY" target="_blank">📝 标的总结</a>
+                    </div>
+                </div>
+                
                 
             </div>
             <div class="nav-right">
