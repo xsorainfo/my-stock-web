@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>国债发行：资产负债表传导链</title>
+
+<!-- ⭐ 固定导航栏样式 -->
+<link rel="stylesheet" href="../components/navbar.css">
+
+<!-- ⭐ 引入可爱字体（保持风格一致） -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+SC:wght@300;400;500&family=Kosugi+Maru&display=swap" rel="stylesheet">
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+SC:wght@300;400;500&display=swap');
+
+  :root {
+    --bg: #0f1117;
+    --surface: #171b26;
+    --surface2: #1e2333;
+    --border: #2a3040;
+    --accent: #e8c560;
+    --accent2: #5b8cff;
+    --accent3: #ff6b6b;
+    --accent4: #52d9a0;
+    --text: #e8eaf0;
+    --text-dim: #8892a0;
+    --asset: #5b8cff;
+    --liability: #ff6b6b;
+    --flow: #e8c560;
+    --gov: #a78bfa;
+    --boj: #38bdf8;
+    --bank: #34d399;
+    --corp: #fb923c;
+    --person: #f472b6;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Noto Sans SC', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding-top: 0;
+  }
+
+  /* 页面内容容器（导航栏下方） */
+  .page-content {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  /* Header */
+  header {
+    padding: 36px 40px 24px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gov), var(--boj), var(--bank), var(--corp), var(--person));
+  }
+  .header-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.3;
+  }
+  .subtitle {
+    margin-top: 6px;
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+
+  /* Step nav */
+  .step-nav {
+    display: flex;
+    gap: 0;
+    padding: 0 40px;
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .step-nav::-webkit-scrollbar { display: none; }
+
+  .step-btn {
+    padding: 14px 20px;
+    font-size: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-dim);
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+    position: relative;
+  }
+  .step-btn:hover { color: var(--text); }
+  .step-btn.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .step-btn .step-num {
+    display: inline-block;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background: var(--surface2);
+    font-size: 10px;
+    line-height: 18px;
+    text-align: center;
+    margin-right: 6px;
+  }
+  .step-btn.active .step-num {
+    background: var(--accent);
+    color: var(--bg);
+  }
+
+  /* Main layout */
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 0;
+    min-height: calc(100vh - 140px);
+  }
+
+  /* Balance sheet area */
+  .bs-area {
+    padding: 32px 40px;
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+  }
+
+  .step-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .step-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background: var(--surface2);
+    color: var(--accent);
+  }
+  .step-desc {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-bottom: 28px;
+    line-height: 1.7;
+    max-width: 680px;
+  }
+
+  /* BS grid */
+  .bs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .bs-card {
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+  }
+  .bs-card.highlight {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent), 0 8px 32px rgba(232, 197, 96, 0.15);
+  }
+  .bs-card.changed {
+    animation: cardPulse 0.6s ease;
+  }
+  @keyframes cardPulse {
+    0% { transform: scale(1); }
+    30% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+  }
+
+  .bs-card-header {
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .entity-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .entity-name {
+    font-size: 13px;
+    font-weight: 500;
+    flex: 1;
+  }
+  .entity-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+  }
+
+  .bs-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bs-col {
+    padding: 12px 14px;
+  }
+  .bs-col:first-child {
+    border-right: 1px solid var(--border);
+  }
+  .bs-col-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--text-dim);
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+  .bs-col-title.asset { color: var(--asset); }
+  .bs-col-title.liab { color: var(--liability); }
+
+  .bs-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    font-size: 12px;
+    gap: 8px;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+  .bs-item-label {
+    color: var(--text-dim);
+    line-height: 1.4;
+    flex: 1;
+  }
+  .bs-item-val {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text);
+    white-space: nowrap;
+  }
+  .bs-item.new {
+    background: rgba(232, 197, 96, 0.08);
+    padding: 5px 6px;
+    margin: 0 -6px;
+  }
+  .bs-item.new .bs-item-label { color: var(--accent); }
+  .bs-item.new .bs-item-val { color: var(--accent); }
+  .bs-item.up .bs-item-val::before { content: '↑ '; color: var(--accent4); }
+  .bs-item.down .bs-item-val::before { content: '↓ '; color: var(--accent3); }
+  .bs-item.highlight-red .bs-item-label { color: var(--accent3); }
+  .bs-item.highlight-green .bs-item-label { color: var(--accent4); }
+
+  /* Flow arrows */
+  .flow-panel {
+    padding: 20px 40px;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    display: none;
+  }
+  .flow-panel.visible { display: block; }
+  .flow-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+  }
+  .flow-chain {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .flow-node {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid;
+  }
+  .flow-arrow {
+    font-size: 16px;
+    color: var(--flow);
+  }
+  .flow-label {
+    font-size: 11px;
+    color: var(--text-dim);
+    padding: 4px 10px;
+    background: var(--surface2);
+    border-radius: 4px;
+    border: 1px solid var(--border);
+  }
+
+  /* Sidebar */
+  .sidebar {
+    padding: 28px 24px;
+    overflow-y: auto;
+  }
+
+  .sidebar-section {
+    margin-bottom: 28px;
+  }
+  .sidebar-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* Key insight */
+  .insight {
+    background: var(--surface2);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+  }
+  .insight p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--text);
+  }
+  .insight strong {
+    color: var(--accent);
+  }
+
+  /* Effects list */
+  .effect-item {
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .effect-item:last-child { border-bottom: none; }
+  .effect-icon {
+    width: 20px; height: 20px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .effect-icon.pos { background: rgba(82, 217, 160, 0.15); color: var(--accent4); }
+  .effect-icon.neg { background: rgba(255, 107, 107, 0.15); color: var(--accent3); }
+  .effect-icon.neu { background: rgba(232, 197, 96, 0.15); color: var(--accent); }
+
+  .effect-text { color: var(--text-dim); }
+  .effect-text strong { color: var(--text); }
+
+  /* Progress */
+  .progress-bar {
+    height: 2px;
+    background: var(--border);
+    border-radius: 1px;
+    margin-bottom: 28px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    border-radius: 1px;
+    transition: width 0.4s ease;
+  }
+
+  /* Navigation buttons */
+  .nav-buttons {
+    display: flex;
+    gap: 10px;
+    padding: 20px 40px;
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+  }
+  .nav-btn {
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-family: 'Noto Sans SC', sans-serif;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    background: var(--surface2);
+    color: var(--text);
+    transition: all 0.2s;
+  }
+  .nav-btn:hover:not(:disabled) {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .nav-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+  .nav-btn.primary {
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
+    font-weight: 600;
+  }
+  .nav-btn.primary:hover:not(:disabled) {
+    background: #f0d070;
+    color: var(--bg);
+  }
+
+  .spacer { flex: 1; }
+
+  /* Legend */
+  .legend {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: var(--text-dim);
+  }
+  .legend-box {
+    width: 10px; height: 10px;
+    border-radius: 2px;
+  }
+
+  /* Stock impact panel */
+  .impact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .impact-card {
+    padding: 10px 12px;
+    background: var(--surface2);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+  .impact-sector {
+    font-size: 11px;
+    color: var(--text-dim);
+    margin-bottom: 4px;
+  }
+  .impact-dir {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .impact-dir.pos { color: var(--accent4); }
+  .impact-dir.neg { color: var(--accent3); }
+  .impact-dir.neu { color: var(--accent); }
+
+  /* Fade transition */
+  .fade-enter { animation: fadeIn 0.3s ease; }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Separator line in BS */
+  .bs-sep {
+    grid-column: 1 / -1;
+    height: 1px;
+    background: var(--border);
+    margin: 4px 0;
+  }
+
+  .bs-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0 2px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    border-top: 1px solid var(--border);
+    margin-top: 4px;
+  }
+  .bs-total.asset { color: var(--asset); }
+  .bs-total.liab { color: var(--liability); }
+
+  @media (max-width: 900px) {
+    .main { grid-template-columns: 1fr; }
+    .sidebar { border-top: 1px solid var(--border); }
+    .bs-area { border-right: none; }
+    header, .step-nav, .bs-area, .nav-buttons { padding-left: 20px; padding-right: 20px; }
+  }
+
+  /* 导航栏与内容间距 */
+  #navbar-placeholder + .page-content {
+    padding-top: 0;
+  }
+</style>
+</head>
+<body>
+
+<!-- ⭐ 导航栏占位符 -->
+<div id="navbar-placeholder"></div>
+
+<div class="page-content">
+
+<header>
+  <div class="header-label">Macro Framework · 宏观传导机制</div>
+  <h1>国债发行的资产负债表传导链</h1>
+  <div class="subtitle">从政府 → 日本银行 → 商业银行 → 企业 → 个人的信用扩张过程</div>
+</header>
+
+<div class="step-nav" id="stepNav"></div>
+
+<div class="main">
+  <div class="bs-area">
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    <div id="bsContent"></div>
+  </div>
+  <div class="sidebar" id="sidebar"></div>
+</div>
+
+<div class="nav-buttons">
+  <button class="nav-btn" id="prevBtn" onclick="changeStep(-1)">← 上一步</button>
+  <div class="spacer"></div>
+  <span id="stepCounter" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-dim);align-self:center;"></span>
+  <div class="spacer"></div>
+  <button class="nav-btn primary" id="nextBtn" onclick="changeStep(1)">下一步 →</button>
+</div>
+
+</div>
+<!-- ============ END page-content ============ -->
+
+<!-- ⭐ 固定导航栏 JavaScript -->
+<script src="../components/navbar.js"></script>
+
+<script>
+const STEPS = [
+  {
+    id: 0,
+    title: "初始状态：各部门资产负债表",
+    tag: "BASELINE",
+    desc: "发债之前，五个部门各自的简化资产负债表。注意：资产 = 负债 + 净资产。此时经济处于均衡，各部门持有正常的金融资产存量。",
+    entities: [
+      {
+        name: "政府",
+        tag: "Government",
+        color: "var(--gov)",
+        assets: [
+          { label: "税收资产（未来征税权）", val: "∞" },
+          { label: "基础设施 / 国有资产", val: "500T¥" },
+        ],
+        liabs: [
+          { label: "流通国债", val: "1,000T¥" },
+          { label: "短期国库券", val: "100T¥" },
+          { label: "净资产（负）", val: "-600T¥", cls: "highlight-red" },
+        ]
+      },
+      {
+        name: "日本银行 (BOJ)",
+        tag: "Central Bank",
+        color: "var(--boj)",
+        assets: [
+          { label: "持有国债", val: "600T¥" },
+          { label: "外汇储备", val: "180T¥" },
+        ],
+        liabs: [
+          { label: "流通现金（纸币）", val: "120T¥" },
+          { label: "商业银行准备金", val: "530T¥" },
+          { label: "BOJ 净资产", val: "130T¥" },
+        ]
+      },
+      {
+        name: "商业银行",
+        tag: "Commercial Banks",
+        color: "var(--bank)",
+        assets: [
+          { label: "BOJ准备金存款", val: "530T¥" },
+          { label: "持有国债", val: "180T¥" },
+          { label: "企业 / 个人贷款", val: "500T¥" },
+        ],
+        liabs: [
+          { label: "企业/个人存款", val: "1,100T¥" },
+          { label: "银行净资产", val: "110T¥" },
+        ]
+      },
+      {
+        name: "企业部门",
+        tag: "Corporate Sector",
+        color: "var(--corp)",
+        assets: [
+          { label: "现金 / 银行存款", val: "300T¥" },
+          { label: "实物资产（设备、库存）", val: "400T¥" },
+        ],
+        liabs: [
+          { label: "银行贷款", val: "350T¥" },
+          { label: "公司债", val: "80T¥" },
+          { label: "企业净资产", val: "270T¥" },
+        ]
+      },
+      {
+        name: "个人 / 家庭",
+        tag: "Household",
+        color: "var(--person)",
+        assets: [
+          { label: "银行存款", val: "800T¥" },
+          { label: "股票 / 投信", val: "200T¥" },
+          { label: "不动产", val: "500T¥" },
+        ],
+        liabs: [
+          { label: "住宅贷款", val: "150T¥" },
+          { label: "消费贷款", val: "50T¥" },
+          { label: "家庭净资产", val: "1,300T¥" },
+        ]
+      }
+    ],
+    highlights: [],
+    insight: {
+      title: "读表要点",
+      text: "整个经济体的<strong>金融资产之和 = 金融负债之和</strong>，净资产差额体现为实物资本存量。政府负净资产（赤字），恰好是其他部门的金融净资产来源。"
+    },
+    effects: [
+      { icon: "neu", text: "<strong>均衡状态</strong>：利率稳定，资金流平衡" },
+      { icon: "neu", text: "<strong>政府负债高达1,100T¥</strong>，需不断滚动再融资" },
+    ]
+  },
+  {
+    id: 1,
+    title: "第一步：政府发行国债",
+    tag: "GOV → MARKET",
+    desc: "财务省发行新增国债100T¥。政府资产端收到资金（财政支出储备），负债端国债增加。关键问题：谁来买？资金从哪里来？",
+    entities: [
+      {
+        name: "政府",
+        tag: "Government",
+        color: "var(--gov)",
+        highlight: true,
+        assets: [
+          { label: "税收资产（未来征税权）", val: "∞" },
+          { label: "基础设施 / 国有资产", val: "500T¥" },
+          { label: "国库账户现金（新增）", val: "+100T¥", cls: "new up" },
+        ],
+        liabs: [
+          { label: "流通国债", val: "1,000T¥" },
+          { label: "新增国债发行", val: "+100T¥", cls: "new up" },
+          { label: "短期国库券", val: "100T¥" },
+          { label: "净资产（负）", val: "-700T¥", cls: "highlight-red" },
+        ]
+      },
+      {
+        name: "日本银行 (BOJ)",
+        tag: "Central Bank",
+        color: "var(--boj)",
+        assets: [
+          { label: "持有国债", val: "600T¥" },
+          { label: "外汇储备", val: "180T¥" },
+        ],
+        liabs: [
+          { label: "流通现金（纸币）", val: "120T¥" },
+          { label: "商业银行准备金", val: "530T¥" },
+          { label: "BOJ 净资产", val: "130T¥" },
+        ]
+      },
+      {
+        name: "商业银行",
+        tag: "Commercial Banks",
+        color: "var(--bank)",
+        assets: [
+          { label: "BOJ准备金存款", val: "530T¥" },
+          { label: "持有国债", val: "180T¥" },
+          { label: "企业 / 个人贷款", val: "500T¥" },
+        ],
+        liabs: [
+          { label: "企业/个人存款", val: "1,100T¥" },
+          { label: "银行净资产", val: "110T¥" },
+        ]
+      },
+      {
+        name: "企业部门",
+        tag: "Corporate Sector",
+        color: "var(--corp)",
+        assets: [
+          { label: "现金 / 银行存款", val: "300T¥" },
+          { label: "实物资产（设备、库存）", val: "400T¥" },
+        ],
+        liabs: [
+          { label: "银行贷款", val: "350T¥" },
+          { label: "公司债", val: "80T¥" },
+          { label: "企业净资产", val: "270T¥" },
+        ]
+      },
+      {
+        name: "个人 / 家庭",
+        tag: "Household",
+        color: "var(--person)",
+        assets: [
+          { label: "银行存款", val: "800T¥" },
+          { label: "股票 / 投信", val: "200T¥" },
+          { label: "不动产", val: "500T¥" },
+        ],
+        liabs: [
+          { label: "住宅贷款", val: "150T¥" },
+          { label: "消费贷款", val: "50T¥" },
+          { label: "家庭净资产", val: "1,300T¥" },
+        ]
+      }
+    ],
+    flow: {
+      nodes: ["政府财务省", "→ 发行国债", "一级交易商", "→ 认购资金"],
+      labels: ["债务凭证流向市场", "资金流入国库"]
+    },
+    insight: {
+      title: "核心机制",
+      text: "国债本质是政府将<strong>未来的税收承诺</strong>换成<strong>今天的购买力</strong>。政府净资产进一步恶化，但获得了即时的财政空间。"
+    },
+    effects: [
+      { icon: "neg", text: "<strong>国债供给增加</strong>：若无央行承接，市场需要消化，利率有上行压力" },
+      { icon: "neu", text: "<strong>资金来源待定</strong>：BOJ直接承接 vs 商业银行认购，传导路径完全不同" },
+      { icon: "neg", text: "<strong>财政赤字扩大</strong>：政府净资产由-600T→-700T¥" },
+    ]
+  },
+  {
+    id: 2,
+    title: "第二步：BOJ购入国债（QE/YCC）",
+    tag: "GOV → BOJ",
+    desc: "日本银行在二级市场购入国债100T¥，对应向商业银行支付准备金。这是「货币化赤字」的核心操作——央行资产负债表扩张，基础货币增加。",
+    entities: [
+      {
+        name: "政府",
+        tag: "Government",
+        color: "var(--gov)",
+        assets: [
+          { label: "税收资产（未来征税权）", val: "∞" },
+          { label: "基础设施 / 国有资产", val: "500T¥" },
+          { label: "国库账户现金", val: "100T¥" },
+        ],
+        liabs: [
+          { label: "流通国债（含新增）", val: "1,100T¥", cls: "up" },
+          { label: "短期国库券", val: "100T¥" },
+          { label: "净资产（负）", val: "-700T¥", cls: "highlight-red" },
+        ]
+      },
+      {
+        name: "日本银行 (BOJ)",
+        tag: "Central Bank",
+        color: "var(--boj)",
+        highlight: true,
+        assets: [
+          { label: "持有国债（购入后）", val: "700T¥", cls: "up" },
+          { label: "【新增】本次购债", val: "+100T¥", cls: "new up" },
+          { label: "外汇储备", val: "180T¥" },
+        ],
+        liabs: [
+          { label: "流通现金（纸币）", val: "120T¥" },
+          { label: "商业银行准备金（增加）", val: "630T¥", cls: "up" },
+          { label: "【新增】本次准备金", val: "+100T¥", cls: "new up" },
+          { label: "BOJ 净资产", val: "130T¥" },
+        ]
+      },
+      {
+        name: "商业银行",
+        tag: "Commercial Banks",
+        color: "var(--bank)",
+        highlight: true,
+        assets: [
+          { label: "BOJ准备金存款（增加）", val: "630T¥", cls: "up" },
+          { label: "【收到新准备金】", val: "+100T¥", cls: "new up" },
+          { label: "持有国债（卖出后）", val: "80T¥", cls: "down" },
+          { label: "企业 / 个人贷款", val: "500T¥" },
+        ],
+        liabs: [
+          { label: "企业/个人存款", val: "1,100T¥" },
+          { label: "银行净资产", val: "110T¥" },
+        ]
+      },
+      {
+        name: "企业部门",
+        tag: "Corporate Sector",
+        color: "var(--corp)",
+        assets: [
+          { label: "现金 / 银行存款", val: "300T¥" },
+          { label: "实物资产（设备、库存）", val: "400T¥" },
+        ],
+        liabs: [
+          { label: "银行贷款", val: "350T¥" },
+          { label: "公司债", val: "80T¥" },
+          { label: "企业净资产", val: "270T¥" },
+        ]
+      },
+      {
+        name: "个人 / 家庭",
+        tag: "Household",
+        color: "var(--person)",
+        assets: [
+          { label: "银行存款", val: "800T¥" },
+          { label: "股票 / 投信", val: "200T¥" },
+          { label: "不动产", val: "500T¥" },
+        ],
+        liabs: [
+          { label: "住宅贷款", val: "150T¥" },
+          { label: "消费贷款", val: "50T¥" },
+          { label: "家庭净资产", val: "1,300T¥" },
+        ]
+      }
+    ],
+    flow: {
+      nodes: ["BOJ", "购买国债↑", "商业银行", "准备金↑"],
+      labels: ["国债转移至BOJ", "注入高能货币"]
+    },
+    insight: {
+      title: "货币化的本质",
+      text: "BOJ购债创造了新的<strong>准备金（高能货币）</strong>。商业银行资产结构从「国债」换成了「准备金」——流动性更高，但收益率更低，形成<strong>资产组合再平衡压力</strong>。"
+    },
+    effects: [
+      { icon: "pos", text: "<strong>基础货币扩张</strong>：+100T¥ 准备金注入系统" },
+      { icon: "pos", text: "<strong>国债收益率压制</strong>：BOJ需求托底，利率不会急升" },
+      { icon: "neu", text: "<strong>商业银行资产重组</strong>：持债↓准备金↑，需要寻找新的收益出口" },
+      { icon: "neg", text: "<strong>日元供给增加</strong>：贬值压力潜在上升" },
+    ]
+  },
+  {
+    id: 3,
+    title: "第三步：政府支出，资金流入实体经济",
+    tag: "GOV → CORPORATE",
+    desc: "政府动用筹得的100T¥进行财政支出（基础设施投资、补贴、公务员工资等）。资金从国库流出，进入企业和个人的银行账户——这是「财政乘数」效应的起点。",
+    entities: [
+      {
+        name: "政府",
+        tag: "Government",
+        color: "var(--gov)",
+        highlight: true,
+        assets: [
+          { label: "税收资产（未来征税权）", val: "∞" },
+          { label: "基础设施 / 国有资产（增加）", val: "550T¥", cls: "up" },
+          { label: "国库账户现金（支出后）", val: "0T¥", cls: "down" },
+        ],
+        liabs: [
+          { label: "流通国债（含新增）", val: "1,100T¥" },
+          { label: "短期国库券", val: "100T¥" },
+          { label: "净资产（变化后）", val: "-650T¥", cls: "highlight-red" },
+        ]
+      },
+      {
+        name: "日本银行 (BOJ)",
+        tag: "Central Bank",
+        color: "var(--boj)",
+        assets: [
+          { label: "持有国债", val: "700T¥" },
+          { label: "外汇储备", val: "180T¥" },
+        ],
+        liabs: [
+          { label: "流通现金（纸币）", val: "120T¥" },
+          { label: "商业银行准备金", val: "630T¥" },
+          { label: "BOJ 净资产", val: "130T¥" },
+        ]
+      },
+      {
+        name: "商业银行",
+        tag: "Commercial Banks",
+        color: "var(--bank)",
+        highlight: true,
+        assets: [
+          { label: "BOJ准备金存款", val: "630T¥" },
+          { label: "持有国债", val: "80T¥" },
+          { label: "企业 / 个人贷款", val: "500T¥" },
+        ],
+        liabs: [
+          { label: "企业/个人存款（增加）", val: "1,200T¥", cls: "up" },
+          { label: "【收到政府支付存款】", val: "+100T¥", cls: "new up" },
+          { label: "银行净资产", val: "110T¥" },
+        ]
+      },
+      {
+        name: "企业部门",
+        tag: "Corporate Sector",
+        color: "var(--corp)",
+        highlight: true,
+        assets: [
+          { label: "现金 / 银行存款（增加）", val: "360T¥", cls: "up" },
+          { label: "【收到政府合同款】", val: "+60T¥", cls: "new up" },
+          { label: "实物资产（设备、库存）", val: "400T¥" },
+        ],
+        liabs: [
+          { label: "银行贷款", val: "350T¥" },
+          { label: "公司债", val: "80T¥" },
+          { label: "企业净资产（改善）", val: "330T¥", cls: "highlight-green up" },
+        ]
+      },
+      {
+        name: "个人 / 家庭",
+        tag: "Household",
+        color: "var(--person)",
+        highlight: true,
+        assets: [
+          { label: "银行存款（增加）", val: "840T¥", cls: "up" },
+          { label: "【工资 / 补贴收入】", val: "+40T¥", cls: "new up" },
+          { label: "股票 / 投信", val: "200T¥" },
+          { label: "不动产", val: "500T¥" },
+        ],
+        liabs: [
+          { label: "住宅贷款", val: "150T¥" },
+          { label: "消费贷款", val: "50T¥" },
+          { label: "家庭净资产（改善）", val: "1,340T¥", cls: "highlight-green up" },
+        ]
+      }
+    ],
+    flow: {
+      nodes: ["政府国库", "→ 合同支付", "企业", "工资转移 →", "个人"],
+      labels: ["实体经济收入增加"]
+    },
+    insight: {
+      title: "财政乘数机制",
+      text: "政府支出使企业营收+60T¥、家庭收入+40T¥，银行存款总量同步扩张+100T¥。<strong>私人部门净资产改善</strong>，这是财政扩张的直接效果。"
+    },
+    effects: [
+      { icon: "pos", text: "<strong>企业营收增加</strong>：利润改善 → EPS提升 → 股票估值支撑" },
+      { icon: "pos", text: "<strong>个人收入增加</strong>：消费能力↑ → GDP增长 → 内需驱动股市" },
+      { icon: "pos", text: "<strong>银行存款扩张</strong>：商业银行负债端增加，贷款能力提升" },
+      { icon: "neg", text: "<strong>政府净资产恶化</strong>：国债上升未对应等量实物资产，赤字扩大" },
+    ]
+  },
+  {
+    id: 4,
+    title: "第四步：商业银行信用扩张（乘数效应）",
+    tag: "BANK → CREDIT",
+    desc: "商业银行存款增加后，基于部分准备金制度，可将增量存款的约10倍放贷出去（受资本充足率约束）。这是「信用货币」创造的核心——银行不是「搬运」存款，而是「创造」新存款。",
+    entities: [
+      {
+        name: "政府",
+        tag: "Government",
+        color: "var(--gov)",
+        assets: [
+          { label: "基础设施 / 国有资产", val: "550T¥" },
+        ],
+        liabs: [
+          { label: "流通国债", val: "1,100T¥" },
+          { label: "净资产（负）", val: "-650T¥", cls: "highlight-red" },
+        ]
+      },
+      {
+        name: "日本银行 (BOJ)",
+        tag: "Central Bank",
+        color: "var(--boj)",
+        assets: [
+          { label: "持有国债", val: "700T¥" },
+          { label: "外汇储备", val: "180T¥" },
+        ],
+        liabs: [
+          { label: "流通现金（纸币）", val: "120T¥" },
+          { label: "商业银行准备金", val: "630T¥" },
+          { label: "BOJ 净资产", val: "130T¥" },
+        ]
+      },
+      {
+        name: "商业银行",
+        tag: "Commercial Banks",
+        color: "var(--bank)",
+        highlight: true,
+        assets: [
+          { label: "BOJ准备金存款", val: "630T¥" },
+          { label: "持有国债", val: "80T¥" },
+          { label: "企业贷款（新增放贷）", val: "650T¥", cls: "up" },
+          { label: "【信用扩张新增贷款】", val: "+150T¥", cls: "new up" },
+        ],
+        liabs: [
+          { label: "企业/个人存款（扩张）", val: "1,350T¥", cls: "up" },
+          { label: "【放贷同步创造存款】", val: "+150T¥", cls: "new up" },
+          { label: "银行净资产", val: "110T¥" },
+        ]
+      },
+      {
+        name: "企业部门",
+        tag: "Corporate Sector",
+        color: "var(--corp)",
+        highlight: true,
+        assets: [
+          { label: "现金 / 银行存款（扩张）", val: "510T¥", cls: "up" },
+          { label: "【获得银行贷款资金】", val: "+150T¥", cls: "new up" },
+          { label: "实物资产（设备、库存）", val: "400T¥" },
+        ],
+        liabs: [
+          { label: "银行贷款（增加）", val: "500T¥", cls: "up" },
+          { label: "【新增借贷）】", val: "+150T¥", cls: "new up" },
+          { label: "公司债", val: "80T¥" },
+          { label: "企业净资产", val: "330T¥" },
+        ]
+      },
+      {
+        name: "个人 / 家庭",
+        tag: "Household",
+        color: "var(--person)",
+        assets: [
+          { label: "银行存款", val: "840T¥" },
+          { label: "股票 / 投信", val: "200T¥" },
+          { label: "不动产", val: "500T¥" },
+        ],
+        liabs: [
+          { label: "住宅贷款", val: "150T¥" },
+          { label: "消费贷款", val: "50T¥" },
+          { label: "家庭净资产", val: "1,340T¥" },
+        ]
+      }
+    ],
+    flow: {
+      nodes: ["银行存款增加", "→ 放贷", "企业获得资金", "→ 同步创造新存款"],
+      labels: ["贷款即存款：货币凭空创造"]
+    },
+    insight: {
+      title: "信用货币创造的魔法",
+      text: "<strong>「贷款创造存款」</strong>：银行放贷时，资产端（贷款）和负债端（存款）同时增加，并非转移已有存款，而是凭空创造购买力。这是与央行准备金完全不同的机制。"
+    },
+    effects: [
+      { icon: "pos", text: "<strong>广义货币M2扩张</strong>：经济体内总存款大幅增加" },
+      { icon: "pos", text: "<strong>企业可用资金充裕</strong>：资本支出意愿↑ → 设备投资、并购活跃" },
+      { icon: "pos", text: "<strong>股市增量资金来源</strong>：企业账面现金充裕 → 股票回购、分红提升" },
+      { icon: "neg", text: "<strong>杠杆率上升</strong>：企业负债/净资产比率提高，财务风险累积" },
+    ]
+  },
+  {
+    id: 5,
+    title: "第五步：企业投资与股市效应",
+    tag: "CORP → MARKET",
+    desc: "企业将充裕的资金用于资本支出、股票回购、分红提升。同时，投资者在低利率环境下提高风险偏好，将资金从债券/存款转移至股票市场。",
+    entities: [
+      {
+        name: "政府",
+        tag: "Government",
+        color: "var(--gov)",
+        assets: [
+          { label: "基础设施 / 国有资产", val: "550T¥" },
+        ],
+        liabs: [
+          { label: "流通国债", val: "1,100T¥" },
+          { label: "净资产（负）", val: "-650T¥", cls: "highlight-red" },
+        ]
+      },
+      {
+        name: "日本银行 (BOJ)",
+        tag: "Central Bank",
+        color: "var(--boj)",
+        assets: [
+          { label: "持有国债", val: "700T¥" },
+          { label: "持有ETF（TOPIX等）", val: "70T¥", cls: "up" },
+        ],
+        liabs: [
+          { label: "流通现金", val: "120T¥" },
+          { label: "商业银行准备金", val: "630T¥" },
+          { label: "BOJ 净资产", val: "130T¥" },
+        ]
+      },
+      {
+        name: "商业银行",
+        tag: "Commercial Banks",
+        color: "var(--bank)",
+        assets: [
+          { label: "BOJ准备金存款", val: "630T¥" },
+          { label: "持有国债", val: "80T¥" },
+          { label: "企业贷款", val: "650T¥" },
+        ],
+        liabs: [
+          { label: "企业/个人存款", val: "1,350T¥" },
+          { label: "银行净资产（含浮盈）", val: "120T¥", cls: "up" },
+        ]
+      },
+      {
+        name: "企业部门",
+        tag: "Corporate Sector",
+        color: "var(--corp)",
+        highlight: true,
+        assets: [
+          { label: "现金 / 银行存款（用于投资）", val: "360T¥", cls: "down" },
+          { label: "实物资产（资本支出后）", val: "550T¥", cls: "up" },
+          { label: "【新增设备投资】", val: "+150T¥", cls: "new up" },
+        ],
+        liabs: [
+          { label: "银行贷款", val: "500T¥" },
+          { label: "公司债", val: "80T¥" },
+          { label: "企业净资产（改善）", val: "330T¥" },
+        ]
+      },
+      {
+        name: "个人 / 家庭",
+        tag: "Household",
+        color: "var(--person)",
+        highlight: true,
+        assets: [
+          { label: "银行存款（转移至股市）", val: "740T¥", cls: "down" },
+          { label: "股票 / 投信（增加）", val: "340T¥", cls: "up" },
+          { label: "【资金搬家至股市】", val: "+140T¥", cls: "new up" },
+          { label: "不动产（估值上升）", val: "550T¥", cls: "up" },
+        ],
+        liabs: [
+          { label: "住宅贷款", val: "150T¥" },
+          { label: "消费贷款", val: "50T¥" },
+          { label: "家庭净资产（大幅改善）", val: "1,490T¥", cls: "highlight-green up" },
+        ]
+      }
+    ],
+    flow: {
+      nodes: ["资金充裕", "→ 企业回购/分红↑", "股价上涨", "→ 财富效应", "消费↑"],
+      labels: ["股市→实体经济正循环"]
+    },
+    insight: {
+      title: "股市传导的双引擎",
+      text: "<strong>供给侧</strong>：企业EPS改善+回购 → 股价上涨。<strong>需求侧</strong>：家庭存款收益率低 → 资金搬家至股票。两者叠加形成「戴维斯双击」效应。"
+    },
+    effects: [
+      { icon: "pos", text: "<strong>股市估值扩张</strong>：低利率→折现率↓→理论价值↑" },
+      { icon: "pos", text: "<strong>企业EPS改善</strong>：营收+资本支出带动盈利增长" },
+      { icon: "pos", text: "<strong>家庭财富效应</strong>：股票/房产升值→净资产+150T¥→消费信心↑" },
+      { icon: "neg", text: "<strong>贫富分化风险</strong>：持有金融资产多的群体受益更大" },
+    ]
+  },
+  {
+    id: 6,
+    title: "第六步：潜在风险与逆转机制",
+    tag: "RISK SCENARIO",
+    desc: "当市场对日本财政可持续性产生疑虑时，国债收益率可能急升，触发「逆向传导」——资产负债表链条开始收缩，形成系统性风险。",
+    entities: [
+      {
+        name: "政府",
+        tag: "Government ⚠️",
+        color: "var(--gov)",
+        highlight: true,
+        assets: [
+          { label: "基础设施 / 国有资产", val: "550T¥" },
+          { label: "未来税收（不确定性↑）", val: "?", cls: "highlight-red" },
+        ],
+        liabs: [
+          { label: "流通国债（续增）", val: "1,200T¥", cls: "up" },
+          { label: "利息支出急升", val: "↑危险区", cls: "highlight-red" },
+          { label: "净资产（严重恶化）", val: "-750T¥", cls: "highlight-red" },
+        ]
+      },
+      {
+        name: "日本银行 (BOJ)",
+        tag: "Central Bank ⚠️",
+        color: "var(--boj)",
+        highlight: true,
+        assets: [
+          { label: "持有国债（浮亏风险）", val: "700T¥", cls: "highlight-red" },
+          { label: "【若利率↑1%，浮亏】", val: "-7T¥", cls: "new down" },
+        ],
+        liabs: [
+          { label: "流通现金", val: "120T¥" },
+          { label: "商业银行准备金", val: "630T¥" },
+          { label: "BOJ净资产（压缩）", val: "123T¥", cls: "down" },
+        ]
+      },
+      {
+        name: "商业银行",
+        tag: "Commercial Banks ⚠️",
+        color: "var(--bank)",
+        highlight: true,
+        assets: [
+          { label: "BOJ准备金存款", val: "630T¥" },
+          { label: "持有国债（浮亏）", val: "80T¥", cls: "highlight-red" },
+          { label: "企业贷款（坏账风险↑）", val: "650T¥", cls: "highlight-red" },
+        ],
+        liabs: [
+          { label: "企业/个人存款", val: "1,350T¥" },
+          { label: "银行净资产（侵蚀）", val: "100T¥", cls: "down" },
+        ]
+      },
+      {
+        name: "企业部门",
+        tag: "Corporate Sector ⚠️",
+        color: "var(--corp)",
+        highlight: true,
+        assets: [
+          { label: "现金 / 银行存款", val: "360T¥" },
+          { label: "实物资产（估值下降）", val: "500T¥", cls: "down" },
+        ],
+        liabs: [
+          { label: "银行贷款（利率上升）", val: "500T¥", cls: "highlight-red" },
+          { label: "利息负担加重", val: "↑成本上升", cls: "highlight-red" },
+          { label: "企业净资产（收缩）", val: "280T¥", cls: "down" },
+        ]
+      },
+      {
+        name: "个人 / 家庭",
+        tag: "Household ⚠️",
+        color: "var(--person)",
+        highlight: true,
+        assets: [
+          { label: "银行存款", val: "740T¥" },
+          { label: "股票 / 投信（下跌）", val: "240T¥", cls: "down" },
+          { label: "不动产（调整）", val: "520T¥", cls: "down" },
+        ],
+        liabs: [
+          { label: "住宅贷款（利率重定价）", val: "150T¥", cls: "highlight-red" },
+          { label: "消费贷款", val: "50T¥" },
+          { label: "家庭净资产（回落）", val: "1,310T¥", cls: "down" },
+        ]
+      }
+    ],
+    insight: {
+      title: "明斯基时刻风险",
+      text: "当<strong>国债收益率急升</strong>：① BOJ持债浮亏 → 净资产侵蚀；② 商业银行资本充足率下降 → 信贷收缩；③ 企业利息成本↑ → EPS下降 → 股价下跌。链条<strong>逆向运行</strong>。"
+    },
+    effects: [
+      { icon: "neg", text: "<strong>国债收益率↑</strong>：折现率上升 → 股票估值收缩（P/E压缩）" },
+      { icon: "neg", text: "<strong>银行资本压力</strong>：国债浮亏侵蚀资本 → 被迫缩表" },
+      { icon: "neg", text: "<strong>企业融资成本↑</strong>：EPS下降 + 估值收缩 = 双杀" },
+      { icon: "neg", text: "<strong>日元汇率风险</strong>：若货币失信，外资撤离加速恶化" },
+      { icon: "pos", text: "<strong>银行股短期受益</strong>：存款净息差扩大（但持债损失需对冲）" },
+    ]
+  }
+];
+
+let currentStep = 0;
+
+function renderStepNav() {
+  const nav = document.getElementById('stepNav');
+  nav.innerHTML = STEPS.map((s, i) => `
+    <button class="step-btn ${i === currentStep ? 'active' : ''}" onclick="goToStep(${i})">
+      <span class="step-num">${i}</span>${s.tag}
+    </button>
+  `).join('');
+}
+
+function renderBS(entities) {
+  return entities.map(e => `
+    <div class="bs-card ${e.highlight ? 'highlight' : ''} ${e.highlight ? 'changed' : ''}">
+      <div class="bs-card-header">
+        <div class="entity-dot" style="background:${e.color}"></div>
+        <div class="entity-name" style="color:${e.color}">${e.name}</div>
+        <div class="entity-tag">${e.tag}</div>
+      </div>
+      <div class="bs-body">
+        <div class="bs-col">
+          <div class="bs-col-title asset">ASSETS 资产</div>
+          ${e.assets.map(a => `
+            <div class="bs-item ${a.cls || ''}">
+              <div class="bs-item-label">${a.label}</div>
+              <div class="bs-item-val">${a.val}</div>
+            </div>
+          `).join('')}
+        </div>
+        <div class="bs-col">
+          <div class="bs-col-title liab">LIABILITIES 负债 + 净资产</div>
+          ${e.liabs.map(l => `
+            <div class="bs-item ${l.cls || ''}">
+              <div class="bs-item-label">${l.label}</div>
+              <div class="bs-item-val">${l.val}</div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderSidebar(step) {
+  const total = STEPS.length;
+  let stockImpact = '';
+  if (step.id >= 3) {
+    stockImpact = `
+      <div class="sidebar-section">
+        <div class="sidebar-title">STOCK MARKET IMPACT</div>
+        <div class="impact-grid">
+          <div class="impact-card">
+            <div class="impact-sector">出口制造业</div>
+            <div class="impact-dir ${step.id === 6 ? 'neg' : 'pos'}">${step.id === 6 ? '↓ 利空' : '↑ 利多'}</div>
+          </div>
+          <div class="impact-card">
+            <div class="impact-sector">银行板块</div>
+            <div class="impact-dir ${step.id === 6 ? 'pos' : 'neg'}">${step.id === 6 ? '↑ 息差扩大' : '↓ 息差压缩'}</div>
+          </div>
+          <div class="impact-card">
+            <div class="impact-sector">建设/基建</div>
+            <div class="impact-dir ${step.id === 3 || step.id === 4 ? 'pos' : 'neu'}">${step.id === 3 || step.id === 4 ? '↑ 受益' : '→ 中性'}</div>
+          </div>
+          <div class="impact-card">
+            <div class="impact-sector">成长/科技股</div>
+            <div class="impact-dir ${step.id === 6 ? 'neg' : 'pos'}">${step.id === 6 ? '↓ 估值压缩' : '↑ 低利率受益'}</div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  return `
+    <div class="sidebar-section">
+      <div class="sidebar-title">KEY INSIGHT</div>
+      <div class="insight">
+        <p><strong>${step.insight.title}</strong><br>${step.insight.text}</p>
+      </div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">EFFECTS ON ECONOMY</div>
+      ${step.effects.map(e => `
+        <div class="effect-item">
+          <div class="effect-icon ${e.icon}">${e.icon === 'pos' ? '↑' : e.icon === 'neg' ? '↓' : '→'}</div>
+          <div class="effect-text">${e.text}</div>
+        </div>
+      `).join('')}
+    </div>
+    ${stockImpact}
+  `;
+}
+
+function renderStep(step) {
+  const progress = ((step.id + 1) / STEPS.length) * 100;
+  document.getElementById('progressFill').style.width = progress + '%';
+
+  document.getElementById('bsContent').innerHTML = `
+    <div class="fade-enter">
+      <div class="step-title">
+        ${step.title}
+        <span class="step-tag">${step.tag}</span>
+      </div>
+      <p class="step-desc">${step.desc}</p>
+      <div class="bs-grid">
+        ${renderBS(step.entities)}
+      </div>
+    </div>
+  `;
+
+  document.getElementById('sidebar').innerHTML = renderSidebar(step);
+
+  document.getElementById('stepCounter').textContent = `${step.id + 1} / ${STEPS.length}`;
+
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  prevBtn.disabled = step.id === 0;
+  nextBtn.disabled = step.id === STEPS.length - 1;
+  if (step.id === STEPS.length - 1) {
+    nextBtn.textContent = '已完成 ✓';
+  } else {
+    nextBtn.textContent = '下一步 →';
+  }
+}
+
+function goToStep(i) {
+  currentStep = i;
+  renderStepNav();
+  renderStep(STEPS[i]);
+  document.querySelector('.bs-area').scrollTop = 0;
+}
+
+function changeStep(dir) {
+  const next = currentStep + dir;
+  if (next >= 0 && next < STEPS.length) {
+    goToStep(next);
+  }
+}
+
+// Init
+renderStepNav();
+renderStep(STEPS[0]);
+</script>
+
+</body>
+</html>
