@@ -366,6 +366,11 @@ def fetch_all_data():
                 prev_close = closes[0]
                 high_1w = h_df['High'].tail(5).max()
                 high_1m = h_df['High'].max()
+                # ⭐ 新增：年初以来变化率
+                # 获取今年第一个交易日的数据
+                h_df_year = h_df
+                ytd_first_close = h_df_year.iloc[0]['Close']  # 今年第一个交易日收盘价
+                ytd_change = ((current_price - ytd_first_close) / ytd_first_close) * 100 if ytd_first_close else 0
             else:
                 h_df = stock.history(period="1mo")
                 h_df = h_df.dropna(subset=['High', 'Close'])
@@ -376,6 +381,15 @@ def fetch_all_data():
                 prev_close = closes[0]
                 high_1w = h_df['High'].tail(5).max()
                 high_1m = h_df['High'].max()
+                # ⭐ 新增：年初以来变化率
+                # 使用 yfinance 获取年初至今的数据
+                h_df_ytd = stock.history(period="ytd")  # year-to-date
+                if not h_df_ytd.empty and len(h_df_ytd) > 0:
+                    ytd_first_close = h_df_ytd.iloc[0]['Close']
+                    ytd_change = ((current_price - ytd_first_close) / ytd_first_close) * 100 if ytd_first_close
+            else 0
+                else:
+                    ytd_change = 0
             
             # 计算涨跌幅
             diff = current_price - prev_close
@@ -478,6 +492,7 @@ def fetch_all_data():
                 "forward_per": forward_per_display, 
                 "pbr": pbr_display, 
                 "distHigh": dist_high_str,       
+                "ytdChange": f"{ytd_change:.2f}%",  # ⭐ 新增
                 "distWeek": dist_week_str,       
                 "distMonth": dist_month_str,     
                 "trend": trend_label,
