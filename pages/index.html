@@ -554,7 +554,23 @@
         const industry = sector.industries.find(item => item.industry_id === industryId);
         return industry ? industry.industry_name : industryId;
     }
-    
+    // ============================================================
+    // 打开 kabuyoho 目标股价页面
+    // ============================================================
+    function openTargetPrice(symbol) {
+        // 清理股票代码（去掉 .T .SS .SZ 等后缀）
+        let cleanCode = symbol;
+        if (symbol.includes('.')) {
+            cleanCode = symbol.split('.')[0];
+        }
+        // 日股代码补零到4位（如 3110.T → 3110）
+        if (cleanCode.length === 3 && !isNaN(cleanCode)) {
+            // 3110 已经是4位，不需要补零
+        }
+        // 构建 kabuyoho URL
+        const url = `https://kabuyoho.jp/sp/reportTarget?bcode=${cleanCode}`;
+        window.open(url, '_blank');
+    }
     // ============================================================
     // 获取 industry_comment
     // ============================================================
@@ -680,18 +696,21 @@
                                 <table class="metrics-table" style="margin-bottom: 6px;">
                                     <thead>
                                         <tr>
-                                            <th style="width: 25%;">距1周高</th>
-                                            <th style="width: 25%;">距1月高</th>
-                                            <th style="width: 25%;">距52周高</th>
-                                            <th style="width: 25%;">年初以来</th>
+                                            <th style="width: 33.33%;">
+                                                <a href="#" onclick="openTargetPrice('${stock.code}'); return false;" style="color: #2563eb; text-decoration: none; cursor: pointer; border-bottom: 1px dashed #2563eb;">
+                                                    PER 估值 📊
+                                                </a>
+                                            </th>
+                                            <th style="width: 33.33%;">予想PER</th>
+                                            <th style="width: 33.33%;">PBR</th>
+                                            
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>${judgeValuation(stock.per, 'PER')}</td>
+                                            <td>${judgeValuation(stock.per, 'PER')}</td>                                                
                                             <td>${judgeValuation(stock.forward_per, 'forward_per')}</td>
-                                            <td>${judgeValuation(stock.pbr, 'PBR')}</td>
-                                            <td style="color: ${parseFloat(stock.ytdChange) >= 0 ? 'var(--up-color)' : 'var(--down-color)'};">${stock.ytdChange || '--'}</td>
+                                            <td>${judgeValuation(stock.pbr, 'PBR')}</td>                                            
                                         </tr>
                                     </tbody>
                                 </table>
@@ -699,9 +718,10 @@
                                 <table class="metrics-table">
                                     <thead>
                                         <tr>
-                                            <th style="width: 33.33%;">距1周高</th>
-                                            <th style="width: 33.33%;">距1月高</th>
-                                            <th style="width: 33.33%;">距52周高</th>
+                                            <th style="width: 25%;">距1周高</th>
+                                            <th style="width: 25%;">距1月高</th>
+                                            <th style="width: 25%;">距52周高</th>
+                                            <th style="width: 25%;">年初高</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -709,6 +729,7 @@
                                             <td>${stock.distWeek || '--'}</td>
                                             <td>${stock.distMonth || '--'}</td>
                                             <td>${stock.distHigh || '--'}</td>
+                                            <td style="color: ${parseFloat(stock.ytdChange) >= 0 ? 'var(--up-color)' : 'var(--down-color)'};">${stock.ytdChange || '--'}</td>
                                         </tr>
                                     </tbody>
                                 </table>
