@@ -409,14 +409,6 @@ def fetch_all_data():
                 try:
                     stock_info = stock.info
 
-                    print("=" * 60)
-                    print(item["name"], symbol)
-                    print("currentPrice:", stock_info.get("currentPrice"))
-                    print("regularMarketPrice:", stock_info.get("regularMarketPrice"))
-                    print("forwardPE:", stock_info.get("forwardPE"))
-                    print("forwardEps:", stock_info.get("forwardEps"))
-                    print("trailingPE:", stock_info.get("trailingPE"))
-                    print("trailingEps:", stock_info.get("trailingEps"))
                     
                     price = (
                         stock_info.get("currentPrice")
