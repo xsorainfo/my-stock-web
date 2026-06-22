@@ -366,11 +366,11 @@ def fetch_all_data():
                 prev_close = closes[0]
                 high_1w = h_df['High'].tail(5).max()
                 high_1m = h_df['High'].max()
-                # ⭐ 新增：年初以来变化率
-                # 获取今年第一个交易日的数据
-                h_df_year = h_df
-                ytd_first_close = h_df_year.iloc[0]['Close']  # 今年第一个交易日收盘价
+                
+                # 年初以来变化率（A股：使用全年数据）
+                ytd_first_close = h_df.iloc[0]['Close']
                 ytd_change = ((current_price - ytd_first_close) / ytd_first_close) * 100 if ytd_first_close else 0
+            
             else:
                 h_df = stock.history(period="1mo")
                 h_df = h_df.dropna(subset=['High', 'Close'])
@@ -381,13 +381,12 @@ def fetch_all_data():
                 prev_close = closes[0]
                 high_1w = h_df['High'].tail(5).max()
                 high_1m = h_df['High'].max()
-                # ⭐ 新增：年初以来变化率
-                # 使用 yfinance 获取年初至今的数据
-                h_df_ytd = stock.history(period="ytd")  # year-to-date
+                
+                # 年初以来变化率（美股/日股/韩股：使用 yfinance ytd 数据）
+                h_df_ytd = stock.history(period="ytd")
                 if not h_df_ytd.empty and len(h_df_ytd) > 0:
                     ytd_first_close = h_df_ytd.iloc[0]['Close']
-                    ytd_change = ((current_price - ytd_first_close) / ytd_first_close) * 100 if ytd_first_close
-            else 0
+                    ytd_change = ((current_price - ytd_first_close) / ytd_first_close) * 100 if ytd_first_close else 0
                 else:
                     ytd_change = 0
             
