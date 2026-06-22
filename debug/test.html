@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yahoo PER 调试工具</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 24px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,.1);
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        input {
+            padding: 8px;
+            font-size: 16px;
+            width: 180px;
+        }
+
+        button {
+            padding: 8px 18px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        table {
+            margin-top: 20px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        th {
+            background: #f0f0f0;
+            text-align: left;
+        }
+
+        .ok {
+            color: green;
+            font-weight: bold;
+        }
+
+        .warn {
+            color: red;
+            font-weight: bold;
+        }
+
+        pre {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            overflow: auto;
+            border-radius: 6px;
+            max-height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Yahoo 预想 PER 调试工具</h2>
+
+    <p>
+        股票代码：
+        <input id="symbol" value="7003.T">
+        <button onclick="loadData()">查询</button>
+    </p>
+
+    <table>
+        <tbody>
+        <tr>
+            <th>股票代码</th>
+            <td id="symbolText">-</td>
+        </tr>
+
+        <tr>
+            <th>Current Price</th>
+            <td id="price">-</td>
+        </tr>
+
+        <tr>
+            <th>Forward EPS</th>
+            <td id="forwardEps">-</td>
+        </tr>
+
+        <tr>
+            <th>Forward PER (API)</th>
+            <td id="forwardPE">-</td>
+        </tr>
+
+        <tr>
+            <th>Forward PER (自己计算)</th>
+            <td id="calcForwardPE">-</td>
+        </tr>
+
+        <tr>
+            <th>Trailing EPS</th>
+            <td id="trailingEps">-</td>
+        </tr>
+
+        <tr>
+            <th>Trailing PER</th>
+            <td id="trailingPE">-</td>
+        </tr>
+
+        <tr>
+            <th>Market Cap</th>
+            <td id="marketCap">-</td>
+        </tr>
+
+        <tr>
+            <th>Currency</th>
+            <td id="currency">-</td>
+        </tr>
+
+        <tr>
+            <th>结果检查</th>
+            <td id="check">-</td>
+        </tr>
+
+        </tbody>
+    </table>
+
+    <h3>原始 JSON</h3>
+
+    <pre id="json">等待查询...</pre>
+
+</div>
+
+<script>
+
+async function loadData() {
+
+    const symbol = document.getElementById("symbol").value.trim();
+
+    // 修改成你的接口地址
+    // 示例：
+    // const API_URL = `/api/yahoo?symbol=${symbol}`;
+    // const API_URL = `https://你的服务器/yahoo?symbol=${symbol}`;
+
+    const API_URL = `/api/yahoo?symbol=${encodeURIComponent(symbol)}`;
+
+    try {
+
+        const res = await fetch(API_URL);
+
+        if (!res.ok) {
+            throw new Error("HTTP " + res.status);
+        }
+
+        const data = await res.json();
+
+        document.getElementById("json").textContent =
+            JSON.stringify(data, null, 2);
+
+        const price =
+            data.currentPrice ??
+            data.regularMarketPrice ??
+            null;
+
+        const forwardEps =
+            data.forwardEps ?? null;
+
+        const forwardPE =
+            data.forwardPE ?? null;
+
+        const trailingEps =
+            data.trailingEps ?? null;
+
+        const trailingPE =
+            data.trailingPE ?? null;
+
+        const marketCap =
+            data.marketCap ?? null;
+
+        const currency =
+            data.currency ?? "";
+
+        document.getElementById("symbolText").textContent = symbol;
+        document.getElementById("price").textContent = value(price);
+        document.getElementById("forwardEps").textContent = value(forwardEps);
+        document.getElementById("forwardPE").textContent = value(forwardPE);
+        document.getElementById("trailingEps").textContent = value(trailingEps);
+        document.getElementById("trailingPE").textContent = value(trailingPE);
+        document.getElementById("marketCap").textContent = value(marketCap);
+        document.getElementById("currency").textContent = currency;
+
+        if (
+            price != null &&
+            forwardEps != null &&
+            forwardEps !== 0
+        ) {
+
+            const calc =
+                price / forwardEps;
+
+            document.getElementById("calcForwardPE").textContent =
+                calc.toFixed(2);
+
+            if (forwardPE != null) {
+
+                const diff =
+                    Math.abs(calc - forwardPE);
+
+                const percent =
+                    diff / forwardPE * 100;
+
+                if (percent < 5) {
+
+                    document.getElementById("check").innerHTML =
+                        `<span class="ok">
+                        ✅ API 与计算结果基本一致（差异 ${percent.toFixed(2)}%）
+                        </span>`;
+
+                } else {
+
+                    document.getElementById("check").innerHTML =
+                        `<span class="warn">
+                        ⚠ 差异较大（${percent.toFixed(2)}%），请检查：
+                        数据更新时间、EPS来源或Yahoo字段映射。
+                        </span>`;
+                }
+
+            }
+
+        } else {
+
+            document.getElementById("calcForwardPE").textContent = "-";
+            document.getElementById("check").textContent = "无法计算";
+        }
+
+    } catch (e) {
+
+        document.getElementById("json").textContent =
+            "读取失败：\n\n" + e;
+
+    }
+
+}
+
+function value(v) {
+
+    if (v === undefined || v === null) {
+        return "-";
+    }
+
+    if (typeof v === "number") {
+
+        if (Math.abs(v) >= 1000) {
+            return v.toLocaleString();
+        }
+
+        return Number(v).toFixed(2);
+    }
+
+    return v;
+}
+
+</script>
+
+</body>
+</html>
