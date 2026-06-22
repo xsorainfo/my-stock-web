@@ -408,6 +408,31 @@ def fetch_all_data():
             else:
                 try:
                     stock_info = stock.info
+
+                    print("=" * 60)
+                    print(item["name"], symbol)
+                    print("currentPrice:", stock_info.get("currentPrice"))
+                    print("regularMarketPrice:", stock_info.get("regularMarketPrice"))
+                    print("forwardPE:", stock_info.get("forwardPE"))
+                    print("forwardEps:", stock_info.get("forwardEps"))
+                    print("trailingPE:", stock_info.get("trailingPE"))
+                    print("trailingEps:", stock_info.get("trailingEps"))
+                    
+                    price = (
+                        stock_info.get("currentPrice")
+                        or stock_info.get("regularMarketPrice")
+                    )
+                    
+                    eps = stock_info.get("forwardEps")
+                    
+                    if price and eps:
+                        print("price / forwardEps =", round(price / eps, 4))
+                    
+                    print("=" * 60)
+
+
+
+                    
                     if isinstance(stock_info, dict):
                         high_52w = stock_info.get('fiftyTwoWeekHigh')
                         if high_52w and float(high_52w) >= current_price:
