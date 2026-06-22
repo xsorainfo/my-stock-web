@@ -9,6 +9,8 @@
     align-items: center;
     border-bottom: 2px solid #334155;
     flex-shrink: 0;
+    position: relative;
+    z-index: 100;
 }
 
 .nav-logo {
@@ -21,7 +23,7 @@
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
 }
 
 .nav-item {
@@ -31,6 +33,10 @@
     border-radius: 6px;
     transition: all 0.3s;
     font-size: 14px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
 }
 
 .nav-item:hover {
@@ -43,15 +49,64 @@
     background: #334155;
     border-bottom: 2px solid #38bdf8;
 }
-/* ⭐ 新增：总结文档特殊样式（可选） */
-.nav-item[data-page="summary"] {
-    /* 可以加个特殊颜色标识 */
-}
 
 .nav-item[data-page="summary"]:hover {
     background: #334155;
     color: #fbbf24;  /* 金色，突出显示 */
 }
+
+/* ⭐ 下拉菜单 */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 6px 0;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    z-index: 200;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 18px;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background: #334155;
+    color: #38bdf8;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background: #334155;
+    color: #38bdf8;
+}
+
+
+
 .nav-right {
     margin-left: auto;
     display: flex;
@@ -84,10 +139,21 @@
 @media (max-width: 768px) {
     .top-navbar {
         padding: 0 16px;
+        flex-wrap: wrap;
+        height: auto;
+        min-height: 56px;
     }
     .nav-item {
         padding: 6px 10px;
         font-size: 12px;
+    }
+    .dropdown-content {
+        min-width: 160px;
+        left: -40px;
+    }
+    .dropdown-content a {
+        font-size: 12px;
+        padding: 8px 14px;
     }
 }
 
@@ -96,6 +162,10 @@
         font-size: 14px;
         margin-right: 10px;
     }
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 2px;
+    }
     .nav-item {
         padding: 4px 8px;
         font-size: 11px;
@@ -103,5 +173,9 @@
     .refresh-btn {
         font-size: 11px;
         padding: 4px 10px;
+    }
+    .dropdown-content {
+        min-width: 140px;
+        left: -20px;
     }
 }
