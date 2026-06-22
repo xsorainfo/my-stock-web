@@ -740,7 +740,7 @@
                         <div class="stock-feature">${formattedFeature}</div>
 
                         <div class="tag-container">
-                            ${stock.tags ? stock.tags.map(t => `<span class="stock-tag">${t}</span>`).join('') : ''}
+                            //${stock.tags ? stock.tags.map(t => `<span class="stock-tag">${t}</span>`).join('') : ''}
                             ${stock.tag_themes ? stock.tag_themes.map(t => {
                                 if (t.theme_path && t.theme_path.length > 0) {
                                     return `<span class="stock-tag theme-tag" title="${t.theme_path.join(' > ')}">${t.theme_path.join(' › ')}</span>`;
