@@ -8,14 +8,14 @@
     },
     {
       "name": "美元/日元 (汇率)",
-      "price": "161.48",
-      "change": "+0.19 (+0.12%)",
+      "price": "161.56",
+      "change": "+0.27 (+0.17%)",
       "isUp": true
     },
     {
       "name": "日经 225",
-      "price": "71739.14",
-      "change": "+489.08 (+0.69%)",
+      "price": "72553.60",
+      "change": "+1303.54 (+1.83%)",
       "isUp": true
     },
     {
@@ -267,7 +267,7 @@
       "change": "+20.58 (+4.91%)",
       "isUp": true,
       "per": "529.47",
-      "forward_per": "143.25",
+      "forward_per": "142.50",
       "pbr": "56.44",
       "distHigh": "-2.9%",
       "distWeek": "-2.9%",
@@ -307,6 +307,34 @@
       "source": "yfinance"
     },
     {
+      "code": "STM",
+      "name": "意法半导体",
+      "sector": "1.1",
+      "industry": "1.1.1",
+      "feature": "**全球SiC器件营收第一**，2024年SiC器件营收约**11亿美元**，客户含特斯拉、现代汽车，**8英寸产线已启动量产**，与三安光电重庆合资工厂推进中",
+      "tags": [
+        "碳化硅 (SiC)"
+      ],
+      "tag_themes": [
+        {
+          "tag": "碳化硅 (SiC)",
+          "theme_path": []
+        }
+      ],
+      "market_type": "美股",
+      "price": "78.39",
+      "change": "+5.03 (+6.86%)",
+      "isUp": true,
+      "per": "489.94",
+      "forward_per": "31.89",
+      "pbr": "3.92",
+      "distHigh": "-3.7%",
+      "distWeek": "-2.5%",
+      "distMonth": "-3.7%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
       "code": "6723",
       "name": "ルネサス(瑞萨电子)",
       "sector": "1.1",
@@ -341,15 +369,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "4760.00",
-      "change": "+26.00 (+0.55%)",
+      "price": "5017.00",
+      "change": "+283.00 (+5.98%)",
       "isUp": true,
-      "per": "18.30",
-      "forward_per": "18.30",
-      "pbr": "3.40",
-      "distHigh": "-4.5%",
-      "distWeek": "-2.6%",
-      "distMonth": "-4.5%",
+      "per": "19.29",
+      "forward_per": "19.29",
+      "pbr": "3.58",
+      "distHigh": "-0.2%",
+      "distWeek": "-0.2%",
+      "distMonth": "-0.2%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -372,15 +400,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "2659.00",
-      "change": "+29.00 (+1.10%)",
+      "price": "2707.00",
+      "change": "+77.00 (+2.93%)",
       "isUp": true,
-      "per": "53.76",
-      "forward_per": "18.60",
-      "pbr": "3.50",
-      "distHigh": "-23.8%",
-      "distWeek": "-5.9%",
-      "distMonth": "-16.9%",
+      "per": "54.75",
+      "forward_per": "18.95",
+      "pbr": "3.57",
+      "distHigh": "-22.5%",
+      "distWeek": "-4.2%",
+      "distMonth": "-15.4%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -389,7 +417,7 @@
       "name": "ローム(罗姆)",
       "sector": "1.1",
       "industry": "1.1.1",
-      "feature": "**SiC功率模块先驱**，碳化硅功率器件市占率全球前三，AI服务器电源管理核心器件",
+      "feature": "**日本SiC全产业链IDM龙头**，旗下SiCrystal为全球SiC衬底主要供应商之一，**已明确8英寸SiC产线升级路线图**，碳化硅功率器件市占率全球前三，AI服务器电源管理核心器件供应商",
       "tags": [
         "碳化硅 (SiC)"
       ],
@@ -400,15 +428,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "5689.00",
-      "change": "+180.00 (+3.27%)",
+      "price": "5764.00",
+      "change": "+255.00 (+4.63%)",
       "isUp": true,
-      "per": "65.47",
-      "forward_per": "65.47",
-      "pbr": "2.90",
-      "distHigh": "-1.1%",
-      "distWeek": "-0.6%",
-      "distMonth": "-1.1%",
+      "per": "66.34",
+      "forward_per": "66.34",
+      "pbr": "2.94",
+      "distHigh": "-0.4%",
+      "distWeek": "-0.4%",
+      "distMonth": "-0.4%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -439,15 +467,15 @@
         }
       ],
       "market_type": "A股",
-      "price": "769.89",
-      "change": "+37.39 (+5.10%)",
-      "isUp": true,
+      "price": "752.00",
+      "change": "-17.89 (-2.32%)",
+      "isUp": false,
       "per": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "distWeek": "-2.4%",
-      "distMonth": "-6.1%",
+      "distWeek": "-4.7%",
+      "distMonth": "-4.7%",
       "trend": "牛市多头",
       "source": "sina"
     },
@@ -470,15 +498,15 @@
         }
       ],
       "market_type": "A股",
-      "price": "669.00",
-      "change": "+30.00 (+4.69%)",
-      "isUp": true,
+      "price": "660.66",
+      "change": "-8.34 (-1.25%)",
+      "isUp": false,
       "per": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "distWeek": "-1.0%",
-      "distMonth": "-10.6%",
+      "distWeek": "-2.2%",
+      "distMonth": "-9.5%",
       "trend": "牛市多头",
       "source": "sina"
     },
@@ -501,15 +529,15 @@
         }
       ],
       "market_type": "A股",
-      "price": "328.00",
-      "change": "+19.78 (+6.42%)",
+      "price": "331.77",
+      "change": "+3.77 (+1.15%)",
       "isUp": true,
       "per": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "distWeek": "-2.4%",
-      "distMonth": "-4.9%",
+      "distWeek": "-1.3%",
+      "distMonth": "-3.8%",
       "trend": "牛市多头",
       "source": "sina"
     },
@@ -532,15 +560,15 @@
         }
       ],
       "market_type": "A股",
-      "price": "146.49",
-      "change": "+2.99 (+2.08%)",
-      "isUp": true,
+      "price": "146.20",
+      "change": "-0.29 (-0.20%)",
+      "isUp": false,
       "per": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "distWeek": "-1.4%",
-      "distMonth": "-16.0%",
+      "distWeek": "-1.7%",
+      "distMonth": "-12.4%",
       "trend": "牛市多头",
       "source": "sina"
     },
@@ -563,15 +591,43 @@
         }
       ],
       "market_type": "A股",
-      "price": "39.63",
-      "change": "+1.33 (+3.47%)",
+      "price": "39.30",
+      "change": "-0.33 (-0.83%)",
+      "isUp": false,
+      "per": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "distWeek": "-2.6%",
+      "distMonth": "-10.7%",
+      "trend": "牛市多头",
+      "source": "sina"
+    },
+    {
+      "code": "600460",
+      "name": "士兰微",
+      "sector": "1.1",
+      "industry": "1.1.1",
+      "feature": "**国内车规级SiC模块龙头**，SiC MOSFET已迭代至第四代，**主驱模块累计出货超10万颗**，**8英寸产线已通线**，6英寸月产能1万片",
+      "tags": [
+        "碳化硅 (SiC)"
+      ],
+      "tag_themes": [
+        {
+          "tag": "碳化硅 (SiC)",
+          "theme_path": []
+        }
+      ],
+      "market_type": "A股",
+      "price": "46.01",
+      "change": "+4.18 (+9.99%)",
       "isUp": true,
       "per": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "distWeek": "-1.8%",
-      "distMonth": "-9.9%",
+      "distWeek": "0.0%",
+      "distMonth": "0.0%",
       "trend": "牛市多头",
       "source": "sina"
     },
@@ -664,15 +720,15 @@
         }
       ],
       "market_type": "韩股",
-      "price": "344000.00",
-      "change": "-10000.00 (-2.82%)",
-      "isUp": false,
-      "per": "5.93",
-      "forward_per": "5.93",
+      "price": "356500.00",
+      "change": "+2500.00 (+0.71%)",
+      "isUp": true,
+      "per": "6.14",
+      "forward_per": "6.14",
       "pbr": "--",
-      "distHigh": "-8.1%",
-      "distWeek": "-8.1%",
-      "distMonth": "-8.1%",
+      "distHigh": "-4.8%",
+      "distWeek": "-4.8%",
+      "distMonth": "-4.8%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -695,15 +751,15 @@
         }
       ],
       "market_type": "韩股",
-      "price": "2754000.00",
-      "change": "-10000.00 (-0.36%)",
-      "isUp": false,
-      "per": "6.66",
-      "forward_per": "6.66",
+      "price": "2893000.00",
+      "change": "+129000.00 (+4.67%)",
+      "isUp": true,
+      "per": "7.00",
+      "forward_per": "7.00",
       "pbr": "--",
-      "distHigh": "-4.7%",
-      "distWeek": "-4.7%",
-      "distMonth": "-4.7%",
+      "distHigh": "-1.8%",
+      "distWeek": "-1.8%",
+      "distMonth": "-1.8%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -723,15 +779,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "107500.00",
-      "change": "-1100.00 (-1.01%)",
-      "isUp": false,
-      "per": "106.44",
+      "price": "111350.00",
+      "change": "+2750.00 (+2.53%)",
+      "isUp": true,
+      "per": "110.25",
       "forward_per": "--",
-      "pbr": "41.96",
-      "distHigh": "-1.8%",
-      "distWeek": "-1.8%",
-      "distMonth": "-1.8%",
+      "pbr": "43.47",
+      "distHigh": "-1.2%",
+      "distWeek": "-1.2%",
+      "distMonth": "-1.2%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -762,17 +818,45 @@
         }
       ],
       "market_type": "A股",
-      "price": "269.90",
-      "change": "+7.40 (+2.82%)",
+      "price": "282.40",
+      "change": "+12.50 (+4.63%)",
       "isUp": true,
       "per": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "distWeek": "-2.0%",
-      "distMonth": "-6.5%",
+      "distWeek": "-0.9%",
+      "distMonth": "-2.2%",
       "trend": "牛市多头",
       "source": "sina"
+    },
+    {
+      "code": "WOLF",
+      "name": "Wolfspeed",
+      "sector": "1.2",
+      "industry": "1.2.2",
+      "feature": "**全球SiC衬底老牌龙头（IDM）**，2024年全球导电型衬底市占率约33.7%，**全球首座8英寸SiC晶圆厂（莫霍克谷）已投运**，2025年完成破产重组战略聚焦SiC器件",
+      "tags": [
+        "碳化硅 (SiC)"
+      ],
+      "tag_themes": [
+        {
+          "tag": "碳化硅 (SiC)",
+          "theme_path": []
+        }
+      ],
+      "market_type": "美股",
+      "price": "57.41",
+      "change": "+8.72 (+17.91%)",
+      "isUp": true,
+      "per": "-11.47",
+      "forward_per": "-11.47",
+      "pbr": "2.50",
+      "distHigh": "-29.0%",
+      "distWeek": "-0.2%",
+      "distMonth": "-29.0%",
+      "trend": "牛市多头",
+      "source": "yfinance"
     },
     {
       "code": "DOW",
@@ -948,15 +1032,15 @@
         }
       ],
       "market_type": "A股",
-      "price": "32.20",
-      "change": "-0.20 (-0.62%)",
-      "isUp": false,
+      "price": "33.45",
+      "change": "+1.25 (+3.88%)",
+      "isUp": true,
       "per": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "distWeek": "-9.8%",
-      "distMonth": "-9.8%",
+      "distWeek": "-2.1%",
+      "distMonth": "-6.3%",
       "trend": "牛市多头",
       "source": "sina"
     },
@@ -987,16 +1071,63 @@
         }
       ],
       "market_type": "日股",
-      "price": "7284.00",
-      "change": "-26.00 (-0.36%)",
-      "isUp": false,
-      "per": "28.88",
-      "forward_per": "22.09",
-      "pbr": "3.03",
-      "distHigh": "-8.1%",
-      "distWeek": "-5.8%",
-      "distMonth": "-8.1%",
+      "price": "7312.00",
+      "change": "+2.00 (+0.03%)",
+      "isUp": true,
+      "per": "28.99",
+      "forward_per": "22.18",
+      "pbr": "3.04",
+      "distHigh": "-7.8%",
+      "distWeek": "-5.5%",
+      "distMonth": "-7.8%",
       "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "5016",
+      "name": "JX金属",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**全球半导体溅射靶材霸主（市占率约65%）**，InP化合物半导体基板全球市占率约40%。近年战略重心从铜冶炼全面转向半导体/信息通信材料，年投资规模达千亿日元级别，核心客户覆盖台积电、英特尔、SK海力士及Rapidus。高纯钽粉、FPC压延铜箔等多项材料全球市占率超50%",
+      "tags": [
+        "靶材",
+        "磷化铟",
+        "高纯化学品"
+      ],
+      "tag_themes": [
+        {
+          "tag": "靶材",
+          "theme_path": [
+            "2. 半导体材料",
+            "靶材"
+          ]
+        },
+        {
+          "tag": "磷化铟",
+          "theme_path": [
+            "2. 半导体材料",
+            "磷化铟"
+          ]
+        },
+        {
+          "tag": "高纯化学品",
+          "theme_path": [
+            "2. 半导体材料",
+            "高纯化学品"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "5292.00",
+      "change": "+545.00 (+11.48%)",
+      "isUp": true,
+      "per": "47.04",
+      "forward_per": "--",
+      "pbr": "6.75",
+      "distHigh": "-9.2%",
+      "distWeek": "-0.1%",
+      "distMonth": "-0.1%",
+      "trend": "牛市多头",
       "source": "yfinance"
     },
     {
@@ -1018,15 +1149,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "4243.00",
-      "change": "-11.00 (-0.26%)",
-      "isUp": false,
-      "per": "86.19",
-      "forward_per": "86.19",
-      "pbr": "2.61",
-      "distHigh": "-7.0%",
-      "distWeek": "-5.9%",
-      "distMonth": "-7.0%",
+      "price": "4336.00",
+      "change": "+82.00 (+1.93%)",
+      "isUp": true,
+      "per": "88.12",
+      "forward_per": "88.12",
+      "pbr": "2.66",
+      "distHigh": "-5.0%",
+      "distWeek": "-3.8%",
+      "distMonth": "-5.0%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -1049,15 +1180,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "11310.00",
-      "change": "+185.00 (+1.66%)",
+      "price": "11495.00",
+      "change": "+370.00 (+3.33%)",
       "isUp": true,
-      "per": "40.66",
-      "forward_per": "57.94",
-      "pbr": "3.31",
-      "distHigh": "-12.5%",
-      "distWeek": "-1.1%",
-      "distMonth": "-4.3%",
+      "per": "41.33",
+      "forward_per": "58.89",
+      "pbr": "3.36",
+      "distHigh": "-11.1%",
+      "distWeek": "-0.5%",
+      "distMonth": "-2.7%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -1080,15 +1211,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "4756.00",
-      "change": "+241.00 (+5.34%)",
+      "price": "4885.00",
+      "change": "+370.00 (+8.19%)",
       "isUp": true,
-      "per": "20.94",
-      "forward_per": "17.80",
-      "pbr": "1.00",
-      "distHigh": "-19.8%",
-      "distWeek": "-0.3%",
-      "distMonth": "-2.5%",
+      "per": "21.51",
+      "forward_per": "18.28",
+      "pbr": "1.03",
+      "distHigh": "-17.6%",
+      "distWeek": "-0.1%",
+      "distMonth": "-0.1%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -1111,15 +1242,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "2727.50",
-      "change": "-8.50 (-0.31%)",
-      "isUp": false,
-      "per": "11.58",
-      "forward_per": "13.90",
-      "pbr": "0.99",
-      "distHigh": "-17.3%",
-      "distWeek": "-2.5%",
-      "distMonth": "-4.5%",
+      "price": "2775.00",
+      "change": "+39.00 (+1.43%)",
+      "isUp": true,
+      "per": "11.78",
+      "forward_per": "14.14",
+      "pbr": "1.01",
+      "distHigh": "-15.9%",
+      "distWeek": "-0.8%",
+      "distMonth": "-2.8%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -1142,15 +1273,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "7569.00",
-      "change": "-47.00 (-0.62%)",
-      "isUp": false,
-      "per": "23.22",
-      "forward_per": "18.34",
-      "pbr": "1.08",
-      "distHigh": "-9.0%",
-      "distWeek": "-3.0%",
-      "distMonth": "-9.0%",
+      "price": "7644.00",
+      "change": "+28.00 (+0.37%)",
+      "isUp": true,
+      "per": "23.45",
+      "forward_per": "18.52",
+      "pbr": "1.09",
+      "distHigh": "-8.1%",
+      "distWeek": "-2.0%",
+      "distMonth": "-8.1%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -1173,15 +1304,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "5530.00",
-      "change": "-20.00 (-0.36%)",
+      "price": "5420.00",
+      "change": "-130.00 (-2.34%)",
       "isUp": false,
-      "per": "16.69",
-      "forward_per": "14.35",
-      "pbr": "0.95",
-      "distHigh": "-13.1%",
-      "distWeek": "-3.7%",
-      "distMonth": "-13.1%",
+      "per": "16.36",
+      "forward_per": "14.06",
+      "pbr": "0.93",
+      "distHigh": "-14.8%",
+      "distWeek": "-5.6%",
+      "distMonth": "-14.8%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -1204,15 +1335,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "5517.00",
-      "change": "-47.00 (-0.84%)",
+      "price": "5530.00",
+      "change": "-34.00 (-0.61%)",
       "isUp": false,
-      "per": "19.29",
-      "forward_per": "19.94",
-      "pbr": "1.96",
-      "distHigh": "-15.2%",
-      "distWeek": "-2.4%",
-      "distMonth": "-15.2%",
+      "per": "19.34",
+      "forward_per": "19.98",
+      "pbr": "1.97",
+      "distHigh": "-15.0%",
+      "distWeek": "-2.2%",
+      "distMonth": "-15.0%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -1235,15 +1366,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "3389.00",
-      "change": "+6.00 (+0.18%)",
+      "price": "3387.00",
+      "change": "+4.00 (+0.12%)",
       "isUp": true,
-      "per": "15.09",
+      "per": "15.08",
       "forward_per": "14.60",
       "pbr": "1.06",
-      "distHigh": "-10.5%",
-      "distWeek": "-3.0%",
-      "distMonth": "-5.1%",
+      "distHigh": "-10.6%",
+      "distWeek": "-3.1%",
+      "distMonth": "-5.2%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -1297,15 +1428,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "25590.00",
-      "change": "+1030.00 (+4.19%)",
+      "price": "26145.00",
+      "change": "+1585.00 (+6.45%)",
       "isUp": true,
-      "per": "118.40",
-      "forward_per": "82.83",
-      "pbr": "12.99",
-      "distHigh": "-5.3%",
-      "distWeek": "-5.3%",
-      "distMonth": "-5.3%",
+      "per": "120.97",
+      "forward_per": "84.62",
+      "pbr": "13.27",
+      "distHigh": "-3.2%",
+      "distWeek": "-3.2%",
+      "distMonth": "-3.2%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -1328,15 +1459,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "3684.00",
-      "change": "+4.00 (+0.11%)",
+      "price": "3698.00",
+      "change": "+18.00 (+0.49%)",
       "isUp": true,
-      "per": "35.88",
-      "forward_per": "41.16",
-      "pbr": "1.45",
-      "distHigh": "-5.9%",
-      "distWeek": "-4.0%",
-      "distMonth": "-5.9%",
+      "per": "36.02",
+      "forward_per": "41.32",
+      "pbr": "1.46",
+      "distHigh": "-5.5%",
+      "distWeek": "-3.6%",
+      "distMonth": "-5.5%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -1359,15 +1490,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "4460.00",
-      "change": "-25.00 (-0.56%)",
+      "price": "4390.00",
+      "change": "-95.00 (-2.12%)",
       "isUp": false,
-      "per": "24.31",
-      "forward_per": "26.14",
-      "pbr": "2.77",
-      "distHigh": "-6.2%",
-      "distWeek": "-0.8%",
-      "distMonth": "-6.2%",
+      "per": "23.93",
+      "forward_per": "25.73",
+      "pbr": "2.72",
+      "distHigh": "-7.7%",
+      "distWeek": "-2.3%",
+      "distMonth": "-7.7%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -1398,15 +1529,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "912.00",
-      "change": "+5.00 (+0.55%)",
-      "isUp": true,
-      "per": "9.43",
+      "price": "899.00",
+      "change": "-8.00 (-0.88%)",
+      "isUp": false,
+      "per": "9.30",
       "forward_per": "--",
-      "pbr": "0.53",
-      "distHigh": "-17.4%",
-      "distWeek": "-0.8%",
-      "distMonth": "-5.7%",
+      "pbr": "0.52",
+      "distHigh": "-18.6%",
+      "distWeek": "-2.4%",
+      "distMonth": "-7.0%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -1437,15 +1568,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "548.60",
-      "change": "+5.80 (+1.07%)",
+      "price": "546.00",
+      "change": "+3.20 (+0.59%)",
       "isUp": true,
-      "per": "14.78",
-      "forward_per": "14.08",
-      "pbr": "0.90",
-      "distHigh": "-12.2%",
-      "distWeek": "-6.1%",
-      "distMonth": "-11.4%",
+      "per": "14.71",
+      "forward_per": "14.02",
+      "pbr": "0.89",
+      "distHigh": "-12.6%",
+      "distWeek": "-6.5%",
+      "distMonth": "-11.8%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -1476,15 +1607,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "752.00",
-      "change": "+45.00 (+6.36%)",
+      "price": "737.00",
+      "change": "+30.00 (+4.24%)",
       "isUp": true,
-      "per": "0.50",
+      "per": "0.49",
       "forward_per": "--",
-      "pbr": "0.41",
-      "distHigh": "-49.6%",
-      "distWeek": "-0.9%",
-      "distMonth": "-9.0%",
+      "pbr": "0.40",
+      "distHigh": "-50.6%",
+      "distWeek": "-2.9%",
+      "distMonth": "-10.8%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -1504,16 +1635,16 @@
         }
       ],
       "market_type": "日股",
-      "price": "20550.00",
-      "change": "+1050.00 (+5.38%)",
+      "price": "21230.00",
+      "change": "+1730.00 (+8.87%)",
       "isUp": true,
-      "per": "17.92",
-      "forward_per": "69.33",
-      "pbr": "4.31",
-      "distHigh": "-37.5%",
-      "distWeek": "-8.6%",
-      "distMonth": "-28.1%",
-      "trend": "熊市空头",
+      "per": "18.52",
+      "forward_per": "71.62",
+      "pbr": "4.45",
+      "distHigh": "-35.5%",
+      "distWeek": "-5.6%",
+      "distMonth": "-25.7%",
+      "trend": "牛市多头",
       "source": "yfinance"
     },
     {
@@ -1535,15 +1666,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "55330.00",
-      "change": "+230.00 (+0.42%)",
+      "price": "57240.00",
+      "change": "+2140.00 (+3.88%)",
       "isUp": true,
-      "per": "57.38",
-      "forward_per": "50.66",
-      "pbr": "21.99",
-      "distHigh": "-5.5%",
-      "distWeek": "-5.5%",
-      "distMonth": "-5.5%",
+      "per": "59.36",
+      "forward_per": "52.41",
+      "pbr": "22.75",
+      "distHigh": "-2.3%",
+      "distWeek": "-2.3%",
+      "distMonth": "-2.3%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -1566,15 +1697,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "10800.00",
-      "change": "+330.00 (+3.15%)",
+      "price": "11040.00",
+      "change": "+570.00 (+5.44%)",
       "isUp": true,
-      "per": "39.07",
-      "forward_per": "24.54",
-      "pbr": "1.95",
-      "distHigh": "-0.7%",
-      "distWeek": "-0.7%",
-      "distMonth": "-0.7%",
+      "per": "39.94",
+      "forward_per": "25.08",
+      "pbr": "1.99",
+      "distHigh": "-1.9%",
+      "distWeek": "-1.9%",
+      "distMonth": "-1.9%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -1597,15 +1728,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "2858.00",
-      "change": "+60.50 (+2.16%)",
+      "price": "2870.00",
+      "change": "+72.50 (+2.59%)",
       "isUp": true,
-      "per": "62.71",
-      "forward_per": "33.90",
-      "pbr": "2.59",
-      "distHigh": "-7.8%",
-      "distWeek": "-0.8%",
-      "distMonth": "-7.8%",
+      "per": "62.94",
+      "forward_per": "34.03",
+      "pbr": "2.60",
+      "distHigh": "-7.4%",
+      "distWeek": "-0.4%",
+      "distMonth": "-7.4%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -1628,15 +1759,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "4740.00",
-      "change": "+80.00 (+1.72%)",
+      "price": "4745.00",
+      "change": "+85.00 (+1.82%)",
       "isUp": true,
-      "per": "52.70",
-      "forward_per": "27.32",
-      "pbr": "3.41",
-      "distHigh": "-5.4%",
-      "distWeek": "-4.7%",
-      "distMonth": "-5.4%",
+      "per": "52.76",
+      "forward_per": "27.35",
+      "pbr": "3.42",
+      "distHigh": "-5.3%",
+      "distWeek": "-4.6%",
+      "distMonth": "-5.3%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -1659,15 +1790,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "5780.00",
-      "change": "+110.00 (+1.94%)",
+      "price": "6040.00",
+      "change": "+370.00 (+6.53%)",
       "isUp": true,
-      "per": "84.24",
-      "forward_per": "32.74",
-      "pbr": "2.23",
-      "distHigh": "-6.0%",
-      "distWeek": "-6.0%",
-      "distMonth": "-6.0%",
+      "per": "88.03",
+      "forward_per": "34.21",
+      "pbr": "2.33",
+      "distHigh": "-1.8%",
+      "distWeek": "-1.8%",
+      "distMonth": "-1.8%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -1690,17 +1821,101 @@
         }
       ],
       "market_type": "日股",
-      "price": "4886.00",
-      "change": "+258.00 (+5.57%)",
+      "price": "5006.00",
+      "change": "+378.00 (+8.17%)",
       "isUp": true,
-      "per": "19.81",
-      "forward_per": "22.75",
-      "pbr": "2.18",
-      "distHigh": "-4.0%",
-      "distWeek": "-0.3%",
-      "distMonth": "-4.0%",
+      "per": "20.29",
+      "forward_per": "23.31",
+      "pbr": "2.24",
+      "distHigh": "-1.6%",
+      "distWeek": "-0.7%",
+      "distMonth": "-1.6%",
       "trend": "牛市多头",
       "source": "yfinance"
+    },
+    {
+      "code": "688234",
+      "name": "天岳先进",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**全球碳化硅衬底出货量第一**，2025年全球市占率27.6%，**8英寸市占率51.3%**。客户覆盖英飞凌、博世、特斯拉，**率先推出12英寸衬底**并已向核心客户交付",
+      "tags": [
+        "碳化硅 (SiC)"
+      ],
+      "tag_themes": [
+        {
+          "tag": "碳化硅 (SiC)",
+          "theme_path": []
+        }
+      ],
+      "market_type": "A股",
+      "price": "161.30",
+      "change": "+12.10 (+8.11%)",
+      "isUp": true,
+      "per": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "distWeek": "-1.6%",
+      "distMonth": "-10.8%",
+      "trend": "牛市多头",
+      "source": "sina"
+    },
+    {
+      "code": "600703",
+      "name": "三安光电",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**SiC全产业链IDM龙头**，**与意法半导体8英寸合资项目已进入风险量产阶段**，6英寸衬底月产能1.6万片，SiC芯片累计出货超3亿颗",
+      "tags": [
+        "碳化硅 (SiC)"
+      ],
+      "tag_themes": [
+        {
+          "tag": "碳化硅 (SiC)",
+          "theme_path": []
+        }
+      ],
+      "market_type": "A股",
+      "price": "19.29",
+      "change": "+1.75 (+9.98%)",
+      "isUp": true,
+      "per": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "distWeek": "0.0%",
+      "distMonth": "0.0%",
+      "trend": "牛市多头",
+      "source": "sina"
+    },
+    {
+      "code": "688478",
+      "name": "晶升股份",
+      "sector": "1.2",
+      "industry": "1.2.2",
+      "feature": "**碳化硅长晶炉国内龙头**，市占率约28%，**8英寸单晶炉已批量供货**，**在手订单已达去年同期两倍以上**，覆盖国内80%SiC客户",
+      "tags": [
+        "碳化硅 (SiC)"
+      ],
+      "tag_themes": [
+        {
+          "tag": "碳化硅 (SiC)",
+          "theme_path": []
+        }
+      ],
+      "market_type": "A股",
+      "price": "85.90",
+      "change": "+5.46 (+6.79%)",
+      "isUp": true,
+      "per": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "distWeek": "-6.7%",
+      "distMonth": "-6.7%",
+      "trend": "牛市多头",
+      "source": "sina"
     },
     {
       "code": "ASML",
@@ -1963,15 +2178,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "75190.00",
-      "change": "-170.00 (-0.23%)",
-      "isUp": false,
-      "per": "60.10",
-      "forward_per": "58.73",
-      "pbr": "16.52",
-      "distHigh": "-3.1%",
-      "distWeek": "-3.1%",
-      "distMonth": "-3.1%",
+      "price": "76750.00",
+      "change": "+1390.00 (+1.84%)",
+      "isUp": true,
+      "per": "61.35",
+      "forward_per": "59.95",
+      "pbr": "16.86",
+      "distHigh": "-1.1%",
+      "distWeek": "-1.1%",
+      "distMonth": "-1.1%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -1999,15 +2214,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "31320.00",
-      "change": "-420.00 (-1.32%)",
-      "isUp": false,
-      "per": "60.91",
-      "forward_per": "131.75",
-      "pbr": "28.56",
-      "distHigh": "-3.3%",
-      "distWeek": "-2.1%",
-      "distMonth": "-2.1%",
+      "price": "32150.00",
+      "change": "+410.00 (+1.29%)",
+      "isUp": true,
+      "per": "62.53",
+      "forward_per": "135.24",
+      "pbr": "29.31",
+      "distHigh": "-0.8%",
+      "distWeek": "-0.4%",
+      "distMonth": "-0.4%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -2030,15 +2245,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "86760.00",
-      "change": "+1860.00 (+2.19%)",
+      "price": "88600.00",
+      "change": "+3700.00 (+4.36%)",
       "isUp": true,
-      "per": "69.52",
-      "forward_per": "63.75",
-      "pbr": "16.01",
-      "distHigh": "-2.6%",
-      "distWeek": "-2.6%",
-      "distMonth": "-2.6%",
+      "per": "71.01",
+      "forward_per": "65.12",
+      "pbr": "16.35",
+      "distHigh": "-0.6%",
+      "distWeek": "-0.6%",
+      "distMonth": "-0.6%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -2069,15 +2284,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "16830.00",
-      "change": "+85.00 (+0.51%)",
+      "price": "17330.00",
+      "change": "+585.00 (+3.49%)",
       "isUp": true,
-      "per": "34.54",
-      "forward_per": "19.24",
-      "pbr": "6.54",
-      "distHigh": "-1.9%",
-      "distWeek": "-1.9%",
-      "distMonth": "-1.9%",
+      "per": "35.56",
+      "forward_per": "19.81",
+      "pbr": "6.73",
+      "distHigh": "-0.7%",
+      "distWeek": "-0.7%",
+      "distMonth": "-0.7%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -2108,15 +2323,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "10225.00",
-      "change": "+60.00 (+0.59%)",
+      "price": "10430.00",
+      "change": "+265.00 (+2.61%)",
       "isUp": true,
-      "per": "79.83",
-      "forward_per": "53.46",
-      "pbr": "10.89",
-      "distHigh": "-3.7%",
-      "distWeek": "-3.7%",
-      "distMonth": "-3.7%",
+      "per": "81.43",
+      "forward_per": "54.53",
+      "pbr": "11.11",
+      "distHigh": "-1.7%",
+      "distWeek": "-1.7%",
+      "distMonth": "-1.7%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -2139,15 +2354,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "3370.00",
-      "change": "+45.00 (+1.35%)",
+      "price": "3460.00",
+      "change": "+135.00 (+4.06%)",
       "isUp": true,
-      "per": "55.08",
-      "forward_per": "17.44",
-      "pbr": "3.58",
-      "distHigh": "-4.9%",
-      "distWeek": "-4.9%",
-      "distMonth": "-4.9%",
+      "per": "56.55",
+      "forward_per": "17.91",
+      "pbr": "3.68",
+      "distHigh": "-2.4%",
+      "distWeek": "-2.4%",
+      "distMonth": "-2.4%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -2170,15 +2385,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "6727.00",
-      "change": "+167.00 (+2.55%)",
+      "price": "6761.00",
+      "change": "+201.00 (+3.06%)",
       "isUp": true,
-      "per": "40.53",
-      "forward_per": "44.00",
-      "pbr": "2.45",
-      "distHigh": "-2.4%",
-      "distWeek": "-2.4%",
-      "distMonth": "-2.4%",
+      "per": "40.74",
+      "forward_per": "44.22",
+      "pbr": "2.46",
+      "distHigh": "-1.9%",
+      "distWeek": "-1.9%",
+      "distMonth": "-1.9%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -2201,15 +2416,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "20065.00",
-      "change": "-10.00 (-0.05%)",
-      "isUp": false,
-      "per": "33.10",
-      "forward_per": "32.90",
-      "pbr": "4.25",
-      "distHigh": "-3.7%",
-      "distWeek": "-3.7%",
-      "distMonth": "-3.7%",
+      "price": "20330.00",
+      "change": "+255.00 (+1.27%)",
+      "isUp": true,
+      "per": "33.53",
+      "forward_per": "33.34",
+      "pbr": "4.30",
+      "distHigh": "-2.5%",
+      "distWeek": "-2.5%",
+      "distMonth": "-2.5%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -2232,15 +2447,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "4995.00",
-      "change": "+131.00 (+2.69%)",
+      "price": "5090.00",
+      "change": "+226.00 (+4.65%)",
       "isUp": true,
-      "per": "45.64",
-      "forward_per": "36.34",
-      "pbr": "6.65",
-      "distHigh": "-1.0%",
-      "distWeek": "-1.0%",
-      "distMonth": "-1.0%",
+      "per": "46.51",
+      "forward_per": "37.03",
+      "pbr": "6.78",
+      "distHigh": "-1.1%",
+      "distWeek": "-1.1%",
+      "distMonth": "-1.1%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -2263,15 +2478,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "7278.00",
-      "change": "+81.00 (+1.13%)",
+      "price": "7330.00",
+      "change": "+133.00 (+1.85%)",
       "isUp": true,
-      "per": "35.99",
-      "forward_per": "50.68",
-      "pbr": "5.84",
-      "distHigh": "-7.4%",
-      "distWeek": "-1.3%",
-      "distMonth": "-2.3%",
+      "per": "36.24",
+      "forward_per": "51.04",
+      "pbr": "5.88",
+      "distHigh": "-6.7%",
+      "distWeek": "-1.1%",
+      "distMonth": "-1.6%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -2294,15 +2509,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "8130.00",
-      "change": "+70.00 (+0.87%)",
-      "isUp": true,
-      "per": "27.94",
-      "forward_per": "22.33",
-      "pbr": "2.68",
-      "distHigh": "-6.1%",
-      "distWeek": "-2.4%",
-      "distMonth": "-6.1%",
+      "price": "7970.00",
+      "change": "-90.00 (-1.12%)",
+      "isUp": false,
+      "per": "27.39",
+      "forward_per": "21.89",
+      "pbr": "2.63",
+      "distHigh": "-8.0%",
+      "distWeek": "-4.3%",
+      "distMonth": "-8.0%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -2325,15 +2540,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "2165.00",
-      "change": "+12.00 (+0.56%)",
-      "isUp": true,
-      "per": "20.45",
-      "forward_per": "20.45",
-      "pbr": "1.22",
-      "distHigh": "-9.4%",
-      "distWeek": "-1.4%",
-      "distMonth": "-1.4%",
+      "price": "2145.00",
+      "change": "-8.00 (-0.37%)",
+      "isUp": false,
+      "per": "20.26",
+      "forward_per": "20.26",
+      "pbr": "1.20",
+      "distHigh": "-10.3%",
+      "distWeek": "-2.3%",
+      "distMonth": "-2.3%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -2356,16 +2571,16 @@
         }
       ],
       "market_type": "日股",
-      "price": "4835.00",
-      "change": "+120.00 (+2.55%)",
+      "price": "4915.00",
+      "change": "+200.00 (+4.24%)",
       "isUp": true,
-      "per": "28.41",
-      "forward_per": "6.50",
-      "pbr": "5.71",
-      "distHigh": "-22.4%",
-      "distWeek": "-6.3%",
-      "distMonth": "-12.7%",
-      "trend": "熊市空头",
+      "per": "28.88",
+      "forward_per": "6.60",
+      "pbr": "5.80",
+      "distHigh": "-21.1%",
+      "distWeek": "-4.7%",
+      "distMonth": "-11.3%",
+      "trend": "牛市多头",
       "source": "yfinance"
     },
     {
@@ -2387,15 +2602,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "8600.00",
-      "change": "+540.00 (+6.70%)",
+      "price": "9020.00",
+      "change": "+960.00 (+11.91%)",
       "isUp": true,
-      "per": "20.17",
-      "forward_per": "27.85",
-      "pbr": "2.81",
-      "distHigh": "-16.3%",
-      "distWeek": "-3.0%",
-      "distMonth": "-6.1%",
+      "per": "21.16",
+      "forward_per": "29.21",
+      "pbr": "2.94",
+      "distHigh": "-12.2%",
+      "distWeek": "-0.9%",
+      "distMonth": "-1.5%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -2418,14 +2633,14 @@
         }
       ],
       "market_type": "日股",
-      "price": "16830.00",
-      "change": "+1400.00 (+9.07%)",
+      "price": "16840.00",
+      "change": "+1410.00 (+9.14%)",
       "isUp": true,
-      "per": "54.00",
-      "forward_per": "76.85",
+      "per": "54.03",
+      "forward_per": "76.89",
       "pbr": "8.82",
       "distHigh": "-5.9%",
-      "distWeek": "-2.7%",
+      "distWeek": "-2.6%",
       "distMonth": "-5.9%",
       "trend": "牛市多头",
       "source": "yfinance"
@@ -2449,16 +2664,16 @@
         }
       ],
       "market_type": "日股",
-      "price": "4334.00",
-      "change": "+1.00 (+0.02%)",
+      "price": "4349.00",
+      "change": "+16.00 (+0.37%)",
       "isUp": true,
-      "per": "47.63",
-      "forward_per": "62.16",
-      "pbr": "4.18",
-      "distHigh": "-10.7%",
-      "distWeek": "-1.3%",
-      "distMonth": "-10.7%",
-      "trend": "熊市空头",
+      "per": "47.80",
+      "forward_per": "62.38",
+      "pbr": "4.19",
+      "distHigh": "-10.4%",
+      "distWeek": "-1.1%",
+      "distMonth": "-10.4%",
+      "trend": "牛市多头",
       "source": "yfinance"
     },
     {
@@ -2480,15 +2695,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "32600.00",
-      "change": "+1850.00 (+6.02%)",
+      "price": "32800.00",
+      "change": "+2050.00 (+6.67%)",
       "isUp": true,
-      "per": "46.91",
-      "forward_per": "198.30",
-      "pbr": "8.61",
-      "distHigh": "-14.5%",
-      "distWeek": "-0.6%",
-      "distMonth": "-0.6%",
+      "per": "47.20",
+      "forward_per": "199.51",
+      "pbr": "8.66",
+      "distHigh": "-14.0%",
+      "distWeek": "-1.8%",
+      "distMonth": "-1.8%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -2511,15 +2726,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "7252.00",
-      "change": "+186.00 (+2.63%)",
+      "price": "7296.00",
+      "change": "+230.00 (+3.26%)",
       "isUp": true,
-      "per": "16.77",
-      "forward_per": "13.24",
-      "pbr": "2.55",
-      "distHigh": "-3.0%",
-      "distWeek": "-0.4%",
-      "distMonth": "-3.0%",
+      "per": "16.87",
+      "forward_per": "13.32",
+      "pbr": "2.56",
+      "distHigh": "-2.4%",
+      "distWeek": "-0.7%",
+      "distMonth": "-2.4%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -2542,15 +2757,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "4307.00",
-      "change": "-3.00 (-0.07%)",
+      "price": "4296.00",
+      "change": "-14.00 (-0.32%)",
       "isUp": false,
-      "per": "11.73",
-      "forward_per": "11.88",
+      "per": "11.70",
+      "forward_per": "11.85",
       "pbr": "1.09",
-      "distHigh": "-14.4%",
-      "distWeek": "-1.9%",
-      "distMonth": "-3.1%",
+      "distHigh": "-14.6%",
+      "distWeek": "-2.2%",
+      "distMonth": "-3.4%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -2573,15 +2788,15 @@
         }
       ],
       "market_type": "A股",
-      "price": "360.00",
-      "change": "+9.00 (+2.56%)",
+      "price": "379.34",
+      "change": "+19.34 (+5.37%)",
       "isUp": true,
       "per": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "distWeek": "-2.2%",
-      "distMonth": "-2.2%",
+      "distWeek": "-1.5%",
+      "distMonth": "-1.5%",
       "trend": "牛市多头",
       "source": "sina"
     },
@@ -2687,15 +2902,15 @@
         }
       ],
       "market_type": "A股",
-      "price": "83.03",
-      "change": "+1.27 (+1.55%)",
+      "price": "88.69",
+      "change": "+5.66 (+6.82%)",
       "isUp": true,
       "per": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "distWeek": "-2.9%",
-      "distMonth": "-12.5%",
+      "distWeek": "-0.2%",
+      "distMonth": "-6.5%",
       "trend": "牛市多头",
       "source": "sina"
     },
@@ -2718,15 +2933,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "39350.00",
-      "change": "-550.00 (-1.38%)",
+      "price": "39100.00",
+      "change": "-800.00 (-2.01%)",
       "isUp": false,
-      "per": "51.91",
-      "forward_per": "62.39",
-      "pbr": "7.41",
-      "distHigh": "-13.1%",
-      "distWeek": "-3.8%",
-      "distMonth": "-13.1%",
+      "per": "51.58",
+      "forward_per": "61.99",
+      "pbr": "7.36",
+      "distHigh": "-13.7%",
+      "distWeek": "-4.4%",
+      "distMonth": "-13.7%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -2827,15 +3042,15 @@
         }
       ],
       "market_type": "A股",
-      "price": "1673.36",
-      "change": "+61.36 (+3.81%)",
+      "price": "1842.00",
+      "change": "+168.64 (+10.08%)",
       "isUp": true,
       "per": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "distWeek": "-2.3%",
-      "distMonth": "-2.3%",
+      "distWeek": "-2.0%",
+      "distMonth": "-2.0%",
       "trend": "牛市多头",
       "source": "sina"
     },
@@ -2858,15 +3073,15 @@
         }
       ],
       "market_type": "A股",
-      "price": "111.01",
-      "change": "+0.01 (+0.01%)",
+      "price": "120.82",
+      "change": "+9.81 (+8.84%)",
       "isUp": true,
       "per": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "distWeek": "-4.8%",
-      "distMonth": "-4.8%",
+      "distWeek": "-0.9%",
+      "distMonth": "-0.9%",
       "trend": "牛市多头",
       "source": "sina"
     },
@@ -2889,15 +3104,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "56770.00",
-      "change": "+3410.00 (+6.39%)",
+      "price": "58380.00",
+      "change": "+5020.00 (+9.41%)",
       "isUp": true,
-      "per": "55.12",
-      "forward_per": "191.43",
-      "pbr": "9.58",
-      "distHigh": "-9.0%",
-      "distWeek": "-0.2%",
-      "distMonth": "-9.0%",
+      "per": "56.69",
+      "forward_per": "196.86",
+      "pbr": "9.85",
+      "distHigh": "-6.5%",
+      "distWeek": "-0.7%",
+      "distMonth": "-6.5%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -2920,15 +3135,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "13550.00",
-      "change": "+65.00 (+0.48%)",
+      "price": "13770.00",
+      "change": "+285.00 (+2.11%)",
       "isUp": true,
-      "per": "28.63",
-      "forward_per": "61.30",
-      "pbr": "3.85",
-      "distHigh": "-8.8%",
-      "distWeek": "-5.3%",
-      "distMonth": "-8.8%",
+      "per": "29.09",
+      "forward_per": "62.30",
+      "pbr": "3.91",
+      "distHigh": "-7.3%",
+      "distWeek": "-3.7%",
+      "distMonth": "-7.3%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -2982,15 +3197,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "32650.00",
-      "change": "+1900.00 (+6.18%)",
+      "price": "32800.00",
+      "change": "+2050.00 (+6.67%)",
       "isUp": true,
-      "per": "46.98",
-      "forward_per": "198.60",
-      "pbr": "8.62",
-      "distHigh": "-14.4%",
-      "distWeek": "-0.5%",
-      "distMonth": "-0.5%",
+      "per": "47.20",
+      "forward_per": "199.51",
+      "pbr": "8.66",
+      "distHigh": "-14.0%",
+      "distWeek": "-1.8%",
+      "distMonth": "-1.8%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -3013,15 +3228,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "29500.00",
-      "change": "+590.00 (+2.04%)",
+      "price": "29670.00",
+      "change": "+760.00 (+2.63%)",
       "isUp": true,
-      "per": "45.15",
-      "forward_per": "66.71",
-      "pbr": "12.46",
-      "distHigh": "-15.0%",
-      "distWeek": "-1.2%",
-      "distMonth": "-6.2%",
+      "per": "45.41",
+      "forward_per": "67.10",
+      "pbr": "12.54",
+      "distHigh": "-14.5%",
+      "distWeek": "-1.4%",
+      "distMonth": "-5.7%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -3184,15 +3399,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "4841.00",
-      "change": "+77.00 (+1.62%)",
+      "price": "4820.00",
+      "change": "+56.00 (+1.18%)",
       "isUp": true,
-      "per": "27.38",
-      "forward_per": "27.17",
-      "pbr": "3.34",
-      "distHigh": "-19.8%",
-      "distWeek": "-0.3%",
-      "distMonth": "-9.9%",
+      "per": "27.27",
+      "forward_per": "27.06",
+      "pbr": "3.33",
+      "distHigh": "-20.2%",
+      "distWeek": "-0.7%",
+      "distMonth": "-10.3%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -3215,15 +3430,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "24230.00",
-      "change": "+340.00 (+1.42%)",
+      "price": "24120.00",
+      "change": "+230.00 (+0.96%)",
       "isUp": true,
-      "per": "25.81",
-      "forward_per": "24.47",
-      "pbr": "2.18",
-      "distHigh": "-6.4%",
-      "distWeek": "-0.1%",
-      "distMonth": "-1.4%",
+      "per": "25.69",
+      "forward_per": "24.36",
+      "pbr": "2.17",
+      "distHigh": "-6.9%",
+      "distWeek": "-0.6%",
+      "distMonth": "-1.9%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -3246,15 +3461,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "2063.00",
-      "change": "+263.00 (+14.61%)",
+      "price": "2187.00",
+      "change": "+387.00 (+21.50%)",
       "isUp": true,
       "per": "--",
       "forward_per": "--",
-      "pbr": "33.02",
-      "distHigh": "-63.0%",
-      "distWeek": "-28.1%",
-      "distMonth": "-58.6%",
+      "pbr": "34.97",
+      "distHigh": "-60.8%",
+      "distWeek": "-23.8%",
+      "distMonth": "-56.1%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -3277,15 +3492,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "6177.00",
-      "change": "+126.00 (+2.08%)",
+      "price": "6225.00",
+      "change": "+174.00 (+2.88%)",
       "isUp": true,
-      "per": "31.12",
-      "forward_per": "37.40",
-      "pbr": "2.83",
-      "distHigh": "-7.6%",
-      "distWeek": "-0.9%",
-      "distMonth": "-7.6%",
+      "per": "31.36",
+      "forward_per": "37.70",
+      "pbr": "2.85",
+      "distHigh": "-6.9%",
+      "distWeek": "-0.4%",
+      "distMonth": "-6.9%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -3308,16 +3523,16 @@
         }
       ],
       "market_type": "日股",
-      "price": "14670.00",
-      "change": "+5.00 (+0.03%)",
+      "price": "14835.00",
+      "change": "+170.00 (+1.16%)",
       "isUp": true,
-      "per": "22.03",
-      "forward_per": "24.15",
-      "pbr": "2.70",
-      "distHigh": "-17.6%",
-      "distWeek": "-2.7%",
-      "distMonth": "-17.6%",
-      "trend": "熊市空头",
+      "per": "22.28",
+      "forward_per": "24.42",
+      "pbr": "2.73",
+      "distHigh": "-16.7%",
+      "distWeek": "-1.6%",
+      "distMonth": "-16.7%",
+      "trend": "牛市多头",
       "source": "yfinance"
     },
     {
@@ -3339,15 +3554,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "12515.00",
-      "change": "+765.00 (+6.51%)",
+      "price": "12540.00",
+      "change": "+790.00 (+6.72%)",
       "isUp": true,
-      "per": "97.79",
-      "forward_per": "52.79",
-      "pbr": "8.39",
-      "distHigh": "-2.9%",
-      "distWeek": "-2.9%",
-      "distMonth": "-2.9%",
+      "per": "97.91",
+      "forward_per": "52.85",
+      "pbr": "8.40",
+      "distHigh": "-2.8%",
+      "distWeek": "-2.8%",
+      "distMonth": "-2.8%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -3370,15 +3585,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "4039.00",
-      "change": "+130.00 (+3.33%)",
+      "price": "4100.00",
+      "change": "+191.00 (+4.89%)",
       "isUp": true,
-      "per": "39.28",
-      "forward_per": "37.78",
-      "pbr": "3.50",
-      "distHigh": "-6.4%",
-      "distWeek": "-1.3%",
-      "distMonth": "-6.4%",
+      "per": "39.88",
+      "forward_per": "38.36",
+      "pbr": "3.56",
+      "distHigh": "-5.0%",
+      "distWeek": "-0.2%",
+      "distMonth": "-5.0%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -3401,15 +3616,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "19175.00",
-      "change": "-140.00 (-0.72%)",
+      "price": "18670.00",
+      "change": "-645.00 (-3.34%)",
       "isUp": false,
-      "per": "177.51",
-      "forward_per": "102.51",
-      "pbr": "6.97",
-      "distHigh": "-13.2%",
-      "distWeek": "-13.2%",
-      "distMonth": "-13.2%",
+      "per": "172.61",
+      "forward_per": "99.68",
+      "pbr": "6.78",
+      "distHigh": "-15.5%",
+      "distWeek": "-15.5%",
+      "distMonth": "-15.5%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -3432,15 +3647,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "4615.00",
-      "change": "-20.00 (-0.43%)",
+      "price": "4480.00",
+      "change": "-155.00 (-3.34%)",
       "isUp": false,
-      "per": "49.05",
-      "forward_per": "51.32",
-      "pbr": "2.59",
-      "distHigh": "-7.0%",
-      "distWeek": "-7.0%",
-      "distMonth": "-7.0%",
+      "per": "47.61",
+      "forward_per": "49.82",
+      "pbr": "2.52",
+      "distHigh": "-9.8%",
+      "distWeek": "-9.8%",
+      "distMonth": "-9.8%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -3616,20 +3831,396 @@
       "source": "yfinance"
     },
     {
+      "code": "6954",
+      "name": "ファナック(发那科)",
+      "sector": "2.1",
+      "industry": "2.1.1",
+      "feature": "**工业机器人四大家族之一**，全球CNC市占率超50%，工厂自动化绝对龙头",
+      "tags": [
+        "工业机器人",
+        "CNC数控系统",
+        "FA工厂自动化"
+      ],
+      "tag_themes": [
+        {
+          "tag": "工业机器人",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人"
+          ]
+        },
+        {
+          "tag": "CNC数控系统",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "CNC数控系统"
+          ]
+        },
+        {
+          "tag": "FA工厂自动化",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "FA工厂自动化"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "8138.00",
+      "change": "+665.00 (+8.90%)",
+      "isUp": true,
+      "per": "45.58",
+      "forward_per": "47.03",
+      "pbr": "4.07",
+      "distHigh": "-8.4%",
+      "distWeek": "-0.2%",
+      "distMonth": "-6.5%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "6861",
+      "name": "キーエンス(基恩士)",
+      "sector": "2.1",
+      "industry": "2.1.1",
+      "feature": "**高精度传感系统霸主**，全球传感器市占率超40%，盈利能力冠绝工业自动化行业",
+      "tags": [
+        "传感器",
+        "FA工厂自动化"
+      ],
+      "tag_themes": [
+        {
+          "tag": "传感器",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "传感器"
+          ]
+        },
+        {
+          "tag": "FA工厂自动化",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "FA工厂自动化"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "78700.00",
+      "change": "+1000.00 (+1.29%)",
+      "isUp": true,
+      "per": "42.92",
+      "forward_per": "42.14",
+      "pbr": "5.50",
+      "distHigh": "-6.5%",
+      "distWeek": "-0.2%",
+      "distMonth": "-3.3%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "6506",
+      "name": "安川電機",
+      "sector": "2.1",
+      "industry": "2.1.1",
+      "feature": "**伺服驱动与机器人巨头**，全球伺服电机市占率前三，工业机器人四大家族之一",
+      "tags": [
+        "工业机器人",
+        "伺服电机",
+        "伺服驱动器",
+        "运动控制系统"
+      ],
+      "tag_themes": [
+        {
+          "tag": "工业机器人",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人"
+          ]
+        },
+        {
+          "tag": "伺服电机",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "伺服电机"
+          ]
+        },
+        {
+          "tag": "伺服驱动器",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "伺服驱动器"
+          ]
+        },
+        {
+          "tag": "运动控制系统",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "运动控制系统"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "7873.00",
+      "change": "+745.00 (+10.45%)",
+      "isUp": true,
+      "per": "58.13",
+      "forward_per": "38.43",
+      "pbr": "4.22",
+      "distHigh": "-0.4%",
+      "distWeek": "-0.4%",
+      "distMonth": "-0.4%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "6594",
+      "name": "ニデック(尼得科)",
+      "sector": "2.1",
+      "industry": "2.1.1",
+      "feature": "**全球电机霸主**，微型电机全球市占率超50%，机器人关节电机核心供应商",
+      "tags": [
+        "伺服电机",
+        "运动控制系统"
+      ],
+      "tag_themes": [
+        {
+          "tag": "伺服电机",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "伺服电机"
+          ]
+        },
+        {
+          "tag": "运动控制系统",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "运动控制系统"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "2759.00",
+      "change": "+64.00 (+2.37%)",
+      "isUp": true,
+      "per": "26.32",
+      "forward_per": "14.55",
+      "pbr": "1.80",
+      "distHigh": "-16.3%",
+      "distWeek": "-5.5%",
+      "distMonth": "-5.6%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "6645",
+      "name": "オムロン(欧姆龙)",
+      "sector": "2.1",
+      "industry": "2.1.1",
+      "feature": "**传感与控制技术巨头**，PLC/传感器市占率全球前列，工业自动化方案核心供应商",
+      "tags": [
+        "PLC可编程控制器",
+        "传感器",
+        "FA工厂自动化"
+      ],
+      "tag_themes": [
+        {
+          "tag": "PLC可编程控制器",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "PLC可编程控制器"
+          ]
+        },
+        {
+          "tag": "传感器",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "传感器"
+          ]
+        },
+        {
+          "tag": "FA工厂自动化",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "FA工厂自动化"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "6198.00",
+      "change": "+64.00 (+1.04%)",
+      "isUp": true,
+      "per": "35.70",
+      "forward_per": "22.86",
+      "pbr": "1.46",
+      "distHigh": "-2.9%",
+      "distWeek": "-0.7%",
+      "distMonth": "-2.9%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "6273",
+      "name": "SMC",
+      "sector": "2.1",
+      "industry": "2.1.1",
+      "feature": "**全球气动元件霸主**，市占率超30%，工业自动化核心零部件供应商",
+      "tags": [
+        "气动元件",
+        "FA工厂自动化"
+      ],
+      "tag_themes": [
+        {
+          "tag": "气动元件",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "气动元件"
+          ]
+        },
+        {
+          "tag": "FA工厂自动化",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "FA工厂自动化"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "74780.00",
+      "change": "+1940.00 (+2.66%)",
+      "isUp": true,
+      "per": "28.36",
+      "forward_per": "22.78",
+      "pbr": "2.23",
+      "distHigh": "-13.8%",
+      "distWeek": "-0.1%",
+      "distMonth": "-0.1%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "6324",
+      "name": "ハーモニック(Harmonic)",
+      "sector": "2.1",
+      "industry": "2.1.1",
+      "feature": "**精密减速器标杆**，谐波减速器全球市占率超50%，机器人关节核心部件供应商",
+      "tags": [
+        "谐波减速器",
+        "精密减速器",
+        "机器人关节"
+      ],
+      "tag_themes": [
+        {
+          "tag": "谐波减速器",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "谐波减速器"
+          ]
+        },
+        {
+          "tag": "精密减速器",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "精密减速器"
+          ]
+        },
+        {
+          "tag": "机器人关节",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "机器人关节"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "8770.00",
+      "change": "+1000.00 (+12.87%)",
+      "isUp": true,
+      "per": "513.17",
+      "forward_per": "115.87",
+      "pbr": "10.33",
+      "distHigh": "-1.1%",
+      "distWeek": "-1.1%",
+      "distMonth": "-1.1%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "SIE",
+      "name": "西门子",
+      "sector": "2.1",
+      "industry": "2.1.1",
+      "feature": "**全球工业自动化巨头**，PLC/工控系统市占率全球第一，数字孪生技术领先，AI+工业制造标杆",
+      "tags": [
+        "PLC可编程控制器",
+        "工业物联网IIoT",
+        "数字孪生",
+        "智能制造解决方案"
+      ],
+      "tag_themes": [
+        {
+          "tag": "PLC可编程控制器",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "PLC可编程控制器"
+          ]
+        },
+        {
+          "tag": "工业物联网IIoT",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业物联网IIoT"
+          ]
+        },
+        {
+          "tag": "数字孪生",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "数字孪生"
+          ]
+        },
+        {
+          "tag": "智能制造解决方案",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "智能制造解决方案"
+          ]
+        }
+      ],
+      "market_type": "德股",
+      "price": "274.50",
+      "change": "-2.30 (-0.83%)",
+      "isUp": false,
+      "per": "28.42",
+      "forward_per": "21.49",
+      "pbr": "3.31",
+      "distHigh": "-2.0%",
+      "distWeek": "-1.4%",
+      "distMonth": "-2.0%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
       "code": "ROK",
       "name": "罗克韦尔自动化",
       "sector": "2.1",
       "industry": "2.1.1",
       "feature": "**工业自动化集成方案巨头**，美国工业自动化市占率前三，智能制造核心方案商",
       "tags": [
-        "数据中心架构"
+        "PLC可编程控制器",
+        "智能制造解决方案"
       ],
       "tag_themes": [
         {
-          "tag": "数据中心架构",
+          "tag": "PLC可编程控制器",
           "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "数据中心架构"
+            "10. 工业自动化与机器人",
+            "PLC可编程控制器"
+          ]
+        },
+        {
+          "tag": "智能制造解决方案",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "智能制造解决方案"
           ]
         }
       ],
@@ -3653,277 +4244,45 @@
       "industry": "2.1.1",
       "feature": "**中国工业机器人龙头**，伺服系统与控制器核心技术自主可控，国产替代主力军",
       "tags": [
-        "数据中心架构"
+        "工业机器人",
+        "伺服电机",
+        "伺服驱动器"
       ],
       "tag_themes": [
         {
-          "tag": "数据中心架构",
+          "tag": "工业机器人",
           "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "数据中心架构"
+            "10. 工业自动化与机器人",
+            "工业机器人"
+          ]
+        },
+        {
+          "tag": "伺服电机",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "伺服电机"
+          ]
+        },
+        {
+          "tag": "伺服驱动器",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "伺服驱动器"
           ]
         }
       ],
       "market_type": "A股",
-      "price": "293.05",
-      "change": "+5.75 (+2.00%)",
+      "price": "299.01",
+      "change": "+5.96 (+2.03%)",
       "isUp": true,
       "per": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
       "distWeek": "-2.0%",
-      "distMonth": "-11.2%",
+      "distMonth": "-2.8%",
       "trend": "牛市多头",
       "source": "sina"
-    },
-    {
-      "code": "6861",
-      "name": "キーエンス(基恩士)",
-      "sector": "2.1",
-      "industry": "2.1.1",
-      "feature": "**高精度传感系统霸主**，全球传感器市占率超40%，盈利能力冠绝工业自动化行业",
-      "tags": [
-        "数据中心架构"
-      ],
-      "tag_themes": [
-        {
-          "tag": "数据中心架构",
-          "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "数据中心架构"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "77930.00",
-      "change": "+230.00 (+0.30%)",
-      "isUp": true,
-      "per": "42.50",
-      "forward_per": "41.73",
-      "pbr": "5.44",
-      "distHigh": "-7.4%",
-      "distWeek": "-0.8%",
-      "distMonth": "-4.2%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "6954",
-      "name": "ファナック(发那科)",
-      "sector": "2.1",
-      "industry": "2.1.1",
-      "feature": "**工业机器人四大家族之一**，全球CNC市占率超50%，工厂自动化绝对龙头",
-      "tags": [
-        "数据中心架构"
-      ],
-      "tag_themes": [
-        {
-          "tag": "数据中心架构",
-          "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "数据中心架构"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "8010.00",
-      "change": "+537.00 (+7.19%)",
-      "isUp": true,
-      "per": "44.85",
-      "forward_per": "46.27",
-      "pbr": "4.01",
-      "distHigh": "-9.8%",
-      "distWeek": "-1.2%",
-      "distMonth": "-8.0%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "6273",
-      "name": "SMC",
-      "sector": "2.1",
-      "industry": "2.1.1",
-      "feature": "**全球气动元件霸主**，市占率超30%，工业自动化核心零部件供应商",
-      "tags": [
-        "数据中心架构"
-      ],
-      "tag_themes": [
-        {
-          "tag": "数据中心架构",
-          "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "数据中心架构"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "73420.00",
-      "change": "+580.00 (+0.80%)",
-      "isUp": true,
-      "per": "27.84",
-      "forward_per": "22.36",
-      "pbr": "2.19",
-      "distHigh": "-15.4%",
-      "distWeek": "-1.7%",
-      "distMonth": "-1.7%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "6324",
-      "name": "ハーモニック(Harmonic)",
-      "sector": "2.1",
-      "industry": "2.1.1",
-      "feature": "**精密减速器标杆**，谐波减速器全球市占率超50%，机器人关节核心部件供应商",
-      "tags": [
-        "数据中心架构"
-      ],
-      "tag_themes": [
-        {
-          "tag": "数据中心架构",
-          "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "数据中心架构"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "8630.00",
-      "change": "+860.00 (+11.07%)",
-      "isUp": true,
-      "per": "504.97",
-      "forward_per": "114.02",
-      "pbr": "10.16",
-      "distHigh": "-1.5%",
-      "distWeek": "-1.5%",
-      "distMonth": "-1.5%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "6506",
-      "name": "安川電機",
-      "sector": "2.1",
-      "industry": "2.1.1",
-      "feature": "**伺服驱动与机器人巨头**，全球伺服电机市占率前三，工业机器人四大家族之一",
-      "tags": [
-        "数据中心架构"
-      ],
-      "tag_themes": [
-        {
-          "tag": "数据中心架构",
-          "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "数据中心架构"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "7594.00",
-      "change": "+466.00 (+6.54%)",
-      "isUp": true,
-      "per": "56.10",
-      "forward_per": "37.08",
-      "pbr": "4.07",
-      "distHigh": "-1.4%",
-      "distWeek": "-0.5%",
-      "distMonth": "-1.4%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "6594",
-      "name": "ニデック(尼得科)",
-      "sector": "2.1",
-      "industry": "2.1.1",
-      "feature": "**全球电机霸主**，微型电机全球市占率超50%，机器人关节电机核心供应商",
-      "tags": [
-        "数据中心架构"
-      ],
-      "tag_themes": [
-        {
-          "tag": "数据中心架构",
-          "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "数据中心架构"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "2781.00",
-      "change": "+86.00 (+3.19%)",
-      "isUp": true,
-      "per": "26.53",
-      "forward_per": "14.67",
-      "pbr": "1.81",
-      "distHigh": "-15.6%",
-      "distWeek": "-4.7%",
-      "distMonth": "-4.8%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "6645",
-      "name": "オムロン(欧姆龙)",
-      "sector": "2.1",
-      "industry": "2.1.1",
-      "feature": "**传感与控制技术巨头**，PLC/传感器市占率全球前列，工业自动化方案核心供应商",
-      "tags": [
-        "数据中心架构"
-      ],
-      "tag_themes": [
-        {
-          "tag": "数据中心架构",
-          "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "数据中心架构"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "6211.00",
-      "change": "+77.00 (+1.26%)",
-      "isUp": true,
-      "per": "35.78",
-      "forward_per": "22.91",
-      "pbr": "1.46",
-      "distHigh": "-2.7%",
-      "distWeek": "-0.5%",
-      "distMonth": "-2.7%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "SIE",
-      "name": "西门子",
-      "sector": "2.1",
-      "industry": "2.1.1",
-      "feature": "**全球工业自动化巨头**，PLC/工控系统市占率全球第一，数字孪生技术领先，AI+工业制造标杆",
-      "tags": [
-        "数据中心架构"
-      ],
-      "tag_themes": [
-        {
-          "tag": "数据中心架构",
-          "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "数据中心架构"
-          ]
-        }
-      ],
-      "market_type": "德股",
-      "price": "274.50",
-      "change": "-2.30 (-0.83%)",
-      "isUp": false,
-      "per": "28.42",
-      "forward_per": "21.49",
-      "pbr": "3.31",
-      "distHigh": "-2.0%",
-      "distWeek": "-1.4%",
-      "distMonth": "-2.0%",
-      "trend": "牛市多头",
-      "source": "yfinance"
     },
     {
       "code": "SPCX",
@@ -4068,15 +4427,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "454.00",
-      "change": "+20.00 (+4.61%)",
+      "price": "456.00",
+      "change": "+22.00 (+5.07%)",
       "isUp": true,
-      "per": "-6.41",
-      "forward_per": "-6.41",
-      "pbr": "4.36",
-      "distHigh": "-36.1%",
-      "distWeek": "-11.3%",
-      "distMonth": "-36.1%",
+      "per": "-6.44",
+      "forward_per": "-6.44",
+      "pbr": "4.38",
+      "distHigh": "-35.8%",
+      "distWeek": "-10.9%",
+      "distMonth": "-35.8%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -4099,15 +4458,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "1308.00",
-      "change": "+110.00 (+9.18%)",
+      "price": "1319.00",
+      "change": "+121.00 (+10.10%)",
       "isUp": true,
-      "per": "-370.54",
-      "forward_per": "-370.54",
-      "pbr": "22.01",
-      "distHigh": "-56.6%",
-      "distWeek": "-11.5%",
-      "distMonth": "-56.6%",
+      "per": "-373.65",
+      "forward_per": "-373.65",
+      "pbr": "22.20",
+      "distHigh": "-56.3%",
+      "distWeek": "-10.8%",
+      "distMonth": "-56.3%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -4130,16 +4489,16 @@
         }
       ],
       "market_type": "日股",
-      "price": "2520.00",
-      "change": "+53.00 (+2.15%)",
+      "price": "3020.00",
+      "change": "+500.00 (+19.84%)",
       "isUp": true,
-      "per": "812.90",
-      "forward_per": "812.90",
-      "pbr": "21.50",
-      "distHigh": "-30.4%",
-      "distWeek": "-14.8%",
-      "distMonth": "-30.4%",
-      "trend": "熊市空头",
+      "per": "974.19",
+      "forward_per": "974.19",
+      "pbr": "25.77",
+      "distHigh": "-16.6%",
+      "distWeek": "0.0%",
+      "distMonth": "-16.6%",
+      "trend": "牛市多头",
       "source": "yfinance"
     },
     {
@@ -4285,15 +4644,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "3876.00",
-      "change": "-41.00 (-1.05%)",
+      "price": "3895.00",
+      "change": "-22.00 (-0.56%)",
       "isUp": false,
-      "per": "37.05",
-      "forward_per": "41.82",
-      "pbr": "4.22",
-      "distHigh": "-25.6%",
-      "distWeek": "-5.3%",
-      "distMonth": "-5.3%",
+      "per": "37.24",
+      "forward_per": "42.03",
+      "pbr": "4.24",
+      "distHigh": "-25.2%",
+      "distWeek": "-4.9%",
+      "distMonth": "-4.9%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -4316,15 +4675,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "2832.00",
-      "change": "+15.00 (+0.53%)",
+      "price": "2848.00",
+      "change": "+31.00 (+1.10%)",
       "isUp": true,
-      "per": "18.64",
-      "forward_per": "4.89",
-      "pbr": "4.60",
-      "distHigh": "-39.7%",
-      "distWeek": "-6.4%",
-      "distMonth": "-8.6%",
+      "per": "18.76",
+      "forward_per": "4.92",
+      "pbr": "4.63",
+      "distHigh": "-39.4%",
+      "distWeek": "-5.9%",
+      "distMonth": "-8.1%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -4347,15 +4706,15 @@
         }
       ],
       "market_type": "日股",
-      "price": "8047.00",
-      "change": "+144.00 (+1.82%)",
+      "price": "8105.00",
+      "change": "+202.00 (+2.56%)",
       "isUp": true,
-      "per": "30.76",
-      "forward_per": "28.90",
-      "pbr": "2.79",
-      "distHigh": "-24.2%",
-      "distWeek": "-6.6%",
-      "distMonth": "-6.6%",
+      "per": "30.98",
+      "forward_per": "29.11",
+      "pbr": "2.81",
+      "distHigh": "-23.7%",
+      "distWeek": "-6.0%",
+      "distMonth": "-6.0%",
       "trend": "牛市多头",
       "source": "yfinance"
     }
@@ -4387,6 +4746,7 @@
       "高纯化学品",
       "电子特气",
       "靶材",
+      "磷化铟",
       "CMP浆料",
       "CMP抛光垫",
       "封装基板",
@@ -4441,6 +4801,28 @@
       "基础模型",
       "AI应用",
       "智能体Agent"
+    ],
+    "10. 工业自动化与机器人": [
+      "工业机器人",
+      "协作机器人",
+      "SCARA机器人",
+      "CNC数控系统",
+      "伺服电机",
+      "伺服驱动器",
+      "PLC可编程控制器",
+      "传感器",
+      "气动元件",
+      "谐波减速器",
+      "RV减速器",
+      "精密减速器",
+      "机器人关节",
+      "工业视觉",
+      "FA工厂自动化",
+      "激光加工设备",
+      "工业物联网IIoT",
+      "数字孪生",
+      "智能制造解决方案",
+      "运动控制系统"
     ]
   }
 }
