@@ -6,8 +6,8 @@ on:
   workflow_dispatch:
   
   schedule:
-    # JST 09:02 ～ 15:47 对应 UTC 00:02 ～ 06:47
-    - cron: '2,17,32,47 0-6 * * 1-5'
+    # JST 09:02 ～ 15:47 对应 UTC 00:02 ～ 06:47　'2,17,32,47 0-6 * * 1-5'
+    - cron: '2,17,32,47 9-16 * * 1-5'
 
 # 🌟【超级核心加固】：彻底解决 git push 报 exit code 1 的权限拉闸问题
 permissions:
