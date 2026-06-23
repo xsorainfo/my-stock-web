@@ -61,6 +61,16 @@
       ]
     },
     {
+      "sector_id": "1.7",
+      "sector_name": "量子计算（Quantum Computing）",
+      "sector_comment": "下一代计算范式，处于早期商业化阶段，全球市场规模预计2030年达110-160亿美元",
+      "industries": [
+        { "industry_id": "1.7.1", "industry_name": "量子硬件（量子处理器/QPU）", "industry_comment": "超导、离子阱、光量子、退火等多种技术路线" },
+        { "industry_id": "1.7.2", "industry_name": "量子软件与云服务", "industry_comment": "量子算法、编译器、云平台（Azure Quantum/AWS Braket等）" },
+        { "industry_id": "1.7.3", "industry_name": "量子安全/后量子密码", "industry_comment": "抗量子加密、量子密钥分发（QKD）" }
+      ]
+    },
+    {
       "sector_id": "2.1",
       "sector_name": "工业自动化与机器人",
       "sector_comment": "机器人制造",
