@@ -189,6 +189,16 @@
         { "industry_id": "7.1.2", "industry_name": "租赁与管理", "industry_comment": "不动产租赁、物业管理、资产管理" },
         { "industry_id": "7.1.3", "industry_name": "REIT", "industry_comment": "房地产投资信托" }
       ]
+    },
+    {
+      "sector_id": "7.2",
+      "sector_name": "建設業（Construction）",
+      "sector_comment": "土木工程、建筑工程、大型基础设施建设等",
+      "industries": [
+        { "industry_id": "7.2.1", "industry_name": "综合建设（ゼネコン）", "industry_comment": "大型综合建设公司，承接各类建筑与土木工程" },
+        { "industry_id": "7.2.2", "industry_name": "土木工程", "industry_comment": "道路、桥梁、隧道、港口等社会基础设施" },
+        { "industry_id": "7.2.3", "industry_name": "建筑与室内", "industry_comment": "住宅、商业建筑、翻修与室内装修" }
+      ]
     }
   ]
 }
