@@ -1,600 +1,17 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>総合</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
-    <!-- ⭐ 引入共通导航栏样式 -->
-    <!-- ⭐ 路径改为 ../components/ -->
-    <link rel="stylesheet" href="../components/navbar.css">
-    <style>
-        :root {
-            --bg-color: #f4f6f9;
-            --card-bg: #ffffff;
-            --text-main: #1e293b;
-            --text-muted: #64748b;
-            --up-color: #ef4444; 
-            --down-color: #10b981; 
-            --border-color: #e2e8f0;
-        }
-
-        /* 容器布局 */
-        .tag-container {
-          display: flex;
-          flex-wrap: wrap; /* 保证如果标签多，会自动换行 */
-          gap: 12px;        /* 标签之间的间距 */
-          margin-top: 10px;
-        }
-        
-        
-        /* 标签样式 */
-        .stock-tag {
-          background-color: #e0f2f1; /* 浅青色背景 */
-          color: #00796b;            /* 深青色文字 */
-          font-size: 12px;
-          font-weight: 500;
-          padding: 3px 8px;
-          border-radius: 4px;        /* 微圆角，符合你现有卡片风格 */
-          border: 1px solid #b2dfdb;
-          white-space: nowrap;
-        }
-
-        /* 在 index.html 的 style 中添加 */
-        .stock-tag.clickable-tag {
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-        
-        .stock-tag.clickable-tag:hover {
-            background: #2563eb;
-            color: #ffffff;
-            border-color: #2563eb;
-            transform: translateY(-1px);
-            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
-        }
-        
-        .stock-tag.clickable-tag:active {
-            transform: scale(0.95);
-        }
-        
-        /* 示例：不同类别的标签自动变色 */
-        .stock-tag.type-hard { background: #ffebee; color: #c62828; }
-        .stock-tag.type-soft { background: #e3f2fd; color: #1565c0; }
-        
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        }
-        
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            padding: 0;
-            line-height: 1.5;
-        }
-        
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 8px;        /* ⭐ padding 移到这里 */
-        }
-        
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 24px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid var(--border-color);
-        }
-        
-        header h1 {
-            font-size: 24px;
-            font-weight: 700;
-            color: #0f172a;
-        }
-        
-        .ai-briefboard {
-            background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%);
-            border: 1px solid #bfdbfe;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 28px;
-        }
-        
-        .ai-title {
-            font-weight: 600;
-            color: #1e40af;
-            font-size: 15px;
-            margin-bottom: 8px;
-        }
-        
-        .ai-content {
-            font-size: 14px;
-            color: #334155;
-        }
-        
-        .macro-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 16px;
-            margin-bottom: 32px;
-        }
-        
-        .macro-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            padding: 16px;
-        }
-        
-        .macro-name {
-            font-size: 13px;
-            color: var(--text-muted);
-            margin-bottom: 6px;
-        }
-        
-        .macro-price {
-            font-size: 22px;
-            font-weight: 700;
-        }
-        
-        
-        
-        /* ===== Sector（一级）样式 ===== */
-        .sector-section {
-            margin-bottom: 40px;
-        }
-        
-        .sector-title {
-            font-size: 22px;
-            font-weight: 700;
-            color: #0f172a;
-            margin-bottom: 4px;  /* ⬅️ 减少与注释的间距 */
-            padding: 10px 16px;
-            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-            border-radius: 8px;
-            border-left: 4px solid #2563eb;
-            color: #ffffff;
-        }
-        
-        /* ⭐ 极简淡雅风 + 可爱字体（一级注释） */
-        .sector-comment {
-            font-family: 'Zen Maru Gothic', 'Hiragino Sans', 'Noto Sans SC', sans-serif;
-            font-size: 13px;
-            color: #00035b;
-            margin: -6px 0 18px 16px;
-            padding: 6px 0;
-            background: transparent;
-            border-bottom: 2px dashed #e2e8f0;
-            line-height: 1.8;
-            letter-spacing: 0.5px;
-        }
-        
-        /* ===== Industry（二级）样式 ===== */
-        .industry-section {
-            margin-bottom: 28px;
-            margin-left: 16px;
-        }
-        
-        .industry-title {
-            font-size: 17px;
-            font-weight: 600;
-            color: #1e293b;
-            margin-bottom: 4px;  /* ⬅️ 减少与注释的间距 */
-            padding: 6px 14px;
-            background: #f8fafc;
-            border-radius: 4px;
-            border-left: 3px solid #2563eb;
-        }
-        
-        /* ⭐ 极简淡雅风 + 可爱字体（二级注释） */
-        .industry-comment {
-            font-family: 'Zen Maru Gothic', 'Hiragino Sans', 'Noto Sans SC', sans-serif;
-            font-size: 13px;
-            color: #00035b;
-            margin: -4px 0 14px 28px;
-            padding: 4px 0;
-            background: transparent;
-            border-bottom: 1.5px dashed #eaeef5;
-            line-height: 1.8;
-            letter-spacing: 0.5px;
-        }
-        
-        .stock-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 20px;
-        }
-        
-        .stock-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        }
-        
-        .stock-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 8px;
-        }
-        
-        .stock-title h3 {
-            font-size: 16px;
-            font-weight: 700;
-        }
-        
-        .stock-industry {
-            font-size: 11px;
-            color: #2563eb;
-            background: #eff6ff;
-            padding: 2px 6px;
-            border-radius: 4px;
-            margin-top: 4px;
-            display: inline-block;
-        }
-        
-        .stock-code {
-            font-size: 11px;
-            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
-            background: #334155;           /* 初始：深蓝灰色 */
-            color: #f8fafc;                /* 白色文字 */
-            padding: 3px 8px;              /* 稍微加大一点内边距 */
-            border-radius: 4px;
-            letter-spacing: 0.5px;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-            
-            /* 增加过渡效果 */
-            transition: all 0.25s ease-in-out;
-            cursor: pointer;               /* 鼠标移入显示可点击手势 */
-            user-select: none;             /* 防止文字被选中，看起来更像 UI 按钮 */
-        }
-        
-        /* 悬停反馈效果 */
-        .stock-code:hover {
-            background: #0f172a;           /* 悬停：变为更深邃的黑蓝色 */
-            transform: translateY(-1px);   /* 悬停：轻微上浮，增加物理感 */
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2); /* 悬停：增加阴影深度 */
-            color: #38bdf8;                /* 悬停：文字变为亮蓝色，点亮科技感 */
-        }
-        /* 当用户按下鼠标时，代码块有一个缩小的动画 */
-        .stock-code:active {
-            transform: scale(0.95);
-            background: #1e293b; /* 点击瞬间加深颜色 */
-        }
-
-        .stock-actions {
-            display: flex;
-            align-items: center;
-            gap: 8px; /* 复制标签和图标之间的间距 */
-        }
-        
-        .tv-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 24px;
-            height: 24px;
-            font-size: 14px;
-            text-decoration: none;
-            background: #f1f5f9;
-            border-radius: 4px;
-            transition: all 0.2s ease;
-            border: 1px solid #e2e8f0;
-        }
-        
-        .tv-link:hover {
-            background: #334155; /* 悬停变色，呼应你的终端风 */
-            color: white;
-            transform: translateY(-1px);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        .stock-feature {
-            font-family: 'Zen Maru Gothic', 'Hiragino Sans', 'Noto Sans SC', sans-serif;
-            font-size: 12px;
-            color: #1e293b;
-            background: #f8fafc;
-            padding: 8px;
-            border-radius: 6px;
-            margin-bottom: 14px;
-            min-height: 52px;
-        }
-        
-        /* 关键：给加粗文字定义高亮色 */
-        .stock-feature strong {
-            font-family: 'Zen Maru Gothic', 'Hiragino Sans', 'Noto Sans SC', sans-serif;
-            color: #1e293b;      /* 深灰色，比普通文字更深 */
-            font-weight: 700;    /* 加粗 */
-        }
-        
-        .stock-trend-badge {
-            font-size: 11px;
-            font-weight: 600;
-            padding: 2px 6px;
-            border-radius: 4px;
-            display: inline-block;
-            margin-bottom: 12px;
-        }
-        
-        .trend-up-bg {
-            background: #fee2e2;
-            color: #b91c1c;
-        }
-        
-        .trend-down-bg {
-            background: #d1fae5;
-            color: #065f46;
-        }
-        
-        .price-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-bottom: 12px;
-        }
-        
-        .stock-price {
-            font-size: 26px;
-            font-weight: 600;
-        }
-        
-        .text-up {
-            color: var(--up-color);
-        }
-        
-        .text-down {
-            color: var(--down-color);
-        }
-        
-        .val-badge {
-            font-size: 11px;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 2px;
-        }
-        
-        .val-high {
-            background: #fee2e2;
-            color: #ef4444;
-        }
-        
-        .val-low {
-            background: #d1fae5;
-            color: #10b981;
-        }
-        
-        .val-normal {
-            background: #f1f5f9;
-            color: #64748b;
-        }
-        
-        .metrics-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 11px;
-            color: #64748b;
-            text-align: center;
-        }
-        
-        .metrics-table th {
-            font-weight: normal;
-            padding: 4px 2px;
-            background: #f8fafc;
-            color: #64748b;
-        }
-        
-        .metrics-table td {
-            padding: 6px 2px 4px 2px;
-        }
-    </style>
-</head>
-<body>
-    <!-- 导航栏占位符 -->
-    <div id="navbar-placeholder"></div>
-    
-    <div class="container">
-        <div class="ai-briefboard">
-            <div class="ai-title">🤖 首席硬科技策略师 · 盘后多头思维复盘</div>
-            <div class="ai-content" id="aiReport">正在读取策略官核心简报流...</div>
-        </div>
-
-        <div class="macro-grid" id="macroGrid"></div>
-
-        <h2 class="section-title">AI 半导体与全要素核心标的集群</h2>
-        <div id="industryContainer"></div>
-    </div>
 <!-- 在 <script> 最前面引入导航栏组件 -->
 <script src="../components/navbar.js"></script>
+<!-- ⭐ 引入共通工具函数 -->
+<script src="../components/common.js"></script>
 
-    
 <script>
-    function judgeValuation(val, type) {
-        if (!val || val === '--' || isNaN(parseFloat(val))) return '<span class="val-badge val-normal">--</span>';
-        const num = parseFloat(val);
-        if (type === 'PER'|| type === 'forward_per') {
-            if (num > 50) return `<span class="val-badge val-high">${num.toFixed(1)} 高估值</span>`;
-            if (num < 25) return `<span class="val-badge val-low">${num.toFixed(1)} 具性价比</span>`;
-            return `<span class="val-badge val-normal">${num.toFixed(1)} 合理</span>`;
-        } else if (type === 'PBR') {
-            if (num > 15) return `<span class="val-badge val-high">${num.toFixed(1)} 高溢价</span>`;
-            if (num < 3) return `<span class="val-badge val-low">${num.toFixed(1)} 净资产防守</span>`;
-            return `<span class="val-badge val-normal">${num.toFixed(1)} 正常</span>`;
-        }
-        return `<span class="val-badge val-normal">${num}</span>`;
-    }
-
-    // 辅助函数：根据市场类型返回对应的 HTML 标签
-    function getMarketBadge(type) {
-        const map = {
-            '美股': '<span class="badge us">🇺🇸</span>',
-            '日股': '<span class="badge jp">🇯🇵</span>',
-            'A股':  '<span class="badge cn">🇨🇳</span>'
-        };
-        return map[type] || '';
-    }
-    // 在循环渲染中，动态生成跳转链接
-    const getYahooUrl = (stock) => {
-        // 1. 如果是日股，跳转到 finance.yahoo.co.jp
-        if (stock.market_type === '日股') {
-            // 日股链接通常是 finance.yahoo.co.jp/quote/XXXX.T
-            return `https://finance.yahoo.co.jp/quote/${stock.code}`;
-        }
-        // 2. 如果是A股，雅虎财经（美版）对A股支持有限，可跳转到新浪财经或保留原样
-        if (stock.market_type === 'A股') {
-            const code = stock.code;
-            const prefix = (code.startsWith('6')) ? 'sh' : 'sz';
-            return `https://finance.sina.com.cn/realstock/company/${prefix}${code}/nc.shtml`;
-        }
-        // 3. 默认（美股等）跳转到 finance.yahoo.co.jp
-        return `https://finance.yahoo.co.jp/quote/${stock.code}`;
-    };
-
-    // 获取 TradingView 专属链接
-    const getTradingViewUrlOld = (stock) => {
-        // TradingView 的搜索规则通常是：市场:代码
-        // 美股: NASDAQ:NVDA, NYSE:GE 等
-        // A股: SHSE:600905, SZSE:000000
-        // 日股: JPX:6981
-        return `https://www.tradingview.com/chart/?symbol=${stock.code}`;
-    };
-
-    const getTradingViewUrl = (stock) => {
-        // 处理逻辑：根据市场类型动态构建 TV 识别码
-        let symbol = stock.code;
-        
-        if (stock.market_type === '日股') {
-            // 信越化学等日股在 TV 使用 TSE:代码 格式
-            // 假设你的 code 里包含了 .T 后缀，需要把它去掉
-            const cleanCode = stock.code.split('.')[0];
-            return `https://jp.tradingview.com/symbols/TSE-${cleanCode}/`;
-        } 
-        else if (stock.market_type === 'A股') {
-            const prefix = stock.code.startsWith('6') ? "SHSE" : "SZSE";
-            return `https://www.tradingview.com/symbols/${prefix}-${stock.code}/`;
-        }
-        
-        // 美股默认直接跳转
-        return `https://www.tradingview.com/symbols/${stock.code}/`;
-    };
-
-    // 1. 先定义一个生成标签 HTML 的辅助函数
-    function renderTags(tags) {
-        if (!tags || tags.length === 0) return '';
-        return tags.map(tag => `
-            <span class="stock-tag clickable-tag" data-tag="${encodeURIComponent(tag)}" onclick="navigateToTheme('${encodeURIComponent(tag)}')">
-                ${tag} 
-            </span>
-        `).join('&nbsp;&nbsp;');
-    }
+    // ============================================================
+    // index.html 特有逻辑
+    // ============================================================
     
-    // 新增：跳转到 sub_ai.html 并传递 tag 参数（新窗口打开）
-    function navigateToTheme(tag) {
-        // 解码 tag（因为 encodeURIComponent 会编码特殊字符）
-        const decodedTag = decodeURIComponent(tag);
-        // 使用 window.open 在新标签页打开
-        window.open(`pages/sub_ai.html?tag=${encodeURIComponent(decodedTag)}`, '_blank');
-    }
-    
-    // pages/index.html
-
     // 全局变量
-    let sectorMapping = {};
+    let sectorMapping = [];
     
-    // 加载 sector_mapping
-    async function loadSectorMapping() {
-        try {
-            const response = await fetch('/data/sector_mapping.json?v=' + new Date().getTime());
-            if (response.ok) {
-                const data = await response.json();
-                sectorMapping = data.sector_mapping || [];
-                console.log('📊 sector_mapping 已加载:', sectorMapping);
-            } else {
-                console.warn('sector_mapping.json 加载失败，使用默认分组');
-            }
-        } catch (e) {
-            console.warn('sector_mapping.json 读取失败:', e);
-        }
-    }
-    
-    // ============================================================
-    // 获取 sector_name
-    // ============================================================
-    function getSectorName(sectorId) {
-        if (!sectorMapping || !Array.isArray(sectorMapping) || sectorMapping.length === 0) return sectorId;
-        const found = sectorMapping.find(item => item.sector_id === sectorId);
-        return found ? found.sector_name : sectorId;
-    }
-    
-    // ============================================================
-    // 获取 sector_comment
-    // ============================================================
-    function getSectorComment(sectorId) {
-        if (!sectorMapping || !Array.isArray(sectorMapping) || sectorMapping.length === 0) return '';
-        const found = sectorMapping.find(item => item.sector_id === sectorId);
-        return found ? found.sector_comment : '';
-    }
-    
-    // ============================================================
-    // 获取 industry_name
-    // ============================================================
-    function getIndustryName(sectorId, industryId) {
-        if (!sectorMapping || !Array.isArray(sectorMapping) || sectorMapping.length === 0) return industryId;
-        const sector = sectorMapping.find(item => item.sector_id === sectorId);
-        if (!sector) return industryId;
-        const industry = sector.industries.find(item => item.industry_id === industryId);
-        return industry ? industry.industry_name : industryId;
-    }
-    // ============================================================
-    // 打开 kabuyoho 目标股价页面
-    // ============================================================
-    function openTargetPrice(symbol) {
-        // 清理股票代码（去掉 .T .SS .SZ 等后缀）
-        let cleanCode = symbol;
-        if (symbol.includes('.')) {
-            cleanCode = symbol.split('.')[0];
-        }
-        // 日股代码补零到4位（如 3110.T → 3110）
-        if (cleanCode.length === 3 && !isNaN(cleanCode)) {
-            // 3110 已经是4位，不需要补零
-        }
-        // 构建 kabuyoho URL
-        const url = `https://kabuyoho.jp/sp/reportTarget?bcode=${cleanCode}`;
-        window.open(url, 'kabuyoho', 'width=1200,height=800,scrollbars=yes,resizable=yes');
-    }
-
-    // ROE 判断函数（4档：优秀/良好/一般/不佳）
-    function judgeROE(roe) {
-        if (!roe || roe === '--' || isNaN(parseFloat(roe))) {
-            return '<span class="val-badge val-normal">--</span>';
-        }
-        const num = parseFloat(roe);
-        if (num >= 15) return `<span class="val-badge val-high" style="background:#d1fae5;color:#065f46;">${roe} 優秀</span>`;
-        if (num >= 10) return `<span class="val-badge val-normal" style="background:#dbeafe;color:#1d4ed8;">${roe} 良好</span>`;
-        if (num >= 5) return `<span class="val-badge val-normal" style="background:#fef3c7;color:#92400e;">${roe} 一般</span>`;
-        return `<span class="val-badge val-low" style="background:#fee2e2;color:#b91c1c;">${roe} 不佳</span>`;
-    }
-    // ============================================================
-    // 获取 industry_comment
-    // ============================================================
-    function getIndustryComment(sectorId, industryId) {
-        if (!sectorMapping || !Array.isArray(sectorMapping) || sectorMapping.length === 0) return '';
-        const sector = sectorMapping.find(item => item.sector_id === sectorId);
-        if (!sector) return '';
-        const industry = sector.industries.find(item => item.industry_id === industryId);
-        return industry ? industry.industry_comment : '';
-    }
-
-    
+    // 加载 dashboard 数据
     async function loadDashboardData() {
         try {
             const response = await fetch('/data/data.json?v=' + new Date().getTime());
@@ -603,7 +20,7 @@
 
             document.getElementById('aiReport').innerText = data.ai_report || '💡 数据就绪。';
 
-            // 宏观数据渲染保持不变
+            // 宏观数据渲染
             const macroGrid = document.getElementById('macroGrid');
             macroGrid.innerHTML = '';
             data.macro?.forEach(item => {
@@ -633,10 +50,9 @@
                 const sectorDiv = document.createElement('div');
                 sectorDiv.className = 'sector-section';
                 
-                // ⭐ 获取 sector_name 和 sector_comment
+                // ⭐ 使用 common.js 中的函数
                 const sectorName = getSectorName(sector);
                 const sectorComment = getSectorComment(sector);
-                
                 
                 sectorDiv.innerHTML = `
                     <h2 class="sector-title">${sectorName}</h2>
@@ -649,14 +65,14 @@
                     if (!acc[industryKey]) acc[industryKey] = [];
                     acc[industryKey].push(stock);
                     return acc;
-                }, {});
+                }, {]);
             
                 // 遍历每个 industry
                 for (const [industry, industryStocks] of Object.entries(industryGroups)) {
                     const industryDiv = document.createElement('div');
                     industryDiv.className = 'industry-section';
                     
-                    // ⭐ 获取 industry_comment
+                    // ⭐ 使用 common.js 中的函数
                     const industryName = getIndustryName(sector, industry);
                     const industryComment = getIndustryComment(sector, industry);
                     
@@ -668,7 +84,6 @@
                     const grid = document.createElement('div');
                     grid.className = 'stock-grid';
                     
-                    // ... 渲染股票卡片 ...
                     industryStocks.forEach(stock => {
                         // 预处理 feature，支持 **加粗**
                         const formattedFeature = stock.feature.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
@@ -681,9 +96,7 @@
                                         <a href="${getYahooUrl(stock)}" target="_blank" style="text-decoration: none; color: inherit;">
                                             <h3>${getMarketBadge(stock.market_type)} ${stock.name}</h3>
                                         </a>
-                                       
                                     </div>
-
                                     <div class="stock-actions">
                                         <span class="stock-code" onclick="copyToClipboard('${stock.code}')" title="点击复制代码">
                                             ${stock.code}
@@ -715,7 +128,6 @@
                                             </th>
                                             <th style="width: 33.33%;">ROE</th>
                                             <th style="width: 33.33%;">PBR 溢价</th>
-                                            
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -756,24 +168,10 @@
             }
         } catch (error) { console.error(error); }
     }
-    
-    // 点击股票代码复制
-    function copyToClipboard(text) {
-        navigator.clipboard.writeText(text).then(() => {
-            // 可选：添加一个简单的提示效果
-            console.log('已复制: ' + text);
-            
-            // 可选：给用户一个视觉反馈 (比如弹出小气泡)
-            //alert('代码 ' + text + ' 已复制到剪贴板！');
-        }).catch(err => {
-            console.error('复制失败: ', err);
-        });
-    }
-    
 
     window.onload = async function() {
-        await loadSectorMapping();     // 先加载注释映射
-        await loadDashboardData();     // 再加载数据
+        // 加载 sector_mapping（现在从 common.js 调用）
+        sectorMapping = await loadSectorMapping();
+        await loadDashboardData();
     };
-</script></body>
-</html>
+</script>
