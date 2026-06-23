@@ -4,7 +4,12 @@
 // ============================================================
 
 // ============================================================
-// 1. 估值判断
+// 1. 全局变量 - sectorMapping 缓存
+// ============================================================
+let sectorMappingGlobal = [];
+
+// ============================================================
+// 2. 估值判断
 // ============================================================
 function judgeValuation(val, type) {
     if (!val || val === '--' || isNaN(parseFloat(val))) {
@@ -24,7 +29,7 @@ function judgeValuation(val, type) {
 }
 
 // ============================================================
-// 2. ROE 判断函数（4档：优秀/良好/一般/不佳）
+// 3. ROE 判断函数（4档：优秀/良好/一般/不佳）
 // ============================================================
 function judgeROE(roe) {
     if (!roe || roe === '--' || isNaN(parseFloat(roe))) {
@@ -38,7 +43,7 @@ function judgeROE(roe) {
 }
 
 // ============================================================
-// 3. 市场标签
+// 4. 市场标签
 // ============================================================
 function getMarketBadge(type) {
     const map = {
@@ -52,7 +57,7 @@ function getMarketBadge(type) {
 }
 
 // ============================================================
-// 4. 雅虎财经链接
+// 5. 雅虎财经链接
 // ============================================================
 function getYahooUrl(stock) {
     if (stock.market_type === '日股') {
@@ -66,7 +71,7 @@ function getYahooUrl(stock) {
 }
 
 // ============================================================
-// 5. TradingView 链接
+// 6. TradingView 链接
 // ============================================================
 function getTradingViewUrl(stock) {
     if (stock.market_type === '日股') {
@@ -80,7 +85,7 @@ function getTradingViewUrl(stock) {
 }
 
 // ============================================================
-// 6. 打开 kabuyoho 目标股价页面
+// 7. 打开 kabuyoho 目标股价页面
 // ============================================================
 function openTargetPrice(symbol) {
     let cleanCode = symbol;
@@ -92,7 +97,7 @@ function openTargetPrice(symbol) {
 }
 
 // ============================================================
-// 7. 复制到剪贴板
+// 8. 复制到剪贴板
 // ============================================================
 function copyToClipboard(text) {
     navigator.clipboard.writeText(text).then(() => {
@@ -103,7 +108,7 @@ function copyToClipboard(text) {
 }
 
 // ============================================================
-// 8. 渲染标签 HTML
+// 9. 渲染标签 HTML
 // ============================================================
 function renderTags(tags) {
     if (!tags || tags.length === 0) return '';
@@ -115,7 +120,7 @@ function renderTags(tags) {
 }
 
 // ============================================================
-// 9. 跳转到主题页面
+// 10. 跳转到主题页面
 // ============================================================
 function navigateToTheme(tag) {
     const decodedTag = decodeURIComponent(tag);
@@ -123,7 +128,7 @@ function navigateToTheme(tag) {
 }
 
 // ============================================================
-// 10. 加载 sector_mapping（返回 Promise）
+// 11. 加载 sector_mapping（返回 Promise）
 // ============================================================
 async function loadSectorMapping() {
     try {
@@ -146,7 +151,7 @@ async function loadSectorMapping() {
 }
 
 // ============================================================
-// 11. 获取 sector_name
+// 12. 获取 sector_name
 // ============================================================
 function getSectorName(sectorId) {
     if (!sectorMappingGlobal || !Array.isArray(sectorMappingGlobal) || sectorMappingGlobal.length === 0) return sectorId;
@@ -155,7 +160,7 @@ function getSectorName(sectorId) {
 }
 
 // ============================================================
-// 12. 获取 sector_comment
+// 13. 获取 sector_comment
 // ============================================================
 function getSectorComment(sectorId) {
     if (!sectorMappingGlobal || !Array.isArray(sectorMappingGlobal) || sectorMappingGlobal.length === 0) return '';
@@ -164,7 +169,7 @@ function getSectorComment(sectorId) {
 }
 
 // ============================================================
-// 13. 获取 industry_name
+// 14. 获取 industry_name
 // ============================================================
 function getIndustryName(sectorId, industryId) {
     if (!sectorMappingGlobal || !Array.isArray(sectorMappingGlobal) || sectorMappingGlobal.length === 0) return industryId;
@@ -175,7 +180,7 @@ function getIndustryName(sectorId, industryId) {
 }
 
 // ============================================================
-// 14. 获取 industry_comment
+// 15. 获取 industry_comment
 // ============================================================
 function getIndustryComment(sectorId, industryId) {
     if (!sectorMappingGlobal || !Array.isArray(sectorMappingGlobal) || sectorMappingGlobal.length === 0) return '';
@@ -184,11 +189,6 @@ function getIndustryComment(sectorId, industryId) {
     const industry = sector.industries.find(item => item.industry_id === industryId);
     return industry ? industry.industry_comment : '';
 }
-
-// ============================================================
-// 15. 全局变量 - sectorMapping 缓存
-// ============================================================
-let sectorMappingGlobal = [];
 
 // ============================================================
 // 16. 将函数暴露到全局
