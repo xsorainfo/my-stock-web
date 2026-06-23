@@ -451,6 +451,13 @@ def fetch_all_data():
                         forward_per = stock_info.get('forwardPE') 
                         if forward_per and isinstance(forward_per, (int, float)): 
                             forward_per_display = f"{forward_per:.2f}"
+                            
+                        # ⭐ 新增：ROE（自己資本利益率）
+                        roe = stock_info.get('returnOnEquity')
+                        if roe and isinstance(roe, (int, float)):
+                            roe_display = f"{roe * 100:.1f}%"
+                        else:
+                            roe_display = "--"
 
                         pbr = stock_info.get('priceToBook')
                         if pbr and isinstance(pbr, (int, float)): 
@@ -488,6 +495,7 @@ def fetch_all_data():
                 "change": f"{sign}{diff:.2f} ({sign}{percent:.2f}%)", 
                 "isUp": diff > 0,
                 "per": per_display, 
+                "roe": roe_display,      # ⭐ 新增
                 "forward_per": forward_per_display, 
                 "pbr": pbr_display, 
                 "distHigh": dist_high_str,       
