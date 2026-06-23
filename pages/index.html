@@ -86,6 +86,7 @@
             font-size: 22px;
             font-weight: 700;
         }
+        
 
         /* ===== Sector（一级） ===== */
         .sector-section {
@@ -143,6 +144,11 @@
             border-bottom: 1.5px dashed #eaeef5;
             line-height: 1.8;
             letter-spacing: 0.5px;
+        }
+
+        /* ⭐ 覆盖 common.css，保持 4 列 */
+        .stock-grid {
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
         }
 
         /* ===== 股票卡片（覆盖 common.css） ===== */
