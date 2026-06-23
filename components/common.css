@@ -311,3 +311,41 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* components/common.css */
+/* 在文件末尾添加 */
+
+/* ===== 简单 Footer ===== */
+.simple-footer {
+    text-align: center;
+    padding: 24px 20px 20px;
+    margin-top: 40px;
+    border-top: 1px solid var(--border-color);
+    color: #94a3b8;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.simple-footer .brand {
+    color: #38bdf8;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.simple-footer .divider {
+    color: #e2e8f0;
+    margin: 0 8px;
+}
+
+@media (max-width: 480px) {
+    .simple-footer {
+        font-size: 11px;
+        padding: 16px 16px 14px;
+    }
+    .simple-footer .brand {
+        font-size: 12px;
+    }
+    .simple-footer .divider {
+        margin: 0 4px;
+    }
+}
