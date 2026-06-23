@@ -8,9 +8,9 @@
     },
     {
       "name": "美元/日元 (汇率)",
-      "price": "161.38",
-      "change": "-0.05 (-0.03%)",
-      "isUp": false
+      "price": "161.55",
+      "change": "+0.12 (+0.07%)",
+      "isUp": true
     },
     {
       "name": "日经 225",
@@ -1130,17 +1130,17 @@
         }
       ],
       "market_type": "德股",
-      "price": "48.46",
-      "change": "-0.71 (-1.44%)",
+      "price": "48.67",
+      "change": "-0.50 (-1.02%)",
       "isUp": false,
-      "per": "28.34",
+      "per": "28.46",
       "roe": "4.4%",
-      "forward_per": "16.42",
-      "pbr": "1.24",
-      "distHigh": "-12.0%",
-      "ytdChange": "12.86%",
-      "distWeek": "-3.0%",
-      "distMonth": "-6.3%",
+      "forward_per": "16.49",
+      "pbr": "1.25",
+      "distHigh": "-11.6%",
+      "ytdChange": "13.35%",
+      "distWeek": "-2.6%",
+      "distMonth": "-5.9%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -1176,6 +1176,47 @@
       "distMonth": "-9.7%",
       "trend": "牛市多头",
       "source": "sina"
+    },
+    {
+      "code": "2962",
+      "name": "テクニスコ(Tecnisco)",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**精密加工部品龙头**，主营**散热片/散热器（半导体激光器/功率半导体/MPU用）**、**玻璃贯穿配线基板**、**硅部件**等。产品覆盖**光通信、产业激光、车载电子**市场，深度受益AI算力散热需求爆发[citation:8][citation:9]",
+      "tags": [
+        "靶材",
+        "硅晶圆"
+      ],
+      "tag_themes": [
+        {
+          "tag": "靶材",
+          "theme_path": [
+            "2. 半导体材料",
+            "靶材"
+          ]
+        },
+        {
+          "tag": "硅晶圆",
+          "theme_path": [
+            "2. 半导体材料",
+            "硅晶圆"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "1462.00",
+      "change": "+207.00 (+16.49%)",
+      "isUp": true,
+      "per": "--",
+      "roe": "-86.9%",
+      "forward_per": "--",
+      "pbr": "8.45",
+      "distHigh": "-25.4%",
+      "ytdChange": "263.68%",
+      "distWeek": "-6.0%",
+      "distMonth": "-6.0%",
+      "trend": "牛市多头",
+      "source": "yfinance"
     },
     {
       "code": "4063",
@@ -2546,7 +2587,7 @@
       "isUp": false,
       "per": "57.12",
       "roe": "9.7%",
-      "forward_per": "39.67",
+      "forward_per": "37.94",
       "pbr": "5.41",
       "distHigh": "-5.1%",
       "ytdChange": "113.56%",
@@ -2665,7 +2706,7 @@
       "change": "-5610.00 (-6.34%)",
       "isUp": false,
       "per": "66.43",
-      "roe": "--",
+      "roe": "25.1%",
       "forward_per": "60.89",
       "pbr": "15.29",
       "distHigh": "-9.6%",
@@ -4369,6 +4410,252 @@
       "source": "yfinance"
     },
     {
+      "code": "IONQ",
+      "name": "IonQ",
+      "sector": "1.7",
+      "industry": "1.7.1",
+      "feature": "**离子阱量子计算全球龙头**，2025Q3营收同比+222%，实现99.99%双量子门保真度世界纪录。收购Oxford Ionics和SkyWater Technology强化供应链，与英伟达Ising模型深度合作，入选DARPA HARQ项目",
+      "tags": [
+        "离子阱量子计算机",
+        "量子纠错"
+      ],
+      "tag_themes": [
+        {
+          "tag": "离子阱量子计算机",
+          "theme_path": [
+            "11. 量子计算",
+            "离子阱量子计算机"
+          ]
+        },
+        {
+          "tag": "量子纠错",
+          "theme_path": [
+            "11. 量子计算",
+            "量子纠错"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "58.32",
+      "change": "+1.77 (+3.13%)",
+      "isUp": true,
+      "per": "149.54",
+      "roe": "11.3%",
+      "forward_per": "-55.36",
+      "pbr": "4.37",
+      "distHigh": "-31.1%",
+      "ytdChange": "24.70%",
+      "distWeek": "-8.2%",
+      "distMonth": "-20.8%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "QBTS",
+      "name": "D-Wave Quantum",
+      "sector": "1.7",
+      "industry": "1.7.1",
+      "feature": "**退火型量子计算商业化先行者**，2025年前三季度营收同比+235%，现金储备超8.36亿美元。Advantage2系统获欧洲客户千万欧元订单，聚焦优化问题商业应用",
+      "tags": [
+        "退火型量子计算机"
+      ],
+      "tag_themes": [
+        {
+          "tag": "退火型量子计算机",
+          "theme_path": [
+            "11. 量子计算",
+            "退火型量子计算机"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "24.47",
+      "change": "-0.22 (-0.89%)",
+      "isUp": false,
+      "per": "-63.61",
+      "roe": "-55.3%",
+      "forward_per": "-63.61",
+      "pbr": "8.05",
+      "distHigh": "-47.7%",
+      "ytdChange": "-13.01%",
+      "distWeek": "-9.9%",
+      "distMonth": "-21.8%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "RGTI",
+      "name": "Rigetti Computing",
+      "sector": "1.7",
+      "industry": "1.7.1",
+      "feature": "**超导量子计算纯玩标的**，英伟达Ising模型发布后股价大涨，与多家国家实验室合作，布局多量子比特超导处理器",
+      "tags": [
+        "超导量子计算机",
+        "量子处理器(QPU)"
+      ],
+      "tag_themes": [
+        {
+          "tag": "超导量子计算机",
+          "theme_path": [
+            "11. 量子计算",
+            "超导量子计算机"
+          ]
+        },
+        {
+          "tag": "量子处理器(QPU)",
+          "theme_path": [
+            "11. 量子计算",
+            "量子处理器(QPU)"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "21.38",
+      "change": "+0.02 (+0.09%)",
+      "isUp": true,
+      "per": "-105.15",
+      "roe": "-57.1%",
+      "forward_per": "-105.15",
+      "pbr": "12.18",
+      "distHigh": "-63.2%",
+      "ytdChange": "-9.41%",
+      "distWeek": "-9.3%",
+      "distMonth": "-23.8%",
+      "trend": "牛市多头",
+      "source": "cache"
+    },
+    {
+      "code": "IBM",
+      "name": "IBM",
+      "sector": "1.7",
+      "industry": "1.7.2",
+      "feature": "**量子计算企业级龙头**，发布Quantum Nighthawk处理器，Qiskit工具链全球领先，参与DARPA量子基准测试计划，目标2026年展示量子优势",
+      "tags": [
+        "超导量子计算机",
+        "量子云服务",
+        "量子纠错"
+      ],
+      "tag_themes": [
+        {
+          "tag": "超导量子计算机",
+          "theme_path": [
+            "11. 量子计算",
+            "超导量子计算机"
+          ]
+        },
+        {
+          "tag": "量子云服务",
+          "theme_path": [
+            "11. 量子计算",
+            "量子云服务"
+          ]
+        },
+        {
+          "tag": "量子纠错",
+          "theme_path": [
+            "11. 量子计算",
+            "量子纠错"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "252.22",
+      "change": "+3.12 (+1.25%)",
+      "isUp": true,
+      "per": "22.32",
+      "roe": "35.8%",
+      "forward_per": "18.75",
+      "pbr": "7.19",
+      "distHigh": "-24.1%",
+      "ytdChange": "-12.34%",
+      "distWeek": "-8.8%",
+      "distMonth": "-24.1%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "688262",
+      "name": "国芯科技",
+      "sector": "1.7",
+      "industry": "1.7.3",
+      "feature": "**RISC-V架构芯片设计龙头**，布局量子安全芯片和后量子密码（PQC）方案，车规级高可靠MCU核心供应商，量子安全+车规双轮驱动",
+      "tags": [
+        "后量子密码",
+        "CPU"
+      ],
+      "tag_themes": [
+        {
+          "tag": "后量子密码",
+          "theme_path": [
+            "11. 量子计算",
+            "后量子密码"
+          ]
+        },
+        {
+          "tag": "CPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "38.85",
+      "change": "-0.35 (-0.89%)",
+      "isUp": false,
+      "per": "--",
+      "roe": "35.8%",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "-11.00%",
+      "distWeek": "-3.7%",
+      "distMonth": "-11.7%",
+      "trend": "牛市多头",
+      "source": "sina"
+    },
+    {
+      "code": "6597",
+      "name": "HPCシステムズ(HPC Systems)",
+      "sector": "1.7",
+      "industry": "1.7.2",
+      "feature": "**高性能计算(HPC)解决方案龙头**，主营**HPC业务（占比64.7%）**和**CTO产业用计算机（占比35.3%）**。布局**量子化学计算软件**、**量子计算机领域业务**及**富岳云端服务**，是日本量子-HPC融合领域核心标的[citation:3][citation:4][citation:5]",
+      "tags": [
+        "量子云服务",
+        "AI应用"
+      ],
+      "tag_themes": [
+        {
+          "tag": "量子云服务",
+          "theme_path": [
+            "11. 量子计算",
+            "量子云服务"
+          ]
+        },
+        {
+          "tag": "AI应用",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "5160.00",
+      "change": "+480.00 (+10.26%)",
+      "isUp": true,
+      "per": "40.99",
+      "roe": "21.2%",
+      "forward_per": "48.18",
+      "pbr": "6.75",
+      "distHigh": "-31.2%",
+      "ytdChange": "186.35%",
+      "distWeek": "-4.1%",
+      "distMonth": "-31.2%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
       "code": "6954",
       "name": "ファナック(发那科)",
       "sector": "2.1",
@@ -4696,6 +4983,39 @@
       "source": "yfinance"
     },
     {
+      "code": "3444",
+      "name": "菊池製作所",
+      "sector": "2.1",
+      "industry": "2.1.1",
+      "feature": "**金属及塑料精密加工企业**，主营**试作开发（金属/树脂模型试制）**和**量产品制造（电子零部件/模具/金型）**，同时布局**机器人相关（肌肉套装/机器人部件）**和**无人机相关**业务[citation:1][citation:3]",
+      "tags": [
+        "工业机器人"
+      ],
+      "tag_themes": [
+        {
+          "tag": "工业机器人",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "1264.00",
+      "change": "+192.00 (+17.91%)",
+      "isUp": true,
+      "per": "147.32",
+      "roe": "0.7%",
+      "forward_per": "173.15",
+      "pbr": "2.55",
+      "distHigh": "-32.8%",
+      "ytdChange": "76.38%",
+      "distWeek": "-7.9%",
+      "distMonth": "-7.9%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
       "code": "SIE",
       "name": "西门子",
       "sector": "2.1",
@@ -4738,17 +5058,17 @@
         }
       ],
       "market_type": "德股",
-      "price": "273.10",
-      "change": "-5.90 (-2.11%)",
+      "price": "272.85",
+      "change": "-6.15 (-2.20%)",
       "isUp": false,
-      "per": "28.21",
+      "per": "28.19",
       "roe": "12.6%",
-      "forward_per": "21.38",
-      "pbr": "3.30",
-      "distHigh": "-2.5%",
-      "ytdChange": "15.68%",
-      "distWeek": "-2.4%",
-      "distMonth": "-2.5%",
+      "forward_per": "21.36",
+      "pbr": "3.29",
+      "distHigh": "-2.6%",
+      "ytdChange": "15.57%",
+      "distWeek": "-2.5%",
+      "distMonth": "-2.6%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -5412,6 +5732,19 @@
       "数字孪生",
       "智能制造解决方案",
       "运动控制系统"
+    ],
+    "11. 量子计算": [
+      "离子阱量子计算机",
+      "超导量子计算机",
+      "光量子计算机",
+      "退火型量子计算机",
+      "量子处理器(QPU)",
+      "量子纠错",
+      "量子云服务",
+      "后量子密码",
+      "量子密钥分发(QKD)",
+      "量子传感",
+      "量子网络"
     ]
   }
 }
