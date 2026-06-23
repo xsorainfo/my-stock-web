@@ -623,6 +623,24 @@
         }
 
         // ============================================================
+        // 打开 kabuyoho 目标股价页面
+        // ============================================================
+        function openTargetPrice(symbol) {
+            // 清理股票代码（去掉 .T .SS .SZ 等后缀）
+            let cleanCode = symbol;
+            if (symbol.includes('.')) {
+                cleanCode = symbol.split('.')[0];
+            }
+            // 日股代码补零到4位（如 3110.T → 3110）
+            if (cleanCode.length === 3 && !isNaN(cleanCode)) {
+                // 3110 已经是4位，不需要补零
+            }
+            // 构建 kabuyoho URL
+            const url = `https://kabuyoho.jp/sp/reportTarget?bcode=${cleanCode}`;
+            window.open(url, 'kabuyoho', 'width=1200,height=800,scrollbars=yes,resizable=yes');
+        }
+
+        // ============================================================
         // 4. 工具函数
         // ============================================================
         function getMarketBadge(type) {
