@@ -639,6 +639,17 @@
             const url = `https://kabuyoho.jp/sp/reportTarget?bcode=${cleanCode}`;
             window.open(url, 'kabuyoho', 'width=1200,height=800,scrollbars=yes,resizable=yes');
         }
+        // ROE 判断函数（4档：优秀/良好/一般/不佳）
+        function judgeROE(roe) {
+            if (!roe || roe === '--' || isNaN(parseFloat(roe))) {
+                return '<span class="val-badge val-normal">--</span>';
+            }
+            const num = parseFloat(roe);
+            if (num >= 15) return `<span class="val-badge val-high" style="background:#d1fae5;color:#065f46;">${roe} 優秀</span>`;
+            if (num >= 10) return `<span class="val-badge val-normal" style="background:#dbeafe;color:#1d4ed8;">${roe} 良好</span>`;
+            if (num >= 5) return `<span class="val-badge val-normal" style="background:#fef3c7;color:#92400e;">${roe} 一般</span>`;
+            return `<span class="val-badge val-low" style="background:#fee2e2;color:#b91c1c;">${roe} 不佳</span>`;
+        }
 
         // ============================================================
         // 4. 工具函数
@@ -790,7 +801,7 @@
                             <tbody>
                                 <tr>
                                     <td>${judgeValuation(stock.per, 'PER')}</td>                                                
-                                    <td style="font-weight: 600; color: ${parseFloat(stock.roe) >= 10 ? 'var(--up-color)' : 'var(--down-color)'};">${stock.roe || '--'}</td>
+                                    <td>${judgeROE(stock.roe)}</td>
                                     <td>${judgeValuation(stock.pbr, 'PBR')}</td>                                            
                                 </tr>
                             </tbody>
