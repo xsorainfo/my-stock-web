@@ -701,15 +701,15 @@
                                                     PER 估值 📊
                                                 </a>
                                             </th>
-                                            <th style="width: 33.33%;">予想PER</th>
-                                            <th style="width: 33.33%;">PBR</th>
+                                            <th style="width: 33.33%;">ROE</th>
+                                            <th style="width: 33.33%;">PBR 溢价</th>
                                             
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>${judgeValuation(stock.per, 'PER')}</td>                                                
-                                            <td>${judgeValuation(stock.forward_per, 'forward_per')}</td>
+                                            <td style="font-weight: 600; color: ${parseFloat(stock.roe) >= 10 ? 'var(--up-color)' : 'var(--down-color)'};">${stock.roe || '--'}</td>
                                             <td>${judgeValuation(stock.pbr, 'PBR')}</td>                                            
                                         </tr>
                                     </tbody>
