@@ -759,18 +759,21 @@
                         <table class="metrics-table" style="margin-bottom: 6px;">
                             <thead>
                                 <tr>
-                                    <th style="width: 25%;">距1周高</th>
-                                    <th style="width: 25%;">距1月高</th>
-                                    <th style="width: 25%;">距52周高</th>
-                                    <th style="width: 25%;">年初以来</th>
+                                    <th style="width: 33.33%;">
+                                        <a href="#" onclick="openTargetPrice('${stock.code}'); return false;" style="color: #2563eb; text-decoration: none; cursor: pointer; border-bottom: 1px dashed #2563eb;">
+                                            PER 估值 📊
+                                        </a>
+                                    </th>
+                                    <th style="width: 33.33%;">ROE</th>
+                                    <th style="width: 33.33%;">PBR 溢价</th>
+                                    
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>${judgeValuation(stock.per, 'PER')}</td>
-                                    <td>${judgeValuation(stock.forward_per, 'forward_per')}</td>
-                                    <td>${judgeValuation(stock.pbr, 'PBR')}</td>
-                                    <td style="color: ${parseFloat(stock.ytdChange) >= 0 ? 'var(--up-color)' : 'var(--down-color)'};">${stock.ytdChange || '--'}</td>
+                                    <td>${judgeValuation(stock.per, 'PER')}</td>                                                
+                                    <td style="font-weight: 600; color: ${parseFloat(stock.roe) >= 10 ? 'var(--up-color)' : 'var(--down-color)'};">${stock.roe || '--'}</td>
+                                    <td>${judgeValuation(stock.pbr, 'PBR')}</td>                                            
                                 </tr>
                             </tbody>
                         </table>
