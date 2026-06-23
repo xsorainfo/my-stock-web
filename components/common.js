@@ -124,7 +124,7 @@ function renderTags(tags) {
 // ============================================================
 function navigateToTheme(tag) {
     const decodedTag = decodeURIComponent(tag);
-    window.open(`pages/sub_ai.html?tag=${encodeURIComponent(decodedTag)}`, '_blank');
+    window.open(`/pages/sub_ai.html?tag=${encodeURIComponent(decodedTag)}`, '_blank');
 }
 
 // ============================================================
