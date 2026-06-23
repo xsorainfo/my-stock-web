@@ -151,6 +151,16 @@
       ]
     },
     {
+      "sector_id": "5.5",
+      "sector_name": "消费品与娱乐（Consumer & Entertainment）",
+      "sector_comment": "面向个人消费者的产品与服务，涵盖IP运营、游戏、玩具、文具、服饰、主题公园等",
+      "industries": [
+        { "industry_id": "5.5.1", "industry_name": "IP运营与授权", "industry_comment": "角色IP商品化、内容授权、联名合作等" },
+        { "industry_id": "5.5.2", "industry_name": "游戏与娱乐", "industry_comment": "游戏开发、动画制作、影视、主题公园等" },
+        { "industry_id": "5.5.3", "industry_name": "消费品制造", "industry_comment": "玩具、文具、服饰、杂货等实体商品" }
+      ]
+    },
+    {
       "sector_id": "6.1",
       "sector_name": "銀行（Banking）",
       "sector_comment": "商业银行、信托银行、地方银行等金融服务",
