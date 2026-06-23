@@ -62,7 +62,7 @@ THEME_MAPPING = {
     # ============================================================
     # 4. 高带宽内存
     # ============================================================
-    "4. 高带宽内存": ["HBM", "GDDR6", "SRAM", "内存接口"],
+    "4. 高带宽内存": ["HBM", "GDDR6", "SRAM", "内存接口", "NAND Flash"]
 
     # ============================================================
     # 5. 先进封装
@@ -133,14 +133,13 @@ WATCHLIST = [
     {"symbol": "600460.SH", "name": "士兰微", "market": "A股", "sector": "1.1", "industry": "1.1.1", "feature": "**国内车规级SiC模块龙头**，SiC MOSFET已迭代至第四代，**主驱模块累计出货超10万颗**，**8英寸产线已通线**，6英寸月产能1万片", "tags": ["碳化硅 (SiC)"]},
 
     # --- 存储/HBM ---
-    {"symbol": "MU", "name": "美光科技", "market": "美股", "sector": "1.1", "industry": "1.1.2", "feature": "**HBM核心供应商**，全球DRAM市占率约25%，AI训练HBM3E内存核心供应商", "tags": ["HBM"]},
+    {"symbol": "MU", "name": "美光科技", "market": "美股", "sector": "1.1", "industry": "1.1.2", "feature": "**全球三大DRAM厂商之一（市占率约25%）**，**HBM3E核心供应商**，已向英伟达H200/B200批量供货。同时布局**GDDR7显存**和**CXL内存池化**技术，AI训练内存绝对龙头，FY2026Q2营收同比+47%创新高", "tags": ["HBM", "GDDR6", "内存接口"]},
     {"symbol": "CY", "name": "赛普拉斯半导体", "market": "美股", "sector": "1.1", "industry": "1.1.2", "feature": "**全球SRAM龙头**，已被英飞凌收购但独立运营，SRAM市占率全球领先，CPU缓存核心供应商", "tags": ["SRAM"]},
-    {"symbol": "RGTI", "name": "Rambus", "market": "美股", "sector": "1.1", "industry": "1.1.2", "feature": "**内存接口与IP龙头**，DDR5内存接口IP全球领先，HBM内存控制器IP核心供应商，AI数据中心内存方案商", "tags": ["内存接口"]},
-    {"symbol": "005930.KS", "name": "三星电子", "market": "韩股", "sector": "1.1", "industry": "1.1.2", "feature": "**全球存储芯片霸主**，DRAM/NAND市占率均超40%，HBM3技术领先，全产业链优势明显", "tags": ["HBM", "GDDR6"]},
-    {"symbol": "000660.KS", "name": "SK海力士", "market": "韩股", "sector": "1.1", "industry": "1.1.2", "feature": "**HBM技术领导者**，HBM3全球市占率超50%，NVIDIA核心HBM供应商，AI训练内存绝对龙头", "tags": ["HBM"]},
-    {"symbol": "285A.T", "name": "キオクシア(铠侠)", "market": "日股", "sector": "1.1", "industry": "1.1.2", "feature": "**全球闪存厂商之一**，NAND Flash市占率约15%，AI存储需求核心受益者", "tags": ["存储"]},
-    {"symbol": "688008.SH", "name": "澜起科技", "market": "A股", "sector": "1.1", "industry": "1.1.2", "feature": "**全球内存接口芯片龙头**，DDR5内存接口芯片市占率全球领先，津逮服务器CPU国产替代核心标的", "tags": ["内存接口", "CPU"]},
-
+    {"symbol": "RGTI", "name": "Rambus", "market": "美股", "sector": "1.1", "industry": "1.1.2", "feature": "**内存接口与IP龙头**，**DDR5内存接口IP全球领先**，同时布局**HBM内存控制器IP**和**CXL互联IP**，AI数据中心内存方案核心供应商", "tags": ["内存接口"]},
+    {"symbol": "005930.KS", "name": "三星电子", "market": "韩股", "sector": "1.1", "industry": "1.1.2", "feature": "**全球存储芯片霸主（DRAM/NAND市占率均超40%）**，**HBM3E技术领先 量产供货英伟达**，同时布局**CXL内存模组**和**LLW DRAM**等新架构。全产业链IDM优势显著，代工+存储+消费电子协同", "tags": ["HBM", "GDDR6"]},
+    {"symbol": "000660.KS", "name": "SK海力士", "market": "韩股", "sector": "1.1", "industry": "1.1.2", "feature": "**HBM技术领导者（HBM3全球市占率超50%）**，**英伟达核心HBM供应商**，HBM3E已批量供货，HBM4正在研发。同时布局**CXL内存**和**PIM存内计算**，AI训练内存绝对龙头", "tags": ["HBM"]},
+    {"symbol": "285A.T", "name": "キオクシア(铠侠)", "market": "日股", "sector": "1.1", "industry": "1.1.2", "feature": "**全球NAND Flash主要厂商（市占率约15%）**，AI存储需求（SSD/企业级存储）核心受益者，与西部数据联合研发**218层3D NAND**技术", "tags": ["NAND Flash", "HBM", "GDDR6", "内存接口"]},
+    {"symbol": "688008.SH", "name": "澜起科技", "market": "A股", "sector": "1.1", "industry": "1.1.2", "feature": "**全球内存接口芯片龙头（DDR5市占率全球领先）**，同时布局**CXL内存扩展控制器**和**津逮服务器CPU**，AI服务器内存带宽瓶颈核心解决方案", "tags": ["内存接口", "CPU"]},
     # ============================================================
     # 赛道1.2：先进制造与设备
     # ============================================================
