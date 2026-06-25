@@ -316,11 +316,14 @@ def fetch_all_data():
             symbol = m["symbol"]
             name = m["name"]
             data_type = m.get("type", "index")  # 默认为 index
+            print(f"🔄 正在获取大盘数据: {symbol} ({name})")
             
             stock = yf.Ticker(symbol, session=session)
             h_df = stock.history(period="1mo")
             h_df = h_df.dropna(subset=['Close'])
-            
+            # 打印数据行数
+            print(f"   📊 {symbol} 获取到 {len(h_df)} 行数据")
+        
             if len(h_df) >= 2:
                 closes = h_df['Close'].tail(2).tolist()
                 current = closes[1]
@@ -342,6 +345,8 @@ def fetch_all_data():
                     "isUp": diff > 0,
                     "type": data_type  # 前端可用
                 })
+            else:
+                print(f"⚠️ {symbol} 数据不足: {len(h_df)} 行")            
             time.sleep(0.1)
         except Exception as e:
             print(f"大盘 {m['name']} 异常: {e}")
