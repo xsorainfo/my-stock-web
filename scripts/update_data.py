@@ -303,50 +303,48 @@ def fetch_all_data():
         "ai_report": "",
         "theme_mapping": THEME_MAPPING  # ⭐ 新增：把主题映射写入 data.json
     }
-    
+        
     session = requests.Session()
     session.headers.update({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'})
     manager = StockDataManager()
 
-# scripts/update_data.py
-
-# 在 fetch_all_data 函数中，修改大盘数据抓取部分
-
-# 1. 抓取大盘数据
-for m in MACRO_LIST:
-    try:
-        symbol = m["symbol"]
-        name = m["name"]
-        data_type = m.get("type", "index")  # 默认为 index
-        
-        stock = yf.Ticker(symbol, session=session)
-        h_df = stock.history(period="1mo")
-        h_df = h_df.dropna(subset=['Close'])
-        
-        if len(h_df) >= 2:
-            closes = h_df['Close'].tail(2).tolist()
-            current = closes[1]
-            prev_close = closes[0]
+    # 在 fetch_all_data 函数中，修改大盘数据抓取部分
+    
+    # 1. 抓取大盘数据
+    for m in MACRO_LIST:
+        try:
+            symbol = m["symbol"]
+            name = m["name"]
+            data_type = m.get("type", "index")  # 默认为 index
             
-            diff = current - prev_close
-            pct = (diff / prev_close) * 100
-            sign = "+" if diff > 0 else ""
+            stock = yf.Ticker(symbol, session=session)
+            h_df = stock.history(period="1mo")
+            h_df = h_df.dropna(subset=['Close'])
             
-            # ⭐ 根据类型添加标签
-            label = ""
-            if data_type == "futures":
-                label = " (期货)"
-            
-            output_data["macro"].append({
-                "name": f"{name}{label}", 
-                "price": f"{current:.2f}",
-                "change": f"{sign}{diff:.2f} ({sign}{pct:.2f}%)", 
-                "isUp": diff > 0,
-                "type": data_type  # 前端可用
-            })
-        time.sleep(0.1)
-    except Exception as e:
-        print(f"大盘 {m['name']} 异常: {e}")
+            if len(h_df) >= 2:
+                closes = h_df['Close'].tail(2).tolist()
+                current = closes[1]
+                prev_close = closes[0]
+                
+                diff = current - prev_close
+                pct = (diff / prev_close) * 100
+                sign = "+" if diff > 0 else ""
+                
+                # ⭐ 根据类型添加标签
+                label = ""
+                if data_type == "futures":
+                    label = " (期货)"
+                
+                output_data["macro"].append({
+                    "name": f"{name}{label}", 
+                    "price": f"{current:.2f}",
+                    "change": f"{sign}{diff:.2f} ({sign}{pct:.2f}%)", 
+                    "isUp": diff > 0,
+                    "type": data_type  # 前端可用
+                })
+            time.sleep(0.1)
+        except Exception as e:
+            print(f"大盘 {m['name']} 异常: {e}")
 
     # 2. 抓取自选个股数据
     for item in WATCHLIST:
