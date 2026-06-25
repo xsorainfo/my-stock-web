@@ -309,6 +309,17 @@ def fetch_all_data():
     manager = StockDataManager()
 
     # 在 fetch_all_data 函数中，修改大盘数据抓取部分
+    # ⭐ 类型对应的标签文字和CSS类
+    BADGE_MAP = {
+        "index": {"label": "", "class": "index"},
+        "forex": {"label": "FX", "class": "forex"},
+        "futures": {"label": "期货", "class": "futures"},
+        "etf": {"label": "ETF", "class": "etf"},
+        "commodity": {"label": "商品", "class": "commodity"},
+        "bond": {"label": "债券", "class": "bond"},
+        "sentiment": {"label": "情绪", "class": "sentiment"},
+        "crypto": {"label": "加密", "class": "crypto"},
+    }
     
     # 1. 抓取大盘数据
     for m in MACRO_LIST:
@@ -334,18 +345,17 @@ def fetch_all_data():
                 pct = (diff / prev_close) * 100
                 sign = "+" if diff > 0 else ""
                 
-                # ⭐ 根据类型添加标签
-                label = ""
-                if data_type == "futures":
-                    # label = " (期货)"
-                    label = ""
+                # ⭐ 根据类型生成标签
+                badge_info = BADGE_MAP.get(data_type, {"label": "", "class": "index"})
                 
                 output_data["macro"].append({
                     "name": f"{name}{label}", 
                     "price": f"{current:.2f}",
                     "change": f"{sign}{diff:.2f} ({sign}{pct:.2f}%)", 
                     "isUp": diff > 0,
-                    "type": data_type  # 前端可用
+                    "type": data_type,  # 前端可用
+                    "badge_label": badge_info["label"],  # 标签文字
+                    "badge_class": badge_info["class"],  # CSS 类名
                 })
             else:
                 print(f"⚠️ {symbol} 数据不足: {len(h_df)} 行")            
