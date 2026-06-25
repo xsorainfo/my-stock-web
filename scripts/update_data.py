@@ -315,8 +315,9 @@ def fetch_all_data():
         try:
             symbol = m["symbol"]
             name = m["name"]
-            data_type = m.get("type", "index")  # 默认为 index
             print(f"🔄 正在获取大盘数据: {symbol} ({name})")
+            data_type = m.get("type", "index")  # 默认为 index
+            
             
             stock = yf.Ticker(symbol, session=session)
             h_df = stock.history(period="1mo")
