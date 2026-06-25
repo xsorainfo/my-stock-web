@@ -349,7 +349,7 @@ def fetch_all_data():
                 badge_info = BADGE_MAP.get(data_type, {"label": "", "class": "index"})
                 
                 output_data["macro"].append({
-                    "name": f"{name}{label}", 
+                    "name": name,  # ✅ 修复：不再使用未定义的 label
                     "price": f"{current:.2f}",
                     "change": f"{sign}{diff:.2f} ({sign}{pct:.2f}%)", 
                     "isUp": diff > 0,
