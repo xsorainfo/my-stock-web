@@ -197,32 +197,29 @@
     // ============================================================
     
     async function loadDashboardData() {
-        try {
-            const response = await fetch('/data/data.json?v=' + new Date().getTime());
-            if (!response.ok) throw new Error('数据加载失败');
-            const data = await response.json();
-
-            document.getElementById('aiReport').innerText = data.ai_report || '💡 数据就绪。';
-
-            // 宏观数据渲染
-            const macroGrid = document.getElementById('macroGrid');
-            macroGrid.innerHTML = '';
-            <!-- 在 index.html 中，macro-card 部分 -->
-            ${data.macro?.forEach(item => {
-                const colorClass = item.isUp ? 'text-up' : 'text-down';
-                const isFutures = item.type === 'futures';
-                html += `
-                    <div class="macro-card ${isFutures ? 'futures-card' : ''}">
-                        <div class="macro-name">
-                            ${item.name}
-                            ${isFutures ? '<span class="futures-badge">期货</span>' : ''}
+            try {
+                const response = await fetch('/data/data.json?v=' + new Date().getTime());
+                if (!response.ok) throw new Error('数据加载失败');
+                const data = await response.json();
+        
+                document.getElementById('aiReport').innerText = data.ai_report || '💡 数据就绪。';
+        
+                // ⭐ 宏观数据渲染（修复）
+                const macroGrid = document.getElementById('macroGrid');
+                macroGrid.innerHTML = data.macro?.map(item => {
+                    const colorClass = item.isUp ? 'text-up' : 'text-down';
+                    const isFutures = item.type === 'futures';
+                    return `
+                        <div class="macro-card ${isFutures ? 'futures-card' : ''}">
+                            <div class="macro-name">
+                                ${item.name}
+                                ${isFutures ? '<span class="futures-badge">期货</span>' : ''}
+                            </div>
+                            <div class="macro-price ${colorClass}">${item.price}</div>
+                            <div class="macro-change ${colorClass}">${item.change}</div>
                         </div>
-                        <div class="macro-price ${colorClass}">${item.price}</div>
-                        <div class="macro-change ${colorClass}">${item.change}</div>
-                    </div>
-                `;
-            })}
-            
+                    `;
+                }).join('') || '';
 
             // 两层分组
             const container = document.getElementById('industryContainer');
