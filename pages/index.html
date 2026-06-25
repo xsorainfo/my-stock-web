@@ -86,22 +86,6 @@
             font-size: 22px;
             font-weight: 700;
         }
-        /* index.html 或 navbar.css 中 */
-        .futures-card {
-            border-left: 2px solid #fbbf24 !important;
-            background: rgba(251, 191, 36, 0.04) !important;
-        }
-        
-        .futures-badge {
-            font-size: 9px;
-            padding: 1px 6px;
-            border-radius: 3px;
-            background: #fbbf24;
-            color: #1e293b;
-            font-weight: 600;
-            margin-left: 4px;
-            display: inline-block;
-        }
 
         /* ===== Sector（一级） ===== */
         .sector-section {
@@ -161,8 +145,7 @@
             letter-spacing: 0.5px;
         }
 
-       
-        /* ===== 股票卡片（覆盖 common.css） ===== */
+        /* ===== 股票卡片 ===== */
         .stock-card .stock-feature {
             min-height: 52px;
         }
@@ -183,7 +166,8 @@
         <h2 class="section-title">AI 半导体与全要素核心标的集群</h2>
         <div id="industryContainer"></div>
     </div>
-     <!-- ⭐ Footer 占位符 -->
+    
+    <!-- ⭐ Footer 占位符 -->
     <div id="footer-placeholder"></div>
 
     <!-- 引入脚本 -->
@@ -197,35 +181,34 @@
     // ============================================================
     
     async function loadDashboardData() {
-            try {
-                const response = await fetch('/data/data.json?v=' + new Date().getTime());
-                if (!response.ok) throw new Error('数据加载失败');
-                const data = await response.json();
-        
-                document.getElementById('aiReport').innerText = data.ai_report || '💡 数据就绪。';
-        
-                // 宏观数据渲染
-                const macroGrid = document.getElementById('macroGrid');
-                macroGrid.innerHTML = data.macro?.map(item => {
-                    const colorClass = item.isUp ? 'text-up' : 'text-down';
-                    const badgeLabel = item.badge_label || '';
-                    const badgeClass = item.badge_class || 'index';
-                    // 只有有标签的才显示 badge
-                    const badgeHtml = badgeLabel ? `<span class="macro-badge ${badgeClass}">${badgeLabel}</span>` : '';
-                    
-                    return `
-                        <div class="macro-card ${badgeClass !== 'index' ? 'macro-card-' + badgeClass : ''}">
-                            <div class="macro-name">
-                                ${item.name}
-                                ${badgeHtml}
-                            </div>
-                            <div class="macro-price ${colorClass}">${item.price}</div>
-                            <div class="macro-change ${colorClass}">${item.change}</div>
-                        </div>
-                    `;
-                }).join('') || '';
+        try {
+            const response = await fetch('/data/data.json?v=' + new Date().getTime());
+            if (!response.ok) throw new Error('数据加载失败');
+            const data = await response.json();
 
-            // 两层分组
+            document.getElementById('aiReport').innerText = data.ai_report || '💡 数据就绪。';
+
+            // ⭐ 宏观数据渲染
+            const macroGrid = document.getElementById('macroGrid');
+            macroGrid.innerHTML = data.macro?.map(item => {
+                const colorClass = item.isUp ? 'text-up' : 'text-down';
+                const badgeLabel = item.badge_label || '';
+                const badgeClass = item.badge_class || 'index';
+                const badgeHtml = badgeLabel ? `<span class="macro-badge ${badgeClass}">${badgeLabel}</span>` : '';
+                
+                return `
+                    <div class="macro-card ${badgeClass !== 'index' ? 'macro-card-' + badgeClass : ''}">
+                        <div class="macro-name">
+                            ${item.name}
+                            ${badgeHtml}
+                        </div>
+                        <div class="macro-price ${colorClass}">${item.price}</div>
+                        <div class="macro-change ${colorClass}">${item.change}</div>
+                    </div>
+                `;
+            }).join('') || '';
+
+            // ⭐ 两层分组
             const container = document.getElementById('industryContainer');
             container.innerHTML = '';
             
@@ -353,6 +336,7 @@
                 
                 container.appendChild(sectorDiv);
             }
+            
         } catch (error) { 
             console.error('加载数据失败:', error);
         }
