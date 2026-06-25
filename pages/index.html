@@ -204,16 +204,20 @@
         
                 document.getElementById('aiReport').innerText = data.ai_report || '💡 数据就绪。';
         
-                // ⭐ 宏观数据渲染（修复）
+                // 宏观数据渲染
                 const macroGrid = document.getElementById('macroGrid');
                 macroGrid.innerHTML = data.macro?.map(item => {
                     const colorClass = item.isUp ? 'text-up' : 'text-down';
-                    const isFutures = item.type === 'futures';
+                    const badgeLabel = item.badge_label || '';
+                    const badgeClass = item.badge_class || 'index';
+                    // 只有有标签的才显示 badge
+                    const badgeHtml = badgeLabel ? `<span class="macro-badge ${badgeClass}">${badgeLabel}</span>` : '';
+                    
                     return `
-                        <div class="macro-card ${isFutures ? 'futures-card' : ''}">
+                        <div class="macro-card ${badgeClass !== 'index' ? 'macro-card-' + badgeClass : ''}">
                             <div class="macro-name">
                                 ${item.name}
-                                ${isFutures ? '<span class="futures-badge">期货</span>' : ''}
+                                ${badgeHtml}
                             </div>
                             <div class="macro-price ${colorClass}">${item.price}</div>
                             <div class="macro-change ${colorClass}">${item.change}</div>
