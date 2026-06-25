@@ -337,7 +337,8 @@ def fetch_all_data():
                 # ⭐ 根据类型添加标签
                 label = ""
                 if data_type == "futures":
-                    label = " (期货)"
+                    # label = " (期货)"
+                    label = ""
                 
                 output_data["macro"].append({
                     "name": f"{name}{label}", 
