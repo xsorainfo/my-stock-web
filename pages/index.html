@@ -74,6 +74,8 @@
             border: 1px solid var(--border-color);
             border-radius: 10px;
             padding: 16px;
+            border-left: 3px solid transparent;
+            transition: border-color 0.2s, background 0.2s;
         }
 
         .macro-name {
@@ -85,6 +87,94 @@
         .macro-price {
             font-size: 22px;
             font-weight: 700;
+        }
+
+        /* ===== 宏观数据卡片 - 带颜色边框 ===== */
+        .macro-card-futures {
+            border-left: 3px solid #f97316 !important;
+            background: rgba(249, 115, 22, 0.05) !important;
+        }
+
+        .macro-card-forex {
+            border-left: 3px solid #3b82f6 !important;
+            background: rgba(59, 130, 246, 0.05) !important;
+        }
+
+        .macro-card-etf {
+            border-left: 3px solid #8b5cf6 !important;
+            background: rgba(139, 92, 246, 0.05) !important;
+        }
+
+        .macro-card-commodity {
+            border-left: 3px solid #f59e0b !important;
+            background: rgba(245, 158, 11, 0.05) !important;
+        }
+
+        .macro-card-bond {
+            border-left: 3px solid #ec4899 !important;
+            background: rgba(236, 72, 153, 0.05) !important;
+        }
+
+        .macro-card-sentiment {
+            border-left: 3px solid #ef4444 !important;
+            background: rgba(239, 68, 68, 0.05) !important;
+        }
+
+        .macro-card-crypto {
+            border-left: 3px solid #14b8a6 !important;
+            background: rgba(20, 184, 166, 0.05) !important;
+        }
+
+        /* ===== Macro Badge 标签样式 ===== */
+        .macro-badge {
+            display: inline-block;
+            font-size: 8px;
+            font-weight: 700;
+            padding: 1px 6px;
+            border-radius: 3px;
+            margin-left: 4px;
+            letter-spacing: 0.5px;
+            vertical-align: middle;
+            line-height: 1.6;
+        }
+
+        .macro-badge.index {
+            display: none;
+        }
+
+        .macro-badge.futures {
+            background: #f97316;
+            color: #ffffff;
+        }
+
+        .macro-badge.forex {
+            background: #3b82f6;
+            color: #ffffff;
+        }
+
+        .macro-badge.etf {
+            background: #8b5cf6;
+            color: #ffffff;
+        }
+
+        .macro-badge.commodity {
+            background: #f59e0b;
+            color: #1e293b;
+        }
+
+        .macro-badge.bond {
+            background: #ec4899;
+            color: #ffffff;
+        }
+
+        .macro-badge.sentiment {
+            background: #ef4444;
+            color: #ffffff;
+        }
+
+        .macro-badge.crypto {
+            background: #14b8a6;
+            color: #ffffff;
         }
 
         /* ===== Sector（一级） ===== */
@@ -188,7 +278,7 @@
 
             document.getElementById('aiReport').innerText = data.ai_report || '💡 数据就绪。';
 
-            // ⭐ 宏观数据渲染
+            // ⭐ 宏观数据渲染（带卡片颜色和标签）
             const macroGrid = document.getElementById('macroGrid');
             macroGrid.innerHTML = data.macro?.map(item => {
                 const colorClass = item.isUp ? 'text-up' : 'text-down';
@@ -196,8 +286,11 @@
                 const badgeClass = item.badge_class || 'index';
                 const badgeHtml = badgeLabel ? `<span class="macro-badge ${badgeClass}">${badgeLabel}</span>` : '';
                 
+                // 卡片类名：macro-card + 颜色类（如果非 index）
+                const cardClass = badgeClass !== 'index' ? `macro-card macro-card-${badgeClass}` : 'macro-card';
+                
                 return `
-                    <div class="macro-card ${badgeClass !== 'index' ? badgeClass + '-card' : ''}">
+                    <div class="${cardClass}">
                         <div class="macro-name">
                             ${item.name}
                             ${badgeHtml}
