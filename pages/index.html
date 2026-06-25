@@ -197,7 +197,7 @@
                 const badgeHtml = badgeLabel ? `<span class="macro-badge ${badgeClass}">${badgeLabel}</span>` : '';
                 
                 return `
-                    <div class="macro-card ${badgeClass !== 'index' ? 'macro-card-' + badgeClass : ''}">
+                    <div class="macro-card ${badgeClass !== 'index' ? badgeClass + '-card' : ''}">
                         <div class="macro-name">
                             ${item.name}
                             ${badgeHtml}
