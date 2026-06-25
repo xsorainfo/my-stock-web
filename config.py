@@ -16,10 +16,15 @@ SOURCE_MAP = {
 }
 
 MACRO_LIST = [
-    {"symbol": "^SOX", "name": "费城半导体指数"},
-    {"symbol": "JPY=X", "name": "美元/日元 (汇率)"},
-    {"symbol": "^N225", "name": "日经 225"},
-    {"symbol": "^GSPC", "name": "标普 500"}
+    # ===== 指数（保留） =====
+    {"symbol": "^SOX", "name": "费城半导体指数", "type": "index"},
+    {"symbol": "^GSPC", "name": "标普 500", "type": "index"},
+    {"symbol": "^N225", "name": "日经 225", "type": "index"},
+    {"symbol": "JPY=X", "name": "美元/日元 (汇率)", "type": "forex"},
+    
+    # ===== 期货（新增） =====
+    {"symbol": "ES=F", "name": "标普 500 期货 (E-Mini)", "type": "futures"},
+    {"symbol": "SOX=F", "name": "费城半导体期货", "type": "futures"},
 ]
 
 DEFAULT_STRATEGY = ["yfinance"]
