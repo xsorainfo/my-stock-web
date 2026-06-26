@@ -46,10 +46,7 @@ MACRO_LIST = [
     {"symbol": "^KS11", "name": "韩国 KOSPI", "type": "index"},
     {"symbol": "^KQ11", "name": "韩国 KOSDAQ", "type": "index"},
     
-    # ===== 中国概念指数（美国上市中概股） =====
-    {"symbol": "^CZH", "name": "NYSE 中国指数（中概股）", "type": "index"},
-    {"symbol": "^NQCNCNY", "name": "NASDAQ 中国指数（人民币）", "type": "index"},
-    
+   
     {"symbol": "^SOX", "name": "费城半导体指数", "type": "index"},
     # ============================================================
     # ETF（紫色）
