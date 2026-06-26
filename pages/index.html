@@ -237,7 +237,64 @@
 
         /* ===== 股票卡片 ===== */
         .stock-card .stock-feature {
-            min-height: 52px;
+            min-height: 52px;        
+        }
+
+        /* ===== 快捷链接 ===== */
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px 16px;
+            padding: 12px 16px;
+            background: #f8fafc;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            margin-bottom: 28px;
+        }
+        
+        .quick-links-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #475569;
+            letter-spacing: 0.5px;
+            margin-right: 4px;
+        }
+        
+        .quick-link {
+            font-size: 12px;
+            color: #2563eb;
+            text-decoration: none;
+            padding: 4px 10px;
+            border-radius: 4px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s ease;
+        }
+        
+        .quick-link:hover {
+            background: #2563eb;
+            color: #ffffff;
+            border-color: #2563eb;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+        }
+        
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .quick-links {
+                gap: 6px 10px;
+                padding: 10px 12px;
+            }
+            .quick-link {
+                font-size: 11px;
+                padding: 3px 8px;
+            }
+            .quick-links-label {
+                font-size: 11px;
+                width: 100%;
+                margin-bottom: 2px;
+            }
         }
     </style>
 </head>
@@ -249,6 +306,16 @@
         <div class="ai-briefboard">
             <div class="ai-title">🤖 首席硬科技策略师 · 盘后多头思维复盘</div>
             <div class="ai-content" id="aiReport">正在读取策略官核心简报流...</div>
+        </div>
+        <!-- ===== 快捷链接 ===== -->
+        <div class="quick-links">
+            <span class="quick-links-label">📌 日本株 分析サイト</span>
+            <a href="https://kabutan.jp/" target="_blank" class="quick-link">株たん (Kabutan)</a>
+            <a href="https://kabuyoho.jp/" target="_blank" class="quick-link">株予報Pro</a>
+            <a href="https://kabuoji3.com/" target="_blank" class="quick-link">株おじさん</a>
+            <a href="https://stocks.finance.yahoo.co.jp/" target="_blank" class="quick-link">Yahoo!ファイナンス</a>
+            <a href="https://www.nikkei.com/markets/" target="_blank" class="quick-link">日本経済新聞</a>
+            <a href="https://www.rakuten-sec.co.jp/" target="_blank" class="quick-link">楽天証券</a>
         </div>
 
         <div class="macro-grid" id="macroGrid"></div>
