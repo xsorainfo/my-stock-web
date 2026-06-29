@@ -181,6 +181,17 @@
       ]
     },
     {
+      "sector_id": "6.3",
+      "sector_name": "医療（Healthcare / Medical）",
+      "sector_comment": "医薬品、医療機器、ヘルスケアサービス、バイオテクノロジー等",
+      "industries": [
+        { "industry_id": "6.3.1", "industry_name": "医薬品（Pharmaceuticals）", "industry_comment": "処方薬、ジェネリック医薬品、OTC医薬品等" },
+        { "industry_id": "6.3.2", "industry_name": "医療機器（Medical Devices）", "industry_comment": "診断機器、治療機器、手術用機器、画像診断装置等" },
+        { "industry_id": "6.3.3", "industry_name": "ヘルスケアサービス（Healthcare Services）", "industry_comment": "病院運営、介護サービス、遠隔医療、医療情報システム等" },
+        { "industry_id": "6.3.4", "industry_name": "バイオテクノロジー（Biotechnology）", "industry_comment": "創薬、遺伝子治療、再生医療、CRISPR等" }
+      ]
+    },
+    {
       "sector_id": "7.1",
       "sector_name": "不動産（Real Estate）",
       "sector_comment": "房地产开发、租赁、管理、REIT等",
