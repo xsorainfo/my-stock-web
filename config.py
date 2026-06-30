@@ -44,33 +44,51 @@ MACRO_LIST = [
     {"symbol": "^FTSE", "name": "富时 100", "type": "index"},
     # ===== 韩国指数（新增） =====
     {"symbol": "^KS11", "name": "韩国 KOSPI", "type": "index"},
-    {"symbol": "^KQ11", "name": "韩国 KOSDAQ", "type": "index"},
     
    
     {"symbol": "^SOX", "name": "费城半导体指数", "type": "index"},
     # ============================================================
     # ETF（紫色）
     # ============================================================
-    {"symbol": "SMH", "name": "半导体 ETF-SMH", "type": "etf"},
-    # 四、半导体细分
-    {"symbol": "SOXX", "name": "iShares半导体ETF-SOXX", "type": "etf", "feature": "**与SMH同为半导体核心ETF**，持仓略有差异，可作分散配置。覆盖全球半导体产业链龙头，是AI基础设施层的基础配置工具"},
+    
+    # ===== 美股行业 ETF（核心） =====
+    {"symbol": "SOXX", "name": "半导体ETF-SOXX", "type": "etf", "feature": "**与SMH同为半导体核心ETF**，持仓略有差异，可作分散配置。覆盖全球半导体产业链龙头，是AI基础设施层的基础配置工具"},
     {"symbol": "CHPS", "name": "AI半导体指数ETF-CHPS", "type": "etf", "feature": "**聚焦AI专用半导体**，区别于传统半导体ETF，持仓更偏向GPU、ASIC、HBM等AI核心芯片，纯度更高"},
     {"symbol": "DRAM", "name": "存储芯片ETF-DRAM", "type": "etf", "feature": "**专注存储芯片赛道**，今年涨幅高达86%，捕捉HBM/DDR5等AI存储需求爆发的结构性机会。AI训练对高带宽内存的需求使存储芯片成为除GPU外的第二大受益环节"},
-
-    # 一、AI全生态与主题类
-    {"symbol": "AIQ", "name": "AI 指数 ETF-AIQ", "type": "etf"},
-    {"symbol": "CHAT", "name": "生成式AI与科技ETF-CHAT", "type": "etf", "feature": "**精准押注生成式AI赛道**，采用主动量化模型分析公司财报电话会议文本，评估与生成式AI的关联度进行选股。聚焦语言模型、内容生成等核心领域，成立以来表现突出"},
-    {"symbol": "AIS", "name": "AI超级周期ETF-AIS", "type": "etf", "feature": "**深耕AI基础设施'卖水人'**，由AI专家委员会拆解构建AI数据中心和芯片的真实成本，沿供应链寻找实质性受益公司。与标普500重叠度低，高度偏向半导体和关键硬件供应商，提供纯正AI基础设施敞口"},
-    {"symbol": "WTAI", "name": "AI与创新基金-WTAI", "type": "etf", "feature": "**覆盖人工智能价值链的主动型ETF**，涵盖芯片、软件、应用等全产业链环节，持仓灵活调整，捕捉AI从技术突破到商业落地的全周期机会"},
-    {"symbol": "AGIX", "name": "人工智能与科技ETF-AGIX", "type": "etf", "feature": "**打通公私界限，捕捉未上市独角兽**，持仓包含Anthropic等非上市明星AI企业，为普通投资者提供通常仅限风投触及的机会。通过内部公允价值委员会对私人持股动态估值"},
+    {"symbol": "SMH", "name": "半导体设备/材料-SMH", "type": "etf"},
+    {"symbol": "TCAI", "name": "AI基础设施ETF-TCAI", "type": "etf", "feature": "**聚焦AI的能源底座**，投资范围超越传统数据中心，延伸至发电企业、电网运营商、建筑技术公司等。AI耗电量激增（预计需3倍扩容）使电力基础设施成为刚需"},
 
     # 二、机器人/物理AI
     {"symbol": "BOTZ", "name": "机器人/AI ETF-BOTZ", "type": "etf"},
     {"symbol": "ROBO", "name": "机器人与自动化指数ETF-ROBO", "type": "etf", "feature": "**持仓更分散的机器人ETF**（权重多落在1-2%之间），避免过度集中风险。覆盖全球机器人与自动化供应链，自2024年初以来表现微幅领先BOTZ"},
     {"symbol": "BOTT", "name": "人形机器人ETF-BOTT", "type": "etf", "feature": "**专注人形机器人赛道**，捕捉人形机器人从概念到量产的投资机会。在AI赋能物理世界的趋势下，人形机器人被视为继工业机器人后的下一个爆发点"},
 
-    # 三、AI能源与基础设施
-    {"symbol": "TCAI", "name": "AI基础设施ETF-TCAI", "type": "etf", "feature": "**聚焦AI的能源底座**，投资范围超越传统数据中心，延伸至发电企业、电网运营商、建筑技术公司等。AI耗电量激增（预计需3倍扩容）使电力基础设施成为刚需"},
+    {"symbol": "XLY", "name": "消費電子製品 XLY", "type": "etf"},
+    {"symbol": "XLI", "name": "産業機械 XLI", "type": "etf"},
+    {"symbol": "XLV", "name": "製薬・医療 XLV", "type": "etf"},
+    {"symbol": "XLF", "name": "金融・保険 XLF", "type": "etf"},
+    {"symbol": "XLE", "name": "石油・ガス XLE", "type": "etf"},
+    {"symbol": "XLU", "name": "電力 XLU", "type": "etf"},
+    {"symbol": "XLP", "name": "生活必需品 XLP", "type": "etf"},
+    {"symbol": "VGT", "name": "情報技術 VGT", "type": "etf"},
+    {"symbol": "ITA", "name": "宇宙・防衛 ITA", "type": "etf"},
+    {"symbol": "IBB", "name": "バイオテクノロジー IBB", "type": "etf"},
+    {"symbol": "IBUY", "name": "Eコマース IBUY", "type": "etf"},
+    {"symbol": "KBE", "name": "銀行 KBE", "type": "etf"},
+    {"symbol": "CARZ", "name": "自動車メーカー CARZ", "type": "etf"},
+    {"symbol": "XRT", "name": "ディスカウントストア XRT", "type": "etf"},
+    {"symbol": "VNQ", "name": "REIT VNQ", "type": "etf"},
+    {"symbol": "XME", "name": "金属鉱業 XME", "type": "etf"},
+    {"symbol": "XHE", "name": "医療機器 XHE", "type": "etf"},
+
+    # 四、半导体细分
+
+    # 一、AI全生态与主题类
+    #{"symbol": "AIQ", "name": "AI 指数 ETF-AIQ", "type": "etf"},
+    #{"symbol": "CHAT", "name": "生成式AI与科技ETF-CHAT", "type": "etf", "feature": "**精准押注生成式AI赛道**，采用主动量化模型分析公司财报电话会议文本，评估与生成式AI的关联度进行选股。聚焦语言模型、内容生成等核心领域，成立以来表现突出"},
+    #{"symbol": "AIS", "name": "AI超级周期ETF-AIS", "type": "etf", "feature": "**深耕AI基础设施'卖水人'**，由AI专家委员会拆解构建AI数据中心和芯片的真实成本，沿供应链寻找实质性受益公司。与标普500重叠度低，高度偏向半导体和关键硬件供应商，提供纯正AI基础设施敞口"},
+    #{"symbol": "WTAI", "name": "AI与创新基金-WTAI", "type": "etf", "feature": "**覆盖人工智能价值链的主动型ETF**，涵盖芯片、软件、应用等全产业链环节，持仓灵活调整，捕捉AI从技术突破到商业落地的全周期机会"},
+    #{"symbol": "AGIX", "name": "人工智能与科技ETF-AGIX", "type": "etf", "feature": "**打通公私界限，捕捉未上市独角兽**，持仓包含Anthropic等非上市明星AI企业，为普通投资者提供通常仅限风投触及的机会。通过内部公允价值委员会对私人持股动态估值"},
 
 
     # 五、科技宽基
