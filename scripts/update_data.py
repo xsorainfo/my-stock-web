@@ -315,6 +315,7 @@ def fetch_all_data():
         "forex": {"label": "FX", "class": "forex"},
         "futures": {"label": "期货", "class": "futures"},
         "etf": {"label": "ETF", "class": "etf"},
+        "j-etf": {"label": "J-ETF", "class": "j-etf"},
         "commodity": {"label": "商品", "class": "commodity"},
         "bond": {"label": "债券", "class": "bond"},
         "sentiment": {"label": "情绪", "class": "sentiment"},
