@@ -61,57 +61,57 @@ MACRO_LIST = [
     {"symbol": "BOTZ", "name": "机器人/AI ETF-BOTZ", "type": "etf"},
     {"symbol": "ROBO", "name": "机器人与自动化指数ETF-ROBO", "type": "etf", "feature": "**持仓更分散的机器人ETF**（权重多落在1-2%之间），避免过度集中风险。覆盖全球机器人与自动化供应链，自2024年初以来表现微幅领先BOTZ"},
     {"symbol": "BOTT", "name": "人形机器人ETF-BOTT", "type": "etf", "feature": "**专注人形机器人赛道**，捕捉人形机器人从概念到量产的投资机会。在AI赋能物理世界的趋势下，人形机器人被视为继工业机器人后的下一个爆发点"},
+    {"symbol": "XHE", "name": "医療機器 XHE", "type": "etf"},
 
-    {"symbol": "XLY", "name": "消費電子製品 XLY", "type": "etf"},
-    {"symbol": "1625.T", "name": "日本・電機精密 ETF", "type": "j-etf"},
-    {"symbol": "XLI", "name": "産業機械 XLI", "type": "etf"},
-    {"symbol": "1624.T", "name": "日本・機械 ETF", "type": "j-etf"},
-
-    {"symbol": "XLB", "name": "原材料 XLB", "type": "etf"},
-    {"symbol": "1620.T", "name": "日本・素材・化学 ETF", "type": "j-etf"},
     
+    {"symbol": "XLY", "name": "消費電子製品 XLY", "type": "etf"},
+    {"symbol": "XLI", "name": "産業機械 XLI", "type": "etf"},
+    {"symbol": "VGT", "name": "情報技術 VGT", "type": "etf"},
+    {"symbol": "XLB", "name": "原材料 XLB", "type": "etf"},    
     {"symbol": "XLV", "name": "製薬・医療 XLV", "type": "etf"},
+
+    
+    {"symbol": "1625.T", "name": "日本・電機精密 ETF", "type": "j-etf"},
+    {"symbol": "1624.T", "name": "日本・機械 ETF", "type": "j-etf"},
+    {"symbol": "1626.T", "name": "日本・情報通信 ETF", "type": "j-etf"},
+    {"symbol": "1620.T", "name": "日本・素材・化学 ETF", "type": "j-etf"},    
     {"symbol": "1621.T", "name": "日本・医薬品 ETF", "type": "j-etf"},
 
+    
     {"symbol": "XLF", "name": "金融・保険 XLF", "type": "etf"},
-    {"symbol": "1632.T", "name": "日本・金融 ETF", "type": "j-etf"},
-    
     {"symbol": "KBE", "name": "銀行 KBE", "type": "etf"},
-    {"symbol": "1631.T", "name": "日本・銀行 ETF", "type": "j-etf"},
-    
     {"symbol": "XLE", "name": "石油・ガス XLE", "type": "etf"},
-    {"symbol": "1618.T", "name": "日本・エネルギー ETF", "type": "j-etf"},
-
     {"symbol": "XLU", "name": "電力 XLU", "type": "etf"},
-    {"symbol": "1627.T", "name": "日本・電力ガス ETF", "type": "j-etf"},
-
-    {"symbol": "XLP", "name": "生活必需品 XLP", "type": "etf"},
-    {"symbol": "1617.T", "name": "日本・食品 ETF", "type": "j-etf"},
-
-    {"symbol": "VGT", "name": "情報技術 VGT", "type": "etf"},
-    {"symbol": "1626.T", "name": "日本・情報通信 ETF", "type": "j-etf"},
-
     {"symbol": "ITA", "name": "宇宙・防衛 ITA", "type": "etf"},
+
+    
+    {"symbol": "1632.T", "name": "日本・金融 ETF", "type": "j-etf"},    
+    {"symbol": "1631.T", "name": "日本・銀行 ETF", "type": "j-etf"},    
+    {"symbol": "1618.T", "name": "日本・エネルギー ETF", "type": "j-etf"},
+    {"symbol": "1627.T", "name": "日本・電力ガス ETF", "type": "j-etf"},
     {"symbol": "513A.T", "name": "防衛テック ETF", "type": "j-etf"},
 
-    {"symbol": "IBB", "name": "バイオテクノロジー IBB", "type": "etf"},
-    {"symbol": "IBUY", "name": "Eコマース IBUY", "type": "etf"},
-    
-    {"symbol": "CARZ", "name": "自動車メーカー CARZ", "type": "etf"},
-    {"symbol": "1621.T", "name": "日本・自動車 ETF", "type": "j-etf"},
 
+    
+    {"symbol": "XLP", "name": "生活必需品 XLP", "type": "etf"},
+    {"symbol": "IBB", "name": "バイオテクノロジー IBB", "type": "etf"},
+    {"symbol": "CARZ", "name": "自動車メーカー CARZ", "type": "etf"},
     {"symbol": "XRT", "name": "ディスカウントストア XRT", "type": "etf"},
+    {"symbol": "XME", "name": "金属鉱業 XME", "type": "etf"},
+
+    
+    {"symbol": "1617.T", "name": "日本・食品 ETF", "type": "j-etf"},
+    {"symbol": "IBUY", "name": "Eコマース IBUY", "type": "etf"},    
+    {"symbol": "1621.T", "name": "日本・自動車 ETF", "type": "j-etf"},
     {"symbol": "1630.T", "name": "日本・小売 ETF", "type": "j-etf"},
+    {"symbol": "1623.T", "name": "日本・鉄鋼非鉄 ETF", "type": "j-etf"},
 
     
     {"symbol": "VNQ", "name": "不動産 VNQ", "type": "etf"},
     {"symbol": "1633.T", "name": "日本・不動産 ETF", "type": "j-etf"},
     {"symbol": "1619.T", "name": "日本・建設・資材 ETF", "type": "j-etf"},
 
-    {"symbol": "XME", "name": "金属鉱業 XME", "type": "etf"},
-    {"symbol": "1623.T", "name": "日本・鉄鋼非鉄 ETF", "type": "j-etf"},
 
-    {"symbol": "XHE", "name": "医療機器 XHE", "type": "etf"},
 
     # ===== 日本业种 ETF（新增） =====    
     {"symbol": "1629.T", "name": "日本・商社・卸売 ETF", "type": "j-etf"},
