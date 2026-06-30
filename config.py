@@ -41,7 +41,6 @@ MACRO_LIST = [
     {"symbol": "^N225", "name": "日经 225", "type": "index"},
     {"symbol": "^IXIC", "name": "纳斯达克综合", "type": "index"},
     {"symbol": "^HSI", "name": "恒生指数", "type": "index"},
-    {"symbol": "^FTSE", "name": "富时 100", "type": "index"},
     # ===== 韩国指数（新增） =====
     {"symbol": "^KS11", "name": "韩国 KOSPI", "type": "index"},
     
@@ -147,6 +146,7 @@ MACRO_LIST = [
     # ============================================================
     # 指数（无标签）
     # ============================================================
+    {"symbol": "^FTSE", "name": "富时 100", "type": "index"},
     {"symbol": "^GSPC", "name": "标普 500", "type": "index"},
     {"symbol": "^GDAXI", "name": "德国 DAX", "type": "index"},
     {"symbol": "^FCHI", "name": "法国 CAC 40", "type": "index"},
