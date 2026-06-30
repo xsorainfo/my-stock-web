@@ -60,6 +60,56 @@
             font-size: 14px;
             color: #334155;
         }
+        /* ===== 宏观数据折叠 ===== */
+        .macro-toggle {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            user-select: none;
+            padding: 8px 16px;
+            background: #f1f5f9;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            transition: background 0.2s;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .macro-toggle:hover {
+            background: #e2e8f0;
+        }
+        
+        .macro-toggle .arrow {
+            font-size: 12px;
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+        
+        .macro-toggle .arrow.open {
+            transform: rotate(90deg);
+        }
+        
+        .macro-toggle .label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1e293b;
+        }
+        
+        .macro-toggle .count {
+            font-size: 12px;
+            color: #94a3b8;
+            margin-left: auto;
+        }
+        
+        .macro-grid-wrapper {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.4s ease;
+        }
+        
+        .macro-grid-wrapper.open {
+            max-height: 5000px;
+        }
 
         /* ===== 宏观数据 ===== */
         .macro-grid {
@@ -318,7 +368,16 @@
             <a href="https://www.rakuten-sec.co.jp/" target="_blank" class="quick-link">楽天証券</a>
         </div>
 
-        <div class="macro-grid" id="macroGrid"></div>
+       
+        <!-- ⭐ 宏观数据（折叠） -->
+        <div class="macro-toggle" id="macroToggle">
+            <span class="arrow" id="macroArrow">▶</span>
+            <span class="label">📊 マクロ指標・業種ETF</span>
+            <span class="count" id="macroCount"></span>
+        </div>
+        <div class="macro-grid-wrapper" id="macroWrapper">
+            <div class="macro-grid" id="macroGrid"></div>
+        </div>
 
         <h2 class="section-title">AI 半导体与全要素核心标的集群</h2>
         <div id="industryContainer"></div>
@@ -367,6 +426,19 @@
                     </div>
                 `;
             }).join('') || '';
+
+            // ⭐ 更新计数和折叠状态
+            const totalMacro = data.macro?.length || 0;
+            document.getElementById('macroCount').textContent = `(${totalMacro})`;
+            
+            // ⭐ 默认展开（或收起）
+            const wrapper = document.getElementById('macroWrapper');
+            const arrow = document.getElementById('macroArrow');
+            // 如果指标少于等于 6 个，默认展开；多于 6 个默认收起
+            if (totalMacro <= 6) {
+                wrapper.classList.add('open');
+                arrow.classList.add('open');
+            }
 
             // ⭐ 两层分组
             const container = document.getElementById('industryContainer');
@@ -501,6 +573,13 @@
             console.error('加载数据失败:', error);
         }
     }
+    // ⭐ 宏观数据折叠切换
+    document.getElementById('macroToggle').addEventListener('click', function() {
+        const wrapper = document.getElementById('macroWrapper');
+        const arrow = document.getElementById('macroArrow');
+        wrapper.classList.toggle('open');
+        arrow.classList.toggle('open');
+    });
 
     window.onload = async function() {
         await loadSectorMapping();
