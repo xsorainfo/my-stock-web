@@ -71,6 +71,16 @@
       ]
     },
     {
+      "sector_id": "1.8",
+      "sector_name": "电力与储能（Power & Energy Storage）",
+      "sector_comment": "负责「让AI集群跑得动」的电力供应与储能系统，包括蓄电池、电力管理、UPS等",
+      "industries": [
+        { "industry_id": "1.8.1", "industry_name": "蓄电池/储能电池", "industry_comment": "AI数据中心备用电源核心，含锂电、钠电、固态电池等" },
+        { "industry_id": "1.8.2", "industry_name": "电力系统/配电", "industry_comment": "电网、变压器、配电柜、UPS等电力基础设施" },
+        { "industry_id": "1.8.3", "industry_name": "电源管理芯片", "industry_comment": "PMIC、DC-DC转换器，AI服务器电源管理核心" }
+      ]
+    },
+    {
       "sector_id": "2.1",
       "sector_name": "工业自动化与机器人",
       "sector_comment": "机器人制造",
