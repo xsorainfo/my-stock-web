@@ -43,11 +43,14 @@
     {
       "sector_id": "1.5",
       "sector_name": "基础设施与能源（Infrastructure & Energy）",
-      "sector_comment": "负责「让千卡/万卡集群跑得动、不烧掉」",
+      "sector_comment": "负责「让千卡/万卡集群跑得动、不烧掉」，覆盖电力、储能、散热、IDC全栈",
       "industries": [
         { "industry_id": "1.5.1", "industry_name": "电力系统", "industry_comment": "GPU集群功耗极大，涉及电源管理、UPS" },
         { "industry_id": "1.5.2", "industry_name": "液冷/风冷散热", "industry_comment": "解决热密度问题，直接影响集群稳定性" },
-        { "industry_id": "1.5.3", "industry_name": "数据中心（IDC）建设与运维", "industry_comment": "机房、机柜、综合布线、被动元器件配套" }
+        { "industry_id": "1.5.3", "industry_name": "数据中心（IDC）建设与运维", "industry_comment": "机房、机柜、综合布线、被动元器件配套" },
+        { "industry_id": "1.5.4", "industry_name": "蓄电池/储能电池", "industry_comment": "AI数据中心备用电源核心，含锂电、钠电、固态电池等" },
+        { "industry_id": "1.5.5", "industry_name": "配电与电网", "industry_comment": "变压器、配电柜、智能电网等电力基础设施" },
+        { "industry_id": "1.5.6", "industry_name": "电源管理芯片", "industry_comment": "PMIC、DC-DC转换器，AI服务器电源管理核心" }
       ]
     },
     {
@@ -68,16 +71,6 @@
         { "industry_id": "1.7.1", "industry_name": "量子硬件（量子处理器/QPU）", "industry_comment": "超导、离子阱、光量子、退火等多种技术路线" },
         { "industry_id": "1.7.2", "industry_name": "量子软件与云服务", "industry_comment": "量子算法、编译器、云平台（Azure Quantum/AWS Braket等）" },
         { "industry_id": "1.7.3", "industry_name": "量子安全/后量子密码", "industry_comment": "抗量子加密、量子密钥分发（QKD）" }
-      ]
-    },
-    {
-      "sector_id": "1.8",
-      "sector_name": "电力与储能（Power & Energy Storage）",
-      "sector_comment": "负责「让AI集群跑得动」的电力供应与储能系统，包括蓄电池、电力管理、UPS等",
-      "industries": [
-        { "industry_id": "1.8.1", "industry_name": "蓄电池/储能电池", "industry_comment": "AI数据中心备用电源核心，含锂电、钠电、固态电池等" },
-        { "industry_id": "1.8.2", "industry_name": "电力系统/配电", "industry_comment": "电网、变压器、配电柜、UPS等电力基础设施" },
-        { "industry_id": "1.8.3", "industry_name": "电源管理芯片", "industry_comment": "PMIC、DC-DC转换器，AI服务器电源管理核心" }
       ]
     },
     {
