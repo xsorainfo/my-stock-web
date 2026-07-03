@@ -421,6 +421,10 @@
             // ⭐ 宏观数据渲染（带卡片颜色和标签）
             const macroGrid = document.getElementById('macroGrid');
             macroGrid.innerHTML = data.macro?.map(item => {
+                // ⭐ 箭头：上涨用 ↑，下跌用 ↓
+                const arrow = item.isUp ? '↑' : '↓';
+                // ⭐ 箭头颜色直接写在行内样式（红色上涨，绿色下跌）
+                const arrowColor = item.isUp ? '#ef4444' : '#10b981';
                 const colorClass = item.isUp ? 'text-up' : 'text-down';
                 const badgeLabel = item.badge_label || '';
                 const badgeClass = item.badge_class || 'index';
@@ -436,7 +440,10 @@
                             ${badgeHtml}
                         </div>
                         <div class="macro-price ${colorClass}">${item.price}</div>
-                        <div class="macro-change ${colorClass}">${item.change}</div>
+                        <div class="macro-change ${colorClass}">
+                            <span style="color: ${arrowColor};">${arrow}</span> ${item.change}
+                        </div>
+                        
                     </div>
                 `;
             }).join('') || '';
