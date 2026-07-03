@@ -164,6 +164,17 @@
       ]
     },
     {
+      "sector_id": "5.6",
+      "sector_name": "機械製造（Machinery Manufacturing）",
+      "sector_comment": "产业机械、建设机械、机床、工业车辆、纺织机械等",
+      "industries": [
+        { "industry_id": "5.6.1", "industry_name": "产业机械（Industrial Machinery）", "industry_comment": "各种产业用机械设备的制造" },
+        { "industry_id": "5.6.2", "industry_name": "建设机械（Construction Machinery）", "industry_comment": "挖掘机、起重机、推土机等" },
+        { "industry_id": "5.6.3", "industry_name": "机床（Machine Tools）", "industry_comment": "CNC机床、切削加工设备等" },
+        { "industry_id": "5.6.4", "industry_name": "工业车辆（Industrial Vehicles）", "industry_comment": "叉车、物流搬运车辆等" }
+      ]
+    },
+    {
       "sector_id": "6.1",
       "sector_name": "銀行（Banking）",
       "sector_comment": "商业银行、信托银行、地方银行等金融服务",
