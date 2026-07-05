@@ -409,13 +409,14 @@
             window.open(url, '_blank');
         }
 
+
         // ============================================================
-        // 3. 渲染左侧菜单（三级）
+        // 渲染左侧菜单（三级）
         // ============================================================
         function renderSidebar(themeMapping, stocks) {
             const sidebar = document.getElementById('sidebar');
             sidebar.innerHTML = '';
-
+        
             // 构建 tag → stocks 索引
             const tagStockMap = {};
             stocks.forEach(stock => {
@@ -429,26 +430,29 @@
                     });
                 }
             });
-
+        
             // 遍历一级分类
             for (const [level1Key, level1Value] of Object.entries(themeMapping)) {
                 if (typeof level1Value !== 'object' || Array.isArray(level1Value)) continue;
-
-                const groupDiv = document.createElement('div');
-                groupDiv.className = 'menu-group';
-
-                // ---- 一级菜单头 ----
+        
+                const menuDiv = document.createElement('div');
+                menuDiv.className = 'menu-level1';
+        
+                // ---- 统计该一级下所有股票总数 ----
                 let totalCount = 0;
+                const allLevel1Tags = [];
                 for (const subTags of Object.values(level1Value)) {
                     if (Array.isArray(subTags)) {
                         subTags.forEach(tag => {
+                            allLevel1Tags.push(tag);
                             if (tagStockMap[tag]) totalCount += tagStockMap[tag].length;
                         });
                     }
                 }
-
+        
+                // ---- 一级菜单头 ----
                 const header = document.createElement('div');
-                header.className = 'menu-group-header';
+                header.className = 'menu-level1-header';
                 header.dataset.level1 = level1Key;
                 header.innerHTML = `
                     <span class="icon">📂</span>
@@ -456,49 +460,87 @@
                     <span class="count">(${totalCount})</span>
                     <span class="arrow">▶</span>
                 `;
-
+        
+                // ⭐ 点击一级菜单：展开/收起 + 显示该一级下所有股票
                 header.addEventListener('click', function() {
                     const container = this.nextElementSibling;
                     const isOpen = container.classList.contains('open');
                     container.classList.toggle('open');
                     this.querySelector('.arrow').classList.toggle('open');
+                    
+                    // ⭐ 无论展开还是收起，都显示该一级下所有股票
+                    const level1Key = this.dataset.level1;
+                    const allTags = getAllTagsForLevel1(level1Key, themeMapping);
+                    
+                    document.querySelectorAll('.menu-level1-header').forEach(el => el.classList.remove('active'));
+                    document.querySelectorAll('.menu-level2-header').forEach(el => el.classList.remove('active'));
+                    document.querySelectorAll('.menu-level3-item').forEach(el => el.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    document.getElementById('pageTitle').textContent = `📂 ${level1Key}`;
+                    displayStocksByTags(allTags);
                 });
-
-                groupDiv.appendChild(header);
-
+        
+                menuDiv.appendChild(header);
+        
                 // ---- 二级菜单容器 ----
                 const level2Container = document.createElement('div');
                 level2Container.className = 'menu-level2-container';
-
+        
                 // 遍历二级分类
                 for (const [level2Key, level2Tags] of Object.entries(level1Value)) {
                     if (!Array.isArray(level2Tags)) continue;
-
+        
                     let level2Count = 0;
                     level2Tags.forEach(tag => {
                         if (tagStockMap[tag]) level2Count += tagStockMap[tag].length;
                     });
-
+        
                     if (level2Count === 0) continue;
-
+        
                     // ---- 二级菜单头 ----
                     const level2Header = document.createElement('div');
                     level2Header.className = 'menu-level2-header';
+                    level2Header.dataset.level1 = level1Key;
+                    level2Header.dataset.level2 = level2Key;
                     level2Header.innerHTML = `
                         <span>📁 ${level2Key}</span>
                         <span class="count">${level2Count}</span>
                         <span class="arrow">▶</span>
                     `;
-
+        
+                    // ⭐ 点击二级菜单：展开/收起三级 + 显示该二级下所有股票
+                    level2Header.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        
+                        const container = this.nextElementSibling;
+                        const isOpen = container.classList.contains('open');
+                        container.classList.toggle('open');
+                        this.querySelector('.arrow').classList.toggle('open');
+                        
+                        // ⭐ 显示该二级下所有股票
+                        const level1Key = this.dataset.level1;
+                        const level2Key = this.dataset.level2;
+                        const level2Tags = themeMapping[level1Key][level2Key] || [];
+                        
+                        document.querySelectorAll('.menu-level2-header').forEach(el => el.classList.remove('active'));
+                        document.querySelectorAll('.menu-level1-header').forEach(el => el.classList.remove('active'));
+                        document.querySelectorAll('.menu-level3-item').forEach(el => el.classList.remove('active'));
+                        this.classList.add('active');
+                        
+                        document.getElementById('pageTitle').textContent = `📂 ${level1Key} › ${level2Key}`;
+                        displayStocksByTags(level2Tags);
+                    });
+        
                     // ---- 三级菜单容器 ----
                     const level3Container = document.createElement('div');
                     level3Container.className = 'menu-level3-container';
-
+        
                     // 遍历三级标签
                     level2Tags.forEach(tag => {
                         const count = tagStockMap[tag] ? tagStockMap[tag].length : 0;
                         if (count === 0) return;
-
+        
                         const item = document.createElement('div');
                         item.className = 'menu-level3-item';
                         item.dataset.tag = tag;
@@ -507,57 +549,62 @@
                             <span>${tag}</span>
                             <span class="count">${count}</span>
                         `;
-
-                        item.addEventListener('click', function() {
+        
+                        // ⭐ 点击三级菜单：只显示该 tag 的股票
+                        item.addEventListener('click', function(e) {
+                            e.stopPropagation();
+                            
                             document.querySelectorAll('.menu-level3-item').forEach(el => el.classList.remove('active'));
                             document.querySelectorAll('.menu-level2-header').forEach(el => el.classList.remove('active'));
+                            document.querySelectorAll('.menu-level1-header').forEach(el => el.classList.remove('active'));
                             this.classList.add('active');
-
+        
                             const tagName = this.dataset.tag;
-                            const level1 = this.closest('.menu-group').querySelector('.menu-group-header').dataset.level1;
-
-                            currentSelected = { level1, tag: tagName };
+                            const level1 = this.closest('.menu-level1').querySelector('.menu-level1-header').dataset.level1;
+        
                             document.getElementById('pageTitle').textContent = `🏷️ ${level1} › ${tagName}`;
                             displayStocksByTag(tagName);
                         });
-
+        
                         level3Container.appendChild(item);
                     });
-
-                    // 点击二级标题切换三级展开
-                    level2Header.addEventListener('click', function() {
-                        const container = this.nextElementSibling;
-                        const isOpen = container.classList.contains('open');
-                        container.classList.toggle('open');
-                        this.querySelector('.arrow').classList.toggle('open');
-                    });
-
+        
                     level2Container.appendChild(level2Header);
                     level2Container.appendChild(level3Container);
                 }
-
-                groupDiv.appendChild(level2Container);
-                sidebar.appendChild(groupDiv);
+        
+                menuDiv.appendChild(level2Container);
+                sidebar.appendChild(menuDiv);
             }
-
+        
             // 默认展开第一个一级菜单
-            const firstHeader = sidebar.querySelector('.menu-group-header');
+            const firstHeader = sidebar.querySelector('.menu-level1-header');
             if (firstHeader) {
                 const container = firstHeader.nextElementSibling;
                 container.classList.add('open');
                 firstHeader.querySelector('.arrow').classList.add('open');
+                // 默认点击第一个一级菜单显示所有股票
+                setTimeout(() => { firstHeader.click(); }, 100);
+            }
+        }
 
-                const firstLevel2Header = container.querySelector('.menu-level2-header');
-                if (firstLevel2Header) {
-                    setTimeout(() => {
-                        firstLevel2Header.click();
-                        const firstLevel3 = firstLevel2Header.nextElementSibling.querySelector('.menu-level3-item');
-                        if (firstLevel3) {
-                            firstLevel3.click();
-                        }
-                    }, 100);
+        // ============================================================
+        // 获取一级菜单下的所有 tag
+        // ============================================================
+        function getAllTagsForLevel1(level1Key, themeMapping) {
+            const tags = [];
+            const level1Value = themeMapping[level1Key];
+            if (!level1Value) return tags;
+            if (Array.isArray(level1Value)) {
+                return level1Value;
+            } else if (typeof level1Value === 'object') {
+                for (const subValue of Object.values(level1Value)) {
+                    if (Array.isArray(subValue)) {
+                        tags.push(...subValue);
+                    }
                 }
             }
+            return tags;
         }
 
         // ============================================================
