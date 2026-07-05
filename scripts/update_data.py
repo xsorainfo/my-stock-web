@@ -579,7 +579,6 @@ def fetch_all_data():
                 "industry": item.get("industry", "其他"),
                 "feature": item["feature"],
                 "tags": raw_tags,                    # ⭐ 原始 tags（显示在卡片上）
-                "merged_tags": merged_tags,          # ⭐ 合并后的 tags（用于左侧菜单匹配）
                 "tag_themes": tag_theme_list,
                 "market_type": market_type,
                 "price": f"{current_price:.2f}",
