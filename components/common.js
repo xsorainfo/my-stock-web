@@ -199,7 +199,7 @@ function renderTags(stock) {
 // ============================================================
 // 修改后的 renderTags 函数 - 使用 display_tags 匹配主题
 // ============================================================
-function renderTags(tags, stockTagThemes, displayTags) {
+function renderTagsOld(tags, stockTagThemes, displayTags) {
     if (!tags || tags.length === 0) return '';
     
     // 如果没有 displayTags，使用原始 tags
