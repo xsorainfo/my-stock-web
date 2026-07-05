@@ -17,6 +17,7 @@ from theme_mapping import THEME_MAPPING  # ⭐ 从 theme_mapping.py 导入
 # ============================================================
 # ⭐ 从 THEME_MAPPING 自动构建二级→三级映射
 # ============================================================
+
 def build_level2_to_level3(theme_mapping):
     """
     从 THEME_MAPPING 自动构建二级标签 → 三级标签列表的映射
@@ -35,7 +36,7 @@ def build_level2_to_level3(theme_mapping):
     return level2_to_level3
 
 
-# ⭐ 自动生成展开映射（无需手动维护）
+# ⭐ 自动生成展开映射
 LEVEL2_TO_LEVEL3 = build_level2_to_level3(THEME_MAPPING)
 
 # ============================================================
@@ -43,24 +44,23 @@ LEVEL2_TO_LEVEL3 = build_level2_to_level3(THEME_MAPPING)
 # ============================================================
 def merge_tags(tags):
     """
-    将细粒度 tag 合并为大的分类标签
-    同时将二级标签展开为三级标签列表
+    将二级标签展开为三级标签列表
+    例如: ["第三代半导体"] → ["SiC", "碳化硅", "GaN", ...]
     """
     if not tags:
         return []
     
     result = []
     for tag in tags:
-        # 1. 先检查是否需要展开为三级标签（自动从 THEME_MAPPING 生成）
+        # 检查是否需要展开为三级标签
         if tag in LEVEL2_TO_LEVEL3:
             for expanded_tag in LEVEL2_TO_LEVEL3[tag]:
                 if expanded_tag not in result:
                     result.append(expanded_tag)
         else:
-            # 2. 再检查是否在合并映射中
-            merged_tag = TAG_MERGE_MAP.get(tag, tag)
-            if merged_tag not in result:
-                result.append(merged_tag)
+            # 不需要展开，直接保留
+            if tag not in result:
+                result.append(tag)
     
     return result
 
