@@ -199,8 +199,10 @@ function renderTags(tags, stockTagThemes, displayTags) {
         let displayText = displayTag;
         let hasPath = false;
         
-        if (foundPath && foundPath.length >= 2) {
-            // ⭐ 显示为：一级主题 › 映射后的标签
+        if (foundPath && foundPath.length >= 3) {
+            displayText = `${foundPath[0]} › ${foundPath[1]} › ${displayTag}`;
+            hasPath = true;
+        } else if (foundPath && foundPath.length >= 2) {
             displayText = `${foundPath[0]} › ${displayTag}`;
             hasPath = true;
         }
