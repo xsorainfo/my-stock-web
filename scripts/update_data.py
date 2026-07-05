@@ -1,3 +1,5 @@
+# scripts/update_data.py
+
 import sys
 import os
 import json
@@ -6,11 +8,31 @@ import time
 import random
 import requests
 
-# ⭐ 添加项目根目录到 Python 路径（让 import config 能找到）
-#    os.path.dirname(os.path.dirname(__file__)) 会得到项目根目录
+# ⭐ 添加项目根目录到 Python 路径
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from config import MACRO_LIST, WATCHLIST, DEFAULT_STRATEGY, SOURCE_MAP, THEME_MAPPING
+from config.tag_merge import TAG_MERGE_MAP  # ⭐ 导入 tag 合并映射
+
+
+# ============================================================
+# ⭐ Tag 合并函数
+# ============================================================
+def merge_tags(tags):
+    """
+    将细粒度 tag 合并为大的分类标签
+    """
+    if not tags:
+        return []
+    
+    merged = []
+    for tag in tags:
+        # 如果在合并映射中，替换为大的分类标签
+        merged_tag = TAG_MERGE_MAP.get(tag, tag)
+        if merged_tag not in merged:
+            merged.append(merged_tag)
+    
+    return merged
 
 
 def build_tag_theme_mapping(theme_mapping):
@@ -352,7 +374,7 @@ def fetch_all_data():
                 output_data["macro"].append({
                     "name": name,  # ✅ 修复：不再使用未定义的 label
                     "price": f"{current:.2f}",
-                    "change": f"{sign}{diff:.2f} ({sign}{pct:.2f}%)", 
+                    "change": f"{sign}{diff:.2f} ({sign}{pct:.2f}%)",
                     "isUp": diff > 0,
                     "type": data_type,  # 前端可用
                     "badge_label": badge_info["label"],  # 标签文字
@@ -441,6 +463,7 @@ def fetch_all_data():
 
             # 基本面指标
             per_display, forward_per_display, pbr_display = "--", "--", "--"
+            roe_display = "--"
             
             if market_type == "A股":
                 per = info.get('trailingPE', 0)
@@ -452,23 +475,6 @@ def fetch_all_data():
             else:
                 try:
                     stock_info = stock.info
-
-                    
-                    price = (
-                        stock_info.get("currentPrice")
-                        or stock_info.get("regularMarketPrice")
-                    )
-                    
-                    eps = stock_info.get("forwardEps")
-                    
-                    if price and eps:
-                        print("price / forwardEps =", round(price / eps, 4))
-                    
-                    print("=" * 60)
-
-
-
-                    
                     if isinstance(stock_info, dict):
                         high_52w = stock_info.get('fiftyTwoWeekHigh')
                         if high_52w and float(high_52w) >= current_price:
@@ -483,7 +489,7 @@ def fetch_all_data():
                         if forward_per and isinstance(forward_per, (int, float)): 
                             forward_per_display = f"{forward_per:.2f}"
                             
-                        # ⭐ 新增：ROE（自己資本利益率）
+                        # ⭐ ROE（自己資本利益率）
                         roe = stock_info.get('returnOnEquity')
                         if roe and isinstance(roe, (int, float)):
                             roe_display = f"{roe * 100:.1f}%"
@@ -500,9 +506,10 @@ def fetch_all_data():
             ma20 = h_df['Close'].tail(20).mean() if len(h_df) >= 20 else current_price
             trend_label = "牛市多头" if current_price >= ma20 else "熊市空头"
 
-            # ⭐ 为每个 tag 单独查找 theme_path
-            tags = item.get("tags", [])
-            tag_theme_list = get_theme_paths_for_tags(tags, TAG_THEME_MAP)
+            # ⭐ 获取原始 tags 并合并
+            raw_tags = item.get("tags", [])
+            merged_tags = merge_tags(raw_tags)
+            tag_theme_list = get_theme_paths_for_tags(merged_tags, TAG_THEME_MAP)
             
             # 调试输出
             if tag_theme_list:
@@ -515,24 +522,25 @@ def fetch_all_data():
             # 构建股票数据对象
             stock_entry = {
                 "code": symbol.split('.')[0] if '.' in symbol else symbol,
-                "name": item["name"], 
+                "name": item["name"],
                 "sector": item.get("sector", "未分类板块"),
                 "industry": item.get("industry", "其他"),
                 "feature": item["feature"],
-                "tags": tags,
+                "tags": raw_tags,                    # ⭐ 原始 tags（显示在卡片上）
+                "merged_tags": merged_tags,          # ⭐ 合并后的 tags（用于左侧菜单匹配）
                 "tag_themes": tag_theme_list,
                 "market_type": market_type,
-                "price": f"{current_price:.2f}", 
-                "change": f"{sign}{diff:.2f} ({sign}{percent:.2f}%)", 
+                "price": f"{current_price:.2f}",
+                "change": f"{sign}{diff:.2f} ({sign}{percent:.2f}%)",
                 "isUp": diff > 0,
-                "per": per_display, 
-                "roe": roe_display,      # ⭐ 新增
-                "forward_per": forward_per_display, 
-                "pbr": pbr_display, 
-                "distHigh": dist_high_str,       
-                "ytdChange": f"{ytd_change:.2f}%",  # ⭐ 新增
-                "distWeek": dist_week_str,       
-                "distMonth": dist_month_str,     
+                "per": per_display,
+                "roe": roe_display,
+                "forward_per": forward_per_display,
+                "pbr": pbr_display,
+                "distHigh": dist_high_str,
+                "ytdChange": f"{ytd_change:.2f}%",
+                "distWeek": dist_week_str,
+                "distMonth": dist_month_str,
                 "trend": trend_label,
                 "source": source,
             }
