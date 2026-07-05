@@ -28,7 +28,19 @@ body {
     line-height: 1.5;
 }
 
-
+/* ===== 市场分隔标题 ===== */
+.market-divider {
+    grid-column: 1 / -1;
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+    padding: 8px 12px;
+    margin: 4px 0 8px 0;
+    background: #f1f5f9;
+    border-radius: 6px;
+    border-left: 3px solid #94a3b8;
+    letter-spacing: 0.5px;
+}
 
 /* ===== 股票标签 ===== */
 .tag-container {
