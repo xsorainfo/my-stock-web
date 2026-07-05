@@ -739,33 +739,29 @@
 
                        <div class="tag-container">
                             ${(function() {
-                                // 收集所有唯一的层级路径标签
-                                const tagMap = {};
-                                if (stock.tag_themes) {
-                                    stock.tag_themes.forEach(t => {
-                                        if (t.theme_path && t.theme_path.length > 0) {
-                                            // 如果 theme_path 有 3 层，显示完整路径
-                                            // 如果 theme_path 只有 2 层，显示 2 层
-                                            // 如果只有 1 层，只显示 1 层
-                                            const key = t.theme_path.join(' › ');
-                                            if (!tagMap[key]) {
-                                                tagMap[key] = t.theme_path;
+                                const result = [];
+                                if (stock.tags) {
+                                    stock.tags.forEach(tag => {
+                                        let foundPath = null;
+                                        if (stock.tag_themes) {
+                                            for (const t of stock.tag_themes) {
+                                                if (t.tag === tag && t.theme_path && t.theme_path.length > 0) {
+                                                    foundPath = t.theme_path;
+                                                    break;
+                                                }
                                             }
+                                        }
+                                        if (foundPath && foundPath.length >= 2) {
+                                            result.push(`${foundPath[0]} › ${tag}`);
+                                        } else if (foundPath && foundPath.length === 1) {
+                                            result.push(foundPath[0]);
+                                        } else {
+                                            result.push(tag);
                                         }
                                     });
                                 }
-                                // 如果 tag_themes 没有数据，fallback 到原始 tags
-                                if (Object.keys(tagMap).length === 0 && stock.tags) {
-                                    stock.tags.forEach(t => {
-                                        tagMap[t] = [t];
-                                    });
-                                }
-                                // 渲染标签
-                                return Object.values(tagMap).map(path => {
-                                    const displayText = path.join(' › ');
-                                    const titleText = path.join(' > ');
-                                    return `<span class="stock-tag theme-tag" title="${titleText}">${displayText}</span>`;
-                                }).join('');
+                                const unique = [...new Set(result)];
+                                return unique.map(text => `<span class="stock-tag theme-tag">${text}</span>`).join('');
                             })()}
                         </div>
 
