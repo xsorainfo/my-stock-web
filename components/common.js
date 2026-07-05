@@ -170,6 +170,70 @@ function renderTags(tags, stockTagThemes) {
         `;
     }).join('&nbsp;&nbsp;');
 }
+
+// ============================================================
+// 修改后的 renderTags 函数 - 使用 display_tags 匹配主题
+// ============================================================
+function renderTags(tags, stockTagThemes, displayTags) {
+    if (!tags || tags.length === 0) return '';
+    
+    // 如果没有 displayTags，使用原始 tags
+    const displayList = displayTags || tags;
+    
+    const result = [];
+    displayList.forEach((displayTag, index) => {
+        // 使用原始 tag 去匹配 theme_path
+        const rawTag = tags[index] || displayTag;
+        let foundPath = null;
+        
+        if (stockTagThemes) {
+            for (const t of stockTagThemes) {
+                // ⭐ 关键：用原始 tag 匹配，但显示用 displayTag
+                if (t.tag === rawTag && t.theme_path && t.theme_path.length > 0) {
+                    foundPath = t.theme_path;
+                    break;
+                }
+            }
+        }
+        
+        let displayText = displayTag;
+        let hasPath = false;
+        
+        if (foundPath && foundPath.length >= 2) {
+            // ⭐ 显示为：一级主题 › 映射后的标签
+            displayText = `${foundPath[0]} › ${displayTag}`;
+            hasPath = true;
+        }
+        
+        result.push({
+            tag: rawTag,           // 用于跳转时使用原始 tag
+            displayText: displayText,
+            hasPath: hasPath,
+            displayTag: displayTag // 映射后的标签
+        });
+    });
+    
+    // 去重（基于 displayTag）
+    const unique = [];
+    const seen = new Set();
+    result.forEach(item => {
+        if (!seen.has(item.displayTag)) {
+            seen.add(item.displayTag);
+            unique.push(item);
+        }
+    });
+    
+    return unique.map(item => {
+        const tagClass = item.hasPath ? 'stock-tag clickable-tag theme-tag' : 'stock-tag clickable-tag';
+        // ⭐ 跳转时使用 displayTag（映射后的统一名称）
+        const jumpTag = encodeURIComponent(item.displayTag);
+        return `
+            <span class="${tagClass}" data-tag="${jumpTag}" onclick="navigateToTheme('${jumpTag}')" title="${item.displayText}">
+                ${item.displayText}
+            </span>
+        `;
+    }).join('&nbsp;&nbsp;');
+}
 // ============================================================
 // 10. 跳转到主题页面
 // ============================================================
