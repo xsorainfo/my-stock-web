@@ -756,7 +756,14 @@
                                         }
                                     }
                                     
-                                    if (foundPath && foundPath.length >= 2) {
+                                    if (foundPath && foundPath.length >= 3) {
+                                        // ⭐ 显示完整的三级路径：一级 › 二级 › 三级
+                                        result.push({
+                                            text: `${foundPath[0]} › ${foundPath[1]} › ${displayTag}`,
+                                            hasPath: true
+                                        });
+                                    } else if (foundPath && foundPath.length >= 2) {
+                                        // 兼容只有两级的情况：一级 › 二级
                                         result.push({
                                             text: `${foundPath[0]} › ${displayTag}`,
                                             hasPath: true
