@@ -2,8 +2,8 @@
   "macro": [
     {
       "name": "标普 500 期货",
-      "price": "7556.25",
-      "change": "+28.00 (+0.37%)",
+      "price": "7557.00",
+      "change": "+28.75 (+0.38%)",
       "isUp": true,
       "type": "futures",
       "badge_label": "期货",
@@ -11,17 +11,17 @@
     },
     {
       "name": "WTI 原油",
-      "price": "68.67",
-      "change": "-0.02 (-0.03%)",
-      "isUp": false,
+      "price": "68.78",
+      "change": "+0.09 (+0.13%)",
+      "isUp": true,
       "type": "futures",
       "badge_label": "期货",
       "badge_class": "futures"
     },
     {
       "name": "黄金",
-      "price": "4187.10",
-      "change": "+74.40 (+1.81%)",
+      "price": "4187.30",
+      "change": "+74.60 (+1.81%)",
       "isUp": true,
       "type": "commodity",
       "badge_label": "商品",
@@ -29,8 +29,8 @@
     },
     {
       "name": "白银",
-      "price": "62.80",
-      "change": "+2.16 (+3.56%)",
+      "price": "62.81",
+      "change": "+2.17 (+3.58%)",
       "isUp": true,
       "type": "commodity",
       "badge_label": "商品",
@@ -38,8 +38,8 @@
     },
     {
       "name": "铜",
-      "price": "6.23",
-      "change": "+0.11 (+1.82%)",
+      "price": "6.22",
+      "change": "+0.11 (+1.79%)",
       "isUp": true,
       "type": "commodity",
       "badge_label": "商品",
@@ -47,8 +47,8 @@
     },
     {
       "name": "美元/日元",
-      "price": "161.33",
-      "change": "-1.21 (-0.74%)",
+      "price": "161.34",
+      "change": "-1.20 (-0.74%)",
       "isUp": false,
       "type": "forex",
       "badge_label": "FX",
@@ -56,9 +56,9 @@
     },
     {
       "name": "日经 225",
-      "price": "68733.15",
-      "change": "-1741.81 (-2.47%)",
-      "isUp": false,
+      "price": "69744.07",
+      "change": "+1010.92 (+1.47%)",
+      "isUp": true,
       "type": "index",
       "badge_label": "",
       "badge_class": "index"
@@ -74,8 +74,8 @@
     },
     {
       "name": "恒生指数",
-      "price": "23055.03",
-      "change": "+174.01 (+0.76%)",
+      "price": "23350.03",
+      "change": "+295.00 (+1.28%)",
       "isUp": true,
       "type": "index",
       "badge_label": "",
@@ -83,9 +83,9 @@
     },
     {
       "name": "韩国 KOSPI",
-      "price": "7648.09",
-      "change": "-655.32 (-7.89%)",
-      "isUp": false,
+      "price": "8088.34",
+      "change": "+440.25 (+5.76%)",
+      "isUp": true,
       "type": "index",
       "badge_label": "",
       "badge_class": "index"
@@ -514,27 +514,9 @@
       "badge_class": "etf"
     },
     {
-      "name": "10年国债收益率",
-      "price": "4.37",
-      "change": "-0.02 (-0.46%)",
-      "isUp": false,
-      "type": "bond",
-      "badge_label": "债券",
-      "badge_class": "bond"
-    },
-    {
-      "name": "5年国债收益率",
-      "price": "4.13",
-      "change": "-0.03 (-0.79%)",
-      "isUp": false,
-      "type": "bond",
-      "badge_label": "债券",
-      "badge_class": "bond"
-    },
-    {
       "name": "VIX 恐慌指数",
-      "price": "15.81",
-      "change": "-0.34 (-2.11%)",
+      "price": "16.15",
+      "change": "-0.44 (-2.65%)",
       "isUp": false,
       "type": "sentiment",
       "badge_label": "情绪",
@@ -542,8 +524,8 @@
     },
     {
       "name": "富时 100",
-      "price": "10679.03",
-      "change": "+26.13 (+0.25%)",
+      "price": "10679.00",
+      "change": "+26.10 (+0.25%)",
       "isUp": true,
       "type": "index",
       "badge_label": "",
@@ -589,6 +571,10 @@
         "AI加速器",
         "AI服务器"
       ],
+      "merged_tags": [
+        "GPU",
+        "AI SoC"
+      ],
       "tag_themes": [
         {
           "tag": "GPU",
@@ -598,17 +584,10 @@
           ]
         },
         {
-          "tag": "AI加速器",
+          "tag": "AI SoC",
           "theme_path": [
             "3. 算力芯片",
-            "AI加速器"
-          ]
-        },
-        {
-          "tag": "AI服务器",
-          "theme_path": [
-            "3. 算力芯片",
-            "AI服务器"
+            "AI SoC"
           ]
         }
       ],
@@ -638,6 +617,11 @@
         "GPU",
         "AI服务器"
       ],
+      "merged_tags": [
+        "CPU",
+        "GPU",
+        "AI SoC"
+      ],
       "tag_themes": [
         {
           "tag": "CPU",
@@ -654,10 +638,10 @@
           ]
         },
         {
-          "tag": "AI服务器",
+          "tag": "AI SoC",
           "theme_path": [
             "3. 算力芯片",
-            "AI服务器"
+            "AI SoC"
           ]
         }
       ],
@@ -686,6 +670,10 @@
         "CPU",
         "AI加速器"
       ],
+      "merged_tags": [
+        "CPU",
+        "AI SoC"
+      ],
       "tag_themes": [
         {
           "tag": "CPU",
@@ -695,10 +683,10 @@
           ]
         },
         {
-          "tag": "AI加速器",
+          "tag": "AI SoC",
           "theme_path": [
             "3. 算力芯片",
-            "AI加速器"
+            "AI SoC"
           ]
         }
       ],
@@ -724,6 +712,10 @@
       "industry": "1.1.1",
       "feature": "**行业地位**：全球移动SoC与通信芯片龙头\n**主营业务**：智能手机SoC（Snapdragon）、PC CPU（Snapdragon X Elite）、边缘AI芯片、基带芯片\n**竞争优势**：Android旗舰手机芯片市占率超60%，5G/6G基带技术全球领先，AI端侧推理技术积累深厚\n**未来方向**：AI手机换机周期驱动SoC升级，AI PC渗透率提升带动PC CPU增长，边缘AI推理芯片放量",
       "tags": [
+        "AI SoC",
+        "CPU"
+      ],
+      "merged_tags": [
         "AI SoC",
         "CPU"
       ],
@@ -765,6 +757,10 @@
       "industry": "1.1.1",
       "feature": "**行业地位**：全球ASIC与网络芯片龙头\n**主营业务**：AI定制ASIC（谷歌TPU核心伙伴）、以太网交换芯片、PCIe互联芯片\n**竞争优势**：以太网芯片市占率超70%，ASIC设计能力全球领先，深度绑定超大规模云厂商\n**未来方向**：AI数据中心网络升级驱动交换芯片需求，ASIC定制化趋势加速，AI集群规模扩大推升互联需求",
       "tags": [
+        "ASIC",
+        "PCIe"
+      ],
+      "merged_tags": [
         "ASIC",
         "PCIe"
       ],
@@ -810,6 +806,11 @@
         "SerDes",
         "光芯片"
       ],
+      "merged_tags": [
+        "ASIC",
+        "高速互联",
+        "光芯片"
+      ],
       "tag_themes": [
         {
           "tag": "ASIC",
@@ -819,11 +820,8 @@
           ]
         },
         {
-          "tag": "SerDes",
-          "theme_path": [
-            "3. 算力芯片",
-            "SerDes"
-          ]
+          "tag": "高速互联",
+          "theme_path": []
         },
         {
           "tag": "光芯片",
@@ -857,6 +855,9 @@
       "tags": [
         "CPU"
       ],
+      "merged_tags": [
+        "CPU"
+      ],
       "tag_themes": [
         {
           "tag": "CPU",
@@ -888,6 +889,10 @@
       "industry": "1.1.1",
       "feature": "**行业地位**：全球消费电子龙头\n**主营业务**：iPhone、Mac、iPad、可穿戴设备、服务（Apple Intelligence）\n**竞争优势**：自研ARM芯片（M系列/A系列）性能领先，iOS/macOS生态锁定用户，Apple Intelligence开启AI终端新纪元\n**未来方向**：AI终端硬件升级驱动换机周期，Apple Intelligence全面商业化，Vision Pro生态拓展",
       "tags": [
+        "CPU",
+        "AI SoC"
+      ],
+      "merged_tags": [
         "CPU",
         "AI SoC"
       ],
@@ -929,6 +934,10 @@
       "industry": "1.1.1",
       "feature": "**行业地位**：全球功率半导体与MEMS龙头之一\n**主营业务**：SiC功率器件、MCU、模拟IC、MEMS传感器\n**竞争优势**：SiC器件技术领先，与特斯拉等全球车企深度绑定，车规芯片认证壁垒高\n**未来方向**：新能源汽车SiC渗透率持续提升，AI数据中心电源管理芯片需求增长，工业自动化芯片需求复苏",
       "tags": [
+        "碳化硅 (SiC)",
+        "功率半导体"
+      ],
+      "merged_tags": [
         "碳化硅 (SiC)",
         "功率半导体"
       ],
@@ -975,14 +984,12 @@
         "氮化镓 (GaN)",
         "碳化硅 (SiC)"
       ],
+      "merged_tags": [
+        "AI SoC",
+        "氮化镓 (GaN)",
+        "碳化硅 (SiC)"
+      ],
       "tag_themes": [
-        {
-          "tag": "MCU",
-          "theme_path": [
-            "3. 算力芯片",
-            "MCU"
-          ]
-        },
         {
           "tag": "AI SoC",
           "theme_path": [
@@ -1006,17 +1013,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "4842.00",
-      "change": "-281.00 (-5.49%)",
+      "price": "4820.00",
+      "change": "-22.00 (-0.45%)",
       "isUp": false,
       "per": "17.75",
       "roe": "-0.4%",
       "forward_per": "17.75",
       "pbr": "3.44",
-      "distHigh": "-8.4%",
-      "ytdChange": "117.62%",
-      "distWeek": "-7.9%",
-      "distMonth": "-8.4%",
+      "distHigh": "-8.8%",
+      "ytdChange": "116.63%",
+      "distWeek": "-7.2%",
+      "distMonth": "-8.8%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -1027,6 +1034,10 @@
       "industry": "1.1.1",
       "feature": "**行业地位**：全球先进制程ASIC领先厂商\n**主营业务**：定制SoC设计、AI加速器、高性能计算芯片、自动驾驶芯片\n**竞争优势**：5nm/3nm定制芯片设计能力领先，AI边缘计算核心方案商，日本唯一大型ASIC设计企业\n**未来方向**：AI数据中心与自动驾驶需求驱动ASIC业务增长，持续推进先进制程设计能力",
       "tags": [
+        "ASIC",
+        "AI SoC"
+      ],
+      "merged_tags": [
         "ASIC",
         "AI SoC"
       ],
@@ -1047,17 +1058,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "2767.50",
-      "change": "+48.00 (+1.77%)",
+      "price": "2874.00",
+      "change": "+106.50 (+3.85%)",
       "isUp": true,
-      "per": "58.01",
+      "per": "58.14",
       "roe": "6.5%",
       "forward_per": "20.11",
       "pbr": "3.79",
-      "distHigh": "-20.7%",
-      "ytdChange": "23.32%",
-      "distWeek": "-3.1%",
-      "distMonth": "-13.5%",
+      "distHigh": "-17.7%",
+      "ytdChange": "28.07%",
+      "distWeek": "-0.1%",
+      "distMonth": "-10.2%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -1068,6 +1079,11 @@
       "industry": "1.1.1",
       "feature": "**行业地位**：全球功率半导体领先厂商\n**主营业务**：模拟IC、SiC功率器件、GaN器件、电源管理IC\n**竞争优势**：SiC功率器件市占率全球前三，模拟IC技术积累深厚，IDM模式覆盖设计到制造\n**未来方向**：新能源汽车与AI服务器电源需求驱动SiC/GaN器件增长，持续推进第三代半导体技术迭代",
       "tags": [
+        "功率半导体",
+        "碳化硅 (SiC)",
+        "氮化镓 (GaN)"
+      ],
+      "merged_tags": [
         "功率半导体",
         "碳化硅 (SiC)",
         "氮化镓 (GaN)"
@@ -1096,18 +1112,18 @@
         }
       ],
       "market_type": "日股",
-      "price": "5211.00",
-      "change": "-292.00 (-5.31%)",
-      "isUp": false,
+      "price": "5950.00",
+      "change": "+739.00 (+14.18%)",
+      "isUp": true,
       "per": "68.48",
       "roe": "-19.2%",
       "forward_per": "68.48",
       "pbr": "3.03",
-      "distHigh": "-12.4%",
-      "ytdChange": "130.58%",
-      "distWeek": "-8.6%",
-      "distMonth": "-10.7%",
-      "trend": "熊市空头",
+      "distHigh": "0.0%",
+      "ytdChange": "163.28%",
+      "distWeek": "0.0%",
+      "distMonth": "0.0%",
+      "trend": "牛市多头",
       "source": "yfinance"
     },
     {
@@ -1120,6 +1136,10 @@
         "GPU",
         "AI服务器"
       ],
+      "merged_tags": [
+        "GPU",
+        "AI SoC"
+      ],
       "tag_themes": [
         {
           "tag": "GPU",
@@ -1129,25 +1149,25 @@
           ]
         },
         {
-          "tag": "AI服务器",
+          "tag": "AI SoC",
           "theme_path": [
             "3. 算力芯片",
-            "AI服务器"
+            "AI SoC"
           ]
         }
       ],
       "market_type": "A股",
-      "price": "nan",
-      "change": "nan (nan%)",
-      "isUp": false,
+      "price": "738.38",
+      "change": "+14.25 (+1.97%)",
+      "isUp": true,
       "per": "--",
-      "roe": "-19.2%",
+      "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "nan%",
-      "distWeek": "--",
-      "distMonth": "--",
+      "ytdChange": "-2.38%",
+      "distWeek": "-12.7%",
+      "distMonth": "-12.7%",
       "trend": "熊市空头",
       "source": "sina"
     },
@@ -1160,6 +1180,9 @@
       "tags": [
         "GPU"
       ],
+      "merged_tags": [
+        "GPU"
+      ],
       "tag_themes": [
         {
           "tag": "GPU",
@@ -1170,17 +1193,17 @@
         }
       ],
       "market_type": "A股",
-      "price": "nan",
-      "change": "nan (nan%)",
-      "isUp": false,
+      "price": "643.81",
+      "change": "+2.22 (+0.35%)",
+      "isUp": true,
       "per": "--",
-      "roe": "-19.2%",
+      "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "nan%",
-      "distWeek": "--",
-      "distMonth": "--",
+      "ytdChange": "-3.60%",
+      "distWeek": "-11.1%",
+      "distMonth": "-13.6%",
       "trend": "熊市空头",
       "source": "sina"
     },
@@ -1194,6 +1217,10 @@
         "CPU",
         "AI服务器"
       ],
+      "merged_tags": [
+        "CPU",
+        "AI SoC"
+      ],
       "tag_themes": [
         {
           "tag": "CPU",
@@ -1203,26 +1230,26 @@
           ]
         },
         {
-          "tag": "AI服务器",
+          "tag": "AI SoC",
           "theme_path": [
             "3. 算力芯片",
-            "AI服务器"
+            "AI SoC"
           ]
         }
       ],
       "market_type": "A股",
-      "price": "nan",
-      "change": "nan (nan%)",
-      "isUp": false,
+      "price": "325.40",
+      "change": "+3.11 (+0.96%)",
+      "isUp": true,
       "per": "--",
-      "roe": "-19.2%",
+      "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "nan%",
-      "distWeek": "--",
-      "distMonth": "--",
-      "trend": "熊市空头",
+      "ytdChange": "13.85%",
+      "distWeek": "-13.9%",
+      "distMonth": "-13.9%",
+      "trend": "牛市多头",
       "source": "sina"
     },
     {
@@ -1232,6 +1259,9 @@
       "industry": "1.1.1",
       "feature": "**行业地位**：国产自主CPU龙头\n**主营业务**：LoongArch架构CPU、服务器CPU、桌面CPU、工控CPU\n**竞争优势**：完全自主指令集（LoongArch）CPU，纯国产CPU代表，党政信创核心供应商\n**未来方向**：信创市场国产替代驱动CPU需求，持续拓展服务器与工控市场",
       "tags": [
+        "CPU"
+      ],
+      "merged_tags": [
         "CPU"
       ],
       "tag_themes": [
@@ -1244,17 +1274,17 @@
         }
       ],
       "market_type": "A股",
-      "price": "nan",
-      "change": "nan (nan%)",
+      "price": "136.03",
+      "change": "-8.46 (-5.86%)",
       "isUp": false,
       "per": "--",
-      "roe": "-19.2%",
+      "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "nan%",
-      "distWeek": "--",
-      "distMonth": "--",
+      "ytdChange": "-3.44%",
+      "distWeek": "-14.2%",
+      "distMonth": "-14.2%",
       "trend": "熊市空头",
       "source": "sina"
     },
@@ -1267,6 +1297,9 @@
       "tags": [
         "CPU"
       ],
+      "merged_tags": [
+        "CPU"
+      ],
       "tag_themes": [
         {
           "tag": "CPU",
@@ -1277,18 +1310,18 @@
         }
       ],
       "market_type": "A股",
-      "price": "nan",
-      "change": "nan (nan%)",
+      "price": "38.25",
+      "change": "-1.36 (-3.43%)",
       "isUp": false,
       "per": "--",
-      "roe": "-19.2%",
+      "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "nan%",
-      "distWeek": "--",
-      "distMonth": "--",
-      "trend": "熊市空头",
+      "ytdChange": "2.30%",
+      "distWeek": "-15.6%",
+      "distMonth": "-15.6%",
+      "trend": "牛市多头",
       "source": "sina"
     },
     {
@@ -1298,6 +1331,10 @@
       "industry": "1.1.1",
       "feature": "**行业地位**：国内功率半导体IDM龙头之一\n**主营业务**：SiC MOSFET、IGBT、模拟IC、功率模块\n**竞争优势**：SiC MOSFET技术持续突破，IDM模式覆盖设计到制造，新能源汽车与工业电源核心供应商\n**未来方向**：新能源汽车与AI数据中心电源需求驱动功率器件增长，持续拓展第三代半导体产品线",
       "tags": [
+        "碳化硅 (SiC)",
+        "功率半导体"
+      ],
+      "merged_tags": [
         "碳化硅 (SiC)",
         "功率半导体"
       ],
@@ -1318,18 +1355,18 @@
         }
       ],
       "market_type": "A股",
-      "price": "nan",
-      "change": "nan (nan%)",
+      "price": "47.25",
+      "change": "-3.25 (-6.44%)",
       "isUp": false,
       "per": "--",
-      "roe": "-19.2%",
+      "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "nan%",
-      "distWeek": "--",
-      "distMonth": "--",
-      "trend": "熊市空头",
+      "ytdChange": "36.17%",
+      "distWeek": "-17.3%",
+      "distMonth": "-17.3%",
+      "trend": "牛市多头",
       "source": "sina"
     },
     {
@@ -1345,6 +1382,14 @@
         "IDM",
         "新能源汽车",
         "AI"
+      ],
+      "merged_tags": [
+        "功率半导体",
+        "氮化镓 (GaN)",
+        "碳化硅 (SiC)",
+        "IDM",
+        "新能源汽车",
+        "AI应用"
       ],
       "tag_themes": [
         {
@@ -1383,25 +1428,25 @@
           ]
         },
         {
-          "tag": "AI",
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI"
+            "AI应用"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "11495.00",
-      "change": "-195.00 (-1.67%)",
+      "price": "11015.00",
+      "change": "-480.00 (-4.18%)",
       "isUp": false,
       "per": "3.40",
       "roe": "-7.3%",
       "forward_per": "3.40",
       "pbr": "1.84",
-      "distHigh": "-2.9%",
-      "ytdChange": "94.17%",
-      "distWeek": "-2.9%",
-      "distMonth": "-2.9%",
+      "distHigh": "-6.9%",
+      "ytdChange": "86.06%",
+      "distWeek": "-6.9%",
+      "distMonth": "-6.9%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -1416,6 +1461,10 @@
         "DRAM",
         "企业级SSD"
       ],
+      "merged_tags": [
+        "HBM",
+        "存储"
+      ],
       "tag_themes": [
         {
           "tag": "HBM",
@@ -1425,18 +1474,8 @@
           ]
         },
         {
-          "tag": "DRAM",
-          "theme_path": [
-            "2. 半导体材料",
-            "DRAM"
-          ]
-        },
-        {
-          "tag": "企业级SSD",
-          "theme_path": [
-            "2. 半导体材料",
-            "企业级SSD"
-          ]
+          "tag": "存储",
+          "theme_path": []
         }
       ],
       "market_type": "美股",
@@ -1464,6 +1503,10 @@
         "内存接口",
         "CXL"
       ],
+      "merged_tags": [
+        "内存接口",
+        "高速互联"
+      ],
       "tag_themes": [
         {
           "tag": "内存接口",
@@ -1473,11 +1516,8 @@
           ]
         },
         {
-          "tag": "CXL",
-          "theme_path": [
-            "3. 算力芯片",
-            "CXL"
-          ]
+          "tag": "高速互联",
+          "theme_path": []
         }
       ],
       "market_type": "美股",
@@ -1506,19 +1546,16 @@
         "DRAM",
         "NAND Flash"
       ],
+      "merged_tags": [
+        "HBM",
+        "NAND Flash"
+      ],
       "tag_themes": [
         {
           "tag": "HBM",
           "theme_path": [
             "4. 高带宽内存",
             "HBM"
-          ]
-        },
-        {
-          "tag": "DRAM",
-          "theme_path": [
-            "2. 半导体材料",
-            "DRAM"
           ]
         },
         {
@@ -1530,17 +1567,17 @@
         }
       ],
       "market_type": "韩股",
-      "price": "286000.00",
-      "change": "-28500.00 (-9.06%)",
-      "isUp": false,
-      "per": "4.94",
+      "price": "309500.00",
+      "change": "+23500.00 (+8.22%)",
+      "isUp": true,
+      "per": "4.87",
       "roe": "18.9%",
-      "forward_per": "4.94",
+      "forward_per": "4.87",
       "pbr": "--",
-      "distHigh": "-23.6%",
-      "ytdChange": "123.03%",
-      "distWeek": "-19.8%",
-      "distMonth": "-23.6%",
+      "distHigh": "-17.4%",
+      "ytdChange": "141.35%",
+      "distWeek": "-9.8%",
+      "distMonth": "-17.4%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -1554,6 +1591,9 @@
         "HBM",
         "DRAM"
       ],
+      "merged_tags": [
+        "HBM"
+      ],
       "tag_themes": [
         {
           "tag": "HBM",
@@ -1561,27 +1601,20 @@
             "4. 高带宽内存",
             "HBM"
           ]
-        },
-        {
-          "tag": "DRAM",
-          "theme_path": [
-            "2. 半导体材料",
-            "DRAM"
-          ]
         }
       ],
       "market_type": "韩股",
-      "price": "2187000.00",
-      "change": "-373000.00 (-14.57%)",
-      "isUp": false,
-      "per": "5.50",
+      "price": "2425000.00",
+      "change": "+238000.00 (+10.88%)",
+      "isUp": true,
+      "per": "5.49",
       "roe": "61.2%",
-      "forward_per": "5.50",
+      "forward_per": "5.49",
       "pbr": "--",
-      "distHigh": "-26.8%",
-      "ytdChange": "223.69%",
-      "distWeek": "-24.1%",
-      "distMonth": "-26.8%",
+      "distHigh": "-18.8%",
+      "ytdChange": "258.92%",
+      "distWeek": "-11.6%",
+      "distMonth": "-18.8%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -1595,6 +1628,10 @@
         "NAND Flash",
         "企业级SSD"
       ],
+      "merged_tags": [
+        "NAND Flash",
+        "存储"
+      ],
       "tag_themes": [
         {
           "tag": "NAND Flash",
@@ -1604,25 +1641,22 @@
           ]
         },
         {
-          "tag": "企业级SSD",
-          "theme_path": [
-            "2. 半导体材料",
-            "企业级SSD"
-          ]
+          "tag": "存储",
+          "theme_path": []
         }
       ],
       "market_type": "日股",
-      "price": "76260.00",
-      "change": "-11870.00 (-13.47%)",
-      "isUp": false,
-      "per": "82.75",
+      "price": "83300.00",
+      "change": "+7040.00 (+9.23%)",
+      "isUp": true,
+      "per": "82.64",
       "roe": "51.9%",
       "forward_per": "--",
       "pbr": "32.52",
-      "distHigh": "-32.3%",
-      "ytdChange": "571.89%",
-      "distWeek": "-25.2%",
-      "distMonth": "-32.3%",
+      "distHigh": "-26.1%",
+      "ytdChange": "633.92%",
+      "distWeek": "-12.2%",
+      "distMonth": "-26.1%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -1637,6 +1671,10 @@
         "DDR5",
         "CXL"
       ],
+      "merged_tags": [
+        "内存接口",
+        "高速互联"
+      ],
       "tag_themes": [
         {
           "tag": "内存接口",
@@ -1646,33 +1684,23 @@
           ]
         },
         {
-          "tag": "DDR5",
-          "theme_path": [
-            "4. 高带宽内存",
-            "DDR5"
-          ]
-        },
-        {
-          "tag": "CXL",
-          "theme_path": [
-            "3. 算力芯片",
-            "CXL"
-          ]
+          "tag": "高速互联",
+          "theme_path": []
         }
       ],
       "market_type": "A股",
-      "price": "nan",
-      "change": "nan (nan%)",
+      "price": "266.80",
+      "change": "-2.35 (-0.87%)",
       "isUp": false,
       "per": "--",
-      "roe": "51.9%",
+      "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "nan%",
-      "distWeek": "--",
-      "distMonth": "--",
-      "trend": "熊市空头",
+      "ytdChange": "5.08%",
+      "distWeek": "-19.9%",
+      "distMonth": "-19.9%",
+      "trend": "牛市多头",
       "source": "sina"
     },
     {
@@ -1689,19 +1717,18 @@
         "新能源汽车",
         "AI"
       ],
+      "merged_tags": [
+        "碳化硅 (SiC)",
+        "功率半导体",
+        "新能源汽车",
+        "AI应用"
+      ],
       "tag_themes": [
         {
           "tag": "碳化硅 (SiC)",
           "theme_path": [
             "2. 半导体材料",
             "碳化硅 (SiC)"
-          ]
-        },
-        {
-          "tag": "SiC衬底",
-          "theme_path": [
-            "2. 半导体材料",
-            "SiC衬底"
           ]
         },
         {
@@ -1712,13 +1739,6 @@
           ]
         },
         {
-          "tag": "第三代半导体",
-          "theme_path": [
-            "2. 半导体材料",
-            "第三代半导体"
-          ]
-        },
-        {
           "tag": "新能源汽车",
           "theme_path": [
             "2. 半导体材料",
@@ -1726,10 +1746,10 @@
           ]
         },
         {
-          "tag": "AI",
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI"
+            "AI应用"
           ]
         }
       ],
@@ -1762,6 +1782,14 @@
         "HBM",
         "AI"
       ],
+      "merged_tags": [
+        "CMP抛光垫",
+        "CMP",
+        "晶圆制造",
+        "先进制程",
+        "HBM",
+        "AI应用"
+      ],
       "tag_themes": [
         {
           "tag": "CMP抛光垫",
@@ -1790,10 +1818,10 @@
           ]
         },
         {
-          "tag": "AI",
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI"
+            "AI应用"
           ]
         }
       ],
@@ -1825,19 +1853,18 @@
         "晶圆制造",
         "AI"
       ],
+      "merged_tags": [
+        "电子特气",
+        "先进制程",
+        "晶圆制造",
+        "AI应用"
+      ],
       "tag_themes": [
         {
           "tag": "电子特气",
           "theme_path": [
             "2. 半导体材料",
             "电子特气"
-          ]
-        },
-        {
-          "tag": "工业气体",
-          "theme_path": [
-            "2. 半导体材料",
-            "工业气体"
           ]
         },
         {
@@ -1849,10 +1876,10 @@
           "theme_path": []
         },
         {
-          "tag": "AI",
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI"
+            "AI应用"
           ]
         }
       ],
@@ -1884,26 +1911,25 @@
         "先进制程",
         "AI"
       ],
+      "merged_tags": [
+        "光掩膜",
+        "光刻胶",
+        "先进制程",
+        "AI应用"
+      ],
       "tag_themes": [
         {
-          "tag": "光掩模",
+          "tag": "光掩膜",
           "theme_path": [
             "2. 半导体材料",
-            "光掩模"
+            "光掩膜"
           ]
         },
         {
-          "tag": "Mask",
+          "tag": "光刻胶",
           "theme_path": [
             "2. 半导体材料",
-            "Mask"
-          ]
-        },
-        {
-          "tag": "EUV",
-          "theme_path": [
-            "2. 半导体材料",
-            "EUV"
+            "光刻胶"
           ]
         },
         {
@@ -1911,10 +1937,10 @@
           "theme_path": []
         },
         {
-          "tag": "AI",
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI"
+            "AI应用"
           ]
         }
       ],
@@ -1946,6 +1972,12 @@
         "先进制程",
         "AI"
       ],
+      "merged_tags": [
+        "光刻基板",
+        "光刻胶",
+        "先进制程",
+        "AI应用"
+      ],
       "tag_themes": [
         {
           "tag": "光刻基板",
@@ -1955,17 +1987,10 @@
           ]
         },
         {
-          "tag": "Mask Blank",
+          "tag": "光刻胶",
           "theme_path": [
             "2. 半导体材料",
-            "Mask Blank"
-          ]
-        },
-        {
-          "tag": "EUV",
-          "theme_path": [
-            "2. 半导体材料",
-            "EUV"
+            "光刻胶"
           ]
         },
         {
@@ -1973,10 +1998,10 @@
           "theme_path": []
         },
         {
-          "tag": "AI",
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI"
+            "AI应用"
           ]
         }
       ],
@@ -2008,19 +2033,18 @@
         "先进制程",
         "先进封装"
       ],
+      "merged_tags": [
+        "高纯化学品",
+        "晶圆制造",
+        "先进制程",
+        "先进封装"
+      ],
       "tag_themes": [
         {
           "tag": "高纯化学品",
           "theme_path": [
             "2. 半导体材料",
             "高纯化学品"
-          ]
-        },
-        {
-          "tag": "湿电子化学品",
-          "theme_path": [
-            "2. 半导体材料",
-            "湿电子化学品"
           ]
         },
         {
@@ -2041,7 +2065,7 @@
       ],
       "market_type": "德股",
       "price": "47.78",
-      "change": "+0.99 (+2.10%)",
+      "change": "+0.14 (+0.29%)",
       "isUp": true,
       "per": "27.94",
       "roe": "4.4%",
@@ -2049,7 +2073,7 @@
       "pbr": "1.22",
       "distHigh": "-13.2%",
       "ytdChange": "11.27%",
-      "distWeek": "-1.6%",
+      "distWeek": "-0.6%",
       "distMonth": "-7.2%",
       "trend": "熊市空头",
       "source": "yfinance"
@@ -2066,6 +2090,13 @@
         "先进制程",
         "晶圆制造",
         "AI"
+      ],
+      "merged_tags": [
+        "硅晶圆",
+        "国产替代",
+        "先进制程",
+        "晶圆制造",
+        "AI应用"
       ],
       "tag_themes": [
         {
@@ -2091,26 +2122,26 @@
           "theme_path": []
         },
         {
-          "tag": "AI",
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI"
+            "AI应用"
           ]
         }
       ],
       "market_type": "A股",
-      "price": "nan",
-      "change": "nan (nan%)",
+      "price": "34.53",
+      "change": "-2.92 (-7.80%)",
       "isUp": false,
       "per": "--",
-      "roe": "4.4%",
+      "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "nan%",
-      "distWeek": "--",
-      "distMonth": "--",
-      "trend": "熊市空头",
+      "ytdChange": "36.59%",
+      "distWeek": "-21.3%",
+      "distMonth": "-21.3%",
+      "trend": "牛市多头",
       "source": "sina"
     },
     {
@@ -2126,6 +2157,13 @@
         "先进制程",
         "EUV",
         "AI"
+      ],
+      "merged_tags": [
+        "硅晶圆",
+        "光刻胶",
+        "半导体材料",
+        "先进制程",
+        "AI应用"
       ],
       "tag_themes": [
         {
@@ -2151,32 +2189,25 @@
           "theme_path": []
         },
         {
-          "tag": "EUV",
-          "theme_path": [
-            "2. 半导体材料",
-            "EUV"
-          ]
-        },
-        {
-          "tag": "AI",
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI"
+            "AI应用"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "7024.00",
-      "change": "-235.00 (-3.24%)",
+      "price": "6958.00",
+      "change": "-66.00 (-0.94%)",
       "isUp": false,
-      "per": "27.59",
+      "per": "27.55",
       "roe": "10.7%",
       "forward_per": "21.10",
       "pbr": "2.89",
-      "distHigh": "-11.4%",
-      "ytdChange": "43.31%",
-      "distWeek": "-3.6%",
-      "distMonth": "-10.2%",
+      "distHigh": "-12.3%",
+      "ytdChange": "41.96%",
+      "distWeek": "-4.5%",
+      "distMonth": "-11.0%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -2193,6 +2224,14 @@
         "HBM",
         "先进封装",
         "AI"
+      ],
+      "merged_tags": [
+        "靶材",
+        "磷化铟",
+        "高纯材料",
+        "HBM",
+        "先进封装",
+        "AI应用"
       ],
       "tag_themes": [
         {
@@ -2228,25 +2267,25 @@
           ]
         },
         {
-          "tag": "AI",
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI"
+            "AI应用"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "4048.00",
-      "change": "-171.00 (-4.05%)",
-      "isUp": false,
-      "per": "36.30",
-      "roe": "--",
+      "price": "4085.00",
+      "change": "+37.00 (+0.91%)",
+      "isUp": true,
+      "per": "36.23",
+      "roe": "16.6%",
       "forward_per": "--",
       "pbr": "5.21",
-      "distHigh": "-30.5%",
-      "ytdChange": "101.77%",
-      "distWeek": "-16.8%",
-      "distMonth": "-25.2%",
+      "distHigh": "-29.9%",
+      "ytdChange": "103.61%",
+      "distWeek": "-11.1%",
+      "distMonth": "-24.5%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -2261,6 +2300,12 @@
         "先进制程",
         "晶圆制造",
         "AI"
+      ],
+      "merged_tags": [
+        "硅晶圆",
+        "先进制程",
+        "晶圆制造",
+        "AI应用"
       ],
       "tag_themes": [
         {
@@ -2279,25 +2324,25 @@
           "theme_path": []
         },
         {
-          "tag": "AI",
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI"
+            "AI应用"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "4577.00",
-      "change": "-152.00 (-3.21%)",
-      "isUp": false,
+      "price": "5094.00",
+      "change": "+517.00 (+11.30%)",
+      "isUp": true,
       "per": "103.47",
       "roe": "-3.5%",
       "forward_per": "103.47",
       "pbr": "3.13",
-      "distHigh": "-10.3%",
-      "ytdChange": "216.70%",
-      "distWeek": "-5.8%",
-      "distMonth": "-5.8%",
+      "distHigh": "-0.1%",
+      "ytdChange": "252.48%",
+      "distWeek": "-0.1%",
+      "distMonth": "-0.1%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -2314,6 +2359,11 @@
         "先进制程",
         "AI"
       ],
+      "merged_tags": [
+        "光刻胶",
+        "先进制程",
+        "AI应用"
+      ],
       "tag_themes": [
         {
           "tag": "光刻胶",
@@ -2323,43 +2373,29 @@
           ]
         },
         {
-          "tag": "EUV",
-          "theme_path": [
-            "2. 半导体材料",
-            "EUV"
-          ]
-        },
-        {
-          "tag": "ArF",
-          "theme_path": [
-            "2. 半导体材料",
-            "ArF"
-          ]
-        },
-        {
           "tag": "先进制程",
           "theme_path": []
         },
         {
-          "tag": "AI",
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI"
+            "AI应用"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "10640.00",
-      "change": "-740.00 (-6.50%)",
-      "isUp": false,
-      "per": "39.09",
+      "price": "10855.00",
+      "change": "+215.00 (+2.02%)",
+      "isUp": true,
+      "per": "39.06",
       "roe": "5.5%",
       "forward_per": "55.61",
       "pbr": "3.17",
-      "distHigh": "-17.7%",
-      "ytdChange": "77.82%",
-      "distWeek": "-8.3%",
-      "distMonth": "-9.8%",
+      "distHigh": "-16.0%",
+      "ytdChange": "81.41%",
+      "distWeek": "-6.4%",
+      "distMonth": "-8.0%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -2376,26 +2412,25 @@
         "先进制程",
         "AI"
       ],
+      "merged_tags": [
+        "光掩膜",
+        "光刻胶",
+        "先进制程",
+        "AI应用"
+      ],
       "tag_themes": [
         {
-          "tag": "光掩模",
+          "tag": "光掩膜",
           "theme_path": [
             "2. 半导体材料",
-            "光掩模"
+            "光掩膜"
           ]
         },
         {
-          "tag": "Mask",
+          "tag": "光刻胶",
           "theme_path": [
             "2. 半导体材料",
-            "Mask"
-          ]
-        },
-        {
-          "tag": "EUV",
-          "theme_path": [
-            "2. 半导体材料",
-            "EUV"
+            "光刻胶"
           ]
         },
         {
@@ -2403,25 +2438,25 @@
           "theme_path": []
         },
         {
-          "tag": "AI",
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI"
+            "AI应用"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "5199.00",
-      "change": "-55.00 (-1.05%)",
-      "isUp": false,
-      "per": "23.38",
+      "price": "5313.00",
+      "change": "+114.00 (+2.19%)",
+      "isUp": true,
+      "per": "23.42",
       "roe": "5.0%",
       "forward_per": "19.88",
       "pbr": "1.12",
-      "distHigh": "-12.3%",
-      "ytdChange": "12.31%",
-      "distWeek": "-2.6%",
-      "distMonth": "-2.6%",
+      "distHigh": "-10.4%",
+      "ytdChange": "14.77%",
+      "distWeek": "-0.5%",
+      "distMonth": "-0.5%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -2438,26 +2473,25 @@
         "先进制程",
         "AI"
       ],
+      "merged_tags": [
+        "光掩膜",
+        "光刻胶",
+        "先进制程",
+        "AI应用"
+      ],
       "tag_themes": [
         {
-          "tag": "光掩模",
+          "tag": "光掩膜",
           "theme_path": [
             "2. 半导体材料",
-            "光掩模"
+            "光掩膜"
           ]
         },
         {
-          "tag": "Mask",
+          "tag": "光刻胶",
           "theme_path": [
             "2. 半导体材料",
-            "Mask"
-          ]
-        },
-        {
-          "tag": "EUV",
-          "theme_path": [
-            "2. 半导体材料",
-            "EUV"
+            "光刻胶"
           ]
         },
         {
@@ -2465,25 +2499,25 @@
           "theme_path": []
         },
         {
-          "tag": "AI",
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI"
+            "AI应用"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "3000.00",
-      "change": "+45.50 (+1.54%)",
+      "price": "3052.00",
+      "change": "+52.00 (+1.73%)",
       "isUp": true,
-      "per": "12.96",
+      "per": "12.97",
       "roe": "8.6%",
       "forward_per": "15.55",
       "pbr": "1.11",
-      "distHigh": "-9.1%",
-      "ytdChange": "9.58%",
-      "distWeek": "-0.2%",
-      "distMonth": "-0.2%",
+      "distHigh": "-7.5%",
+      "ytdChange": "11.48%",
+      "distWeek": "-0.8%",
+      "distMonth": "-0.8%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -2500,6 +2534,12 @@
         "先进制程",
         "AI"
       ],
+      "merged_tags": [
+        "光刻基板",
+        "光刻胶",
+        "先进制程",
+        "AI应用"
+      ],
       "tag_themes": [
         {
           "tag": "光刻基板",
@@ -2509,17 +2549,10 @@
           ]
         },
         {
-          "tag": "Mask Blank",
+          "tag": "光刻胶",
           "theme_path": [
             "2. 半导体材料",
-            "Mask Blank"
-          ]
-        },
-        {
-          "tag": "EUV",
-          "theme_path": [
-            "2. 半导体材料",
-            "EUV"
+            "光刻胶"
           ]
         },
         {
@@ -2527,25 +2560,25 @@
           "theme_path": []
         },
         {
-          "tag": "AI",
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI"
+            "AI应用"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "6780.00",
-      "change": "-177.00 (-2.54%)",
-      "isUp": false,
-      "per": "21.16",
+      "price": "6885.00",
+      "change": "+105.00 (+1.55%)",
+      "isUp": true,
+      "per": "21.14",
       "roe": "--",
       "forward_per": "16.68",
       "pbr": "0.98",
-      "distHigh": "-18.5%",
-      "ytdChange": "31.70%",
-      "distWeek": "-5.8%",
-      "distMonth": "-17.2%",
+      "distHigh": "-17.2%",
+      "ytdChange": "33.74%",
+      "distWeek": "-3.2%",
+      "distMonth": "-16.0%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -2562,19 +2595,18 @@
         "先进制程",
         "AI"
       ],
+      "merged_tags": [
+        "高纯化学品",
+        "晶圆制造",
+        "先进制程",
+        "AI应用"
+      ],
       "tag_themes": [
         {
           "tag": "高纯化学品",
           "theme_path": [
             "2. 半导体材料",
             "高纯化学品"
-          ]
-        },
-        {
-          "tag": "湿电子化学品",
-          "theme_path": [
-            "2. 半导体材料",
-            "湿电子化学品"
           ]
         },
         {
@@ -2586,25 +2618,25 @@
           "theme_path": []
         },
         {
-          "tag": "AI",
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI"
+            "AI应用"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "4385.00",
-      "change": "-305.00 (-6.50%)",
-      "isUp": false,
-      "per": "13.41",
+      "price": "4445.00",
+      "change": "+60.00 (+1.37%)",
+      "isUp": true,
+      "per": "13.40",
       "roe": "6.0%",
       "forward_per": "11.53",
       "pbr": "0.77",
-      "distHigh": "-31.1%",
-      "ytdChange": "56.91%",
-      "distWeek": "-16.0%",
-      "distMonth": "-29.7%",
+      "distHigh": "-30.1%",
+      "ytdChange": "59.06%",
+      "distWeek": "-10.7%",
+      "distMonth": "-28.8%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -2621,19 +2653,18 @@
         "先进制程",
         "AI"
       ],
+      "merged_tags": [
+        "电子特气",
+        "晶圆制造",
+        "先进制程",
+        "AI应用"
+      ],
       "tag_themes": [
         {
           "tag": "电子特气",
           "theme_path": [
             "2. 半导体材料",
             "电子特气"
-          ]
-        },
-        {
-          "tag": "工业气体",
-          "theme_path": [
-            "2. 半导体材料",
-            "工业气体"
           ]
         },
         {
@@ -2645,25 +2676,25 @@
           "theme_path": []
         },
         {
-          "tag": "AI",
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI"
+            "AI应用"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "6250.00",
-      "change": "+230.00 (+3.82%)",
+      "price": "6275.00",
+      "change": "+25.00 (+0.40%)",
       "isUp": true,
-      "per": "21.92",
+      "per": "21.93",
       "roe": "11.2%",
       "forward_per": "22.68",
       "pbr": "2.23",
-      "distHigh": "-4.0%",
-      "ytdChange": "33.90%",
-      "distWeek": "-1.5%",
-      "distMonth": "-1.5%",
+      "distHigh": "-3.6%",
+      "ytdChange": "34.44%",
+      "distWeek": "-1.1%",
+      "distMonth": "-1.1%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -2680,6 +2711,14 @@
         "先进制程",
         "先进封装",
         "AI"
+      ],
+      "merged_tags": [
+        "CMP浆料",
+        "光刻胶",
+        "半导体材料",
+        "先进制程",
+        "先进封装",
+        "AI应用"
       ],
       "tag_themes": [
         {
@@ -2712,25 +2751,25 @@
           ]
         },
         {
-          "tag": "AI",
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI"
+            "AI应用"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "3514.00",
-      "change": "+48.00 (+1.38%)",
+      "price": "3621.00",
+      "change": "+107.00 (+3.04%)",
       "isUp": true,
-      "per": "15.78",
+      "per": "15.77",
       "roe": "7.7%",
       "forward_per": "15.60",
       "pbr": "1.14",
-      "distHigh": "-7.2%",
-      "ytdChange": "4.57%",
-      "distWeek": "-1.8%",
-      "distMonth": "-1.8%",
+      "distHigh": "-4.4%",
+      "ytdChange": "7.75%",
+      "distWeek": "-0.1%",
+      "distMonth": "-0.1%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -2741,6 +2780,13 @@
       "industry": "1.2.1",
       "feature": "**行业地位**：CMP研磨材料专业厂商\n**主营业务**：CMP抛光垫、CMP研磨材料、抛光耗材\n**竞争优势**：专注CMP抛光材料领域，为晶圆制造提供高精度抛光解决方案，技术积累深厚\n**未来方向**：先进逻辑与HBM晶圆制造需求提升驱动CMP材料增长，持续推进高精度抛光技术迭代",
       "tags": [
+        "CMP",
+        "CMP抛光垫",
+        "晶圆制造",
+        "先进制程",
+        "HBM"
+      ],
+      "merged_tags": [
         "CMP",
         "CMP抛光垫",
         "晶圆制造",
@@ -2776,17 +2822,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "1139.00",
-      "change": "+23.00 (+2.06%)",
+      "price": "1149.00",
+      "change": "+10.00 (+0.88%)",
       "isUp": true,
       "per": "7.09",
       "roe": "8.3%",
       "forward_per": "--",
       "pbr": "0.55",
-      "distHigh": "-11.5%",
-      "ytdChange": "-0.28%",
-      "distWeek": "-1.7%",
-      "distMonth": "-3.4%",
+      "distHigh": "-10.7%",
+      "ytdChange": "0.59%",
+      "distWeek": "-0.9%",
+      "distMonth": "-2.5%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -2803,12 +2849,83 @@
         "HBM",
         "AI"
       ],
+      "merged_tags": [
+        "先进封装",
+        "封装基板",
+        "HBM",
+        "AI应用"
+      ],
       "tag_themes": [
         {
-          "tag": "FC-BGA",
+          "tag": "先进封装",
+          "theme_path": [
+            "5. 先进封装",
+            "先进封装"
+          ]
+        },
+        {
+          "tag": "封装基板",
           "theme_path": [
             "2. 半导体材料",
-            "FC-BGA"
+            "封装基板"
+          ]
+        },
+        {
+          "tag": "HBM",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM"
+          ]
+        },
+        {
+          "tag": "AI应用",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "23345.00",
+      "change": "-75.00 (-0.32%)",
+      "isUp": false,
+      "per": "108.70",
+      "roe": "12.2%",
+      "forward_per": "75.56",
+      "pbr": "11.85",
+      "distHigh": "-15.0%",
+      "ytdChange": "226.73%",
+      "distWeek": "-15.0%",
+      "distMonth": "-15.0%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "6971",
+      "name": "京セラ(京瓷)",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**行业地位**：全球先进陶瓷龙头\n**主营业务**：半导体陶瓷封装、陶瓷基板、精密陶瓷零部件\n**竞争优势**：先进陶瓷材料技术全球领先，半导体封装陶瓷材料市占率全球前三，产品覆盖功率半导体与先进封装\n**未来方向**：功率半导体与先进封装需求增长驱动陶瓷封装需求，持续推进高性能陶瓷材料开发",
+      "tags": [
+        "先进陶瓷",
+        "陶瓷封装",
+        "封装材料",
+        "功率半导体",
+        "AI"
+      ],
+      "merged_tags": [
+        "陶瓷封装",
+        "封装基板",
+        "先进封装",
+        "功率半导体",
+        "AI应用"
+      ],
+      "tag_themes": [
+        {
+          "tag": "陶瓷封装",
+          "theme_path": [
+            "2. 半导体材料",
+            "陶瓷封装"
           ]
         },
         {
@@ -2826,71 +2943,6 @@
           ]
         },
         {
-          "tag": "HBM",
-          "theme_path": [
-            "4. 高带宽内存",
-            "HBM"
-          ]
-        },
-        {
-          "tag": "AI",
-          "theme_path": [
-            "9. 云・模型・应用",
-            "AI"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "23420.00",
-      "change": "-2365.00 (-9.17%)",
-      "isUp": false,
-      "per": "108.35",
-      "roe": "12.2%",
-      "forward_per": "75.56",
-      "pbr": "11.85",
-      "distHigh": "-14.8%",
-      "ytdChange": "227.78%",
-      "distWeek": "-14.8%",
-      "distMonth": "-14.8%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "6971",
-      "name": "京セラ(京瓷)",
-      "sector": "1.2",
-      "industry": "1.2.1",
-      "feature": "**行业地位**：全球先进陶瓷龙头\n**主营业务**：半导体陶瓷封装、陶瓷基板、精密陶瓷零部件\n**竞争优势**：先进陶瓷材料技术全球领先，半导体封装陶瓷材料市占率全球前三，产品覆盖功率半导体与先进封装\n**未来方向**：功率半导体与先进封装需求增长驱动陶瓷封装需求，持续推进高性能陶瓷材料开发",
-      "tags": [
-        "先进陶瓷",
-        "陶瓷封装",
-        "封装材料",
-        "功率半导体",
-        "AI"
-      ],
-      "tag_themes": [
-        {
-          "tag": "先进陶瓷",
-          "theme_path": [
-            "2. 半导体材料",
-            "先进陶瓷"
-          ]
-        },
-        {
-          "tag": "陶瓷封装",
-          "theme_path": [
-            "2. 半导体材料",
-            "陶瓷封装"
-          ]
-        },
-        {
-          "tag": "封装材料",
-          "theme_path": [
-            "5. 先进封装",
-            "封装材料"
-          ]
-        },
-        {
           "tag": "功率半导体",
           "theme_path": [
             "3. 算力芯片",
@@ -2898,23 +2950,23 @@
           ]
         },
         {
-          "tag": "AI",
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI"
+            "AI应用"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "3887.00",
-      "change": "+66.00 (+1.73%)",
+      "price": "3916.00",
+      "change": "+29.00 (+0.75%)",
       "isUp": true,
-      "per": "38.16",
+      "per": "38.17",
       "roe": "4.4%",
       "forward_per": "43.75",
       "pbr": "1.54",
-      "distHigh": "-1.8%",
-      "ytdChange": "76.14%",
+      "distHigh": "-1.1%",
+      "ytdChange": "77.46%",
       "distWeek": "-1.1%",
       "distMonth": "-1.1%",
       "trend": "牛市多头",
@@ -2927,6 +2979,12 @@
       "industry": "1.2.1",
       "feature": "**行业地位**：全球引线框架龙头\n**主营业务**：半导体引线框架、精密冲压件、EV驱动电机模具\n**竞争优势**：全球引线框架市占率领先，精密冲压技术全球顶尖，客户覆盖全球主要功率半导体厂商\n**未来方向**：功率半导体封装需求增长驱动引线框架需求，EV电机模具业务提供新增长点",
       "tags": [
+        "引线框架",
+        "功率半导体",
+        "半导体封装",
+        "新能源汽车"
+      ],
+      "merged_tags": [
         "引线框架",
         "功率半导体",
         "半导体封装",
@@ -2960,17 +3018,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "4295.00",
-      "change": "-35.00 (-0.81%)",
-      "isUp": false,
-      "per": "23.50",
+      "price": "4320.00",
+      "change": "+25.00 (+0.58%)",
+      "isUp": true,
+      "per": "23.53",
       "roe": "13.1%",
       "forward_per": "25.32",
       "pbr": "2.68",
-      "distHigh": "-9.7%",
-      "ytdChange": "68.61%",
-      "distWeek": "-2.5%",
-      "distMonth": "-7.5%",
+      "distHigh": "-9.1%",
+      "ytdChange": "69.59%",
+      "distWeek": "-1.9%",
+      "distMonth": "-7.0%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -2987,6 +3045,13 @@
         "FC-BGA",
         "HBM",
         "AI"
+      ],
+      "merged_tags": [
+        "焊球",
+        "焊料",
+        "先进封装",
+        "HBM",
+        "AI应用"
       ],
       "tag_themes": [
         {
@@ -3011,13 +3076,6 @@
           ]
         },
         {
-          "tag": "FC-BGA",
-          "theme_path": [
-            "2. 半导体材料",
-            "FC-BGA"
-          ]
-        },
-        {
           "tag": "HBM",
           "theme_path": [
             "4. 高带宽内存",
@@ -3025,25 +3083,25 @@
           ]
         },
         {
-          "tag": "AI",
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI"
+            "AI应用"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "921.00",
-      "change": "+31.00 (+3.48%)",
+      "price": "926.00",
+      "change": "+5.00 (+0.54%)",
       "isUp": true,
       "per": "9.58",
       "roe": "5.9%",
       "forward_per": "--",
       "pbr": "0.54",
-      "distHigh": "-16.6%",
-      "ytdChange": "8.98%",
-      "distWeek": "-1.2%",
-      "distMonth": "-1.2%",
+      "distHigh": "-16.1%",
+      "ytdChange": "9.57%",
+      "distWeek": "-1.3%",
+      "distMonth": "-1.3%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -3058,6 +3116,13 @@
         "高纯化学品",
         "光刻胶",
         "第三代半导体",
+        "先进制程"
+      ],
+      "merged_tags": [
+        "氮化镓 (GaN)",
+        "高纯化学品",
+        "光刻胶",
+        "碳化硅 (SiC)",
         "先进制程"
       ],
       "tag_themes": [
@@ -3083,10 +3148,10 @@
           ]
         },
         {
-          "tag": "第三代半导体",
+          "tag": "碳化硅 (SiC)",
           "theme_path": [
             "2. 半导体材料",
-            "第三代半导体"
+            "碳化硅 (SiC)"
           ]
         },
         {
@@ -3095,17 +3160,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "1129.50",
-      "change": "+14.50 (+1.30%)",
+      "price": "1163.00",
+      "change": "+33.50 (+2.97%)",
       "isUp": true,
       "per": "12.75",
       "roe": "-0.7%",
       "forward_per": "12.75",
       "pbr": "0.90",
-      "distHigh": "-3.9%",
-      "ytdChange": "23.63%",
-      "distWeek": "-1.3%",
-      "distMonth": "-2.9%",
+      "distHigh": "-1.1%",
+      "ytdChange": "27.30%",
+      "distWeek": "-1.1%",
+      "distMonth": "-1.1%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -3122,6 +3187,14 @@
         "高纯氧化铝",
         "第三代半导体",
         "AI"
+      ],
+      "merged_tags": [
+        "氮化镓 (GaN)",
+        "光刻胶",
+        "靶材",
+        "高纯氧化铝",
+        "碳化硅 (SiC)",
+        "AI应用"
       ],
       "tag_themes": [
         {
@@ -3150,33 +3223,33 @@
           "theme_path": []
         },
         {
-          "tag": "第三代半导体",
+          "tag": "碳化硅 (SiC)",
           "theme_path": [
             "2. 半导体材料",
-            "第三代半导体"
+            "碳化硅 (SiC)"
           ]
         },
         {
-          "tag": "AI",
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI"
+            "AI应用"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "521.80",
-      "change": "-0.40 (-0.08%)",
-      "isUp": false,
-      "per": "14.91",
+      "price": "554.00",
+      "change": "+32.20 (+6.17%)",
+      "isUp": true,
+      "per": "14.90",
       "roe": "10.0%",
       "forward_per": "14.22",
       "pbr": "0.91",
-      "distHigh": "-16.5%",
-      "ytdChange": "17.17%",
-      "distWeek": "-3.6%",
-      "distMonth": "-12.8%",
-      "trend": "熊市空头",
+      "distHigh": "-11.4%",
+      "ytdChange": "24.40%",
+      "distWeek": "-1.7%",
+      "distMonth": "-7.4%",
+      "trend": "牛市多头",
       "source": "yfinance"
     },
     {
@@ -3192,6 +3265,14 @@
         "IDM",
         "新能源汽车",
         "AI"
+      ],
+      "merged_tags": [
+        "功率半导体",
+        "氮化镓 (GaN)",
+        "碳化硅 (SiC)",
+        "IDM",
+        "新能源汽车",
+        "AI应用"
       ],
       "tag_themes": [
         {
@@ -3230,25 +3311,25 @@
           ]
         },
         {
-          "tag": "AI",
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI"
+            "AI应用"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "11495.00",
-      "change": "-195.00 (-1.67%)",
+      "price": "11015.00",
+      "change": "-480.00 (-4.18%)",
       "isUp": false,
       "per": "3.40",
       "roe": "-7.3%",
       "forward_per": "3.40",
       "pbr": "1.84",
-      "distHigh": "-2.9%",
-      "ytdChange": "94.17%",
-      "distWeek": "-2.9%",
-      "distMonth": "-2.9%",
+      "distHigh": "-6.9%",
+      "ytdChange": "86.06%",
+      "distWeek": "-6.9%",
+      "distMonth": "-6.9%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -3265,6 +3346,12 @@
         "功率半导体",
         "新能源汽车"
       ],
+      "merged_tags": [
+        "氮化镓 (GaN)",
+        "碳化硅 (SiC)",
+        "功率半导体",
+        "新能源汽车"
+      ],
       "tag_themes": [
         {
           "tag": "氮化镓 (GaN)",
@@ -3274,17 +3361,10 @@
           ]
         },
         {
-          "tag": "GaN衬底",
+          "tag": "碳化硅 (SiC)",
           "theme_path": [
             "2. 半导体材料",
-            "GaN衬底"
-          ]
-        },
-        {
-          "tag": "第三代半导体",
-          "theme_path": [
-            "2. 半导体材料",
-            "第三代半导体"
+            "碳化硅 (SiC)"
           ]
         },
         {
@@ -3303,17 +3383,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "5169.00",
-      "change": "+38.00 (+0.74%)",
+      "price": "5230.00",
+      "change": "+61.00 (+1.18%)",
       "isUp": true,
       "per": "10.59",
       "roe": "11.3%",
       "forward_per": "14.86",
       "pbr": "1.08",
-      "distHigh": "-2.9%",
-      "ytdChange": "31.15%",
-      "distWeek": "-2.9%",
-      "distMonth": "-2.9%",
+      "distHigh": "-1.8%",
+      "ytdChange": "32.70%",
+      "distWeek": "-1.8%",
+      "distMonth": "-1.8%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -3331,26 +3411,25 @@
         "Chiplet",
         "AI"
       ],
+      "merged_tags": [
+        "先进封装",
+        "EMC塑封料",
+        "HBM",
+        "AI应用"
+      ],
       "tag_themes": [
-        {
-          "tag": "ABF",
-          "theme_path": [
-            "2. 半导体材料",
-            "ABF"
-          ]
-        },
-        {
-          "tag": "EMC",
-          "theme_path": [
-            "2. 半导体材料",
-            "EMC"
-          ]
-        },
         {
           "tag": "先进封装",
           "theme_path": [
             "5. 先进封装",
             "先进封装"
+          ]
+        },
+        {
+          "tag": "EMC塑封料",
+          "theme_path": [
+            "2. 半导体材料",
+            "EMC塑封料"
           ]
         },
         {
@@ -3361,33 +3440,26 @@
           ]
         },
         {
-          "tag": "Chiplet",
-          "theme_path": [
-            "3. 算力芯片",
-            "Chiplet"
-          ]
-        },
-        {
-          "tag": "AI",
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI"
+            "AI应用"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "17900.00",
-      "change": "-780.00 (-4.18%)",
+      "price": "17500.00",
+      "change": "-400.00 (-2.23%)",
       "isUp": false,
-      "per": "108.63",
+      "per": "108.70",
       "roe": "5.5%",
       "forward_per": "70.23",
       "pbr": "4.46",
-      "distHigh": "-12.7%",
-      "ytdChange": "165.15%",
-      "distWeek": "-5.0%",
-      "distMonth": "-9.8%",
-      "trend": "牛市多头",
+      "distHigh": "-14.6%",
+      "ytdChange": "159.22%",
+      "distWeek": "-7.2%",
+      "distMonth": "-11.8%",
+      "trend": "熊市空头",
       "source": "yfinance"
     },
     {
@@ -3403,6 +3475,13 @@
         "FC-BGA",
         "HBM",
         "AI"
+      ],
+      "merged_tags": [
+        "导电胶",
+        "绝缘膜",
+        "先进封装",
+        "HBM",
+        "AI应用"
       ],
       "tag_themes": [
         {
@@ -3427,13 +3506,6 @@
           ]
         },
         {
-          "tag": "FC-BGA",
-          "theme_path": [
-            "2. 半导体材料",
-            "FC-BGA"
-          ]
-        },
-        {
           "tag": "HBM",
           "theme_path": [
             "4. 高带宽内存",
@@ -3441,26 +3513,26 @@
           ]
         },
         {
-          "tag": "AI",
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI"
+            "AI应用"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "653.00",
-      "change": "+4.00 (+0.62%)",
+      "price": "681.00",
+      "change": "+28.00 (+4.29%)",
       "isUp": true,
       "per": "0.45",
       "roe": "132.6%",
       "forward_per": "--",
       "pbr": "0.37",
-      "distHigh": "-56.2%",
-      "ytdChange": "-9.22%",
-      "distWeek": "-4.1%",
-      "distMonth": "-14.0%",
-      "trend": "熊市空头",
+      "distHigh": "-54.3%",
+      "ytdChange": "-5.33%",
+      "distWeek": "0.0%",
+      "distMonth": "-10.3%",
+      "trend": "牛市多头",
       "source": "yfinance"
     },
     {
@@ -3476,19 +3548,18 @@
         "HBM",
         "AI"
       ],
+      "merged_tags": [
+        "封装基板",
+        "先进封装",
+        "HBM",
+        "AI应用"
+      ],
       "tag_themes": [
         {
-          "tag": "Low CTE玻纤布",
+          "tag": "封装基板",
           "theme_path": [
             "2. 半导体材料",
-            "Low CTE玻纤布"
-          ]
-        },
-        {
-          "tag": "ABF",
-          "theme_path": [
-            "2. 半导体材料",
-            "ABF"
+            "封装基板"
           ]
         },
         {
@@ -3506,25 +3577,25 @@
           ]
         },
         {
-          "tag": "AI",
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI"
+            "AI应用"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "3635.00",
-      "change": "-315.00 (-7.97%)",
+      "price": "3625.00",
+      "change": "-10.00 (-0.28%)",
       "isUp": false,
       "per": "15.80",
       "roe": "26.8%",
       "forward_per": "12.23",
       "pbr": "3.80",
-      "distHigh": "-44.8%",
-      "ytdChange": "74.40%",
-      "distWeek": "-20.6%",
-      "distMonth": "-20.6%",
+      "distHigh": "-44.9%",
+      "ytdChange": "73.92%",
+      "distWeek": "-20.9%",
+      "distMonth": "-20.9%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -3542,12 +3613,20 @@
         "半导体设备",
         "AI"
       ],
+      "merged_tags": [
+        "光刻胶",
+        "光罩检测",
+        "光掩膜",
+        "先进制程",
+        "半导体设备",
+        "AI应用"
+      ],
       "tag_themes": [
         {
-          "tag": "EUV",
+          "tag": "光刻胶",
           "theme_path": [
             "2. 半导体材料",
-            "EUV"
+            "光刻胶"
           ]
         },
         {
@@ -3555,10 +3634,10 @@
           "theme_path": []
         },
         {
-          "tag": "Mask",
+          "tag": "光掩膜",
           "theme_path": [
             "2. 半导体材料",
-            "Mask"
+            "光掩膜"
           ]
         },
         {
@@ -3573,25 +3652,25 @@
           ]
         },
         {
-          "tag": "AI",
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI"
+            "AI应用"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "47740.00",
-      "change": "-3050.00 (-6.01%)",
+      "price": "47650.00",
+      "change": "-90.00 (-0.19%)",
       "isUp": false,
-      "per": "49.41",
+      "per": "49.26",
       "roe": "44.1%",
       "forward_per": "43.63",
       "pbr": "18.94",
-      "distHigh": "-18.5%",
-      "ytdChange": "51.15%",
-      "distWeek": "-11.7%",
-      "distMonth": "-18.2%",
+      "distHigh": "-18.7%",
+      "ytdChange": "50.86%",
+      "distWeek": "-11.9%",
+      "distMonth": "-18.3%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -3602,6 +3681,13 @@
       "industry": "1.2.1",
       "feature": "**行业地位**：全球半导体真空零部件龙头\n**主营业务**：真空密封、石英制品、陶瓷部件、硅部件\n**竞争优势**：半导体设备核心零组件供应商，真空密封与石英制品技术全球领先，客户覆盖全球主要设备商\n**未来方向**：全球晶圆厂扩产驱动半导体设备零部件需求增长，持续推进高精度部件技术迭代",
       "tags": [
+        "石英制品",
+        "真空密封",
+        "半导体设备",
+        "精密部件",
+        "先进制程"
+      ],
+      "merged_tags": [
         "石英制品",
         "真空密封",
         "半导体设备",
@@ -3634,17 +3720,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "8950.00",
-      "change": "-770.00 (-7.92%)",
-      "isUp": false,
-      "per": "33.66",
+      "price": "9280.00",
+      "change": "+330.00 (+3.69%)",
+      "isUp": true,
+      "per": "33.67",
       "roe": "5.4%",
       "forward_per": "21.09",
       "pbr": "1.67",
-      "distHigh": "-23.5%",
-      "ytdChange": "78.01%",
-      "distWeek": "-10.0%",
-      "distMonth": "-22.7%",
+      "distHigh": "-20.7%",
+      "ytdChange": "84.57%",
+      "distWeek": "-6.6%",
+      "distMonth": "-19.8%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -3661,56 +3747,60 @@
         "激光",
         "AI"
       ],
+      "merged_tags": [
+        "光电子器件",
+        "检测设备",
+        "传感器",
+        "激光加工设备",
+        "AI应用"
+      ],
       "tag_themes": [
         {
-          "tag": "光电器件",
-          "theme_path": [
-            "2. 半导体材料",
-            "光电器件"
-          ]
+          "tag": "光电子器件",
+          "theme_path": []
         },
         {
-          "tag": "半导体检测",
+          "tag": "检测设备",
           "theme_path": [
             "1. 半导体设备",
-            "半导体检测"
+            "检测设备"
           ]
         },
         {
-          "tag": "图像传感器",
-          "theme_path": [
-            "2. 半导体材料",
-            "图像传感器"
-          ]
-        },
-        {
-          "tag": "激光",
+          "tag": "传感器",
           "theme_path": [
             "10. 工业自动化与机器人",
-            "激光"
+            "传感器"
           ]
         },
         {
-          "tag": "AI",
+          "tag": "激光加工设备",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "激光加工设备"
+          ]
+        },
+        {
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI"
+            "AI应用"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "2648.50",
-      "change": "-101.00 (-3.67%)",
-      "isUp": false,
-      "per": "58.59",
+      "price": "2669.00",
+      "change": "+20.50 (+0.77%)",
+      "isUp": true,
+      "per": "58.48",
       "roe": "4.3%",
       "forward_per": "31.65",
       "pbr": "2.42",
-      "distHigh": "-14.6%",
-      "ytdChange": "56.64%",
-      "distWeek": "-4.0%",
-      "distMonth": "-10.6%",
-      "trend": "熊市空头",
+      "distHigh": "-13.9%",
+      "ytdChange": "57.86%",
+      "distWeek": "-3.2%",
+      "distMonth": "-10.0%",
+      "trend": "牛市多头",
       "source": "yfinance"
     },
     {
@@ -3726,33 +3816,29 @@
         "数据中心",
         "通信"
       ],
+      "merged_tags": [
+        "频率控制元件",
+        "AI SoC",
+        "数据中心架构",
+        "通信"
+      ],
       "tag_themes": [
         {
-          "tag": "晶振",
-          "theme_path": [
-            "2. 半导体材料",
-            "晶振"
-          ]
+          "tag": "频率控制元件",
+          "theme_path": []
         },
         {
-          "tag": "时钟器件",
-          "theme_path": [
-            "2. 半导体材料",
-            "时钟器件"
-          ]
-        },
-        {
-          "tag": "AI服务器",
+          "tag": "AI SoC",
           "theme_path": [
             "3. 算力芯片",
-            "AI服务器"
+            "AI SoC"
           ]
         },
         {
-          "tag": "数据中心",
+          "tag": "数据中心架构",
           "theme_path": [
             "8. 电力・液冷・数据中心",
-            "数据中心"
+            "数据中心架构"
           ]
         },
         {
@@ -3761,17 +3847,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "3470.00",
-      "change": "-290.00 (-7.71%)",
-      "isUp": false,
-      "per": "41.73",
+      "price": "3750.00",
+      "change": "+280.00 (+8.07%)",
+      "isUp": true,
+      "per": "41.84",
       "roe": "6.8%",
       "forward_per": "21.62",
       "pbr": "2.69",
-      "distHigh": "-30.7%",
-      "ytdChange": "247.27%",
-      "distWeek": "-16.3%",
-      "distMonth": "-30.7%",
+      "distHigh": "-25.1%",
+      "ytdChange": "275.29%",
+      "distWeek": "-2.6%",
+      "distMonth": "-25.1%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -3788,12 +3874,19 @@
         "电源",
         "新能源汽车"
       ],
+      "merged_tags": [
+        "MLCC",
+        "服务器电源",
+        "AI SoC",
+        "电源",
+        "新能源汽车"
+      ],
       "tag_themes": [
         {
-          "tag": "铝电解电容",
+          "tag": "MLCC",
           "theme_path": [
             "2. 半导体材料",
-            "铝电解电容"
+            "MLCC"
           ]
         },
         {
@@ -3801,10 +3894,10 @@
           "theme_path": []
         },
         {
-          "tag": "AI服务器",
+          "tag": "AI SoC",
           "theme_path": [
             "3. 算力芯片",
-            "AI服务器"
+            "AI SoC"
           ]
         },
         {
@@ -3820,17 +3913,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "5140.00",
-      "change": "-650.00 (-11.23%)",
-      "isUp": false,
-      "per": "80.87",
+      "price": "5570.00",
+      "change": "+430.00 (+8.37%)",
+      "isUp": true,
+      "per": "80.64",
       "roe": "4.1%",
       "forward_per": "31.55",
       "pbr": "2.15",
-      "distHigh": "-17.0%",
-      "ytdChange": "246.75%",
-      "distWeek": "-15.7%",
-      "distMonth": "-17.0%",
+      "distHigh": "-10.0%",
+      "ytdChange": "275.76%",
+      "distWeek": "-5.6%",
+      "distMonth": "-10.0%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -3847,13 +3940,17 @@
         "机器人",
         "AI"
       ],
+      "merged_tags": [
+        "精密部件",
+        "半导体设备",
+        "模拟芯片",
+        "机器人",
+        "AI应用"
+      ],
       "tag_themes": [
         {
-          "tag": "精密轴承",
-          "theme_path": [
-            "2. 半导体材料",
-            "精密轴承"
-          ]
+          "tag": "精密部件",
+          "theme_path": []
         },
         {
           "tag": "半导体设备",
@@ -3863,37 +3960,34 @@
           ]
         },
         {
-          "tag": "模拟IC",
-          "theme_path": [
-            "2. 半导体材料",
-            "模拟IC"
-          ]
+          "tag": "模拟芯片",
+          "theme_path": []
         },
         {
           "tag": "机器人",
           "theme_path": []
         },
         {
-          "tag": "AI",
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI"
+            "AI应用"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "4694.00",
-      "change": "-304.00 (-6.08%)",
-      "isUp": false,
-      "per": "19.67",
+      "price": "4848.00",
+      "change": "+154.00 (+3.28%)",
+      "isUp": true,
+      "per": "19.65",
       "roe": "11.9%",
       "forward_per": "22.57",
       "pbr": "2.17",
-      "distHigh": "-11.6%",
-      "ytdChange": "48.51%",
-      "distWeek": "-10.7%",
-      "distMonth": "-11.6%",
-      "trend": "熊市空头",
+      "distHigh": "-8.6%",
+      "ytdChange": "53.38%",
+      "distWeek": "-3.3%",
+      "distMonth": "-8.6%",
+      "trend": "牛市多头",
       "source": "yfinance"
     },
     {
@@ -3912,6 +4006,16 @@
         "第三代半导体",
         "IDM",
         "AI"
+      ],
+      "merged_tags": [
+        "氮化镓 (GaN)",
+        "碳化硅 (SiC)",
+        "磷化铟",
+        "砷化镓",
+        "光芯片",
+        "光模块",
+        "IDM",
+        "AI应用"
       ],
       "tag_themes": [
         {
@@ -3936,11 +4040,8 @@
           ]
         },
         {
-          "tag": "GaAs",
-          "theme_path": [
-            "2. 半导体材料",
-            "GaAs"
-          ]
+          "tag": "砷化镓",
+          "theme_path": []
         },
         {
           "tag": "光芯片",
@@ -3957,13 +4058,6 @@
           ]
         },
         {
-          "tag": "第三代半导体",
-          "theme_path": [
-            "2. 半导体材料",
-            "第三代半导体"
-          ]
-        },
-        {
           "tag": "IDM",
           "theme_path": [
             "2. 半导体材料",
@@ -3971,25 +4065,25 @@
           ]
         },
         {
-          "tag": "AI",
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI"
+            "AI应用"
           ]
         }
       ],
       "market_type": "A股",
-      "price": "nan",
-      "change": "nan (nan%)",
+      "price": "18.23",
+      "change": "-0.81 (-4.25%)",
       "isUp": false,
       "per": "--",
-      "roe": "11.9%",
+      "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "nan%",
-      "distWeek": "--",
-      "distMonth": "--",
+      "ytdChange": "17.54%",
+      "distWeek": "-20.4%",
+      "distMonth": "-21.4%",
       "trend": "熊市空头",
       "source": "sina"
     },
@@ -4007,26 +4101,18 @@
         "新能源汽车",
         "AI"
       ],
+      "merged_tags": [
+        "碳化硅 (SiC)",
+        "功率半导体",
+        "新能源汽车",
+        "AI应用"
+      ],
       "tag_themes": [
         {
           "tag": "碳化硅 (SiC)",
           "theme_path": [
             "2. 半导体材料",
             "碳化硅 (SiC)"
-          ]
-        },
-        {
-          "tag": "SiC衬底",
-          "theme_path": [
-            "2. 半导体材料",
-            "SiC衬底"
-          ]
-        },
-        {
-          "tag": "第三代半导体",
-          "theme_path": [
-            "2. 半导体材料",
-            "第三代半导体"
           ]
         },
         {
@@ -4044,25 +4130,25 @@
           ]
         },
         {
-          "tag": "AI",
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI"
+            "AI应用"
           ]
         }
       ],
       "market_type": "A股",
-      "price": "nan",
-      "change": "nan (nan%)",
+      "price": "145.60",
+      "change": "-7.28 (-4.76%)",
       "isUp": false,
       "per": "--",
-      "roe": "11.9%",
+      "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "nan%",
-      "distWeek": "--",
-      "distMonth": "--",
+      "ytdChange": "6.73%",
+      "distWeek": "-19.1%",
+      "distMonth": "-22.9%",
       "trend": "熊市空头",
       "source": "sina"
     },
@@ -4073,6 +4159,11 @@
       "industry": "1.2.1",
       "feature": "**行业地位**：全球玻纤行业绝对龙头，产能规模全球第一，电子布全球市占率23%，粗纱及制品销量突破320万吨创历史新高\n**主营业务**：玻璃纤维及制品（粗纱、电子布），覆盖20+大类3000+规格，2025年电子布销量10.62亿米\n**竞争优势**：成本优势显著（临近叶腊石矿区+原料自给+智能制造），三大产品均居世界第一，淮安全球最大单体电子玻纤产线已投产\n**未来方向**：AI服务器用低介电特种电子布通过英伟达认证进入供应链，2026Q1归母净利12.67亿同比+73%，电子布持续量价齐升驱动盈利弹性",
       "tags": [
+        "PCB",
+        "封装基板",
+        "散热片"
+      ],
+      "merged_tags": [
         "PCB",
         "封装基板",
         "散热片"
@@ -4101,18 +4192,18 @@
         }
       ],
       "market_type": "A股",
-      "price": "nan",
-      "change": "nan (nan%)",
-      "isUp": false,
+      "price": "70.90",
+      "change": "+3.08 (+4.54%)",
+      "isUp": true,
       "per": "--",
-      "roe": "11.9%",
+      "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "nan%",
-      "distWeek": "--",
-      "distMonth": "--",
-      "trend": "熊市空头",
+      "ytdChange": "87.02%",
+      "distWeek": "-7.9%",
+      "distMonth": "-8.2%",
+      "trend": "牛市多头",
       "source": "sina"
     },
     {
@@ -4122,6 +4213,10 @@
       "industry": "1.2.1",
       "feature": "**行业地位**：国内高端电子布细分龙头，聚焦极薄布、超薄布及低介电/低热膨胀特种电子布\n**主营业务**：中高端电子级玻璃纤维布、电子级玻璃纤维超细纱，2025年电子布销量2.10亿米，营收11.71亿同比+40.31%\n**竞争优势**：打破海外企业在高端电子布领域垄断，特种电子布毛利率高达61.31%，超薄/极薄型T布具备量产能力，国产替代核心标的\n**未来方向**：AI服务器/5G通信驱动高端电子布需求爆发，2026Q1归母净利1.40亿同比+354%，持续受益电子布涨价与高端产品放量",
       "tags": [
+        "PCB",
+        "封装基板"
+      ],
+      "merged_tags": [
         "PCB",
         "封装基板"
       ],
@@ -4142,17 +4237,17 @@
         }
       ],
       "market_type": "A股",
-      "price": "nan",
-      "change": "nan (nan%)",
-      "isUp": false,
+      "price": "238.00",
+      "change": "+4.77 (+2.05%)",
+      "isUp": true,
       "per": "--",
-      "roe": "11.9%",
+      "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "nan%",
-      "distWeek": "--",
-      "distMonth": "--",
+      "ytdChange": "20.63%",
+      "distWeek": "-17.1%",
+      "distMonth": "-21.7%",
       "trend": "熊市空头",
       "source": "sina"
     },
@@ -4170,6 +4265,12 @@
         "SiC衬底",
         "国产替代"
       ],
+      "merged_tags": [
+        "碳化硅 (SiC)",
+        "晶体生长设备",
+        "半导体设备",
+        "国产替代"
+      ],
       "tag_themes": [
         {
           "tag": "碳化硅 (SiC)",
@@ -4179,31 +4280,14 @@
           ]
         },
         {
-          "tag": "长晶炉",
-          "theme_path": [
-            "1. 半导体设备",
-            "长晶炉"
-          ]
+          "tag": "晶体生长设备",
+          "theme_path": []
         },
         {
           "tag": "半导体设备",
           "theme_path": [
             "1. 半导体设备",
             "半导体设备"
-          ]
-        },
-        {
-          "tag": "第三代半导体",
-          "theme_path": [
-            "2. 半导体材料",
-            "第三代半导体"
-          ]
-        },
-        {
-          "tag": "SiC衬底",
-          "theme_path": [
-            "2. 半导体材料",
-            "SiC衬底"
           ]
         },
         {
@@ -4215,17 +4299,17 @@
         }
       ],
       "market_type": "A股",
-      "price": "nan",
-      "change": "nan (nan%)",
+      "price": "72.00",
+      "change": "-6.24 (-7.98%)",
       "isUp": false,
       "per": "--",
-      "roe": "11.9%",
+      "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "nan%",
-      "distWeek": "--",
-      "distMonth": "--",
+      "ytdChange": "20.62%",
+      "distWeek": "-23.6%",
+      "distMonth": "-23.6%",
       "trend": "熊市空头",
       "source": "sina"
     },
@@ -4239,6 +4323,10 @@
         "光刻机",
         "EUV"
       ],
+      "merged_tags": [
+        "光刻机",
+        "光刻胶"
+      ],
       "tag_themes": [
         {
           "tag": "光刻机",
@@ -4248,10 +4336,10 @@
           ]
         },
         {
-          "tag": "EUV",
+          "tag": "光刻胶",
           "theme_path": [
             "2. 半导体材料",
-            "EUV"
+            "光刻胶"
           ]
         }
       ],
@@ -4261,7 +4349,7 @@
       "isUp": false,
       "per": "60.24",
       "roe": "52.2%",
-      "forward_per": "36.01",
+      "forward_per": "35.81",
       "pbr": "1601.90",
       "distHigh": "-11.5%",
       "ytdChange": "52.57%",
@@ -4283,19 +4371,26 @@
         "离子注入",
         "设备平台"
       ],
+      "merged_tags": [
+        "CVD设备",
+        "PVD设备",
+        "CMP",
+        "离子注入机",
+        "设备平台"
+      ],
       "tag_themes": [
         {
-          "tag": "CVD",
+          "tag": "CVD设备",
           "theme_path": [
             "1. 半导体设备",
-            "CVD"
+            "CVD设备"
           ]
         },
         {
-          "tag": "PVD",
+          "tag": "PVD设备",
           "theme_path": [
             "1. 半导体设备",
-            "PVD"
+            "PVD设备"
           ]
         },
         {
@@ -4303,10 +4398,10 @@
           "theme_path": []
         },
         {
-          "tag": "离子注入",
+          "tag": "离子注入机",
           "theme_path": [
             "1. 半导体设备",
-            "离子注入"
+            "离子注入机"
           ]
         },
         {
@@ -4339,20 +4434,21 @@
         "刻蚀",
         "沉积"
       ],
+      "merged_tags": [
+        "刻蚀设备",
+        "薄膜沉积设备"
+      ],
       "tag_themes": [
         {
-          "tag": "刻蚀",
+          "tag": "刻蚀设备",
           "theme_path": [
             "1. 半导体设备",
-            "刻蚀"
+            "刻蚀设备"
           ]
         },
         {
-          "tag": "沉积",
-          "theme_path": [
-            "1. 半导体设备",
-            "沉积"
-          ]
+          "tag": "薄膜沉积设备",
+          "theme_path": []
         }
       ],
       "market_type": "美股",
@@ -4381,19 +4477,24 @@
         "量测",
         "良率"
       ],
+      "merged_tags": [
+        "检测设备",
+        "量测设备",
+        "良率"
+      ],
       "tag_themes": [
         {
-          "tag": "检测",
+          "tag": "检测设备",
           "theme_path": [
             "1. 半导体设备",
-            "检测"
+            "检测设备"
           ]
         },
         {
-          "tag": "量测",
+          "tag": "量测设备",
           "theme_path": [
             "1. 半导体设备",
-            "量测"
+            "量测设备"
           ]
         },
         {
@@ -4426,19 +4527,15 @@
         "ATE",
         "测试"
       ],
+      "merged_tags": [
+        "ATE测试设备"
+      ],
       "tag_themes": [
         {
-          "tag": "ATE",
+          "tag": "ATE测试设备",
           "theme_path": [
             "1. 半导体设备",
-            "ATE"
-          ]
-        },
-        {
-          "tag": "测试",
-          "theme_path": [
-            "1. 半导体设备",
-            "测试"
+            "ATE测试设备"
           ]
         }
       ],
@@ -4466,12 +4563,15 @@
       "tags": [
         "离子注入"
       ],
+      "merged_tags": [
+        "离子注入机"
+      ],
       "tag_themes": [
         {
-          "tag": "离子注入",
+          "tag": "离子注入机",
           "theme_path": [
             "1. 半导体设备",
-            "离子注入"
+            "离子注入机"
           ]
         }
       ],
@@ -4501,38 +4601,40 @@
         "刻蚀",
         "沉积"
       ],
+      "merged_tags": [
+        "涂布显影",
+        "刻蚀设备",
+        "薄膜沉积设备"
+      ],
       "tag_themes": [
         {
           "tag": "涂布显影",
           "theme_path": []
         },
         {
-          "tag": "刻蚀",
+          "tag": "刻蚀设备",
           "theme_path": [
             "1. 半导体设备",
-            "刻蚀"
+            "刻蚀设备"
           ]
         },
         {
-          "tag": "沉积",
-          "theme_path": [
-            "1. 半导体设备",
-            "沉积"
-          ]
+          "tag": "薄膜沉积设备",
+          "theme_path": []
         }
       ],
       "market_type": "日股",
-      "price": "72940.00",
-      "change": "-5860.00 (-7.44%)",
-      "isUp": false,
-      "per": "58.69",
+      "price": "73200.00",
+      "change": "+260.00 (+0.36%)",
+      "isUp": true,
+      "per": "58.48",
       "roe": "29.3%",
       "forward_per": "57.18",
       "pbr": "16.08",
-      "distHigh": "-10.2%",
-      "ytdChange": "99.36%",
-      "distWeek": "-10.2%",
-      "distMonth": "-10.2%",
+      "distHigh": "-9.9%",
+      "ytdChange": "100.07%",
+      "distWeek": "-9.9%",
+      "distMonth": "-9.9%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -4547,12 +4649,16 @@
         "HBM",
         "测试"
       ],
+      "merged_tags": [
+        "ATE测试设备",
+        "HBM"
+      ],
       "tag_themes": [
         {
-          "tag": "ATE",
+          "tag": "ATE测试设备",
           "theme_path": [
             "1. 半导体设备",
-            "ATE"
+            "ATE测试设备"
           ]
         },
         {
@@ -4561,27 +4667,20 @@
             "4. 高带宽内存",
             "HBM"
           ]
-        },
-        {
-          "tag": "测试",
-          "theme_path": [
-            "1. 半导体设备",
-            "测试"
-          ]
         }
       ],
       "market_type": "日股",
-      "price": "28815.00",
-      "change": "-3185.00 (-9.95%)",
-      "isUp": false,
-      "per": "56.89",
+      "price": "29345.00",
+      "change": "+530.00 (+1.84%)",
+      "isUp": true,
+      "per": "56.82",
       "roe": "57.6%",
       "forward_per": "123.44",
       "pbr": "26.76",
-      "distHigh": "-19.8%",
-      "ytdChange": "36.27%",
-      "distWeek": "-18.5%",
-      "distMonth": "-19.8%",
+      "distHigh": "-18.4%",
+      "ytdChange": "38.77%",
+      "distWeek": "-14.2%",
+      "distMonth": "-18.4%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -4592,6 +4691,11 @@
       "industry": "1.2.2",
       "feature": "**行业地位**：全球晶圆切割设备龙头\n**主营业务**：晶圆切割设备、减薄设备、研磨设备\n**竞争优势**：切割/减薄设备全球市占率超70%，先进封装切割设备不可替代\n**未来方向**：先进封装需求爆发驱动切割设备需求，HBM与Chiplet封装对切割精度要求提升",
       "tags": [
+        "切割",
+        "减薄",
+        "封装"
+      ],
+      "merged_tags": [
         "切割",
         "减薄",
         "封装"
@@ -4611,17 +4715,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "76860.00",
-      "change": "-7660.00 (-9.06%)",
+      "price": "76590.00",
+      "change": "-270.00 (-0.35%)",
       "isUp": false,
-      "per": "61.51",
+      "per": "61.35",
       "roe": "25.1%",
       "forward_per": "56.28",
       "pbr": "14.13",
-      "distHigh": "-16.2%",
-      "ytdChange": "51.27%",
-      "distWeek": "-13.2%",
-      "distMonth": "-16.2%",
+      "distHigh": "-16.5%",
+      "ytdChange": "50.73%",
+      "distWeek": "-13.5%",
+      "distMonth": "-16.5%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -4634,6 +4738,9 @@
       "tags": [
         "清洗"
       ],
+      "merged_tags": [
+        "清洗"
+      ],
       "tag_themes": [
         {
           "tag": "清洗",
@@ -4641,17 +4748,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "18055.00",
-      "change": "-1435.00 (-7.36%)",
-      "isUp": false,
-      "per": "38.85",
+      "price": "18940.00",
+      "change": "+885.00 (+4.90%)",
+      "isUp": true,
+      "per": "38.91",
       "roe": "20.3%",
       "forward_per": "21.65",
       "pbr": "7.36",
-      "distHigh": "-8.7%",
-      "ytdChange": "127.72%",
-      "distWeek": "-8.7%",
-      "distMonth": "-8.7%",
+      "distHigh": "-4.2%",
+      "ytdChange": "138.88%",
+      "distWeek": "-4.2%",
+      "distMonth": "-4.2%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -4666,41 +4773,46 @@
         "CVD",
         "热处理"
       ],
+      "merged_tags": [
+        "ALD设备",
+        "CVD设备",
+        "热处理炉管"
+      ],
       "tag_themes": [
         {
-          "tag": "ALD",
+          "tag": "ALD设备",
           "theme_path": [
             "1. 半导体设备",
-            "ALD"
+            "ALD设备"
           ]
         },
         {
-          "tag": "CVD",
+          "tag": "CVD设备",
           "theme_path": [
             "1. 半导体设备",
-            "CVD"
+            "CVD设备"
           ]
         },
         {
-          "tag": "热处理",
+          "tag": "热处理炉管",
           "theme_path": [
             "1. 半导体设备",
-            "热处理"
+            "热处理炉管"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "10430.00",
-      "change": "-990.00 (-8.67%)",
-      "isUp": false,
-      "per": "93.54",
+      "price": "12000.00",
+      "change": "+1570.00 (+15.05%)",
+      "isUp": true,
+      "per": "93.46",
       "roe": "14.5%",
       "forward_per": "62.74",
       "pbr": "12.78",
-      "distHigh": "-14.6%",
-      "ytdChange": "75.95%",
-      "distWeek": "-14.6%",
-      "distMonth": "-14.6%",
+      "distHigh": "-1.8%",
+      "ytdChange": "102.43%",
+      "distWeek": "-1.8%",
+      "distMonth": "-1.8%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -4711,6 +4823,10 @@
       "industry": "1.2.2",
       "feature": "**行业地位**：压缩成型封装设备龙头\n**主营业务**：压缩成型封装设备、塑封设备、先进封装设备\n**竞争优势**：压缩成型设备全球市占率超60%，先进封装塑封核心设备，技术垄断地位\n**未来方向**：AI先进封装需求爆发驱动压缩成型设备需求，持续拓展高性能封装设备",
       "tags": [
+        "先进封装",
+        "压缩成型"
+      ],
+      "merged_tags": [
         "先进封装",
         "压缩成型"
       ],
@@ -4728,17 +4844,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "3270.00",
-      "change": "-270.00 (-7.63%)",
-      "isUp": false,
-      "per": "54.54",
+      "price": "3335.00",
+      "change": "+65.00 (+1.99%)",
+      "isUp": true,
+      "per": "54.35",
       "roe": "7.0%",
       "forward_per": "17.26",
       "pbr": "3.54",
-      "distHigh": "-12.4%",
-      "ytdChange": "44.25%",
-      "distWeek": "-12.4%",
-      "distMonth": "-12.4%",
+      "distHigh": "-10.7%",
+      "ytdChange": "47.12%",
+      "distWeek": "-10.7%",
+      "distMonth": "-10.7%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -4752,32 +4868,36 @@
         "CMP",
         "液冷"
       ],
+      "merged_tags": [
+        "CMP",
+        "液冷设备"
+      ],
       "tag_themes": [
         {
           "tag": "CMP",
           "theme_path": []
         },
         {
-          "tag": "液冷",
+          "tag": "液冷设备",
           "theme_path": [
             "8. 电力・液冷・数据中心",
-            "液冷"
+            "液冷设备"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "5989.00",
-      "change": "-311.00 (-4.94%)",
-      "isUp": false,
-      "per": "36.55",
+      "price": "6063.00",
+      "change": "+74.00 (+1.24%)",
+      "isUp": true,
+      "per": "36.50",
       "roe": "9.6%",
       "forward_per": "39.66",
       "pbr": "2.21",
-      "distHigh": "-13.1%",
-      "ytdChange": "54.94%",
-      "distWeek": "-7.7%",
-      "distMonth": "-12.6%",
-      "trend": "熊市空头",
+      "distHigh": "-12.0%",
+      "ytdChange": "56.85%",
+      "distWeek": "-5.9%",
+      "distMonth": "-11.5%",
+      "trend": "牛市多头",
       "source": "yfinance"
     },
     {
@@ -4791,6 +4911,10 @@
         "先进封装",
         "FC-BGA"
       ],
+      "merged_tags": [
+        "半导体材料",
+        "先进封装"
+      ],
       "tag_themes": [
         {
           "tag": "半导体材料",
@@ -4802,27 +4926,20 @@
             "5. 先进封装",
             "先进封装"
           ]
-        },
-        {
-          "tag": "FC-BGA",
-          "theme_path": [
-            "2. 半导体材料",
-            "FC-BGA"
-          ]
         }
       ],
       "market_type": "日股",
-      "price": "6042.00",
-      "change": "-133.00 (-2.15%)",
-      "isUp": false,
-      "per": "44.57",
+      "price": "6167.00",
+      "change": "+125.00 (+2.07%)",
+      "isUp": true,
+      "per": "44.64",
       "roe": "17.5%",
       "forward_per": "26.57",
       "pbr": "7.67",
-      "distHigh": "-4.3%",
-      "ytdChange": "82.74%",
-      "distWeek": "-4.3%",
-      "distMonth": "-4.3%",
+      "distHigh": "-2.3%",
+      "ytdChange": "86.52%",
+      "distWeek": "-2.3%",
+      "distMonth": "-2.3%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -4836,31 +4953,35 @@
         "探针台",
         "量测"
       ],
+      "merged_tags": [
+        "探针台",
+        "量测设备"
+      ],
       "tag_themes": [
         {
           "tag": "探针台",
           "theme_path": []
         },
         {
-          "tag": "量测",
+          "tag": "量测设备",
           "theme_path": [
             "1. 半导体设备",
-            "量测"
+            "量测设备"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "19110.00",
-      "change": "-1810.00 (-8.65%)",
-      "isUp": false,
-      "per": "31.97",
+      "price": "19370.00",
+      "change": "+260.00 (+1.36%)",
+      "isUp": true,
+      "per": "31.95",
       "roe": "13.5%",
       "forward_per": "31.76",
       "pbr": "4.10",
-      "distHigh": "-10.3%",
-      "ytdChange": "67.45%",
-      "distWeek": "-10.3%",
-      "distMonth": "-10.3%",
+      "distHigh": "-9.1%",
+      "ytdChange": "69.73%",
+      "distWeek": "-9.1%",
+      "distMonth": "-9.1%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -4874,12 +4995,16 @@
         "晶圆搬运",
         "自动化"
       ],
+      "merged_tags": [
+        "晶圆搬运自动化",
+        "自动化"
+      ],
       "tag_themes": [
         {
-          "tag": "晶圆搬运",
+          "tag": "晶圆搬运自动化",
           "theme_path": [
             "1. 半导体设备",
-            "晶圆搬运"
+            "晶圆搬运自动化"
           ]
         },
         {
@@ -4888,17 +5013,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "4701.00",
-      "change": "-379.00 (-7.46%)",
-      "isUp": false,
-      "per": "45.10",
+      "price": "4940.00",
+      "change": "+239.00 (+5.08%)",
+      "isUp": true,
+      "per": "45.25",
       "roe": "13.0%",
       "forward_per": "35.94",
       "pbr": "6.58",
-      "distHigh": "-9.6%",
-      "ytdChange": "95.22%",
-      "distWeek": "-9.6%",
-      "distMonth": "-9.6%",
+      "distHigh": "-5.0%",
+      "ytdChange": "105.15%",
+      "distWeek": "-5.0%",
+      "distMonth": "-5.0%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -4912,12 +5037,16 @@
         "AMHS",
         "自动化"
       ],
+      "merged_tags": [
+        "晶圆搬运自动化",
+        "自动化"
+      ],
       "tag_themes": [
         {
-          "tag": "AMHS",
+          "tag": "晶圆搬运自动化",
           "theme_path": [
             "1. 半导体设备",
-            "AMHS"
+            "晶圆搬运自动化"
           ]
         },
         {
@@ -4926,17 +5055,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "7240.00",
-      "change": "-121.00 (-1.64%)",
-      "isUp": false,
-      "per": "36.07",
+      "price": "7313.00",
+      "change": "+73.00 (+1.01%)",
+      "isUp": true,
+      "per": "36.10",
       "roe": "--",
       "forward_per": "50.92",
       "pbr": "5.87",
-      "distHigh": "-7.9%",
-      "ytdChange": "45.21%",
-      "distWeek": "-3.0%",
-      "distMonth": "-3.0%",
+      "distHigh": "-6.9%",
+      "ytdChange": "46.68%",
+      "distWeek": "-2.0%",
+      "distMonth": "-2.0%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -4951,19 +5080,16 @@
         "键合",
         "先进封装"
       ],
+      "merged_tags": [
+        "封装设备",
+        "先进封装"
+      ],
       "tag_themes": [
         {
-          "tag": "固晶",
+          "tag": "封装设备",
           "theme_path": [
             "1. 半导体设备",
-            "固晶"
-          ]
-        },
-        {
-          "tag": "键合",
-          "theme_path": [
-            "1. 半导体设备",
-            "键合"
+            "封装设备"
           ]
         },
         {
@@ -4975,17 +5101,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "7010.00",
-      "change": "-270.00 (-3.71%)",
-      "isUp": false,
-      "per": "24.37",
+      "price": "7090.00",
+      "change": "+80.00 (+1.14%)",
+      "isUp": true,
+      "per": "24.33",
       "roe": "9.9%",
       "forward_per": "19.47",
       "pbr": "2.34",
-      "distHigh": "-19.1%",
-      "ytdChange": "75.58%",
-      "distWeek": "-9.2%",
-      "distMonth": "-19.1%",
+      "distHigh": "-18.1%",
+      "ytdChange": "77.58%",
+      "distWeek": "-3.5%",
+      "distMonth": "-18.1%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -4999,12 +5125,16 @@
         "DUV",
         "光刻"
       ],
+      "merged_tags": [
+        "光刻机",
+        "光刻"
+      ],
       "tag_themes": [
         {
-          "tag": "DUV",
+          "tag": "光刻机",
           "theme_path": [
             "1. 半导体设备",
-            "DUV"
+            "光刻机"
           ]
         },
         {
@@ -5013,17 +5143,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "2221.00",
-      "change": "-44.00 (-1.94%)",
-      "isUp": false,
+      "price": "2271.00",
+      "change": "+50.00 (+2.25%)",
+      "isUp": true,
       "per": "21.45",
       "roe": "-14.0%",
       "forward_per": "21.45",
       "pbr": "1.27",
-      "distHigh": "-7.1%",
-      "ytdChange": "28.40%",
-      "distWeek": "-4.1%",
-      "distMonth": "-4.1%",
+      "distHigh": "-5.0%",
+      "ytdChange": "31.29%",
+      "distWeek": "-1.9%",
+      "distMonth": "-1.9%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -5034,6 +5164,10 @@
       "industry": "1.2.2",
       "feature": "**行业地位**：先进封装湿制程设备龙头\n**主营业务**：倒装封装设备、湿制程设备、Hybrid Bonding设备\n**竞争优势**：先进封装湿制程技术领先，倒装封装设备市占率领先，受益AI先进封装需求\n**未来方向**：AI先进封装需求爆发驱动湿制程与混合键合设备需求，持续推进设备技术迭代",
       "tags": [
+        "先进封装",
+        "湿制程"
+      ],
+      "merged_tags": [
         "先进封装",
         "湿制程"
       ],
@@ -5051,17 +5185,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "5400.00",
-      "change": "+80.00 (+1.50%)",
+      "price": "5980.00",
+      "change": "+580.00 (+10.74%)",
       "isUp": true,
-      "per": "35.16",
+      "per": "35.09",
       "roe": "21.7%",
       "forward_per": "8.04",
       "pbr": "7.06",
-      "distHigh": "-13.3%",
-      "ytdChange": "41.25%",
-      "distWeek": "-3.2%",
-      "distMonth": "-3.2%",
+      "distHigh": "-4.0%",
+      "ytdChange": "56.42%",
+      "distWeek": "0.0%",
+      "distMonth": "0.0%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -5075,34 +5209,35 @@
         "Probe Card",
         "测试"
       ],
+      "merged_tags": [
+        "测试设备",
+        "ATE测试设备"
+      ],
       "tag_themes": [
         {
-          "tag": "Probe Card",
-          "theme_path": [
-            "1. 半导体设备",
-            "Probe Card"
-          ]
+          "tag": "测试设备",
+          "theme_path": []
         },
         {
-          "tag": "测试",
+          "tag": "ATE测试设备",
           "theme_path": [
             "1. 半导体设备",
-            "测试"
+            "ATE测试设备"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "7520.00",
-      "change": "-760.00 (-9.18%)",
-      "isUp": false,
-      "per": "18.21",
+      "price": "7750.00",
+      "change": "+230.00 (+3.06%)",
+      "isUp": true,
+      "per": "18.18",
       "roe": "15.0%",
       "forward_per": "25.10",
       "pbr": "2.53",
-      "distHigh": "-26.8%",
-      "ytdChange": "93.49%",
-      "distWeek": "-13.1%",
-      "distMonth": "-17.8%",
+      "distHigh": "-24.5%",
+      "ytdChange": "99.41%",
+      "distWeek": "-6.6%",
+      "distMonth": "-15.3%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -5116,13 +5251,14 @@
         "Probe Card",
         "HBM"
       ],
+      "merged_tags": [
+        "测试设备",
+        "HBM"
+      ],
       "tag_themes": [
         {
-          "tag": "Probe Card",
-          "theme_path": [
-            "1. 半导体设备",
-            "Probe Card"
-          ]
+          "tag": "测试设备",
+          "theme_path": []
         },
         {
           "tag": "HBM",
@@ -5133,17 +5269,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "15820.00",
-      "change": "-1570.00 (-9.03%)",
-      "isUp": false,
-      "per": "51.34",
+      "price": "16000.00",
+      "change": "+180.00 (+1.14%)",
+      "isUp": true,
+      "per": "51.28",
       "roe": "24.2%",
       "forward_per": "73.06",
       "pbr": "8.38",
-      "distHigh": "-13.0%",
-      "ytdChange": "104.39%",
-      "distWeek": "-13.0%",
-      "distMonth": "-13.0%",
+      "distHigh": "-12.0%",
+      "ytdChange": "106.72%",
+      "distWeek": "-12.0%",
+      "distMonth": "-12.0%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -5157,34 +5293,35 @@
         "光通信测试",
         "1.6T"
       ],
+      "merged_tags": [
+        "测试设备",
+        "光模块"
+      ],
       "tag_themes": [
         {
-          "tag": "光通信测试",
-          "theme_path": [
-            "7. 光通信",
-            "光通信测试"
-          ]
+          "tag": "测试设备",
+          "theme_path": []
         },
         {
-          "tag": "1.6T",
+          "tag": "光模块",
           "theme_path": [
             "7. 光通信",
-            "1.6T"
+            "光模块"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "4420.00",
-      "change": "-268.00 (-5.72%)",
-      "isUp": false,
-      "per": "49.42",
+      "price": "4500.00",
+      "change": "+80.00 (+1.81%)",
+      "isUp": true,
+      "per": "49.26",
       "roe": "9.1%",
       "forward_per": "64.54",
       "pbr": "4.34",
-      "distHigh": "-9.0%",
-      "ytdChange": "95.27%",
-      "distWeek": "-7.2%",
-      "distMonth": "-9.0%",
+      "distHigh": "-7.3%",
+      "ytdChange": "98.80%",
+      "distWeek": "-5.5%",
+      "distMonth": "-7.3%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -5198,34 +5335,32 @@
         "Mask Writer",
         "电子束"
       ],
+      "merged_tags": [
+        "光罩描画设备",
+        "电子束描画设备"
+      ],
       "tag_themes": [
         {
-          "tag": "Mask Writer",
-          "theme_path": [
-            "1. 半导体设备",
-            "Mask Writer"
-          ]
+          "tag": "光罩描画设备",
+          "theme_path": []
         },
         {
-          "tag": "电子束",
-          "theme_path": [
-            "1. 半导体设备",
-            "电子束"
-          ]
+          "tag": "电子束描画设备",
+          "theme_path": []
         }
       ],
       "market_type": "日股",
-      "price": "26280.00",
-      "change": "-2610.00 (-9.03%)",
-      "isUp": false,
-      "per": "38.11",
+      "price": "26540.00",
+      "change": "+260.00 (+0.99%)",
+      "isUp": true,
+      "per": "38.17",
       "roe": "20.1%",
       "forward_per": "161.44",
       "pbr": "7.01",
-      "distHigh": "-31.1%",
-      "ytdChange": "121.79%",
-      "distWeek": "-18.4%",
-      "distMonth": "-21.7%",
+      "distHigh": "-30.4%",
+      "ytdChange": "123.98%",
+      "distWeek": "-17.6%",
+      "distMonth": "-20.9%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -5240,41 +5375,30 @@
         "TEM",
         "检测"
       ],
+      "merged_tags": [
+        "检测设备"
+      ],
       "tag_themes": [
         {
-          "tag": "SEM",
+          "tag": "检测设备",
           "theme_path": [
             "1. 半导体设备",
-            "SEM"
-          ]
-        },
-        {
-          "tag": "TEM",
-          "theme_path": [
-            "1. 半导体设备",
-            "TEM"
-          ]
-        },
-        {
-          "tag": "检测",
-          "theme_path": [
-            "1. 半导体设备",
-            "检测"
+            "检测设备"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "7484.00",
-      "change": "-286.00 (-3.68%)",
-      "isUp": false,
-      "per": "17.53",
+      "price": "7582.00",
+      "change": "+98.00 (+1.31%)",
+      "isUp": true,
+      "per": "17.51",
       "roe": "15.7%",
       "forward_per": "13.84",
       "pbr": "2.55",
-      "distHigh": "-4.5%",
-      "ytdChange": "50.64%",
-      "distWeek": "-4.5%",
-      "distMonth": "-4.5%",
+      "distHigh": "-3.3%",
+      "ytdChange": "52.61%",
+      "distWeek": "-3.3%",
+      "distMonth": "-3.3%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -5288,13 +5412,14 @@
         "NIL",
         "光刻"
       ],
+      "merged_tags": [
+        "纳米压印光刻",
+        "光刻"
+      ],
       "tag_themes": [
         {
-          "tag": "NIL",
-          "theme_path": [
-            "1. 半导体设备",
-            "NIL"
-          ]
+          "tag": "纳米压印光刻",
+          "theme_path": []
         },
         {
           "tag": "光刻",
@@ -5302,18 +5427,18 @@
         }
       ],
       "market_type": "日股",
-      "price": "4204.00",
-      "change": "+58.00 (+1.40%)",
+      "price": "4260.00",
+      "change": "+56.00 (+1.33%)",
       "isUp": true,
-      "per": "11.59",
+      "per": "11.60",
       "roe": "9.4%",
       "forward_per": "11.75",
       "pbr": "1.08",
-      "distHigh": "-16.5%",
-      "ytdChange": "-9.42%",
-      "distWeek": "-0.9%",
-      "distMonth": "-3.7%",
-      "trend": "熊市空头",
+      "distHigh": "-15.4%",
+      "ytdChange": "-8.21%",
+      "distWeek": "-0.5%",
+      "distMonth": "-2.4%",
+      "trend": "牛市多头",
       "source": "yfinance"
     },
     {
@@ -5326,12 +5451,16 @@
         "刻蚀",
         "MOCVD"
       ],
+      "merged_tags": [
+        "刻蚀设备",
+        "MOCVD"
+      ],
       "tag_themes": [
         {
-          "tag": "刻蚀",
+          "tag": "刻蚀设备",
           "theme_path": [
             "1. 半导体设备",
-            "刻蚀"
+            "刻蚀设备"
           ]
         },
         {
@@ -5340,18 +5469,18 @@
         }
       ],
       "market_type": "A股",
-      "price": "nan",
-      "change": "nan (nan%)",
-      "isUp": false,
+      "price": "413.69",
+      "change": "+4.79 (+1.17%)",
+      "isUp": true,
       "per": "--",
-      "roe": "9.4%",
+      "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "nan%",
-      "distWeek": "--",
-      "distMonth": "--",
-      "trend": "熊市空头",
+      "ytdChange": "44.69%",
+      "distWeek": "-17.3%",
+      "distMonth": "-17.3%",
+      "trend": "牛市多头",
       "source": "sina"
     },
     {
@@ -5365,26 +5494,15 @@
         "CoWoS",
         "SiP"
       ],
+      "merged_tags": [
+        "先进封装"
+      ],
       "tag_themes": [
         {
           "tag": "先进封装",
           "theme_path": [
             "5. 先进封装",
             "先进封装"
-          ]
-        },
-        {
-          "tag": "CoWoS",
-          "theme_path": [
-            "3. 算力芯片",
-            "CoWoS"
-          ]
-        },
-        {
-          "tag": "SiP",
-          "theme_path": [
-            "5. 先进封装",
-            "SiP"
           ]
         }
       ],
@@ -5414,12 +5532,16 @@
         "2.5D",
         "3D封装"
       ],
+      "merged_tags": [
+        "先进封装",
+        "2.5D"
+      ],
       "tag_themes": [
         {
-          "tag": "Chiplet",
+          "tag": "先进封装",
           "theme_path": [
-            "3. 算力芯片",
-            "Chiplet"
+            "5. 先进封装",
+            "先进封装"
           ]
         },
         {
@@ -5427,13 +5549,6 @@
           "theme_path": [
             "5. 先进封装",
             "2.5D"
-          ]
-        },
-        {
-          "tag": "3D封装",
-          "theme_path": [
-            "5. 先进封装",
-            "3D封装"
           ]
         }
       ],
@@ -5462,6 +5577,9 @@
         "先进封装",
         "Chiplet"
       ],
+      "merged_tags": [
+        "先进封装"
+      ],
       "tag_themes": [
         {
           "tag": "先进封装",
@@ -5469,28 +5587,21 @@
             "5. 先进封装",
             "先进封装"
           ]
-        },
-        {
-          "tag": "Chiplet",
-          "theme_path": [
-            "3. 算力芯片",
-            "Chiplet"
-          ]
         }
       ],
       "market_type": "A股",
-      "price": "nan",
-      "change": "nan (nan%)",
+      "price": "90.88",
+      "change": "-5.10 (-5.31%)",
       "isUp": false,
       "per": "--",
-      "roe": "10.0%",
+      "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "nan%",
-      "distWeek": "--",
-      "distMonth": "--",
-      "trend": "熊市空头",
+      "ytdChange": "13.54%",
+      "distWeek": "-18.2%",
+      "distMonth": "-18.2%",
+      "trend": "牛市多头",
       "source": "sina"
     },
     {
@@ -5503,6 +5614,10 @@
         "PCB",
         "AI服务器"
       ],
+      "merged_tags": [
+        "PCB",
+        "AI SoC"
+      ],
       "tag_themes": [
         {
           "tag": "PCB",
@@ -5512,25 +5627,25 @@
           ]
         },
         {
-          "tag": "AI服务器",
+          "tag": "AI SoC",
           "theme_path": [
             "3. 算力芯片",
-            "AI服务器"
+            "AI SoC"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "28580.00",
-      "change": "-940.00 (-3.18%)",
-      "isUp": false,
-      "per": "38.73",
+      "price": "29330.00",
+      "change": "+750.00 (+2.62%)",
+      "isUp": true,
+      "per": "38.61",
       "roe": "15.4%",
       "forward_per": "46.50",
       "pbr": "5.52",
-      "distHigh": "-36.9%",
-      "ytdChange": "167.26%",
-      "distWeek": "-12.1%",
-      "distMonth": "-30.1%",
+      "distHigh": "-35.3%",
+      "ytdChange": "174.27%",
+      "distWeek": "-9.8%",
+      "distMonth": "-28.3%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -5541,6 +5656,11 @@
       "industry": "1.4.2",
       "feature": "**行业地位**：全球光通信器件龙头之一\n**主营业务**：光模块、光芯片（激光器）、光学材料\n**竞争优势**：光通信器件全产业链布局，激光器与光芯片技术全球领先，AI数据中心核心供应商\n**未来方向**：AI数据中心高速互联需求驱动光模块需求，1.6T光模块放量推动产品单价上升",
       "tags": [
+        "光模块",
+        "光芯片",
+        "激光器"
+      ],
+      "merged_tags": [
         "光模块",
         "光芯片",
         "激光器"
@@ -5591,6 +5711,10 @@
         "VCSEL",
         "CPO"
       ],
+      "merged_tags": [
+        "光芯片",
+        "硅光子"
+      ],
       "tag_themes": [
         {
           "tag": "光芯片",
@@ -5600,17 +5724,10 @@
           ]
         },
         {
-          "tag": "VCSEL",
+          "tag": "硅光子",
           "theme_path": [
             "7. 光通信",
-            "VCSEL"
-          ]
-        },
-        {
-          "tag": "CPO",
-          "theme_path": [
-            "7. 光通信",
-            "CPO"
+            "硅光子"
           ]
         }
       ],
@@ -5639,6 +5756,9 @@
         "光芯片",
         "EML"
       ],
+      "merged_tags": [
+        "光芯片"
+      ],
       "tag_themes": [
         {
           "tag": "光芯片",
@@ -5646,28 +5766,21 @@
             "7. 光通信",
             "光芯片"
           ]
-        },
-        {
-          "tag": "EML",
-          "theme_path": [
-            "7. 光通信",
-            "EML"
-          ]
         }
       ],
       "market_type": "A股",
-      "price": "nan",
-      "change": "nan (nan%)",
-      "isUp": false,
+      "price": "1659.23",
+      "change": "+20.23 (+1.23%)",
+      "isUp": true,
       "per": "--",
-      "roe": "22.8%",
+      "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "nan%",
-      "distWeek": "--",
-      "distMonth": "--",
-      "trend": "熊市空头",
+      "ytdChange": "18.09%",
+      "distWeek": "-14.3%",
+      "distMonth": "-15.7%",
+      "trend": "牛市多头",
       "source": "sina"
     },
     {
@@ -5680,6 +5793,9 @@
         "光纤光缆",
         "海缆"
       ],
+      "merged_tags": [
+        "光纤光缆"
+      ],
       "tag_themes": [
         {
           "tag": "光纤光缆",
@@ -5687,27 +5803,20 @@
             "7. 光通信",
             "光纤光缆"
           ]
-        },
-        {
-          "tag": "海缆",
-          "theme_path": [
-            "7. 光通信",
-            "海缆"
-          ]
         }
       ],
       "market_type": "A股",
-      "price": "nan",
-      "change": "nan (nan%)",
+      "price": "89.42",
+      "change": "-4.42 (-4.71%)",
       "isUp": false,
       "per": "--",
-      "roe": "22.8%",
+      "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "nan%",
-      "distWeek": "--",
-      "distMonth": "--",
+      "ytdChange": "-1.96%",
+      "distWeek": "-21.2%",
+      "distMonth": "-28.4%",
       "trend": "熊市空头",
       "source": "sina"
     },
@@ -5722,6 +5831,11 @@
         "CPO",
         "液冷"
       ],
+      "merged_tags": [
+        "光纤光缆",
+        "硅光子",
+        "液冷设备"
+      ],
       "tag_themes": [
         {
           "tag": "光纤光缆",
@@ -5731,32 +5845,32 @@
           ]
         },
         {
-          "tag": "CPO",
+          "tag": "硅光子",
           "theme_path": [
             "7. 光通信",
-            "CPO"
+            "硅光子"
           ]
         },
         {
-          "tag": "液冷",
+          "tag": "液冷设备",
           "theme_path": [
             "8. 电力・液冷・数据中心",
-            "液冷"
+            "液冷设备"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "3976.00",
-      "change": "-375.00 (-8.62%)",
-      "isUp": false,
-      "per": "38.84",
+      "price": "4000.00",
+      "change": "+24.00 (+0.60%)",
+      "isUp": true,
+      "per": "38.76",
       "roe": "18.8%",
       "forward_per": "13.49",
       "pbr": "6.75",
-      "distHigh": "-36.3%",
-      "ytdChange": "279.81%",
-      "distWeek": "-19.1%",
-      "distMonth": "-32.4%",
+      "distHigh": "-35.9%",
+      "ytdChange": "282.10%",
+      "distWeek": "-17.9%",
+      "distMonth": "-32.0%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -5770,6 +5884,10 @@
         "光纤光缆",
         "高速连接器"
       ],
+      "merged_tags": [
+        "光纤光缆",
+        "连接器"
+      ],
       "tag_themes": [
         {
           "tag": "光纤光缆",
@@ -5779,25 +5897,22 @@
           ]
         },
         {
-          "tag": "高速连接器",
-          "theme_path": [
-            "6. 网络互联",
-            "高速连接器"
-          ]
+          "tag": "连接器",
+          "theme_path": []
         }
       ],
       "market_type": "日股",
-      "price": "2688.50",
-      "change": "-145.50 (-5.13%)",
+      "price": "2664.00",
+      "change": "-24.50 (-0.91%)",
       "isUp": false,
       "per": "22.47",
       "roe": "15.0%",
       "forward_per": "12.05",
       "pbr": "3.03",
-      "distHigh": "-27.6%",
-      "ytdChange": "62.05%",
-      "distWeek": "-14.6%",
-      "distMonth": "-27.6%",
+      "distHigh": "-28.2%",
+      "ytdChange": "60.57%",
+      "distWeek": "-11.8%",
+      "distMonth": "-28.2%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -5811,6 +5926,9 @@
         "光纤光缆",
         "数据中心布线"
       ],
+      "merged_tags": [
+        "光纤光缆"
+      ],
       "tag_themes": [
         {
           "tag": "光纤光缆",
@@ -5818,27 +5936,20 @@
             "7. 光通信",
             "光纤光缆"
           ]
-        },
-        {
-          "tag": "数据中心布线",
-          "theme_path": [
-            "7. 光通信",
-            "数据中心布线"
-          ]
         }
       ],
       "market_type": "日股",
-      "price": "5368.00",
-      "change": "-458.00 (-7.86%)",
+      "price": "5358.00",
+      "change": "-10.00 (-0.19%)",
       "isUp": false,
-      "per": "56.39",
+      "per": "56.50",
       "roe": "31.5%",
       "forward_per": "17.69",
       "pbr": "15.83",
-      "distHigh": "-32.3%",
-      "ytdChange": "75.44%",
-      "distWeek": "-18.4%",
-      "distMonth": "-24.1%",
+      "distHigh": "-32.5%",
+      "ytdChange": "75.12%",
+      "distWeek": "-16.7%",
+      "distMonth": "-24.2%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -5852,34 +5963,38 @@
         "光连接器",
         "FA组件"
       ],
+      "merged_tags": [
+        "光纤光缆",
+        "光模块"
+      ],
       "tag_themes": [
         {
-          "tag": "光连接器",
+          "tag": "光纤光缆",
           "theme_path": [
             "7. 光通信",
-            "光连接器"
+            "光纤光缆"
           ]
         },
         {
-          "tag": "FA组件",
+          "tag": "光模块",
           "theme_path": [
             "7. 光通信",
-            "FA组件"
+            "光模块"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "26280.00",
-      "change": "-2610.00 (-9.03%)",
-      "isUp": false,
-      "per": "38.11",
+      "price": "26540.00",
+      "change": "+260.00 (+0.99%)",
+      "isUp": true,
+      "per": "38.17",
       "roe": "20.1%",
       "forward_per": "161.44",
       "pbr": "7.01",
-      "distHigh": "-31.1%",
-      "ytdChange": "121.79%",
-      "distWeek": "-18.4%",
-      "distMonth": "-21.7%",
+      "distHigh": "-30.4%",
+      "ytdChange": "123.98%",
+      "distWeek": "-17.6%",
+      "distMonth": "-20.9%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -5893,34 +6008,35 @@
         "光通信测试",
         "光器件"
       ],
+      "merged_tags": [
+        "测试设备",
+        "光模块"
+      ],
       "tag_themes": [
         {
-          "tag": "光通信测试",
-          "theme_path": [
-            "7. 光通信",
-            "光通信测试"
-          ]
+          "tag": "测试设备",
+          "theme_path": []
         },
         {
-          "tag": "光器件",
+          "tag": "光模块",
           "theme_path": [
             "7. 光通信",
-            "光器件"
+            "光模块"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "23700.00",
-      "change": "-2100.00 (-8.14%)",
+      "price": "23350.00",
+      "change": "-350.00 (-1.48%)",
       "isUp": false,
-      "per": "35.83",
+      "per": "35.84",
       "roe": "31.1%",
       "forward_per": "52.80",
       "pbr": "9.87",
-      "distHigh": "-31.7%",
-      "ytdChange": "160.92%",
-      "distWeek": "-19.6%",
-      "distMonth": "-23.2%",
+      "distHigh": "-32.7%",
+      "ytdChange": "157.07%",
+      "distWeek": "-16.3%",
+      "distMonth": "-24.3%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -5931,6 +6047,14 @@
       "industry": "1.4.2",
       "feature": "**行业地位**：AI数据中心「冷却・光・電力」三重解决方案核心供应商\n**主营业务**：高速光纤/光缆、CPO外置光源、GPU液冷水冷模块（铜冷板）、GaAs化合物半导体基板\n**竞争优势**：光通信器件技术领先，CPO光电共封装与GPU液冷方案双重布局，少数同时解决冷却+光+电力三大课题的企业\n**未来方向**：AI数据中心互联需求驱动高速光纤与CPO需求，GPU液冷方案贡献新增长点，2025年数据中心业务利润目标占比8成",
       "tags": [
+        "光纤光缆",
+        "硅光子",
+        "液冷设备",
+        "散热片",
+        "靶材",
+        "磷化铟"
+      ],
+      "merged_tags": [
         "光纤光缆",
         "硅光子",
         "液冷设备",
@@ -5983,17 +6107,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "4010.00",
-      "change": "-10.00 (-0.25%)",
-      "isUp": false,
+      "price": "4025.00",
+      "change": "+15.00 (+0.37%)",
+      "isUp": true,
       "per": "9.31",
       "roe": "7.2%",
       "forward_per": "7.45",
       "pbr": "0.65",
-      "distHigh": "-13.0%",
-      "ytdChange": "2.17%",
-      "distWeek": "-6.6%",
-      "distMonth": "-6.6%",
+      "distHigh": "-12.7%",
+      "ytdChange": "2.56%",
+      "distWeek": "-6.3%",
+      "distMonth": "-6.3%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -6007,19 +6131,15 @@
         "核电",
         "数据中心供电"
       ],
+      "merged_tags": [
+        "电力系统"
+      ],
       "tag_themes": [
         {
-          "tag": "核电",
+          "tag": "电力系统",
           "theme_path": [
             "8. 电力・液冷・数据中心",
-            "核电"
-          ]
-        },
-        {
-          "tag": "数据中心供电",
-          "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "数据中心供电"
+            "电力系统"
           ]
         }
       ],
@@ -6049,26 +6169,23 @@
         "配电系统",
         "液冷"
       ],
+      "merged_tags": [
+        "电力系统",
+        "液冷设备"
+      ],
       "tag_themes": [
         {
-          "tag": "UPS",
+          "tag": "电力系统",
           "theme_path": [
             "8. 电力・液冷・数据中心",
-            "UPS"
+            "电力系统"
           ]
         },
         {
-          "tag": "配电系统",
+          "tag": "液冷设备",
           "theme_path": [
             "8. 电力・液冷・数据中心",
-            "配电系统"
-          ]
-        },
-        {
-          "tag": "液冷",
-          "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "液冷"
+            "液冷设备"
           ]
         }
       ],
@@ -6097,19 +6214,15 @@
         "UPS",
         "配电系统"
       ],
+      "merged_tags": [
+        "电力系统"
+      ],
       "tag_themes": [
         {
-          "tag": "UPS",
+          "tag": "电力系统",
           "theme_path": [
             "8. 电力・液冷・数据中心",
-            "UPS"
-          ]
-        },
-        {
-          "tag": "配电系统",
-          "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "配电系统"
+            "电力系统"
           ]
         }
       ],
@@ -6139,26 +6252,31 @@
         "UPS",
         "机柜"
       ],
+      "merged_tags": [
+        "液冷设备",
+        "电力系统",
+        "数据中心架构"
+      ],
       "tag_themes": [
         {
-          "tag": "液冷",
+          "tag": "液冷设备",
           "theme_path": [
             "8. 电力・液冷・数据中心",
-            "液冷"
+            "液冷设备"
           ]
         },
         {
-          "tag": "UPS",
+          "tag": "电力系统",
           "theme_path": [
             "8. 电力・液冷・数据中心",
-            "UPS"
+            "电力系统"
           ]
         },
         {
-          "tag": "机柜",
+          "tag": "数据中心架构",
           "theme_path": [
             "8. 电力・液冷・数据中心",
-            "机柜"
+            "数据中心架构"
           ]
         }
       ],
@@ -6187,31 +6305,35 @@
         "电网",
         "变压器"
       ],
+      "merged_tags": [
+        "电网",
+        "电力系统"
+      ],
       "tag_themes": [
         {
           "tag": "电网",
           "theme_path": []
         },
         {
-          "tag": "变压器",
+          "tag": "电力系统",
           "theme_path": [
             "8. 电力・液冷・数据中心",
-            "变压器"
+            "电力系统"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "4669.00",
-      "change": "+173.00 (+3.85%)",
-      "isUp": true,
-      "per": "26.15",
+      "price": "4615.00",
+      "change": "-54.00 (-1.16%)",
+      "isUp": false,
+      "per": "26.11",
       "roe": "13.3%",
       "forward_per": "25.91",
       "pbr": "3.19",
-      "distHigh": "-22.7%",
-      "ytdChange": "-7.34%",
-      "distWeek": "-1.1%",
-      "distMonth": "-13.1%",
+      "distHigh": "-23.6%",
+      "ytdChange": "-8.41%",
+      "distWeek": "-2.2%",
+      "distMonth": "-14.1%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -6225,31 +6347,35 @@
         "电力电子",
         "UPS"
       ],
+      "merged_tags": [
+        "电力电子",
+        "电力系统"
+      ],
       "tag_themes": [
         {
           "tag": "电力电子",
           "theme_path": []
         },
         {
-          "tag": "UPS",
+          "tag": "电力系统",
           "theme_path": [
             "8. 电力・液冷・数据中心",
-            "UPS"
+            "电力系统"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "5913.00",
-      "change": "-121.00 (-2.01%)",
-      "isUp": false,
-      "per": "30.01",
+      "price": "5944.00",
+      "change": "+31.00 (+0.52%)",
+      "isUp": true,
+      "per": "29.94",
       "roe": "10.0%",
       "forward_per": "35.99",
       "pbr": "2.71",
-      "distHigh": "-11.6%",
-      "ytdChange": "24.14%",
-      "distWeek": "-2.1%",
-      "distMonth": "-6.8%",
+      "distHigh": "-11.1%",
+      "ytdChange": "24.79%",
+      "distWeek": "-1.6%",
+      "distMonth": "-6.3%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -6263,12 +6389,16 @@
         "UPS",
         "SiC电源"
       ],
+      "merged_tags": [
+        "电力系统",
+        "SiC电源"
+      ],
       "tag_themes": [
         {
-          "tag": "UPS",
+          "tag": "电力系统",
           "theme_path": [
             "8. 电力・液冷・数据中心",
-            "UPS"
+            "电力系统"
           ]
         },
         {
@@ -6277,17 +6407,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "13430.00",
-      "change": "-665.00 (-4.72%)",
-      "isUp": false,
+      "price": "13540.00",
+      "change": "+110.00 (+0.82%)",
+      "isUp": true,
       "per": "20.37",
       "roe": "12.9%",
       "forward_per": "22.29",
       "pbr": "2.49",
-      "distHigh": "-24.6%",
-      "ytdChange": "12.15%",
-      "distWeek": "-7.0%",
-      "distMonth": "-12.6%",
+      "distHigh": "-23.9%",
+      "ytdChange": "13.07%",
+      "distWeek": "-6.3%",
+      "distMonth": "-11.9%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -6302,41 +6432,30 @@
         "HVAC",
         "CDU"
       ],
+      "merged_tags": [
+        "液冷设备"
+      ],
       "tag_themes": [
         {
-          "tag": "液冷",
+          "tag": "液冷设备",
           "theme_path": [
             "8. 电力・液冷・数据中心",
-            "液冷"
-          ]
-        },
-        {
-          "tag": "HVAC",
-          "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "HVAC"
-          ]
-        },
-        {
-          "tag": "CDU",
-          "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "CDU"
+            "液冷设备"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "25105.00",
-      "change": "+310.00 (+1.25%)",
+      "price": "25695.00",
+      "change": "+590.00 (+2.35%)",
       "isUp": true,
-      "per": "27.37",
+      "per": "27.40",
       "roe": "9.3%",
       "forward_per": "25.95",
       "pbr": "2.31",
-      "distHigh": "-3.1%",
-      "ytdChange": "25.10%",
-      "distWeek": "-1.7%",
-      "distMonth": "-1.7%",
+      "distHigh": "-0.8%",
+      "ytdChange": "28.04%",
+      "distWeek": "-0.0%",
+      "distMonth": "-0.0%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -6350,34 +6469,38 @@
         "机柜",
         "液冷"
       ],
+      "merged_tags": [
+        "数据中心架构",
+        "液冷设备"
+      ],
       "tag_themes": [
         {
-          "tag": "机柜",
+          "tag": "数据中心架构",
           "theme_path": [
             "8. 电力・液冷・数据中心",
-            "机柜"
+            "数据中心架构"
           ]
         },
         {
-          "tag": "液冷",
+          "tag": "液冷设备",
           "theme_path": [
             "8. 电力・液冷・数据中心",
-            "液冷"
+            "液冷设备"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "4660.00",
-      "change": "-105.00 (-2.20%)",
+      "price": "4605.00",
+      "change": "-55.00 (-1.18%)",
       "isUp": false,
       "per": "15.20",
       "roe": "9.5%",
       "forward_per": "16.79",
       "pbr": "1.41",
-      "distHigh": "-8.4%",
-      "ytdChange": "17.28%",
-      "distWeek": "-4.6%",
-      "distMonth": "-4.6%",
+      "distHigh": "-9.5%",
+      "ytdChange": "15.89%",
+      "distWeek": "-5.7%",
+      "distMonth": "-5.7%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -6392,6 +6515,12 @@
         "传感器",
         "磁性材料",
         "储能"
+      ],
+      "merged_tags": [
+        "MLCC",
+        "传感器",
+        "电子材料",
+        "电力系统"
       ],
       "tag_themes": [
         {
@@ -6409,32 +6538,29 @@
           ]
         },
         {
-          "tag": "磁性材料",
-          "theme_path": [
-            "2. 半导体材料",
-            "磁性材料"
-          ]
+          "tag": "电子材料",
+          "theme_path": []
         },
         {
-          "tag": "储能",
+          "tag": "电力系统",
           "theme_path": [
             "8. 电力・液冷・数据中心",
-            "储能"
+            "电力系统"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "3660.00",
-      "change": "-40.00 (-1.08%)",
-      "isUp": false,
-      "per": "35.96",
+      "price": "3699.00",
+      "change": "+39.00 (+1.07%)",
+      "isUp": true,
+      "per": "35.97",
       "roe": "9.9%",
       "forward_per": "34.61",
       "pbr": "3.21",
-      "distHigh": "-15.2%",
-      "ytdChange": "64.22%",
-      "distWeek": "-4.5%",
-      "distMonth": "-12.6%",
+      "distHigh": "-14.3%",
+      "ytdChange": "65.97%",
+      "distWeek": "-1.8%",
+      "distMonth": "-11.7%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -6448,34 +6574,30 @@
         "蓄电池",
         "储能"
       ],
+      "merged_tags": [
+        "电力系统"
+      ],
       "tag_themes": [
         {
-          "tag": "蓄电池",
+          "tag": "电力系统",
           "theme_path": [
             "8. 电力・液冷・数据中心",
-            "蓄电池"
-          ]
-        },
-        {
-          "tag": "储能",
-          "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "储能"
+            "电力系统"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "4547.00",
-      "change": "-223.00 (-4.68%)",
+      "price": "4522.00",
+      "change": "-25.00 (-0.55%)",
       "isUp": false,
-      "per": "55.56",
+      "per": "55.55",
       "roe": "4.1%",
       "forward_per": "26.78",
       "pbr": "2.03",
-      "distHigh": "-4.7%",
-      "ytdChange": "120.42%",
-      "distWeek": "-4.7%",
-      "distMonth": "-4.7%",
+      "distHigh": "-5.2%",
+      "ytdChange": "119.20%",
+      "distWeek": "-5.2%",
+      "distMonth": "-5.2%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -6489,12 +6611,16 @@
         "储能",
         "电池"
       ],
+      "merged_tags": [
+        "电力系统",
+        "电池"
+      ],
       "tag_themes": [
         {
-          "tag": "储能",
+          "tag": "电力系统",
           "theme_path": [
             "8. 电力・液冷・数据中心",
-            "储能"
+            "电力系统"
           ]
         },
         {
@@ -6503,17 +6629,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "1862.00",
-      "change": "+75.00 (+4.20%)",
+      "price": "2011.00",
+      "change": "+149.00 (+8.00%)",
       "isUp": true,
       "per": "--",
       "roe": "-39.6%",
       "forward_per": "--",
       "pbr": "32.16",
-      "distHigh": "-66.6%",
-      "ytdChange": "110.71%",
-      "distWeek": "-12.4%",
-      "distMonth": "-51.9%",
+      "distHigh": "-63.9%",
+      "ytdChange": "127.57%",
+      "distWeek": "0.0%",
+      "distMonth": "-48.0%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -6524,6 +6650,10 @@
       "industry": "1.5.5",
       "feature": "**行业地位**：日本配电设备与自动化龙头\n**主营业务**：配电柜、自动化设备、半导体制造设备\n**竞争优势**：配电设备技术领先，半导体设备FA领域积累深厚，产品线协同效应强\n**未来方向**：AI数据中心配电系统需求增长，半导体设备自动化升级驱动FA业务扩张",
       "tags": [
+        "配电柜",
+        "自动化设备"
+      ],
+      "merged_tags": [
         "配电柜",
         "自动化设备"
       ],
@@ -6538,17 +6668,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "5400.00",
-      "change": "+80.00 (+1.50%)",
+      "price": "5980.00",
+      "change": "+580.00 (+10.74%)",
       "isUp": true,
-      "per": "35.16",
+      "per": "35.09",
       "roe": "21.7%",
       "forward_per": "8.04",
       "pbr": "7.06",
-      "distHigh": "-13.3%",
-      "ytdChange": "41.25%",
-      "distWeek": "-3.2%",
-      "distMonth": "-3.2%",
+      "distHigh": "-4.0%",
+      "ytdChange": "56.42%",
+      "distWeek": "0.0%",
+      "distMonth": "0.0%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -6562,41 +6692,7 @@
         "MLCC",
         "电感"
       ],
-      "tag_themes": [
-        {
-          "tag": "MLCC",
-          "theme_path": [
-            "2. 半导体材料",
-            "MLCC"
-          ]
-        },
-        {
-          "tag": "电感",
-          "theme_path": []
-        }
-      ],
-      "market_type": "日股",
-      "price": "10875.00",
-      "change": "-1015.00 (-8.54%)",
-      "isUp": false,
-      "per": "87.08",
-      "roe": "8.8%",
-      "forward_per": "46.70",
-      "pbr": "7.42",
-      "distHigh": "-15.7%",
-      "ytdChange": "229.66%",
-      "distWeek": "-11.4%",
-      "distMonth": "-15.7%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "6976",
-      "name": "太陽誘電",
-      "sector": "1.5",
-      "industry": "1.5.6",
-      "feature": "**行业地位**：日本高端MLCC与电感龙头\n**主营业务**：MLCC、电感、铁氧体磁芯、FBAR/SAW滤波器\n**竞争优势**：中高端MLCC市占率全球前五，铁氧体磁芯技术领先，高频通信器件深厚积累\n**未来方向**：AI服务器与AI加速卡需求爆发驱动高端MLCC与功率电感需求持续增长",
-      "tags": [
+      "merged_tags": [
         "MLCC",
         "电感"
       ],
@@ -6614,17 +6710,59 @@
         }
       ],
       "market_type": "日股",
-      "price": "20400.00",
-      "change": "-2255.00 (-9.95%)",
-      "isUp": false,
-      "per": "190.16",
+      "price": "11080.00",
+      "change": "+205.00 (+1.89%)",
+      "isUp": true,
+      "per": "86.96",
+      "roe": "8.8%",
+      "forward_per": "46.70",
+      "pbr": "7.42",
+      "distHigh": "-14.1%",
+      "ytdChange": "235.87%",
+      "distWeek": "-9.8%",
+      "distMonth": "-14.1%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "6976",
+      "name": "太陽誘電",
+      "sector": "1.5",
+      "industry": "1.5.6",
+      "feature": "**行业地位**：日本高端MLCC与电感龙头\n**主营业务**：MLCC、电感、铁氧体磁芯、FBAR/SAW滤波器\n**竞争优势**：中高端MLCC市占率全球前五，铁氧体磁芯技术领先，高频通信器件深厚积累\n**未来方向**：AI服务器与AI加速卡需求爆发驱动高端MLCC与功率电感需求持续增长",
+      "tags": [
+        "MLCC",
+        "电感"
+      ],
+      "merged_tags": [
+        "MLCC",
+        "电感"
+      ],
+      "tag_themes": [
+        {
+          "tag": "MLCC",
+          "theme_path": [
+            "2. 半导体材料",
+            "MLCC"
+          ]
+        },
+        {
+          "tag": "电感",
+          "theme_path": []
+        }
+      ],
+      "market_type": "日股",
+      "price": "20560.00",
+      "change": "+160.00 (+0.78%)",
+      "isUp": true,
+      "per": "192.31",
       "roe": "4.5%",
       "forward_per": "109.78",
       "pbr": "7.47",
-      "distHigh": "-15.2%",
-      "ytdChange": "461.53%",
-      "distWeek": "-15.2%",
-      "distMonth": "-15.2%",
+      "distHigh": "-14.6%",
+      "ytdChange": "465.93%",
+      "distWeek": "-14.6%",
+      "distMonth": "-14.6%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -6638,6 +6776,10 @@
         "电容器",
         "储能"
       ],
+      "merged_tags": [
+        "电容器",
+        "电力系统"
+      ],
       "tag_themes": [
         {
           "tag": "电容器",
@@ -6647,26 +6789,26 @@
           ]
         },
         {
-          "tag": "储能",
+          "tag": "电力系统",
           "theme_path": [
             "8. 电力・液冷・数据中心",
-            "储能"
+            "电力系统"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "4295.00",
-      "change": "-475.00 (-9.96%)",
-      "isUp": false,
-      "per": "47.15",
+      "price": "4435.00",
+      "change": "+140.00 (+3.26%)",
+      "isUp": true,
+      "per": "47.17",
       "roe": "5.8%",
       "forward_per": "49.32",
       "pbr": "2.49",
-      "distHigh": "-13.5%",
-      "ytdChange": "161.88%",
-      "distWeek": "-11.3%",
-      "distMonth": "-13.5%",
-      "trend": "熊市空头",
+      "distHigh": "-10.7%",
+      "ytdChange": "170.41%",
+      "distWeek": "-8.4%",
+      "distMonth": "-10.7%",
+      "trend": "牛市多头",
       "source": "yfinance"
     },
     {
@@ -6679,12 +6821,16 @@
         "液冷",
         "冷却管路"
       ],
+      "merged_tags": [
+        "液冷设备",
+        "冷却管路"
+      ],
       "tag_themes": [
         {
-          "tag": "液冷",
+          "tag": "液冷设备",
           "theme_path": [
             "8. 电力・液冷・数据中心",
-            "液冷"
+            "液冷设备"
           ]
         },
         {
@@ -6693,17 +6839,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "940.00",
-      "change": "+5.00 (+0.53%)",
-      "isUp": true,
+      "price": "930.00",
+      "change": "-10.00 (-1.06%)",
+      "isUp": false,
       "per": "21.84",
       "roe": "4.3%",
       "forward_per": "6.66",
       "pbr": "0.69",
-      "distHigh": "-22.9%",
-      "ytdChange": "9.88%",
-      "distWeek": "-9.2%",
-      "distMonth": "-22.9%",
+      "distHigh": "-23.7%",
+      "ytdChange": "8.71%",
+      "distWeek": "-5.4%",
+      "distMonth": "-23.7%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -6716,6 +6862,9 @@
       "tags": [
         "电力系统"
       ],
+      "merged_tags": [
+        "电力系统"
+      ],
       "tag_themes": [
         {
           "tag": "电力系统",
@@ -6726,18 +6875,18 @@
         }
       ],
       "market_type": "日股",
-      "price": "5820.00",
-      "change": "+210.00 (+3.74%)",
+      "price": "6150.00",
+      "change": "+330.00 (+5.67%)",
       "isUp": true,
       "per": "11.61",
       "roe": "20.7%",
       "forward_per": "27.27",
       "pbr": "2.18",
-      "distHigh": "-41.9%",
-      "ytdChange": "-28.26%",
-      "distWeek": "-3.5%",
-      "distMonth": "-9.8%",
-      "trend": "熊市空头",
+      "distHigh": "-38.6%",
+      "ytdChange": "-24.19%",
+      "distWeek": "-0.8%",
+      "distMonth": "-4.7%",
+      "trend": "牛市多头",
       "source": "yfinance"
     },
     {
@@ -6751,19 +6900,24 @@
         "大模型",
         "AI应用"
       ],
+      "merged_tags": [
+        "云服务IaaS",
+        "基础模型",
+        "AI应用"
+      ],
       "tag_themes": [
         {
-          "tag": "Azure",
+          "tag": "云服务IaaS",
           "theme_path": [
             "9. 云・模型・应用",
-            "Azure"
+            "云服务IaaS"
           ]
         },
         {
-          "tag": "大模型",
+          "tag": "基础模型",
           "theme_path": [
             "9. 云・模型・应用",
-            "大模型"
+            "基础模型"
           ]
         },
         {
@@ -6799,19 +6953,23 @@
         "AWS",
         "AI芯片"
       ],
+      "merged_tags": [
+        "云服务IaaS",
+        "AI SoC"
+      ],
       "tag_themes": [
         {
-          "tag": "AWS",
+          "tag": "云服务IaaS",
           "theme_path": [
             "9. 云・模型・应用",
-            "AWS"
+            "云服务IaaS"
           ]
         },
         {
-          "tag": "AI芯片",
+          "tag": "AI SoC",
           "theme_path": [
             "3. 算力芯片",
-            "AI芯片"
+            "AI SoC"
           ]
         }
       ],
@@ -6841,26 +6999,31 @@
         "TPU",
         "Gemini"
       ],
+      "merged_tags": [
+        "云服务IaaS",
+        "AI SoC",
+        "基础模型"
+      ],
       "tag_themes": [
         {
-          "tag": "Google Cloud",
+          "tag": "云服务IaaS",
           "theme_path": [
             "9. 云・模型・应用",
-            "Google Cloud"
+            "云服务IaaS"
           ]
         },
         {
-          "tag": "TPU",
+          "tag": "AI SoC",
           "theme_path": [
-            "9. 云・模型・应用",
-            "TPU"
+            "3. 算力芯片",
+            "AI SoC"
           ]
         },
         {
-          "tag": "Gemini",
+          "tag": "基础模型",
           "theme_path": [
             "9. 云・模型・应用",
-            "Gemini"
+            "基础模型"
           ]
         }
       ],
@@ -6889,19 +7052,15 @@
         "GPU云",
         "AI云"
       ],
+      "merged_tags": [
+        "云服务IaaS"
+      ],
       "tag_themes": [
         {
-          "tag": "GPU云",
+          "tag": "云服务IaaS",
           "theme_path": [
             "9. 云・模型・应用",
-            "GPU云"
-          ]
-        },
-        {
-          "tag": "AI云",
-          "theme_path": [
-            "9. 云・模型・应用",
-            "AI云"
+            "云服务IaaS"
           ]
         }
       ],
@@ -6930,19 +7089,15 @@
         "AI平台",
         "企业AI"
       ],
+      "merged_tags": [
+        "AI应用"
+      ],
       "tag_themes": [
         {
-          "tag": "AI平台",
+          "tag": "AI应用",
           "theme_path": [
             "9. 云・模型・应用",
-            "AI平台"
-          ]
-        },
-        {
-          "tag": "企业AI",
-          "theme_path": [
-            "9. 云・模型・应用",
-            "企业AI"
+            "AI应用"
           ]
         }
       ],
@@ -6968,6 +7123,10 @@
       "industry": "1.7.1",
       "feature": "**行业地位**：离子阱量子计算龙头\n**主营业务**：离子阱量子处理器、量子云服务、量子纠错\n**竞争优势**：高保真量子门技术领先，商业化进展全球第一梯队，与多家云平台合作\n**未来方向**：量子纠错技术突破驱动实用化进程，量子云服务商业化加速",
       "tags": [
+        "离子阱",
+        "量子纠错"
+      ],
+      "merged_tags": [
         "离子阱",
         "量子纠错"
       ],
@@ -7011,6 +7170,9 @@
       "tags": [
         "退火量子计算"
       ],
+      "merged_tags": [
+        "退火量子计算"
+      ],
       "tag_themes": [
         {
           "tag": "退火量子计算",
@@ -7042,6 +7204,10 @@
       "industry": "1.7.1",
       "feature": "**行业地位**：超导量子计算代表企业\n**主营业务**：多量子比特超导处理器、量子云服务\n**竞争优势**：超导量子计算技术领先，专注多量子比特处理器研发，技术路线明确\n**未来方向**：量子比特数量增加与纠错技术突破驱动实用化进程",
       "tags": [
+        "超导量子计算",
+        "QPU"
+      ],
+      "merged_tags": [
         "超导量子计算",
         "QPU"
       ],
@@ -7083,6 +7249,11 @@
       "industry": "1.7.2",
       "feature": "**行业地位**：企业级量子计算领导者\n**主营业务**：超导量子处理器、Qiskit量子生态、量子云服务\n**竞争优势**：Qiskit开源生态全球领先，量子云服务商业化成熟，企业客户基础深厚\n**未来方向**：量子计算实用化进程推进驱动企业级量子服务需求增长",
       "tags": [
+        "超导量子计算",
+        "量子云",
+        "Qiskit"
+      ],
+      "merged_tags": [
         "超导量子计算",
         "量子云",
         "Qiskit"
@@ -7135,6 +7306,10 @@
         "后量子密码",
         "量子安全"
       ],
+      "merged_tags": [
+        "后量子密码",
+        "量子安全"
+      ],
       "tag_themes": [
         {
           "tag": "后量子密码",
@@ -7152,18 +7327,18 @@
         }
       ],
       "market_type": "A股",
-      "price": "nan",
-      "change": "nan (nan%)",
+      "price": "38.25",
+      "change": "-1.36 (-3.43%)",
       "isUp": false,
       "per": "--",
-      "roe": "35.8%",
+      "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "nan%",
-      "distWeek": "--",
-      "distMonth": "--",
-      "trend": "熊市空头",
+      "ytdChange": "2.30%",
+      "distWeek": "-15.6%",
+      "distMonth": "-15.6%",
+      "trend": "牛市多头",
       "source": "sina"
     },
     {
@@ -7177,12 +7352,17 @@
         "量子计算",
         "量子云"
       ],
+      "merged_tags": [
+        "数据中心架构",
+        "量子计算",
+        "量子云"
+      ],
       "tag_themes": [
         {
-          "tag": "HPC",
+          "tag": "数据中心架构",
           "theme_path": [
             "8. 电力・液冷・数据中心",
-            "HPC"
+            "数据中心架构"
           ]
         },
         {
@@ -7201,17 +7381,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "4215.00",
-      "change": "-85.00 (-1.98%)",
-      "isUp": false,
-      "per": "34.00",
+      "price": "4285.00",
+      "change": "+70.00 (+1.66%)",
+      "isUp": true,
+      "per": "34.01",
       "roe": "21.2%",
       "forward_per": "40.01",
       "pbr": "5.60",
-      "distHigh": "-43.8%",
-      "ytdChange": "135.51%",
-      "distWeek": "-17.4%",
-      "distMonth": "-43.4%",
+      "distHigh": "-42.9%",
+      "ytdChange": "139.42%",
+      "distWeek": "-8.2%",
+      "distMonth": "-42.5%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -7226,6 +7406,11 @@
         "CNC",
         "FA自动化"
       ],
+      "merged_tags": [
+        "工业机器人",
+        "CNC数控系统",
+        "FA工厂自动化"
+      ],
       "tag_themes": [
         {
           "tag": "工业机器人",
@@ -7235,33 +7420,33 @@
           ]
         },
         {
-          "tag": "CNC",
+          "tag": "CNC数控系统",
           "theme_path": [
             "10. 工业自动化与机器人",
-            "CNC"
+            "CNC数控系统"
           ]
         },
         {
-          "tag": "FA自动化",
+          "tag": "FA工厂自动化",
           "theme_path": [
             "10. 工业自动化与机器人",
-            "FA自动化"
+            "FA工厂自动化"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "7209.00",
-      "change": "-206.00 (-2.78%)",
-      "isUp": false,
-      "per": "41.61",
+      "price": "7439.00",
+      "change": "+230.00 (+3.19%)",
+      "isUp": true,
+      "per": "41.67",
       "roe": "9.4%",
       "forward_per": "42.97",
       "pbr": "3.72",
-      "distHigh": "-18.8%",
-      "ytdChange": "15.48%",
-      "distWeek": "-4.1%",
-      "distMonth": "-11.7%",
-      "trend": "熊市空头",
+      "distHigh": "-16.2%",
+      "ytdChange": "19.16%",
+      "distWeek": "-1.0%",
+      "distMonth": "-8.9%",
+      "trend": "牛市多头",
       "source": "yfinance"
     },
     {
@@ -7275,41 +7460,38 @@
         "机器视觉",
         "检测系统"
       ],
+      "merged_tags": [
+        "传感器",
+        "工业视觉"
+      ],
       "tag_themes": [
         {
-          "tag": "工业传感器",
+          "tag": "传感器",
           "theme_path": [
             "10. 工业自动化与机器人",
-            "工业传感器"
+            "传感器"
           ]
         },
         {
-          "tag": "机器视觉",
+          "tag": "工业视觉",
           "theme_path": [
             "10. 工业自动化与机器人",
-            "机器视觉"
-          ]
-        },
-        {
-          "tag": "检测系统",
-          "theme_path": [
-            "10. 工业自动化与机器人",
-            "检测系统"
+            "工业视觉"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "80400.00",
-      "change": "-1230.00 (-1.51%)",
+      "price": "80300.00",
+      "change": "-100.00 (-0.12%)",
       "isUp": false,
-      "per": "43.81",
+      "per": "43.67",
       "roe": "13.5%",
       "forward_per": "43.00",
       "pbr": "5.61",
-      "distHigh": "-4.5%",
-      "ytdChange": "41.26%",
-      "distWeek": "-2.4%",
-      "distMonth": "-2.4%",
+      "distHigh": "-4.6%",
+      "ytdChange": "41.09%",
+      "distWeek": "-2.5%",
+      "distMonth": "-2.5%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -7324,6 +7506,11 @@
         "伺服系统",
         "运动控制"
       ],
+      "merged_tags": [
+        "工业机器人",
+        "伺服电机",
+        "运动控制系统"
+      ],
       "tag_themes": [
         {
           "tag": "工业机器人",
@@ -7333,32 +7520,32 @@
           ]
         },
         {
-          "tag": "伺服系统",
+          "tag": "伺服电机",
           "theme_path": [
             "10. 工业自动化与机器人",
-            "伺服系统"
+            "伺服电机"
           ]
         },
         {
-          "tag": "运动控制",
+          "tag": "运动控制系统",
           "theme_path": [
             "10. 工业自动化与机器人",
-            "运动控制"
+            "运动控制系统"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "6942.00",
-      "change": "-360.00 (-4.93%)",
-      "isUp": false,
+      "price": "7479.00",
+      "change": "+537.00 (+7.74%)",
+      "isUp": true,
       "per": "55.25",
       "roe": "7.8%",
       "forward_per": "36.50",
       "pbr": "4.01",
-      "distHigh": "-12.3%",
-      "ytdChange": "40.73%",
-      "distWeek": "-7.0%",
-      "distMonth": "-12.3%",
+      "distHigh": "-5.5%",
+      "ytdChange": "51.62%",
+      "distWeek": "0.0%",
+      "distMonth": "-5.5%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -7374,12 +7561,17 @@
         "液冷",
         "CDU"
       ],
+      "merged_tags": [
+        "伺服电机",
+        "机器人关节",
+        "液冷设备"
+      ],
       "tag_themes": [
         {
-          "tag": "精密电机",
+          "tag": "伺服电机",
           "theme_path": [
             "10. 工业自动化与机器人",
-            "精密电机"
+            "伺服电机"
           ]
         },
         {
@@ -7390,33 +7582,26 @@
           ]
         },
         {
-          "tag": "液冷",
+          "tag": "液冷设备",
           "theme_path": [
             "8. 电力・液冷・数据中心",
-            "液冷"
-          ]
-        },
-        {
-          "tag": "CDU",
-          "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "CDU"
+            "液冷设备"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "2678.00",
-      "change": "-69.00 (-2.51%)",
-      "isUp": false,
-      "per": "26.55",
+      "price": "2787.00",
+      "change": "+109.00 (+4.07%)",
+      "isUp": true,
+      "per": "26.60",
       "roe": "6.3%",
       "forward_per": "14.70",
       "pbr": "1.82",
-      "distHigh": "-18.8%",
-      "ytdChange": "28.01%",
-      "distWeek": "-3.6%",
-      "distMonth": "-8.3%",
-      "trend": "熊市空头",
+      "distHigh": "-15.4%",
+      "ytdChange": "33.22%",
+      "distWeek": "-0.9%",
+      "distMonth": "-4.5%",
+      "trend": "牛市多头",
       "source": "yfinance"
     },
     {
@@ -7430,41 +7615,46 @@
         "工业传感器",
         "FA自动化"
       ],
+      "merged_tags": [
+        "PLC可编程控制器",
+        "传感器",
+        "FA工厂自动化"
+      ],
       "tag_themes": [
         {
-          "tag": "PLC",
+          "tag": "PLC可编程控制器",
           "theme_path": [
             "10. 工业自动化与机器人",
-            "PLC"
+            "PLC可编程控制器"
           ]
         },
         {
-          "tag": "工业传感器",
+          "tag": "传感器",
           "theme_path": [
             "10. 工业自动化与机器人",
-            "工业传感器"
+            "传感器"
           ]
         },
         {
-          "tag": "FA自动化",
+          "tag": "FA工厂自动化",
           "theme_path": [
             "10. 工业自动化与机器人",
-            "FA自动化"
+            "FA工厂自动化"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "5885.00",
-      "change": "-117.00 (-1.95%)",
-      "isUp": false,
-      "per": "34.88",
+      "price": "6056.00",
+      "change": "+171.00 (+2.91%)",
+      "isUp": true,
+      "per": "34.84",
       "roe": "3.8%",
       "forward_per": "22.34",
       "pbr": "1.42",
-      "distHigh": "-7.8%",
-      "ytdChange": "49.01%",
-      "distWeek": "-3.2%",
-      "distMonth": "-7.8%",
+      "distHigh": "-5.1%",
+      "ytdChange": "53.34%",
+      "distWeek": "-0.4%",
+      "distMonth": "-5.1%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -7479,6 +7669,10 @@
         "执行机构",
         "FA自动化"
       ],
+      "merged_tags": [
+        "气动元件",
+        "FA工厂自动化"
+      ],
       "tag_themes": [
         {
           "tag": "气动元件",
@@ -7488,32 +7682,25 @@
           ]
         },
         {
-          "tag": "执行机构",
+          "tag": "FA工厂自动化",
           "theme_path": [
             "10. 工业自动化与机器人",
-            "执行机构"
-          ]
-        },
-        {
-          "tag": "FA自动化",
-          "theme_path": [
-            "10. 工业自动化与机器人",
-            "FA自动化"
+            "FA工厂自动化"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "72680.00",
-      "change": "-2510.00 (-3.34%)",
-      "isUp": false,
-      "per": "28.73",
+      "price": "75800.00",
+      "change": "+3120.00 (+4.29%)",
+      "isUp": true,
+      "per": "28.74",
       "roe": "8.3%",
       "forward_per": "23.09",
       "pbr": "2.26",
-      "distHigh": "-16.3%",
-      "ytdChange": "27.46%",
-      "distWeek": "-4.0%",
-      "distMonth": "-4.0%",
+      "distHigh": "-12.7%",
+      "ytdChange": "32.93%",
+      "distWeek": "-0.6%",
+      "distMonth": "-0.6%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -7524,6 +7711,10 @@
       "industry": "2.1.1",
       "feature": "**行业地位**：谐波减速器龙头\n**主营业务**：谐波减速器、精密传动部件、机器人关节\n**竞争优势**：谐波减速器全球市占率超50%，机器人关节核心部件供应商，技术壁垒极高\n**未来方向**：人形机器人需求爆发驱动谐波减速器需求，持续推进高精度减速器技术迭代",
       "tags": [
+        "谐波减速器",
+        "机器人关节"
+      ],
+      "merged_tags": [
         "谐波减速器",
         "机器人关节"
       ],
@@ -7544,17 +7735,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "8130.00",
-      "change": "+120.00 (+1.50%)",
+      "price": "8840.00",
+      "change": "+710.00 (+8.73%)",
       "isUp": true,
-      "per": "517.87",
+      "per": "526.19",
       "roe": "2.0%",
       "forward_per": "116.79",
       "pbr": "10.41",
-      "distHigh": "-8.3%",
-      "ytdChange": "112.24%",
-      "distWeek": "-4.0%",
-      "distMonth": "-8.3%",
+      "distHigh": "-0.3%",
+      "ytdChange": "130.78%",
+      "distWeek": "0.0%",
+      "distMonth": "-0.3%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -7565,6 +7756,11 @@
       "industry": "2.1.1",
       "feature": "**行业地位**：精密加工企业\n**主营业务**：机器人零部件、医疗设备、无人机\n**竞争优势**：精密加工技术领先，机器人零部件与医疗设备双轮驱动，无人机新业务布局\n**未来方向**：机器人零部件与无人机需求增长驱动精密加工需求，持续推进高端加工技术",
       "tags": [
+        "机器人零部件",
+        "精密加工",
+        "无人机"
+      ],
+      "merged_tags": [
         "机器人零部件",
         "精密加工",
         "无人机"
@@ -7584,17 +7780,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "1127.00",
-      "change": "-78.00 (-6.47%)",
-      "isUp": false,
-      "per": "140.02",
+      "price": "1200.00",
+      "change": "+73.00 (+6.48%)",
+      "isUp": true,
+      "per": "140.85",
       "roe": "0.7%",
       "forward_per": "164.38",
       "pbr": "2.42",
-      "distHigh": "-40.1%",
-      "ytdChange": "57.26%",
-      "distWeek": "-12.2%",
-      "distMonth": "-21.6%",
+      "distHigh": "-36.2%",
+      "ytdChange": "67.45%",
+      "distWeek": "-6.2%",
+      "distMonth": "-16.6%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -7610,12 +7806,18 @@
         "工业软件",
         "IIoT"
       ],
+      "merged_tags": [
+        "PLC可编程控制器",
+        "数字孪生",
+        "智能制造解决方案",
+        "工业物联网IIoT"
+      ],
       "tag_themes": [
         {
-          "tag": "PLC",
+          "tag": "PLC可编程控制器",
           "theme_path": [
             "10. 工业自动化与机器人",
-            "PLC"
+            "PLC可编程控制器"
           ]
         },
         {
@@ -7626,23 +7828,23 @@
           ]
         },
         {
-          "tag": "工业软件",
+          "tag": "智能制造解决方案",
           "theme_path": [
             "10. 工业自动化与机器人",
-            "工业软件"
+            "智能制造解决方案"
           ]
         },
         {
-          "tag": "IIoT",
+          "tag": "工业物联网IIoT",
           "theme_path": [
             "10. 工业自动化与机器人",
-            "IIoT"
+            "工业物联网IIoT"
           ]
         }
       ],
       "market_type": "德股",
       "price": "284.10",
-      "change": "+10.65 (+3.89%)",
+      "change": "+7.20 (+2.60%)",
       "isUp": true,
       "per": "29.41",
       "roe": "12.6%",
@@ -7666,26 +7868,31 @@
         "MES",
         "智能制造"
       ],
+      "merged_tags": [
+        "PLC可编程控制器",
+        "工业软件",
+        "智能制造解决方案"
+      ],
       "tag_themes": [
         {
-          "tag": "PLC",
+          "tag": "PLC可编程控制器",
           "theme_path": [
             "10. 工业自动化与机器人",
-            "PLC"
+            "PLC可编程控制器"
           ]
         },
         {
-          "tag": "MES",
+          "tag": "工业软件",
           "theme_path": [
-            "9. 云・模型・应用",
-            "MES"
+            "10. 工业自动化与机器人",
+            "工业软件"
           ]
         },
         {
-          "tag": "智能制造",
+          "tag": "智能制造解决方案",
           "theme_path": [
             "10. 工业自动化与机器人",
-            "智能制造"
+            "智能制造解决方案"
           ]
         }
       ],
@@ -7715,6 +7922,11 @@
         "伺服系统",
         "运动控制"
       ],
+      "merged_tags": [
+        "工业机器人",
+        "伺服电机",
+        "运动控制系统"
+      ],
       "tag_themes": [
         {
           "tag": "工业机器人",
@@ -7724,33 +7936,33 @@
           ]
         },
         {
-          "tag": "伺服系统",
+          "tag": "伺服电机",
           "theme_path": [
             "10. 工业自动化与机器人",
-            "伺服系统"
+            "伺服电机"
           ]
         },
         {
-          "tag": "运动控制",
+          "tag": "运动控制系统",
           "theme_path": [
             "10. 工业自动化与机器人",
-            "运动控制"
+            "运动控制系统"
           ]
         }
       ],
       "market_type": "A股",
-      "price": "nan",
-      "change": "nan (nan%)",
+      "price": "355.12",
+      "change": "-4.88 (-1.36%)",
       "isUp": false,
       "per": "--",
-      "roe": "27.2%",
+      "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "nan%",
-      "distWeek": "--",
-      "distMonth": "--",
-      "trend": "熊市空头",
+      "ytdChange": "38.21%",
+      "distWeek": "-22.8%",
+      "distMonth": "-22.8%",
+      "trend": "牛市多头",
       "source": "sina"
     },
     {
@@ -7765,12 +7977,17 @@
         "智能制造解决方案",
         "激光加工设备"
       ],
+      "merged_tags": [
+        "激光加工设备",
+        "工业机器人",
+        "智能制造解决方案"
+      ],
       "tag_themes": [
         {
-          "tag": "焊接设备",
+          "tag": "激光加工设备",
           "theme_path": [
             "10. 工业自动化与机器人",
-            "焊接设备"
+            "激光加工设备"
           ]
         },
         {
@@ -7786,28 +8003,21 @@
             "10. 工业自动化与机器人",
             "智能制造解决方案"
           ]
-        },
-        {
-          "tag": "激光加工设备",
-          "theme_path": [
-            "10. 工业自动化与机器人",
-            "激光加工设备"
-          ]
         }
       ],
       "market_type": "A股",
-      "price": "nan",
-      "change": "nan (nan%)",
-      "isUp": false,
+      "price": "18.90",
+      "change": "+0.82 (+4.54%)",
+      "isUp": true,
       "per": "--",
-      "roe": "27.2%",
+      "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "nan%",
-      "distWeek": "--",
-      "distMonth": "--",
-      "trend": "熊市空头",
+      "ytdChange": "0.00%",
+      "distWeek": "-1.3%",
+      "distMonth": "-4.4%",
+      "trend": "牛市多头",
       "source": "sina"
     },
     {
@@ -7822,48 +8032,46 @@
         "数据中心",
         "云服务"
       ],
+      "merged_tags": [
+        "数据中心架构",
+        "液冷设备",
+        "云服务IaaS"
+      ],
       "tag_themes": [
         {
-          "tag": "服务器",
+          "tag": "数据中心架构",
           "theme_path": [
             "8. 电力・液冷・数据中心",
-            "服务器"
+            "数据中心架构"
           ]
         },
         {
-          "tag": "液冷",
+          "tag": "液冷设备",
           "theme_path": [
             "8. 电力・液冷・数据中心",
-            "液冷"
+            "液冷设备"
           ]
         },
         {
-          "tag": "数据中心",
-          "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "数据中心"
-          ]
-        },
-        {
-          "tag": "云服务",
+          "tag": "云服务IaaS",
           "theme_path": [
             "9. 云・模型・应用",
-            "云服务"
+            "云服务IaaS"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "3344.00",
-      "change": "+107.00 (+3.31%)",
-      "isUp": true,
+      "price": "3326.00",
+      "change": "-18.00 (-0.54%)",
+      "isUp": false,
       "per": "19.05",
       "roe": "15.6%",
       "forward_per": "21.92",
       "pbr": "2.85",
-      "distHigh": "-28.4%",
-      "ytdChange": "-21.55%",
-      "distWeek": "-2.4%",
-      "distMonth": "-9.2%",
+      "distHigh": "-28.7%",
+      "ytdChange": "-21.98%",
+      "distWeek": "-3.4%",
+      "distMonth": "-9.7%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -7874,19 +8082,20 @@
       "industry": "3.2.1",
       "feature": "**行业地位**：日本最大海运公司\n**主营业务**：集装箱船、散货船、油轮、LNG船、国际远洋运输\n**竞争优势**：全球集装箱航运龙头之一，LNG船队规模领先，物流与港口业务协同\n**未来方向**：全球贸易复苏驱动海运需求增长，LNG运输受益全球能源结构调整",
       "tags": [],
+      "merged_tags": [],
       "tag_themes": [],
       "market_type": "日股",
-      "price": "5183.00",
-      "change": "+103.00 (+2.03%)",
+      "price": "5211.00",
+      "change": "+28.00 (+0.54%)",
       "isUp": true,
       "per": "10.32",
       "roe": "7.1%",
       "forward_per": "10.17",
       "pbr": "0.69",
-      "distHigh": "-18.9%",
-      "ytdChange": "3.24%",
-      "distWeek": "-2.4%",
-      "distMonth": "-11.5%",
+      "distHigh": "-18.5%",
+      "ytdChange": "3.80%",
+      "distWeek": "-1.9%",
+      "distMonth": "-11.0%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -7897,19 +8106,20 @@
       "industry": "3.2.1",
       "feature": "**行业地位**：日本第二大海运公司\n**主营业务**：集装箱运输、干散货、能源运输（LNG/石油）\n**竞争优势**：全球最大规模LNG船队之一，能源运输领域领先，AI数据中心电力需求带动LNG运输\n**未来方向**：LNG运输受益全球能源贸易与AI电力需求增长，集装箱业务受益全球贸易复苏",
       "tags": [],
+      "merged_tags": [],
       "tag_themes": [],
       "market_type": "日股",
-      "price": "5121.00",
-      "change": "+90.00 (+1.79%)",
+      "price": "5193.00",
+      "change": "+72.00 (+1.41%)",
       "isUp": true,
       "per": "8.38",
       "roe": "7.6%",
       "forward_per": "9.23",
       "pbr": "0.62",
-      "distHigh": "-30.1%",
-      "ytdChange": "9.93%",
-      "distWeek": "-3.4%",
-      "distMonth": "-15.0%",
+      "distHigh": "-29.1%",
+      "ytdChange": "11.48%",
+      "distWeek": "-1.9%",
+      "distMonth": "-13.9%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -7920,19 +8130,20 @@
       "industry": "3.2.1",
       "feature": "**行业地位**：日本第三大海运公司\n**主营业务**：集装箱运输、散货船、汽车运输船（全球最大汽车运输船运营商之一）\n**竞争优势**：全球最大汽车运输船运营商，LNG运输与海上风电新业务布局\n**未来方向**：汽车海运需求增长驱动汽车运输船业务，LNG与海上风电提供新增长点",
       "tags": [],
+      "merged_tags": [],
       "tag_themes": [],
       "market_type": "日股",
-      "price": "2481.50",
-      "change": "+63.00 (+2.60%)",
+      "price": "2543.50",
+      "change": "+62.00 (+2.50%)",
       "isUp": true,
       "per": "12.09",
       "roe": "7.8%",
       "forward_per": "7.28",
       "pbr": "0.89",
-      "distHigh": "-16.3%",
-      "ytdChange": "16.48%",
-      "distWeek": "-1.1%",
-      "distMonth": "-12.6%",
+      "distHigh": "-14.2%",
+      "ytdChange": "19.39%",
+      "distWeek": "-1.3%",
+      "distMonth": "-10.4%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -7943,6 +8154,9 @@
       "industry": "4.1.1",
       "feature": "**行业地位**：全球航天发射龙头\n**主营业务**：火箭发射、Starlink卫星互联网、载人航天\n**竞争优势**：Starlink在轨卫星超6000颗，商业航天估值超2000亿美元，可重复使用火箭技术领先\n**未来方向**：Starlink全球用户持续增长，星舰（Starship）商业化推进",
       "tags": [
+        "AI应用"
+      ],
+      "merged_tags": [
         "AI应用"
       ],
       "tag_themes": [
@@ -7978,6 +8192,9 @@
       "tags": [
         "AI应用"
       ],
+      "merged_tags": [
+        "AI应用"
+      ],
       "tag_themes": [
         {
           "tag": "AI应用",
@@ -8009,6 +8226,9 @@
       "industry": "4.1.1",
       "feature": "**行业地位**：太空蜂窝通信网络先驱\n**主营业务**：手机直连卫星通信、低轨卫星星座\n**竞争优势**：全球首家实现手机直连卫星通信的商业航天公司，技术先发优势明显\n**未来方向**：手机直连卫星服务商业化推广，全球通信覆盖拓展",
       "tags": [
+        "AI应用"
+      ],
+      "merged_tags": [
         "AI应用"
       ],
       "tag_themes": [
@@ -8044,6 +8264,9 @@
       "tags": [
         "AI应用"
       ],
+      "merged_tags": [
+        "AI应用"
+      ],
       "tag_themes": [
         {
           "tag": "AI应用",
@@ -8077,37 +8300,7 @@
       "tags": [
         "AI应用"
       ],
-      "tag_themes": [
-        {
-          "tag": "AI应用",
-          "theme_path": [
-            "9. 云・模型・应用",
-            "AI应用"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "441.00",
-      "change": "+1.00 (+0.23%)",
-      "isUp": true,
-      "per": "-6.36",
-      "roe": "-73.5%",
-      "forward_per": "-6.36",
-      "pbr": "4.34",
-      "distHigh": "-37.9%",
-      "ytdChange": "-5.77%",
-      "distWeek": "-3.7%",
-      "distMonth": "-30.3%",
-      "trend": "熊市空头",
-      "source": "yfinance"
-    },
-    {
-      "code": "186A",
-      "name": "Astroscale",
-      "sector": "4.1",
-      "industry": "4.1.1",
-      "feature": "**行业地位**：全球轨道碎片治理先驱\n**主营业务**：ELSA-d技术、轨道碎片清除、在轨服务\n**竞争优势**：ELSA-d技术领先，太空可持续性方案领导者，全球首家商业化碎片清除企业\n**未来方向**：太空碎片治理需求增长驱动在轨服务需求，持续推进ELSA-d商业化",
-      "tags": [
+      "merged_tags": [
         "AI应用"
       ],
       "tag_themes": [
@@ -8120,17 +8313,53 @@
         }
       ],
       "market_type": "日股",
-      "price": "1124.00",
-      "change": "-14.00 (-1.23%)",
-      "isUp": false,
+      "price": "450.00",
+      "change": "+9.00 (+2.04%)",
+      "isUp": true,
+      "per": "-6.36",
+      "roe": "-73.5%",
+      "forward_per": "-6.36",
+      "pbr": "4.34",
+      "distHigh": "-36.6%",
+      "ytdChange": "-3.85%",
+      "distWeek": "-1.7%",
+      "distMonth": "-28.9%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "186A",
+      "name": "Astroscale",
+      "sector": "4.1",
+      "industry": "4.1.1",
+      "feature": "**行业地位**：全球轨道碎片治理先驱\n**主营业务**：ELSA-d技术、轨道碎片清除、在轨服务\n**竞争优势**：ELSA-d技术领先，太空可持续性方案领导者，全球首家商业化碎片清除企业\n**未来方向**：太空碎片治理需求增长驱动在轨服务需求，持续推进ELSA-d商业化",
+      "tags": [
+        "AI应用"
+      ],
+      "merged_tags": [
+        "AI应用"
+      ],
+      "tag_themes": [
+        {
+          "tag": "AI应用",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "1218.00",
+      "change": "+94.00 (+8.36%)",
+      "isUp": true,
       "per": "-345.04",
       "roe": "-94.3%",
       "forward_per": "-345.04",
       "pbr": "20.50",
-      "distHigh": "-62.7%",
-      "ytdChange": "62.66%",
-      "distWeek": "-8.2%",
-      "distMonth": "-49.9%",
+      "distHigh": "-59.6%",
+      "ytdChange": "76.27%",
+      "distWeek": "-0.6%",
+      "distMonth": "-45.7%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -8143,6 +8372,9 @@
       "tags": [
         "光芯片"
       ],
+      "merged_tags": [
+        "光芯片"
+      ],
       "tag_themes": [
         {
           "tag": "光芯片",
@@ -8153,17 +8385,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "2610.00",
-      "change": "-142.00 (-5.16%)",
+      "price": "2595.00",
+      "change": "-15.00 (-0.57%)",
       "isUp": false,
       "per": "837.10",
       "roe": "-7.1%",
       "forward_per": "837.10",
       "pbr": "22.14",
-      "distHigh": "-27.9%",
-      "ytdChange": "683.78%",
-      "distWeek": "-16.2%",
-      "distMonth": "-26.1%",
+      "distHigh": "-28.3%",
+      "ytdChange": "679.28%",
+      "distWeek": "-11.0%",
+      "distMonth": "-26.5%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -8174,6 +8406,9 @@
       "industry": "4.1.2",
       "feature": "**行业地位**：全球航空发动机巨头\n**主营业务**：商用航空发动机、军用航空发动机、国防航空动力\n**竞争优势**：商用航空发动机市占率超50%，国防航空动力核心供应商，技术积累深厚\n**未来方向**：商用航空复苏驱动航空发动机需求，国防支出增长推动军用业务扩张",
       "tags": [
+        "AI应用"
+      ],
+      "merged_tags": [
         "AI应用"
       ],
       "tag_themes": [
@@ -8191,7 +8426,7 @@
       "isUp": true,
       "per": "46.96",
       "roe": "45.4%",
-      "forward_per": "43.43",
+      "forward_per": "43.55",
       "pbr": "21.81",
       "distHigh": "-1.4%",
       "ytdChange": "17.87%",
@@ -8207,6 +8442,9 @@
       "industry": "4.1.2",
       "feature": "**行业地位**：全球顶级防务与航天系统集成商\n**主营业务**：导弹系统、雷达系统、防务电子、航天系统\n**竞争优势**：导弹与雷达系统市占率全球领先，防务与航天双重布局，客户基础稳固\n**未来方向**：全球防务支出增长驱动导弹与雷达需求，航天系统业务持续拓展",
       "tags": [
+        "AI应用"
+      ],
+      "merged_tags": [
         "AI应用"
       ],
       "tag_themes": [
@@ -8242,6 +8480,9 @@
       "tags": [
         "AI应用"
       ],
+      "merged_tags": [
+        "AI应用"
+      ],
       "tag_themes": [
         {
           "tag": "AI应用",
@@ -8275,6 +8516,9 @@
       "tags": [
         "AI应用"
       ],
+      "merged_tags": [
+        "AI应用"
+      ],
       "tag_themes": [
         {
           "tag": "AI应用",
@@ -8291,7 +8535,7 @@
       "per": "32.52",
       "roe": "19.7%",
       "forward_per": "25.15",
-      "pbr": "6.19",
+      "pbr": "6.18",
       "distHigh": "-9.0%",
       "ytdChange": "-0.04%",
       "distWeek": "-0.1%",
@@ -8306,6 +8550,10 @@
       "industry": "4.1.2",
       "feature": "**行业地位**：日本最大重工企业\n**主营业务**：航空宇宙、防衛、エネルギー、産業機械、两相直接芯片液冷（两相DLC）系统\n**竞争优势**：H-IIA火箭制造商，航空发动机与防务装备核心制造商，液冷方案获英伟达/英特尔/AMD认证\n**未来方向**：AI数据中心液冷需求爆发驱动两相DLC业务增长，燃气轮机+液浸冷却一体化方案拓展",
       "tags": [
+        "液冷设备",
+        "电力系统"
+      ],
+      "merged_tags": [
         "液冷设备",
         "电力系统"
       ],
@@ -8326,17 +8574,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "3788.00",
-      "change": "+52.00 (+1.39%)",
+      "price": "3792.00",
+      "change": "+4.00 (+0.11%)",
       "isUp": true,
-      "per": "36.27",
+      "per": "36.23",
       "roe": "12.6%",
       "forward_per": "40.92",
       "pbr": "4.13",
-      "distHigh": "-27.3%",
-      "ytdChange": "-8.73%",
-      "distWeek": "-2.0%",
-      "distMonth": "-7.5%",
+      "distHigh": "-27.2%",
+      "ytdChange": "-8.63%",
+      "distWeek": "-2.7%",
+      "distMonth": "-7.4%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -8349,37 +8597,7 @@
       "tags": [
         "AI应用"
       ],
-      "tag_themes": [
-        {
-          "tag": "AI应用",
-          "theme_path": [
-            "9. 云・模型・应用",
-            "AI应用"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "2801.50",
-      "change": "+128.00 (+4.79%)",
-      "isUp": true,
-      "per": "18.90",
-      "roe": "27.8%",
-      "forward_per": "4.96",
-      "pbr": "4.66",
-      "distHigh": "-40.4%",
-      "ytdChange": "-6.41%",
-      "distWeek": "-0.8%",
-      "distMonth": "-7.4%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "5631",
-      "name": "日本製鋼所",
-      "sector": "4.1",
-      "industry": "4.1.2",
-      "feature": "**行业地位**：大型铸锻件专家\n**主营业务**：核工业锻件、航空航天锻件、特种材料\n**竞争优势**：核工业与航空航天锻件核心供应商，特种材料技术领先，客户基础稳固\n**未来方向**：核工业与航空航天需求增长驱动大型锻件需求，持续推进特种材料开发",
-      "tags": [
+      "merged_tags": [
         "AI应用"
       ],
       "tag_themes": [
@@ -8392,17 +8610,53 @@
         }
       ],
       "market_type": "日股",
-      "price": "7930.00",
-      "change": "+97.00 (+1.24%)",
+      "price": "2869.50",
+      "change": "+68.00 (+2.43%)",
+      "isUp": true,
+      "per": "18.90",
+      "roe": "27.8%",
+      "forward_per": "4.96",
+      "pbr": "4.66",
+      "distHigh": "-38.9%",
+      "ytdChange": "-4.14%",
+      "distWeek": "-0.3%",
+      "distMonth": "-5.1%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "5631",
+      "name": "日本製鋼所",
+      "sector": "4.1",
+      "industry": "4.1.2",
+      "feature": "**行业地位**：大型铸锻件专家\n**主营业务**：核工业锻件、航空航天锻件、特种材料\n**竞争优势**：核工业与航空航天锻件核心供应商，特种材料技术领先，客户基础稳固\n**未来方向**：核工业与航空航天需求增长驱动大型锻件需求，持续推进特种材料开发",
+      "tags": [
+        "AI应用"
+      ],
+      "merged_tags": [
+        "AI应用"
+      ],
+      "tag_themes": [
+        {
+          "tag": "AI应用",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "7955.00",
+      "change": "+25.00 (+0.32%)",
       "isUp": true,
       "per": "30.40",
       "roe": "9.5%",
       "forward_per": "28.57",
       "pbr": "2.76",
-      "distHigh": "-25.3%",
-      "ytdChange": "-0.75%",
+      "distHigh": "-25.1%",
+      "ytdChange": "-0.44%",
       "distWeek": "-1.8%",
-      "distMonth": "-8.0%",
+      "distMonth": "-7.7%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -8413,6 +8667,13 @@
       "industry": "5.1.1",
       "feature": "**行业地位**：全球改性塑料龙头之一\n**主营业务**：改性塑料、特种工程塑料、完全生物降解塑料、碳纤维及复合材料、医疗健康材料\n**竞争优势**：改性塑料技术领先，特种工程塑料与碳纤维布局完善，新材料平台化发展\n**未来方向**：新能源汽车与高端装备需求增长驱动改性塑料需求，持续推进高性能新材料开发",
       "tags": [
+        "改性塑料",
+        "工程塑料",
+        "生物降解材料",
+        "碳纤维",
+        "新材料"
+      ],
+      "merged_tags": [
         "改性塑料",
         "工程塑料",
         "生物降解材料",
@@ -8454,18 +8715,18 @@
         }
       ],
       "market_type": "A股",
-      "price": "nan",
-      "change": "nan (nan%)",
-      "isUp": false,
+      "price": "17.01",
+      "change": "+1.55 (+10.03%)",
+      "isUp": true,
       "per": "--",
-      "roe": "9.5%",
+      "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "nan%",
-      "distWeek": "--",
-      "distMonth": "--",
-      "trend": "熊市空头",
+      "ytdChange": "4.62%",
+      "distWeek": "0.0%",
+      "distMonth": "-1.2%",
+      "trend": "牛市多头",
       "source": "sina"
     },
     {
@@ -8475,6 +8736,12 @@
       "industry": "5.1.1",
       "feature": "**行业地位**：化学品与电子材料专门商社\n**主营业务**：化学品（44.6%）、电子材料（14.1%）、合成树脂（26.4%）、化粧品\n**竞争优势**：半导体材料领域深耕，高纯度化学品/电子材料核心供应链角色，客户粘性高\n**未来方向**：AI芯片制造用高纯度化学品需求增长驱动电子材料业务，化学品贸易持续扩张",
       "tags": [
+        "化学品贸易",
+        "电子材料贸易",
+        "高纯化学品",
+        "电子特气"
+      ],
+      "merged_tags": [
         "化学品贸易",
         "电子材料贸易",
         "高纯化学品",
@@ -8511,18 +8778,18 @@
         }
       ],
       "market_type": "日股",
-      "price": "1170.50",
-      "change": "+5.00 (+0.43%)",
+      "price": "1200.00",
+      "change": "+29.50 (+2.52%)",
       "isUp": true,
-      "per": "15.21",
+      "per": "15.22",
       "roe": "8.1%",
       "forward_per": "3.93",
       "pbr": "1.15",
-      "distHigh": "-6.9%",
-      "ytdChange": "21.16%",
-      "distWeek": "-3.5%",
-      "distMonth": "-5.5%",
-      "trend": "熊市空头",
+      "distHigh": "-4.5%",
+      "ytdChange": "24.21%",
+      "distWeek": "-0.2%",
+      "distMonth": "-3.1%",
+      "trend": "牛市多头",
       "source": "yfinance"
     },
     {
@@ -8535,6 +8802,10 @@
         "电子材料贸易",
         "交换机/路由芯片"
       ],
+      "merged_tags": [
+        "电子材料贸易",
+        "交换机"
+      ],
       "tag_themes": [
         {
           "tag": "电子材料贸易",
@@ -8544,25 +8815,22 @@
           ]
         },
         {
-          "tag": "交换机/路由芯片",
-          "theme_path": [
-            "6. 网络互联",
-            "交换机/路由芯片"
-          ]
+          "tag": "交换机",
+          "theme_path": []
         }
       ],
       "market_type": "日股",
-      "price": "4155.00",
-      "change": "+15.00 (+0.36%)",
+      "price": "4205.00",
+      "change": "+50.00 (+1.20%)",
       "isUp": true,
       "per": "6.70",
       "roe": "17.8%",
       "forward_per": "10.71",
       "pbr": "1.09",
-      "distHigh": "-17.7%",
-      "ytdChange": "8.36%",
-      "distWeek": "-4.7%",
-      "distMonth": "-17.7%",
+      "distHigh": "-16.7%",
+      "ytdChange": "9.66%",
+      "distWeek": "-3.3%",
+      "distMonth": "-16.7%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -8573,6 +8841,11 @@
       "industry": "5.1.1",
       "feature": "**行业地位**：产业气体与能源商社\n**主营业务**：产业气体/电子特气、LPG/LNG、水素、化学品、焊接材料\n**竞争优势**：半导体制造用高纯度特种气体核心供应商，AI芯片制造不可或缺，氢能全产业链布局\n**未来方向**：AI芯片制造需求驱动电子特气需求增长，氢能产业链提供长期增长点",
       "tags": [
+        "资源能源",
+        "化学品贸易",
+        "电子特气"
+      ],
+      "merged_tags": [
         "资源能源",
         "化学品贸易",
         "电子特气"
@@ -8601,17 +8874,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "1929.00",
-      "change": "+26.00 (+1.37%)",
+      "price": "1976.00",
+      "change": "+47.00 (+2.44%)",
       "isUp": true,
       "per": "9.54",
       "roe": "11.6%",
       "forward_per": "2.87",
       "pbr": "1.04",
-      "distHigh": "-11.5%",
-      "ytdChange": "18.87%",
-      "distWeek": "-1.0%",
-      "distMonth": "-4.7%",
+      "distHigh": "-9.3%",
+      "ytdChange": "21.76%",
+      "distWeek": "-0.4%",
+      "distMonth": "-2.4%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -8622,6 +8895,14 @@
       "industry": "5.1.2",
       "feature": "**行业地位**：日本半导体与电子元器件专业商社控股公司（2026年4月设立，东证Prime+名古屋Premier双重上市）\n**主营业务**：半导体/电子元器件销售与技术支援（デバイスソリューション）、DX/云计算/系统集成（システムソリューション）、嵌入式软件开发、EMS/ODM\n**竞争优势**：由佐鸟电机（1,562亿円营收）与萩原电气（2,587亿円营收）合并成立，形成从器件到系统的完整供应链服务体系，整体营收规模约4,149亿円，在日本电子元器件分销行业属头部企业\n**未来方向**：AI半导体需求增长驱动器件分销业务，DX与系统集成业务受益企业数字化转型加速，预计2026年11月期营收5,420亿円（+30%）、营业利润146亿円",
       "tags": [
+        "电子材料贸易",
+        "半导体分销",
+        "EMS",
+        "ODM",
+        "系统集成",
+        "DX"
+      ],
+      "merged_tags": [
         "电子材料贸易",
         "半导体分销",
         "EMS",
@@ -8659,17 +8940,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "2420.00",
-      "change": "+86.00 (+3.68%)",
-      "isUp": true,
+      "price": "2358.00",
+      "change": "-62.00 (-2.56%)",
+      "isUp": false,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
-      "distHigh": "-8.7%",
-      "ytdChange": "35.27%",
-      "distWeek": "-8.7%",
-      "distMonth": "-8.7%",
+      "distHigh": "-11.0%",
+      "ytdChange": "31.81%",
+      "distWeek": "-11.0%",
+      "distMonth": "-11.0%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -8680,6 +8961,11 @@
       "industry": "5.2.5",
       "feature": "**行业地位**：日本五大综合商社之一\n**主营业务**：纤维、机械、金属、能源、化学品、食料、ICT/金融\n**竞争优势**：2025财年营收约12万亿日元，旗下CTC为日本最大IT解决方案商之一，全面布局AI/云基础设施\n**未来方向**：AI/云基础设施投资驱动ICT业务增长，传统贸易业务持续稳健扩张",
       "tags": [
+        "ICT/数字化",
+        "AI应用",
+        "云服务IaaS"
+      ],
+      "merged_tags": [
         "ICT/数字化",
         "AI应用",
         "云服务IaaS"
@@ -8708,17 +8994,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "1886.00",
-      "change": "+34.00 (+1.84%)",
+      "price": "1888.50",
+      "change": "+2.50 (+0.13%)",
       "isUp": true,
       "per": "14.75",
       "roe": "13.9%",
       "forward_per": "2.92",
       "pbr": "2.00",
-      "distHigh": "-17.5%",
-      "ytdChange": "-4.66%",
-      "distWeek": "-0.7%",
-      "distMonth": "-2.2%",
+      "distHigh": "-17.4%",
+      "ytdChange": "-4.53%",
+      "distWeek": "-2.1%",
+      "distMonth": "-2.1%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -8733,51 +9019,7 @@
         "基础设施投资",
         "云服务IaaS"
       ],
-      "tag_themes": [
-        {
-          "tag": "ICT/数字化",
-          "theme_path": [
-            "13. 综合商社",
-            "ICT/数字化"
-          ]
-        },
-        {
-          "tag": "基础设施投资",
-          "theme_path": [
-            "13. 综合商社",
-            "基础设施投资"
-          ]
-        },
-        {
-          "tag": "云服务IaaS",
-          "theme_path": [
-            "9. 云・模型・应用",
-            "云服务IaaS"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "1584.00",
-      "change": "+18.50 (+1.18%)",
-      "isUp": true,
-      "per": "12.63",
-      "roe": "13.5%",
-      "forward_per": "3.55",
-      "pbr": "1.62",
-      "distHigh": "-18.5%",
-      "ytdChange": "15.31%",
-      "distWeek": "-2.6%",
-      "distMonth": "-9.0%",
-      "trend": "熊市空头",
-      "source": "yfinance"
-    },
-    {
-      "code": "8031",
-      "name": "三井物産",
-      "sector": "5.2",
-      "industry": "5.2.5",
-      "feature": "**行业地位**：日本五大综合商社之一\n**主营业务**：金属资源、能源、化学品、机械、食品、ICT、电力\n**竞争优势**：2025财年营收约13万亿日元，金属资源与能源布局深厚，AI/IT基础设施投资拓展\n**未来方向**：AI/IT基础设施投资驱动ICT业务增长，金属资源受益全球能源转型",
-      "tags": [
+      "merged_tags": [
         "ICT/数字化",
         "基础设施投资",
         "云服务IaaS"
@@ -8806,17 +9048,71 @@
         }
       ],
       "market_type": "日股",
-      "price": "4551.00",
-      "change": "+111.00 (+2.50%)",
+      "price": "1575.00",
+      "change": "-9.00 (-0.57%)",
+      "isUp": false,
+      "per": "12.63",
+      "roe": "13.5%",
+      "forward_per": "3.55",
+      "pbr": "1.62",
+      "distHigh": "-19.0%",
+      "ytdChange": "14.66%",
+      "distWeek": "-3.2%",
+      "distMonth": "-9.5%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "8031",
+      "name": "三井物産",
+      "sector": "5.2",
+      "industry": "5.2.5",
+      "feature": "**行业地位**：日本五大综合商社之一\n**主营业务**：金属资源、能源、化学品、机械、食品、ICT、电力\n**竞争优势**：2025财年营收约13万亿日元，金属资源与能源布局深厚，AI/IT基础设施投资拓展\n**未来方向**：AI/IT基础设施投资驱动ICT业务增长，金属资源受益全球能源转型",
+      "tags": [
+        "ICT/数字化",
+        "基础设施投资",
+        "云服务IaaS"
+      ],
+      "merged_tags": [
+        "ICT/数字化",
+        "基础设施投资",
+        "云服务IaaS"
+      ],
+      "tag_themes": [
+        {
+          "tag": "ICT/数字化",
+          "theme_path": [
+            "13. 综合商社",
+            "ICT/数字化"
+          ]
+        },
+        {
+          "tag": "基础设施投资",
+          "theme_path": [
+            "13. 综合商社",
+            "基础设施投资"
+          ]
+        },
+        {
+          "tag": "云服务IaaS",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "云服务IaaS"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "4600.00",
+      "change": "+49.00 (+1.08%)",
       "isUp": true,
       "per": "15.82",
       "roe": "10.3%",
       "forward_per": "15.65",
       "pbr": "1.49",
-      "distHigh": "-31.8%",
-      "ytdChange": "-3.36%",
-      "distWeek": "-2.3%",
-      "distMonth": "-11.3%",
+      "distHigh": "-31.1%",
+      "ytdChange": "-2.32%",
+      "distWeek": "-2.4%",
+      "distMonth": "-10.3%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -8827,6 +9123,12 @@
       "industry": "5.4.1",
       "feature": "**行业地位**：日本综合化学企业，1915年创业，2025财年营收3842亿日元\n**主营业务**：电子材料（高纯度氮化铝散热基板/精细陶瓷/乙炔黑）、聚合物（苯乙烯单体/聚苯乙烯树脂）、弹性体（氯丁橡胶/水泥）、生命创新（疫苗/诊断药）四大板块\n**竞争优势**：高纯度氮化铝散热基板热导率170-230W/m·K，用于功率半导体散热，技术壁垒高\n**未来方向**：聚焦半导体散热材料与医疗健康双支柱，推进苯乙烯业务分拆，FY2026目标营收4500亿日元",
       "tags": [
+        "散热片",
+        "封装基板",
+        "高纯化学品",
+        "电子特气"
+      ],
+      "merged_tags": [
         "散热片",
         "封装基板",
         "高纯化学品",
@@ -8863,17 +9165,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "4187.00",
-      "change": "-15.00 (-0.36%)",
-      "isUp": false,
-      "per": "23.13",
+      "price": "4213.00",
+      "change": "+26.00 (+0.62%)",
+      "isUp": true,
+      "per": "23.15",
       "roe": "3.5%",
       "forward_per": "22.96",
       "pbr": "1.17",
-      "distHigh": "-10.8%",
-      "ytdChange": "54.54%",
-      "distWeek": "-6.5%",
-      "distMonth": "-10.8%",
+      "distHigh": "-10.2%",
+      "ytdChange": "55.50%",
+      "distWeek": "-5.3%",
+      "distMonth": "-10.2%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -8884,6 +9186,12 @@
       "industry": "5.5.1",
       "feature": "**行业地位**：全球IP运营龙头（市值超2万亿日元）\n**主营业务**：Hello Kitty等450+角色IP运营、IP授权、商品化、游戏发行\n**竞争优势**：覆盖130+国家和地区，FY2025营收1449亿日元，授权业务占比55%，轻资产模式\n**未来方向**：Sanrio Games自研游戏品牌推出，从角色商品商向全球IP平台进化",
       "tags": [
+        "IP授权",
+        "IP商品化",
+        "游戏发行",
+        "角色IP"
+      ],
+      "merged_tags": [
         "IP授权",
         "IP商品化",
         "游戏发行",
@@ -8920,17 +9228,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "1112.00",
-      "change": "+19.00 (+1.74%)",
-      "isUp": true,
+      "price": "1087.50",
+      "change": "-24.50 (-2.20%)",
+      "isUp": false,
       "per": "24.33",
       "roe": "--",
       "forward_per": "8.29",
       "pbr": "8.46",
-      "distHigh": "-36.0%",
-      "ytdChange": "13.18%",
-      "distWeek": "-2.4%",
-      "distMonth": "-2.4%",
+      "distHigh": "-37.4%",
+      "ytdChange": "10.69%",
+      "distWeek": "-4.6%",
+      "distMonth": "-4.6%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -8941,19 +9249,20 @@
       "industry": "6.1.1",
       "feature": "**行业地位**：日本最大金融集团\n**主营业务**：商业银行、信托银行、证券、资产管理\n**竞争优势**：2025年度净收益预计创历史新高，受益日本央行加息大幅改善资金利益，推进全社AI浸透运动\n**未来方向**：AI数字化转型深化，海外业务扩张，加息周期持续改善净息差",
       "tags": [],
+      "merged_tags": [],
       "tag_themes": [],
       "market_type": "日股",
-      "price": "3306.00",
-      "change": "+59.00 (+1.82%)",
+      "price": "3326.00",
+      "change": "+20.00 (+0.60%)",
       "isUp": true,
       "per": "15.67",
       "roe": "11.9%",
       "forward_per": "21.93",
       "pbr": "1.69",
-      "distHigh": "-2.6%",
-      "ytdChange": "32.39%",
-      "distWeek": "-1.0%",
-      "distMonth": "-2.6%",
+      "distHigh": "-2.0%",
+      "ytdChange": "33.19%",
+      "distWeek": "-0.4%",
+      "distMonth": "-2.0%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -8964,19 +9273,20 @@
       "industry": "6.1.1",
       "feature": "**行业地位**：日本第二大金融集团\n**主营业务**：商业银行、信托、证券、资产管理\n**竞争优势**：2025年度净收益创历史新高，ROE目标瞄准15%欧美顶级银行水平，海外业务扩张\n**未来方向**：加息周期驱动净息差改善，海外业务持续扩张，数字化转型推进",
       "tags": [],
+      "merged_tags": [],
       "tag_themes": [],
       "market_type": "日股",
-      "price": "6573.00",
-      "change": "+140.00 (+2.18%)",
+      "price": "6672.00",
+      "change": "+99.00 (+1.51%)",
       "isUp": true,
-      "per": "16.19",
+      "per": "16.21",
       "roe": "6.9%",
       "forward_per": "20.99",
       "pbr": "1.61",
-      "distHigh": "-2.4%",
-      "ytdChange": "28.76%",
-      "distWeek": "-0.9%",
-      "distMonth": "-2.4%",
+      "distHigh": "-0.9%",
+      "ytdChange": "30.70%",
+      "distWeek": "-0.2%",
+      "distMonth": "-0.9%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -8987,19 +9297,20 @@
       "industry": "6.1.1",
       "feature": "**行业地位**：日本三大巨型银行之一\n**主营业务**：商业银行、信托、证券、资产管理\n**竞争优势**：2025年4-12月期首次纯利润突破1万亿日元，2026年3月期全年净收益达1.25万亿日元（同比+41%）\n**未来方向**：非利息业务与海外业务持续扩张，加息周期驱动净息差改善",
       "tags": [],
+      "merged_tags": [],
       "tag_themes": [],
       "market_type": "日股",
-      "price": "7973.00",
-      "change": "+159.00 (+2.03%)",
+      "price": "8078.00",
+      "change": "+105.00 (+1.32%)",
       "isUp": true,
-      "per": "16.06",
+      "per": "16.05",
       "roe": "11.4%",
       "forward_per": "24.00",
       "pbr": "1.74",
-      "distHigh": "-4.0%",
-      "ytdChange": "37.29%",
-      "distWeek": "-1.4%",
-      "distMonth": "-4.0%",
+      "distHigh": "-2.7%",
+      "ytdChange": "39.10%",
+      "distWeek": "-0.1%",
+      "distMonth": "-2.7%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -9010,19 +9321,20 @@
       "industry": "6.1.3",
       "feature": "**行业地位**：日本最大信托银行集团\n**主营业务**：信托银行、资产管理、财富管理\n**竞争优势**：日本最大信托银行集团，与三大巨型银行差异化竞争，资产运用业务能力领先\n**未来方向**：资产运用需求增长驱动信托业务，财富管理业务持续扩张",
       "tags": [],
+      "merged_tags": [],
       "tag_themes": [],
       "market_type": "日股",
-      "price": "6260.00",
-      "change": "+140.00 (+2.29%)",
+      "price": "6326.00",
+      "change": "+66.00 (+1.05%)",
       "isUp": true,
-      "per": "14.02",
+      "per": "14.01",
       "roe": "9.5%",
       "forward_per": "17.03",
       "pbr": "1.24",
-      "distHigh": "-1.8%",
-      "ytdChange": "31.29%",
-      "distWeek": "-0.5%",
-      "distMonth": "-0.5%",
+      "distHigh": "-0.8%",
+      "ytdChange": "32.68%",
+      "distWeek": "-0.8%",
+      "distMonth": "-0.8%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -9033,19 +9345,20 @@
       "industry": "6.1.2",
       "feature": "**行业地位**：日本最大地方银行集团\n**主营业务**：面向中小企业和个人客户的综合金融服务\n**竞争优势**：以关西地区为据点，中小企业客户基础稳固，受益利率上升和区域经济复苏\n**未来方向**：加息周期驱动净息差改善，区域经济复苏驱动贷款需求增长",
       "tags": [],
+      "merged_tags": [],
       "tag_themes": [],
       "market_type": "日股",
-      "price": "2197.00",
-      "change": "+82.50 (+3.90%)",
+      "price": "2245.50",
+      "change": "+48.50 (+2.21%)",
       "isUp": true,
-      "per": "19.73",
+      "per": "19.72",
       "roe": "9.2%",
       "forward_per": "25.50",
       "pbr": "1.74",
-      "distHigh": "-3.5%",
-      "ytdChange": "42.56%",
-      "distWeek": "-1.1%",
-      "distMonth": "-3.5%",
+      "distHigh": "-1.4%",
+      "ytdChange": "45.70%",
+      "distWeek": "-0.2%",
+      "distMonth": "-1.4%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -9056,20 +9369,21 @@
       "industry": "6.1.1",
       "feature": "**行业地位**：SBI集团旗下综合金融服务机构\n**主营业务**：零售消费金融、机构结构性融资、银行与非银综合服务\n**竞争优势**：2025年12月东证Prime上市（IPO价1450日元），资本金1400亿日元，受益SBI集团金融科技生态协同\n**未来方向**：日本加息周期驱动零售金融业务改善，金融科技生态协同持续深化",
       "tags": [],
+      "merged_tags": [],
       "tag_themes": [],
       "market_type": "日股",
-      "price": "1412.00",
-      "change": "+45.00 (+3.29%)",
+      "price": "1447.50",
+      "change": "+35.50 (+2.51%)",
       "isUp": true,
-      "per": "10.52",
+      "per": "10.53",
       "roe": "10.3%",
       "forward_per": "--",
       "pbr": "1.05",
       "distHigh": "-100.0%",
-      "ytdChange": "-17.25%",
-      "distWeek": "-1.1%",
-      "distMonth": "-9.0%",
-      "trend": "熊市空头",
+      "ytdChange": "-15.17%",
+      "distWeek": "-0.5%",
+      "distMonth": "-6.7%",
+      "trend": "牛市多头",
       "source": "yfinance"
     },
     {
@@ -9079,6 +9393,9 @@
       "industry": "7.2.1",
       "feature": "**行业地位**：日本五大建设公司之一\n**主营业务**：建筑工程、土木工程、海外建设、数据中心/半导体工厂建设\n**竞争优势**：FY2025营收1.77万亿日元，首都圈竞争力强，AI数据中心、半导体工厂建设核心承包商\n**未来方向**：AI数据中心与半导体工厂建设需求驱动增长，海外事业持续扩张",
       "tags": [
+        "数据中心架构"
+      ],
+      "merged_tags": [
         "数据中心架构"
       ],
       "tag_themes": [
@@ -9091,17 +9408,17 @@
         }
       ],
       "market_type": "日股",
-      "price": "14425.00",
-      "change": "+60.00 (+0.42%)",
+      "price": "14650.00",
+      "change": "+225.00 (+1.56%)",
       "isUp": true,
-      "per": "14.28",
+      "per": "14.29",
       "roe": "18.5%",
       "forward_per": "30.78",
       "pbr": "2.52",
-      "distHigh": "-30.2%",
-      "ytdChange": "-4.72%",
+      "distHigh": "-29.2%",
+      "ytdChange": "-3.24%",
       "distWeek": "-2.3%",
-      "distMonth": "-6.0%",
+      "distMonth": "-4.6%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -9114,37 +9431,7 @@
       "tags": [
         "数据中心架构"
       ],
-      "tag_themes": [
-        {
-          "tag": "数据中心架构",
-          "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "数据中心架构"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "3274.00",
-      "change": "+27.00 (+0.83%)",
-      "isUp": true,
-      "per": "13.25",
-      "roe": "14.1%",
-      "forward_per": "23.96",
-      "pbr": "1.81",
-      "distHigh": "-26.2%",
-      "ytdChange": "0.03%",
-      "distWeek": "-1.7%",
-      "distMonth": "-3.0%",
-      "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "1803",
-      "name": "清水建設",
-      "sector": "7.2",
-      "industry": "7.2.1",
-      "feature": "**行业地位**：日本五大建设公司之一\n**主营业务**：建筑工程、土木工程、环境工程、智能建筑、数据中心/半导体工厂建设\n**竞争优势**：FY2025营收2.01万亿日元，首都圏民间建筑为主力，AI数据中心与半导体工厂核心承包商\n**未来方向**：AI数据中心与半导体工厂建设需求驱动增长，环境工程与智能建筑布局提供新增长点",
-      "tags": [
+      "merged_tags": [
         "数据中心架构"
       ],
       "tag_themes": [
@@ -9157,17 +9444,53 @@
         }
       ],
       "market_type": "日股",
-      "price": "2573.00",
-      "change": "+13.50 (+0.53%)",
+      "price": "3305.00",
+      "change": "+31.00 (+0.95%)",
       "isUp": true,
-      "per": "13.91",
+      "per": "13.24",
+      "roe": "14.1%",
+      "forward_per": "23.96",
+      "pbr": "1.81",
+      "distHigh": "-25.5%",
+      "ytdChange": "0.98%",
+      "distWeek": "-1.3%",
+      "distMonth": "-2.0%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "1803",
+      "name": "清水建設",
+      "sector": "7.2",
+      "industry": "7.2.1",
+      "feature": "**行业地位**：日本五大建设公司之一\n**主营业务**：建筑工程、土木工程、环境工程、智能建筑、数据中心/半导体工厂建设\n**竞争优势**：FY2025营收2.01万亿日元，首都圏民间建筑为主力，AI数据中心与半导体工厂核心承包商\n**未来方向**：AI数据中心与半导体工厂建设需求驱动增长，环境工程与智能建筑布局提供新增长点",
+      "tags": [
+        "数据中心架构"
+      ],
+      "merged_tags": [
+        "数据中心架构"
+      ],
+      "tag_themes": [
+        {
+          "tag": "数据中心架构",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "2599.00",
+      "change": "+26.00 (+1.01%)",
+      "isUp": true,
+      "per": "13.93",
       "roe": "13.4%",
       "forward_per": "31.65",
       "pbr": "1.80",
-      "distHigh": "-28.9%",
-      "ytdChange": "-4.03%",
-      "distWeek": "-1.8%",
-      "distMonth": "-6.0%",
+      "distHigh": "-28.2%",
+      "ytdChange": "-3.06%",
+      "distWeek": "-0.8%",
+      "distMonth": "-5.0%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -9178,6 +9501,10 @@
       "industry": "7.2.1",
       "feature": "**行业地位**：日本海洋土木工程龙头\n**主营业务**：国内土木工程、建筑、海外工程（以东南亚为中心）、AI数据中心/半导体工厂建设\n**竞争优势**：FY2026营收3587亿日元（同比+8.5%），营业利润242亿日元（同比+17.3%），ROE达17.36%\n**未来方向**：AI数据中心与半导体工厂建设需求驱动增长，海洋土木工程核心竞争力持续强化",
       "tags": [
+        "数据中心架构",
+        "海洋土木工程"
+      ],
+      "merged_tags": [
         "数据中心架构",
         "海洋土木工程"
       ],
@@ -9195,22 +9522,22 @@
         }
       ],
       "market_type": "日股",
-      "price": "2056.00",
-      "change": "+11.00 (+0.54%)",
+      "price": "2084.00",
+      "change": "+28.00 (+1.36%)",
       "isUp": true,
       "per": "8.39",
       "roe": "17.2%",
       "forward_per": "15.59",
       "pbr": "1.38",
-      "distHigh": "-56.1%",
-      "ytdChange": "-28.48%",
-      "distWeek": "-3.7%",
-      "distMonth": "-13.0%",
+      "distHigh": "-55.5%",
+      "ytdChange": "-27.51%",
+      "distWeek": "-2.3%",
+      "distMonth": "-11.8%",
       "trend": "熊市空头",
       "source": "yfinance"
     }
   ],
-  "ai_report": "【盘后策略官·自动决策】：今日全球硬科技标的整体呈现 弱势震荡 态势。 当前重点观察：PER TTM 估值在 29.84 附近的垄断类资产， 配合距52周高位的 -17.6% 回撤，市场已进入结构性调仓阶段。",
+  "ai_report": "【盘后策略官·自动决策】：今日全球硬科技标的整体呈现 多头回补 态势。 当前重点观察：PER TTM 估值在 29.84 附近的垄断类资产， 配合距52周高位的 -17.6% 回撤，市场已进入结构性调仓阶段。",
   "theme_mapping": {
     "1. 半导体设备": [
       "光刻机",
