@@ -514,24 +514,6 @@
       "badge_class": "etf"
     },
     {
-      "name": "10年国债收益率",
-      "price": "4.37",
-      "change": "-0.02 (-0.46%)",
-      "isUp": false,
-      "type": "bond",
-      "badge_label": "债券",
-      "badge_class": "bond"
-    },
-    {
-      "name": "5年国债收益率",
-      "price": "4.13",
-      "change": "-0.03 (-0.79%)",
-      "isUp": false,
-      "type": "bond",
-      "badge_label": "债券",
-      "badge_class": "bond"
-    },
-    {
       "name": "VIX 恐慌指数",
       "price": "16.15",
       "change": "-0.44 (-2.65%)",
@@ -5596,7 +5578,7 @@
       "per": "34.62",
       "roe": "15.6%",
       "forward_per": "30.55",
-      "pbr": "6.28",
+      "pbr": "6.23",
       "distHigh": "-9.2%",
       "ytdChange": "14.88%",
       "distWeek": "-6.1%",
@@ -7576,7 +7558,7 @@
       "per": "32.52",
       "roe": "19.7%",
       "forward_per": "25.15",
-      "pbr": "6.19",
+      "pbr": "6.18",
       "distHigh": "-9.0%",
       "ytdChange": "-0.04%",
       "distWeek": "-0.1%",
