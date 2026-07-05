@@ -118,26 +118,34 @@ function renderTagsOld(tags) {
         </span>
     `).join('&nbsp;&nbsp;');
 }
+
 // ============================================================
-// 9. 渲染标签 HTML - 统一使用 display_tags
+// 9. 渲染标签 HTML - 直接使用 display_tags（已映射完成）
 // ============================================================
 function renderTags(stock) {
-    // ⭐ 直接使用 display_tags
-    const displayTags = stock.display_tags || stock.tags || [];
-    if (!displayTags || displayTags.length === 0) return '';
+    // ⭐ 防御性检查
+    if (!stock || typeof stock !== 'object') {
+        console.warn('renderTags: stock 参数无效', stock);
+        return '';
+    }
+    
+    // ⭐ 直接使用 display_tags（数据源已完成映射）
+    const displayList = Array.isArray(stock.display_tags) ? stock.display_tags : [];
+    if (displayList.length === 0) return '';
+    
+    // ⭐ 获取 tag_themes（已包含匹配好的路径）
+    const tagThemes = Array.isArray(stock.tag_themes) ? stock.tag_themes : [];
     
     const result = [];
-    displayTags.forEach((displayTag) => {
-        let foundPath = null;
+    displayList.forEach((displayTag) => {
+        if (typeof displayTag !== 'string') return;
         
-        // 在 tag_themes 中查找匹配
-        if (stock.tag_themes) {
-            for (const t of stock.tag_themes) {
-                // ⭐ 用 displayTag 匹配 tag_themes 中的 tag
-                if (t.tag === displayTag && t.theme_path && t.theme_path.length > 0) {
-                    foundPath = t.theme_path;
-                    break;
-                }
+        // ⭐ 在 tag_themes 中查找匹配（直接用 displayTag 匹配）
+        let foundPath = null;
+        for (const t of tagThemes) {
+            if (t.tag === displayTag && t.theme_path && t.theme_path.length > 0) {
+                foundPath = t.theme_path;
+                break;
             }
         }
         
@@ -145,9 +153,11 @@ function renderTags(stock) {
         let hasPath = false;
         
         if (foundPath && foundPath.length >= 3) {
+            // 显示完整的三级路径：一级 › 二级 › 三级
             displayText = `${foundPath[0]} › ${foundPath[1]} › ${displayTag}`;
             hasPath = true;
         } else if (foundPath && foundPath.length >= 2) {
+            // 兼容只有两级的情况：一级 › 二级
             displayText = `${foundPath[0]} › ${displayTag}`;
             hasPath = true;
         }
