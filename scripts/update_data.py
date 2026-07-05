@@ -12,9 +12,7 @@ import requests
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from config import MACRO_LIST, WATCHLIST, DEFAULT_STRATEGY, SOURCE_MAP, THEME_MAPPING
-from config.tag_merge import TAG_MERGE_MAP  # ⭐ 导入 tag 合并映射
-
-
+from tag_merge import TAG_MERGE_MAP  # ⭐ 修改：从同目录导入 tag_merge
 # ============================================================
 # ⭐ Tag 合并函数
 # ============================================================
