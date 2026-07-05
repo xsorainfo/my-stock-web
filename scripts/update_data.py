@@ -13,6 +13,25 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from config import MACRO_LIST, WATCHLIST, DEFAULT_STRATEGY, SOURCE_MAP
 from theme_mapping import THEME_MAPPING  # ⭐ 从 theme_mapping.py 导入
+from tag_display_map import TAG_DISPLAY_MAP  # ⭐ 导入显示映射
+
+# ============================================================
+# ⭐ Tag 显示名称转换函数
+# ============================================================
+def get_display_tag(tag):
+    """
+    将原始 tag 转换为显示名称
+    """
+    return TAG_DISPLAY_MAP.get(tag, tag)
+
+
+def get_display_tags(tags):
+    """
+    将 tags 列表转换为显示名称列表
+    """
+    if not tags:
+        return []
+    return [get_display_tag(tag) for tag in tags]
 
 # ============================================================
 # ⭐ 从 THEME_MAPPING 自动构建二级→三级映射
@@ -561,6 +580,8 @@ def fetch_all_data():
             # ⭐ 获取原始 tags 并合并
             raw_tags = item.get("tags", [])
             tag_theme_list = get_theme_paths_for_tags(raw_tags, TAG_THEME_MAP)
+            # ⭐ 生成显示用的标签
+            display_tags = get_display_tags(raw_tags)
             # 调试输出
             if tag_theme_list:
                 for t in tag_theme_list:
@@ -577,6 +598,7 @@ def fetch_all_data():
                 "industry": item.get("industry", "其他"),
                 "feature": item["feature"],
                 "tags": raw_tags,                    # 原始 tags
+                "display_tags": display_tags,        # ⭐ 显示用的 tags（转换后的名称）
                 "tag_themes": tag_theme_list,        # 原始 tags 对应的 theme_path
                 "market_type": market_type,
                 "price": f"{current_price:.2f}",
