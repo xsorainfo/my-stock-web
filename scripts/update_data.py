@@ -11,8 +11,9 @@ import requests
 # ⭐ 添加项目根目录到 Python 路径
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from config import MACRO_LIST, WATCHLIST, DEFAULT_STRATEGY, SOURCE_MAP, THEME_MAPPING
-from tag_merge import TAG_MERGE_MAP  # ⭐ 修改：从同目录导入 tag_merge
+from config import MACRO_LIST, WATCHLIST, DEFAULT_STRATEGY, SOURCE_MAP
+from theme_mapping import THEME_MAPPING  # ⭐ 从 theme_mapping.py 导入
+from tag_merge import TAG_MERGE_MAP      # ⭐ tag 合并映射
 # ============================================================
 # ⭐ Tag 合并函数
 # ============================================================
