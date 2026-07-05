@@ -544,7 +544,7 @@
                         const formattedFeature = stock.feature.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
                         const colorClass = stock.isUp ? 'text-up' : 'text-down';
                         const trendClass = stock.trend === '牛市多头' ? 'trend-up-bg' : 'trend-down-bg';
-                        const tagsHtml = stock.tags ? renderTags(stock.tags) : '';
+                        const tagsHtml = stock.tags ? renderTags(stock.tags, stock.tag_themes) : '';
                         
                         grid.innerHTML += `
                             <div class="stock-card">
