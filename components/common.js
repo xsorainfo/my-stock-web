@@ -118,7 +118,58 @@ function renderTags(tags) {
         </span>
     `).join('&nbsp;&nbsp;');
 }
-
+// ============================================================
+// 9. 渲染标签 HTML（带层级路径 + 可点击跳转）
+// ============================================================
+function renderTags(tags, stockTagThemes) {
+    if (!tags || tags.length === 0) return '';
+    
+    const result = [];
+    tags.forEach(tag => {
+        let foundPath = null;
+        if (stockTagThemes) {
+            for (const t of stockTagThemes) {
+                if (t.tag === tag && t.theme_path && t.theme_path.length > 0) {
+                    foundPath = t.theme_path;
+                    break;
+                }
+            }
+        }
+        
+        let displayText = tag;
+        let hasPath = false;
+        
+        if (foundPath && foundPath.length >= 2) {
+            displayText = `${foundPath[0]} › ${tag}`;
+            hasPath = true;
+        }
+        
+        result.push({
+            tag: tag,
+            displayText: displayText,
+            hasPath: hasPath
+        });
+    });
+    
+    // 去重
+    const unique = [];
+    const seen = new Set();
+    result.forEach(item => {
+        if (!seen.has(item.tag)) {
+            seen.add(item.tag);
+            unique.push(item);
+        }
+    });
+    
+    return unique.map(item => {
+        const tagClass = item.hasPath ? 'stock-tag clickable-tag theme-tag' : 'stock-tag clickable-tag';
+        return `
+            <span class="${tagClass}" data-tag="${encodeURIComponent(item.tag)}" onclick="navigateToTheme('${encodeURIComponent(item.tag)}')" title="${item.displayText}">
+                ${item.displayText}
+            </span>
+        `;
+    }).join('&nbsp;&nbsp;');
+}
 // ============================================================
 // 10. 跳转到主题页面
 // ============================================================
