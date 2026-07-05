@@ -32,31 +32,41 @@ def get_display_tags(tags):
         if display_tag not in result:
             result.append(display_tag)
     return result
-    
-# ============================================================
-# ⭐ 从 THEME_MAPPING 自动构建二级→三级映射
-# ============================================================
 
+
+# ============================================================
+# ⭐ 从 THEME_MAPPING 自动构建二级→三级映射（支持新格式）
+# ============================================================
 def build_level2_to_level3(theme_mapping):
     """
     从 THEME_MAPPING 自动构建二级标签 → 三级标签列表的映射
+    同时保留注释信息
+    支持新格式：{"tags": [...], "description": "..."}
     """
     level2_to_level3 = {}
+    level2_descriptions = {}  # ⭐ 存储二级分类的注释
     
     if not theme_mapping:
-        return level2_to_level3
+        return level2_to_level3, level2_descriptions
     
     for level1_key, level1_value in theme_mapping.items():
         if isinstance(level1_value, dict):
             for level2_key, level2_value in level1_value.items():
-                if isinstance(level2_value, list):
+                # ⭐ 检查新格式：如果是 dict 且有 tags 字段
+                if isinstance(level2_value, dict):
+                    level2_descriptions[level2_key] = level2_value.get("description", "")
+                    level2_to_level3[level2_key] = level2_value.get("tags", [])
+                elif isinstance(level2_value, list):
+                    # 兼容旧格式
                     level2_to_level3[level2_key] = level2_value
+                    level2_descriptions[level2_key] = ""
     
-    return level2_to_level3
+    return level2_to_level3, level2_descriptions
 
 
 # ⭐ 自动生成展开映射
-LEVEL2_TO_LEVEL3 = build_level2_to_level3(THEME_MAPPING)
+LEVEL2_TO_LEVEL3, LEVEL2_DESCRIPTIONS = build_level2_to_level3(THEME_MAPPING)
+
 
 # ============================================================
 # ⭐ Tag 合并函数
@@ -82,7 +92,8 @@ def merge_tagsOld(tags):
                 result.append(tag)
     
     return result
-    
+
+
 def merge_tags(tags):
     """
     不再展开二级标签，直接返回原始 tags
@@ -96,7 +107,11 @@ def merge_tags(tags):
         if tag not in result:
             result.append(tag)
     return result
-    
+
+
+# ============================================================
+# ⭐ 构建 tag → theme_path 映射（支持新格式）
+# ============================================================
 def build_tag_theme_mapping(theme_mapping):
     """
     根据 THEME_MAPPING 构建 tag → theme_path 的映射字典
@@ -123,7 +138,14 @@ def build_tag_theme_mapping(theme_mapping):
     for theme_name, theme_value in theme_mapping.items():
         if isinstance(theme_value, dict):
             for sub_theme_name, sub_theme_value in theme_value.items():
-                if isinstance(sub_theme_value, list):
+                # ⭐ 新格式：从 dict 中取 tags
+                if isinstance(sub_theme_value, dict):
+                    tags = sub_theme_value.get("tags", [])
+                    for tag in tags:
+                        if tag not in tag_map:
+                            tag_map[tag] = [theme_name, sub_theme_name, tag]
+                elif isinstance(sub_theme_value, list):
+                    # 兼容旧格式
                     for tag in sub_theme_value:
                         if tag not in tag_map:
                             tag_map[tag] = [theme_name, sub_theme_name, tag]
@@ -140,9 +162,8 @@ def build_tag_theme_mapping(theme_mapping):
                     tag_map[tag] = [theme_name, tag]
         elif isinstance(theme_value, dict):
             for sub_theme_name, sub_theme_value in theme_value.items():
-                # ⭐ 二级名称本身作为一个可匹配的 tag
+                # ⭐ 新格式：二级名称本身作为一个可匹配的 tag
                 if sub_theme_name not in tag_map:
-                    # 返回 [一级, 二级]（不包含三级）
                     tag_map[sub_theme_name] = [theme_name, sub_theme_name]
                 # 如果三级列表中有与二级名称相同的 tag，保持第三层匹配优先
     
@@ -358,7 +379,6 @@ class StockDataManager:
             return data, source
         
         # 方案3：Yahoo
-        
         print(f"❌ 所有 A 股数据源均失败: {symbol}")
         return None, "none"
 
@@ -430,8 +450,14 @@ def fetch_all_data():
         "macro": [],
         "stocks": [],
         "ai_report": "",
-        "theme_mapping": THEME_MAPPING  # ⭐ 新增：把主题映射写入 data.json
+        "theme_mapping": THEME_MAPPING,  # ⭐ 把主题映射写入 data.json
+        "tag_display_map": TAG_DISPLAY_MAP,  # ⭐ 把显示映射写入 data.json
+        "theme_descriptions": {}  # ⭐ 新增：存储二级分类的注释
     }
+    
+    # ⭐ 构建二级分类注释映射
+    _, level2_descriptions = build_level2_to_level3(THEME_MAPPING)
+    output_data["theme_descriptions"] = level2_descriptions
         
     session = requests.Session()
     session.headers.update({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'})
@@ -665,6 +691,9 @@ def fetch_all_data():
     # 3. 注入 AI 简报
     output_data["ai_report"] = make_ai_news(output_data["stocks"])
 
+    # ⭐ 确保 data 目录存在
+    os.makedirs('data', exist_ok=True)
+    
     with open('data/data.json', 'w', encoding='utf-8') as f:
         json.dump(output_data, f, ensure_ascii=False, indent=2)
     print("🎉 数据打包成功！")
