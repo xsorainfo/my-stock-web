@@ -34,14 +34,21 @@ def merge_tags(tags):
     return merged
 
 
+
 def build_tag_theme_mapping(theme_mapping):
     """
     根据 THEME_MAPPING 构建 tag → theme_path 的映射字典
     
+    支持三级结构：
+    - 一级：theme_name
+    - 二级：sub_theme_name
+    - 三级：tag（叶子节点）
+    
     返回格式:
     {
-        "光刻机": ["1. 半导体设备", "光刻机"],
-        "硅基材料 (硅片)": ["2. 半导体材料", "制造材料", "硅基材料 (硅片)"],
+        "DUV": ["1. 半导体设备", "光刻机", "DUV"],
+        "EUV": ["1. 半导体设备", "光刻机", "EUV"],
+        "GPU": ["3. 算力芯片", "GPU", "GPU"],
         ...
     }
     """
@@ -51,19 +58,27 @@ def build_tag_theme_mapping(theme_mapping):
         return tag_map
     
     for theme_name, theme_value in theme_mapping.items():
-        # 一级分类是 list（简单列表）
+        # 一级分类是 list（简单列表，只有两级）
         if isinstance(theme_value, list):
             for tag in theme_value:
                 if tag not in tag_map:
                     tag_map[tag] = [theme_name, tag]
         
-        # 一级分类是 dict（有二级分类）
+        # 一级分类是 dict（有二级或三级分类）
         elif isinstance(theme_value, dict):
             for sub_theme_name, sub_theme_value in theme_value.items():
+                # 二级分类是 list（三级叶子节点）
                 if isinstance(sub_theme_value, list):
                     for tag in sub_theme_value:
                         if tag not in tag_map:
+                            # ⭐ 三级结构：[一级, 二级, tag]
                             tag_map[tag] = [theme_name, sub_theme_name, tag]
+                # 如果还有更深层级，可以继续递归
+                elif isinstance(sub_theme_value, dict):
+                    # 递归处理更深层级
+                    for tag, path in build_tag_theme_mapping({sub_theme_name: sub_theme_value}).items():
+                        if tag not in tag_map:
+                            tag_map[tag] = [theme_name, sub_theme_name] + path[1:]
     
     return tag_map
 
