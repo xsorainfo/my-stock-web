@@ -545,7 +545,7 @@
                         const colorClass = stock.isUp ? 'text-up' : 'text-down';
                         const trendClass = stock.trend === '牛市多头' ? 'trend-up-bg' : 'trend-down-bg';
 
-                        const tagsHtml = renderTags(stock.tags, stock.tag_themes, stock.display_tags);
+                        const tagsHtml = renderTags(stock);
                         
                         grid.innerHTML += `
                             <div class="stock-card">
