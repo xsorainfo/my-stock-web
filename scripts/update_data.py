@@ -560,9 +560,7 @@ def fetch_all_data():
 
             # ⭐ 获取原始 tags 并合并
             raw_tags = item.get("tags", [])
-            merged_tags = merge_tags(raw_tags)
-            tag_theme_list = get_theme_paths_for_tags(merged_tags, TAG_THEME_MAP)
-            
+            tag_theme_list = get_theme_paths_for_tags(raw_tags, TAG_THEME_MAP)
             # 调试输出
             if tag_theme_list:
                 for t in tag_theme_list:
@@ -578,8 +576,8 @@ def fetch_all_data():
                 "sector": item.get("sector", "未分类板块"),
                 "industry": item.get("industry", "其他"),
                 "feature": item["feature"],
-                "tags": raw_tags,                    # ⭐ 原始 tags（显示在卡片上）
-                "tag_themes": tag_theme_list,
+                "tags": raw_tags,                    # 原始 tags
+                "tag_themes": tag_theme_list,        # 原始 tags 对应的 theme_path
                 "market_type": market_type,
                 "price": f"{current_price:.2f}",
                 "change": f"{sign}{diff:.2f} ({sign}{percent:.2f}%)",
