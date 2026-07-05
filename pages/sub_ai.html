@@ -752,14 +752,36 @@
                                             }
                                         }
                                         if (foundPath && foundPath.length >= 2) {
-                                            result.push(`${foundPath[0]} › ${tag}`);
-                                        } else if (foundPath && foundPath.length === 1) {
-                                            result.push(foundPath[0]);
+                                            // ⭐ 找到了层级路径 → 显示 第一层 › 标签本身
+                                            result.push({
+                                                text: `${foundPath[0]} › ${tag}`,
+                                                hasPath: true
+                                            });
+                                        } else {
+                                            // ⭐ 没找到 → 只显示 tag 本身
+                                            result.push({
+                                                text: tag,
+                                                hasPath: false
+                                            });
                                         }
                                     });
                                 }
-                                const unique = [...new Set(result)];
-                                return unique.map(text => `<span class="stock-tag theme-tag">${text}</span>`).join('');
+                                // 去重
+                                const unique = [];
+                                const seen = new Set();
+                                result.forEach(item => {
+                                    if (!seen.has(item.text)) {
+                                        seen.add(item.text);
+                                        unique.push(item);
+                                    }
+                                });
+                                return unique.map(item => {
+                                    if (item.hasPath) {
+                                        return `<span class="stock-tag theme-tag">${item.text}</span>`;
+                                    } else {
+                                        return `<span class="stock-tag">${item.text}</span>`;
+                                    }
+                                }).join('');
                             })()}
                         </div>
 
