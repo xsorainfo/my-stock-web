@@ -415,9 +415,9 @@
             const response = await fetch('/data/data.json?v=' + new Date().getTime());
             if (!response.ok) throw new Error('数据加载失败');
             const data = await response.json();
-
+    
             document.getElementById('aiReport').innerText = data.ai_report || '💡 数据就绪。';
-
+    
             // ⭐ 宏观数据渲染（带卡片颜色和标签）
             const macroGrid = document.getElementById('macroGrid');
             macroGrid.innerHTML = data.macro?.map(item => {
@@ -447,7 +447,7 @@
                     </div>
                 `;
             }).join('') || '';
-
+    
             // ⭐ 更新计数和折叠状态
             const totalMacro = data.macro?.length || 0;
             document.getElementById('macroCount').textContent = `(${totalMacro})`;
@@ -460,18 +460,23 @@
                 wrapper.classList.add('open');
                 arrow.classList.add('open');
             }
-
-            // ⭐ 两层分组
+    
+    
+            // ⭐ 两层分组 + 按市场排序
             const container = document.getElementById('industryContainer');
             container.innerHTML = '';
             
+            // 按市场定义排序优先级
+            const marketOrder = { '美股': 0, '日股': 1, 'A股': 2, '港股': 3, '韩股': 4, '德股': 5 };
+            
+            // 按 sector 分组
             const sectorGroups = data.stocks.reduce((acc, stock) => {
                 const sectorKey = stock.sector || '未分类板块';
                 if (!acc[sectorKey]) acc[sectorKey] = [];
                 acc[sectorKey].push(stock);
                 return acc;
             }, {});
-
+    
             for (const [sector, sectorStocks] of Object.entries(sectorGroups)) {
                 const sectorDiv = document.createElement('div');
                 sectorDiv.className = 'sector-section';
@@ -484,6 +489,7 @@
                     ${sectorComment ? `<p class="sector-comment">${sectorComment}</p>` : ''}
                 `;
                 
+                // ⭐ 按 industry 分组
                 const industryGroups = sectorStocks.reduce((acc, stock) => {
                     const industryKey = stock.industry || '其他';
                     if (!acc[industryKey]) acc[industryKey] = [];
@@ -506,7 +512,35 @@
                     const grid = document.createElement('div');
                     grid.className = 'stock-grid';
                     
-                    industryStocks.forEach(stock => {
+                    // ⭐ 按市场排序：美股 → 日股 → A股
+                    const sortedStocks = [...industryStocks].sort((a, b) => {
+                        const orderA = marketOrder[a.market_type] ?? 999;
+                        const orderB = marketOrder[b.market_type] ?? 999;
+                        return orderA - orderB;
+                    });
+                    
+                    // ⭐ 添加市场分隔标题
+                    let currentMarket = '';
+                    let marketHeader = '';
+                    
+                    sortedStocks.forEach(stock => {
+                        // 如果市场变了，插入市场分隔标题
+                        if (stock.market_type !== currentMarket) {
+                            currentMarket = stock.market_type;
+                            const marketLabel = {
+                                '美股': '🇺🇸 美股',
+                                '日股': '🇯🇵 日股',
+                                'A股': '🇨🇳 A股',
+                                '港股': '🇭🇰 港股',
+                                '韩股': '🇰🇷 韩股',
+                                '德股': '🇩🇪 德股'
+                            }[currentMarket] || currentMarket;
+                            
+                            marketHeader = `<div class="market-divider">${marketLabel}</div>`;
+                            grid.innerHTML += marketHeader;
+                        }
+                        
+                        // 渲染股票卡片
                         const formattedFeature = stock.feature.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
                         const colorClass = stock.isUp ? 'text-up' : 'text-down';
                         const trendClass = stock.trend === '牛市多头' ? 'trend-up-bg' : 'trend-down-bg';
@@ -518,10 +552,6 @@
                                     <div class="stock-title">
                                         <a href="${getYahooUrl(stock)}" target="_blank" style="text-decoration: none; color: inherit;">
                                             <h3>${getMarketBadge(stock.market_type)} ${stock.name}</h3>
-                                            <h3>
-                                                ${stock.name}
-                                                ${renderMarketBadge(stock.market_type)}
-                                            </h3>
                                         </a>
                                     </div>
                                     <div class="stock-actions">
@@ -538,7 +568,7 @@
                                 <div class="tag-container">
                                     ${tagsHtml}
                                 </div>
-
+    
                                 <div class="stock-trend-badge ${trendClass}">${stock.trend}</div>
                                 <div class="price-row">
                                     <div class="stock-price ${colorClass}">${stock.price}</div>
@@ -565,7 +595,7 @@
                                         </tr>
                                     </tbody>
                                 </table>
-
+    
                                 <table class="metrics-table">
                                     <thead>
                                         <tr>
@@ -586,7 +616,7 @@
                                 </table>
                             </div>`;
                     });
-
+    
                     industryDiv.appendChild(grid);
                     sectorDiv.appendChild(industryDiv);
                 }
