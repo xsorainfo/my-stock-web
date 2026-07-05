@@ -168,11 +168,12 @@ def get_theme_paths_for_tags(tags, tag_theme_map):
     匹配逻辑：
     1. 先在 TAG_DISPLAY_MAP 中查找映射后的名称
     2. 用映射后的名称去 tag_theme_map 中匹配
+    3. tag 字段存储映射后的统一名称（用于前端匹配）
     
     返回格式:
     [
-        {"tag": "EUV", "theme_path": ["1. 半导体设备", "光刻机", "EUV (极紫外光刻)"]},
-        {"tag": "GPU", "theme_path": ["3. 算力芯片", "GPU", "GPU"]},
+        {"tag": "EUV (极紫外光刻)", "theme_path": ["1. 半导体设备", "光刻机", "EUV (极紫外光刻)"]},
+        {"tag": "GPU", "theme_path": ["3. 算力芯片", "GPU"]},
     ]
     """
     result = []
@@ -189,9 +190,14 @@ def get_theme_paths_for_tags(tags, tag_theme_map):
         # 如果映射后的名称也找不到，再用原始 tag 尝试
         if not theme_path and mapped_tag != tag:
             theme_path = tag_theme_map.get(tag, [])
+            # 如果原始 tag 找到了，使用原始 tag 作为统一名称
+            unified_tag = tag
+        else:
+            # 使用映射后的名称作为统一名称
+            unified_tag = mapped_tag
         
         result.append({
-            "tag": tag,  # 保留原始 tag（用于前端匹配）
+            "tag": unified_tag,  # ⭐ 存储映射后的统一名称！
             "theme_path": theme_path
         })
     
