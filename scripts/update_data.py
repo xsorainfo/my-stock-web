@@ -14,24 +14,56 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config import MACRO_LIST, WATCHLIST, DEFAULT_STRATEGY, SOURCE_MAP
 from theme_mapping import THEME_MAPPING  # ⭐ 从 theme_mapping.py 导入
 from tag_merge import TAG_MERGE_MAP      # ⭐ tag 合并映射
+
+# ============================================================
+# ⭐ 从 THEME_MAPPING 自动构建二级→三级映射
+# ============================================================
+def build_level2_to_level3(theme_mapping):
+    """
+    从 THEME_MAPPING 自动构建二级标签 → 三级标签列表的映射
+    """
+    level2_to_level3 = {}
+    
+    if not theme_mapping:
+        return level2_to_level3
+    
+    for level1_key, level1_value in theme_mapping.items():
+        if isinstance(level1_value, dict):
+            for level2_key, level2_value in level1_value.items():
+                if isinstance(level2_value, list):
+                    level2_to_level3[level2_key] = level2_value
+    
+    return level2_to_level3
+
+
+# ⭐ 自动生成展开映射（无需手动维护）
+LEVEL2_TO_LEVEL3 = build_level2_to_level3(THEME_MAPPING)
+
 # ============================================================
 # ⭐ Tag 合并函数
 # ============================================================
 def merge_tags(tags):
     """
     将细粒度 tag 合并为大的分类标签
+    同时将二级标签展开为三级标签列表
     """
     if not tags:
         return []
     
-    merged = []
+    result = []
     for tag in tags:
-        # 如果在合并映射中，替换为大的分类标签
-        merged_tag = TAG_MERGE_MAP.get(tag, tag)
-        if merged_tag not in merged:
-            merged.append(merged_tag)
+        # 1. 先检查是否需要展开为三级标签（自动从 THEME_MAPPING 生成）
+        if tag in LEVEL2_TO_LEVEL3:
+            for expanded_tag in LEVEL2_TO_LEVEL3[tag]:
+                if expanded_tag not in result:
+                    result.append(expanded_tag)
+        else:
+            # 2. 再检查是否在合并映射中
+            merged_tag = TAG_MERGE_MAP.get(tag, tag)
+            if merged_tag not in result:
+                result.append(merged_tag)
     
-    return merged
+    return result
 
 def build_tag_theme_mapping(theme_mapping):
     """
