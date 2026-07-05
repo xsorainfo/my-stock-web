@@ -518,6 +518,10 @@
                                     <div class="stock-title">
                                         <a href="${getYahooUrl(stock)}" target="_blank" style="text-decoration: none; color: inherit;">
                                             <h3>${getMarketBadge(stock.market_type)} ${stock.name}</h3>
+                                            <h3>
+                                                ${stock.name}
+                                                ${renderMarketBadge(stock.market_type)}
+                                            </h3>
                                         </a>
                                     </div>
                                     <div class="stock-actions">
