@@ -189,7 +189,41 @@ function getIndustryComment(sectorId, industryId) {
     const industry = sector.industries.find(item => item.industry_id === industryId);
     return industry ? industry.industry_comment : '';
 }
+// components/common.js
 
+// ============================================================
+// 市场标签（带颜色）
+// ============================================================
+function getMarketBadgeWithColor(marketType) {
+    const map = {
+        '美股': { label: '🇺🇸 美股', color: '#3b82f6', bg: 'rgba(59, 130, 246, 0.10)' },
+        '日股': { label: '🇯🇵 日股', color: '#ef4444', bg: 'rgba(239, 68, 68, 0.10)' },
+        'A股': { label: '🇨🇳 A股', color: '#f59e0b', bg: 'rgba(245, 158, 11, 0.10)' },
+        '港股': { label: '🇭🇰 港股', color: '#8b5cf6', bg: 'rgba(139, 92, 246, 0.10)' },
+        '韩股': { label: '🇰🇷 韩股', color: '#14b8a6', bg: 'rgba(20, 184, 166, 0.10)' },
+        '德股': { label: '🇩🇪 德股', color: '#f97316', bg: 'rgba(249, 115, 22, 0.10)' },
+    };
+    return map[marketType] || { label: '🌍', color: '#94a3b8', bg: 'rgba(148, 163, 184, 0.10)' };
+}
+
+// ============================================================
+// 市场标签 HTML
+// ============================================================
+function renderMarketBadge(marketType) {
+    const info = getMarketBadgeWithColor(marketType);
+    return `<span class="market-badge" style="
+        display: inline-block;
+        font-size: 10px;
+        font-weight: 600;
+        padding: 1px 8px;
+        border-radius: 10px;
+        color: ${info.color};
+        background: ${info.bg};
+        border: 1px solid ${info.color}40;
+        margin-left: 6px;
+        line-height: 1.6;
+    ">${info.label}</span>`;
+}
 // ============================================================
 // 16. 将函数暴露到全局
 // ============================================================
