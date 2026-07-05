@@ -119,126 +119,80 @@ function renderTagsOld(tags) {
     `).join('&nbsp;&nbsp;');
 }
 
+// components/common.js
 // ============================================================
-// 9. 渲染标签 HTML - 直接使用 display_tags（已映射完成）
+// 9. 渲染标签 HTML - 直接使用 display_tags（参照 sub_ai.html 的逻辑）
 // ============================================================
 function renderTags(stock) {
     // ⭐ 防御性检查
     if (!stock || typeof stock !== 'object') {
-        console.warn('renderTags: stock 参数无效', stock);
         return '';
     }
     
-    // ⭐ 直接使用 display_tags（数据源已完成映射）
-    const displayList = Array.isArray(stock.display_tags) ? stock.display_tags : [];
-    if (displayList.length === 0) return '';
+    // ⭐ 直接使用 display_tags（和 sub_ai.html 一样）
+    const displayTags = Array.isArray(stock.display_tags) ? stock.display_tags : 
+                        (Array.isArray(stock.tags) ? stock.tags : []);
     
-    // ⭐ 获取 tag_themes（已包含匹配好的路径）
-    const tagThemes = Array.isArray(stock.tag_themes) ? stock.tag_themes : [];
-    
-    const result = [];
-    displayList.forEach((displayTag) => {
-        if (typeof displayTag !== 'string') return;
-        
-        // ⭐ 在 tag_themes 中查找匹配（直接用 displayTag 匹配）
-        let foundPath = null;
-        for (const t of tagThemes) {
-            if (t.tag === displayTag && t.theme_path && t.theme_path.length > 0) {
-                foundPath = t.theme_path;
-                break;
-            }
-        }
-        
-        let displayText = displayTag;
-        let hasPath = false;
-        
-        if (foundPath && foundPath.length >= 3) {
-            // 显示完整的三级路径：一级 › 二级 › 三级
-            displayText = `${foundPath[0]} › ${foundPath[1]} › ${displayTag}`;
-            hasPath = true;
-        } else if (foundPath && foundPath.length >= 2) {
-            // 兼容只有两级的情况：一级 › 二级
-            displayText = `${foundPath[0]} › ${displayTag}`;
-            hasPath = true;
-        }
-        
-        result.push({
-            displayTag: displayTag,
-            displayText: displayText,
-            hasPath: hasPath
-        });
-    });
-    
-    // 去重
-    const unique = [];
-    const seen = new Set();
-    result.forEach(item => {
-        if (!seen.has(item.displayTag)) {
-            seen.add(item.displayTag);
-            unique.push(item);
-        }
-    });
-    
-    return unique.map(item => {
-        const tagClass = item.hasPath ? 'stock-tag clickable-tag theme-tag' : 'stock-tag clickable-tag';
-        const jumpTag = encodeURIComponent(item.displayTag);
-        return `
-            <span class="${tagClass}" data-tag="${jumpTag}" onclick="navigateToTheme('${jumpTag}')" title="${item.displayText}">
-                ${item.displayText}
-            </span>
-        `;
-    }).join('&nbsp;&nbsp;');
-}
-// ============================================================
-// 9. 渲染标签 HTML（带层级路径 + 可点击跳转）
-// ============================================================
-function renderTags(tags, stockTagThemes) {
-    if (!tags || tags.length === 0) return '';
+    if (displayTags.length === 0) return '';
     
     const result = [];
-    tags.forEach(tag => {
+    
+    // ⭐ 和 sub_ai.html 完全一样的逻辑
+    displayTags.forEach((displayTag) => {
         let foundPath = null;
-        if (stockTagThemes) {
-            for (const t of stockTagThemes) {
-                if (t.tag === tag && t.theme_path && t.theme_path.length > 0) {
+        
+        // 在 tag_themes 中查找匹配
+        if (stock.tag_themes) {
+            for (const t of stock.tag_themes) {
+                // ⭐ 用 displayTag 匹配 tag_themes 中的 tag
+                if (t.tag === displayTag && t.theme_path && t.theme_path.length > 0) {
                     foundPath = t.theme_path;
                     break;
                 }
             }
         }
         
-        let displayText = tag;
-        let hasPath = false;
-        
-        if (foundPath && foundPath.length >= 2) {
-            displayText = `${foundPath[0]} › ${tag}`;
-            hasPath = true;
+        if (foundPath && foundPath.length >= 3) {
+            // 显示完整的三级路径：一级 › 二级 › 三级
+            result.push({
+                text: `${foundPath[0]} › ${foundPath[1]} › ${displayTag}`,
+                hasPath: true
+            });
+        } else if (foundPath && foundPath.length >= 2) {
+            // 兼容只有两级的情况：一级 › 二级
+            result.push({
+                text: `${foundPath[0]} › ${displayTag}`,
+                hasPath: true
+            });
+        } else {
+            result.push({
+                text: displayTag,
+                hasPath: false
+            });
         }
-        
-        result.push({
-            tag: tag,
-            displayText: displayText,
-            hasPath: hasPath
-        });
     });
     
     // 去重
     const unique = [];
     const seen = new Set();
     result.forEach(item => {
-        if (!seen.has(item.tag)) {
-            seen.add(item.tag);
+        if (!seen.has(item.text)) {
+            seen.add(item.text);
             unique.push(item);
         }
     });
     
+    // ⭐ 返回 HTML（和 sub_ai.html 一样，但加了点击跳转功能）
     return unique.map(item => {
-        const tagClass = item.hasPath ? 'stock-tag clickable-tag theme-tag' : 'stock-tag clickable-tag';
-        return `
-            <span class="${tagClass}" data-tag="${encodeURIComponent(item.tag)}" onclick="navigateToTheme('${encodeURIComponent(item.tag)}')" title="${item.displayText}">
-                ${item.displayText}
-            </span>
-        `;
+        if (item.hasPath) {
+            // ⭐ 带点击跳转的标签
+            const jumpTag = encodeURIComponent(item.text.split(' › ').pop());
+            return `<span class="stock-tag clickable-tag theme-tag" onclick="navigateToTheme('${jumpTag}')" title="${item.text}">${item.text}</span>`;
+        } else {
+            // ⭐ 普通标签（不带跳转）
+            const jumpTag = encodeURIComponent(item.text);
+            return `<span class="stock-tag clickable-tag" onclick="navigateToTheme('${jumpTag}')" title="${item.text}">${item.text}</span>`;
+        }
     }).join('&nbsp;&nbsp;');
 }
 
