@@ -682,7 +682,7 @@
         }
 
         // ============================================================
-        // 6. 渲染股票卡片
+        // 6. 渲染股票卡片 - 修改标签生成逻辑
         // ============================================================
         function renderStockCards(stocks, container) {
             // 按市场排序：美股 → 日股 → A股
@@ -692,10 +692,10 @@
                 const orderB = marketOrder[b.market_type] ?? 999;
                 return orderA - orderB;
             });
-
+        
             let html = '<div class="stock-grid">';
             let currentMarket = '';
-
+            
             sortedStocks.forEach(stock => {
                 // 市场分隔标题
                 if (stock.market_type !== currentMarket) {
@@ -707,15 +707,18 @@
                         '韩股': '🇰🇷 韩股',
                         '德股': '🇩🇪 德股'
                     }[currentMarket] || currentMarket;
-
+        
                     html += `<div class="market-divider">${marketLabel}</div>`;
                 }
-
+        
                 const colorClass = stock.isUp ? 'text-up' : 'text-down';
                 const trendClass = stock.trend === '牛市多头' ? 'trend-up-bg' : 'trend-down-bg';
                 const formattedFeature = stock.feature.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
                 const industryName = stock.industry || '其他';
-
+                
+                // ⭐ 直接使用 display_tags（已经是映射后的最终版本）
+                const displayTags = stock.display_tags || stock.tags || [];
+                
                 html += `
                     <div class="stock-card">
                         <div class="stock-header">
@@ -734,22 +737,22 @@
                                 </a>
                             </div>
                         </div>
-
+        
                         <div class="stock-feature">${formattedFeature}</div>
-
+                        
                         <div class="tag-container">
                             ${(function() {
                                 const result = [];
-                                const tags = stock.tags || [];
-                                const displayTags = stock.display_tags || tags;
                                 
-                                displayTags.forEach((displayTag, index) => {
-                                    const rawTag = tags[index] || displayTag;
+                                // ⭐ 直接遍历 display_tags
+                                displayTags.forEach((displayTag) => {
                                     let foundPath = null;
                                     
+                                    // 在 tag_themes 中查找匹配
                                     if (stock.tag_themes) {
                                         for (const t of stock.tag_themes) {
-                                            if (t.tag === rawTag && t.theme_path && t.theme_path.length > 0) {
+                                            // ⭐ 用 displayTag 匹配 tag_themes 中的 tag
+                                            if (t.tag === displayTag && t.theme_path && t.theme_path.length > 0) {
                                                 foundPath = t.theme_path;
                                                 break;
                                             }
@@ -757,7 +760,7 @@
                                     }
                                     
                                     if (foundPath && foundPath.length >= 3) {
-                                        // ⭐ 显示完整的三级路径：一级 › 二级 › 三级
+                                        // 显示完整的三级路径：一级 › 二级 › 三级
                                         result.push({
                                             text: `${foundPath[0]} › ${foundPath[1]} › ${displayTag}`,
                                             hasPath: true
@@ -776,6 +779,7 @@
                                     }
                                 });
                                 
+                                // 去重
                                 const unique = [];
                                 const seen = new Set();
                                 result.forEach(item => {
@@ -794,14 +798,14 @@
                                 }).join('');
                             })()}
                         </div>
-
+        
                         <div class="stock-trend-badge ${trendClass}">${stock.trend}</div>
-
+        
                         <div class="price-row">
                             <div class="stock-price ${colorClass}">${stock.price}</div>
                             <div class="stock-change ${colorClass}">${stock.change}</div>
                         </div>
-
+        
                         <table class="metrics-table" style="margin-bottom: 6px;">
                             <thead>
                                 <tr>
@@ -822,7 +826,7 @@
                                 </tr>
                             </tbody>
                         </table>
-
+        
                         <table class="metrics-table">
                             <thead>
                                 <tr>
@@ -844,7 +848,7 @@
                     </div>
                 `;
             });
-
+        
             html += '</div>';
             container.innerHTML = html;
         }
