@@ -61,7 +61,7 @@ LEVEL2_TO_LEVEL3 = build_level2_to_level3(THEME_MAPPING)
 # ============================================================
 # ⭐ Tag 合并函数
 # ============================================================
-def merge_tags(tags):
+def merge_tagsOld(tags):
     """
     将二级标签展开为三级标签列表
     例如: ["第三代半导体"] → ["SiC", "碳化硅", "GaN", ...]
@@ -82,7 +82,21 @@ def merge_tags(tags):
                 result.append(tag)
     
     return result
-
+    
+def merge_tags(tags):
+    """
+    不再展开二级标签，直接返回原始 tags
+    """
+    if not tags:
+        return []
+    
+    # 去重后直接返回
+    result = []
+    for tag in tags:
+        if tag not in result:
+            result.append(tag)
+    return result
+    
 def build_tag_theme_mapping(theme_mapping):
     """
     根据 THEME_MAPPING 构建 tag → theme_path 的映射字典
@@ -144,14 +158,21 @@ def build_tag_theme_mapping(theme_mapping):
 TAG_THEME_MAP = build_tag_theme_mapping(THEME_MAPPING)
 
 
+# ============================================================
+# ⭐ 获取 tag 对应的 theme_path（使用映射后的名称匹配）
+# ============================================================
 def get_theme_paths_for_tags(tags, tag_theme_map):
     """
     根据 tags 列表，返回每个 tag 对应的 theme_path
     
+    匹配逻辑：
+    1. 先在 TAG_DISPLAY_MAP 中查找映射后的名称
+    2. 用映射后的名称去 tag_theme_map 中匹配
+    
     返回格式:
     [
-        {"tag": "光刻机", "theme_path": ["1. 半导体设备", "光刻机"]},
-        {"tag": "GPU", "theme_path": []},
+        {"tag": "EUV", "theme_path": ["1. 半导体设备", "光刻机", "EUV (极紫外光刻)"]},
+        {"tag": "GPU", "theme_path": ["3. 算力芯片", "GPU", "GPU"]},
     ]
     """
     result = []
@@ -159,9 +180,18 @@ def get_theme_paths_for_tags(tags, tag_theme_map):
         return result
     
     for tag in tags:
-        theme_path = tag_theme_map.get(tag, [])
+        # ⭐ 先通过 TAG_DISPLAY_MAP 获取映射后的名称
+        mapped_tag = TAG_DISPLAY_MAP.get(tag, tag)
+        
+        # ⭐ 用映射后的名称去匹配 THEME_MAPPING
+        theme_path = tag_theme_map.get(mapped_tag, [])
+        
+        # 如果映射后的名称也找不到，再用原始 tag 尝试
+        if not theme_path and mapped_tag != tag:
+            theme_path = tag_theme_map.get(tag, [])
+        
         result.append({
-            "tag": tag,
+            "tag": tag,  # 保留原始 tag（用于前端匹配）
             "theme_path": theme_path
         })
     
@@ -598,10 +628,9 @@ def fetch_all_data():
                 "sector": item.get("sector", "未分类板块"),
                 "industry": item.get("industry", "其他"),
                 "feature": item["feature"],
-                "tags": raw_tags,                    # 原始 tags
-                "display_tags": display_tags,  # ⭐ 显示用 tags（映射后的名称）
-                
-                "tag_themes": tag_theme_list,        # 原始 tags 对应的 theme_path
+                "tags": raw_tags,                    # 原始 tags（用于前端匹配）
+                "display_tags": display_tags,        # 映射后的 tags（用于前端显示）
+                "tag_themes": tag_theme_list,        # 用映射后的名称匹配的 theme_path
                 "market_type": market_type,
                 "price": f"{current_price:.2f}",
                 "change": f"{sign}{diff:.2f} ({sign}{percent:.2f}%)",
