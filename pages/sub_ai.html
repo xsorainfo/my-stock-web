@@ -740,22 +740,22 @@
                        <div class="tag-container">
                             ${(function() {
                                 const result = [];
-                                const tags = stock.display_tags || stock.tags || [];
-                                tags.forEach(displayTag => {
-                                    // 查找原始 tag 对应的 theme_path
+                                const tags = stock.tags || [];
+                                const displayTags = stock.display_tags || tags;
+                                
+                                displayTags.forEach((displayTag, index) => {
+                                    const rawTag = tags[index] || displayTag;
                                     let foundPath = null;
+                                    
                                     if (stock.tag_themes) {
-                                        // 需要找到原始 tag（反向查找）
-                                        const originalTag = Object.keys(TAG_DISPLAY_MAP).find(
-                                            key => TAG_DISPLAY_MAP[key] === displayTag
-                                        ) || displayTag;
                                         for (const t of stock.tag_themes) {
-                                            if (t.tag === originalTag && t.theme_path && t.theme_path.length > 0) {
+                                            if (t.tag === rawTag && t.theme_path && t.theme_path.length > 0) {
                                                 foundPath = t.theme_path;
                                                 break;
                                             }
                                         }
                                     }
+                                    
                                     if (foundPath && foundPath.length >= 2) {
                                         result.push({
                                             text: `${foundPath[0]} › ${displayTag}`,
@@ -768,7 +768,7 @@
                                         });
                                     }
                                 });
-                                // 去重
+                                
                                 const unique = [];
                                 const seen = new Set();
                                 result.forEach(item => {
@@ -777,6 +777,7 @@
                                         unique.push(item);
                                     }
                                 });
+                                
                                 return unique.map(item => {
                                     if (item.hasPath) {
                                         return `<span class="stock-tag theme-tag">${item.text}</span>`;
