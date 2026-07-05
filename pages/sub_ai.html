@@ -420,6 +420,7 @@
         }
 
 
+        
         // ============================================================
         // 渲染左侧菜单（三级）
         // ============================================================
@@ -471,7 +472,6 @@
                     <span class="arrow">▶</span>
                 `;
         
-                // ⭐ 点击一级菜单：展开/收起 + 显示该一级下所有股票
                 header.addEventListener('click', function() {
                     const container = this.nextElementSibling;
                     const isOpen = container.classList.contains('open');
@@ -507,7 +507,7 @@
         
                     if (level2Count === 0) continue;
         
-                    // ---- 二级菜单头（可折叠，点击显示该二级下所有股票） ----
+                    // ---- 二级菜单头 ----
                     const level2Header = document.createElement('div');
                     level2Header.className = 'menu-level2-header';
                     level2Header.dataset.level1 = level1Key;
@@ -518,7 +518,6 @@
                         <span class="arrow">▶</span>
                     `;
         
-                    // ⭐ 点击二级菜单：展开/收起三级 + 显示该二级下所有股票
                     level2Header.addEventListener('click', function(e) {
                         e.stopPropagation();
                         
@@ -544,7 +543,7 @@
                     const level3Container = document.createElement('div');
                     level3Container.className = 'menu-level3-container';
         
-                    // ⭐ 遍历三级标签（叶子节点）
+                    // ⭐ 遍历三级标签
                     level2Tags.forEach(tag => {
                         const count = tagStockMap[tag] ? tagStockMap[tag].length : 0;
                         if (count === 0) return;
@@ -558,7 +557,6 @@
                             <span class="count">${count}</span>
                         `;
         
-                        // ⭐ 点击三级菜单：只显示该 tag 的股票
                         item.addEventListener('click', function(e) {
                             e.stopPropagation();
                             
@@ -584,6 +582,16 @@
                 menuDiv.appendChild(level2Container);
                 sidebar.appendChild(menuDiv);
             }
+        
+            // 默认展开第一个一级菜单
+            const firstHeader = sidebar.querySelector('.menu-level1-header');
+            if (firstHeader) {
+                const container = firstHeader.nextElementSibling;
+                container.classList.add('open');
+                firstHeader.querySelector('.arrow').classList.add('open');
+                setTimeout(() => { firstHeader.click(); }, 100);
+            }
+        }
         
             // 默认展开第一个一级菜单
             const firstHeader = sidebar.querySelector('.menu-level1-header');
