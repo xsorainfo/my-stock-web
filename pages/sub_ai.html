@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>♻️AIテーマ別</title>
-
+    <title>📊 AI テーマ別</title>
     <!-- ⭐ 字体 -->
     <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
     
-    <!-- ⭐ 引入共通样式 -->
+    <!-- ⭐ 共通样式 -->
     <link rel="stylesheet" href="../components/common.css">
-    <!-- ⭐ 引入导航栏样式 -->
+    <!-- ⭐ 导航栏样式 -->
     <link rel="stylesheet" href="../components/navbar.css">
     
     <style>
@@ -26,78 +25,6 @@
         body {
             height: 100vh;
             overflow: hidden;
-        }
-
-        /* ===== 导航栏 ===== */
-        .top-navbar {
-            display: flex;
-            background: #1e293b;
-            padding: 0 30px;
-            height: var(--nav-height);
-            color: #f8fafc;
-            align-items: center;
-            border-bottom: 2px solid #334155;
-            flex-shrink: 0;
-        }
-
-        .nav-logo {
-            font-size: 18px;
-            font-weight: 700;
-            color: #38bdf8;
-            margin-right: 20px;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .nav-item {
-            color: #94a3b8;
-            text-decoration: none;
-            padding: 8px 16px;
-            border-radius: 6px;
-            transition: all 0.3s;
-            font-size: 14px;
-        }
-
-        .nav-item:hover {
-            background: #334155;
-            color: #38bdf8;
-        }
-
-        .nav-item.active {
-            color: #38bdf8;
-            background: #334155;
-            border-bottom: 2px solid #38bdf8;
-        }
-
-        .nav-right {
-            margin-left: auto;
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .refresh-btn {
-            background-color: #2563eb;
-            color: white;
-            border: none;
-            padding: 6px 16px;
-            border-radius: 6px;
-            font-size: 13px;
-            cursor: pointer;
-            font-weight: 500;
-            transition: background 0.2s;
-        }
-
-        .refresh-btn:hover:not(:disabled) {
-            background-color: #1d4ed8;
-        }
-        .refresh-btn:disabled {
-            background-color: #94a3b8;
-            cursor: not-allowed;
         }
 
         /* ===== 主体布局 ===== */
@@ -126,15 +53,12 @@
             border-radius: 4px;
         }
 
-        .menu-level1 {
+        /* ===== 一级菜单 ===== */
+        .menu-group {
             border-bottom: 1px solid #f1f5f9;
         }
 
-        .menu-level1:last-child {
-            border-bottom: none;
-        }
-
-        .menu-level1-header {
+        .menu-group-header {
             display: flex;
             align-items: center;
             padding: 12px 20px;
@@ -147,94 +71,137 @@
             gap: 10px;
         }
 
-        .menu-level1-header:hover {
+        .menu-group-header:hover {
             background: #f1f5f9;
         }
 
-        .menu-level1-header .arrow {
+        .menu-group-header .arrow {
             transition: transform 0.25s ease;
             font-size: 12px;
             color: #94a3b8;
             margin-left: auto;
         }
 
-        .menu-level1-header .arrow.open {
+        .menu-group-header .arrow.open {
             transform: rotate(90deg);
         }
 
-        .menu-level1-header .icon {
-            font-size: 16px;
-        }
-
-        .menu-level1-header .count {
+        .menu-group-header .count {
             font-size: 11px;
             color: #94a3b8;
             font-weight: 400;
             margin-left: 4px;
         }
 
-        .menu-level1-header.active {
-            background: #eff6ff;
-            color: #2563eb;
-        }
-
+        /* ===== 二级菜单 ===== */
         .menu-level2-container {
             overflow: hidden;
             max-height: 0;
             transition: max-height 0.3s ease;
+            background: #f8fafc;
         }
 
         .menu-level2-container.open {
             max-height: 2000px;
         }
 
-        .menu-level2-item {
+        .menu-level2-header {
             display: flex;
             align-items: center;
-            padding: 8px 20px 8px 48px;
+            justify-content: space-between;
+            padding: 8px 20px 8px 40px;
             cursor: pointer;
             transition: all 0.15s;
             font-size: 13px;
             color: #475569;
-            border-left: 3px solid transparent;
-            gap: 8px;
             user-select: none;
+            border-left: 3px solid transparent;
         }
 
-        .menu-level2-item:hover {
-            background: #f8fafc;
+        .menu-level2-header:hover {
+            background: #f1f5f9;
             color: #1e293b;
         }
 
-        .menu-level2-item.active {
+        .menu-level2-header .arrow {
+            transition: transform 0.25s ease;
+            font-size: 10px;
+            color: #94a3b8;
+        }
+
+        .menu-level2-header .arrow.open {
+            transform: rotate(90deg);
+        }
+
+        .menu-level2-header .count {
+            font-size: 10px;
+            color: #94a3b8;
+            background: #f1f5f9;
+            padding: 0 8px;
+            border-radius: 10px;
+        }
+
+        .menu-level2-header.active {
             background: #eff6ff;
             color: #2563eb;
             border-left-color: #2563eb;
             font-weight: 500;
         }
 
-        .menu-level2-item .count {
-            font-size: 10px;
-            color: #94a3b8;
-            font-weight: 400;
-            margin-left: auto;
-            background: #f1f5f9;
-            padding: 0 8px;
-            border-radius: 10px;
-        }
-
-        .menu-level2-item.active .count {
+        .menu-level2-header.active .count {
             background: #bfdbfe;
             color: #1d4ed8;
         }
 
-        .menu-group-label {
-            padding: 6px 20px 4px 36px;
-            font-size: 11px;
-            font-weight: 600;
+        /* ===== 三级菜单 ===== */
+        .menu-level3-container {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.25s ease;
+            background: #fafafa;
+        }
+
+        .menu-level3-container.open {
+            max-height: 1000px;
+        }
+
+        .menu-level3-item {
+            display: flex;
+            align-items: center;
+            padding: 6px 20px 6px 60px;
+            cursor: pointer;
+            transition: all 0.15s;
+            font-size: 12px;
+            color: #64748b;
+            border-left: 2px solid transparent;
+            user-select: none;
+            gap: 6px;
+        }
+
+        .menu-level3-item:hover {
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+
+        .menu-level3-item.active {
+            background: #eff6ff;
+            color: #2563eb;
+            border-left-color: #2563eb;
+            font-weight: 500;
+        }
+
+        .menu-level3-item .count {
+            font-size: 9px;
             color: #94a3b8;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            background: #f1f5f9;
+            padding: 0 6px;
+            border-radius: 8px;
+            margin-left: auto;
+        }
+
+        .menu-level3-item.active .count {
+            background: #bfdbfe;
+            color: #1d4ed8;
         }
 
         /* ===== 右侧内容区 ===== */
@@ -294,13 +261,6 @@
             .content-area {
                 padding: 16px;
             }
-            .top-navbar {
-                padding: 0 16px;
-            }
-            .nav-item {
-                padding: 6px 10px;
-                font-size: 12px;
-            }
             .menu-level2-item {
                 padding-left: 32px;
                 font-size: 12px;
@@ -312,12 +272,16 @@
                 width: 200px;
                 min-width: 200px;
             }
-            .menu-level1-header {
+            .menu-group-header {
                 padding: 10px 12px;
                 font-size: 13px;
             }
-            .menu-level2-item {
+            .menu-level2-header {
                 padding: 6px 12px 6px 28px;
+                font-size: 12px;
+            }
+            .menu-level3-item {
+                padding: 4px 12px 4px 40px;
                 font-size: 11px;
             }
             .page-header h2 {
@@ -356,153 +320,249 @@
 
     <!-- 引入脚本 -->
     <script src="../components/navbar.js"></script>
-    <script src="../components/common.js"></script>
     <script>
         // ============================================================
-        // sub_ai.html 特有逻辑
+        // 1. 全局数据
         // ============================================================
-        
         let allStocks = [];
         let themeMapping = {};
         let currentSelected = null;
 
-        function getAllTagsForLevel1(level1Key, themeMapping) {
-            const tags = [];
-            const level1Value = themeMapping[level1Key];
-            if (!level1Value) return tags;
-            if (Array.isArray(level1Value)) {
-                return level1Value;
-            } else if (typeof level1Value === 'object') {
-                for (const subValue of Object.values(level1Value)) {
-                    if (Array.isArray(subValue)) {
-                        tags.push(...subValue);
+        // ============================================================
+        // 2. 工具函数
+        // ============================================================
+        function getMarketBadge(type) {
+            const map = {
+                '美股': '🇺🇸',
+                '日股': '🇯🇵',
+                'A股': '🇨🇳',
+                '韩股': '🇰🇷',
+                '德股': '🇩🇪'
+            };
+            return map[type] || '🌍';
+        }
+
+        function getYahooUrl(stock) {
+            if (stock.market_type === '日股') {
+                return `https://finance.yahoo.co.jp/quote/${stock.code}`;
+            }
+            if (stock.market_type === 'A股') {
+                const prefix = (stock.code.startsWith('6')) ? 'sh' : 'sz';
+                return `https://finance.sina.com.cn/realstock/company/${prefix}${stock.code}/nc.shtml`;
+            }
+            return `https://finance.yahoo.co.jp/quote/${stock.code}`;
+        }
+
+        function getTradingViewUrl(stock) {
+            if (stock.market_type === '日股') {
+                const cleanCode = stock.code.split('.')[0];
+                return `https://jp.tradingview.com/symbols/TSE-${cleanCode}/`;
+            } else if (stock.market_type === 'A股') {
+                const prefix = stock.code.startsWith('6') ? "SHSE" : "SZSE";
+                return `https://www.tradingview.com/symbols/${prefix}-${stock.code}/`;
+            }
+            return `https://www.tradingview.com/symbols/${stock.code}/`;
+        }
+
+        function judgeValuation(val, type) {
+            if (!val || val === '--' || isNaN(parseFloat(val))) {
+                return '<span class="val-badge val-normal">--</span>';
+            }
+            const num = parseFloat(val);
+            if (type === 'PER' || type === 'forward_per') {
+                if (num > 50) return `<span class="val-badge val-high">${num.toFixed(1)} 高估值</span>`;
+                if (num < 25) return `<span class="val-badge val-low">${num.toFixed(1)} 具性价比</span>`;
+                return `<span class="val-badge val-normal">${num.toFixed(1)} 合理</span>`;
+            } else if (type === 'PBR') {
+                if (num > 15) return `<span class="val-badge val-high">${num.toFixed(1)} 高溢价</span>`;
+                if (num < 3) return `<span class="val-badge val-low">${num.toFixed(1)} 净资产防守</span>`;
+                return `<span class="val-badge val-normal">${num.toFixed(1)} 正常</span>`;
+            }
+            return `<span class="val-badge val-normal">${num}</span>`;
+        }
+
+        function judgeROE(roe) {
+            if (!roe || roe === '--' || isNaN(parseFloat(roe))) {
+                return '<span class="val-badge val-normal">--</span>';
+            }
+            const num = parseFloat(roe);
+            if (num >= 15) return `<span class="val-badge" style="background:#d1fae5;color:#065f46;">🟢 ${roe} 優秀</span>`;
+            if (num >= 10) return `<span class="val-badge" style="background:#dbeafe;color:#1d4ed8;">🔵 ${roe} 良好</span>`;
+            if (num >= 5) return `<span class="val-badge" style="background:#fef3c7;color:#92400e;">🟡 ${roe} 一般</span>`;
+            return `<span class="val-badge" style="background:#fee2e2;color:#b91c1c;">🔴 ${roe} 不佳</span>`;
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                console.log('已复制: ' + text);
+            }).catch(err => {
+                console.error('复制失败: ', err);
+            });
+        }
+
+        function openTargetPrice(symbol) {
+            let cleanCode = symbol;
+            if (symbol.includes('.')) {
+                cleanCode = symbol.split('.')[0];
+            }
+            const url = `https://kabuyoho.jp/sp/reportTarget?bcode=${cleanCode}`;
+            window.open(url, '_blank');
+        }
+
+        // ============================================================
+        // 3. 渲染左侧菜单（三级）
+        // ============================================================
+        function renderSidebar(themeMapping, stocks) {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.innerHTML = '';
+
+            // 构建 tag → stocks 索引
+            const tagStockMap = {};
+            stocks.forEach(stock => {
+                if (stock.tag_themes) {
+                    stock.tag_themes.forEach(t => {
+                        if (t.theme_path && t.theme_path.length > 0) {
+                            const tag = t.tag;
+                            if (!tagStockMap[tag]) tagStockMap[tag] = [];
+                            tagStockMap[tag].push(stock);
+                        }
+                    });
+                }
+            });
+
+            // 遍历一级分类
+            for (const [level1Key, level1Value] of Object.entries(themeMapping)) {
+                if (typeof level1Value !== 'object' || Array.isArray(level1Value)) continue;
+
+                const groupDiv = document.createElement('div');
+                groupDiv.className = 'menu-group';
+
+                // ---- 一级菜单头 ----
+                let totalCount = 0;
+                for (const subTags of Object.values(level1Value)) {
+                    if (Array.isArray(subTags)) {
+                        subTags.forEach(tag => {
+                            if (tagStockMap[tag]) totalCount += tagStockMap[tag].length;
+                        });
                     }
                 }
-            }
-            return tags;
-        }
 
-        // ============================================================
-        // 渲染股票卡片（按市场分组）
-        // ============================================================
-        function renderStockCards(stocks, container) {
-            // ⭐ 按市场排序：美股 → 日股 → A股
-            const marketOrder = { '美股': 0, '日股': 1, 'A股': 2, '港股': 3, '韩股': 4, '德股': 5 };
-            const sortedStocks = [...stocks].sort((a, b) => {
-                const orderA = marketOrder[a.market_type] ?? 999;
-                const orderB = marketOrder[b.market_type] ?? 999;
-                return orderA - orderB;
-            });
-            
-            let html = '<div class="stock-grid">';
-            let currentMarket = '';
-            
-            sortedStocks.forEach(stock => {
-                // ⭐ 如果市场变了，插入市场分隔标题
-                if (stock.market_type !== currentMarket) {
-                    currentMarket = stock.market_type;
-                    const marketLabel = {
-                        '美股': '🇺🇸 美股',
-                        '日股': '🇯🇵 日股',
-                        'A股': '🇨🇳 A股',
-                        '港股': '🇭🇰 港股',
-                        '韩股': '🇰🇷 韩股',
-                        '德股': '🇩🇪 德股'
-                    }[currentMarket] || currentMarket;
-                    
-                    html += `<div class="market-divider" style="grid-column: 1 / -1; font-size: 13px; font-weight: 600; color: #475569; padding: 8px 12px; margin: 4px 0 8px 0; background: #f1f5f9; border-radius: 6px; border-left: 3px solid #94a3b8; letter-spacing: 0.5px;">${marketLabel}</div>`;
-                }
-                
-                const colorClass = stock.isUp ? 'text-up' : 'text-down';
-                const trendClass = stock.trend === '牛市多头' ? 'trend-up-bg' : 'trend-down-bg';
-                const formattedFeature = stock.feature.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-                const industryName = getIndustryName(stock.sector, stock.industry);
-        
-                html += `
-                    <div class="stock-card">
-                        <div class="stock-header">
-                            <div class="stock-title">
-                                <a href="${getYahooUrl(stock)}" target="_blank" style="text-decoration: none; color: inherit;">
-                                    <h3>${getMarketBadge(stock.market_type)} ${stock.name}</h3>
-                                </a>
-                                <span class="industry-tag">${industryName}</span>
-                            </div>
-                            <div class="stock-actions">
-                                <span class="stock-code" onclick="copyToClipboard('${stock.code}')" title="点击复制代码">
-                                    ${stock.code}
-                                </span>
-                                <a href="${getTradingViewUrl(stock)}" target="_blank" class="tv-link" title="在 TradingView 查看走势">
-                                    📈
-                                </a>
-                            </div>
-                        </div>
-        
-                        <div class="stock-feature">${formattedFeature}</div>
-        
-                        <div class="tag-container">
-                            ${stock.tags ? stock.tags.map(t => `<span class="stock-tag">${t}</span>`).join('') : ''}
-                            ${stock.tag_themes ? stock.tag_themes.map(t => {
-                                if (t.theme_path && t.theme_path.length > 0) {
-                                    return `<span class="stock-tag theme-tag" title="${t.theme_path.join(' > ')}">${t.theme_path.join(' › ')}</span>`;
-                                }
-                                return '';
-                            }).join('') : ''}
-                        </div>
-        
-                        <div class="stock-trend-badge ${trendClass}">${stock.trend}</div>
-        
-                        <div class="price-row">
-                            <div class="stock-price ${colorClass}">${stock.price}</div>
-                            <div class="stock-change ${colorClass}">${stock.change}</div>
-                        </div>
-        
-                        <table class="metrics-table" style="margin-bottom: 6px;">
-                            <thead>
-                                <tr>
-                                    <th style="width: 33.33%;">
-                                        <a href="#" onclick="openTargetPrice('${stock.code}'); return false;" style="color: #2563eb; text-decoration: none; cursor: pointer; border-bottom: 1px dashed #2563eb;">
-                                            PER 估值 📊
-                                        </a>
-                                    </th>
-                                    <th style="width: 33.33%;">ROE</th>
-                                    <th style="width: 33.33%;">PBR 溢价</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>${judgeValuation(stock.per, 'PER')}</td>
-                                    <td>${judgeROE(stock.roe)}</td>
-                                    <td>${judgeValuation(stock.pbr, 'PBR')}</td>                                            
-                                </tr>
-                            </tbody>
-                        </table>
-        
-                        <table class="metrics-table">
-                            <thead>
-                                <tr>
-                                    <th style="width: 25%;">距1周高</th>
-                                    <th style="width: 25%;">距1月高</th>
-                                    <th style="width: 25%;">距52周高</th>
-                                    <th style="width: 25%;">年初高</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr style="font-weight: 600; color: #1e293b; font-size: 12px;">
-                                    <td>${stock.distWeek || '--'}</td>
-                                    <td>${stock.distMonth || '--'}</td>
-                                    <td>${stock.distHigh || '--'}</td>
-                                    <td style="color: ${parseFloat(stock.ytdChange) >= 0 ? 'var(--up-color)' : 'var(--down-color)'};">${stock.ytdChange || '--'}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                const header = document.createElement('div');
+                header.className = 'menu-group-header';
+                header.dataset.level1 = level1Key;
+                header.innerHTML = `
+                    <span class="icon">📂</span>
+                    <span>${level1Key}</span>
+                    <span class="count">(${totalCount})</span>
+                    <span class="arrow">▶</span>
                 `;
-            });
-            
-            html += '</div>';
-            container.innerHTML = html;
+
+                header.addEventListener('click', function() {
+                    const container = this.nextElementSibling;
+                    const isOpen = container.classList.contains('open');
+                    container.classList.toggle('open');
+                    this.querySelector('.arrow').classList.toggle('open');
+                });
+
+                groupDiv.appendChild(header);
+
+                // ---- 二级菜单容器 ----
+                const level2Container = document.createElement('div');
+                level2Container.className = 'menu-level2-container';
+
+                // 遍历二级分类
+                for (const [level2Key, level2Tags] of Object.entries(level1Value)) {
+                    if (!Array.isArray(level2Tags)) continue;
+
+                    let level2Count = 0;
+                    level2Tags.forEach(tag => {
+                        if (tagStockMap[tag]) level2Count += tagStockMap[tag].length;
+                    });
+
+                    if (level2Count === 0) continue;
+
+                    // ---- 二级菜单头 ----
+                    const level2Header = document.createElement('div');
+                    level2Header.className = 'menu-level2-header';
+                    level2Header.innerHTML = `
+                        <span>📁 ${level2Key}</span>
+                        <span class="count">${level2Count}</span>
+                        <span class="arrow">▶</span>
+                    `;
+
+                    // ---- 三级菜单容器 ----
+                    const level3Container = document.createElement('div');
+                    level3Container.className = 'menu-level3-container';
+
+                    // 遍历三级标签
+                    level2Tags.forEach(tag => {
+                        const count = tagStockMap[tag] ? tagStockMap[tag].length : 0;
+                        if (count === 0) return;
+
+                        const item = document.createElement('div');
+                        item.className = 'menu-level3-item';
+                        item.dataset.tag = tag;
+                        item.innerHTML = `
+                            <span>🏷️</span>
+                            <span>${tag}</span>
+                            <span class="count">${count}</span>
+                        `;
+
+                        item.addEventListener('click', function() {
+                            document.querySelectorAll('.menu-level3-item').forEach(el => el.classList.remove('active'));
+                            document.querySelectorAll('.menu-level2-header').forEach(el => el.classList.remove('active'));
+                            this.classList.add('active');
+
+                            const tagName = this.dataset.tag;
+                            const level1 = this.closest('.menu-group').querySelector('.menu-group-header').dataset.level1;
+
+                            currentSelected = { level1, tag: tagName };
+                            document.getElementById('pageTitle').textContent = `🏷️ ${level1} › ${tagName}`;
+                            displayStocksByTag(tagName);
+                        });
+
+                        level3Container.appendChild(item);
+                    });
+
+                    // 点击二级标题切换三级展开
+                    level2Header.addEventListener('click', function() {
+                        const container = this.nextElementSibling;
+                        const isOpen = container.classList.contains('open');
+                        container.classList.toggle('open');
+                        this.querySelector('.arrow').classList.toggle('open');
+                    });
+
+                    level2Container.appendChild(level2Header);
+                    level2Container.appendChild(level3Container);
+                }
+
+                groupDiv.appendChild(level2Container);
+                sidebar.appendChild(groupDiv);
+            }
+
+            // 默认展开第一个一级菜单
+            const firstHeader = sidebar.querySelector('.menu-group-header');
+            if (firstHeader) {
+                const container = firstHeader.nextElementSibling;
+                container.classList.add('open');
+                firstHeader.querySelector('.arrow').classList.add('open');
+
+                const firstLevel2Header = container.querySelector('.menu-level2-header');
+                if (firstLevel2Header) {
+                    setTimeout(() => {
+                        firstLevel2Header.click();
+                        const firstLevel3 = firstLevel2Header.nextElementSibling.querySelector('.menu-level3-item');
+                        if (firstLevel3) {
+                            firstLevel3.click();
+                        }
+                    }, 100);
+                }
+            }
         }
 
+        // ============================================================
+        // 4. 显示股票（按 tag）
+        // ============================================================
         function displayStocksByTag(tagName) {
             const container = document.getElementById('stockGridContainer');
             const countEl = document.getElementById('stockCount');
@@ -527,6 +587,9 @@
             renderStockCards(matched, container);
         }
 
+        // ============================================================
+        // 5. 显示股票（按多个 tags）
+        // ============================================================
         function displayStocksByTags(tagNames) {
             const container = document.getElementById('stockGridContainer');
             const countEl = document.getElementById('stockCount');
@@ -564,149 +627,129 @@
             renderStockCards(matched, container);
         }
 
-        function renderSidebar(themeMapping, stocks) {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.innerHTML = '';
-
-            const tagStockMap = {};
-            stocks.forEach(stock => {
-                if (stock.tag_themes) {
-                    stock.tag_themes.forEach(t => {
-                        if (t.theme_path && t.theme_path.length > 0) {
-                            const tag = t.tag;
-                            if (!tagStockMap[tag]) tagStockMap[tag] = [];
-                            tagStockMap[tag].push(stock);
-                        }
-                    });
-                }
+        // ============================================================
+        // 6. 渲染股票卡片
+        // ============================================================
+        function renderStockCards(stocks, container) {
+            // 按市场排序：美股 → 日股 → A股
+            const marketOrder = { '美股': 0, '日股': 1, 'A股': 2, '韩股': 3, '德股': 4 };
+            const sortedStocks = [...stocks].sort((a, b) => {
+                const orderA = marketOrder[a.market_type] ?? 999;
+                const orderB = marketOrder[b.market_type] ?? 999;
+                return orderA - orderB;
             });
 
-            for (const [level1Key, level1Value] of Object.entries(themeMapping)) {
-                const menuDiv = document.createElement('div');
-                menuDiv.className = 'menu-level1';
+            let html = '<div class="stock-grid">';
+            let currentMarket = '';
 
-                let totalCount = 0;
-                const allTags = [];
+            sortedStocks.forEach(stock => {
+                // 市场分隔标题
+                if (stock.market_type !== currentMarket) {
+                    currentMarket = stock.market_type;
+                    const marketLabel = {
+                        '美股': '🇺🇸 美股',
+                        '日股': '🇯🇵 日股',
+                        'A股': '🇨🇳 A股',
+                        '韩股': '🇰🇷 韩股',
+                        '德股': '🇩🇪 德股'
+                    }[currentMarket] || currentMarket;
 
-                if (Array.isArray(level1Value)) {
-                    level1Value.forEach(tag => {
-                        allTags.push(tag);
-                        if (tagStockMap[tag]) totalCount += tagStockMap[tag].length;
-                    });
-                } else if (typeof level1Value === 'object') {
-                    for (const subKey of Object.keys(level1Value)) {
-                        if (Array.isArray(level1Value[subKey])) {
-                            level1Value[subKey].forEach(tag => {
-                                allTags.push(tag);
-                                if (tagStockMap[tag]) totalCount += tagStockMap[tag].length;
-                            });
-                        }
-                    }
+                    html += `<div class="market-divider">${marketLabel}</div>`;
                 }
 
-                const header = document.createElement('div');
-                header.className = 'menu-level1-header';
-                header.dataset.level1 = level1Key;
+                const colorClass = stock.isUp ? 'text-up' : 'text-down';
+                const trendClass = stock.trend === '牛市多头' ? 'trend-up-bg' : 'trend-down-bg';
+                const formattedFeature = stock.feature.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                const industryName = stock.industry || '其他';
 
-                header.innerHTML = `
-                    <span class="icon">📂</span>
-                    <span>${level1Key}</span>
-                    <span class="count">(${totalCount})</span>
-                    <span class="arrow">▶</span>
+                html += `
+                    <div class="stock-card">
+                        <div class="stock-header">
+                            <div class="stock-title">
+                                <a href="${getYahooUrl(stock)}" target="_blank" style="text-decoration: none; color: inherit;">
+                                    <h3>${getMarketBadge(stock.market_type)} ${stock.name}</h3>
+                                </a>
+                                <span class="industry-tag">${industryName}</span>
+                            </div>
+                            <div class="stock-actions">
+                                <span class="stock-code" onclick="copyToClipboard('${stock.code}')" title="点击复制代码">
+                                    ${stock.code}
+                                </span>
+                                <a href="${getTradingViewUrl(stock)}" target="_blank" class="tv-link" title="在 TradingView 查看走势">
+                                    📈
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="stock-feature">${formattedFeature}</div>
+
+                        <div class="tag-container">
+                            ${stock.tags ? stock.tags.map(t => `<span class="stock-tag">${t}</span>`).join('') : ''}
+                            ${stock.tag_themes ? stock.tag_themes.map(t => {
+                                if (t.theme_path && t.theme_path.length > 0) {
+                                    return `<span class="stock-tag theme-tag" title="${t.theme_path.join(' > ')}">${t.theme_path.join(' › ')}</span>`;
+                                }
+                                return '';
+                            }).join('') : ''}
+                        </div>
+
+                        <div class="stock-trend-badge ${trendClass}">${stock.trend}</div>
+
+                        <div class="price-row">
+                            <div class="stock-price ${colorClass}">${stock.price}</div>
+                            <div class="stock-change ${colorClass}">${stock.change}</div>
+                        </div>
+
+                        <table class="metrics-table" style="margin-bottom: 6px;">
+                            <thead>
+                                <tr>
+                                    <th style="width: 33.33%;">
+                                        <a href="#" onclick="openTargetPrice('${stock.code}'); return false;" style="color: #2563eb; text-decoration: none; cursor: pointer; border-bottom: 1px dashed #2563eb;">
+                                            PER 估值 📊
+                                        </a>
+                                    </th>
+                                    <th style="width: 33.33%;">ROE</th>
+                                    <th style="width: 33.33%;">PBR 溢价</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>${judgeValuation(stock.per, 'PER')}</td>
+                                    <td>${judgeROE(stock.roe)}</td>
+                                    <td>${judgeValuation(stock.pbr, 'PBR')}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="metrics-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 25%;">距1周高</th>
+                                    <th style="width: 25%;">距1月高</th>
+                                    <th style="width: 25%;">距52周高</th>
+                                    <th style="width: 25%;">年初高</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="font-weight: 600; color: #1e293b; font-size: 12px;">
+                                    <td>${stock.distWeek || '--'}</td>
+                                    <td>${stock.distMonth || '--'}</td>
+                                    <td>${stock.distHigh || '--'}</td>
+                                    <td style="color: ${parseFloat(stock.ytdChange) >= 0 ? 'var(--up-color)' : 'var(--down-color)'};">${stock.ytdChange || '--'}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 `;
-
-                header.addEventListener('click', function() {
-                    const container = this.nextElementSibling;
-                    const isOpen = container.classList.contains('open');
-                    
-                    container.classList.toggle('open');
-                    this.querySelector('.arrow').classList.toggle('open');
-                    
-                    if (!isOpen) {
-                        const level1Key = this.dataset.level1;
-                        const allTags = getAllTagsForLevel1(level1Key, themeMapping);
-                        
-                        document.querySelectorAll('.menu-level1-header').forEach(el => el.classList.remove('active'));
-                        this.classList.add('active');
-                        
-                        document.querySelectorAll('.menu-level2-item').forEach(el => el.classList.remove('active'));
-                        
-                        document.getElementById('pageTitle').textContent = `📂 ${level1Key}`;
-                        displayStocksByTags(allTags);
-                    }
-                });
-
-                menuDiv.appendChild(header);
-
-                const container = document.createElement('div');
-                container.className = 'menu-level2-container';
-
-                if (Array.isArray(level1Value)) {
-                    level1Value.forEach(tag => {
-                        const count = tagStockMap[tag] ? tagStockMap[tag].length : 0;
-                        const item = createMenuItem(tag, count, level1Key, tag);
-                        container.appendChild(item);
-                    });
-                } else if (typeof level1Value === 'object') {
-                    for (const [subKey, subValue] of Object.entries(level1Value)) {
-                        if (Array.isArray(subValue)) {
-                            const groupLabel = document.createElement('div');
-                            groupLabel.className = 'menu-group-label';
-                            groupLabel.textContent = subKey;
-                            container.appendChild(groupLabel);
-
-                            subValue.forEach(tag => {
-                                const count = tagStockMap[tag] ? tagStockMap[tag].length : 0;
-                                const item = createMenuItem(tag, count, level1Key, tag);
-                                container.appendChild(item);
-                            });
-                        }
-                    }
-                }
-
-                menuDiv.appendChild(container);
-                sidebar.appendChild(menuDiv);
-            }
-
-            const firstHeader = sidebar.querySelector('.menu-level1-header');
-            if (firstHeader) {
-                const container = firstHeader.nextElementSibling;
-                container.classList.add('open');
-                firstHeader.querySelector('.arrow').classList.add('open');
-                setTimeout(() => { firstHeader.click(); }, 100);
-            }
-        }
-
-        function createMenuItem(tag, count, level1Key, level2Key) {
-            const item = document.createElement('div');
-            item.className = 'menu-level2-item';
-            item.dataset.tag = tag;
-            item.dataset.level1 = level1Key;
-            item.dataset.level2 = level2Key;
-
-            item.innerHTML = `
-                <span>🏷️</span>
-                <span>${tag}</span>
-                <span class="count">${count}</span>
-            `;
-
-            item.addEventListener('click', function() {
-                document.querySelectorAll('.menu-level2-item').forEach(el => el.classList.remove('active'));
-                document.querySelectorAll('.menu-level1-header').forEach(el => el.classList.remove('active'));
-                this.classList.add('active');
-
-                const tagName = this.dataset.tag;
-                const level1 = this.dataset.level1;
-
-                currentSelected = { level1, tag: tagName };
-
-                document.getElementById('pageTitle').textContent = `🏷️ ${level1} › ${tagName}`;
-                displayStocksByTag(tagName);
             });
 
-            return item;
+            html += '</div>';
+            container.innerHTML = html;
         }
 
+        // ============================================================
+        // 7. URL 参数处理
+        // ============================================================
         function getTagFromURL() {
             const params = new URLSearchParams(window.location.search);
             return params.get('tag');
@@ -716,57 +759,65 @@
             if (!tagName || !themeMapping) return false;
 
             for (const [level1Key, level1Value] of Object.entries(themeMapping)) {
-                let found = false;
+                if (typeof level1Value !== 'object' || Array.isArray(level1Value)) continue;
 
-                if (Array.isArray(level1Value)) {
-                    if (level1Value.includes(tagName)) found = true;
-                } else if (typeof level1Value === 'object') {
-                    for (const subValue of Object.values(level1Value)) {
-                        if (Array.isArray(subValue) && subValue.includes(tagName)) {
-                            found = true;
-                            break;
-                        }
+                let foundLevel2 = null;
+                for (const [level2Key, level2Tags] of Object.entries(level1Value)) {
+                    if (Array.isArray(level2Tags) && level2Tags.includes(tagName)) {
+                        foundLevel2 = level2Key;
+                        break;
                     }
                 }
 
-                if (found) {
+                if (foundLevel2) {
                     const sidebar = document.getElementById('sidebar');
-                    const headers = sidebar.querySelectorAll('.menu-level1-header');
-                    for (const header of headers) {
+                    const groupHeaders = sidebar.querySelectorAll('.menu-group-header');
+                    for (const header of groupHeaders) {
                         if (header.dataset.level1 === level1Key) {
-                            const container = header.nextElementSibling;
-                            if (container) {
-                                container.classList.add('open');
+                            const level2Container = header.nextElementSibling;
+                            if (level2Container) {
+                                level2Container.classList.add('open');
                                 header.querySelector('.arrow').classList.add('open');
                             }
-                            
-                            const items = container ? container.querySelectorAll('.menu-level2-item') : [];
-                            for (const item of items) {
-                                if (item.dataset.tag === tagName) {
-                                    setTimeout(() => {
-                                        item.click();
-                                        item.scrollIntoView({ block: 'center', behavior: 'smooth' });
-                                    }, 100);
-                                    return true;
+
+                            const level2Headers = level2Container ? level2Container.querySelectorAll('.menu-level2-header') : [];
+                            for (const l2Header of level2Headers) {
+                                const l2Text = l2Header.textContent.trim();
+                                if (l2Text.includes(foundLevel2)) {
+                                    const level3Container = l2Header.nextElementSibling;
+                                    if (level3Container) {
+                                        level3Container.classList.add('open');
+                                        l2Header.querySelector('.arrow').classList.add('open');
+                                    }
+
+                                    const items = level3Container ? level3Container.querySelectorAll('.menu-level3-item') : [];
+                                    for (const item of items) {
+                                        if (item.dataset.tag === tagName) {
+                                            setTimeout(() => {
+                                                item.click();
+                                                item.scrollIntoView({ block: 'center', behavior: 'smooth' });
+                                            }, 100);
+                                            return true;
+                                        }
+                                    }
+                                    if (items.length > 0) {
+                                        setTimeout(() => { items[0].click(); }, 100);
+                                        return true;
+                                    }
                                 }
-                            }
-                            
-                            if (items.length > 0) {
-                                setTimeout(() => { items[0].click(); }, 100);
-                                return true;
                             }
                         }
                     }
                 }
             }
-
             return false;
         }
 
+        // ============================================================
+        // 8. 加载数据
+        // ============================================================
         async function loadData() {
             try {
-                await loadSectorMapping();
-                
                 const response = await fetch('/data/data.json?v=' + new Date().getTime());
                 if (!response.ok) throw new Error('数据加载失败');
                 const data = await response.json();
@@ -775,23 +826,8 @@
                 themeMapping = data.theme_mapping || {};
 
                 if (Object.keys(themeMapping).length === 0) {
-                    console.warn('data.json 中未找到 theme_mapping，使用默认值');
-                    themeMapping = {
-                        "1. 半导体设备": ["光刻机", "刻蚀设备", "薄膜沉积设备", "量测检测设备"],
-                        "2. 半导体材料": {
-                            "制造材料": ["硅基材料 (硅片)", "光刻胶及配套", "电子特气", "湿电子化学品", "抛光材料 (CMP)", "靶材", "掩膜版"],
-                            "封装及基板": ["封装基板 (ABF/BT)", "引线框架", "芯片粘接材料", "PCB", "铜箔"],
-                            "无源及核心功能": ["MLCC"],
-                            "第三代半导体": ["碳化硅 (SiC)", "氮化镓 (GaN)"]
-                        },
-                        "3. 算力芯片": ["GPU", "ASIC", "CPU", "FPGA", "AI SoC"],
-                        "4. 高带宽内存": ["HBM", "GDDR6", "SRAM", "内存接口"],
-                        "5. 先进封装": ["2.5D封装", "3D封装", "Chiplet", "封装材料"],
-                        "6. 网络互联": ["NVLink/NVSwitch", "InfiniBand", "RoCE", "PCIe"],
-                        "7. 光通信": ["光模块", "光芯片", "光纤光缆", "硅光子"],
-                        "8. 电力・液冷・数据中心": ["电力系统", "液冷设备", "数据中心架构"],
-                        "9. 云・模型・应用": ["云服务IaaS", "基础模型", "AI应用", "智能体Agent"]
-                    };
+                    console.warn('data.json 中未找到 theme_mapping');
+                    themeMapping = {};
                 }
 
                 renderSidebar(themeMapping, allStocks);
@@ -825,7 +861,11 @@
             }
         }
 
+        // ============================================================
+        // 9. 启动
+        // ============================================================
         document.addEventListener('DOMContentLoaded', loadData);
+        window.copyToClipboard = copyToClipboard;
     </script>
 </body>
 </html>
