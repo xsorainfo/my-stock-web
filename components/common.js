@@ -110,13 +110,74 @@ function copyToClipboard(text) {
 // ============================================================
 // 9. 渲染标签 HTML
 // ============================================================
-function renderTags(tags) {
+function renderTagsOld(tags) {
     if (!tags || tags.length === 0) return '';
     return tags.map(tag => `
         <span class="stock-tag clickable-tag" data-tag="${encodeURIComponent(tag)}" onclick="navigateToTheme('${encodeURIComponent(tag)}')">
             ${tag} 
         </span>
     `).join('&nbsp;&nbsp;');
+}
+// ============================================================
+// 9. 渲染标签 HTML - 统一使用 display_tags
+// ============================================================
+function renderTags(stock) {
+    // ⭐ 直接使用 display_tags
+    const displayTags = stock.display_tags || stock.tags || [];
+    if (!displayTags || displayTags.length === 0) return '';
+    
+    const result = [];
+    displayTags.forEach((displayTag) => {
+        let foundPath = null;
+        
+        // 在 tag_themes 中查找匹配
+        if (stock.tag_themes) {
+            for (const t of stock.tag_themes) {
+                // ⭐ 用 displayTag 匹配 tag_themes 中的 tag
+                if (t.tag === displayTag && t.theme_path && t.theme_path.length > 0) {
+                    foundPath = t.theme_path;
+                    break;
+                }
+            }
+        }
+        
+        let displayText = displayTag;
+        let hasPath = false;
+        
+        if (foundPath && foundPath.length >= 3) {
+            displayText = `${foundPath[0]} › ${foundPath[1]} › ${displayTag}`;
+            hasPath = true;
+        } else if (foundPath && foundPath.length >= 2) {
+            displayText = `${foundPath[0]} › ${displayTag}`;
+            hasPath = true;
+        }
+        
+        result.push({
+            displayTag: displayTag,
+            displayText: displayText,
+            hasPath: hasPath
+        });
+    });
+    
+    // 去重
+    const unique = [];
+    const seen = new Set();
+    result.forEach(item => {
+        if (!seen.has(item.displayTag)) {
+            seen.add(item.displayTag);
+            unique.push(item);
+        }
+    });
+    
+    return unique.map(item => {
+        const tagClass = item.hasPath ? 'stock-tag clickable-tag theme-tag' : 'stock-tag clickable-tag';
+        const jumpTag = encodeURIComponent(item.displayTag);
+        return `
+            <span class="${tagClass}" data-tag="${jumpTag}" onclick="navigateToTheme('${jumpTag}')" title="${item.displayText}">
+                ${item.displayText}
+            </span>
+        `;
+    }).join('&nbsp;&nbsp;');
 }
 // ============================================================
 // 9. 渲染标签 HTML（带层级路径 + 可点击跳转）
