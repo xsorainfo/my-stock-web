@@ -740,32 +740,34 @@
                        <div class="tag-container">
                             ${(function() {
                                 const result = [];
-                                if (stock.tags) {
-                                    stock.tags.forEach(tag => {
-                                        let foundPath = null;
-                                        if (stock.tag_themes) {
-                                            for (const t of stock.tag_themes) {
-                                                if (t.tag === tag && t.theme_path && t.theme_path.length > 0) {
-                                                    foundPath = t.theme_path;
-                                                    break;
-                                                }
+                                const tags = stock.display_tags || stock.tags || [];
+                                tags.forEach(displayTag => {
+                                    // 查找原始 tag 对应的 theme_path
+                                    let foundPath = null;
+                                    if (stock.tag_themes) {
+                                        // 需要找到原始 tag（反向查找）
+                                        const originalTag = Object.keys(TAG_DISPLAY_MAP).find(
+                                            key => TAG_DISPLAY_MAP[key] === displayTag
+                                        ) || displayTag;
+                                        for (const t of stock.tag_themes) {
+                                            if (t.tag === originalTag && t.theme_path && t.theme_path.length > 0) {
+                                                foundPath = t.theme_path;
+                                                break;
                                             }
                                         }
-                                        if (foundPath && foundPath.length >= 2) {
-                                            // ⭐ 找到了层级路径 → 显示 第一层 › 标签本身
-                                            result.push({
-                                                text: `${foundPath[0]} › ${tag}`,
-                                                hasPath: true
-                                            });
-                                        } else {
-                                            // ⭐ 没找到 → 只显示 tag 本身
-                                            result.push({
-                                                text: tag,
-                                                hasPath: false
-                                            });
-                                        }
-                                    });
-                                }
+                                    }
+                                    if (foundPath && foundPath.length >= 2) {
+                                        result.push({
+                                            text: `${foundPath[0]} › ${displayTag}`,
+                                            hasPath: true
+                                        });
+                                    } else {
+                                        result.push({
+                                            text: displayTag,
+                                            hasPath: false
+                                        });
+                                    }
+                                });
                                 // 去重
                                 const unique = [];
                                 const seen = new Set();
