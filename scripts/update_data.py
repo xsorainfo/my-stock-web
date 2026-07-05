@@ -33,22 +33,21 @@ def merge_tags(tags):
     
     return merged
 
-
-
 def build_tag_theme_mapping(theme_mapping):
     """
     根据 THEME_MAPPING 构建 tag → theme_path 的映射字典
     
     匹配优先级：
-    1. 优先匹配第三层（叶子节点）
-    2. 如果匹配不到，再匹配第二层
+    1. 优先匹配第三层（叶子节点）→ 返回 [一级, 二级, 三级]
+    2. 匹配不到第三层时，匹配第二层 → 返回 [一级, 二级]
+    3. 匹配不到第二层时，匹配第一层 → 返回 [一级]
     
     返回格式:
     {
-        "SiC": ["2. 半导体材料", "第三代半导体", "SiC"],       # 第三层匹配
-        "第三代半导体": ["2. 半导体材料", "第三代半导体", "第三代半导体"], # 第二层匹配
-        "GPU": ["3. 算力芯片", "GPU", "GPU"],                # 第二层匹配
-        ...
+        "SiC": ["2. 半导体材料", "第三代半导体", "SiC"],        # 第三层匹配
+        "GPU": ["3. 算力芯片", "GPU"],                         # 第二层匹配
+        "第三代半导体": ["2. 半导体材料", "第三代半导体"],       # 第二层匹配（二级名称本身）
+        "半导体设备": ["1. 半导体设备"],                        # 第一层匹配
     }
     """
     tag_map = {}
@@ -56,44 +55,37 @@ def build_tag_theme_mapping(theme_mapping):
     if not theme_mapping:
         return tag_map
     
-    # 第一遍：优先匹配第三层（叶子节点）
+    # 第一遍：匹配第三层（叶子节点）
     for theme_name, theme_value in theme_mapping.items():
         if isinstance(theme_value, dict):
             for sub_theme_name, sub_theme_value in theme_value.items():
                 if isinstance(sub_theme_value, list):
-                    # 三级结构：三级标签映射到完整路径
                     for tag in sub_theme_value:
                         if tag not in tag_map:
                             tag_map[tag] = [theme_name, sub_theme_name, tag]
                 elif isinstance(sub_theme_value, dict):
-                    # 递归处理更深层级
                     for tag, path in build_tag_theme_mapping({sub_theme_name: sub_theme_value}).items():
                         if tag not in tag_map:
                             tag_map[tag] = path
     
-    # 第二遍：匹配第二层（如果第一遍没有匹配到）
-    # 但注意不要覆盖已经存在的第三层映射
+    # 第二遍：匹配第二层（不覆盖第三层）
     for theme_name, theme_value in theme_mapping.items():
         if isinstance(theme_value, list):
-            # 两级结构：tag 映射到 [theme_name, tag]
             for tag in theme_value:
                 if tag not in tag_map:
                     tag_map[tag] = [theme_name, tag]
         elif isinstance(theme_value, dict):
             for sub_theme_name, sub_theme_value in theme_value.items():
-                if isinstance(sub_theme_value, list):
-                    # 二级名称本身也是一个可匹配的 tag
-                    # 只有当二级名称不在 tag_map 中时，才添加映射
-                    if sub_theme_name not in tag_map:
-                        # 二级名称映射到 [theme_name, sub_theme_name, sub_theme_name]
-                        tag_map[sub_theme_name] = [theme_name, sub_theme_name, sub_theme_name]
-                    # 同时检查二级名称是否在三级列表中（如果不在，也添加映射）
-                    # 但如果已经在第三层列表中，则以第三层为准（不覆盖）
-                elif isinstance(sub_theme_value, dict):
-                    # 递归处理
-                    for tag, path in build_tag_theme_mapping({sub_theme_name: sub_theme_value}).items():
-                        if tag not in tag_map:
-                            tag_map[tag] = path
+                # ⭐ 二级名称本身作为一个可匹配的 tag
+                if sub_theme_name not in tag_map:
+                    # 返回 [一级, 二级]（不包含三级）
+                    tag_map[sub_theme_name] = [theme_name, sub_theme_name]
+                # 如果三级列表中有与二级名称相同的 tag，保持第三层匹配优先
+    
+    # 第三遍：匹配第一层（最低优先级）
+    for theme_name, theme_value in theme_mapping.items():
+        if theme_name not in tag_map:
+            tag_map[theme_name] = [theme_name]
     
     return tag_map
 
