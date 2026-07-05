@@ -737,7 +737,7 @@
 
                         <div class="stock-feature">${formattedFeature}</div>
 
-                       <div class="tag-container">
+                        <div class="tag-container">
                             ${(function() {
                                 const result = [];
                                 const tags = stock.tags || [];
@@ -843,63 +843,117 @@
         }
 
         // ============================================================
-        // 7. URL 参数处理
+        // 7. URL 参数处理（支持 THEME_MAPPING + TAG_DISPLAY_MAP 正向查找）
         // ============================================================
+
+        // ⭐ 从 URL 获取 tag 参数
         function getTagFromURL() {
             const params = new URLSearchParams(window.location.search);
             return params.get('tag');
         }
 
+        // ⭐ 正向查找：从 TAG_DISPLAY_MAP 获取映射后的显示名称
+        function getDisplayTagFromMap(tag) {
+            if (window.TAG_DISPLAY_MAP) {
+                return window.TAG_DISPLAY_MAP[tag] || tag;
+            }
+            return tag;
+        }
+
+        // ⭐ 根据 tag 自动展开并选中菜单（支持正向映射）
         function autoSelectTag(tagName, themeMapping) {
             if (!tagName || !themeMapping) return false;
 
+            // 第一步：直接在 THEME_MAPPING 中查找
+            let searchTag = tagName;
+            let found = false;
+            let foundLevel1 = null;
+            let foundLevel2 = null;
+
+            // 用原始 tag 先找一次
             for (const [level1Key, level1Value] of Object.entries(themeMapping)) {
                 if (typeof level1Value !== 'object' || Array.isArray(level1Value)) continue;
 
-                let foundLevel2 = null;
                 for (const [level2Key, level2Tags] of Object.entries(level1Value)) {
-                    if (Array.isArray(level2Tags) && level2Tags.includes(tagName)) {
+                    if (Array.isArray(level2Tags) && level2Tags.includes(searchTag)) {
+                        found = true;
+                        foundLevel1 = level1Key;
                         foundLevel2 = level2Key;
                         break;
                     }
                 }
+                if (found) break;
+            }
 
-                if (foundLevel2) {
-                    const sidebar = document.getElementById('sidebar');
-                    const groupHeaders = sidebar.querySelectorAll('.menu-level1-header');
-                    for (const header of groupHeaders) {
-                        if (header.dataset.level1 === level1Key) {
-                            const level2Container = header.nextElementSibling;
-                            if (level2Container) {
-                                level2Container.classList.add('open');
-                                header.querySelector('.arrow').classList.add('open');
+            // 如果没找到，去 TAG_DISPLAY_MAP 查找映射后的名称
+            if (!found) {
+                const mappedTag = getDisplayTagFromMap(tagName);
+                if (mappedTag !== tagName) {
+                    searchTag = mappedTag;
+                    // 用映射后的名称再找一次
+                    for (const [level1Key, level1Value] of Object.entries(themeMapping)) {
+                        if (typeof level1Value !== 'object' || Array.isArray(level1Value)) continue;
+
+                        for (const [level2Key, level2Tags] of Object.entries(level1Value)) {
+                            if (Array.isArray(level2Tags) && level2Tags.includes(searchTag)) {
+                                found = true;
+                                foundLevel1 = level1Key;
+                                foundLevel2 = level2Key;
+                                break;
+                            }
+                        }
+                        if (found) break;
+                    }
+                }
+            }
+
+            // 如果找到，展开并选中
+            if (found && foundLevel1 && foundLevel2) {
+                return expandAndSelectTag(searchTag, foundLevel1, foundLevel2, themeMapping);
+            }
+
+            return false;
+        }
+
+        // ⭐ 辅助函数：展开菜单并选中 tag
+        function expandAndSelectTag(tagName, level1Key, level2Key, themeMapping) {
+            const sidebar = document.getElementById('sidebar');
+            const groupHeaders = sidebar.querySelectorAll('.menu-level1-header');
+            
+            for (const header of groupHeaders) {
+                if (header.dataset.level1 === level1Key) {
+                    const level2Container = header.nextElementSibling;
+                    if (level2Container) {
+                        level2Container.classList.add('open');
+                        header.querySelector('.arrow').classList.add('open');
+                    }
+
+                    const level2Headers = level2Container ? level2Container.querySelectorAll('.menu-level2-header') : [];
+                    for (const l2Header of level2Headers) {
+                        const l2Text = l2Header.textContent.trim();
+                        if (l2Text.includes(level2Key)) {
+                            const level3Container = l2Header.nextElementSibling;
+                            if (level3Container) {
+                                level3Container.classList.add('open');
+                                l2Header.querySelector('.arrow').classList.add('open');
                             }
 
-                            const level2Headers = level2Container ? level2Container.querySelectorAll('.menu-level2-header') : [];
-                            for (const l2Header of level2Headers) {
-                                const l2Text = l2Header.textContent.trim();
-                                if (l2Text.includes(foundLevel2)) {
-                                    const level3Container = l2Header.nextElementSibling;
-                                    if (level3Container) {
-                                        level3Container.classList.add('open');
-                                        l2Header.querySelector('.arrow').classList.add('open');
-                                    }
-
-                                    const items = level3Container ? level3Container.querySelectorAll('.menu-level3-item') : [];
-                                    for (const item of items) {
-                                        if (item.dataset.tag === tagName) {
-                                            setTimeout(() => {
-                                                item.click();
-                                                item.scrollIntoView({ block: 'center', behavior: 'smooth' });
-                                            }, 100);
-                                            return true;
-                                        }
-                                    }
-                                    if (items.length > 0) {
-                                        setTimeout(() => { items[0].click(); }, 100);
-                                        return true;
-                                    }
+                            const items = level3Container ? level3Container.querySelectorAll('.menu-level3-item') : [];
+                            for (const item of items) {
+                                if (item.dataset.tag === tagName) {
+                                    setTimeout(() => {
+                                        item.click();
+                                        item.scrollIntoView({ block: 'center', behavior: 'smooth' });
+                                    }, 100);
+                                    return true;
                                 }
+                            }
+                            
+                            if (items.length > 0) {
+                                setTimeout(() => {
+                                    items[0].click();
+                                }, 100);
+                                return true;
                             }
                         }
                     }
@@ -919,6 +973,9 @@
 
                 allStocks = data.stocks || [];
                 themeMapping = data.theme_mapping || {};
+                
+                // ⭐ 注入 TAG_DISPLAY_MAP 到全局
+                window.TAG_DISPLAY_MAP = data.tag_display_map || {};
 
                 if (Object.keys(themeMapping).length === 0) {
                     console.warn('data.json 中未找到 theme_mapping');
