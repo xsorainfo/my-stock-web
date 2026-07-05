@@ -63,6 +63,28 @@ How it fits together:
 
 ---
 
+## 环境变量（Environment variables）
+本项目在部署到 Vercel 时使用了少量环境变量以保障页面触发数据刷新等功能：
+
+- MY_REPO_TOKEN (required for /api/refresh)
+  - 说明：Vercel 后端函数 api/refresh.js 使用此 token 调用 GitHub repository dispatch API，为页面提供“召唤云端强刷”的能力。
+  - 在 Vercel 中设置：Project Settings → Environment Variables → 添加 `MY_REPO_TOKEN`，在 Production/Preview/Development 根据需要选择。
+  - 最佳实践：使用短期有效的 Personal Access Token（PAT），并限制其权限与有效期；不要在代码或公共配置中暴露该值。
+
+最小权限建议（建议的最小范围）：
+- 公共仓库 (public repo)：为 repository_dispatch 调用，建议使用带有 `public_repo` 范围的 PAT 可满足触发公开仓库的 dispatch。若不确定，使用 `repo` 权限。
+- 私有仓库 (private repo)：需要 `repo` 全权限（包含 repository dispatch）。
+
+更安全的替代方案：
+- 使用 GitHub App（推荐）来替代 PAT：为 GitHub App 授予仅 repository_dispatch 权限（或触发 workflow 权限），并在 Vercel 后端使用 App 的 installation token，这能提供更细粒度与可撤销的权限控制。
+
+安全建议：
+- 为 PAT 设置短期过期、仅在需要时重新生成。
+- 在 Vercel 中把变量设为 Environment Variable（而非公開设置），并定期轮换。
+- 如果团队协作，优先使用 GitHub App + least-privilege 模型。
+
+---
+
 ## 如何在本地运行（最短路径）
 1. 克隆仓库并进入目录：
 
