@@ -514,6 +514,15 @@
       "badge_class": "etf"
     },
     {
+      "name": "5年国债收益率",
+      "price": "4.13",
+      "change": "-0.03 (-0.79%)",
+      "isUp": false,
+      "type": "bond",
+      "badge_label": "债券",
+      "badge_class": "bond"
+    },
+    {
       "name": "VIX 恐慌指数",
       "price": "16.15",
       "change": "-0.44 (-2.65%)",
