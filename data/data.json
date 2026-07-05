@@ -514,15 +514,6 @@
       "badge_class": "etf"
     },
     {
-      "name": "5年国债收益率",
-      "price": "4.13",
-      "change": "-0.03 (-0.79%)",
-      "isUp": false,
-      "type": "bond",
-      "badge_label": "债券",
-      "badge_class": "bond"
-    },
-    {
       "name": "VIX 恐慌指数",
       "price": "16.15",
       "change": "-0.44 (-2.65%)",
@@ -581,10 +572,46 @@
         "AI服务器"
       ],
       "merged_tags": [
+        "GPU",
+        "AI加速器",
+        "AI芯片",
+        "推理芯片",
         "算力芯片",
         "电力・液冷・数据中心"
       ],
       "tag_themes": [
+        {
+          "tag": "GPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "GPU",
+            "GPU"
+          ]
+        },
+        {
+          "tag": "AI加速器",
+          "theme_path": [
+            "3. 算力芯片",
+            "GPU",
+            "AI加速器"
+          ]
+        },
+        {
+          "tag": "AI芯片",
+          "theme_path": [
+            "3. 算力芯片",
+            "GPU",
+            "AI芯片"
+          ]
+        },
+        {
+          "tag": "推理芯片",
+          "theme_path": [
+            "3. 算力芯片",
+            "GPU",
+            "推理芯片"
+          ]
+        },
         {
           "tag": "算力芯片",
           "theme_path": []
@@ -621,13 +648,62 @@
         "AI服务器"
       ],
       "merged_tags": [
-        "算力芯片",
+        "CPU",
+        "RISC-V",
+        "GPU",
+        "AI加速器",
+        "AI芯片",
+        "推理芯片",
         "电力・液冷・数据中心"
       ],
       "tag_themes": [
         {
-          "tag": "算力芯片",
-          "theme_path": []
+          "tag": "CPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU",
+            "CPU"
+          ]
+        },
+        {
+          "tag": "RISC-V",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU",
+            "RISC-V"
+          ]
+        },
+        {
+          "tag": "GPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "GPU",
+            "GPU"
+          ]
+        },
+        {
+          "tag": "AI加速器",
+          "theme_path": [
+            "3. 算力芯片",
+            "GPU",
+            "AI加速器"
+          ]
+        },
+        {
+          "tag": "AI芯片",
+          "theme_path": [
+            "3. 算力芯片",
+            "GPU",
+            "AI芯片"
+          ]
+        },
+        {
+          "tag": "推理芯片",
+          "theme_path": [
+            "3. 算力芯片",
+            "GPU",
+            "推理芯片"
+          ]
         },
         {
           "tag": "电力・液冷・数据中心",
@@ -660,9 +736,27 @@
         "AI加速器"
       ],
       "merged_tags": [
+        "CPU",
+        "RISC-V",
         "算力芯片"
       ],
       "tag_themes": [
+        {
+          "tag": "CPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU",
+            "CPU"
+          ]
+        },
+        {
+          "tag": "RISC-V",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU",
+            "RISC-V"
+          ]
+        },
         {
           "tag": "算力芯片",
           "theme_path": []
@@ -694,12 +788,79 @@
         "CPU"
       ],
       "merged_tags": [
-        "算力芯片"
+        "AI SoC",
+        "MCU",
+        "NPU",
+        "DPU",
+        "DSP",
+        "HBM控制器",
+        "CPU",
+        "RISC-V"
       ],
       "tag_themes": [
         {
-          "tag": "算力芯片",
-          "theme_path": []
+          "tag": "AI SoC",
+          "theme_path": [
+            "3. 算力芯片",
+            "AI SoC",
+            "AI SoC"
+          ]
+        },
+        {
+          "tag": "MCU",
+          "theme_path": [
+            "3. 算力芯片",
+            "AI SoC",
+            "MCU"
+          ]
+        },
+        {
+          "tag": "NPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "AI SoC",
+            "NPU"
+          ]
+        },
+        {
+          "tag": "DPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "AI SoC",
+            "DPU"
+          ]
+        },
+        {
+          "tag": "DSP",
+          "theme_path": [
+            "3. 算力芯片",
+            "AI SoC",
+            "DSP"
+          ]
+        },
+        {
+          "tag": "HBM控制器",
+          "theme_path": [
+            "3. 算力芯片",
+            "AI SoC",
+            "HBM控制器"
+          ]
+        },
+        {
+          "tag": "CPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU",
+            "CPU"
+          ]
+        },
+        {
+          "tag": "RISC-V",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU",
+            "RISC-V"
+          ]
         }
       ],
       "market_type": "美股",
@@ -728,17 +889,43 @@
         "PCIe"
       ],
       "merged_tags": [
-        "算力芯片",
-        "网络互联"
+        "ASIC",
+        "网络芯片",
+        "交换芯片",
+        "PCIe"
       ],
       "tag_themes": [
         {
-          "tag": "算力芯片",
-          "theme_path": []
+          "tag": "ASIC",
+          "theme_path": [
+            "3. 算力芯片",
+            "ASIC",
+            "ASIC"
+          ]
         },
         {
-          "tag": "网络互联",
-          "theme_path": []
+          "tag": "网络芯片",
+          "theme_path": [
+            "3. 算力芯片",
+            "ASIC",
+            "网络芯片"
+          ]
+        },
+        {
+          "tag": "交换芯片",
+          "theme_path": [
+            "3. 算力芯片",
+            "ASIC",
+            "交换芯片"
+          ]
+        },
+        {
+          "tag": "PCIe",
+          "theme_path": [
+            "6. 网络互联",
+            "PCIe",
+            "PCIe"
+          ]
         }
       ],
       "market_type": "美股",
@@ -768,22 +955,84 @@
         "光芯片"
       ],
       "merged_tags": [
-        "算力芯片",
+        "ASIC",
+        "网络芯片",
+        "交换芯片",
         "网络互联",
-        "光通信"
+        "光芯片",
+        "EML",
+        "VCSEL",
+        "DFB",
+        "CW Laser"
       ],
       "tag_themes": [
         {
-          "tag": "算力芯片",
-          "theme_path": []
+          "tag": "ASIC",
+          "theme_path": [
+            "3. 算力芯片",
+            "ASIC",
+            "ASIC"
+          ]
+        },
+        {
+          "tag": "网络芯片",
+          "theme_path": [
+            "3. 算力芯片",
+            "ASIC",
+            "网络芯片"
+          ]
+        },
+        {
+          "tag": "交换芯片",
+          "theme_path": [
+            "3. 算力芯片",
+            "ASIC",
+            "交换芯片"
+          ]
         },
         {
           "tag": "网络互联",
           "theme_path": []
         },
         {
-          "tag": "光通信",
-          "theme_path": []
+          "tag": "光芯片",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "光芯片"
+          ]
+        },
+        {
+          "tag": "EML",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "EML"
+          ]
+        },
+        {
+          "tag": "VCSEL",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "VCSEL"
+          ]
+        },
+        {
+          "tag": "DFB",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "DFB"
+          ]
+        },
+        {
+          "tag": "CW Laser",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "CW Laser"
+          ]
         }
       ],
       "market_type": "美股",
@@ -811,12 +1060,25 @@
         "CPU"
       ],
       "merged_tags": [
-        "算力芯片"
+        "CPU",
+        "RISC-V"
       ],
       "tag_themes": [
         {
-          "tag": "算力芯片",
-          "theme_path": []
+          "tag": "CPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU",
+            "CPU"
+          ]
+        },
+        {
+          "tag": "RISC-V",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU",
+            "RISC-V"
+          ]
         }
       ],
       "market_type": "美股",
@@ -845,12 +1107,79 @@
         "AI SoC"
       ],
       "merged_tags": [
-        "算力芯片"
+        "CPU",
+        "RISC-V",
+        "AI SoC",
+        "MCU",
+        "NPU",
+        "DPU",
+        "DSP",
+        "HBM控制器"
       ],
       "tag_themes": [
         {
-          "tag": "算力芯片",
-          "theme_path": []
+          "tag": "CPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU",
+            "CPU"
+          ]
+        },
+        {
+          "tag": "RISC-V",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU",
+            "RISC-V"
+          ]
+        },
+        {
+          "tag": "AI SoC",
+          "theme_path": [
+            "3. 算力芯片",
+            "AI SoC",
+            "AI SoC"
+          ]
+        },
+        {
+          "tag": "MCU",
+          "theme_path": [
+            "3. 算力芯片",
+            "AI SoC",
+            "MCU"
+          ]
+        },
+        {
+          "tag": "NPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "AI SoC",
+            "NPU"
+          ]
+        },
+        {
+          "tag": "DPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "AI SoC",
+            "DPU"
+          ]
+        },
+        {
+          "tag": "DSP",
+          "theme_path": [
+            "3. 算力芯片",
+            "AI SoC",
+            "DSP"
+          ]
+        },
+        {
+          "tag": "HBM控制器",
+          "theme_path": [
+            "3. 算力芯片",
+            "AI SoC",
+            "HBM控制器"
+          ]
         }
       ],
       "market_type": "美股",
@@ -921,6 +1250,12 @@
       ],
       "merged_tags": [
         "算力芯片",
+        "AI SoC",
+        "MCU",
+        "NPU",
+        "DPU",
+        "DSP",
+        "HBM控制器",
         "氮化镓 (GaN)",
         "碳化硅 (SiC)"
       ],
@@ -928,6 +1263,54 @@
         {
           "tag": "算力芯片",
           "theme_path": []
+        },
+        {
+          "tag": "AI SoC",
+          "theme_path": [
+            "3. 算力芯片",
+            "AI SoC",
+            "AI SoC"
+          ]
+        },
+        {
+          "tag": "MCU",
+          "theme_path": [
+            "3. 算力芯片",
+            "AI SoC",
+            "MCU"
+          ]
+        },
+        {
+          "tag": "NPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "AI SoC",
+            "NPU"
+          ]
+        },
+        {
+          "tag": "DPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "AI SoC",
+            "DPU"
+          ]
+        },
+        {
+          "tag": "DSP",
+          "theme_path": [
+            "3. 算力芯片",
+            "AI SoC",
+            "DSP"
+          ]
+        },
+        {
+          "tag": "HBM控制器",
+          "theme_path": [
+            "3. 算力芯片",
+            "AI SoC",
+            "HBM控制器"
+          ]
         },
         {
           "tag": "氮化镓 (GaN)",
@@ -964,12 +1347,88 @@
         "AI SoC"
       ],
       "merged_tags": [
-        "算力芯片"
+        "ASIC",
+        "网络芯片",
+        "交换芯片",
+        "AI SoC",
+        "MCU",
+        "NPU",
+        "DPU",
+        "DSP",
+        "HBM控制器"
       ],
       "tag_themes": [
         {
-          "tag": "算力芯片",
-          "theme_path": []
+          "tag": "ASIC",
+          "theme_path": [
+            "3. 算力芯片",
+            "ASIC",
+            "ASIC"
+          ]
+        },
+        {
+          "tag": "网络芯片",
+          "theme_path": [
+            "3. 算力芯片",
+            "ASIC",
+            "网络芯片"
+          ]
+        },
+        {
+          "tag": "交换芯片",
+          "theme_path": [
+            "3. 算力芯片",
+            "ASIC",
+            "交换芯片"
+          ]
+        },
+        {
+          "tag": "AI SoC",
+          "theme_path": [
+            "3. 算力芯片",
+            "AI SoC",
+            "AI SoC"
+          ]
+        },
+        {
+          "tag": "MCU",
+          "theme_path": [
+            "3. 算力芯片",
+            "AI SoC",
+            "MCU"
+          ]
+        },
+        {
+          "tag": "NPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "AI SoC",
+            "NPU"
+          ]
+        },
+        {
+          "tag": "DPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "AI SoC",
+            "DPU"
+          ]
+        },
+        {
+          "tag": "DSP",
+          "theme_path": [
+            "3. 算力芯片",
+            "AI SoC",
+            "DSP"
+          ]
+        },
+        {
+          "tag": "HBM控制器",
+          "theme_path": [
+            "3. 算力芯片",
+            "AI SoC",
+            "HBM控制器"
+          ]
         }
       ],
       "market_type": "日股",
@@ -1043,13 +1502,44 @@
         "AI服务器"
       ],
       "merged_tags": [
-        "算力芯片",
+        "GPU",
+        "AI加速器",
+        "AI芯片",
+        "推理芯片",
         "电力・液冷・数据中心"
       ],
       "tag_themes": [
         {
-          "tag": "算力芯片",
-          "theme_path": []
+          "tag": "GPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "GPU",
+            "GPU"
+          ]
+        },
+        {
+          "tag": "AI加速器",
+          "theme_path": [
+            "3. 算力芯片",
+            "GPU",
+            "AI加速器"
+          ]
+        },
+        {
+          "tag": "AI芯片",
+          "theme_path": [
+            "3. 算力芯片",
+            "GPU",
+            "AI芯片"
+          ]
+        },
+        {
+          "tag": "推理芯片",
+          "theme_path": [
+            "3. 算力芯片",
+            "GPU",
+            "推理芯片"
+          ]
         },
         {
           "tag": "电力・液冷・数据中心",
@@ -1081,12 +1571,43 @@
         "GPU"
       ],
       "merged_tags": [
-        "算力芯片"
+        "GPU",
+        "AI加速器",
+        "AI芯片",
+        "推理芯片"
       ],
       "tag_themes": [
         {
-          "tag": "算力芯片",
-          "theme_path": []
+          "tag": "GPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "GPU",
+            "GPU"
+          ]
+        },
+        {
+          "tag": "AI加速器",
+          "theme_path": [
+            "3. 算力芯片",
+            "GPU",
+            "AI加速器"
+          ]
+        },
+        {
+          "tag": "AI芯片",
+          "theme_path": [
+            "3. 算力芯片",
+            "GPU",
+            "AI芯片"
+          ]
+        },
+        {
+          "tag": "推理芯片",
+          "theme_path": [
+            "3. 算力芯片",
+            "GPU",
+            "推理芯片"
+          ]
         }
       ],
       "market_type": "A股",
@@ -1115,13 +1636,26 @@
         "AI服务器"
       ],
       "merged_tags": [
-        "算力芯片",
+        "CPU",
+        "RISC-V",
         "电力・液冷・数据中心"
       ],
       "tag_themes": [
         {
-          "tag": "算力芯片",
-          "theme_path": []
+          "tag": "CPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU",
+            "CPU"
+          ]
+        },
+        {
+          "tag": "RISC-V",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU",
+            "RISC-V"
+          ]
         },
         {
           "tag": "电力・液冷・数据中心",
@@ -1153,12 +1687,25 @@
         "CPU"
       ],
       "merged_tags": [
-        "算力芯片"
+        "CPU",
+        "RISC-V"
       ],
       "tag_themes": [
         {
-          "tag": "算力芯片",
-          "theme_path": []
+          "tag": "CPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU",
+            "CPU"
+          ]
+        },
+        {
+          "tag": "RISC-V",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU",
+            "RISC-V"
+          ]
         }
       ],
       "market_type": "A股",
@@ -1186,12 +1733,25 @@
         "CPU"
       ],
       "merged_tags": [
-        "算力芯片"
+        "CPU",
+        "RISC-V"
       ],
       "tag_themes": [
         {
-          "tag": "算力芯片",
-          "theme_path": []
+          "tag": "CPU",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU",
+            "CPU"
+          ]
+        },
+        {
+          "tag": "RISC-V",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU",
+            "RISC-V"
+          ]
         }
       ],
       "market_type": "A股",
@@ -1327,9 +1887,99 @@
         "企业级SSD"
       ],
       "merged_tags": [
+        "HBM",
+        "HBM3",
+        "HBM3E",
+        "HBM4",
+        "DRAM",
+        "DDR5",
+        "DDR4",
+        "LPDDR5",
+        "LPDDR5X",
+        "GDDR6",
         "高带宽内存"
       ],
       "tag_themes": [
+        {
+          "tag": "HBM",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM"
+          ]
+        },
+        {
+          "tag": "HBM3",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM3"
+          ]
+        },
+        {
+          "tag": "HBM3E",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM3E"
+          ]
+        },
+        {
+          "tag": "HBM4",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM4"
+          ]
+        },
+        {
+          "tag": "DRAM",
+          "theme_path": [
+            "4. 高带宽内存",
+            "DRAM",
+            "DRAM"
+          ]
+        },
+        {
+          "tag": "DDR5",
+          "theme_path": [
+            "4. 高带宽内存",
+            "DRAM",
+            "DDR5"
+          ]
+        },
+        {
+          "tag": "DDR4",
+          "theme_path": [
+            "4. 高带宽内存",
+            "DRAM",
+            "DDR4"
+          ]
+        },
+        {
+          "tag": "LPDDR5",
+          "theme_path": [
+            "4. 高带宽内存",
+            "DRAM",
+            "LPDDR5"
+          ]
+        },
+        {
+          "tag": "LPDDR5X",
+          "theme_path": [
+            "4. 高带宽内存",
+            "DRAM",
+            "LPDDR5X"
+          ]
+        },
+        {
+          "tag": "GDDR6",
+          "theme_path": [
+            "4. 高带宽内存",
+            "DRAM",
+            "GDDR6"
+          ]
+        },
         {
           "tag": "高带宽内存",
           "theme_path": []
@@ -1361,12 +2011,34 @@
         "CXL"
       ],
       "merged_tags": [
-        "高带宽内存"
+        "内存接口",
+        "HBM控制器",
+        "CXL"
       ],
       "tag_themes": [
         {
-          "tag": "高带宽内存",
-          "theme_path": []
+          "tag": "内存接口",
+          "theme_path": [
+            "4. 高带宽内存",
+            "内存接口",
+            "内存接口"
+          ]
+        },
+        {
+          "tag": "HBM控制器",
+          "theme_path": [
+            "3. 算力芯片",
+            "AI SoC",
+            "HBM控制器"
+          ]
+        },
+        {
+          "tag": "CXL",
+          "theme_path": [
+            "3. 算力芯片",
+            "高速互联",
+            "CXL"
+          ]
         }
       ],
       "market_type": "美股",
@@ -1396,12 +2068,115 @@
         "NAND Flash"
       ],
       "merged_tags": [
-        "高带宽内存"
+        "HBM",
+        "HBM3",
+        "HBM3E",
+        "HBM4",
+        "DRAM",
+        "DDR5",
+        "DDR4",
+        "LPDDR5",
+        "LPDDR5X",
+        "GDDR6",
+        "NAND Flash",
+        "企业级SSD"
       ],
       "tag_themes": [
         {
-          "tag": "高带宽内存",
-          "theme_path": []
+          "tag": "HBM",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM"
+          ]
+        },
+        {
+          "tag": "HBM3",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM3"
+          ]
+        },
+        {
+          "tag": "HBM3E",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM3E"
+          ]
+        },
+        {
+          "tag": "HBM4",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM4"
+          ]
+        },
+        {
+          "tag": "DRAM",
+          "theme_path": [
+            "4. 高带宽内存",
+            "DRAM",
+            "DRAM"
+          ]
+        },
+        {
+          "tag": "DDR5",
+          "theme_path": [
+            "4. 高带宽内存",
+            "DRAM",
+            "DDR5"
+          ]
+        },
+        {
+          "tag": "DDR4",
+          "theme_path": [
+            "4. 高带宽内存",
+            "DRAM",
+            "DDR4"
+          ]
+        },
+        {
+          "tag": "LPDDR5",
+          "theme_path": [
+            "4. 高带宽内存",
+            "DRAM",
+            "LPDDR5"
+          ]
+        },
+        {
+          "tag": "LPDDR5X",
+          "theme_path": [
+            "4. 高带宽内存",
+            "DRAM",
+            "LPDDR5X"
+          ]
+        },
+        {
+          "tag": "GDDR6",
+          "theme_path": [
+            "4. 高带宽内存",
+            "DRAM",
+            "GDDR6"
+          ]
+        },
+        {
+          "tag": "NAND Flash",
+          "theme_path": [
+            "4. 高带宽内存",
+            "NAND Flash",
+            "NAND Flash"
+          ]
+        },
+        {
+          "tag": "企业级SSD",
+          "theme_path": [
+            "4. 高带宽内存",
+            "NAND Flash",
+            "企业级SSD"
+          ]
         }
       ],
       "market_type": "韩股",
@@ -1430,12 +2205,97 @@
         "DRAM"
       ],
       "merged_tags": [
-        "高带宽内存"
+        "HBM",
+        "HBM3",
+        "HBM3E",
+        "HBM4",
+        "DRAM",
+        "DDR5",
+        "DDR4",
+        "LPDDR5",
+        "LPDDR5X",
+        "GDDR6"
       ],
       "tag_themes": [
         {
-          "tag": "高带宽内存",
-          "theme_path": []
+          "tag": "HBM",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM"
+          ]
+        },
+        {
+          "tag": "HBM3",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM3"
+          ]
+        },
+        {
+          "tag": "HBM3E",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM3E"
+          ]
+        },
+        {
+          "tag": "HBM4",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM4"
+          ]
+        },
+        {
+          "tag": "DRAM",
+          "theme_path": [
+            "4. 高带宽内存",
+            "DRAM",
+            "DRAM"
+          ]
+        },
+        {
+          "tag": "DDR5",
+          "theme_path": [
+            "4. 高带宽内存",
+            "DRAM",
+            "DDR5"
+          ]
+        },
+        {
+          "tag": "DDR4",
+          "theme_path": [
+            "4. 高带宽内存",
+            "DRAM",
+            "DDR4"
+          ]
+        },
+        {
+          "tag": "LPDDR5",
+          "theme_path": [
+            "4. 高带宽内存",
+            "DRAM",
+            "LPDDR5"
+          ]
+        },
+        {
+          "tag": "LPDDR5X",
+          "theme_path": [
+            "4. 高带宽内存",
+            "DRAM",
+            "LPDDR5X"
+          ]
+        },
+        {
+          "tag": "GDDR6",
+          "theme_path": [
+            "4. 高带宽内存",
+            "DRAM",
+            "GDDR6"
+          ]
         }
       ],
       "market_type": "韩股",
@@ -1464,9 +2324,27 @@
         "企业级SSD"
       ],
       "merged_tags": [
+        "NAND Flash",
+        "企业级SSD",
         "高带宽内存"
       ],
       "tag_themes": [
+        {
+          "tag": "NAND Flash",
+          "theme_path": [
+            "4. 高带宽内存",
+            "NAND Flash",
+            "NAND Flash"
+          ]
+        },
+        {
+          "tag": "企业级SSD",
+          "theme_path": [
+            "4. 高带宽内存",
+            "NAND Flash",
+            "企业级SSD"
+          ]
+        },
         {
           "tag": "高带宽内存",
           "theme_path": []
@@ -1499,12 +2377,39 @@
         "CXL"
       ],
       "merged_tags": [
-        "高带宽内存"
+        "内存接口",
+        "HBM控制器",
+        "高带宽内存",
+        "CXL"
       ],
       "tag_themes": [
         {
+          "tag": "内存接口",
+          "theme_path": [
+            "4. 高带宽内存",
+            "内存接口",
+            "内存接口"
+          ]
+        },
+        {
+          "tag": "HBM控制器",
+          "theme_path": [
+            "3. 算力芯片",
+            "AI SoC",
+            "HBM控制器"
+          ]
+        },
+        {
           "tag": "高带宽内存",
           "theme_path": []
+        },
+        {
+          "tag": "CXL",
+          "theme_path": [
+            "3. 算力芯片",
+            "高速互联",
+            "CXL"
+          ]
         }
       ],
       "market_type": "A股",
@@ -1540,6 +2445,18 @@
         "碳化硅 (SiC)",
         "第三代半导体",
         "功率半导体",
+        "SiC",
+        "碳化硅",
+        "SiC衬底",
+        "碳化硅衬底",
+        "GaN",
+        "氮化镓",
+        "GaN衬底",
+        "GaAs",
+        "砷化镓",
+        "InP",
+        "磷化铟",
+        "化合物半导体",
         "新能源汽车",
         "云・模型・应用"
       ],
@@ -1559,6 +2476,102 @@
         {
           "tag": "功率半导体",
           "theme_path": []
+        },
+        {
+          "tag": "SiC",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "SiC"
+          ]
+        },
+        {
+          "tag": "碳化硅",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "碳化硅"
+          ]
+        },
+        {
+          "tag": "SiC衬底",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "SiC衬底"
+          ]
+        },
+        {
+          "tag": "碳化硅衬底",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "碳化硅衬底"
+          ]
+        },
+        {
+          "tag": "GaN",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "GaN"
+          ]
+        },
+        {
+          "tag": "氮化镓",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "氮化镓"
+          ]
+        },
+        {
+          "tag": "GaN衬底",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "GaN衬底"
+          ]
+        },
+        {
+          "tag": "GaAs",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "GaAs"
+          ]
+        },
+        {
+          "tag": "砷化镓",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "砷化镓"
+          ]
+        },
+        {
+          "tag": "InP",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "InP"
+          ]
+        },
+        {
+          "tag": "磷化铟",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "磷化铟"
+          ]
+        },
+        {
+          "tag": "化合物半导体",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "化合物半导体"
+          ]
         },
         {
           "tag": "新能源汽车",
@@ -1603,7 +2616,10 @@
         "CMP",
         "晶圆制造",
         "先进制程",
-        "高带宽内存",
+        "HBM",
+        "HBM3",
+        "HBM3E",
+        "HBM4",
         "云・模型・应用"
       ],
       "tag_themes": [
@@ -1632,8 +2648,36 @@
           "theme_path": []
         },
         {
-          "tag": "高带宽内存",
-          "theme_path": []
+          "tag": "HBM",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM"
+          ]
+        },
+        {
+          "tag": "HBM3",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM3"
+          ]
+        },
+        {
+          "tag": "HBM3E",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM3E"
+          ]
+        },
+        {
+          "tag": "HBM4",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM4"
+          ]
         },
         {
           "tag": "云・模型・应用",
@@ -1669,12 +2713,30 @@
         "AI"
       ],
       "merged_tags": [
+        "电子特气",
+        "工业气体",
         "半导体材料",
         "先进制程",
         "晶圆制造",
         "云・模型・应用"
       ],
       "tag_themes": [
+        {
+          "tag": "电子特气",
+          "theme_path": [
+            "2. 半导体材料",
+            "电子特气",
+            "电子特气"
+          ]
+        },
+        {
+          "tag": "工业气体",
+          "theme_path": [
+            "2. 半导体材料",
+            "电子特气",
+            "工业气体"
+          ]
+        },
         {
           "tag": "半导体材料",
           "theme_path": []
@@ -1781,6 +2843,8 @@
       ],
       "merged_tags": [
         "光刻基板",
+        "Mask Blank",
+        "光掩膜基板",
         "光刻机",
         "先进制程",
         "云・模型・应用"
@@ -1792,6 +2856,22 @@
             "2. 半导体材料",
             "光刻基板",
             "光刻基板"
+          ]
+        },
+        {
+          "tag": "Mask Blank",
+          "theme_path": [
+            "2. 半导体材料",
+            "光刻基板",
+            "Mask Blank"
+          ]
+        },
+        {
+          "tag": "光掩膜基板",
+          "theme_path": [
+            "2. 半导体材料",
+            "光刻基板",
+            "光掩膜基板"
           ]
         },
         {
@@ -1839,12 +2919,30 @@
         "先进封装"
       ],
       "merged_tags": [
+        "高纯化学品",
+        "湿电子化学品",
         "半导体材料",
         "晶圆制造",
         "先进制程",
         "先进封装"
       ],
       "tag_themes": [
+        {
+          "tag": "高纯化学品",
+          "theme_path": [
+            "2. 半导体材料",
+            "高纯化学品",
+            "高纯化学品"
+          ]
+        },
+        {
+          "tag": "湿电子化学品",
+          "theme_path": [
+            "2. 半导体材料",
+            "高纯化学品",
+            "湿电子化学品"
+          ]
+        },
         {
           "tag": "半导体材料",
           "theme_path": []
@@ -1892,6 +2990,10 @@
       ],
       "merged_tags": [
         "硅晶圆",
+        "SOI硅片",
+        "外延片",
+        "抛光片",
+        "退火片",
         "国产替代",
         "先进制程",
         "晶圆制造",
@@ -1904,6 +3006,38 @@
             "2. 半导体材料",
             "硅晶圆",
             "硅晶圆"
+          ]
+        },
+        {
+          "tag": "SOI硅片",
+          "theme_path": [
+            "2. 半导体材料",
+            "硅晶圆",
+            "SOI硅片"
+          ]
+        },
+        {
+          "tag": "外延片",
+          "theme_path": [
+            "2. 半导体材料",
+            "硅晶圆",
+            "外延片"
+          ]
+        },
+        {
+          "tag": "抛光片",
+          "theme_path": [
+            "2. 半导体材料",
+            "硅晶圆",
+            "抛光片"
+          ]
+        },
+        {
+          "tag": "退火片",
+          "theme_path": [
+            "2. 半导体材料",
+            "硅晶圆",
+            "退火片"
           ]
         },
         {
@@ -1958,7 +3092,14 @@
       ],
       "merged_tags": [
         "硅晶圆",
+        "SOI硅片",
+        "外延片",
+        "抛光片",
+        "退火片",
         "光刻胶",
+        "EUV光刻胶",
+        "ArF光刻胶",
+        "KrF光刻胶",
         "半导体材料",
         "先进制程",
         "光刻机",
@@ -1974,11 +3115,67 @@
           ]
         },
         {
+          "tag": "SOI硅片",
+          "theme_path": [
+            "2. 半导体材料",
+            "硅晶圆",
+            "SOI硅片"
+          ]
+        },
+        {
+          "tag": "外延片",
+          "theme_path": [
+            "2. 半导体材料",
+            "硅晶圆",
+            "外延片"
+          ]
+        },
+        {
+          "tag": "抛光片",
+          "theme_path": [
+            "2. 半导体材料",
+            "硅晶圆",
+            "抛光片"
+          ]
+        },
+        {
+          "tag": "退火片",
+          "theme_path": [
+            "2. 半导体材料",
+            "硅晶圆",
+            "退火片"
+          ]
+        },
+        {
           "tag": "光刻胶",
           "theme_path": [
             "2. 半导体材料",
             "光刻胶",
             "光刻胶"
+          ]
+        },
+        {
+          "tag": "EUV光刻胶",
+          "theme_path": [
+            "2. 半导体材料",
+            "光刻胶",
+            "EUV光刻胶"
+          ]
+        },
+        {
+          "tag": "ArF光刻胶",
+          "theme_path": [
+            "2. 半导体材料",
+            "光刻胶",
+            "ArF光刻胶"
+          ]
+        },
+        {
+          "tag": "KrF光刻胶",
+          "theme_path": [
+            "2. 半导体材料",
+            "光刻胶",
+            "KrF光刻胶"
           ]
         },
         {
@@ -2031,17 +3228,24 @@
         "AI"
       ],
       "merged_tags": [
-        "半导体材料",
+        "靶材",
         "第三代半导体",
         "高纯材料",
-        "高带宽内存",
+        "HBM",
+        "HBM3",
+        "HBM3E",
+        "HBM4",
         "先进封装",
         "云・模型・应用"
       ],
       "tag_themes": [
         {
-          "tag": "半导体材料",
-          "theme_path": []
+          "tag": "靶材",
+          "theme_path": [
+            "2. 半导体材料",
+            "靶材",
+            "靶材"
+          ]
         },
         {
           "tag": "第三代半导体",
@@ -2056,8 +3260,36 @@
           "theme_path": []
         },
         {
-          "tag": "高带宽内存",
-          "theme_path": []
+          "tag": "HBM",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM"
+          ]
+        },
+        {
+          "tag": "HBM3",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM3"
+          ]
+        },
+        {
+          "tag": "HBM3E",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM3E"
+          ]
+        },
+        {
+          "tag": "HBM4",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM4"
+          ]
         },
         {
           "tag": "先进封装",
@@ -2097,6 +3329,10 @@
       ],
       "merged_tags": [
         "硅晶圆",
+        "SOI硅片",
+        "外延片",
+        "抛光片",
+        "退火片",
         "先进制程",
         "晶圆制造",
         "云・模型・应用"
@@ -2108,6 +3344,38 @@
             "2. 半导体材料",
             "硅晶圆",
             "硅晶圆"
+          ]
+        },
+        {
+          "tag": "SOI硅片",
+          "theme_path": [
+            "2. 半导体材料",
+            "硅晶圆",
+            "SOI硅片"
+          ]
+        },
+        {
+          "tag": "外延片",
+          "theme_path": [
+            "2. 半导体材料",
+            "硅晶圆",
+            "外延片"
+          ]
+        },
+        {
+          "tag": "抛光片",
+          "theme_path": [
+            "2. 半导体材料",
+            "硅晶圆",
+            "抛光片"
+          ]
+        },
+        {
+          "tag": "退火片",
+          "theme_path": [
+            "2. 半导体材料",
+            "硅晶圆",
+            "退火片"
           ]
         },
         {
@@ -2153,6 +3421,9 @@
       ],
       "merged_tags": [
         "光刻胶",
+        "EUV光刻胶",
+        "ArF光刻胶",
+        "KrF光刻胶",
         "光刻机",
         "先进制程",
         "云・模型・应用"
@@ -2164,6 +3435,30 @@
             "2. 半导体材料",
             "光刻胶",
             "光刻胶"
+          ]
+        },
+        {
+          "tag": "EUV光刻胶",
+          "theme_path": [
+            "2. 半导体材料",
+            "光刻胶",
+            "EUV光刻胶"
+          ]
+        },
+        {
+          "tag": "ArF光刻胶",
+          "theme_path": [
+            "2. 半导体材料",
+            "光刻胶",
+            "ArF光刻胶"
+          ]
+        },
+        {
+          "tag": "KrF光刻胶",
+          "theme_path": [
+            "2. 半导体材料",
+            "光刻胶",
+            "KrF光刻胶"
           ]
         },
         {
@@ -2330,6 +3625,8 @@
       ],
       "merged_tags": [
         "光刻基板",
+        "Mask Blank",
+        "光掩膜基板",
         "光刻机",
         "先进制程",
         "云・模型・应用"
@@ -2341,6 +3638,22 @@
             "2. 半导体材料",
             "光刻基板",
             "光刻基板"
+          ]
+        },
+        {
+          "tag": "Mask Blank",
+          "theme_path": [
+            "2. 半导体材料",
+            "光刻基板",
+            "Mask Blank"
+          ]
+        },
+        {
+          "tag": "光掩膜基板",
+          "theme_path": [
+            "2. 半导体材料",
+            "光刻基板",
+            "光掩膜基板"
           ]
         },
         {
@@ -2388,12 +3701,30 @@
         "AI"
       ],
       "merged_tags": [
+        "高纯化学品",
+        "湿电子化学品",
         "半导体材料",
         "晶圆制造",
         "先进制程",
         "云・模型・应用"
       ],
       "tag_themes": [
+        {
+          "tag": "高纯化学品",
+          "theme_path": [
+            "2. 半导体材料",
+            "高纯化学品",
+            "高纯化学品"
+          ]
+        },
+        {
+          "tag": "湿电子化学品",
+          "theme_path": [
+            "2. 半导体材料",
+            "高纯化学品",
+            "湿电子化学品"
+          ]
+        },
         {
           "tag": "半导体材料",
           "theme_path": []
@@ -2440,12 +3771,30 @@
         "AI"
       ],
       "merged_tags": [
+        "电子特气",
+        "工业气体",
         "半导体材料",
         "晶圆制造",
         "先进制程",
         "云・模型・应用"
       ],
       "tag_themes": [
+        {
+          "tag": "电子特气",
+          "theme_path": [
+            "2. 半导体材料",
+            "电子特气",
+            "电子特气"
+          ]
+        },
+        {
+          "tag": "工业气体",
+          "theme_path": [
+            "2. 半导体材料",
+            "电子特气",
+            "工业气体"
+          ]
+        },
         {
           "tag": "半导体材料",
           "theme_path": []
@@ -2495,6 +3844,9 @@
       "merged_tags": [
         "CMP浆料",
         "光刻胶",
+        "EUV光刻胶",
+        "ArF光刻胶",
+        "KrF光刻胶",
         "半导体材料",
         "先进制程",
         "先进封装",
@@ -2515,6 +3867,30 @@
             "2. 半导体材料",
             "光刻胶",
             "光刻胶"
+          ]
+        },
+        {
+          "tag": "EUV光刻胶",
+          "theme_path": [
+            "2. 半导体材料",
+            "光刻胶",
+            "EUV光刻胶"
+          ]
+        },
+        {
+          "tag": "ArF光刻胶",
+          "theme_path": [
+            "2. 半导体材料",
+            "光刻胶",
+            "ArF光刻胶"
+          ]
+        },
+        {
+          "tag": "KrF光刻胶",
+          "theme_path": [
+            "2. 半导体材料",
+            "光刻胶",
+            "KrF光刻胶"
           ]
         },
         {
@@ -2567,7 +3943,10 @@
         "CMP抛光垫",
         "晶圆制造",
         "先进制程",
-        "高带宽内存"
+        "HBM",
+        "HBM3",
+        "HBM3E",
+        "HBM4"
       ],
       "tag_themes": [
         {
@@ -2595,8 +3974,36 @@
           "theme_path": []
         },
         {
-          "tag": "高带宽内存",
-          "theme_path": []
+          "tag": "HBM",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM"
+          ]
+        },
+        {
+          "tag": "HBM3",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM3"
+          ]
+        },
+        {
+          "tag": "HBM3E",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM3E"
+          ]
+        },
+        {
+          "tag": "HBM4",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM4"
+          ]
         }
       ],
       "market_type": "日股",
@@ -2629,8 +4036,17 @@
       ],
       "merged_tags": [
         "封装基板",
+        "ABF载板",
+        "BT载板",
+        "FC-BGA",
+        "TGV",
+        "玻璃基板",
+        "Low CTE玻纤布",
         "先进封装",
-        "高带宽内存",
+        "HBM",
+        "HBM3",
+        "HBM3E",
+        "HBM4",
         "云・模型・应用"
       ],
       "tag_themes": [
@@ -2643,12 +4059,88 @@
           ]
         },
         {
+          "tag": "ABF载板",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "ABF载板"
+          ]
+        },
+        {
+          "tag": "BT载板",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "BT载板"
+          ]
+        },
+        {
+          "tag": "FC-BGA",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "FC-BGA"
+          ]
+        },
+        {
+          "tag": "TGV",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "TGV"
+          ]
+        },
+        {
+          "tag": "玻璃基板",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "玻璃基板"
+          ]
+        },
+        {
+          "tag": "Low CTE玻纤布",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "Low CTE玻纤布"
+          ]
+        },
+        {
           "tag": "先进封装",
           "theme_path": []
         },
         {
-          "tag": "高带宽内存",
-          "theme_path": []
+          "tag": "HBM",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM"
+          ]
+        },
+        {
+          "tag": "HBM3",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM3"
+          ]
+        },
+        {
+          "tag": "HBM3E",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM3E"
+          ]
+        },
+        {
+          "tag": "HBM4",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM4"
+          ]
         },
         {
           "tag": "云・模型・应用",
@@ -2686,7 +4178,9 @@
       "merged_tags": [
         "新材料",
         "半导体材料",
-        "先进封装",
+        "封装材料",
+        "FC-BGA",
+        "ABF",
         "功率半导体",
         "云・模型・应用"
       ],
@@ -2700,8 +4194,28 @@
           "theme_path": []
         },
         {
-          "tag": "先进封装",
-          "theme_path": []
+          "tag": "封装材料",
+          "theme_path": [
+            "5. 先进封装",
+            "封装材料",
+            "封装材料"
+          ]
+        },
+        {
+          "tag": "FC-BGA",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "FC-BGA"
+          ]
+        },
+        {
+          "tag": "ABF",
+          "theme_path": [
+            "5. 先进封装",
+            "封装材料",
+            "ABF"
+          ]
         },
         {
           "tag": "功率半导体",
@@ -2740,15 +4254,19 @@
         "新能源汽车"
       ],
       "merged_tags": [
-        "半导体材料",
+        "引线框架",
         "功率半导体",
         "半导体封装",
         "新能源汽车"
       ],
       "tag_themes": [
         {
-          "tag": "半导体材料",
-          "theme_path": []
+          "tag": "引线框架",
+          "theme_path": [
+            "2. 半导体材料",
+            "引线框架",
+            "引线框架"
+          ]
         },
         {
           "tag": "功率半导体",
@@ -2793,16 +4311,32 @@
         "AI"
       ],
       "merged_tags": [
-        "半导体材料",
+        "焊球",
+        "焊料",
         "先进封装",
         "封装基板",
-        "高带宽内存",
+        "HBM",
+        "HBM3",
+        "HBM3E",
+        "HBM4",
         "云・模型・应用"
       ],
       "tag_themes": [
         {
-          "tag": "半导体材料",
-          "theme_path": []
+          "tag": "焊球",
+          "theme_path": [
+            "2. 半导体材料",
+            "焊球",
+            "焊球"
+          ]
+        },
+        {
+          "tag": "焊料",
+          "theme_path": [
+            "2. 半导体材料",
+            "焊料",
+            "焊料"
+          ]
         },
         {
           "tag": "先进封装",
@@ -2817,8 +4351,36 @@
           ]
         },
         {
-          "tag": "高带宽内存",
-          "theme_path": []
+          "tag": "HBM",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM"
+          ]
+        },
+        {
+          "tag": "HBM3",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM3"
+          ]
+        },
+        {
+          "tag": "HBM3E",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM3E"
+          ]
+        },
+        {
+          "tag": "HBM4",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM4"
+          ]
         },
         {
           "tag": "云・模型・应用",
@@ -2855,9 +4417,25 @@
       ],
       "merged_tags": [
         "氮化镓 (GaN)",
-        "半导体材料",
+        "高纯化学品",
+        "湿电子化学品",
         "光刻胶",
+        "EUV光刻胶",
+        "ArF光刻胶",
+        "KrF光刻胶",
+        "SiC",
+        "碳化硅",
+        "SiC衬底",
+        "碳化硅衬底",
         "第三代半导体",
+        "GaN",
+        "氮化镓",
+        "GaN衬底",
+        "GaAs",
+        "砷化镓",
+        "InP",
+        "磷化铟",
+        "化合物半导体",
         "先进制程"
       ],
       "tag_themes": [
@@ -2866,8 +4444,20 @@
           "theme_path": []
         },
         {
-          "tag": "半导体材料",
-          "theme_path": []
+          "tag": "高纯化学品",
+          "theme_path": [
+            "2. 半导体材料",
+            "高纯化学品",
+            "高纯化学品"
+          ]
+        },
+        {
+          "tag": "湿电子化学品",
+          "theme_path": [
+            "2. 半导体材料",
+            "高纯化学品",
+            "湿电子化学品"
+          ]
         },
         {
           "tag": "光刻胶",
@@ -2878,11 +4468,131 @@
           ]
         },
         {
+          "tag": "EUV光刻胶",
+          "theme_path": [
+            "2. 半导体材料",
+            "光刻胶",
+            "EUV光刻胶"
+          ]
+        },
+        {
+          "tag": "ArF光刻胶",
+          "theme_path": [
+            "2. 半导体材料",
+            "光刻胶",
+            "ArF光刻胶"
+          ]
+        },
+        {
+          "tag": "KrF光刻胶",
+          "theme_path": [
+            "2. 半导体材料",
+            "光刻胶",
+            "KrF光刻胶"
+          ]
+        },
+        {
+          "tag": "SiC",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "SiC"
+          ]
+        },
+        {
+          "tag": "碳化硅",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "碳化硅"
+          ]
+        },
+        {
+          "tag": "SiC衬底",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "SiC衬底"
+          ]
+        },
+        {
+          "tag": "碳化硅衬底",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "碳化硅衬底"
+          ]
+        },
+        {
           "tag": "第三代半导体",
           "theme_path": [
             "2. 半导体材料",
             "第三代半导体",
             "第三代半导体"
+          ]
+        },
+        {
+          "tag": "GaN",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "GaN"
+          ]
+        },
+        {
+          "tag": "氮化镓",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "氮化镓"
+          ]
+        },
+        {
+          "tag": "GaN衬底",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "GaN衬底"
+          ]
+        },
+        {
+          "tag": "GaAs",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "GaAs"
+          ]
+        },
+        {
+          "tag": "砷化镓",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "砷化镓"
+          ]
+        },
+        {
+          "tag": "InP",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "InP"
+          ]
+        },
+        {
+          "tag": "磷化铟",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "磷化铟"
+          ]
+        },
+        {
+          "tag": "化合物半导体",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "化合物半导体"
           ]
         },
         {
@@ -2922,9 +4632,24 @@
       "merged_tags": [
         "氮化镓 (GaN)",
         "光刻胶",
-        "半导体材料",
+        "EUV光刻胶",
+        "ArF光刻胶",
+        "KrF光刻胶",
+        "靶材",
         "高纯氧化铝",
+        "SiC",
+        "碳化硅",
+        "SiC衬底",
+        "碳化硅衬底",
         "第三代半导体",
+        "GaN",
+        "氮化镓",
+        "GaN衬底",
+        "GaAs",
+        "砷化镓",
+        "InP",
+        "磷化铟",
+        "化合物半导体",
         "云・模型・应用"
       ],
       "tag_themes": [
@@ -2941,12 +4666,72 @@
           ]
         },
         {
-          "tag": "半导体材料",
-          "theme_path": []
+          "tag": "EUV光刻胶",
+          "theme_path": [
+            "2. 半导体材料",
+            "光刻胶",
+            "EUV光刻胶"
+          ]
+        },
+        {
+          "tag": "ArF光刻胶",
+          "theme_path": [
+            "2. 半导体材料",
+            "光刻胶",
+            "ArF光刻胶"
+          ]
+        },
+        {
+          "tag": "KrF光刻胶",
+          "theme_path": [
+            "2. 半导体材料",
+            "光刻胶",
+            "KrF光刻胶"
+          ]
+        },
+        {
+          "tag": "靶材",
+          "theme_path": [
+            "2. 半导体材料",
+            "靶材",
+            "靶材"
+          ]
         },
         {
           "tag": "高纯氧化铝",
           "theme_path": []
+        },
+        {
+          "tag": "SiC",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "SiC"
+          ]
+        },
+        {
+          "tag": "碳化硅",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "碳化硅"
+          ]
+        },
+        {
+          "tag": "SiC衬底",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "SiC衬底"
+          ]
+        },
+        {
+          "tag": "碳化硅衬底",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "碳化硅衬底"
+          ]
         },
         {
           "tag": "第三代半导体",
@@ -2954,6 +4739,70 @@
             "2. 半导体材料",
             "第三代半导体",
             "第三代半导体"
+          ]
+        },
+        {
+          "tag": "GaN",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "GaN"
+          ]
+        },
+        {
+          "tag": "氮化镓",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "氮化镓"
+          ]
+        },
+        {
+          "tag": "GaN衬底",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "GaN衬底"
+          ]
+        },
+        {
+          "tag": "GaAs",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "GaAs"
+          ]
+        },
+        {
+          "tag": "砷化镓",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "砷化镓"
+          ]
+        },
+        {
+          "tag": "InP",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "InP"
+          ]
+        },
+        {
+          "tag": "磷化铟",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "磷化铟"
+          ]
+        },
+        {
+          "tag": "化合物半导体",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "化合物半导体"
           ]
         },
         {
@@ -3059,6 +4908,18 @@
       "merged_tags": [
         "氮化镓 (GaN)",
         "第三代半导体",
+        "SiC",
+        "碳化硅",
+        "SiC衬底",
+        "碳化硅衬底",
+        "GaN",
+        "氮化镓",
+        "GaN衬底",
+        "GaAs",
+        "砷化镓",
+        "InP",
+        "磷化铟",
+        "化合物半导体",
         "功率半导体",
         "新能源汽车"
       ],
@@ -3073,6 +4934,102 @@
             "2. 半导体材料",
             "第三代半导体",
             "第三代半导体"
+          ]
+        },
+        {
+          "tag": "SiC",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "SiC"
+          ]
+        },
+        {
+          "tag": "碳化硅",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "碳化硅"
+          ]
+        },
+        {
+          "tag": "SiC衬底",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "SiC衬底"
+          ]
+        },
+        {
+          "tag": "碳化硅衬底",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "碳化硅衬底"
+          ]
+        },
+        {
+          "tag": "GaN",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "GaN"
+          ]
+        },
+        {
+          "tag": "氮化镓",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "氮化镓"
+          ]
+        },
+        {
+          "tag": "GaN衬底",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "GaN衬底"
+          ]
+        },
+        {
+          "tag": "GaAs",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "GaAs"
+          ]
+        },
+        {
+          "tag": "砷化镓",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "砷化镓"
+          ]
+        },
+        {
+          "tag": "InP",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "InP"
+          ]
+        },
+        {
+          "tag": "磷化铟",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "磷化铟"
+          ]
+        },
+        {
+          "tag": "化合物半导体",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "化合物半导体"
           ]
         },
         {
@@ -3116,7 +5073,12 @@
       "merged_tags": [
         "先进封装",
         "半导体材料",
-        "高带宽内存",
+        "HBM",
+        "HBM3",
+        "HBM3E",
+        "HBM4",
+        "Chiplet",
+        "异构封装",
         "云・模型・应用"
       ],
       "tag_themes": [
@@ -3129,8 +5091,52 @@
           "theme_path": []
         },
         {
-          "tag": "高带宽内存",
-          "theme_path": []
+          "tag": "HBM",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM"
+          ]
+        },
+        {
+          "tag": "HBM3",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM3"
+          ]
+        },
+        {
+          "tag": "HBM3E",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM3E"
+          ]
+        },
+        {
+          "tag": "HBM4",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM4"
+          ]
+        },
+        {
+          "tag": "Chiplet",
+          "theme_path": [
+            "5. 先进封装",
+            "Chiplet",
+            "Chiplet"
+          ]
+        },
+        {
+          "tag": "异构封装",
+          "theme_path": [
+            "5. 先进封装",
+            "Chiplet",
+            "异构封装"
+          ]
         },
         {
           "tag": "云・模型・应用",
@@ -3167,16 +5173,32 @@
         "AI"
       ],
       "merged_tags": [
-        "半导体材料",
+        "导电胶",
+        "绝缘膜",
         "先进封装",
         "封装基板",
-        "高带宽内存",
+        "HBM",
+        "HBM3",
+        "HBM3E",
+        "HBM4",
         "云・模型・应用"
       ],
       "tag_themes": [
         {
-          "tag": "半导体材料",
-          "theme_path": []
+          "tag": "导电胶",
+          "theme_path": [
+            "2. 半导体材料",
+            "导电胶",
+            "导电胶"
+          ]
+        },
+        {
+          "tag": "绝缘膜",
+          "theme_path": [
+            "2. 半导体材料",
+            "绝缘膜",
+            "绝缘膜"
+          ]
         },
         {
           "tag": "先进封装",
@@ -3191,8 +5213,36 @@
           ]
         },
         {
-          "tag": "高带宽内存",
-          "theme_path": []
+          "tag": "HBM",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM"
+          ]
+        },
+        {
+          "tag": "HBM3",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM3"
+          ]
+        },
+        {
+          "tag": "HBM3E",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM3E"
+          ]
+        },
+        {
+          "tag": "HBM4",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM4"
+          ]
         },
         {
           "tag": "云・模型・应用",
@@ -3230,7 +5280,10 @@
       "merged_tags": [
         "封装基板",
         "先进封装",
-        "高带宽内存",
+        "HBM",
+        "HBM3",
+        "HBM3E",
+        "HBM4",
         "云・模型・应用"
       ],
       "tag_themes": [
@@ -3247,8 +5300,36 @@
           "theme_path": []
         },
         {
-          "tag": "高带宽内存",
-          "theme_path": []
+          "tag": "HBM",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM"
+          ]
+        },
+        {
+          "tag": "HBM3",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM3"
+          ]
+        },
+        {
+          "tag": "HBM3E",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM3E"
+          ]
+        },
+        {
+          "tag": "HBM4",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM4"
+          ]
         },
         {
           "tag": "云・模型・应用",
@@ -3637,7 +5718,29 @@
         "氮化镓 (GaN)",
         "碳化硅 (SiC)",
         "第三代半导体",
-        "光通信",
+        "光芯片",
+        "EML",
+        "VCSEL",
+        "DFB",
+        "CW Laser",
+        "光模块",
+        "800G",
+        "1.6T",
+        "相干光模块",
+        "光器件",
+        "FA组件",
+        "SiC",
+        "碳化硅",
+        "SiC衬底",
+        "碳化硅衬底",
+        "GaN",
+        "氮化镓",
+        "GaN衬底",
+        "GaAs",
+        "砷化镓",
+        "InP",
+        "磷化铟",
+        "化合物半导体",
         "IDM",
         "云・模型・应用"
       ],
@@ -3659,8 +5762,188 @@
           ]
         },
         {
-          "tag": "光通信",
-          "theme_path": []
+          "tag": "光芯片",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "光芯片"
+          ]
+        },
+        {
+          "tag": "EML",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "EML"
+          ]
+        },
+        {
+          "tag": "VCSEL",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "VCSEL"
+          ]
+        },
+        {
+          "tag": "DFB",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "DFB"
+          ]
+        },
+        {
+          "tag": "CW Laser",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "CW Laser"
+          ]
+        },
+        {
+          "tag": "光模块",
+          "theme_path": [
+            "7. 光通信",
+            "光模块",
+            "光模块"
+          ]
+        },
+        {
+          "tag": "800G",
+          "theme_path": [
+            "7. 光通信",
+            "光模块",
+            "800G"
+          ]
+        },
+        {
+          "tag": "1.6T",
+          "theme_path": [
+            "7. 光通信",
+            "光模块",
+            "1.6T"
+          ]
+        },
+        {
+          "tag": "相干光模块",
+          "theme_path": [
+            "7. 光通信",
+            "光模块",
+            "相干光模块"
+          ]
+        },
+        {
+          "tag": "光器件",
+          "theme_path": [
+            "7. 光通信",
+            "光模块",
+            "光器件"
+          ]
+        },
+        {
+          "tag": "FA组件",
+          "theme_path": [
+            "7. 光通信",
+            "光模块",
+            "FA组件"
+          ]
+        },
+        {
+          "tag": "SiC",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "SiC"
+          ]
+        },
+        {
+          "tag": "碳化硅",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "碳化硅"
+          ]
+        },
+        {
+          "tag": "SiC衬底",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "SiC衬底"
+          ]
+        },
+        {
+          "tag": "碳化硅衬底",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "碳化硅衬底"
+          ]
+        },
+        {
+          "tag": "GaN",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "GaN"
+          ]
+        },
+        {
+          "tag": "氮化镓",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "氮化镓"
+          ]
+        },
+        {
+          "tag": "GaN衬底",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "GaN衬底"
+          ]
+        },
+        {
+          "tag": "GaAs",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "GaAs"
+          ]
+        },
+        {
+          "tag": "砷化镓",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "砷化镓"
+          ]
+        },
+        {
+          "tag": "InP",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "InP"
+          ]
+        },
+        {
+          "tag": "磷化铟",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "磷化铟"
+          ]
+        },
+        {
+          "tag": "化合物半导体",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "化合物半导体"
+          ]
         },
         {
           "tag": "IDM",
@@ -3707,6 +5990,18 @@
       "merged_tags": [
         "碳化硅 (SiC)",
         "第三代半导体",
+        "SiC",
+        "碳化硅",
+        "SiC衬底",
+        "碳化硅衬底",
+        "GaN",
+        "氮化镓",
+        "GaN衬底",
+        "GaAs",
+        "砷化镓",
+        "InP",
+        "磷化铟",
+        "化合物半导体",
         "功率半导体",
         "新能源汽车",
         "云・模型・应用"
@@ -3722,6 +6017,102 @@
             "2. 半导体材料",
             "第三代半导体",
             "第三代半导体"
+          ]
+        },
+        {
+          "tag": "SiC",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "SiC"
+          ]
+        },
+        {
+          "tag": "碳化硅",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "碳化硅"
+          ]
+        },
+        {
+          "tag": "SiC衬底",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "SiC衬底"
+          ]
+        },
+        {
+          "tag": "碳化硅衬底",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "碳化硅衬底"
+          ]
+        },
+        {
+          "tag": "GaN",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "GaN"
+          ]
+        },
+        {
+          "tag": "氮化镓",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "氮化镓"
+          ]
+        },
+        {
+          "tag": "GaN衬底",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "GaN衬底"
+          ]
+        },
+        {
+          "tag": "GaAs",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "GaAs"
+          ]
+        },
+        {
+          "tag": "砷化镓",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "砷化镓"
+          ]
+        },
+        {
+          "tag": "InP",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "InP"
+          ]
+        },
+        {
+          "tag": "磷化铟",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "磷化铟"
+          ]
+        },
+        {
+          "tag": "化合物半导体",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "化合物半导体"
           ]
         },
         {
@@ -3766,6 +6157,12 @@
       "merged_tags": [
         "PCB",
         "封装基板",
+        "ABF载板",
+        "BT载板",
+        "FC-BGA",
+        "TGV",
+        "玻璃基板",
+        "Low CTE玻纤布",
         "散热片"
       ],
       "tag_themes": [
@@ -3779,6 +6176,54 @@
             "2. 半导体材料",
             "封装基板",
             "封装基板"
+          ]
+        },
+        {
+          "tag": "ABF载板",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "ABF载板"
+          ]
+        },
+        {
+          "tag": "BT载板",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "BT载板"
+          ]
+        },
+        {
+          "tag": "FC-BGA",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "FC-BGA"
+          ]
+        },
+        {
+          "tag": "TGV",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "TGV"
+          ]
+        },
+        {
+          "tag": "玻璃基板",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "玻璃基板"
+          ]
+        },
+        {
+          "tag": "Low CTE玻纤布",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "Low CTE玻纤布"
           ]
         },
         {
@@ -3817,7 +6262,13 @@
       ],
       "merged_tags": [
         "PCB",
-        "封装基板"
+        "封装基板",
+        "ABF载板",
+        "BT载板",
+        "FC-BGA",
+        "TGV",
+        "玻璃基板",
+        "Low CTE玻纤布"
       ],
       "tag_themes": [
         {
@@ -3830,6 +6281,54 @@
             "2. 半导体材料",
             "封装基板",
             "封装基板"
+          ]
+        },
+        {
+          "tag": "ABF载板",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "ABF载板"
+          ]
+        },
+        {
+          "tag": "BT载板",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "BT载板"
+          ]
+        },
+        {
+          "tag": "FC-BGA",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "FC-BGA"
+          ]
+        },
+        {
+          "tag": "TGV",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "TGV"
+          ]
+        },
+        {
+          "tag": "玻璃基板",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "玻璃基板"
+          ]
+        },
+        {
+          "tag": "Low CTE玻纤布",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "Low CTE玻纤布"
           ]
         }
       ],
@@ -3865,8 +6364,21 @@
       "merged_tags": [
         "碳化硅 (SiC)",
         "长晶炉",
+        "单晶炉",
         "半导体设备",
+        "SiC",
+        "碳化硅",
+        "SiC衬底",
+        "碳化硅衬底",
         "第三代半导体",
+        "GaN",
+        "氮化镓",
+        "GaN衬底",
+        "GaAs",
+        "砷化镓",
+        "InP",
+        "磷化铟",
+        "化合物半导体",
         "国产替代"
       ],
       "tag_themes": [
@@ -3883,8 +6395,48 @@
           ]
         },
         {
+          "tag": "单晶炉",
+          "theme_path": [
+            "1. 半导体设备",
+            "长晶炉",
+            "单晶炉"
+          ]
+        },
+        {
           "tag": "半导体设备",
           "theme_path": []
+        },
+        {
+          "tag": "SiC",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "SiC"
+          ]
+        },
+        {
+          "tag": "碳化硅",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "碳化硅"
+          ]
+        },
+        {
+          "tag": "SiC衬底",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "SiC衬底"
+          ]
+        },
+        {
+          "tag": "碳化硅衬底",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "碳化硅衬底"
+          ]
         },
         {
           "tag": "第三代半导体",
@@ -3892,6 +6444,70 @@
             "2. 半导体材料",
             "第三代半导体",
             "第三代半导体"
+          ]
+        },
+        {
+          "tag": "GaN",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "GaN"
+          ]
+        },
+        {
+          "tag": "氮化镓",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "氮化镓"
+          ]
+        },
+        {
+          "tag": "GaN衬底",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "GaN衬底"
+          ]
+        },
+        {
+          "tag": "GaAs",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "GaAs"
+          ]
+        },
+        {
+          "tag": "砷化镓",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "砷化镓"
+          ]
+        },
+        {
+          "tag": "InP",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "InP"
+          ]
+        },
+        {
+          "tag": "磷化铟",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "磷化铟"
+          ]
+        },
+        {
+          "tag": "化合物半导体",
+          "theme_path": [
+            "2. 半导体材料",
+            "第三代半导体",
+            "化合物半导体"
           ]
         },
         {
@@ -3929,9 +6545,63 @@
         "EUV"
       ],
       "merged_tags": [
+        "DUV",
+        "EUV",
+        "NIL",
+        "纳米压印",
+        "ArF",
+        "KrF",
         "光刻机"
       ],
       "tag_themes": [
+        {
+          "tag": "DUV",
+          "theme_path": [
+            "1. 半导体设备",
+            "光刻机",
+            "DUV"
+          ]
+        },
+        {
+          "tag": "EUV",
+          "theme_path": [
+            "1. 半导体设备",
+            "光刻机",
+            "EUV"
+          ]
+        },
+        {
+          "tag": "NIL",
+          "theme_path": [
+            "1. 半导体设备",
+            "光刻机",
+            "NIL"
+          ]
+        },
+        {
+          "tag": "纳米压印",
+          "theme_path": [
+            "1. 半导体设备",
+            "光刻机",
+            "纳米压印"
+          ]
+        },
+        {
+          "tag": "ArF",
+          "theme_path": [
+            "1. 半导体设备",
+            "光刻机",
+            "ArF"
+          ]
+        },
+        {
+          "tag": "KrF",
+          "theme_path": [
+            "1. 半导体设备",
+            "光刻机",
+            "KrF"
+          ]
+        },
         {
           "tag": "光刻机",
           "theme_path": [
@@ -4249,7 +6919,10 @@
       ],
       "merged_tags": [
         "测试设备",
-        "高带宽内存"
+        "HBM",
+        "HBM3",
+        "HBM3E",
+        "HBM4"
       ],
       "tag_themes": [
         {
@@ -4257,8 +6930,36 @@
           "theme_path": []
         },
         {
-          "tag": "高带宽内存",
-          "theme_path": []
+          "tag": "HBM",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM"
+          ]
+        },
+        {
+          "tag": "HBM3",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM3"
+          ]
+        },
+        {
+          "tag": "HBM3E",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM3E"
+          ]
+        },
+        {
+          "tag": "HBM4",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM4"
+          ]
         }
       ],
       "market_type": "日股",
@@ -4843,7 +7544,10 @@
       ],
       "merged_tags": [
         "检测设备",
-        "高带宽内存"
+        "HBM",
+        "HBM3",
+        "HBM3E",
+        "HBM4"
       ],
       "tag_themes": [
         {
@@ -4854,8 +7558,36 @@
           ]
         },
         {
-          "tag": "高带宽内存",
-          "theme_path": []
+          "tag": "HBM",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM"
+          ]
+        },
+        {
+          "tag": "HBM3",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM3"
+          ]
+        },
+        {
+          "tag": "HBM3E",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM3E"
+          ]
+        },
+        {
+          "tag": "HBM4",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM4"
+          ]
         }
       ],
       "market_type": "日股",
@@ -4884,9 +7616,45 @@
         "1.6T"
       ],
       "merged_tags": [
+        "光通信测试",
+        "TFLN",
+        "波分复用",
+        "EDFA",
         "光通信"
       ],
       "tag_themes": [
+        {
+          "tag": "光通信测试",
+          "theme_path": [
+            "7. 光通信",
+            "光通信测试",
+            "光通信测试"
+          ]
+        },
+        {
+          "tag": "TFLN",
+          "theme_path": [
+            "7. 光通信",
+            "光通信测试",
+            "TFLN"
+          ]
+        },
+        {
+          "tag": "波分复用",
+          "theme_path": [
+            "7. 光通信",
+            "光通信测试",
+            "波分复用"
+          ]
+        },
+        {
+          "tag": "EDFA",
+          "theme_path": [
+            "7. 光通信",
+            "光通信测试",
+            "EDFA"
+          ]
+        },
         {
           "tag": "光通信",
           "theme_path": []
@@ -5116,12 +7884,57 @@
         "3D封装"
       ],
       "merged_tags": [
-        "先进封装"
+        "Chiplet",
+        "异构封装",
+        "先进封装",
+        "3D",
+        "3D封装",
+        "Hybrid Bonding"
       ],
       "tag_themes": [
         {
+          "tag": "Chiplet",
+          "theme_path": [
+            "5. 先进封装",
+            "Chiplet",
+            "Chiplet"
+          ]
+        },
+        {
+          "tag": "异构封装",
+          "theme_path": [
+            "5. 先进封装",
+            "Chiplet",
+            "异构封装"
+          ]
+        },
+        {
           "tag": "先进封装",
           "theme_path": []
+        },
+        {
+          "tag": "3D",
+          "theme_path": [
+            "5. 先进封装",
+            "3D封装",
+            "3D"
+          ]
+        },
+        {
+          "tag": "3D封装",
+          "theme_path": [
+            "5. 先进封装",
+            "3D封装",
+            "3D封装"
+          ]
+        },
+        {
+          "tag": "Hybrid Bonding",
+          "theme_path": [
+            "5. 先进封装",
+            "3D封装",
+            "Hybrid Bonding"
+          ]
         }
       ],
       "market_type": "美股",
@@ -5150,12 +7963,30 @@
         "Chiplet"
       ],
       "merged_tags": [
-        "先进封装"
+        "先进封装",
+        "Chiplet",
+        "异构封装"
       ],
       "tag_themes": [
         {
           "tag": "先进封装",
           "theme_path": []
+        },
+        {
+          "tag": "Chiplet",
+          "theme_path": [
+            "5. 先进封装",
+            "Chiplet",
+            "Chiplet"
+          ]
+        },
+        {
+          "tag": "异构封装",
+          "theme_path": [
+            "5. 先进封装",
+            "Chiplet",
+            "异构封装"
+          ]
         }
       ],
       "market_type": "A股",
@@ -5224,13 +8055,107 @@
         "激光器"
       ],
       "merged_tags": [
-        "光通信",
+        "光模块",
+        "800G",
+        "1.6T",
+        "相干光模块",
+        "光器件",
+        "FA组件",
+        "光芯片",
+        "EML",
+        "VCSEL",
+        "DFB",
+        "CW Laser",
         "激光器"
       ],
       "tag_themes": [
         {
-          "tag": "光通信",
-          "theme_path": []
+          "tag": "光模块",
+          "theme_path": [
+            "7. 光通信",
+            "光模块",
+            "光模块"
+          ]
+        },
+        {
+          "tag": "800G",
+          "theme_path": [
+            "7. 光通信",
+            "光模块",
+            "800G"
+          ]
+        },
+        {
+          "tag": "1.6T",
+          "theme_path": [
+            "7. 光通信",
+            "光模块",
+            "1.6T"
+          ]
+        },
+        {
+          "tag": "相干光模块",
+          "theme_path": [
+            "7. 光通信",
+            "光模块",
+            "相干光模块"
+          ]
+        },
+        {
+          "tag": "光器件",
+          "theme_path": [
+            "7. 光通信",
+            "光模块",
+            "光器件"
+          ]
+        },
+        {
+          "tag": "FA组件",
+          "theme_path": [
+            "7. 光通信",
+            "光模块",
+            "FA组件"
+          ]
+        },
+        {
+          "tag": "光芯片",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "光芯片"
+          ]
+        },
+        {
+          "tag": "EML",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "EML"
+          ]
+        },
+        {
+          "tag": "VCSEL",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "VCSEL"
+          ]
+        },
+        {
+          "tag": "DFB",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "DFB"
+          ]
+        },
+        {
+          "tag": "CW Laser",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "CW Laser"
+          ]
         },
         {
           "tag": "激光器",
@@ -5264,9 +8189,54 @@
         "CPO"
       ],
       "merged_tags": [
+        "光芯片",
+        "EML",
+        "VCSEL",
+        "DFB",
+        "CW Laser",
         "光通信"
       ],
       "tag_themes": [
+        {
+          "tag": "光芯片",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "光芯片"
+          ]
+        },
+        {
+          "tag": "EML",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "EML"
+          ]
+        },
+        {
+          "tag": "VCSEL",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "VCSEL"
+          ]
+        },
+        {
+          "tag": "DFB",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "DFB"
+          ]
+        },
+        {
+          "tag": "CW Laser",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "CW Laser"
+          ]
+        },
         {
           "tag": "光通信",
           "theme_path": []
@@ -5298,9 +8268,54 @@
         "EML"
       ],
       "merged_tags": [
+        "光芯片",
+        "EML",
+        "VCSEL",
+        "DFB",
+        "CW Laser",
         "光通信"
       ],
       "tag_themes": [
+        {
+          "tag": "光芯片",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "光芯片"
+          ]
+        },
+        {
+          "tag": "EML",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "EML"
+          ]
+        },
+        {
+          "tag": "VCSEL",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "VCSEL"
+          ]
+        },
+        {
+          "tag": "DFB",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "DFB"
+          ]
+        },
+        {
+          "tag": "CW Laser",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "CW Laser"
+          ]
+        },
         {
           "tag": "光通信",
           "theme_path": []
@@ -5332,9 +8347,45 @@
         "海缆"
       ],
       "merged_tags": [
+        "光纤光缆",
+        "光连接器",
+        "数据中心布线",
+        "海缆",
         "光通信"
       ],
       "tag_themes": [
+        {
+          "tag": "光纤光缆",
+          "theme_path": [
+            "7. 光通信",
+            "光纤光缆",
+            "光纤光缆"
+          ]
+        },
+        {
+          "tag": "光连接器",
+          "theme_path": [
+            "7. 光通信",
+            "光纤光缆",
+            "光连接器"
+          ]
+        },
+        {
+          "tag": "数据中心布线",
+          "theme_path": [
+            "7. 光通信",
+            "光纤光缆",
+            "数据中心布线"
+          ]
+        },
+        {
+          "tag": "海缆",
+          "theme_path": [
+            "7. 光通信",
+            "光纤光缆",
+            "海缆"
+          ]
+        },
         {
           "tag": "光通信",
           "theme_path": []
@@ -5367,10 +8418,46 @@
         "液冷"
       ],
       "merged_tags": [
+        "光纤光缆",
+        "光连接器",
+        "数据中心布线",
+        "海缆",
         "光通信",
         "电力・液冷・数据中心"
       ],
       "tag_themes": [
+        {
+          "tag": "光纤光缆",
+          "theme_path": [
+            "7. 光通信",
+            "光纤光缆",
+            "光纤光缆"
+          ]
+        },
+        {
+          "tag": "光连接器",
+          "theme_path": [
+            "7. 光通信",
+            "光纤光缆",
+            "光连接器"
+          ]
+        },
+        {
+          "tag": "数据中心布线",
+          "theme_path": [
+            "7. 光通信",
+            "光纤光缆",
+            "数据中心布线"
+          ]
+        },
+        {
+          "tag": "海缆",
+          "theme_path": [
+            "7. 光通信",
+            "光纤光缆",
+            "海缆"
+          ]
+        },
         {
           "tag": "光通信",
           "theme_path": []
@@ -5406,13 +8493,44 @@
         "高速连接器"
       ],
       "merged_tags": [
-        "光通信",
+        "光纤光缆",
+        "光连接器",
+        "数据中心布线",
+        "海缆",
         "网络互联"
       ],
       "tag_themes": [
         {
-          "tag": "光通信",
-          "theme_path": []
+          "tag": "光纤光缆",
+          "theme_path": [
+            "7. 光通信",
+            "光纤光缆",
+            "光纤光缆"
+          ]
+        },
+        {
+          "tag": "光连接器",
+          "theme_path": [
+            "7. 光通信",
+            "光纤光缆",
+            "光连接器"
+          ]
+        },
+        {
+          "tag": "数据中心布线",
+          "theme_path": [
+            "7. 光通信",
+            "光纤光缆",
+            "数据中心布线"
+          ]
+        },
+        {
+          "tag": "海缆",
+          "theme_path": [
+            "7. 光通信",
+            "光纤光缆",
+            "海缆"
+          ]
         },
         {
           "tag": "网络互联",
@@ -5445,9 +8563,45 @@
         "数据中心布线"
       ],
       "merged_tags": [
+        "光纤光缆",
+        "光连接器",
+        "数据中心布线",
+        "海缆",
         "光通信"
       ],
       "tag_themes": [
+        {
+          "tag": "光纤光缆",
+          "theme_path": [
+            "7. 光通信",
+            "光纤光缆",
+            "光纤光缆"
+          ]
+        },
+        {
+          "tag": "光连接器",
+          "theme_path": [
+            "7. 光通信",
+            "光纤光缆",
+            "光连接器"
+          ]
+        },
+        {
+          "tag": "数据中心布线",
+          "theme_path": [
+            "7. 光通信",
+            "光纤光缆",
+            "数据中心布线"
+          ]
+        },
+        {
+          "tag": "海缆",
+          "theme_path": [
+            "7. 光通信",
+            "光纤光缆",
+            "海缆"
+          ]
+        },
         {
           "tag": "光通信",
           "theme_path": []
@@ -5513,9 +8667,45 @@
         "光器件"
       ],
       "merged_tags": [
+        "光通信测试",
+        "TFLN",
+        "波分复用",
+        "EDFA",
         "光通信"
       ],
       "tag_themes": [
+        {
+          "tag": "光通信测试",
+          "theme_path": [
+            "7. 光通信",
+            "光通信测试",
+            "光通信测试"
+          ]
+        },
+        {
+          "tag": "TFLN",
+          "theme_path": [
+            "7. 光通信",
+            "光通信测试",
+            "TFLN"
+          ]
+        },
+        {
+          "tag": "波分复用",
+          "theme_path": [
+            "7. 光通信",
+            "光通信测试",
+            "波分复用"
+          ]
+        },
+        {
+          "tag": "EDFA",
+          "theme_path": [
+            "7. 光通信",
+            "光通信测试",
+            "EDFA"
+          ]
+        },
         {
           "tag": "光通信",
           "theme_path": []
@@ -5551,20 +8741,154 @@
         "磷化铟"
       ],
       "merged_tags": [
-        "光通信",
-        "电力・液冷・数据中心",
+        "光纤光缆",
+        "光连接器",
+        "数据中心布线",
+        "海缆",
+        "硅光子",
+        "CPO",
+        "CPO光电共封装",
+        "PIC",
+        "硅光PIC",
+        "液冷",
+        "液冷设备",
+        "CDU",
+        "冷板",
+        "浸没液冷",
+        "风冷",
+        "热管理",
         "散热片",
-        "半导体材料",
+        "靶材",
         "第三代半导体"
       ],
       "tag_themes": [
         {
-          "tag": "光通信",
-          "theme_path": []
+          "tag": "光纤光缆",
+          "theme_path": [
+            "7. 光通信",
+            "光纤光缆",
+            "光纤光缆"
+          ]
         },
         {
-          "tag": "电力・液冷・数据中心",
-          "theme_path": []
+          "tag": "光连接器",
+          "theme_path": [
+            "7. 光通信",
+            "光纤光缆",
+            "光连接器"
+          ]
+        },
+        {
+          "tag": "数据中心布线",
+          "theme_path": [
+            "7. 光通信",
+            "光纤光缆",
+            "数据中心布线"
+          ]
+        },
+        {
+          "tag": "海缆",
+          "theme_path": [
+            "7. 光通信",
+            "光纤光缆",
+            "海缆"
+          ]
+        },
+        {
+          "tag": "硅光子",
+          "theme_path": [
+            "7. 光通信",
+            "硅光子",
+            "硅光子"
+          ]
+        },
+        {
+          "tag": "CPO",
+          "theme_path": [
+            "7. 光通信",
+            "硅光子",
+            "CPO"
+          ]
+        },
+        {
+          "tag": "CPO光电共封装",
+          "theme_path": [
+            "7. 光通信",
+            "硅光子",
+            "CPO光电共封装"
+          ]
+        },
+        {
+          "tag": "PIC",
+          "theme_path": [
+            "7. 光通信",
+            "硅光子",
+            "PIC"
+          ]
+        },
+        {
+          "tag": "硅光PIC",
+          "theme_path": [
+            "7. 光通信",
+            "硅光子",
+            "硅光PIC"
+          ]
+        },
+        {
+          "tag": "液冷",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "液冷设备",
+            "液冷"
+          ]
+        },
+        {
+          "tag": "液冷设备",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "液冷设备",
+            "液冷设备"
+          ]
+        },
+        {
+          "tag": "CDU",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "液冷设备",
+            "CDU"
+          ]
+        },
+        {
+          "tag": "冷板",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "液冷设备",
+            "冷板"
+          ]
+        },
+        {
+          "tag": "浸没液冷",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "液冷设备",
+            "浸没液冷"
+          ]
+        },
+        {
+          "tag": "风冷",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "液冷设备",
+            "风冷"
+          ]
+        },
+        {
+          "tag": "热管理",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "液冷设备",
+            "热管理"
+          ]
         },
         {
           "tag": "散热片",
@@ -5575,8 +8899,12 @@
           ]
         },
         {
-          "tag": "半导体材料",
-          "theme_path": []
+          "tag": "靶材",
+          "theme_path": [
+            "2. 半导体材料",
+            "靶材",
+            "靶材"
+          ]
         },
         {
           "tag": "第三代半导体",
@@ -5613,13 +8941,17 @@
         "数据中心供电"
       ],
       "merged_tags": [
-        "新能源",
+        "核电",
         "电力・液冷・数据中心"
       ],
       "tag_themes": [
         {
-          "tag": "新能源",
-          "theme_path": []
+          "tag": "核电",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "电力系统",
+            "核电"
+          ]
         },
         {
           "tag": "电力・液冷・数据中心",
@@ -5945,8 +9277,12 @@
       ],
       "merged_tags": [
         "MLCC",
+        "铝电解电容",
+        "电容器",
         "工业自动化与机器人",
-        "新材料",
+        "磁性材料",
+        "稀土",
+        "永磁材料",
         "电力・液冷・数据中心"
       ],
       "tag_themes": [
@@ -5959,6 +9295,22 @@
           ]
         },
         {
+          "tag": "铝电解电容",
+          "theme_path": [
+            "2. 半导体材料",
+            "MLCC",
+            "铝电解电容"
+          ]
+        },
+        {
+          "tag": "电容器",
+          "theme_path": [
+            "2. 半导体材料",
+            "MLCC",
+            "电容器"
+          ]
+        },
+        {
           "tag": "工业自动化与机器人",
           "theme_path": [
             "10. 工业自动化与机器人",
@@ -5967,8 +9319,28 @@
           ]
         },
         {
-          "tag": "新材料",
-          "theme_path": []
+          "tag": "磁性材料",
+          "theme_path": [
+            "2. 半导体材料",
+            "电子材料",
+            "磁性材料"
+          ]
+        },
+        {
+          "tag": "稀土",
+          "theme_path": [
+            "15. 新材料",
+            "磁性材料",
+            "稀土"
+          ]
+        },
+        {
+          "tag": "永磁材料",
+          "theme_path": [
+            "15. 新材料",
+            "磁性材料",
+            "永磁材料"
+          ]
         },
         {
           "tag": "电力・液冷・数据中心",
@@ -6114,6 +9486,8 @@
       ],
       "merged_tags": [
         "MLCC",
+        "铝电解电容",
+        "电容器",
         "电感"
       ],
       "tag_themes": [
@@ -6123,6 +9497,22 @@
             "2. 半导体材料",
             "MLCC",
             "MLCC"
+          ]
+        },
+        {
+          "tag": "铝电解电容",
+          "theme_path": [
+            "2. 半导体材料",
+            "MLCC",
+            "铝电解电容"
+          ]
+        },
+        {
+          "tag": "电容器",
+          "theme_path": [
+            "2. 半导体材料",
+            "MLCC",
+            "电容器"
           ]
         },
         {
@@ -6157,6 +9547,8 @@
       ],
       "merged_tags": [
         "MLCC",
+        "铝电解电容",
+        "电容器",
         "电感"
       ],
       "tag_themes": [
@@ -6166,6 +9558,22 @@
             "2. 半导体材料",
             "MLCC",
             "MLCC"
+          ]
+        },
+        {
+          "tag": "铝电解电容",
+          "theme_path": [
+            "2. 半导体材料",
+            "MLCC",
+            "铝电解电容"
+          ]
+        },
+        {
+          "tag": "电容器",
+          "theme_path": [
+            "2. 半导体材料",
+            "MLCC",
+            "电容器"
           ]
         },
         {
@@ -6280,12 +9688,88 @@
         "电力系统"
       ],
       "merged_tags": [
-        "电力・液冷・数据中心"
+        "电力系统",
+        "UPS",
+        "配电系统",
+        "PDU",
+        "变压器",
+        "核电",
+        "柴油发电机",
+        "燃气轮机",
+        "高压配电"
       ],
       "tag_themes": [
         {
-          "tag": "电力・液冷・数据中心",
-          "theme_path": []
+          "tag": "电力系统",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "电力系统",
+            "电力系统"
+          ]
+        },
+        {
+          "tag": "UPS",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "电力系统",
+            "UPS"
+          ]
+        },
+        {
+          "tag": "配电系统",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "电力系统",
+            "配电系统"
+          ]
+        },
+        {
+          "tag": "PDU",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "电力系统",
+            "PDU"
+          ]
+        },
+        {
+          "tag": "变压器",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "电力系统",
+            "变压器"
+          ]
+        },
+        {
+          "tag": "核电",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "电力系统",
+            "核电"
+          ]
+        },
+        {
+          "tag": "柴油发电机",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "电力系统",
+            "柴油发电机"
+          ]
+        },
+        {
+          "tag": "燃气轮机",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "电力系统",
+            "燃气轮机"
+          ]
+        },
+        {
+          "tag": "高压配电",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "电力系统",
+            "高压配电"
+          ]
         }
       ],
       "market_type": "日股",
@@ -6315,12 +9799,156 @@
         "AI应用"
       ],
       "merged_tags": [
-        "云・模型・应用"
+        "云・模型・应用",
+        "AI应用",
+        "企业AI",
+        "AI平台",
+        "AI",
+        "RAG",
+        "MCP",
+        "Agent",
+        "智能体Agent",
+        "AI内容生成",
+        "AI开发平台",
+        "AI办公",
+        "AI安全",
+        "AI医疗",
+        "AI金融",
+        "AI教育",
+        "数字员工"
       ],
       "tag_themes": [
         {
           "tag": "云・模型・应用",
           "theme_path": []
+        },
+        {
+          "tag": "AI应用",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI应用"
+          ]
+        },
+        {
+          "tag": "企业AI",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "企业AI"
+          ]
+        },
+        {
+          "tag": "AI平台",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI平台"
+          ]
+        },
+        {
+          "tag": "AI",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI"
+          ]
+        },
+        {
+          "tag": "RAG",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "RAG"
+          ]
+        },
+        {
+          "tag": "MCP",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "MCP"
+          ]
+        },
+        {
+          "tag": "Agent",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "Agent"
+          ]
+        },
+        {
+          "tag": "智能体Agent",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "智能体Agent"
+          ]
+        },
+        {
+          "tag": "AI内容生成",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI内容生成"
+          ]
+        },
+        {
+          "tag": "AI开发平台",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI开发平台"
+          ]
+        },
+        {
+          "tag": "AI办公",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI办公"
+          ]
+        },
+        {
+          "tag": "AI安全",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI安全"
+          ]
+        },
+        {
+          "tag": "AI医疗",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI医疗"
+          ]
+        },
+        {
+          "tag": "AI金融",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI金融"
+          ]
+        },
+        {
+          "tag": "AI教育",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI教育"
+          ]
+        },
+        {
+          "tag": "数字员工",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "数字员工"
+          ]
         }
       ],
       "market_type": "美股",
@@ -6491,12 +10119,21 @@
         "量子纠错"
       ],
       "merged_tags": [
-        "量子计算"
+        "量子计算",
+        "量子纠错"
       ],
       "tag_themes": [
         {
           "tag": "量子计算",
           "theme_path": []
+        },
+        {
+          "tag": "量子纠错",
+          "theme_path": [
+            "11. 量子计算",
+            "量子纠错",
+            "量子纠错"
+          ]
         }
       ],
       "market_type": "美股",
@@ -6627,12 +10264,57 @@
         "量子安全"
       ],
       "merged_tags": [
-        "量子计算"
+        "量子计算",
+        "后量子密码",
+        "量子安全",
+        "量子密钥分发",
+        "量子传感",
+        "量子网络"
       ],
       "tag_themes": [
         {
           "tag": "量子计算",
           "theme_path": []
+        },
+        {
+          "tag": "后量子密码",
+          "theme_path": [
+            "11. 量子计算",
+            "量子安全",
+            "后量子密码"
+          ]
+        },
+        {
+          "tag": "量子安全",
+          "theme_path": [
+            "11. 量子计算",
+            "量子安全",
+            "量子安全"
+          ]
+        },
+        {
+          "tag": "量子密钥分发",
+          "theme_path": [
+            "11. 量子计算",
+            "量子安全",
+            "量子密钥分发"
+          ]
+        },
+        {
+          "tag": "量子传感",
+          "theme_path": [
+            "11. 量子计算",
+            "量子安全",
+            "量子传感"
+          ]
+        },
+        {
+          "tag": "量子网络",
+          "theme_path": [
+            "11. 量子计算",
+            "量子安全",
+            "量子网络"
+          ]
         }
       ],
       "market_type": "A股",
@@ -6702,9 +10384,108 @@
         "FA自动化"
       ],
       "merged_tags": [
+        "工业机器人",
+        "人形机器人",
+        "机器人本体",
+        "机器人关节",
+        "协作机器人",
+        "SCARA机器人",
+        "机器人控制器",
+        "机器人末端执行器",
+        "机器人视觉",
+        "机器人灵巧手",
+        "机器人软件",
         "工业自动化与机器人"
       ],
       "tag_themes": [
+        {
+          "tag": "工业机器人",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "工业机器人"
+          ]
+        },
+        {
+          "tag": "人形机器人",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "人形机器人"
+          ]
+        },
+        {
+          "tag": "机器人本体",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "机器人本体"
+          ]
+        },
+        {
+          "tag": "机器人关节",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "机器人关节"
+          ]
+        },
+        {
+          "tag": "协作机器人",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "协作机器人"
+          ]
+        },
+        {
+          "tag": "SCARA机器人",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "SCARA机器人"
+          ]
+        },
+        {
+          "tag": "机器人控制器",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "机器人控制器"
+          ]
+        },
+        {
+          "tag": "机器人末端执行器",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "机器人末端执行器"
+          ]
+        },
+        {
+          "tag": "机器人视觉",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "机器人视觉"
+          ]
+        },
+        {
+          "tag": "机器人灵巧手",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "机器人灵巧手"
+          ]
+        },
+        {
+          "tag": "机器人软件",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "机器人软件"
+          ]
+        },
         {
           "tag": "工业自动化与机器人",
           "theme_path": [
@@ -6780,9 +10561,108 @@
         "运动控制"
       ],
       "merged_tags": [
+        "工业机器人",
+        "人形机器人",
+        "机器人本体",
+        "机器人关节",
+        "协作机器人",
+        "SCARA机器人",
+        "机器人控制器",
+        "机器人末端执行器",
+        "机器人视觉",
+        "机器人灵巧手",
+        "机器人软件",
         "工业自动化与机器人"
       ],
       "tag_themes": [
+        {
+          "tag": "工业机器人",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "工业机器人"
+          ]
+        },
+        {
+          "tag": "人形机器人",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "人形机器人"
+          ]
+        },
+        {
+          "tag": "机器人本体",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "机器人本体"
+          ]
+        },
+        {
+          "tag": "机器人关节",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "机器人关节"
+          ]
+        },
+        {
+          "tag": "协作机器人",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "协作机器人"
+          ]
+        },
+        {
+          "tag": "SCARA机器人",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "SCARA机器人"
+          ]
+        },
+        {
+          "tag": "机器人控制器",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "机器人控制器"
+          ]
+        },
+        {
+          "tag": "机器人末端执行器",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "机器人末端执行器"
+          ]
+        },
+        {
+          "tag": "机器人视觉",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "机器人视觉"
+          ]
+        },
+        {
+          "tag": "机器人灵巧手",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "机器人灵巧手"
+          ]
+        },
+        {
+          "tag": "机器人软件",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "机器人软件"
+          ]
+        },
         {
           "tag": "工业自动化与机器人",
           "theme_path": [
@@ -7026,7 +10906,8 @@
         "IIoT"
       ],
       "merged_tags": [
-        "工业自动化与机器人"
+        "工业自动化与机器人",
+        "MES"
       ],
       "tag_themes": [
         {
@@ -7035,6 +10916,14 @@
             "10. 工业自动化与机器人",
             "智能制造",
             "工业自动化与机器人"
+          ]
+        },
+        {
+          "tag": "MES",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "工业软件",
+            "MES"
           ]
         }
       ],
@@ -7066,7 +10955,16 @@
       ],
       "merged_tags": [
         "工业自动化与机器人",
-        "MES"
+        "MES",
+        "FA自动化",
+        "FA工厂自动化",
+        "IIoT",
+        "工业物联网IIoT",
+        "工业软件",
+        "数字孪生",
+        "智能制造",
+        "智能制造解决方案",
+        "自动化产线"
       ],
       "tag_themes": [
         {
@@ -7083,6 +10981,78 @@
             "9. 云・模型・应用",
             "工业软件",
             "MES"
+          ]
+        },
+        {
+          "tag": "FA自动化",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "智能制造",
+            "FA自动化"
+          ]
+        },
+        {
+          "tag": "FA工厂自动化",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "智能制造",
+            "FA工厂自动化"
+          ]
+        },
+        {
+          "tag": "IIoT",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "智能制造",
+            "IIoT"
+          ]
+        },
+        {
+          "tag": "工业物联网IIoT",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "智能制造",
+            "工业物联网IIoT"
+          ]
+        },
+        {
+          "tag": "工业软件",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "智能制造",
+            "工业软件"
+          ]
+        },
+        {
+          "tag": "数字孪生",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "智能制造",
+            "数字孪生"
+          ]
+        },
+        {
+          "tag": "智能制造",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "智能制造",
+            "智能制造"
+          ]
+        },
+        {
+          "tag": "智能制造解决方案",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "智能制造",
+            "智能制造解决方案"
+          ]
+        },
+        {
+          "tag": "自动化产线",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "智能制造",
+            "自动化产线"
           ]
         }
       ],
@@ -7113,9 +11083,108 @@
         "运动控制"
       ],
       "merged_tags": [
+        "工业机器人",
+        "人形机器人",
+        "机器人本体",
+        "机器人关节",
+        "协作机器人",
+        "SCARA机器人",
+        "机器人控制器",
+        "机器人末端执行器",
+        "机器人视觉",
+        "机器人灵巧手",
+        "机器人软件",
         "工业自动化与机器人"
       ],
       "tag_themes": [
+        {
+          "tag": "工业机器人",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "工业机器人"
+          ]
+        },
+        {
+          "tag": "人形机器人",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "人形机器人"
+          ]
+        },
+        {
+          "tag": "机器人本体",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "机器人本体"
+          ]
+        },
+        {
+          "tag": "机器人关节",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "机器人关节"
+          ]
+        },
+        {
+          "tag": "协作机器人",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "协作机器人"
+          ]
+        },
+        {
+          "tag": "SCARA机器人",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "SCARA机器人"
+          ]
+        },
+        {
+          "tag": "机器人控制器",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "机器人控制器"
+          ]
+        },
+        {
+          "tag": "机器人末端执行器",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "机器人末端执行器"
+          ]
+        },
+        {
+          "tag": "机器人视觉",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "机器人视觉"
+          ]
+        },
+        {
+          "tag": "机器人灵巧手",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "机器人灵巧手"
+          ]
+        },
+        {
+          "tag": "机器人软件",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "机器人软件"
+          ]
+        },
         {
           "tag": "工业自动化与机器人",
           "theme_path": [
@@ -7153,7 +11222,18 @@
         "激光加工设备"
       ],
       "merged_tags": [
-        "工业自动化与机器人"
+        "工业自动化与机器人",
+        "工业机器人",
+        "人形机器人",
+        "机器人本体",
+        "机器人关节",
+        "协作机器人",
+        "SCARA机器人",
+        "机器人控制器",
+        "机器人末端执行器",
+        "机器人视觉",
+        "机器人灵巧手",
+        "机器人软件"
       ],
       "tag_themes": [
         {
@@ -7162,6 +11242,94 @@
             "10. 工业自动化与机器人",
             "智能制造",
             "工业自动化与机器人"
+          ]
+        },
+        {
+          "tag": "工业机器人",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "工业机器人"
+          ]
+        },
+        {
+          "tag": "人形机器人",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "人形机器人"
+          ]
+        },
+        {
+          "tag": "机器人本体",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "机器人本体"
+          ]
+        },
+        {
+          "tag": "机器人关节",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "机器人关节"
+          ]
+        },
+        {
+          "tag": "协作机器人",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "协作机器人"
+          ]
+        },
+        {
+          "tag": "SCARA机器人",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "SCARA机器人"
+          ]
+        },
+        {
+          "tag": "机器人控制器",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "机器人控制器"
+          ]
+        },
+        {
+          "tag": "机器人末端执行器",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "机器人末端执行器"
+          ]
+        },
+        {
+          "tag": "机器人视觉",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "机器人视觉"
+          ]
+        },
+        {
+          "tag": "机器人灵巧手",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "机器人灵巧手"
+          ]
+        },
+        {
+          "tag": "机器人软件",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "机器人软件"
           ]
         }
       ],
@@ -7303,12 +11471,151 @@
         "AI应用"
       ],
       "merged_tags": [
-        "云・模型・应用"
+        "AI应用",
+        "企业AI",
+        "AI平台",
+        "AI",
+        "RAG",
+        "MCP",
+        "Agent",
+        "智能体Agent",
+        "AI内容生成",
+        "AI开发平台",
+        "AI办公",
+        "AI安全",
+        "AI医疗",
+        "AI金融",
+        "AI教育",
+        "数字员工"
       ],
       "tag_themes": [
         {
-          "tag": "云・模型・应用",
-          "theme_path": []
+          "tag": "AI应用",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI应用"
+          ]
+        },
+        {
+          "tag": "企业AI",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "企业AI"
+          ]
+        },
+        {
+          "tag": "AI平台",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI平台"
+          ]
+        },
+        {
+          "tag": "AI",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI"
+          ]
+        },
+        {
+          "tag": "RAG",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "RAG"
+          ]
+        },
+        {
+          "tag": "MCP",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "MCP"
+          ]
+        },
+        {
+          "tag": "Agent",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "Agent"
+          ]
+        },
+        {
+          "tag": "智能体Agent",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "智能体Agent"
+          ]
+        },
+        {
+          "tag": "AI内容生成",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI内容生成"
+          ]
+        },
+        {
+          "tag": "AI开发平台",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI开发平台"
+          ]
+        },
+        {
+          "tag": "AI办公",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI办公"
+          ]
+        },
+        {
+          "tag": "AI安全",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI安全"
+          ]
+        },
+        {
+          "tag": "AI医疗",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI医疗"
+          ]
+        },
+        {
+          "tag": "AI金融",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI金融"
+          ]
+        },
+        {
+          "tag": "AI教育",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI教育"
+          ]
+        },
+        {
+          "tag": "数字员工",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "数字员工"
+          ]
         }
       ],
       "market_type": "美股",
@@ -7336,12 +11643,151 @@
         "AI应用"
       ],
       "merged_tags": [
-        "云・模型・应用"
+        "AI应用",
+        "企业AI",
+        "AI平台",
+        "AI",
+        "RAG",
+        "MCP",
+        "Agent",
+        "智能体Agent",
+        "AI内容生成",
+        "AI开发平台",
+        "AI办公",
+        "AI安全",
+        "AI医疗",
+        "AI金融",
+        "AI教育",
+        "数字员工"
       ],
       "tag_themes": [
         {
-          "tag": "云・模型・应用",
-          "theme_path": []
+          "tag": "AI应用",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI应用"
+          ]
+        },
+        {
+          "tag": "企业AI",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "企业AI"
+          ]
+        },
+        {
+          "tag": "AI平台",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI平台"
+          ]
+        },
+        {
+          "tag": "AI",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI"
+          ]
+        },
+        {
+          "tag": "RAG",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "RAG"
+          ]
+        },
+        {
+          "tag": "MCP",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "MCP"
+          ]
+        },
+        {
+          "tag": "Agent",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "Agent"
+          ]
+        },
+        {
+          "tag": "智能体Agent",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "智能体Agent"
+          ]
+        },
+        {
+          "tag": "AI内容生成",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI内容生成"
+          ]
+        },
+        {
+          "tag": "AI开发平台",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI开发平台"
+          ]
+        },
+        {
+          "tag": "AI办公",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI办公"
+          ]
+        },
+        {
+          "tag": "AI安全",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI安全"
+          ]
+        },
+        {
+          "tag": "AI医疗",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI医疗"
+          ]
+        },
+        {
+          "tag": "AI金融",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI金融"
+          ]
+        },
+        {
+          "tag": "AI教育",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI教育"
+          ]
+        },
+        {
+          "tag": "数字员工",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "数字员工"
+          ]
         }
       ],
       "market_type": "美股",
@@ -7369,12 +11815,151 @@
         "AI应用"
       ],
       "merged_tags": [
-        "云・模型・应用"
+        "AI应用",
+        "企业AI",
+        "AI平台",
+        "AI",
+        "RAG",
+        "MCP",
+        "Agent",
+        "智能体Agent",
+        "AI内容生成",
+        "AI开发平台",
+        "AI办公",
+        "AI安全",
+        "AI医疗",
+        "AI金融",
+        "AI教育",
+        "数字员工"
       ],
       "tag_themes": [
         {
-          "tag": "云・模型・应用",
-          "theme_path": []
+          "tag": "AI应用",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI应用"
+          ]
+        },
+        {
+          "tag": "企业AI",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "企业AI"
+          ]
+        },
+        {
+          "tag": "AI平台",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI平台"
+          ]
+        },
+        {
+          "tag": "AI",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI"
+          ]
+        },
+        {
+          "tag": "RAG",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "RAG"
+          ]
+        },
+        {
+          "tag": "MCP",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "MCP"
+          ]
+        },
+        {
+          "tag": "Agent",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "Agent"
+          ]
+        },
+        {
+          "tag": "智能体Agent",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "智能体Agent"
+          ]
+        },
+        {
+          "tag": "AI内容生成",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI内容生成"
+          ]
+        },
+        {
+          "tag": "AI开发平台",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI开发平台"
+          ]
+        },
+        {
+          "tag": "AI办公",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI办公"
+          ]
+        },
+        {
+          "tag": "AI安全",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI安全"
+          ]
+        },
+        {
+          "tag": "AI医疗",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI医疗"
+          ]
+        },
+        {
+          "tag": "AI金融",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI金融"
+          ]
+        },
+        {
+          "tag": "AI教育",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI教育"
+          ]
+        },
+        {
+          "tag": "数字员工",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "数字员工"
+          ]
         }
       ],
       "market_type": "美股",
@@ -7402,12 +11987,151 @@
         "AI应用"
       ],
       "merged_tags": [
-        "云・模型・应用"
+        "AI应用",
+        "企业AI",
+        "AI平台",
+        "AI",
+        "RAG",
+        "MCP",
+        "Agent",
+        "智能体Agent",
+        "AI内容生成",
+        "AI开发平台",
+        "AI办公",
+        "AI安全",
+        "AI医疗",
+        "AI金融",
+        "AI教育",
+        "数字员工"
       ],
       "tag_themes": [
         {
-          "tag": "云・模型・应用",
-          "theme_path": []
+          "tag": "AI应用",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI应用"
+          ]
+        },
+        {
+          "tag": "企业AI",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "企业AI"
+          ]
+        },
+        {
+          "tag": "AI平台",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI平台"
+          ]
+        },
+        {
+          "tag": "AI",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI"
+          ]
+        },
+        {
+          "tag": "RAG",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "RAG"
+          ]
+        },
+        {
+          "tag": "MCP",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "MCP"
+          ]
+        },
+        {
+          "tag": "Agent",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "Agent"
+          ]
+        },
+        {
+          "tag": "智能体Agent",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "智能体Agent"
+          ]
+        },
+        {
+          "tag": "AI内容生成",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI内容生成"
+          ]
+        },
+        {
+          "tag": "AI开发平台",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI开发平台"
+          ]
+        },
+        {
+          "tag": "AI办公",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI办公"
+          ]
+        },
+        {
+          "tag": "AI安全",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI安全"
+          ]
+        },
+        {
+          "tag": "AI医疗",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI医疗"
+          ]
+        },
+        {
+          "tag": "AI金融",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI金融"
+          ]
+        },
+        {
+          "tag": "AI教育",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI教育"
+          ]
+        },
+        {
+          "tag": "数字员工",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "数字员工"
+          ]
         }
       ],
       "market_type": "美股",
@@ -7435,12 +12159,151 @@
         "AI应用"
       ],
       "merged_tags": [
-        "云・模型・应用"
+        "AI应用",
+        "企业AI",
+        "AI平台",
+        "AI",
+        "RAG",
+        "MCP",
+        "Agent",
+        "智能体Agent",
+        "AI内容生成",
+        "AI开发平台",
+        "AI办公",
+        "AI安全",
+        "AI医疗",
+        "AI金融",
+        "AI教育",
+        "数字员工"
       ],
       "tag_themes": [
         {
-          "tag": "云・模型・应用",
-          "theme_path": []
+          "tag": "AI应用",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI应用"
+          ]
+        },
+        {
+          "tag": "企业AI",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "企业AI"
+          ]
+        },
+        {
+          "tag": "AI平台",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI平台"
+          ]
+        },
+        {
+          "tag": "AI",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI"
+          ]
+        },
+        {
+          "tag": "RAG",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "RAG"
+          ]
+        },
+        {
+          "tag": "MCP",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "MCP"
+          ]
+        },
+        {
+          "tag": "Agent",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "Agent"
+          ]
+        },
+        {
+          "tag": "智能体Agent",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "智能体Agent"
+          ]
+        },
+        {
+          "tag": "AI内容生成",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI内容生成"
+          ]
+        },
+        {
+          "tag": "AI开发平台",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI开发平台"
+          ]
+        },
+        {
+          "tag": "AI办公",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI办公"
+          ]
+        },
+        {
+          "tag": "AI安全",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI安全"
+          ]
+        },
+        {
+          "tag": "AI医疗",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI医疗"
+          ]
+        },
+        {
+          "tag": "AI金融",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI金融"
+          ]
+        },
+        {
+          "tag": "AI教育",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI教育"
+          ]
+        },
+        {
+          "tag": "数字员工",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "数字员工"
+          ]
         }
       ],
       "market_type": "日股",
@@ -7468,12 +12331,151 @@
         "AI应用"
       ],
       "merged_tags": [
-        "云・模型・应用"
+        "AI应用",
+        "企业AI",
+        "AI平台",
+        "AI",
+        "RAG",
+        "MCP",
+        "Agent",
+        "智能体Agent",
+        "AI内容生成",
+        "AI开发平台",
+        "AI办公",
+        "AI安全",
+        "AI医疗",
+        "AI金融",
+        "AI教育",
+        "数字员工"
       ],
       "tag_themes": [
         {
-          "tag": "云・模型・应用",
-          "theme_path": []
+          "tag": "AI应用",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI应用"
+          ]
+        },
+        {
+          "tag": "企业AI",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "企业AI"
+          ]
+        },
+        {
+          "tag": "AI平台",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI平台"
+          ]
+        },
+        {
+          "tag": "AI",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI"
+          ]
+        },
+        {
+          "tag": "RAG",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "RAG"
+          ]
+        },
+        {
+          "tag": "MCP",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "MCP"
+          ]
+        },
+        {
+          "tag": "Agent",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "Agent"
+          ]
+        },
+        {
+          "tag": "智能体Agent",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "智能体Agent"
+          ]
+        },
+        {
+          "tag": "AI内容生成",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI内容生成"
+          ]
+        },
+        {
+          "tag": "AI开发平台",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI开发平台"
+          ]
+        },
+        {
+          "tag": "AI办公",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI办公"
+          ]
+        },
+        {
+          "tag": "AI安全",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI安全"
+          ]
+        },
+        {
+          "tag": "AI医疗",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI医疗"
+          ]
+        },
+        {
+          "tag": "AI金融",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI金融"
+          ]
+        },
+        {
+          "tag": "AI教育",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI教育"
+          ]
+        },
+        {
+          "tag": "数字员工",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "数字员工"
+          ]
         }
       ],
       "market_type": "日股",
@@ -7501,12 +12503,52 @@
         "光芯片"
       ],
       "merged_tags": [
-        "光通信"
+        "光芯片",
+        "EML",
+        "VCSEL",
+        "DFB",
+        "CW Laser"
       ],
       "tag_themes": [
         {
-          "tag": "光通信",
-          "theme_path": []
+          "tag": "光芯片",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "光芯片"
+          ]
+        },
+        {
+          "tag": "EML",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "EML"
+          ]
+        },
+        {
+          "tag": "VCSEL",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "VCSEL"
+          ]
+        },
+        {
+          "tag": "DFB",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "DFB"
+          ]
+        },
+        {
+          "tag": "CW Laser",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "CW Laser"
+          ]
         }
       ],
       "market_type": "日股",
@@ -7534,12 +12576,151 @@
         "AI应用"
       ],
       "merged_tags": [
-        "云・模型・应用"
+        "AI应用",
+        "企业AI",
+        "AI平台",
+        "AI",
+        "RAG",
+        "MCP",
+        "Agent",
+        "智能体Agent",
+        "AI内容生成",
+        "AI开发平台",
+        "AI办公",
+        "AI安全",
+        "AI医疗",
+        "AI金融",
+        "AI教育",
+        "数字员工"
       ],
       "tag_themes": [
         {
-          "tag": "云・模型・应用",
-          "theme_path": []
+          "tag": "AI应用",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI应用"
+          ]
+        },
+        {
+          "tag": "企业AI",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "企业AI"
+          ]
+        },
+        {
+          "tag": "AI平台",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI平台"
+          ]
+        },
+        {
+          "tag": "AI",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI"
+          ]
+        },
+        {
+          "tag": "RAG",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "RAG"
+          ]
+        },
+        {
+          "tag": "MCP",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "MCP"
+          ]
+        },
+        {
+          "tag": "Agent",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "Agent"
+          ]
+        },
+        {
+          "tag": "智能体Agent",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "智能体Agent"
+          ]
+        },
+        {
+          "tag": "AI内容生成",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI内容生成"
+          ]
+        },
+        {
+          "tag": "AI开发平台",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI开发平台"
+          ]
+        },
+        {
+          "tag": "AI办公",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI办公"
+          ]
+        },
+        {
+          "tag": "AI安全",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI安全"
+          ]
+        },
+        {
+          "tag": "AI医疗",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI医疗"
+          ]
+        },
+        {
+          "tag": "AI金融",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI金融"
+          ]
+        },
+        {
+          "tag": "AI教育",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI教育"
+          ]
+        },
+        {
+          "tag": "数字员工",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "数字员工"
+          ]
         }
       ],
       "market_type": "美股",
@@ -7567,12 +12748,151 @@
         "AI应用"
       ],
       "merged_tags": [
-        "云・模型・应用"
+        "AI应用",
+        "企业AI",
+        "AI平台",
+        "AI",
+        "RAG",
+        "MCP",
+        "Agent",
+        "智能体Agent",
+        "AI内容生成",
+        "AI开发平台",
+        "AI办公",
+        "AI安全",
+        "AI医疗",
+        "AI金融",
+        "AI教育",
+        "数字员工"
       ],
       "tag_themes": [
         {
-          "tag": "云・模型・应用",
-          "theme_path": []
+          "tag": "AI应用",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI应用"
+          ]
+        },
+        {
+          "tag": "企业AI",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "企业AI"
+          ]
+        },
+        {
+          "tag": "AI平台",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI平台"
+          ]
+        },
+        {
+          "tag": "AI",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI"
+          ]
+        },
+        {
+          "tag": "RAG",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "RAG"
+          ]
+        },
+        {
+          "tag": "MCP",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "MCP"
+          ]
+        },
+        {
+          "tag": "Agent",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "Agent"
+          ]
+        },
+        {
+          "tag": "智能体Agent",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "智能体Agent"
+          ]
+        },
+        {
+          "tag": "AI内容生成",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI内容生成"
+          ]
+        },
+        {
+          "tag": "AI开发平台",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI开发平台"
+          ]
+        },
+        {
+          "tag": "AI办公",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI办公"
+          ]
+        },
+        {
+          "tag": "AI安全",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI安全"
+          ]
+        },
+        {
+          "tag": "AI医疗",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI医疗"
+          ]
+        },
+        {
+          "tag": "AI金融",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI金融"
+          ]
+        },
+        {
+          "tag": "AI教育",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI教育"
+          ]
+        },
+        {
+          "tag": "数字员工",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "数字员工"
+          ]
         }
       ],
       "market_type": "美股",
@@ -7600,12 +12920,151 @@
         "AI应用"
       ],
       "merged_tags": [
-        "云・模型・应用"
+        "AI应用",
+        "企业AI",
+        "AI平台",
+        "AI",
+        "RAG",
+        "MCP",
+        "Agent",
+        "智能体Agent",
+        "AI内容生成",
+        "AI开发平台",
+        "AI办公",
+        "AI安全",
+        "AI医疗",
+        "AI金融",
+        "AI教育",
+        "数字员工"
       ],
       "tag_themes": [
         {
-          "tag": "云・模型・应用",
-          "theme_path": []
+          "tag": "AI应用",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI应用"
+          ]
+        },
+        {
+          "tag": "企业AI",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "企业AI"
+          ]
+        },
+        {
+          "tag": "AI平台",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI平台"
+          ]
+        },
+        {
+          "tag": "AI",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI"
+          ]
+        },
+        {
+          "tag": "RAG",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "RAG"
+          ]
+        },
+        {
+          "tag": "MCP",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "MCP"
+          ]
+        },
+        {
+          "tag": "Agent",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "Agent"
+          ]
+        },
+        {
+          "tag": "智能体Agent",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "智能体Agent"
+          ]
+        },
+        {
+          "tag": "AI内容生成",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI内容生成"
+          ]
+        },
+        {
+          "tag": "AI开发平台",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI开发平台"
+          ]
+        },
+        {
+          "tag": "AI办公",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI办公"
+          ]
+        },
+        {
+          "tag": "AI安全",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI安全"
+          ]
+        },
+        {
+          "tag": "AI医疗",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI医疗"
+          ]
+        },
+        {
+          "tag": "AI金融",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI金融"
+          ]
+        },
+        {
+          "tag": "AI教育",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI教育"
+          ]
+        },
+        {
+          "tag": "数字员工",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "数字员工"
+          ]
         }
       ],
       "market_type": "美股",
@@ -7633,12 +13092,151 @@
         "AI应用"
       ],
       "merged_tags": [
-        "云・模型・应用"
+        "AI应用",
+        "企业AI",
+        "AI平台",
+        "AI",
+        "RAG",
+        "MCP",
+        "Agent",
+        "智能体Agent",
+        "AI内容生成",
+        "AI开发平台",
+        "AI办公",
+        "AI安全",
+        "AI医疗",
+        "AI金融",
+        "AI教育",
+        "数字员工"
       ],
       "tag_themes": [
         {
-          "tag": "云・模型・应用",
-          "theme_path": []
+          "tag": "AI应用",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI应用"
+          ]
+        },
+        {
+          "tag": "企业AI",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "企业AI"
+          ]
+        },
+        {
+          "tag": "AI平台",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI平台"
+          ]
+        },
+        {
+          "tag": "AI",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI"
+          ]
+        },
+        {
+          "tag": "RAG",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "RAG"
+          ]
+        },
+        {
+          "tag": "MCP",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "MCP"
+          ]
+        },
+        {
+          "tag": "Agent",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "Agent"
+          ]
+        },
+        {
+          "tag": "智能体Agent",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "智能体Agent"
+          ]
+        },
+        {
+          "tag": "AI内容生成",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI内容生成"
+          ]
+        },
+        {
+          "tag": "AI开发平台",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI开发平台"
+          ]
+        },
+        {
+          "tag": "AI办公",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI办公"
+          ]
+        },
+        {
+          "tag": "AI安全",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI安全"
+          ]
+        },
+        {
+          "tag": "AI医疗",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI医疗"
+          ]
+        },
+        {
+          "tag": "AI金融",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI金融"
+          ]
+        },
+        {
+          "tag": "AI教育",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI教育"
+          ]
+        },
+        {
+          "tag": "数字员工",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "数字员工"
+          ]
         }
       ],
       "market_type": "美股",
@@ -7667,12 +13265,151 @@
         "电力系统"
       ],
       "merged_tags": [
-        "电力・液冷・数据中心"
+        "液冷",
+        "液冷设备",
+        "CDU",
+        "冷板",
+        "浸没液冷",
+        "风冷",
+        "热管理",
+        "电力系统",
+        "UPS",
+        "配电系统",
+        "PDU",
+        "变压器",
+        "核电",
+        "柴油发电机",
+        "燃气轮机",
+        "高压配电"
       ],
       "tag_themes": [
         {
-          "tag": "电力・液冷・数据中心",
-          "theme_path": []
+          "tag": "液冷",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "液冷设备",
+            "液冷"
+          ]
+        },
+        {
+          "tag": "液冷设备",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "液冷设备",
+            "液冷设备"
+          ]
+        },
+        {
+          "tag": "CDU",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "液冷设备",
+            "CDU"
+          ]
+        },
+        {
+          "tag": "冷板",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "液冷设备",
+            "冷板"
+          ]
+        },
+        {
+          "tag": "浸没液冷",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "液冷设备",
+            "浸没液冷"
+          ]
+        },
+        {
+          "tag": "风冷",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "液冷设备",
+            "风冷"
+          ]
+        },
+        {
+          "tag": "热管理",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "液冷设备",
+            "热管理"
+          ]
+        },
+        {
+          "tag": "电力系统",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "电力系统",
+            "电力系统"
+          ]
+        },
+        {
+          "tag": "UPS",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "电力系统",
+            "UPS"
+          ]
+        },
+        {
+          "tag": "配电系统",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "电力系统",
+            "配电系统"
+          ]
+        },
+        {
+          "tag": "PDU",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "电力系统",
+            "PDU"
+          ]
+        },
+        {
+          "tag": "变压器",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "电力系统",
+            "变压器"
+          ]
+        },
+        {
+          "tag": "核电",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "电力系统",
+            "核电"
+          ]
+        },
+        {
+          "tag": "柴油发电机",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "电力系统",
+            "柴油发电机"
+          ]
+        },
+        {
+          "tag": "燃气轮机",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "电力系统",
+            "燃气轮机"
+          ]
+        },
+        {
+          "tag": "高压配电",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "电力系统",
+            "高压配电"
+          ]
         }
       ],
       "market_type": "日股",
@@ -7700,12 +13437,151 @@
         "AI应用"
       ],
       "merged_tags": [
-        "云・模型・应用"
+        "AI应用",
+        "企业AI",
+        "AI平台",
+        "AI",
+        "RAG",
+        "MCP",
+        "Agent",
+        "智能体Agent",
+        "AI内容生成",
+        "AI开发平台",
+        "AI办公",
+        "AI安全",
+        "AI医疗",
+        "AI金融",
+        "AI教育",
+        "数字员工"
       ],
       "tag_themes": [
         {
-          "tag": "云・模型・应用",
-          "theme_path": []
+          "tag": "AI应用",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI应用"
+          ]
+        },
+        {
+          "tag": "企业AI",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "企业AI"
+          ]
+        },
+        {
+          "tag": "AI平台",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI平台"
+          ]
+        },
+        {
+          "tag": "AI",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI"
+          ]
+        },
+        {
+          "tag": "RAG",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "RAG"
+          ]
+        },
+        {
+          "tag": "MCP",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "MCP"
+          ]
+        },
+        {
+          "tag": "Agent",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "Agent"
+          ]
+        },
+        {
+          "tag": "智能体Agent",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "智能体Agent"
+          ]
+        },
+        {
+          "tag": "AI内容生成",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI内容生成"
+          ]
+        },
+        {
+          "tag": "AI开发平台",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI开发平台"
+          ]
+        },
+        {
+          "tag": "AI办公",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI办公"
+          ]
+        },
+        {
+          "tag": "AI安全",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI安全"
+          ]
+        },
+        {
+          "tag": "AI医疗",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI医疗"
+          ]
+        },
+        {
+          "tag": "AI金融",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI金融"
+          ]
+        },
+        {
+          "tag": "AI教育",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI教育"
+          ]
+        },
+        {
+          "tag": "数字员工",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "数字员工"
+          ]
         }
       ],
       "market_type": "日股",
@@ -7733,12 +13609,151 @@
         "AI应用"
       ],
       "merged_tags": [
-        "云・模型・应用"
+        "AI应用",
+        "企业AI",
+        "AI平台",
+        "AI",
+        "RAG",
+        "MCP",
+        "Agent",
+        "智能体Agent",
+        "AI内容生成",
+        "AI开发平台",
+        "AI办公",
+        "AI安全",
+        "AI医疗",
+        "AI金融",
+        "AI教育",
+        "数字员工"
       ],
       "tag_themes": [
         {
-          "tag": "云・模型・应用",
-          "theme_path": []
+          "tag": "AI应用",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI应用"
+          ]
+        },
+        {
+          "tag": "企业AI",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "企业AI"
+          ]
+        },
+        {
+          "tag": "AI平台",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI平台"
+          ]
+        },
+        {
+          "tag": "AI",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI"
+          ]
+        },
+        {
+          "tag": "RAG",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "RAG"
+          ]
+        },
+        {
+          "tag": "MCP",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "MCP"
+          ]
+        },
+        {
+          "tag": "Agent",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "Agent"
+          ]
+        },
+        {
+          "tag": "智能体Agent",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "智能体Agent"
+          ]
+        },
+        {
+          "tag": "AI内容生成",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI内容生成"
+          ]
+        },
+        {
+          "tag": "AI开发平台",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI开发平台"
+          ]
+        },
+        {
+          "tag": "AI办公",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI办公"
+          ]
+        },
+        {
+          "tag": "AI安全",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI安全"
+          ]
+        },
+        {
+          "tag": "AI医疗",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI医疗"
+          ]
+        },
+        {
+          "tag": "AI金融",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI金融"
+          ]
+        },
+        {
+          "tag": "AI教育",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI教育"
+          ]
+        },
+        {
+          "tag": "数字员工",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "数字员工"
+          ]
         }
       ],
       "market_type": "日股",
@@ -7806,17 +13821,61 @@
         "电子特气"
       ],
       "merged_tags": [
-        "综合商社",
-        "半导体材料"
+        "化学品贸易",
+        "电子材料贸易",
+        "高纯化学品",
+        "湿电子化学品",
+        "电子特气",
+        "工业气体"
       ],
       "tag_themes": [
         {
-          "tag": "综合商社",
-          "theme_path": []
+          "tag": "化学品贸易",
+          "theme_path": [
+            "13. 综合商社",
+            "化学品贸易",
+            "化学品贸易"
+          ]
         },
         {
-          "tag": "半导体材料",
-          "theme_path": []
+          "tag": "电子材料贸易",
+          "theme_path": [
+            "13. 综合商社",
+            "电子材料贸易",
+            "电子材料贸易"
+          ]
+        },
+        {
+          "tag": "高纯化学品",
+          "theme_path": [
+            "2. 半导体材料",
+            "高纯化学品",
+            "高纯化学品"
+          ]
+        },
+        {
+          "tag": "湿电子化学品",
+          "theme_path": [
+            "2. 半导体材料",
+            "高纯化学品",
+            "湿电子化学品"
+          ]
+        },
+        {
+          "tag": "电子特气",
+          "theme_path": [
+            "2. 半导体材料",
+            "电子特气",
+            "电子特气"
+          ]
+        },
+        {
+          "tag": "工业气体",
+          "theme_path": [
+            "2. 半导体材料",
+            "电子特气",
+            "工业气体"
+          ]
         }
       ],
       "market_type": "日股",
@@ -7845,13 +13904,17 @@
         "交换机/路由芯片"
       ],
       "merged_tags": [
-        "综合商社",
+        "电子材料贸易",
         "网络互联"
       ],
       "tag_themes": [
         {
-          "tag": "综合商社",
-          "theme_path": []
+          "tag": "电子材料贸易",
+          "theme_path": [
+            "13. 综合商社",
+            "电子材料贸易",
+            "电子材料贸易"
+          ]
         },
         {
           "tag": "网络互联",
@@ -7885,17 +13948,43 @@
         "电子特气"
       ],
       "merged_tags": [
-        "综合商社",
-        "半导体材料"
+        "资源能源",
+        "化学品贸易",
+        "电子特气",
+        "工业气体"
       ],
       "tag_themes": [
         {
-          "tag": "综合商社",
-          "theme_path": []
+          "tag": "资源能源",
+          "theme_path": [
+            "13. 综合商社",
+            "资源能源",
+            "资源能源"
+          ]
         },
         {
-          "tag": "半导体材料",
-          "theme_path": []
+          "tag": "化学品贸易",
+          "theme_path": [
+            "13. 综合商社",
+            "化学品贸易",
+            "化学品贸易"
+          ]
+        },
+        {
+          "tag": "电子特气",
+          "theme_path": [
+            "2. 半导体材料",
+            "电子特气",
+            "电子特气"
+          ]
+        },
+        {
+          "tag": "工业气体",
+          "theme_path": [
+            "2. 半导体材料",
+            "电子特气",
+            "工业气体"
+          ]
         }
       ],
       "market_type": "日股",
@@ -7928,7 +14017,7 @@
         "DX"
       ],
       "merged_tags": [
-        "综合商社",
+        "电子材料贸易",
         "半导体分销",
         "EMS",
         "ODM",
@@ -7937,8 +14026,12 @@
       ],
       "tag_themes": [
         {
-          "tag": "综合商社",
-          "theme_path": []
+          "tag": "电子材料贸易",
+          "theme_path": [
+            "13. 综合商社",
+            "电子材料贸易",
+            "电子材料贸易"
+          ]
         },
         {
           "tag": "半导体分销",
@@ -7988,17 +14081,223 @@
         "云服务IaaS"
       ],
       "merged_tags": [
-        "综合商社",
-        "云・模型・应用"
+        "ICT/数字化",
+        "AI应用",
+        "企业AI",
+        "AI平台",
+        "AI",
+        "RAG",
+        "MCP",
+        "Agent",
+        "智能体Agent",
+        "AI内容生成",
+        "AI开发平台",
+        "AI办公",
+        "AI安全",
+        "AI医疗",
+        "AI金融",
+        "AI教育",
+        "数字员工",
+        "云服务IaaS",
+        "Azure",
+        "AWS",
+        "Google Cloud",
+        "GPU云",
+        "AI云",
+        "云服务"
       ],
       "tag_themes": [
         {
-          "tag": "综合商社",
-          "theme_path": []
+          "tag": "ICT/数字化",
+          "theme_path": [
+            "13. 综合商社",
+            "ICT/数字化",
+            "ICT/数字化"
+          ]
         },
         {
-          "tag": "云・模型・应用",
-          "theme_path": []
+          "tag": "AI应用",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI应用"
+          ]
+        },
+        {
+          "tag": "企业AI",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "企业AI"
+          ]
+        },
+        {
+          "tag": "AI平台",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI平台"
+          ]
+        },
+        {
+          "tag": "AI",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI"
+          ]
+        },
+        {
+          "tag": "RAG",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "RAG"
+          ]
+        },
+        {
+          "tag": "MCP",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "MCP"
+          ]
+        },
+        {
+          "tag": "Agent",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "Agent"
+          ]
+        },
+        {
+          "tag": "智能体Agent",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "智能体Agent"
+          ]
+        },
+        {
+          "tag": "AI内容生成",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI内容生成"
+          ]
+        },
+        {
+          "tag": "AI开发平台",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI开发平台"
+          ]
+        },
+        {
+          "tag": "AI办公",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI办公"
+          ]
+        },
+        {
+          "tag": "AI安全",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI安全"
+          ]
+        },
+        {
+          "tag": "AI医疗",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI医疗"
+          ]
+        },
+        {
+          "tag": "AI金融",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI金融"
+          ]
+        },
+        {
+          "tag": "AI教育",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI教育"
+          ]
+        },
+        {
+          "tag": "数字员工",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "数字员工"
+          ]
+        },
+        {
+          "tag": "云服务IaaS",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "云服务IaaS",
+            "云服务IaaS"
+          ]
+        },
+        {
+          "tag": "Azure",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "云服务IaaS",
+            "Azure"
+          ]
+        },
+        {
+          "tag": "AWS",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "云服务IaaS",
+            "AWS"
+          ]
+        },
+        {
+          "tag": "Google Cloud",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "云服务IaaS",
+            "Google Cloud"
+          ]
+        },
+        {
+          "tag": "GPU云",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "云服务IaaS",
+            "GPU云"
+          ]
+        },
+        {
+          "tag": "AI云",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "云服务IaaS",
+            "AI云"
+          ]
+        },
+        {
+          "tag": "云服务",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "云服务IaaS",
+            "云服务"
+          ]
         }
       ],
       "market_type": "日股",
@@ -8028,17 +14327,88 @@
         "云服务IaaS"
       ],
       "merged_tags": [
-        "综合商社",
-        "云・模型・应用"
+        "ICT/数字化",
+        "基础设施投资",
+        "云服务IaaS",
+        "Azure",
+        "AWS",
+        "Google Cloud",
+        "GPU云",
+        "AI云",
+        "云服务"
       ],
       "tag_themes": [
         {
-          "tag": "综合商社",
-          "theme_path": []
+          "tag": "ICT/数字化",
+          "theme_path": [
+            "13. 综合商社",
+            "ICT/数字化",
+            "ICT/数字化"
+          ]
         },
         {
-          "tag": "云・模型・应用",
-          "theme_path": []
+          "tag": "基础设施投资",
+          "theme_path": [
+            "13. 综合商社",
+            "基础设施投资",
+            "基础设施投资"
+          ]
+        },
+        {
+          "tag": "云服务IaaS",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "云服务IaaS",
+            "云服务IaaS"
+          ]
+        },
+        {
+          "tag": "Azure",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "云服务IaaS",
+            "Azure"
+          ]
+        },
+        {
+          "tag": "AWS",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "云服务IaaS",
+            "AWS"
+          ]
+        },
+        {
+          "tag": "Google Cloud",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "云服务IaaS",
+            "Google Cloud"
+          ]
+        },
+        {
+          "tag": "GPU云",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "云服务IaaS",
+            "GPU云"
+          ]
+        },
+        {
+          "tag": "AI云",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "云服务IaaS",
+            "AI云"
+          ]
+        },
+        {
+          "tag": "云服务",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "云服务IaaS",
+            "云服务"
+          ]
         }
       ],
       "market_type": "日股",
@@ -8068,17 +14438,88 @@
         "云服务IaaS"
       ],
       "merged_tags": [
-        "综合商社",
-        "云・模型・应用"
+        "ICT/数字化",
+        "基础设施投资",
+        "云服务IaaS",
+        "Azure",
+        "AWS",
+        "Google Cloud",
+        "GPU云",
+        "AI云",
+        "云服务"
       ],
       "tag_themes": [
         {
-          "tag": "综合商社",
-          "theme_path": []
+          "tag": "ICT/数字化",
+          "theme_path": [
+            "13. 综合商社",
+            "ICT/数字化",
+            "ICT/数字化"
+          ]
         },
         {
-          "tag": "云・模型・应用",
-          "theme_path": []
+          "tag": "基础设施投资",
+          "theme_path": [
+            "13. 综合商社",
+            "基础设施投资",
+            "基础设施投资"
+          ]
+        },
+        {
+          "tag": "云服务IaaS",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "云服务IaaS",
+            "云服务IaaS"
+          ]
+        },
+        {
+          "tag": "Azure",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "云服务IaaS",
+            "Azure"
+          ]
+        },
+        {
+          "tag": "AWS",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "云服务IaaS",
+            "AWS"
+          ]
+        },
+        {
+          "tag": "Google Cloud",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "云服务IaaS",
+            "Google Cloud"
+          ]
+        },
+        {
+          "tag": "GPU云",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "云服务IaaS",
+            "GPU云"
+          ]
+        },
+        {
+          "tag": "AI云",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "云服务IaaS",
+            "AI云"
+          ]
+        },
+        {
+          "tag": "云服务",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "云服务IaaS",
+            "云服务"
+          ]
         }
       ],
       "market_type": "日股",
@@ -8111,7 +14552,16 @@
       "merged_tags": [
         "散热片",
         "封装基板",
-        "半导体材料"
+        "ABF载板",
+        "BT载板",
+        "FC-BGA",
+        "TGV",
+        "玻璃基板",
+        "Low CTE玻纤布",
+        "高纯化学品",
+        "湿电子化学品",
+        "电子特气",
+        "工业气体"
       ],
       "tag_themes": [
         {
@@ -8131,8 +14581,84 @@
           ]
         },
         {
-          "tag": "半导体材料",
-          "theme_path": []
+          "tag": "ABF载板",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "ABF载板"
+          ]
+        },
+        {
+          "tag": "BT载板",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "BT载板"
+          ]
+        },
+        {
+          "tag": "FC-BGA",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "FC-BGA"
+          ]
+        },
+        {
+          "tag": "TGV",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "TGV"
+          ]
+        },
+        {
+          "tag": "玻璃基板",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "玻璃基板"
+          ]
+        },
+        {
+          "tag": "Low CTE玻纤布",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "Low CTE玻纤布"
+          ]
+        },
+        {
+          "tag": "高纯化学品",
+          "theme_path": [
+            "2. 半导体材料",
+            "高纯化学品",
+            "高纯化学品"
+          ]
+        },
+        {
+          "tag": "湿电子化学品",
+          "theme_path": [
+            "2. 半导体材料",
+            "高纯化学品",
+            "湿电子化学品"
+          ]
+        },
+        {
+          "tag": "电子特气",
+          "theme_path": [
+            "2. 半导体材料",
+            "电子特气",
+            "电子特气"
+          ]
+        },
+        {
+          "tag": "工业气体",
+          "theme_path": [
+            "2. 半导体材料",
+            "电子特气",
+            "工业气体"
+          ]
         }
       ],
       "market_type": "日股",
@@ -8163,9 +14689,63 @@
         "角色IP"
       ],
       "merged_tags": [
+        "IP授权",
+        "内容授权",
+        "空间授权",
+        "IP商品化",
+        "角色IP",
+        "虚拟IP",
         "IP运营与娱乐"
       ],
       "tag_themes": [
+        {
+          "tag": "IP授权",
+          "theme_path": [
+            "12. IP运营与娱乐",
+            "IP授权",
+            "IP授权"
+          ]
+        },
+        {
+          "tag": "内容授权",
+          "theme_path": [
+            "12. IP运营与娱乐",
+            "IP授权",
+            "内容授权"
+          ]
+        },
+        {
+          "tag": "空间授权",
+          "theme_path": [
+            "12. IP运营与娱乐",
+            "IP授权",
+            "空间授权"
+          ]
+        },
+        {
+          "tag": "IP商品化",
+          "theme_path": [
+            "12. IP运营与娱乐",
+            "IP商品化",
+            "IP商品化"
+          ]
+        },
+        {
+          "tag": "角色IP",
+          "theme_path": [
+            "12. IP运营与娱乐",
+            "IP商品化",
+            "角色IP"
+          ]
+        },
+        {
+          "tag": "虚拟IP",
+          "theme_path": [
+            "12. IP运营与娱乐",
+            "IP商品化",
+            "虚拟IP"
+          ]
+        },
         {
           "tag": "IP运营与娱乐",
           "theme_path": []
@@ -8340,12 +14920,88 @@
         "数据中心架构"
       ],
       "merged_tags": [
-        "电力・液冷・数据中心"
+        "数据中心",
+        "数据中心架构",
+        "数据中心供电",
+        "服务器",
+        "AI服务器",
+        "HPC",
+        "机柜",
+        "服务器机柜",
+        "HVAC"
       ],
       "tag_themes": [
         {
-          "tag": "电力・液冷・数据中心",
-          "theme_path": []
+          "tag": "数据中心",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "数据中心"
+          ]
+        },
+        {
+          "tag": "数据中心架构",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "数据中心架构"
+          ]
+        },
+        {
+          "tag": "数据中心供电",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "数据中心供电"
+          ]
+        },
+        {
+          "tag": "服务器",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "服务器"
+          ]
+        },
+        {
+          "tag": "AI服务器",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "AI服务器"
+          ]
+        },
+        {
+          "tag": "HPC",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "HPC"
+          ]
+        },
+        {
+          "tag": "机柜",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "机柜"
+          ]
+        },
+        {
+          "tag": "服务器机柜",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "服务器机柜"
+          ]
+        },
+        {
+          "tag": "HVAC",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "HVAC"
+          ]
         }
       ],
       "market_type": "日股",
@@ -8373,12 +15029,88 @@
         "数据中心架构"
       ],
       "merged_tags": [
-        "电力・液冷・数据中心"
+        "数据中心",
+        "数据中心架构",
+        "数据中心供电",
+        "服务器",
+        "AI服务器",
+        "HPC",
+        "机柜",
+        "服务器机柜",
+        "HVAC"
       ],
       "tag_themes": [
         {
-          "tag": "电力・液冷・数据中心",
-          "theme_path": []
+          "tag": "数据中心",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "数据中心"
+          ]
+        },
+        {
+          "tag": "数据中心架构",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "数据中心架构"
+          ]
+        },
+        {
+          "tag": "数据中心供电",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "数据中心供电"
+          ]
+        },
+        {
+          "tag": "服务器",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "服务器"
+          ]
+        },
+        {
+          "tag": "AI服务器",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "AI服务器"
+          ]
+        },
+        {
+          "tag": "HPC",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "HPC"
+          ]
+        },
+        {
+          "tag": "机柜",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "机柜"
+          ]
+        },
+        {
+          "tag": "服务器机柜",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "服务器机柜"
+          ]
+        },
+        {
+          "tag": "HVAC",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "HVAC"
+          ]
         }
       ],
       "market_type": "日股",
@@ -8406,12 +15138,88 @@
         "数据中心架构"
       ],
       "merged_tags": [
-        "电力・液冷・数据中心"
+        "数据中心",
+        "数据中心架构",
+        "数据中心供电",
+        "服务器",
+        "AI服务器",
+        "HPC",
+        "机柜",
+        "服务器机柜",
+        "HVAC"
       ],
       "tag_themes": [
         {
-          "tag": "电力・液冷・数据中心",
-          "theme_path": []
+          "tag": "数据中心",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "数据中心"
+          ]
+        },
+        {
+          "tag": "数据中心架构",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "数据中心架构"
+          ]
+        },
+        {
+          "tag": "数据中心供电",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "数据中心供电"
+          ]
+        },
+        {
+          "tag": "服务器",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "服务器"
+          ]
+        },
+        {
+          "tag": "AI服务器",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "AI服务器"
+          ]
+        },
+        {
+          "tag": "HPC",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "HPC"
+          ]
+        },
+        {
+          "tag": "机柜",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "机柜"
+          ]
+        },
+        {
+          "tag": "服务器机柜",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "服务器机柜"
+          ]
+        },
+        {
+          "tag": "HVAC",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "HVAC"
+          ]
         }
       ],
       "market_type": "日股",
@@ -8440,13 +15248,89 @@
         "海洋土木工程"
       ],
       "merged_tags": [
-        "电力・液冷・数据中心",
+        "数据中心",
+        "数据中心架构",
+        "数据中心供电",
+        "服务器",
+        "AI服务器",
+        "HPC",
+        "机柜",
+        "服务器机柜",
+        "HVAC",
         "海洋土木工程"
       ],
       "tag_themes": [
         {
-          "tag": "电力・液冷・数据中心",
-          "theme_path": []
+          "tag": "数据中心",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "数据中心"
+          ]
+        },
+        {
+          "tag": "数据中心架构",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "数据中心架构"
+          ]
+        },
+        {
+          "tag": "数据中心供电",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "数据中心供电"
+          ]
+        },
+        {
+          "tag": "服务器",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "服务器"
+          ]
+        },
+        {
+          "tag": "AI服务器",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "AI服务器"
+          ]
+        },
+        {
+          "tag": "HPC",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "HPC"
+          ]
+        },
+        {
+          "tag": "机柜",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "机柜"
+          ]
+        },
+        {
+          "tag": "服务器机柜",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "服务器机柜"
+          ]
+        },
+        {
+          "tag": "HVAC",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "HVAC"
+          ]
         },
         {
           "tag": "海洋土木工程",
