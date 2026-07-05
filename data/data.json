@@ -596,7 +596,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "GPU",
+          "tag": "GPU (图形处理器)",
           "theme_path": [
             "3. 算力芯片",
             "GPU",
@@ -653,7 +653,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "CPU",
+          "tag": "CPU (中央处理器)",
           "theme_path": [
             "3. 算力芯片",
             "CPU",
@@ -661,7 +661,7 @@
           ]
         },
         {
-          "tag": "GPU",
+          "tag": "GPU (图形处理器)",
           "theme_path": [
             "3. 算力芯片",
             "GPU",
@@ -708,7 +708,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "CPU",
+          "tag": "CPU (中央处理器)",
           "theme_path": [
             "3. 算力芯片",
             "CPU",
@@ -763,7 +763,7 @@
           ]
         },
         {
-          "tag": "CPU",
+          "tag": "CPU (中央处理器)",
           "theme_path": [
             "3. 算力芯片",
             "CPU",
@@ -802,7 +802,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "ASIC",
+          "tag": "ASIC (专用集成电路)",
           "theme_path": [
             "3. 算力芯片",
             "ASIC",
@@ -810,7 +810,7 @@
           ]
         },
         {
-          "tag": "PCIe",
+          "tag": "PCIe (高速扩展总线)",
           "theme_path": [
             "6. 网络互联",
             "PCIe",
@@ -851,7 +851,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "ASIC",
+          "tag": "ASIC (专用集成电路)",
           "theme_path": [
             "3. 算力芯片",
             "ASIC",
@@ -859,7 +859,7 @@
           ]
         },
         {
-          "tag": "SerDes",
+          "tag": "SerDes (串行解串器)",
           "theme_path": [
             "3. 算力芯片",
             "高速互联",
@@ -904,7 +904,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "CPU",
+          "tag": "CPU (中央处理器)",
           "theme_path": [
             "3. 算力芯片",
             "CPU",
@@ -943,7 +943,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "CPU",
+          "tag": "CPU (中央处理器)",
           "theme_path": [
             "3. 算力芯片",
             "CPU",
@@ -1037,7 +1037,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "MCU",
+          "tag": "MCU (微控制器)",
           "theme_path": [
             "3. 算力芯片",
             "AI SoC",
@@ -1100,7 +1100,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "ASIC",
+          "tag": "ASIC (专用集成电路)",
           "theme_path": [
             "3. 算力芯片",
             "ASIC",
@@ -1200,7 +1200,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "GPU",
+          "tag": "GPU (图形处理器)",
           "theme_path": [
             "3. 算力芯片",
             "GPU",
@@ -1245,7 +1245,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "GPU",
+          "tag": "GPU (图形处理器)",
           "theme_path": [
             "3. 算力芯片",
             "GPU",
@@ -1284,7 +1284,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "CPU",
+          "tag": "CPU (中央处理器)",
           "theme_path": [
             "3. 算力芯片",
             "CPU",
@@ -1329,7 +1329,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "CPU",
+          "tag": "CPU (中央处理器)",
           "theme_path": [
             "3. 算力芯片",
             "CPU",
@@ -1366,7 +1366,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "CPU",
+          "tag": "CPU (中央处理器)",
           "theme_path": [
             "3. 算力芯片",
             "CPU",
@@ -1529,7 +1529,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "HBM",
+          "tag": "HBM (高带宽内存)",
           "theme_path": [
             "4. 高带宽内存",
             "HBM",
@@ -1537,7 +1537,7 @@
           ]
         },
         {
-          "tag": "DRAM",
+          "tag": "DRAM (动态随机存取内存)",
           "theme_path": [
             "4. 高带宽内存",
             "DRAM",
@@ -1592,7 +1592,7 @@
           ]
         },
         {
-          "tag": "CXL",
+          "tag": "CXL (Compute Express Link)",
           "theme_path": [
             "3. 算力芯片",
             "高速互联",
@@ -1633,7 +1633,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "HBM",
+          "tag": "HBM (高带宽内存)",
           "theme_path": [
             "4. 高带宽内存",
             "HBM",
@@ -1641,7 +1641,7 @@
           ]
         },
         {
-          "tag": "DRAM",
+          "tag": "DRAM (动态随机存取内存)",
           "theme_path": [
             "4. 高带宽内存",
             "DRAM",
@@ -1649,7 +1649,7 @@
           ]
         },
         {
-          "tag": "NAND Flash",
+          "tag": "NAND Flash (闪存)",
           "theme_path": [
             "4. 高带宽内存",
             "NAND Flash",
@@ -1688,7 +1688,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "HBM",
+          "tag": "HBM (高带宽内存)",
           "theme_path": [
             "4. 高带宽内存",
             "HBM",
@@ -1696,7 +1696,7 @@
           ]
         },
         {
-          "tag": "DRAM",
+          "tag": "DRAM (动态随机存取内存)",
           "theme_path": [
             "4. 高带宽内存",
             "DRAM",
@@ -1735,7 +1735,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "NAND Flash",
+          "tag": "NAND Flash (闪存)",
           "theme_path": [
             "4. 高带宽内存",
             "NAND Flash",
@@ -1792,7 +1792,7 @@
           ]
         },
         {
-          "tag": "DDR5",
+          "tag": "DDR5 (第五代内存)",
           "theme_path": [
             "4. 高带宽内存",
             "DRAM",
@@ -1800,7 +1800,7 @@
           ]
         },
         {
-          "tag": "CXL",
+          "tag": "CXL (Compute Express Link)",
           "theme_path": [
             "3. 算力芯片",
             "高速互联",
@@ -1933,7 +1933,7 @@
           ]
         },
         {
-          "tag": "CMP",
+          "tag": "CMP (化学机械抛光)",
           "theme_path": [
             "1. 半导体设备",
             "CMP设备",
@@ -1949,7 +1949,7 @@
           "theme_path": []
         },
         {
-          "tag": "HBM",
+          "tag": "HBM (高带宽内存)",
           "theme_path": [
             "4. 高带宽内存",
             "HBM",
@@ -2079,7 +2079,7 @@
           ]
         },
         {
-          "tag": "Mask",
+          "tag": "光掩膜 (Mask)",
           "theme_path": [
             "2. 半导体材料",
             "光掩膜",
@@ -2087,7 +2087,7 @@
           ]
         },
         {
-          "tag": "EUV",
+          "tag": "EUV (极紫外光刻)",
           "theme_path": [
             "1. 半导体设备",
             "光刻机",
@@ -2152,7 +2152,7 @@
           ]
         },
         {
-          "tag": "Mask Blank",
+          "tag": "光刻基板 (Mask Blank)",
           "theme_path": [
             "2. 半导体材料",
             "光刻基板",
@@ -2160,7 +2160,7 @@
           ]
         },
         {
-          "tag": "EUV",
+          "tag": "EUV (极紫外光刻)",
           "theme_path": [
             "1. 半导体设备",
             "光刻机",
@@ -2377,7 +2377,7 @@
           "theme_path": []
         },
         {
-          "tag": "EUV",
+          "tag": "EUV (极紫外光刻)",
           "theme_path": [
             "1. 半导体设备",
             "光刻机",
@@ -2452,7 +2452,7 @@
           "theme_path": []
         },
         {
-          "tag": "HBM",
+          "tag": "HBM (高带宽内存)",
           "theme_path": [
             "4. 高带宽内存",
             "HBM",
@@ -2576,7 +2576,7 @@
           ]
         },
         {
-          "tag": "EUV",
+          "tag": "EUV (极紫外光刻)",
           "theme_path": [
             "1. 半导体设备",
             "光刻机",
@@ -2584,7 +2584,7 @@
           ]
         },
         {
-          "tag": "ArF",
+          "tag": "ArF (氟化氩激光)",
           "theme_path": [
             "1. 半导体设备",
             "光刻机",
@@ -2649,7 +2649,7 @@
           ]
         },
         {
-          "tag": "Mask",
+          "tag": "光掩膜 (Mask)",
           "theme_path": [
             "2. 半导体材料",
             "光掩膜",
@@ -2657,7 +2657,7 @@
           ]
         },
         {
-          "tag": "EUV",
+          "tag": "EUV (极紫外光刻)",
           "theme_path": [
             "1. 半导体设备",
             "光刻机",
@@ -2722,7 +2722,7 @@
           ]
         },
         {
-          "tag": "Mask",
+          "tag": "光掩膜 (Mask)",
           "theme_path": [
             "2. 半导体材料",
             "光掩膜",
@@ -2730,7 +2730,7 @@
           ]
         },
         {
-          "tag": "EUV",
+          "tag": "EUV (极紫外光刻)",
           "theme_path": [
             "1. 半导体设备",
             "光刻机",
@@ -2795,7 +2795,7 @@
           ]
         },
         {
-          "tag": "Mask Blank",
+          "tag": "光刻基板 (Mask Blank)",
           "theme_path": [
             "2. 半导体材料",
             "光刻基板",
@@ -2803,7 +2803,7 @@
           ]
         },
         {
-          "tag": "EUV",
+          "tag": "EUV (极紫外光刻)",
           "theme_path": [
             "1. 半导体设备",
             "光刻机",
@@ -3073,7 +3073,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "CMP",
+          "tag": "CMP (化学机械抛光)",
           "theme_path": [
             "1. 半导体设备",
             "CMP设备",
@@ -3097,7 +3097,7 @@
           "theme_path": []
         },
         {
-          "tag": "HBM",
+          "tag": "HBM (高带宽内存)",
           "theme_path": [
             "4. 高带宽内存",
             "HBM",
@@ -3142,7 +3142,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "FC-BGA",
+          "tag": "FC-BGA (倒装芯片球栅阵列)",
           "theme_path": [
             "2. 半导体材料",
             "封装基板",
@@ -3162,7 +3162,7 @@
           "theme_path": []
         },
         {
-          "tag": "HBM",
+          "tag": "HBM (高带宽内存)",
           "theme_path": [
             "4. 高带宽内存",
             "HBM",
@@ -3365,7 +3365,7 @@
           "theme_path": []
         },
         {
-          "tag": "FC-BGA",
+          "tag": "FC-BGA (倒装芯片球栅阵列)",
           "theme_path": [
             "2. 半导体材料",
             "封装基板",
@@ -3373,7 +3373,7 @@
           ]
         },
         {
-          "tag": "HBM",
+          "tag": "HBM (高带宽内存)",
           "theme_path": [
             "4. 高带宽内存",
             "HBM",
@@ -3737,7 +3737,7 @@
           ]
         },
         {
-          "tag": "EMC",
+          "tag": "EMC (环氧塑封料)",
           "theme_path": [
             "2. 半导体材料",
             "EMC塑封料",
@@ -3749,7 +3749,7 @@
           "theme_path": []
         },
         {
-          "tag": "HBM",
+          "tag": "HBM (高带宽内存)",
           "theme_path": [
             "4. 高带宽内存",
             "HBM",
@@ -3757,7 +3757,7 @@
           ]
         },
         {
-          "tag": "Chiplet",
+          "tag": "Chiplet (小芯片)",
           "theme_path": [
             "5. 先进封装",
             "Chiplet",
@@ -3832,7 +3832,7 @@
           "theme_path": []
         },
         {
-          "tag": "FC-BGA",
+          "tag": "FC-BGA (倒装芯片球栅阵列)",
           "theme_path": [
             "2. 半导体材料",
             "封装基板",
@@ -3840,7 +3840,7 @@
           ]
         },
         {
-          "tag": "HBM",
+          "tag": "HBM (高带宽内存)",
           "theme_path": [
             "4. 高带宽内存",
             "HBM",
@@ -3913,7 +3913,7 @@
           "theme_path": []
         },
         {
-          "tag": "HBM",
+          "tag": "HBM (高带宽内存)",
           "theme_path": [
             "4. 高带宽内存",
             "HBM",
@@ -3968,7 +3968,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "EUV",
+          "tag": "EUV (极紫外光刻)",
           "theme_path": [
             "1. 半导体设备",
             "光刻机",
@@ -3980,7 +3980,7 @@
           "theme_path": []
         },
         {
-          "tag": "Mask",
+          "tag": "光掩膜 (Mask)",
           "theme_path": [
             "2. 半导体材料",
             "光掩膜",
@@ -4755,7 +4755,7 @@
           ]
         },
         {
-          "tag": "EUV",
+          "tag": "EUV (极紫外光刻)",
           "theme_path": [
             "1. 半导体设备",
             "光刻机",
@@ -4800,7 +4800,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "CVD",
+          "tag": "CVD (化学气相沉积)",
           "theme_path": [
             "1. 半导体设备",
             "薄膜沉积设备",
@@ -4808,7 +4808,7 @@
           ]
         },
         {
-          "tag": "PVD",
+          "tag": "PVD (物理气相沉积)",
           "theme_path": [
             "1. 半导体设备",
             "薄膜沉积设备",
@@ -4816,7 +4816,7 @@
           ]
         },
         {
-          "tag": "CMP",
+          "tag": "CMP (化学机械抛光)",
           "theme_path": [
             "1. 半导体设备",
             "CMP设备",
@@ -4967,7 +4967,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "ATE",
+          "tag": "ATE (自动测试设备)",
           "theme_path": [
             "1. 半导体设备",
             "ATE测试设备",
@@ -5106,7 +5106,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "ATE",
+          "tag": "ATE (自动测试设备)",
           "theme_path": [
             "1. 半导体设备",
             "ATE测试设备",
@@ -5114,7 +5114,7 @@
           ]
         },
         {
-          "tag": "HBM",
+          "tag": "HBM (高带宽内存)",
           "theme_path": [
             "4. 高带宽内存",
             "HBM",
@@ -5245,7 +5245,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "ALD",
+          "tag": "ALD (原子层沉积)",
           "theme_path": [
             "1. 半导体设备",
             "薄膜沉积设备",
@@ -5253,7 +5253,7 @@
           ]
         },
         {
-          "tag": "CVD",
+          "tag": "CVD (化学气相沉积)",
           "theme_path": [
             "1. 半导体设备",
             "薄膜沉积设备",
@@ -5339,7 +5339,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "CMP",
+          "tag": "CMP (化学机械抛光)",
           "theme_path": [
             "1. 半导体设备",
             "CMP设备",
@@ -5396,7 +5396,7 @@
           "theme_path": []
         },
         {
-          "tag": "FC-BGA",
+          "tag": "FC-BGA (倒装芯片球栅阵列)",
           "theme_path": [
             "2. 半导体材料",
             "封装基板",
@@ -5617,7 +5617,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "DUV",
+          "tag": "DUV (深紫外光刻)",
           "theme_path": [
             "1. 半导体设备",
             "光刻机",
@@ -5699,7 +5699,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "Probe Card",
+          "tag": "探针卡 (Probe Card)",
           "theme_path": [
             "1. 半导体设备",
             "检测设备",
@@ -5746,7 +5746,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "Probe Card",
+          "tag": "探针卡 (Probe Card)",
           "theme_path": [
             "1. 半导体设备",
             "检测设备",
@@ -5754,7 +5754,7 @@
           ]
         },
         {
-          "tag": "HBM",
+          "tag": "HBM (高带宽内存)",
           "theme_path": [
             "4. 高带宽内存",
             "HBM",
@@ -5801,7 +5801,7 @@
           ]
         },
         {
-          "tag": "1.6T",
+          "tag": "1.6T (光模块)",
           "theme_path": [
             "7. 光通信",
             "光模块",
@@ -5840,7 +5840,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "Mask Writer",
+          "tag": "光罩描画 (Mask Writer)",
           "theme_path": [
             "1. 半导体设备",
             "检测设备",
@@ -5889,7 +5889,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "SEM",
+          "tag": "SEM (扫描电子显微镜)",
           "theme_path": [
             "1. 半导体设备",
             "检测设备",
@@ -5897,7 +5897,7 @@
           ]
         },
         {
-          "tag": "TEM",
+          "tag": "TEM (透射电子显微镜)",
           "theme_path": [
             "1. 半导体设备",
             "检测设备",
@@ -5944,7 +5944,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "NIL",
+          "tag": "NIL (纳米压印光刻)",
           "theme_path": [
             "1. 半导体设备",
             "光刻机",
@@ -5995,7 +5995,7 @@
           ]
         },
         {
-          "tag": "MOCVD",
+          "tag": "MOCVD (金属有机化学气相沉积)",
           "theme_path": [
             "1. 半导体设备",
             "薄膜沉积设备",
@@ -6040,7 +6040,7 @@
           "theme_path": []
         },
         {
-          "tag": "CoWoS",
+          "tag": "CoWoS (晶圆级封装)",
           "theme_path": [
             "5. 先进封装",
             "2.5D封装",
@@ -6048,7 +6048,7 @@
           ]
         },
         {
-          "tag": "SiP",
+          "tag": "SiP (系统级封装)",
           "theme_path": [
             "5. 先进封装",
             "系统级封装",
@@ -6089,7 +6089,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "Chiplet",
+          "tag": "Chiplet (小芯片)",
           "theme_path": [
             "5. 先进封装",
             "Chiplet",
@@ -6097,7 +6097,7 @@
           ]
         },
         {
-          "tag": "2.5D",
+          "tag": "2.5D封装",
           "theme_path": [
             "5. 先进封装",
             "2.5D封装",
@@ -6148,7 +6148,7 @@
           "theme_path": []
         },
         {
-          "tag": "Chiplet",
+          "tag": "Chiplet (小芯片)",
           "theme_path": [
             "5. 先进封装",
             "Chiplet",
@@ -6293,7 +6293,7 @@
           ]
         },
         {
-          "tag": "VCSEL",
+          "tag": "VCSEL (垂直腔面发射激光器)",
           "theme_path": [
             "7. 光通信",
             "光芯片",
@@ -6301,7 +6301,7 @@
           ]
         },
         {
-          "tag": "CPO",
+          "tag": "CPO (光电共封装)",
           "theme_path": [
             "7. 光通信",
             "硅光子",
@@ -6348,7 +6348,7 @@
           ]
         },
         {
-          "tag": "EML",
+          "tag": "EML (电吸收调制激光器)",
           "theme_path": [
             "7. 光通信",
             "光芯片",
@@ -6444,7 +6444,7 @@
           ]
         },
         {
-          "tag": "CPO",
+          "tag": "CPO (光电共封装)",
           "theme_path": [
             "7. 光通信",
             "硅光子",
@@ -6593,7 +6593,7 @@
           ]
         },
         {
-          "tag": "FA组件",
+          "tag": "FA组件 (光纤阵列)",
           "theme_path": [
             "7. 光通信",
             "光模块",
@@ -6815,7 +6815,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "UPS",
+          "tag": "UPS (不间断电源)",
           "theme_path": [
             "8. 电力・液冷・数据中心",
             "电力系统",
@@ -6870,7 +6870,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "UPS",
+          "tag": "UPS (不间断电源)",
           "theme_path": [
             "8. 电力・液冷・数据中心",
             "电力系统",
@@ -6927,7 +6927,7 @@
           ]
         },
         {
-          "tag": "UPS",
+          "tag": "UPS (不间断电源)",
           "theme_path": [
             "8. 电力・液冷・数据中心",
             "电力系统",
@@ -7021,7 +7021,7 @@
           "theme_path": []
         },
         {
-          "tag": "UPS",
+          "tag": "UPS (不间断电源)",
           "theme_path": [
             "8. 电力・液冷・数据中心",
             "电力系统",
@@ -7060,7 +7060,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "UPS",
+          "tag": "UPS (不间断电源)",
           "theme_path": [
             "8. 电力・液冷・数据中心",
             "电力系统",
@@ -7113,7 +7113,7 @@
           ]
         },
         {
-          "tag": "HVAC",
+          "tag": "HVAC (暖通空调)",
           "theme_path": [
             "8. 电力・液冷・数据中心",
             "数据中心架构",
@@ -7121,7 +7121,7 @@
           ]
         },
         {
-          "tag": "CDU",
+          "tag": "CDU (冷量分配单元)",
           "theme_path": [
             "8. 电力・液冷・数据中心",
             "液冷设备",
@@ -7211,7 +7211,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "MLCC",
+          "tag": "MLCC (多层陶瓷电容)",
           "theme_path": [
             "2. 半导体材料",
             "MLCC",
@@ -7403,7 +7403,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "MLCC",
+          "tag": "MLCC (多层陶瓷电容)",
           "theme_path": [
             "2. 半导体材料",
             "MLCC",
@@ -7446,7 +7446,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "MLCC",
+          "tag": "MLCC (多层陶瓷电容)",
           "theme_path": [
             "2. 半导体材料",
             "MLCC",
@@ -7618,7 +7618,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "Azure",
+          "tag": "Azure (微软云)",
           "theme_path": [
             "9. 云・模型・应用",
             "云服务IaaS",
@@ -7673,7 +7673,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "AWS",
+          "tag": "AWS (亚马逊云)",
           "theme_path": [
             "9. 云・模型・应用",
             "云服务IaaS",
@@ -7722,7 +7722,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "Google Cloud",
+          "tag": "Google Cloud (谷歌云)",
           "theme_path": [
             "9. 云・模型・应用",
             "云服务IaaS",
@@ -7734,7 +7734,7 @@
           "theme_path": []
         },
         {
-          "tag": "Gemini",
+          "tag": "Gemini (谷歌大模型)",
           "theme_path": [
             "9. 云・模型・应用",
             "基础模型",
@@ -7959,7 +7959,7 @@
           ]
         },
         {
-          "tag": "QPU",
+          "tag": "QPU (量子处理器)",
           "theme_path": [
             "11. 量子计算",
             "量子硬件",
@@ -8016,7 +8016,7 @@
           ]
         },
         {
-          "tag": "Qiskit",
+          "tag": "Qiskit (量子开发套件)",
           "theme_path": [
             "11. 量子计算",
             "量子软件与云",
@@ -8104,7 +8104,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "HPC",
+          "tag": "HPC (高性能计算)",
           "theme_path": [
             "8. 电力・液冷・数据中心",
             "数据中心架构",
@@ -8165,7 +8165,7 @@
           ]
         },
         {
-          "tag": "CNC",
+          "tag": "CNC (数控系统)",
           "theme_path": [
             "10. 工业自动化与机器人",
             "CNC数控系统",
@@ -8354,7 +8354,7 @@
           ]
         },
         {
-          "tag": "CDU",
+          "tag": "CDU (冷量分配单元)",
           "theme_path": [
             "8. 电力・液冷・数据中心",
             "液冷设备",
@@ -8395,7 +8395,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "PLC",
+          "tag": "PLC (可编程逻辑控制器)",
           "theme_path": [
             "10. 工业自动化与机器人",
             "PLC与传感器",
@@ -8603,7 +8603,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "PLC",
+          "tag": "PLC (可编程逻辑控制器)",
           "theme_path": [
             "10. 工业自动化与机器人",
             "PLC与传感器",
@@ -8627,7 +8627,7 @@
           ]
         },
         {
-          "tag": "IIoT",
+          "tag": "IIoT (工业物联网)",
           "theme_path": [
             "10. 工业自动化与机器人",
             "智能制造",
@@ -8668,7 +8668,7 @@
       ],
       "tag_themes": [
         {
-          "tag": "PLC",
+          "tag": "PLC (可编程逻辑控制器)",
           "theme_path": [
             "10. 工业自动化与机器人",
             "PLC与传感器",
@@ -8676,7 +8676,7 @@
           ]
         },
         {
-          "tag": "MES",
+          "tag": "MES (制造执行系统)",
           "theme_path": [
             "9. 云・模型・应用",
             "工业软件",
