@@ -852,7 +852,6 @@
                                 <a href="${getYahooUrl(stock)}" target="_blank" style="text-decoration: none; color: inherit;">
                                     <h3>${getMarketBadge(stock.market_type)} ${stock.name}</h3>
                                 </a>
-                                // 删除 industryName 变量，直接在模板中转换
                                 <span class="industry-tag">${getIndustryName(stock.sector, stock.industry) || '其他'}</span>
                             </div>
                             <div class="stock-actions">
