@@ -399,7 +399,19 @@
         <h2 class="section-title">AI 半导体与全要素核心标的集群</h2>
         <div id="industryContainer"></div>
     </div>
-    
+    <!-- ⭐ 在 footer 之前添加备份工具条 -->
+    <div class="memo-tools">
+        <span class="memo-tools-label">📦 メモ管理</span>
+        <button class="memo-tools-btn primary" onclick="exportAllMemos()">💾 バックアップ</button>
+        <label class="memo-tools-btn secondary" style="cursor:pointer;">
+            📂 復元
+            <input type="file" accept=".json" onchange="importAllMemos(this.files[0]); this.value='';">
+        </label>
+        <button class="memo-tools-btn secondary" id="autoBackupBtn" onclick="toggleAutoBackup()">
+            🔄 自動バックアップ: OFF
+        </button>
+        <span class="memo-tools-hint">📌 localStorage 保存</span>
+    </div>
     <!-- ⭐ Footer 占位符 -->
     <div id="footer-placeholder"></div>
 
@@ -666,25 +678,7 @@
         }
     };
     </script>
-    <!-- ⭐ 在 footer 之前添加备份工具条 -->
-    <div class="memo-tools">
-        <span class="memo-tools-label">📦 メモ管理</span>
-        <button class="memo-tools-btn primary" onclick="exportAllMemos()">💾 バックアップ</button>
-        <label class="memo-tools-btn secondary" style="cursor:pointer;">
-            📂 復元
-            <input type="file" accept=".json" onchange="importAllMemos(this.files[0]); this.value='';">
-        </label>
-        <button class="memo-tools-btn secondary" id="autoBackupBtn" onclick="toggleAutoBackup()">
-            🔄 自動バックアップ: OFF
-        </button>
-        <span class="memo-tools-hint">📌 localStorage 保存</span>
-    </div>
-    <!-- ⭐ Footer 占位符 -->
-    <div id="footer-placeholder"></div>
     
-    <!-- 引入脚本 -->
-    <script src="../components/navbar.js"></script>
-    <script src="../components/common.js"></script>
-    <script src="../components/footer.js"></script>
+    
 </body>
 </html>
