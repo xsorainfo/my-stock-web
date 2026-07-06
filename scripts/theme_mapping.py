@@ -239,6 +239,10 @@ THEME_MAPPING = {
             "tags": ["SerDes", "CXL", "SerDes (串行解串器)", "CXL (Compute Express Link)"],
             "description": "高速互联技术（SerDes、CXL等）实现芯片间高速数据传输，是大规模AI集群和高性能计算的关键基础设施。"
         },
+        "功率半导体": {
+            "tags": ["功率半导体", "IGBT", "MOSFET", "SiC功率器件", "GaN功率器件", "电源管理IC"],
+            "description": "功率半导体是实现电能转换与电路控制的核心器件（IGBT、MOSFET、SiC/GaN等），是AI数据中心电源管理、新能源汽车电驱系统的核心电力底座。"
+        },
     },
 
     # ============================================================
