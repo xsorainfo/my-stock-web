@@ -107,84 +107,80 @@ function copyToClipboard(text) {
     });
 }
 
-
 // ============================================================
-// 9. 渲染标签 HTML - 直接使用 display_tags（参照 sub_ai.html 的逻辑）
+// 9. 渲染标签 HTML
 // ============================================================
-function renderTags(stock) {
-    // ⭐ 防御性检查
-    if (!stock || typeof stock !== 'object') {
+function renderTags(tags, stockTagThemes, displayTags) {
+    // ⭐ 防御性检查：确保 displayTags 是数组
+    let displayList = [];
+    
+    // 优先使用 displayTags
+    if (displayTags && Array.isArray(displayTags)) {
+        displayList = displayTags;
+    } else if (tags && Array.isArray(tags)) {
+        displayList = tags;
+    } else {
         return '';
     }
     
-    // ⭐ 直接使用 display_tags（和 sub_ai.html 一样）
-    const displayTags = Array.isArray(stock.display_tags) ? stock.display_tags : 
-                        (Array.isArray(stock.tags) ? stock.tags : []);
+    if (!Array.isArray(displayList) || displayList.length === 0) {
+        return '';
+    }
     
-    if (displayTags.length === 0) return '';
+    const tagThemes = Array.isArray(stockTagThemes) ? stockTagThemes : [];
     
     const result = [];
-    
-    // ⭐ 和 sub_ai.html 完全一样的逻辑
-    displayTags.forEach((displayTag) => {
-        let foundPath = null;
+    displayList.forEach((displayTag) => {
+        if (typeof displayTag !== 'string') return;
         
-        // 在 tag_themes 中查找匹配
-        if (stock.tag_themes) {
-            for (const t of stock.tag_themes) {
-                // ⭐ 用 displayTag 匹配 tag_themes 中的 tag
-                if (t.tag === displayTag && t.theme_path && t.theme_path.length > 0) {
-                    foundPath = t.theme_path;
-                    break;
-                }
+        let foundPath = null;
+        for (const t of tagThemes) {
+            if (t && t.tag === displayTag && t.theme_path && Array.isArray(t.theme_path) && t.theme_path.length > 0) {
+                foundPath = t.theme_path;
+                break;
             }
         }
         
+        let displayText = displayTag;
+        let hasPath = false;
+        
         if (foundPath && foundPath.length >= 3) {
-            // 显示完整的三级路径：一级 › 二级 › 三级
-            result.push({
-                text: `${foundPath[0]} › ${foundPath[1]} › ${displayTag}`,
-                hasPath: true
-            });
+            displayText = `${foundPath[0]} › ${foundPath[1]} › ${displayTag}`;
+            hasPath = true;
         } else if (foundPath && foundPath.length >= 2) {
-            // 兼容只有两级的情况：一级 › 二级
-            result.push({
-                text: `${foundPath[0]} › ${displayTag}`,
-                hasPath: true
-            });
-        } else {
-            result.push({
-                text: displayTag,
-                hasPath: false
-            });
+            displayText = `${foundPath[0]} › ${displayTag}`;
+            hasPath = true;
         }
+        
+        result.push({
+            displayTag: displayTag,
+            displayText: displayText,
+            hasPath: hasPath
+        });
     });
     
     // 去重
     const unique = [];
     const seen = new Set();
     result.forEach(item => {
-        if (!seen.has(item.text)) {
-            seen.add(item.text);
+        if (!seen.has(item.displayTag)) {
+            seen.add(item.displayTag);
             unique.push(item);
         }
     });
     
-    // ⭐ 返回 HTML（和 sub_ai.html 一样，但加了点击跳转功能）
+    if (unique.length === 0) return '';
+    
     return unique.map(item => {
-        if (item.hasPath) {
-            // ⭐ 带点击跳转的标签
-            const jumpTag = encodeURIComponent(item.text.split(' › ').pop());
-            return `<span class="stock-tag clickable-tag theme-tag" onclick="navigateToTheme('${jumpTag}')" title="${item.text}">${item.text}</span>`;
-        } else {
-            // ⭐ 普通标签（不带跳转）
-            const jumpTag = encodeURIComponent(item.text);
-            return `<span class="stock-tag clickable-tag" onclick="navigateToTheme('${jumpTag}')" title="${item.text}">${item.text}</span>`;
-        }
+        const tagClass = item.hasPath ? 'stock-tag clickable-tag theme-tag' : 'stock-tag clickable-tag';
+        const jumpTag = encodeURIComponent(item.displayTag);
+        return `
+            <span class="${tagClass}" data-tag="${jumpTag}" onclick="navigateToTheme('${jumpTag}')" title="${item.displayText}">
+                ${item.displayText}
+            </span>
+        `;
     }).join('&nbsp;&nbsp;');
 }
-
-
 
 // ============================================================
 // 10. 跳转到主题页面
@@ -256,11 +252,347 @@ function getIndustryComment(sectorId, industryId) {
     const industry = sector.industries.find(item => item.industry_id === industryId);
     return industry ? industry.industry_comment : '';
 }
-// components/common.js
-
 
 // ============================================================
-// 16. 将函数暴露到全局
+// 16. 备忘录（メモ）功能
+// ============================================================
+
+// ⭐ 获取备忘录存储 key
+function getMemoKey(symbol) {
+    return `stock_memo_${symbol}`;
+}
+
+// ⭐ 保存备忘录
+function saveMemo(symbol, text) {
+    try {
+        localStorage.setItem(getMemoKey(symbol), text);
+        return true;
+    } catch (e) {
+        console.error('保存备忘录失败:', e);
+        return false;
+    }
+}
+
+// ⭐ 读取备忘录
+function loadMemo(symbol) {
+    try {
+        return localStorage.getItem(getMemoKey(symbol)) || '';
+    } catch (e) {
+        console.error('读取备忘录失败:', e);
+        return '';
+    }
+}
+
+// ⭐ 检查是否有备忘录
+function hasMemo(symbol) {
+    const memo = loadMemo(symbol);
+    return memo && memo.trim().length > 0;
+}
+
+// ⭐ 删除备忘录
+function deleteMemo(symbol) {
+    try {
+        localStorage.removeItem(getMemoKey(symbol));
+        return true;
+    } catch (e) {
+        console.error('删除备忘录失败:', e);
+        return false;
+    }
+}
+
+// ⭐ 获取备忘录字符数
+function getMemoCharCount(text) {
+    return text ? text.length : 0;
+}
+
+// ⭐ 生成备忘录 HTML（在卡片底部使用）
+function renderMemoHTML(stock) {
+    const symbol = stock.code;
+    const memoText = loadMemo(symbol);
+    const hasMemoText = memoText && memoText.trim().length > 0;
+    const charCount = getMemoCharCount(memoText);
+    
+    return `
+        <div class="stock-memo-section">
+            <div class="stock-memo-toggle" onclick="toggleMemo('${symbol}')">
+                <span class="memo-icon">📝</span>
+                <span>メモ</span>
+                <span class="memo-indicator ${hasMemoText ? 'has-memo' : ''}"></span>
+                <span class="memo-arrow" id="memoArrow_${symbol}">▶</span>
+            </div>
+            <div class="stock-memo-body" id="memoBody_${symbol}">
+                <textarea 
+                    class="stock-memo-textarea" 
+                    id="memoTextarea_${symbol}"
+                    placeholder="ここにメモを入力..."
+                    maxlength="500"
+                    oninput="onMemoInput('${symbol}')"
+                >${memoText.replace(/"/g, '&quot;')}</textarea>
+                <div class="stock-memo-actions">
+                    <span class="stock-memo-char-count" id="memoCount_${symbol}">${charCount}/500</span>
+                    <button class="stock-memo-save-btn" id="memoSaveBtn_${symbol}" onclick="saveMemoHandler('${symbol}')">
+                        💾 保存
+                    </button>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+// ⭐ 切换备忘录展开/收起
+function toggleMemo(symbol) {
+    const body = document.getElementById(`memoBody_${symbol}`);
+    const arrow = document.getElementById(`memoArrow_${symbol}`);
+    if (body) {
+        body.classList.toggle('open');
+        if (arrow) {
+            arrow.classList.toggle('open');
+        }
+        if (body.classList.contains('open')) {
+            const textarea = document.getElementById(`memoTextarea_${symbol}`);
+            if (textarea && !textarea.value.trim()) {
+                setTimeout(() => textarea.focus(), 100);
+            }
+        }
+    }
+}
+
+// ⭐ 备忘录输入事件
+function onMemoInput(symbol) {
+    const textarea = document.getElementById(`memoTextarea_${symbol}`);
+    const countEl = document.getElementById(`memoCount_${symbol}`);
+    if (textarea && countEl) {
+        const len = textarea.value.length;
+        countEl.textContent = `${len}/500`;
+        countEl.className = 'stock-memo-char-count' + (len > 450 ? ' warning' : '') + (len > 480 ? ' danger' : '');
+    }
+}
+
+// ⭐ 保存备忘录处理
+function saveMemoHandler(symbol) {
+    const textarea = document.getElementById(`memoTextarea_${symbol}`);
+    const btn = document.getElementById(`memoSaveBtn_${symbol}`);
+    if (!textarea) return;
+    
+    const text = textarea.value;
+    const success = saveMemo(symbol, text);
+    
+    if (success) {
+        btn.textContent = '✅ 保存完了';
+        btn.classList.add('saved');
+        
+        // 如果开启自动备份，保存时自动下载备份
+        if (autoBackupEnabled) {
+            setTimeout(() => {
+                exportAllMemosSilent();
+            }, 100);
+        }
+        
+        setTimeout(() => {
+            btn.textContent = '💾 保存';
+            btn.classList.remove('saved');
+        }, 2000);
+        
+        // 更新指示器
+        const section = btn.closest('.stock-memo-section');
+        if (section) {
+            const indicator = section.querySelector('.memo-indicator');
+            if (indicator) {
+                if (text && text.trim().length > 0) {
+                    indicator.classList.add('has-memo');
+                } else {
+                    indicator.classList.remove('has-memo');
+                }
+            }
+        }
+    } else {
+        btn.textContent = '❌ 保存失敗';
+        setTimeout(() => {
+            btn.textContent = '💾 保存';
+        }, 2000);
+    }
+}
+
+// ⭐ 删除备忘录处理
+function deleteMemoHandler(symbol) {
+    if (confirm('メモを削除しますか？')) {
+        const textarea = document.getElementById(`memoTextarea_${symbol}`);
+        if (textarea) {
+            textarea.value = '';
+            saveMemo(symbol, '');
+            const countEl = document.getElementById(`memoCount_${symbol}`);
+            if (countEl) countEl.textContent = '0/500';
+            const section = textarea.closest('.stock-memo-section');
+            if (section) {
+                const indicator = section.querySelector('.memo-indicator');
+                if (indicator) indicator.classList.remove('has-memo');
+            }
+            const btn = document.getElementById(`memoSaveBtn_${symbol}`);
+            if (btn) {
+                btn.textContent = '✅ 削除完了';
+                btn.classList.add('saved');
+                setTimeout(() => {
+                    btn.textContent = '💾 保存';
+                    btn.classList.remove('saved');
+                }, 2000);
+            }
+        }
+    }
+}
+
+// ============================================================
+// 17. 备忘录备份功能
+// ============================================================
+
+// ⭐ 导出所有备忘录为 JSON 文件
+function exportAllMemos() {
+    const allMemos = {};
+    let count = 0;
+    
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key && key.startsWith('stock_memo_')) {
+            const symbol = key.replace('stock_memo_', '');
+            const memo = localStorage.getItem(key);
+            if (memo && memo.trim().length > 0) {
+                allMemos[symbol] = memo;
+                count++;
+            }
+        }
+    }
+    
+    if (count === 0) {
+        alert('📭 保存されたメモがありません。');
+        return;
+    }
+    
+    const backupData = {
+        exportedAt: new Date().toISOString(),
+        version: '1.0',
+        totalMemos: count,
+        memos: allMemos
+    };
+    
+    const blob = new Blob([JSON.stringify(backupData, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `memos_backup_${new Date().toISOString().slice(0,10)}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    
+    console.log(`✅ ${count}件のメモをエクスポートしました`);
+}
+
+// ⭐ 导入备忘录备份文件
+function importAllMemos(file) {
+    if (!file) return;
+    
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        try {
+            const data = JSON.parse(e.target.result);
+            
+            if (!data.memos || typeof data.memos !== 'object') {
+                alert('❌ 無効なバックアップファイルです。');
+                return;
+            }
+            
+            const memos = data.memos;
+            let count = 0;
+            let overwritten = 0;
+            
+            for (const [symbol, memo] of Object.entries(memos)) {
+                if (memo && memo.trim().length > 0) {
+                    const existing = localStorage.getItem(`stock_memo_${symbol}`);
+                    if (existing && existing.trim().length > 0) {
+                        overwritten++;
+                    }
+                    localStorage.setItem(`stock_memo_${symbol}`, memo);
+                    count++;
+                }
+            }
+            
+            const msg = `✅ ${count}件のメモをインポートしました。\n${overwritten > 0 ? `⚠️ ${overwritten}件は上書きされました。` : ''}`;
+            alert(msg);
+            console.log(msg);
+            
+            if (confirm('🔄 ページをリフレッシュして表示を更新しますか？')) {
+                location.reload();
+            }
+        } catch (error) {
+            alert('❌ インポートに失敗しました。ファイル形式を確認してください。');
+            console.error('导入失败:', error);
+        }
+    };
+    reader.readAsText(file);
+}
+
+// ⭐ 静默导出（不弹窗）
+function exportAllMemosSilent() {
+    const allMemos = {};
+    let count = 0;
+    
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key && key.startsWith('stock_memo_')) {
+            const symbol = key.replace('stock_memo_', '');
+            const memo = localStorage.getItem(key);
+            if (memo && memo.trim().length > 0) {
+                allMemos[symbol] = memo;
+                count++;
+            }
+        }
+    }
+    
+    if (count === 0) return;
+    
+    const backupData = {
+        exportedAt: new Date().toISOString(),
+        version: '1.0',
+        totalMemos: count,
+        memos: allMemos
+    };
+    
+    const blob = new Blob([JSON.stringify(backupData, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `memos_auto_${new Date().toISOString().slice(0,10)}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
+// ⭐ 自动备份开关
+let autoBackupEnabled = false;
+
+function toggleAutoBackup() {
+    autoBackupEnabled = !autoBackupEnabled;
+    localStorage.setItem('auto_backup_enabled', autoBackupEnabled ? 'true' : 'false');
+    
+    const btn = document.getElementById('autoBackupBtn');
+    if (btn) {
+        btn.textContent = `🔄 自動バックアップ: ${autoBackupEnabled ? 'ON' : 'OFF'}`;
+        btn.style.background = autoBackupEnabled ? '#d1fae5' : '#f1f5f9';
+        btn.style.color = autoBackupEnabled ? '#065f46' : '#1e293b';
+    }
+    
+    console.log(`📦 自動バックアップ: ${autoBackupEnabled ? 'ON' : 'OFF'}`);
+}
+
+// ⭐ 初始化自动备份设置
+function initAutoBackup() {
+    const saved = localStorage.getItem('auto_backup_enabled');
+    autoBackupEnabled = saved === 'true';
+    return autoBackupEnabled;
+}
+
+// ============================================================
+// 18. 将函数暴露到全局
 // ============================================================
 window.judgeValuation = judgeValuation;
 window.judgeROE = judgeROE;
@@ -276,3 +608,18 @@ window.getSectorName = getSectorName;
 window.getSectorComment = getSectorComment;
 window.getIndustryName = getIndustryName;
 window.getIndustryComment = getIndustryComment;
+
+// 备忘录函数
+window.saveMemo = saveMemo;
+window.loadMemo = loadMemo;
+window.hasMemo = hasMemo;
+window.deleteMemo = deleteMemo;
+window.renderMemoHTML = renderMemoHTML;
+window.toggleMemo = toggleMemo;
+window.onMemoInput = onMemoInput;
+window.saveMemoHandler = saveMemoHandler;
+window.deleteMemoHandler = deleteMemoHandler;
+window.exportAllMemos = exportAllMemos;
+window.importAllMemos = importAllMemos;
+window.toggleAutoBackup = toggleAutoBackup;
+window.initAutoBackup = initAutoBackup;
