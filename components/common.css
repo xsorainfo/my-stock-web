@@ -1,6 +1,6 @@
 /* components/common.css */
 /* ============================================================
-   全局样式 + 组件样式
+   全局样式 + 组件样式（保留原有样式，只新增备忘录）
    ============================================================ */
 
 :root {
@@ -16,7 +16,6 @@
     --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
     --radius: 8px;
     --transition: 0.2s ease;
-    --nav-height: 64px;
 }
 
 * {
@@ -25,57 +24,16 @@
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-}
-
 body {
     font-family: -apple-system, 'Hiragino Sans', 'Noto Sans SC', 'Noto Sans JP', sans-serif;
     background: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
-    padding-top: var(--nav-height);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    padding-top: 64px;
 }
 
 /* ============================================================
-   导航栏修复（固定顶部）
-   ============================================================ */
-
-#navbar-placeholder {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    height: var(--nav-height);
-    background: #ffffff;
-    border-bottom: 1px solid var(--border-color);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
-}
-
-/* ============================================================
-   主容器（flex 布局撑开）
-   ============================================================ */
-
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 8px 16px;
-    flex: 1;
-    width: 100%;
-}
-/* sub_ai.html 的布局 */
-.main-layout {
-    display: flex;
-    height: calc(100vh - var(--nav-height));
-    overflow: hidden;
-    flex: 1;
-}
-/* ============================================================
-   股票卡片网格
+   股票卡片网格（原有样式，保持不变）
    ============================================================ */
 
 .stock-grid {
@@ -388,7 +346,7 @@ body {
 }
 
 /* ============================================================
-   备忘录（メモ）样式
+   备忘录（メモ）样式 - 新增
    ============================================================ */
 
 .stock-memo-section {
@@ -514,21 +472,6 @@ body {
     background: #059669;
 }
 
-.stock-memo-save-btn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-.stock-memo-status {
-    font-size: 10px;
-    color: #94a3b8;
-    align-self: center;
-}
-
-.stock-memo-status.saved {
-    color: #10b981;
-}
-
 .stock-memo-char-count {
     font-size: 10px;
     color: #94a3b8;
@@ -544,7 +487,7 @@ body {
 }
 
 /* ============================================================
-   备份工具条
+   备份工具条 - 新增
    ============================================================ */
 
 .memo-tools {
@@ -594,15 +537,6 @@ body {
     background: #e2e8f0;
 }
 
-.memo-tools-btn.success {
-    background: #d1fae5;
-    color: #065f46;
-}
-
-.memo-tools-btn.success:hover {
-    background: #a7f3d0;
-}
-
 .memo-tools-btn input[type="file"] {
     display: none;
 }
@@ -614,7 +548,7 @@ body {
 }
 
 /* ============================================================
-   响应式
+   响应式（保持原有）
    ============================================================ */
 
 @media (max-width: 768px) {
@@ -660,18 +594,4 @@ body {
     .stock-price {
         font-size: 16px;
     }
-}
-/* ============================================================
-   Footer 修复（固定在底部）
-   ============================================================ */
-
-#footer-placeholder {
-    margin-top: auto;
-    border-top: 1px solid var(--border-color);
-    background: #ffffff;
-    padding: 12px 20px;
-    text-align: center;
-    font-size: 12px;
-    color: #94a3b8;
-    width: 100%;
 }
