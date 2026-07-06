@@ -526,6 +526,8 @@
                     let currentMarket = '';
                     let marketHeader = '';
                     
+                    // index.html - loadDashboardData 函数中，找到渲染卡片的部分
+
                     sortedStocks.forEach(stock => {
                         // 如果市场变了，插入市场分隔标题
                         if (stock.market_type !== currentMarket) {
@@ -547,8 +549,15 @@
                         const formattedFeature = stock.feature.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
                         const colorClass = stock.isUp ? 'text-up' : 'text-down';
                         const trendClass = stock.trend === '牛市多头' ? 'trend-up-bg' : 'trend-down-bg';
-
-                        const tagsHtml = renderTags(stock);
+                    
+                        const tagsHtml = renderTags(
+                            Array.isArray(stock.tags) ? stock.tags : [],
+                            Array.isArray(stock.tag_themes) ? stock.tag_themes : [],
+                            Array.isArray(stock.display_tags) ? stock.display_tags : []
+                        );
+                        
+                        // ⭐ 生成备忘录 HTML
+                        const memoHtml = renderMemoHTML(stock);
                         
                         grid.innerHTML += `
                             <div class="stock-card">
@@ -557,6 +566,7 @@
                                         <a href="${getYahooUrl(stock)}" target="_blank" style="text-decoration: none; color: inherit;">
                                             <h3>${getMarketBadge(stock.market_type)} ${stock.name}</h3>
                                         </a>
+                                        <span class="industry-tag">${stock.industry || '其他'}</span>
                                     </div>
                                     <div class="stock-actions">
                                         <span class="stock-code" onclick="copyToClipboard('${stock.code}')" title="点击复制代码">
@@ -572,7 +582,7 @@
                                 <div class="tag-container">
                                     ${tagsHtml}
                                 </div>
-    
+                    
                                 <div class="stock-trend-badge ${trendClass}">${stock.trend}</div>
                                 <div class="price-row">
                                     <div class="stock-price ${colorClass}">${stock.price}</div>
@@ -599,7 +609,7 @@
                                         </tr>
                                     </tbody>
                                 </table>
-    
+                    
                                 <table class="metrics-table">
                                     <thead>
                                         <tr>
@@ -618,6 +628,9 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                                
+                                <!-- ⭐ 备忘录 -->
+                                ${memoHtml}
                             </div>`;
                     });
     
