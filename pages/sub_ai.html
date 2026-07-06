@@ -372,6 +372,7 @@
 
     <!-- 引入脚本 -->
     <script src="../components/navbar.js"></script>
+    <script src="../components/common.js"></script>
     <script>
         // ============================================================
         // 1. 全局数据
@@ -1121,6 +1122,7 @@
                 const response = await fetch('/data/data.json?v=' + new Date().getTime());
                 if (!response.ok) throw new Error('数据加载失败');
                 const data = await response.json();
+                await loadSectorMapping()
 
                 allStocks = data.stocks || [];
                 themeMapping = data.theme_mapping || {};
