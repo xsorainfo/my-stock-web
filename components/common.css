@@ -1,257 +1,250 @@
 /* components/common.css */
 /* ============================================================
-   全局样式 + 组件样式（保留原有样式，只新增备忘录）
+   共通样式 - 被 index.html 和 sub_ai.html 共享
    ============================================================ */
 
+/* ===== CSS 变量 ===== */
 :root {
-    --primary-color: #2563eb;
-    --primary-hover: #1d4ed8;
-    --bg-color: #f8fafc;
+    --bg-color: #f4f6f9;
     --card-bg: #ffffff;
-    --border-color: #e2e8f0;
-    --text-color: #0f172a;
+    --text-main: #1e293b;
     --text-muted: #64748b;
     --up-color: #ef4444;
-    --down-color: #22c55e;
-    --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-    --radius: 8px;
-    --transition: 0.2s ease;
+    --down-color: #10b981;
+    --border-color: #e2e8f0;
 }
 
+/* ===== 重置和基础 ===== */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 body {
-    font-family: -apple-system, 'Hiragino Sans', 'Noto Sans SC', 'Noto Sans JP', sans-serif;
-    background: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    padding-top: 64px;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.5;
 }
 
-/* ============================================================
-   股票卡片网格（原有样式，保持不变）
-   ============================================================ */
-
-.stock-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 16px;
-    margin-bottom: 16px;
-}
-
-.stock-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius);
-    padding: 16px 18px;
-    box-shadow: var(--shadow);
-    transition: box-shadow var(--transition), transform var(--transition);
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.stock-card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
-    transform: translateY(-2px);
-}
-
-/* ============================================================
-   市场分隔标题
-   ============================================================ */
-
+/* ===== 市场分隔标题 ===== */
 .market-divider {
-    font-size: 13px;
-    font-weight: 700;
-    color: #1e293b;
-    padding: 8px 12px 4px 12px;
     grid-column: 1 / -1;
-    border-bottom: 2px solid #e2e8f0;
-    margin-bottom: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+    padding: 8px 12px;
+    margin: 4px 0 8px 0;
+    background: #f1f5f9;
+    border-radius: 6px;
+    border-left: 3px solid #94a3b8;
     letter-spacing: 0.5px;
 }
 
-/* ============================================================
-   股票头部
-   ============================================================ */
-
-.stock-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 8px;
-}
-
-.stock-title {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 6px;
-}
-
-.stock-title h3 {
-    font-size: 15px;
-    font-weight: 700;
-    color: #0f172a;
-    margin: 0;
-}
-
-.industry-tag {
-    font-size: 10px;
-    font-weight: 600;
-    color: #2563eb;
-    background: #eff6ff;
-    padding: 1px 8px;
-    border-radius: 12px;
-    border: 1px solid #bfdbfe;
-    white-space: nowrap;
-}
-
-.stock-actions {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-shrink: 0;
-}
-
-.stock-code {
-    font-size: 11px;
-    font-weight: 600;
-    color: #94a3b8;
-    background: #f1f5f9;
-    padding: 1px 8px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background var(--transition), color var(--transition);
-    user-select: none;
-}
-
-.stock-code:hover {
-    background: #e2e8f0;
-    color: #1e293b;
-}
-
-.tv-link {
-    font-size: 16px;
-    text-decoration: none;
-    transition: transform var(--transition);
-    line-height: 1;
-}
-
-.tv-link:hover {
-    transform: scale(1.2);
-}
-
-/* ============================================================
-   股票描述
-   ============================================================ */
-
-.stock-feature {
-    font-size: 13px;
-    color: #475569;
-    line-height: 1.6;
-    margin: 4px 0 2px 0;
-}
-
-.stock-feature strong {
-    color: #1e293b;
-    font-weight: 700;
-}
-
-/* ============================================================
-   标签容器
-   ============================================================ */
-
+/* ===== 股票标签 ===== */
 .tag-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px 6px;
-    margin: 2px 0 4px 0;
+    gap: 12px;
+    margin-top: 10px;
 }
 
 .stock-tag {
-    font-size: 10px;
+    background-color: #e0f2f1;
+    color: #00796b;
+    font-size: 12px;
     font-weight: 500;
-    color: #475569;
-    background: #f1f5f9;
-    padding: 1px 8px;
-    border-radius: 12px;
-    border: 1px solid #e2e8f0;
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid #b2dfdb;
     white-space: nowrap;
-    transition: all var(--transition);
-}
-
-.stock-tag.theme-tag {
-    background: #eff6ff;
-    color: #1d4ed8;
-    border-color: #bfdbfe;
 }
 
 .stock-tag.clickable-tag {
     cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .stock-tag.clickable-tag:hover {
     background: #2563eb;
     color: #ffffff;
     border-color: #2563eb;
-    transform: scale(1.05);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
 }
 
-.stock-tag.theme-tag.clickable-tag:hover {
-    background: #2563eb;
-    color: #ffffff;
-    border-color: #2563eb;
+.stock-tag.clickable-tag:active {
+    transform: scale(0.95);
 }
 
-/* ============================================================
-   趋势标签
-   ============================================================ */
+/* 不同类别的标签 */
+.stock-tag.type-hard {
+    background: #ffebee;
+    color: #c62828;
+}
 
+.stock-tag.type-soft {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+
+.stock-tag.theme-tag {
+    background: #ede9fe;
+    color: #7c3aed;
+    border-color: #c4b5fd;
+    font-size: 10px;
+}
+
+/* ===== 股票代码 ===== */
+.stock-code {
+    font-size: 11px;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    background: #334155;
+    color: #f8fafc;
+    padding: 3px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+    user-select: none;
+}
+
+.stock-code:hover {
+    background: #0f172a;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    color: #38bdf8;
+}
+
+.stock-code:active {
+    transform: scale(0.95);
+    background: #1e293b;
+}
+
+/* ===== 股票卡片 ===== */
+.stock-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.stock-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.stock-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== 股票头部 ===== */
+.stock-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.stock-title h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.stock-title .industry-tag {
+    font-size: 11px;
+    color: #2563eb;
+    background: #eff6ff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 4px;
+}
+
+.stock-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ===== TradingView 链接 ===== */
+.tv-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+    text-decoration: none;
+    background: #f1f5f9;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+}
+
+.tv-link:hover {
+    background: #334155;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== 股票特征 ===== */
+.stock-feature {
+    font-family: 'Zen Maru Gothic', 'Hiragino Sans', 'Noto Sans SC', sans-serif;
+    font-size: 12px;
+    color: #1e293b;
+    background: #f8fafc;
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 14px;
+    min-height: 44px;
+}
+
+.stock-feature strong {
+    font-family: 'Zen Maru Gothic', 'Hiragino Sans', 'Noto Sans SC', sans-serif;
+    color: #1e293b;
+    font-weight: 700;
+}
+
+/* ===== 趋势徽章 ===== */
 .stock-trend-badge {
     font-size: 11px;
-    font-weight: 700;
-    padding: 2px 12px;
-    border-radius: 12px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
     display: inline-block;
-    align-self: flex-start;
+    margin-bottom: 12px;
 }
 
 .trend-up-bg {
-    background: #d1fae5;
-    color: #065f46;
-}
-
-.trend-down-bg {
     background: #fee2e2;
     color: #b91c1c;
 }
 
-/* ============================================================
-   价格行
-   ============================================================ */
+.trend-down-bg {
+    background: #d1fae5;
+    color: #065f46;
+}
 
+/* ===== 价格行 ===== */
 .price-row {
     display: flex;
-    align-items: baseline;
-    gap: 12px;
-    margin: 2px 0;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 12px;
 }
 
 .stock-price {
-    font-size: 20px;
-    font-weight: 700;
-    font-family: 'Courier New', monospace;
-}
-
-.stock-change {
-    font-size: 14px;
+    font-size: 26px;
     font-weight: 600;
-    font-family: 'Courier New', monospace;
 }
 
 .text-up {
@@ -262,96 +255,121 @@ body {
     color: var(--down-color);
 }
 
-/* ============================================================
-   指标表格
-   ============================================================ */
-
-.metrics-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 11px;
-    margin-top: 2px;
-}
-
-.metrics-table thead th {
-    font-weight: 600;
-    color: #94a3b8;
-    text-align: center;
-    padding: 2px 2px 4px 2px;
-    border-bottom: 1px solid #f1f5f9;
-    font-size: 10px;
-    letter-spacing: 0.3px;
-}
-
-.metrics-table tbody td {
-    text-align: center;
-    padding: 2px 2px;
-    font-weight: 500;
-    color: #1e293b;
-}
-
+/* ===== 指标徽章 ===== */
 .val-badge {
-    font-size: 10px;
-    font-weight: 600;
-    padding: 1px 6px;
+    font-size: 11px;
+    padding: 2px 6px;
     border-radius: 4px;
-    white-space: nowrap;
-}
-
-.val-normal {
-    background: #f1f5f9;
-    color: #475569;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 2px;
 }
 
 .val-high {
     background: #fee2e2;
-    color: #b91c1c;
+    color: #ef4444;
 }
 
 .val-low {
     background: #d1fae5;
-    color: #065f46;
+    color: #10b981;
 }
 
-/* ============================================================
-   空状态
-   ============================================================ */
+.val-normal {
+    background: #f1f5f9;
+    color: #64748b;
+}
 
-.empty-state {
+/* ===== 指标表格 ===== */
+.metrics-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+    color: #64748b;
     text-align: center;
-    padding: 60px 20px;
+}
+
+.metrics-table th {
+    font-weight: normal;
+    padding: 4px 2px;
+    background: #f8fafc;
+    color: #64748b;
+}
+
+.metrics-table td {
+    padding: 6px 2px 4px 2px;
+}
+
+/* ===== 空状态 ===== */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
     color: #94a3b8;
 }
 
 .empty-state .emoji {
     font-size: 48px;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
 
 .empty-state p {
     font-size: 16px;
 }
 
-/* ============================================================
-   章节标题
-   ============================================================ */
-
-.section-title {
-    font-size: 20px;
-    font-weight: 700;
-    color: #0f172a;
-    margin: 24px 0 16px 0;
-    padding-bottom: 8px;
-    border-bottom: 2px solid var(--border-color);
+/* ===== 响应式 ===== */
+@media (max-width: 768px) {
+    .stock-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
+/* components/common.css */
+/* 在文件末尾添加 */
+
+/* ===== 简单 Footer ===== */
+.simple-footer {
+    text-align: center;
+    padding: 24px 20px 20px;
+    margin-top: 40px;
+    border-top: 1px solid var(--border-color);
+    color: #94a3b8;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.simple-footer .brand {
+    color: #38bdf8;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.simple-footer .divider {
+    color: #e2e8f0;
+    margin: 0 8px;
+}
+
+@media (max-width: 480px) {
+    .simple-footer {
+        font-size: 11px;
+        padding: 16px 16px 14px;
+    }
+    .simple-footer .brand {
+        font-size: 12px;
+    }
+    .simple-footer .divider {
+        margin: 0 4px;
+    }
+}
 /* ============================================================
    备忘录（メモ）样式 - 新增
    ============================================================ */
 
 .stock-memo-section {
-    margin-top: 10px;
-    padding-top: 8px;
+    margin-top: 12px;
+    padding-top: 10px;
     border-top: 1px dashed #e2e8f0;
 }
 
@@ -548,23 +566,10 @@ body {
 }
 
 /* ============================================================
-   响应式（保持原有）
+   备忘录响应式 - 新增
    ============================================================ */
 
 @media (max-width: 768px) {
-    .stock-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-    .stock-card {
-        padding: 14px;
-    }
-    .stock-title h3 {
-        font-size: 14px;
-    }
-    .stock-price {
-        font-size: 18px;
-    }
     .memo-tools {
         gap: 6px;
         padding: 8px 12px;
@@ -575,23 +580,5 @@ body {
     }
     .memo-tools-hint {
         display: none;
-    }
-}
-
-@media (max-width: 480px) {
-    .stock-card {
-        padding: 10px;
-    }
-    .stock-title h3 {
-        font-size: 13px;
-    }
-    .stock-feature {
-        font-size: 12px;
-    }
-    .metrics-table {
-        font-size: 10px;
-    }
-    .stock-price {
-        font-size: 16px;
     }
 }
