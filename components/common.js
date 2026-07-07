@@ -312,15 +312,19 @@ function renderMemoHTML(stock) {
     const hasMemoText = memoText && memoText.trim().length > 0;
     const charCount = getMemoCharCount(memoText);
     
+    // ⭐ 如果有备忘录内容，默认展开
+    const isOpen = hasMemoText ? 'open' : '';
+    const arrowClass = hasMemoText ? 'open' : '';
+    
     return `
         <div class="stock-memo-section">
             <div class="stock-memo-toggle" onclick="toggleMemo('${symbol}')">
                 <span class="memo-icon">📝</span>
                 <span>メモ</span>
                 <span class="memo-indicator ${hasMemoText ? 'has-memo' : ''}"></span>
-                <span class="memo-arrow" id="memoArrow_${symbol}">▶</span>
+                <span class="memo-arrow ${arrowClass}" id="memoArrow_${symbol}">▶</span>
             </div>
-            <div class="stock-memo-body" id="memoBody_${symbol}">
+            <div class="stock-memo-body ${isOpen}" id="memoBody_${symbol}">
                 <textarea 
                     class="stock-memo-textarea" 
                     id="memoTextarea_${symbol}"
@@ -338,7 +342,6 @@ function renderMemoHTML(stock) {
         </div>
     `;
 }
-
 // ⭐ 切换备忘录展开/收起
 function toggleMemo(symbol) {
     const body = document.getElementById(`memoBody_${symbol}`);
