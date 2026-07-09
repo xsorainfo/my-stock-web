@@ -629,37 +629,54 @@ window.initAutoBackup = initAutoBackup;
 
 
 // ============================================================
-// 19. 空卖标志 + 悬浮窗
+// 19. 空卖标志 + 自定义悬浮窗（无 iframe，直接跳转）
 // ============================================================
 
 function renderShortBadge(symbol) {
     if (!symbol) return '';
     
-    // 构造 irbank.net 的搜索 URL
-    // 提取纯数字代码（去掉 .T, .SS 等后缀）
+    // 提取纯数字代码
     let cleanCode = symbol;
     if (symbol.includes('.')) {
         cleanCode = symbol.split('.')[0];
     }
-    // 只保留数字
     cleanCode = cleanCode.replace(/\D/g, '');
     if (!cleanCode) return '';
     
     const irbankUrl = `https://irbank.net/short/search?q=${cleanCode}`;
     
+    // ⭐ 显示空卖信息（这里可以放静态说明，或者后续用 AJAX 获取）
+    // 由于无法直接获取数据，显示提示信息和跳转链接
     return `
-        <span class="short-badge" data-symbol="${symbol}">
+        <a href="${irbankUrl}" target="_blank" rel="noopener noreferrer" 
+           class="short-badge" style="text-decoration: none;">
             <span class="badge-icon">📉</span>
             空売り
             <span class="short-tooltip">
-                <iframe 
-                    src="${irbankUrl}" 
-                    sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
-                    loading="lazy"
-                    title="空売り情報 - ${symbol}"
-                ></iframe>
+                <div class="tooltip-title">
+                    <span class="icon">📊</span>
+                    空売り情報
+                </div>
+                <div class="tooltip-body">
+                    <div class="info-row">
+                        <span class="label">コード</span>
+                        <span class="value">${cleanCode}</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">データ提供</span>
+                        <span class="value">irbank.net</span>
+                    </div>
+                    <div style="margin-top:8px;padding:8px 12px;background:#f8fafc;border-radius:4px;font-size:12px;color:#64748b;text-align:center;">
+                        🔍 クリックで空売り詳細ページへ
+                    </div>
+                </div>
+                <div class="tooltip-footer">
+                    <a href="${irbankUrl}" target="_blank" rel="noopener noreferrer">
+                        🔗 irbank.net で詳細を見る
+                    </a>
+                </div>
             </span>
-        </span>
+        </a>
     `;
 }
 
