@@ -617,125 +617,32 @@ body {
     font-size: 11px;
 }
 
-/* ⭐ 自定义悬浮窗 - 无 iframe */
-.short-tooltip {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    bottom: calc(100% + 8px);
-    left: 50%;
-    transform: translateX(-50%) translateY(4px);
-    z-index: 9999;
-    min-width: 280px;
-    max-width: 360px;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
-    border: 1px solid #e2e8f0;
-    transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
-    pointer-events: none;
-    padding: 16px 18px;
-}
+/* ============================================================
+   空卖链接样式
+   ============================================================ */
 
-.short-badge:hover .short-tooltip {
-    visibility: visible;
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-    pointer-events: auto;
-}
-
-/* 小三角箭头 */
-.short-tooltip::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 8px solid transparent;
-    border-top-color: #ffffff;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-}
-
-.short-tooltip .tooltip-title {
-    font-size: 13px;
-    font-weight: 700;
-    color: #0f172a;
-    margin-bottom: 8px;
-    display: flex;
+.short-badge {
+    display: inline-flex;
     align-items: center;
-    gap: 6px;
-}
-
-.short-tooltip .tooltip-title .icon {
-    font-size: 16px;
-}
-
-.short-tooltip .tooltip-body {
-    font-size: 12px;
-    color: #475569;
-    line-height: 1.6;
-}
-
-.short-tooltip .tooltip-body .info-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 4px 0;
-    border-bottom: 1px solid #f1f5f9;
-}
-
-.short-tooltip .tooltip-body .info-row:last-child {
-    border-bottom: none;
-}
-
-.short-tooltip .tooltip-body .label {
-    color: #94a3b8;
-}
-
-.short-tooltip .tooltip-body .value {
-    font-weight: 600;
-    color: #0f172a;
-}
-
-.short-tooltip .tooltip-body .value.negative {
+    gap: 3px;
+    margin-left: 6px;
+    font-size: 10px;
+    font-weight: 700;
     color: #ef4444;
-}
-
-.short-tooltip .tooltip-footer {
-    margin-top: 10px;
-    padding-top: 10px;
-    border-top: 1px solid #f1f5f9;
-    font-size: 11px;
-    color: #94a3b8;
-    text-align: center;
-}
-
-.short-tooltip .tooltip-footer a {
-    color: #2563eb;
+    background: #fee2e2;
+    padding: 1px 8px;
+    border-radius: 10px;
+    border: 1px solid #fca5a5;
+    transition: all 0.2s;
     text-decoration: none;
 }
 
-.short-tooltip .tooltip-footer a:hover {
-    text-decoration: underline;
+.short-badge:hover {
+    background: #ef4444;
+    color: #ffffff;
+    border-color: #ef4444;
 }
 
-/* 加载中状态 */
-.short-tooltip .loading-text {
-    color: #94a3b8;
-    font-size: 12px;
-    text-align: center;
-    padding: 12px 0;
-}
-
-/* 响应式 */
-@media (max-width: 640px) {
-    .short-tooltip {
-        min-width: 220px;
-        max-width: 280px;
-        padding: 12px 14px;
-        left: 50%;
-        transform: translateX(-50%) translateY(4px);
-    }
-    .short-badge:hover .short-tooltip {
-        transform: translateX(-50%) translateY(0);
-    }
+.short-badge .badge-icon {
+    font-size: 11px;
 }
