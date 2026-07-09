@@ -626,3 +626,42 @@ window.exportAllMemos = exportAllMemos;
 window.importAllMemos = importAllMemos;
 window.toggleAutoBackup = toggleAutoBackup;
 window.initAutoBackup = initAutoBackup;
+
+
+// ============================================================
+// 19. 空卖标志 + 悬浮窗
+// ============================================================
+
+function renderShortBadge(symbol) {
+    if (!symbol) return '';
+    
+    // 构造 irbank.net 的搜索 URL
+    // 提取纯数字代码（去掉 .T, .SS 等后缀）
+    let cleanCode = symbol;
+    if (symbol.includes('.')) {
+        cleanCode = symbol.split('.')[0];
+    }
+    // 只保留数字
+    cleanCode = cleanCode.replace(/\D/g, '');
+    if (!cleanCode) return '';
+    
+    const irbankUrl = `https://irbank.net/short/search?q=${cleanCode}`;
+    
+    return `
+        <span class="short-badge" data-symbol="${symbol}">
+            <span class="badge-icon">📉</span>
+            空売り
+            <span class="short-tooltip">
+                <iframe 
+                    src="${irbankUrl}" 
+                    sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+                    loading="lazy"
+                    title="空売り情報 - ${symbol}"
+                ></iframe>
+            </span>
+        </span>
+    `;
+}
+
+// 导出到全局
+window.renderShortBadge = renderShortBadge;
