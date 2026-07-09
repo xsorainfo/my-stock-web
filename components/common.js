@@ -629,7 +629,7 @@ window.initAutoBackup = initAutoBackup;
 
 
 // ============================================================
-// 19. 空卖标志 + 自定义悬浮窗（无 iframe，直接跳转）
+// 19. 空卖链接（直接跳转）
 // ============================================================
 
 function renderShortBadge(symbol) {
@@ -645,40 +645,15 @@ function renderShortBadge(symbol) {
     
     const irbankUrl = `https://irbank.net/short/search?q=${cleanCode}`;
     
-    // ⭐ 显示空卖信息（这里可以放静态说明，或者后续用 AJAX 获取）
-    // 由于无法直接获取数据，显示提示信息和跳转链接
     return `
         <a href="${irbankUrl}" target="_blank" rel="noopener noreferrer" 
-           class="short-badge" style="text-decoration: none;">
-            <span class="badge-icon">📉</span>
+           class="short-badge" style="text-decoration: none; display: inline-flex; align-items: center; gap: 3px; margin-left: 6px; font-size: 10px; font-weight: 700; color: #ef4444; background: #fee2e2; padding: 1px 8px; border-radius: 10px; border: 1px solid #fca5a5; transition: all 0.2s;">
+            <span style="font-size: 11px;">📉</span>
             空売り
-            <span class="short-tooltip">
-                <div class="tooltip-title">
-                    <span class="icon">📊</span>
-                    空売り情報
-                </div>
-                <div class="tooltip-body">
-                    <div class="info-row">
-                        <span class="label">コード</span>
-                        <span class="value">${cleanCode}</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="label">データ提供</span>
-                        <span class="value">irbank.net</span>
-                    </div>
-                    <div style="margin-top:8px;padding:8px 12px;background:#f8fafc;border-radius:4px;font-size:12px;color:#64748b;text-align:center;">
-                        🔍 クリックで空売り詳細ページへ
-                    </div>
-                </div>
-                <div class="tooltip-footer">
-                    <a href="${irbankUrl}" target="_blank" rel="noopener noreferrer">
-                        🔗 irbank.net で詳細を見る
-                    </a>
-                </div>
-            </span>
         </a>
     `;
 }
 
 // 导出到全局
 window.renderShortBadge = renderShortBadge;
+
