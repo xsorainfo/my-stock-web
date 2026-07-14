@@ -2,8 +2,8 @@
   "macro": [
     {
       "name": "标普 500 期货",
-      "price": "7592.75",
-      "change": "+29.75 (+0.39%)",
+      "price": "7601.00",
+      "change": "+38.00 (+0.50%)",
       "isUp": true,
       "type": "futures",
       "badge_label": "期货",
@@ -11,8 +11,8 @@
     },
     {
       "name": "WTI 原油",
-      "price": "79.93",
-      "change": "+1.79 (+2.29%)",
+      "price": "79.75",
+      "change": "+1.61 (+2.06%)",
       "isUp": true,
       "type": "futures",
       "badge_label": "期货",
@@ -20,8 +20,8 @@
     },
     {
       "name": "黄金",
-      "price": "4056.00",
-      "change": "+59.00 (+1.48%)",
+      "price": "4058.40",
+      "change": "+61.40 (+1.54%)",
       "isUp": true,
       "type": "commodity",
       "badge_label": "商品",
@@ -29,8 +29,8 @@
     },
     {
       "name": "白银",
-      "price": "59.02",
-      "change": "+1.39 (+2.40%)",
+      "price": "59.12",
+      "change": "+1.49 (+2.58%)",
       "isUp": true,
       "type": "commodity",
       "badge_label": "商品",
@@ -38,8 +38,8 @@
     },
     {
       "name": "铜",
-      "price": "6.36",
-      "change": "+0.13 (+2.07%)",
+      "price": "6.37",
+      "change": "+0.14 (+2.18%)",
       "isUp": true,
       "type": "commodity",
       "badge_label": "商品",
@@ -47,7 +47,7 @@
     },
     {
       "name": "美元/日元",
-      "price": "162.19",
+      "price": "162.18",
       "change": "-0.24 (-0.15%)",
       "isUp": false,
       "type": "forex",
@@ -636,7 +636,7 @@
       "isUp": true,
       "per": "32.43",
       "roe": "114.3%",
-      "forward_per": "16.56",
+      "forward_per": "16.54",
       "pbr": "26.25",
       "distHigh": "-10.5%",
       "ytdChange": "12.29%",
@@ -1579,6 +1579,89 @@
       "distWeek": "-8.1%",
       "distMonth": "-15.8%",
       "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "SKHY",
+      "name": "SKhynix(海力士)",
+      "sector": "1.1",
+      "industry": "1.1.2",
+      "feature": "**行业地位**：全球第二大存储芯片厂商，HBM（高带宽内存）全球龙头，英伟达AI GPU核心HBM供应商<br>**主营业务**：DRAM、HBM、NAND Flash、企业级SSD、CIS及先进存储解决方案<br>**竞争优势**：HBM3E/下一代HBM技术领先，AI服务器存储市场份额全球第一梯队，与NVIDIA、AMD、Broadcom等深度合作，技术壁垒高<br>**未来方向**：受益AI算力与数据中心建设，持续扩大HBM产能，推进HBM4、下一代DRAM、企业级SSD及先进封装布局，强化AI存储领导地位",
+      "tags": [
+        "HBM",
+        "DRAM",
+        "NAND Flash",
+        "企业级SSD",
+        "先进封装",
+        "AI服务器"
+      ],
+      "display_tags": [
+        "HBM (高带宽内存)",
+        "DRAM (动态随机存取内存)",
+        "NAND Flash (闪存)",
+        "企业级SSD",
+        "先进封装",
+        "AI服务器"
+      ],
+      "tag_themes": [
+        {
+          "tag": "HBM (高带宽内存)",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM (高带宽内存)"
+          ]
+        },
+        {
+          "tag": "DRAM (动态随机存取内存)",
+          "theme_path": [
+            "4. 高带宽内存",
+            "DRAM",
+            "DRAM (动态随机存取内存)"
+          ]
+        },
+        {
+          "tag": "NAND Flash (闪存)",
+          "theme_path": [
+            "4. 高带宽内存",
+            "NAND Flash",
+            "NAND Flash (闪存)"
+          ]
+        },
+        {
+          "tag": "企业级SSD",
+          "theme_path": [
+            "4. 高带宽内存",
+            "NAND Flash",
+            "企业级SSD"
+          ]
+        },
+        {
+          "tag": "先进封装",
+          "theme_path": []
+        },
+        {
+          "tag": "AI服务器",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "AI服务器"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "193.92",
+      "change": "+41.57 (+27.29%)",
+      "isUp": true,
+      "per": "28.19",
+      "roe": "61.2%",
+      "forward_per": "4.79",
+      "pbr": "--",
+      "distHigh": "-0.3%",
+      "ytdChange": "27.29%",
+      "distWeek": "-0.3%",
+      "distMonth": "-0.3%",
+      "trend": "牛市多头",
       "source": "yfinance"
     },
     {
@@ -9853,7 +9936,7 @@
       "price": "1994.50",
       "change": "+21.00 (+1.06%)",
       "isUp": true,
-      "per": "9.63",
+      "per": "9.53",
       "roe": "11.6%",
       "forward_per": "2.90",
       "pbr": "1.05",
@@ -10696,7 +10779,7 @@
       "per": "12.92",
       "roe": "9.8%",
       "forward_per": "10.97",
-      "pbr": "1.45",
+      "pbr": "1.03",
       "distHigh": "-4.8%",
       "ytdChange": "21.88%",
       "distWeek": "-0.8%",
