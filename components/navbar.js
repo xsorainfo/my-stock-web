@@ -105,7 +105,7 @@ function loadNavbar() {
             try {
                 const res = await fetch('/api/refresh', { method: 'POST' });
                 if (res.ok) {
-                    let s = 45;
+                    let s = 180;
                     btn.innerText = `🔄 等待 ${s}s 后刷新...`;
                     const t = setInterval(() => {
                         s--;
