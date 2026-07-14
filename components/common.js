@@ -657,3 +657,36 @@ function renderShortBadge(symbol) {
 // 导出到全局
 window.renderShortBadge = renderShortBadge;
 
+// ============================================================
+// 20. 判断是否为大幅波动（涨跌幅 ≥ 6%）
+// ============================================================
+
+function getChangePercent(changeStr) {
+    if (!changeStr) return 0;
+    const match = changeStr.match(/\(([^)]+)%\)/);
+    if (match) {
+        return parseFloat(match[1]);
+    }
+    return 0;
+}
+
+function getBigMoveMark(changeStr) {
+    const percent = getChangePercent(changeStr);
+    const absPercent = Math.abs(percent);
+    
+    if (absPercent < 6) return '';  // 涨跌幅 < 6%，不显示
+    
+    // 涨幅 ≥ 6%
+    if (percent > 0) {
+        return '<span class="big-move-mark big-up">🚀🔥 BIG UP</span>';
+    }
+    // 跌幅 ≥ 6%
+    if (percent < 0) {
+        return '<span class="big-move-mark big-down">🔴⚠️ BIG DROP</span>';
+    }
+    return '';
+}
+
+// 导出到全局
+window.getChangePercent = getChangePercent;
+window.getBigMoveMark = getBigMoveMark;
