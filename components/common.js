@@ -674,7 +674,7 @@ function getBigMoveMark(changeStr) {
     const percent = getChangePercent(changeStr);
     const absPercent = Math.abs(percent);
     
-    if (absPercent < 6) return '';  // 涨跌幅 < 6%，不显示
+    if (absPercent < 5) return '';  // 涨跌幅 < 5%，不显示
     
     // 涨幅 ≥ 6%
     if (percent > 0) {
