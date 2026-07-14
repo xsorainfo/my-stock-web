@@ -570,7 +570,8 @@
                         
                         // ⭐ 生成备忘录 HTML
                         const memoHtml = renderMemoHTML(stock);
-                        
+                        const bigMoveMark = getBigMoveMark(stock.change);
+
                         grid.innerHTML += `
                             <div class="stock-card">
                                 <div class="stock-header">
@@ -597,9 +598,14 @@
                                 </div>
                     
                                 <div class="stock-trend-badge ${trendClass}">${stock.trend}</div>
+
+                                
                                 <div class="price-row">
                                     <div class="stock-price ${colorClass}">${stock.price}</div>
-                                    <div class="stock-change ${colorClass}">${stock.change}</div>
+                                    <div class="stock-change ${colorClass}">
+                                        ${stock.change}
+                                        ${bigMoveMark}
+                                    </div>
                                 </div>
                                 
                                 <table class="metrics-table" style="margin-bottom: 6px;">
