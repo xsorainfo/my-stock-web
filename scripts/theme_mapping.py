@@ -4,6 +4,57 @@
 
 THEME_MAPPING = {
     # ============================================================
+    # 0. テーマ別
+    # ============================================================
+    "0. 人気テーマ": {
+        "フィジカルＡＩ": {
+            "tags": [
+                "フィジカルＡＩ", "半導体", "地方銀行", "データセンター", "人工知能",
+                "半導体製造装置", "核融合発電", "ＴＯＰＩＸコア３０", "宇宙開発関連", "防衛"
+            ],
+            "description": "https://kabutan.jp/themes/?theme=フィジカルAI"
+        },
+        "半導体": {
+            "tags": [
+                "半導体"
+            ],
+            "description": "https://kabutan.jp/themes/?theme=半導体"
+        },
+        "地方銀行": {
+            "tags": ["地方銀行"],
+            "description": "https://kabutan.jp/themes/?theme=地方銀行"
+        },
+        "データセンター": {
+            "tags": ["データセンター"],
+            "description": "https://kabutan.jp/themes/?theme=データセンター"
+        },
+        "人工知能": {
+            "tags": ["人工知能"],
+            "description": "https://kabutan.jp/themes/?theme=人工知能"
+        },
+        "半導体製造装置": {
+            "tags": ["半導体製造装置"],
+            "description": "https://kabutan.jp/themes/?theme=半導体製造装置"
+        },
+        "核融合発電": {
+            "tags": ["核融合発電"],
+            "description": "https://kabutan.jp/themes/?theme=核融合発電"
+        },
+        "ＴＯＰＩＸコア３０": {
+            "tags": ["ＴＯＰＩＸコア３０"],
+            "description": "https://kabutan.jp/themes/?theme=ＴＯＰＩＸコア３０"
+        },
+        "宇宙開発関連": {
+            "tags": ["宇宙開発関連"],
+            "description": "https://kabutan.jp/themes/?theme=宇宙開発関連"
+        },
+        "防衛": {
+            "tags": ["防衛"],
+            "description": "https://kabutan.jp/themes/?theme=防衛"
+        },
+    },
+    
+    # ============================================================
     # 1. 半导体设备
     # ============================================================
     "1. 半导体设备": {
