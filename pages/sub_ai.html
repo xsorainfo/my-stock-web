@@ -844,7 +844,7 @@
                 const colorClass = stock.isUp ? 'text-up' : 'text-down';
                 const trendClass = stock.trend === '牛市多头' ? 'trend-up-bg' : 'trend-down-bg';
                 const formattedFeature = stock.feature.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-
+                const bigMoveMark = getBigMoveMark(stock.change);
                 html += `
                     <div class="stock-card">
                         <div class="stock-header">
@@ -926,12 +926,15 @@
                                 }).join('');
                             })()}
                         </div>
-
+                        
                         <div class="stock-trend-badge ${trendClass}">${stock.trend}</div>
+
 
                         <div class="price-row">
                             <div class="stock-price ${colorClass}">${stock.price}</div>
-                            <div class="stock-change ${colorClass}">${stock.change}</div>
+                            <div class="stock-change ${colorClass}">
+                                ${stock.change}${bigMoveMark}
+                            </div>
                         </div>
 
                         <table class="metrics-table" style="margin-bottom: 6px;">
