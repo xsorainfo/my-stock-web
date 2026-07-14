@@ -646,3 +646,48 @@ body {
 .short-badge .badge-icon {
     font-size: 11px;
 }
+
+/* ============================================================
+   大幅波动警告标记（涨/跌）
+   ============================================================ */
+
+.big-move-mark {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 10px;
+    font-size: 11px;
+    font-weight: 800;
+    border-radius: 4px;
+    animation: blink-warning 1.2s ease-in-out infinite;
+    letter-spacing: 0.5px;
+}
+
+/* 大涨标记 */
+.big-move-mark.big-up {
+    background: #dc2626;
+    color: #ffffff;
+    box-shadow: 0 0 12px rgba(220, 38, 38, 0.5);
+}
+
+/* 大跌标记 */
+.big-move-mark.big-down {
+    background: #7c3aed;
+    color: #ffffff;
+    box-shadow: 0 0 12px rgba(124, 58, 237, 0.5);
+}
+
+@keyframes blink-warning {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(0.96);
+    }
+}
+
+/* 静态版本（不闪烁） */
+.big-move-mark.static {
+    animation: none;
+}
