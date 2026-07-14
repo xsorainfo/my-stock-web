@@ -57,6 +57,7 @@ function loadNavbar() {
                     <div class="dropdown-content">                        
                         <a href="${basePath}/docs/md.html?file=SEMICONDUCTOR_INDUSTRY" target="_blank">🧩 半导体产业链</a>
                         <a href="${basePath}/docs/md.html?file=AI_INDUSTRY_OVERVIEW" target="_blank">🧩 AI产业链全览</a>
+                        <a href="${basePath}/docs/md.html?file=PhysicalAI" target="_blank">🧩 フィジカルAI</a>
                         <a href="${basePath}/pages/medical_devices.html" target="_blank">🏥 医疗器械产业</a>
                         <a href="${basePath}/pages/bond_transmission.html" target="_blank">💰 国债传导链</a>
                         <a href="${basePath}/docs/md.html?file=WATCHLIST_SUMMARY" target="_blank">📝 标的总结</a>
