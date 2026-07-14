@@ -678,11 +678,11 @@ function getBigMoveMark(changeStr) {
     
     // 涨幅 ≥ 6%
     if (percent > 0) {
-        return '<span class="big-move-mark big-up">🚀🔥 BIG UP</span>';
+        return '<span class="big-move-mark big-up">🚀🔥大涨</span>';
     }
     // 跌幅 ≥ 6%
     if (percent < 0) {
-        return '<span class="big-move-mark big-down">🔴⚠️ BIG DROP</span>';
+        return '<span class="big-move-mark big-down">🔴⚠️大跌</span>';
     }
     return '';
 }
