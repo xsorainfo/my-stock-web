@@ -2,8 +2,8 @@
   "macro": [
     {
       "name": "标普 500 期货",
-      "price": "7499.00",
-      "change": "-78.75 (-1.04%)",
+      "price": "7513.75",
+      "change": "-64.00 (-0.84%)",
       "isUp": false,
       "type": "futures",
       "badge_label": "期货",
@@ -11,8 +11,8 @@
     },
     {
       "name": "WTI 原油",
-      "price": "79.53",
-      "change": "+0.58 (+0.73%)",
+      "price": "80.19",
+      "change": "+1.24 (+1.57%)",
       "isUp": true,
       "type": "futures",
       "badge_label": "期货",
@@ -20,8 +20,8 @@
     },
     {
       "name": "黄金",
-      "price": "3999.50",
-      "change": "+13.90 (+0.35%)",
+      "price": "3996.10",
+      "change": "+10.50 (+0.26%)",
       "isUp": true,
       "type": "commodity",
       "badge_label": "商品",
@@ -29,8 +29,8 @@
     },
     {
       "name": "白银",
-      "price": "55.77",
-      "change": "-0.13 (-0.23%)",
+      "price": "55.58",
+      "change": "-0.32 (-0.57%)",
       "isUp": false,
       "type": "commodity",
       "badge_label": "商品",
@@ -39,7 +39,7 @@
     {
       "name": "铜",
       "price": "6.21",
-      "change": "-0.09 (-1.44%)",
+      "change": "-0.09 (-1.38%)",
       "isUp": false,
       "type": "commodity",
       "badge_label": "商品",
@@ -47,8 +47,8 @@
     },
     {
       "name": "美元/日元",
-      "price": "162.43",
-      "change": "+0.35 (+0.22%)",
+      "price": "162.35",
+      "change": "+0.27 (+0.17%)",
       "isUp": true,
       "type": "forex",
       "badge_label": "FX",
@@ -533,8 +533,8 @@
     },
     {
       "name": "VIX 恐慌指数",
-      "price": "18.39",
-      "change": "+1.66 (+9.92%)",
+      "price": "18.11",
+      "change": "+1.38 (+8.25%)",
       "isUp": true,
       "type": "sentiment",
       "badge_label": "情绪",
@@ -542,8 +542,8 @@
     },
     {
       "name": "富时 100",
-      "price": "10567.59",
-      "change": "-4.61 (-0.04%)",
+      "price": "10549.38",
+      "change": "-22.82 (-0.22%)",
       "isUp": false,
       "type": "index",
       "badge_label": "",
@@ -560,8 +560,8 @@
     },
     {
       "name": "德国 DAX",
-      "price": "24732.98",
-      "change": "-182.51 (-0.73%)",
+      "price": "24749.50",
+      "change": "-165.99 (-0.67%)",
       "isUp": false,
       "type": "index",
       "badge_label": "",
@@ -569,8 +569,8 @@
     },
     {
       "name": "法国 CAC 40",
-      "price": "8313.53",
-      "change": "-64.33 (-0.77%)",
+      "price": "8309.61",
+      "change": "-68.25 (-0.81%)",
       "isUp": false,
       "type": "index",
       "badge_label": "",
@@ -634,7 +634,7 @@
       "price": "207.40",
       "change": "-5.10 (-2.40%)",
       "isUp": false,
-      "per": "32.56",
+      "per": "31.76",
       "roe": "114.3%",
       "forward_per": "16.16",
       "pbr": "25.70",
@@ -691,7 +691,7 @@
       "price": "500.94",
       "change": "-28.20 (-5.33%)",
       "isUp": false,
-      "per": "175.15",
+      "per": "166.43",
       "roe": "8.1%",
       "forward_per": "37.20",
       "pbr": "12.67",
@@ -785,7 +785,7 @@
       "price": "170.61",
       "change": "-7.37 (-4.14%)",
       "isUp": false,
-      "per": "19.13",
+      "per": "18.35",
       "roe": "36.1%",
       "forward_per": "15.44",
       "pbr": "6.62",
@@ -832,7 +832,7 @@
       "price": "374.45",
       "change": "-19.83 (-5.03%)",
       "isUp": false,
-      "per": "65.81",
+      "per": "62.10",
       "roe": "37.3%",
       "forward_per": "19.28",
       "pbr": "20.32",
@@ -936,7 +936,7 @@
       "price": "262.01",
       "change": "-15.00 (-5.41%)",
       "isUp": false,
-      "per": "323.47",
+      "per": "311.92",
       "roe": "12.0%",
       "forward_per": "85.08",
       "pbr": "33.65",
@@ -983,7 +983,7 @@
       "price": "333.26",
       "change": "+5.76 (+1.76%)",
       "isUp": true,
-      "per": "39.67",
+      "per": "40.35",
       "roe": "141.5%",
       "forward_per": "34.64",
       "pbr": "45.90",
@@ -1078,53 +1078,6 @@
       "ytdChange": "71.78%",
       "distWeek": "-21.0%",
       "distMonth": "-27.7%",
-      "trend": "熊市空头",
-      "source": "yfinance"
-    },
-    {
-      "code": "6526",
-      "name": "ソシオネクスト(Socionext)",
-      "sector": "1.1",
-      "industry": "1.1.1",
-      "feature": "**行业地位**：全球先进制程ASIC领先厂商<br>**主营业务**：定制SoC设计、AI加速器、高性能计算芯片、自动驾驶芯片<br>**竞争优势**：5nm/3nm定制芯片设计能力领先，AI边缘计算核心方案商，日本唯一大型ASIC设计企业<br>**未来方向**：AI数据中心与自动驾驶需求驱动ASIC业务增长，持续推进先进制程设计能力",
-      "tags": [
-        "ASIC",
-        "AI SoC"
-      ],
-      "display_tags": [
-        "ASIC (专用集成电路)",
-        "AI SoC"
-      ],
-      "tag_themes": [
-        {
-          "tag": "ASIC (专用集成电路)",
-          "theme_path": [
-            "3. 算力芯片",
-            "ASIC",
-            "ASIC (专用集成电路)"
-          ]
-        },
-        {
-          "tag": "AI SoC",
-          "theme_path": [
-            "3. 算力芯片",
-            "AI SoC",
-            "AI SoC"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "2266.00",
-      "change": "-206.50 (-8.35%)",
-      "isUp": false,
-      "per": "45.82",
-      "roe": "6.5%",
-      "forward_per": "15.86",
-      "pbr": "2.99",
-      "distHigh": "-35.1%",
-      "ytdChange": "0.98%",
-      "distWeek": "-22.2%",
-      "distMonth": "-22.9%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -1606,7 +1559,7 @@
       "price": "152.31",
       "change": "-24.15 (-13.69%)",
       "isUp": false,
-      "per": "25.73",
+      "per": "22.17",
       "roe": "61.2%",
       "forward_per": "3.76",
       "pbr": "9.84",
@@ -1615,6 +1568,63 @@
       "distWeek": "-21.8%",
       "distMonth": "-21.8%",
       "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "MU",
+      "name": "美光科技",
+      "sector": "1.1",
+      "industry": "1.1.2",
+      "feature": "**行业地位**：全球三大存储芯片厂商之一<br>**主营业务**：HBM、DRAM、企业级SSD、NAND Flash<br>**竞争优势**：HBM核心供应商，全球DRAM市占率约25%，HBM3E技术领先，AI训练内存核心供应商<br>**未来方向**：AI算力需求爆发驱动HBM与DRAM需求，企业级SSD受益数据中心存储升级",
+      "tags": [
+        "HBM",
+        "DRAM",
+        "企业级SSD"
+      ],
+      "display_tags": [
+        "HBM (高带宽内存)",
+        "DRAM (动态随机存取内存)",
+        "企业级SSD"
+      ],
+      "tag_themes": [
+        {
+          "tag": "HBM (高带宽内存)",
+          "theme_path": [
+            "4. 高带宽内存",
+            "HBM",
+            "HBM (高带宽内存)"
+          ]
+        },
+        {
+          "tag": "DRAM (动态随机存取内存)",
+          "theme_path": [
+            "4. 高带宽内存",
+            "DRAM",
+            "DRAM (动态随机存取内存)"
+          ]
+        },
+        {
+          "tag": "企业级SSD",
+          "theme_path": [
+            "4. 高带宽内存",
+            "NAND Flash",
+            "企业级SSD"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "853.20",
+      "change": "-51.08 (-5.65%)",
+      "isUp": false,
+      "per": "19.27",
+      "roe": "66.6%",
+      "forward_per": "5.67",
+      "pbr": "13.28",
+      "distHigh": "-32.0%",
+      "ytdChange": "170.65%",
+      "distWeek": "-14.5%",
+      "distMonth": "-32.0%",
+      "trend": "熊市空头",
       "source": "yfinance"
     },
     {
@@ -2058,7 +2068,7 @@
       "price": "520.74",
       "change": "+6.59 (+1.28%)",
       "isUp": true,
-      "per": "34.12",
+      "per": "34.49",
       "roe": "18.2%",
       "forward_per": "26.58",
       "pbr": "6.25",
@@ -2183,17 +2193,17 @@
         }
       ],
       "market_type": "德股",
-      "price": "48.56",
-      "change": "+0.15 (+0.31%)",
-      "isUp": true,
-      "per": "28.40",
+      "price": "48.22",
+      "change": "-0.19 (-0.39%)",
+      "isUp": false,
+      "per": "28.20",
       "roe": "4.4%",
-      "forward_per": "16.55",
+      "forward_per": "16.44",
       "pbr": "1.24",
-      "distHigh": "-11.8%",
-      "ytdChange": "13.10%",
-      "distWeek": "-3.3%",
-      "distMonth": "-3.3%",
+      "distHigh": "-12.4%",
+      "ytdChange": "12.31%",
+      "distWeek": "-4.0%",
+      "distMonth": "-4.0%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -4691,9 +4701,9 @@
       "price": "1784.87",
       "change": "-30.40 (-1.67%)",
       "isUp": false,
-      "per": "57.80",
+      "per": "56.82",
       "roe": "52.2%",
-      "forward_per": "31.18",
+      "forward_per": "30.89",
       "pbr": "1606.73",
       "distHigh": "-10.8%",
       "ytdChange": "53.91%",
@@ -4811,7 +4821,7 @@
       "price": "320.96",
       "change": "-14.47 (-4.31%)",
       "isUp": false,
-      "per": "63.31",
+      "per": "60.56",
       "roe": "66.8%",
       "forward_per": "39.71",
       "pbr": "37.92",
@@ -4864,61 +4874,14 @@
       "price": "219.37",
       "change": "-5.13 (-2.29%)",
       "isUp": false,
-      "per": "63.77",
+      "per": "62.14",
       "roe": "95.0%",
-      "forward_per": "42.84",
+      "forward_per": "42.81",
       "pbr": "49.18",
       "distHigh": "-28.6%",
       "ytdChange": "72.57%",
       "distWeek": "-7.7%",
       "distMonth": "-28.6%",
-      "trend": "熊市空头",
-      "source": "yfinance"
-    },
-    {
-      "code": "TER",
-      "name": "泰瑞达",
-      "sector": "1.2",
-      "industry": "1.2.2",
-      "feature": "**行业地位**：全球ATE测试设备龙头之一<br>**主营业务**：ATE自动测试设备、系统级测试、无线测试<br>**竞争优势**：ATE测试设备全球前三，GPU、CPU、HBM测试设备需求持续受益AI算力升级<br>**未来方向**：AI芯片测试复杂度提升驱动ATE设备需求，HBM测试设备需求高速增长",
-      "tags": [
-        "ATE",
-        "测试"
-      ],
-      "display_tags": [
-        "ATE (自动测试设备)",
-        "测试"
-      ],
-      "tag_themes": [
-        {
-          "tag": "ATE (自动测试设备)",
-          "theme_path": [
-            "1. 半导体设备",
-            "ATE测试设备",
-            "ATE (自动测试设备)"
-          ]
-        },
-        {
-          "tag": "测试",
-          "theme_path": [
-            "1. 半导体设备",
-            "ATE测试设备",
-            "测试"
-          ]
-        }
-      ],
-      "market_type": "美股",
-      "price": "322.30",
-      "change": "-19.82 (-5.79%)",
-      "isUp": false,
-      "per": "63.32",
-      "roe": "28.7%",
-      "forward_per": "32.76",
-      "pbr": "16.05",
-      "distHigh": "-33.9%",
-      "ytdChange": "55.40%",
-      "distWeek": "-11.7%",
-      "distMonth": "-33.9%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -5148,63 +5111,6 @@
       "ytdChange": "108.23%",
       "distWeek": "-13.2%",
       "distMonth": "-16.5%",
-      "trend": "熊市空头",
-      "source": "yfinance"
-    },
-    {
-      "code": "6525",
-      "name": "KOKUSAI ELECTRIC(国际电气)",
-      "sector": "1.2",
-      "industry": "1.2.2",
-      "feature": "**行业地位**：热处理/成膜设备龙头<br>**主营业务**：Batch ALD设备、CVD设备、热处理设备<br>**竞争优势**：Batch ALD/CVD全球领先，存储芯片与逻辑芯片制造核心设备，技术积累深厚<br>**未来方向**：存储芯片扩产与先进制程推进驱动热处理设备需求，持续拓展ALD设备应用",
-      "tags": [
-        "ALD",
-        "CVD",
-        "热处理"
-      ],
-      "display_tags": [
-        "ALD (原子层沉积)",
-        "CVD (化学气相沉积)",
-        "热处理"
-      ],
-      "tag_themes": [
-        {
-          "tag": "ALD (原子层沉积)",
-          "theme_path": [
-            "1. 半导体设备",
-            "薄膜沉积设备",
-            "ALD (原子层沉积)"
-          ]
-        },
-        {
-          "tag": "CVD (化学气相沉积)",
-          "theme_path": [
-            "1. 半导体设备",
-            "薄膜沉积设备",
-            "CVD (化学气相沉积)"
-          ]
-        },
-        {
-          "tag": "热处理",
-          "theme_path": [
-            "1. 半导体设备",
-            "热处理炉管",
-            "热处理"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "8801.00",
-      "change": "-1089.00 (-11.01%)",
-      "isUp": false,
-      "per": "68.45",
-      "roe": "14.5%",
-      "forward_per": "46.02",
-      "pbr": "9.37",
-      "distHigh": "-28.0%",
-      "ytdChange": "48.47%",
-      "distWeek": "-23.3%",
-      "distMonth": "-28.0%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -5994,10 +5900,10 @@
       "price": "39.51",
       "change": "-1.21 (-2.97%)",
       "isUp": false,
-      "per": "63.73",
+      "per": "61.73",
       "roe": "13.6%",
       "forward_per": "19.84",
-      "pbr": "7.95",
+      "pbr": "7.97",
       "distHigh": "-13.2%",
       "ytdChange": "136.70%",
       "distWeek": "-8.2%",
@@ -6194,7 +6100,7 @@
       "price": "276.96",
       "change": "-22.42 (-7.49%)",
       "isUp": false,
-      "per": "142.76",
+      "per": "131.89",
       "roe": "4.7%",
       "forward_per": "33.61",
       "pbr": "5.07",
@@ -6251,7 +6157,7 @@
       "price": "706.23",
       "change": "-45.77 (-6.09%)",
       "isUp": false,
-      "per": "131.51",
+      "per": "125.00",
       "roe": "22.8%",
       "forward_per": "38.59",
       "pbr": "17.03",
@@ -6761,7 +6667,7 @@
       "price": "308.02",
       "change": "-3.98 (-1.28%)",
       "isUp": false,
-      "per": "34.76",
+      "per": "34.72",
       "roe": "15.6%",
       "forward_per": "30.64",
       "pbr": "6.42",
@@ -6769,6 +6675,53 @@
       "ytdChange": "12.44%",
       "distWeek": "-5.6%",
       "distMonth": "-11.1%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "ETN",
+      "name": "伊顿",
+      "sector": "1.5",
+      "industry": "1.5.1",
+      "feature": "**行业地位**：全球电力管理巨头<br>**主营业务**：UPS、配电系统、电源管理、电气设备<br>**竞争优势**：Brightlayer数字化平台实现数据中心电力全生命周期管理，市占率全球前列<br>**未来方向**：AI数据中心电力基础设施投资加速，配电与UPS需求持续增长",
+      "tags": [
+        "UPS",
+        "配电系统"
+      ],
+      "display_tags": [
+        "UPS (不间断电源)",
+        "配电系统"
+      ],
+      "tag_themes": [
+        {
+          "tag": "UPS (不间断电源)",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "电力系统",
+            "UPS (不间断电源)"
+          ]
+        },
+        {
+          "tag": "配电系统",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "电力系统",
+            "配电系统"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "396.27",
+      "change": "-16.59 (-4.02%)",
+      "isUp": false,
+      "per": "38.77",
+      "roe": "20.8%",
+      "forward_per": "25.12",
+      "pbr": "7.80",
+      "distHigh": "-9.3%",
+      "ytdChange": "21.78%",
+      "distWeek": "-5.4%",
+      "distMonth": "-9.3%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -6818,7 +6771,7 @@
       "price": "294.11",
       "change": "-10.46 (-3.43%)",
       "isUp": false,
-      "per": "76.39",
+      "per": "74.08",
       "roe": "45.1%",
       "forward_per": "33.15",
       "pbr": "26.60",
@@ -7547,7 +7500,7 @@
       "price": "401.10",
       "change": "+5.47 (+1.38%)",
       "isUp": true,
-      "per": "23.58",
+      "per": "23.86",
       "roe": "34.0%",
       "forward_per": "20.70",
       "pbr": "7.19",
@@ -7594,7 +7547,7 @@
       "price": "249.89",
       "change": "-5.07 (-1.99%)",
       "isUp": false,
-      "per": "30.47",
+      "per": "29.86",
       "roe": "24.3%",
       "forward_per": "25.22",
       "pbr": "6.08",
@@ -7741,7 +7694,7 @@
       "price": "134.44",
       "change": "+0.68 (+0.51%)",
       "isUp": true,
-      "per": "149.38",
+      "per": "151.06",
       "roe": "32.6%",
       "forward_per": "64.19",
       "pbr": "38.14",
@@ -7788,7 +7741,7 @@
       "price": "35.10",
       "change": "-2.41 (-6.42%)",
       "isUp": false,
-      "per": "94.86",
+      "per": "90.00",
       "roe": "11.3%",
       "forward_per": "-31.94",
       "pbr": "2.63",
@@ -8230,7 +8183,7 @@
       "price": "5116.00",
       "change": "-378.00 (-6.88%)",
       "isUp": false,
-      "per": "37.73",
+      "per": "37.70",
       "roe": "7.5%",
       "forward_per": "24.97",
       "pbr": "2.74",
@@ -8607,17 +8560,17 @@
         }
       ],
       "market_type": "德股",
-      "price": "262.20",
-      "change": "-8.50 (-3.14%)",
+      "price": "263.25",
+      "change": "-7.45 (-2.75%)",
       "isUp": false,
-      "per": "27.11",
+      "per": "27.25",
       "roe": "12.6%",
-      "forward_per": "20.44",
-      "pbr": "3.17",
-      "distHigh": "-7.9%",
-      "ytdChange": "11.06%",
-      "distWeek": "-4.5%",
-      "distMonth": "-7.9%",
+      "forward_per": "20.52",
+      "pbr": "3.18",
+      "distHigh": "-7.5%",
+      "ytdChange": "11.51%",
+      "distWeek": "-4.1%",
+      "distMonth": "-7.5%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -8667,7 +8620,7 @@
       "price": "468.67",
       "change": "+6.75 (+1.46%)",
       "isUp": true,
-      "per": "48.07",
+      "per": "48.77",
       "roe": "27.2%",
       "forward_per": "32.04",
       "pbr": "14.81",
@@ -9221,6 +9174,43 @@
       "source": "yfinance"
     },
     {
+      "code": "GE",
+      "name": "GE Aerospace",
+      "sector": "4.1",
+      "industry": "4.1.2",
+      "feature": "**行业地位**：全球航空发动机巨头<br>**主营业务**：商用航空发动机、军用航空发动机、国防航空动力<br>**竞争优势**：商用航空发动机市占率超50%，国防航空动力核心供应商，技术积累深厚<br>**未来方向**：商用航空复苏驱动航空发动机需求，国防支出增长推动军用业务扩张",
+      "tags": [
+        "AI应用"
+      ],
+      "display_tags": [
+        "AI应用"
+      ],
+      "tag_themes": [
+        {
+          "tag": "AI应用",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI应用"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "345.73",
+      "change": "-14.62 (-4.06%)",
+      "isUp": false,
+      "per": "40.82",
+      "roe": "48.2%",
+      "forward_per": "39.59",
+      "pbr": "19.98",
+      "distHigh": "-9.7%",
+      "ytdChange": "8.08%",
+      "distWeek": "-4.1%",
+      "distMonth": "-9.6%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
       "code": "RTX",
       "name": "RTX Corporation",
       "sector": "4.1",
@@ -9246,7 +9236,7 @@
       "price": "194.36",
       "change": "-1.53 (-0.78%)",
       "isUp": false,
-      "per": "36.74",
+      "per": "36.47",
       "roe": "11.6%",
       "forward_per": "25.63",
       "pbr": "3.95",
@@ -10791,6 +10781,43 @@
       "source": "yfinance"
     },
     {
+      "code": "1803",
+      "name": "清水建設",
+      "sector": "7.2",
+      "industry": "7.2.1",
+      "feature": "**行业地位**：日本五大建设公司之一<br>**主营业务**：建筑工程、土木工程、环境工程、智能建筑、数据中心/半导体工厂建设<br>**竞争优势**：FY2025营收2.01万亿日元，首都圏民间建筑为主力，AI数据中心与半导体工厂核心承包商<br>**未来方向**：AI数据中心与半导体工厂建设需求驱动增长，环境工程与智能建筑布局提供新增长点",
+      "tags": [
+        "数据中心架构"
+      ],
+      "display_tags": [
+        "数据中心架构"
+      ],
+      "tag_themes": [
+        {
+          "tag": "数据中心架构",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "数据中心架构"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "2417.50",
+      "change": "-91.00 (-3.63%)",
+      "isUp": false,
+      "per": "12.95",
+      "roe": "13.4%",
+      "forward_per": "29.44",
+      "pbr": "1.68",
+      "distHigh": "-33.2%",
+      "ytdChange": "-9.83%",
+      "distWeek": "-4.7%",
+      "distMonth": "-11.9%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
       "code": "1885",
       "name": "東亜建設工業",
       "sector": "7.2",
@@ -10883,7 +10910,7 @@
       "source": "yfinance"
     }
   ],
-  "ai_report": "【盘后策略官·自动决策】：今日全球硬科技标的整体呈现 弱势震荡 态势。 当前重点观察：PER TTM 估值在 32.56 附近的垄断类资产， 配合距52周高位的 -12.3% 回撤，市场已进入结构性调仓阶段。",
+  "ai_report": "【盘后策略官·自动决策】：今日全球硬科技标的整体呈现 弱势震荡 态势。 当前重点观察：PER TTM 估值在 31.76 附近的垄断类资产， 配合距52周高位的 -12.3% 回撤，市场已进入结构性调仓阶段。",
   "theme_mapping": {
     "0. 人気テーマ": {
       "フィジカルＡＩ": {
