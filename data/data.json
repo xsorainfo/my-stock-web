@@ -1515,6 +1515,73 @@
       "source": "sina"
     },
     {
+      "code": "6707",
+      "name": "サンケン電気(三垦电气)",
+      "sector": "1.1",
+      "industry": "1.1.1",
+      "feature": "**行业地位**：日本功率半导体IDM厂商<br>**主营业务**：电源管理IC、MOSFET、IGBT、SiC/GaN功率器件<br>**竞争优势**：IDM模式覆盖设计到制造全链条，SiC/GaN器件技术持续突破，受益新能源汽车与工业自动化<br>**未来方向**：新能源汽车与AI数据中心电源需求驱动功率器件增长，第三代半导体产品线持续拓展",
+      "tags": [
+        "氮化镓 (GaN)",
+        "碳化硅 (SiC)",
+        "功率半导体",
+        "IGBT"
+      ],
+      "display_tags": [
+        "氮化镓 (GaN)",
+        "碳化硅 (SiC)",
+        "功率半导体",
+        "IGBT"
+      ],
+      "tag_themes": [
+        {
+          "tag": "氮化镓 (GaN)",
+          "theme_path": [
+            "2. 半导体材料",
+            "GaN衬底",
+            "氮化镓 (GaN)"
+          ]
+        },
+        {
+          "tag": "碳化硅 (SiC)",
+          "theme_path": [
+            "2. 半导体材料",
+            "SiC衬底",
+            "碳化硅 (SiC)"
+          ]
+        },
+        {
+          "tag": "功率半导体",
+          "theme_path": [
+            "3. 算力芯片",
+            "功率半导体",
+            "功率半导体"
+          ]
+        },
+        {
+          "tag": "IGBT",
+          "theme_path": [
+            "3. 算力芯片",
+            "功率半导体",
+            "IGBT"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "9041.00",
+      "change": "-435.00 (-4.59%)",
+      "isUp": false,
+      "per": "2.79",
+      "roe": "-7.3%",
+      "forward_per": "2.79",
+      "pbr": "1.51",
+      "distHigh": "-23.6%",
+      "ytdChange": "52.72%",
+      "distWeek": "-15.9%",
+      "distMonth": "-23.6%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
       "code": "SKHY",
       "name": "SKhynix(海力士)",
       "sector": "1.1",
@@ -2283,17 +2350,17 @@
         }
       ],
       "market_type": "德股",
-      "price": "48.42",
-      "change": "+0.48 (+0.99%)",
+      "price": "48.54",
+      "change": "+0.13 (+0.27%)",
       "isUp": true,
-      "per": "28.56",
+      "per": "28.39",
       "roe": "4.4%",
       "forward_per": "16.44",
       "pbr": "1.24",
-      "distHigh": "-12.1%",
-      "ytdChange": "12.75%",
-      "distWeek": "-3.6%",
-      "distMonth": "-3.6%",
+      "distHigh": "-11.8%",
+      "ytdChange": "13.05%",
+      "distWeek": "-3.3%",
+      "distMonth": "-3.3%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -3000,6 +3067,59 @@
       "distWeek": "-3.5%",
       "distMonth": "-6.4%",
       "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "4369",
+      "name": "トリケミカル研究所",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**行业地位**：日本电子特气龙头之一<br>**主营业务**：半导体电子特气、高纯前驱体、高纯化学品及先进制程材料<br>**竞争优势**：先进制程电子特气技术领先，是东京电子、应用材料及全球晶圆厂的重要供应商<br>**未来方向**：受益EUV、HBM及先进制程扩产，高纯电子材料需求持续增长",
+      "tags": [
+        "电子特气",
+        "高纯化学品",
+        "半导体材料"
+      ],
+      "display_tags": [
+        "电子特气",
+        "高纯化学品",
+        "半导体材料"
+      ],
+      "tag_themes": [
+        {
+          "tag": "电子特气",
+          "theme_path": [
+            "2. 半导体材料",
+            "电子特气",
+            "电子特气"
+          ]
+        },
+        {
+          "tag": "高纯化学品",
+          "theme_path": [
+            "2. 半导体材料",
+            "高纯化学品",
+            "高纯化学品"
+          ]
+        },
+        {
+          "tag": "半导体材料",
+          "theme_path": []
+        }
+      ],
+      "market_type": "日股",
+      "price": "3190.00",
+      "change": "-220.00 (-6.45%)",
+      "isUp": false,
+      "per": "18.80",
+      "roe": "18.1%",
+      "forward_per": "18.89",
+      "pbr": "2.82",
+      "distHigh": "-28.4%",
+      "ytdChange": "14.84%",
+      "distWeek": "-12.2%",
+      "distMonth": "-21.0%",
+      "trend": "熊市空头",
       "source": "yfinance"
     },
     {
@@ -6751,7 +6871,7 @@
       "price": "252.39",
       "change": "+0.62 (+0.25%)",
       "isUp": true,
-      "per": "21.93",
+      "per": "21.89",
       "roe": "16.1%",
       "forward_per": "18.58",
       "pbr": "2.73",
@@ -6974,6 +7094,59 @@
       "distWeek": "-3.6%",
       "distMonth": "-5.7%",
       "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "6503",
+      "name": "三菱電機",
+      "sector": "1.5",
+      "industry": "1.5.1",
+      "feature": "**行业地位**：日本电力电子与数据中心设备龙头<br>**主营业务**：变频器、UPS、大型配电系统、电力电子设备<br>**竞争优势**：功率半导体自给率优势，SiC MOSFET技术领先，FA与能源管理协同效应强<br>**未来方向**：AI数据中心电力基础设施需求增长，高効率UPS与配电系统受益",
+      "tags": [
+        "电力电子",
+        "UPS",
+        "フィジカルＡＩ"
+      ],
+      "display_tags": [
+        "电力电子",
+        "UPS (不间断电源)",
+        "フィジカルＡＩ"
+      ],
+      "tag_themes": [
+        {
+          "tag": "电力电子",
+          "theme_path": []
+        },
+        {
+          "tag": "UPS (不间断电源)",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "电力系统",
+            "UPS (不间断电源)"
+          ]
+        },
+        {
+          "tag": "フィジカルＡＩ",
+          "theme_path": [
+            "0. 人気テーマ",
+            "フィジカルＡＩ",
+            "フィジカルＡＩ"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "5370.00",
+      "change": "-296.00 (-5.22%)",
+      "isUp": false,
+      "per": "27.10",
+      "roe": "10.0%",
+      "forward_per": "32.52",
+      "pbr": "2.45",
+      "distHigh": "-19.7%",
+      "ytdChange": "12.74%",
+      "distWeek": "-8.5%",
+      "distMonth": "-15.4%",
+      "trend": "熊市空头",
       "source": "yfinance"
     },
     {
@@ -7588,7 +7761,7 @@
       "price": "393.82",
       "change": "-7.28 (-1.82%)",
       "isUp": false,
-      "per": "23.43",
+      "per": "23.87",
       "roe": "34.0%",
       "forward_per": "20.32",
       "pbr": "7.06",
@@ -8027,6 +8200,59 @@
       "distMonth": "-41.6%",
       "trend": "熊市空头",
       "source": "sina"
+    },
+    {
+      "code": "6597",
+      "name": "HPCシステムズ(HPC Systems)",
+      "sector": "1.7",
+      "industry": "1.7.2",
+      "feature": "**行业地位**：日本HPC与量子融合龙头<br>**主营业务**：HPC高性能计算、量子计算云、富岳云计算平台、量子化学<br>**竞争优势**：日本HPC领域深厚积累，量子计算云平台布局前瞻，与富岳超算协同<br>**未来方向**：HPC+量子融合计算需求增长驱动量子云平台需求，持续推进量子化学应用",
+      "tags": [
+        "HPC",
+        "量子计算",
+        "量子云"
+      ],
+      "display_tags": [
+        "HPC (高性能计算)",
+        "量子计算",
+        "量子云"
+      ],
+      "tag_themes": [
+        {
+          "tag": "HPC (高性能计算)",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "HPC (高性能计算)"
+          ]
+        },
+        {
+          "tag": "量子计算",
+          "theme_path": []
+        },
+        {
+          "tag": "量子云",
+          "theme_path": [
+            "11. 量子计算",
+            "量子软件与云",
+            "量子云"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "3440.00",
+      "change": "-330.00 (-8.75%)",
+      "isUp": false,
+      "per": "27.32",
+      "roe": "21.2%",
+      "forward_per": "32.12",
+      "pbr": "4.50",
+      "distHigh": "-54.1%",
+      "ytdChange": "92.20%",
+      "distWeek": "-12.0%",
+      "distMonth": "-39.8%",
+      "trend": "熊市空头",
+      "source": "yfinance"
     },
     {
       "code": "6954",
@@ -8595,17 +8821,17 @@
         }
       ],
       "market_type": "德股",
-      "price": "270.70",
-      "change": "+0.60 (+0.22%)",
-      "isUp": true,
+      "price": "264.55",
+      "change": "-6.15 (-2.27%)",
+      "isUp": false,
       "per": "27.39",
       "roe": "12.6%",
       "forward_per": "20.62",
       "pbr": "3.19",
-      "distHigh": "-4.9%",
-      "ytdChange": "14.66%",
-      "distWeek": "-1.5%",
-      "distMonth": "-4.9%",
+      "distHigh": "-7.1%",
+      "ytdChange": "12.06%",
+      "distWeek": "-3.6%",
+      "distMonth": "-7.1%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
