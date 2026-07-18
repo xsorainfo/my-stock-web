@@ -646,6 +646,63 @@
       "source": "yfinance"
     },
     {
+      "code": "AMD",
+      "name": "AMD(超威半导体)",
+      "sector": "1.1",
+      "industry": "1.1.1",
+      "feature": "**行业地位**：全球CPU与GPU双龙头之一<br>**主营业务**：EPYC服务器CPU、Instinct AI GPU、Ryzen PC CPU<br>**竞争优势**：x86 CPU市场份额持续扩大（超32%），MI300X性价比对标NVIDIA H100，CPU+GPU双轮驱动<br>**未来方向**：AI训练/推理份额提升，数据中心营收持续高增长，PC市场复苏驱动消费端增长",
+      "tags": [
+        "CPU",
+        "GPU",
+        "AI服务器"
+      ],
+      "display_tags": [
+        "CPU (中央处理器)",
+        "GPU (图形处理器)",
+        "AI服务器"
+      ],
+      "tag_themes": [
+        {
+          "tag": "CPU (中央处理器)",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU",
+            "CPU (中央处理器)"
+          ]
+        },
+        {
+          "tag": "GPU (图形处理器)",
+          "theme_path": [
+            "3. 算力芯片",
+            "GPU",
+            "GPU (图形处理器)"
+          ]
+        },
+        {
+          "tag": "AI服务器",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "AI服务器"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "495.76",
+      "change": "-5.18 (-1.03%)",
+      "isUp": false,
+      "per": "166.92",
+      "roe": "8.1%",
+      "forward_per": "36.82",
+      "pbr": "12.54",
+      "distHigh": "-15.2%",
+      "ytdChange": "121.85%",
+      "distWeek": "-13.7%",
+      "distMonth": "-15.2%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
       "code": "INTC",
       "name": "英特尔",
       "sector": "1.1",
@@ -1456,73 +1513,6 @@
       "distMonth": "-41.9%",
       "trend": "熊市空头",
       "source": "sina"
-    },
-    {
-      "code": "6707",
-      "name": "サンケン電気(三垦电气)",
-      "sector": "1.1",
-      "industry": "1.1.1",
-      "feature": "**行业地位**：日本功率半导体IDM厂商<br>**主营业务**：电源管理IC、MOSFET、IGBT、SiC/GaN功率器件<br>**竞争优势**：IDM模式覆盖设计到制造全链条，SiC/GaN器件技术持续突破，受益新能源汽车与工业自动化<br>**未来方向**：新能源汽车与AI数据中心电源需求驱动功率器件增长，第三代半导体产品线持续拓展",
-      "tags": [
-        "氮化镓 (GaN)",
-        "碳化硅 (SiC)",
-        "功率半导体",
-        "IGBT"
-      ],
-      "display_tags": [
-        "氮化镓 (GaN)",
-        "碳化硅 (SiC)",
-        "功率半导体",
-        "IGBT"
-      ],
-      "tag_themes": [
-        {
-          "tag": "氮化镓 (GaN)",
-          "theme_path": [
-            "2. 半导体材料",
-            "GaN衬底",
-            "氮化镓 (GaN)"
-          ]
-        },
-        {
-          "tag": "碳化硅 (SiC)",
-          "theme_path": [
-            "2. 半导体材料",
-            "SiC衬底",
-            "碳化硅 (SiC)"
-          ]
-        },
-        {
-          "tag": "功率半导体",
-          "theme_path": [
-            "3. 算力芯片",
-            "功率半导体",
-            "功率半导体"
-          ]
-        },
-        {
-          "tag": "IGBT",
-          "theme_path": [
-            "3. 算力芯片",
-            "功率半导体",
-            "IGBT"
-          ]
-        }
-      ],
-      "market_type": "日股",
-      "price": "9041.00",
-      "change": "-435.00 (-4.59%)",
-      "isUp": false,
-      "per": "2.79",
-      "roe": "-7.3%",
-      "forward_per": "2.79",
-      "pbr": "1.51",
-      "distHigh": "-23.6%",
-      "ytdChange": "52.72%",
-      "distWeek": "-15.9%",
-      "distMonth": "-23.6%",
-      "trend": "熊市空头",
-      "source": "yfinance"
     },
     {
       "code": "SKHY",
@@ -2643,6 +2633,69 @@
       "source": "yfinance"
     },
     {
+      "code": "4186",
+      "name": "東京応化工業",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**行业地位**：全球高端光刻胶龙头<br>**主营业务**：ArF光刻胶、EUV光刻胶、KrF光刻胶<br>**竞争优势**：ArF光刻胶全球领先，EUV光刻胶持续突破，技术研发能力行业顶尖<br>**未来方向**：EUV光刻胶在先进制程中用量持续提升，High-NA EUV光刻胶技术储备领先",
+      "tags": [
+        "光刻胶",
+        "EUV",
+        "ArF",
+        "先进制程"
+      ],
+      "display_tags": [
+        "光刻胶",
+        "EUV (极紫外光刻)",
+        "ArF (氟化氩激光)",
+        "先进制程"
+      ],
+      "tag_themes": [
+        {
+          "tag": "光刻胶",
+          "theme_path": [
+            "2. 半导体材料",
+            "光刻胶",
+            "光刻胶"
+          ]
+        },
+        {
+          "tag": "EUV (极紫外光刻)",
+          "theme_path": [
+            "1. 半导体设备",
+            "光刻机",
+            "EUV (极紫外光刻)"
+          ]
+        },
+        {
+          "tag": "ArF (氟化氩激光)",
+          "theme_path": [
+            "1. 半导体设备",
+            "光刻机",
+            "ArF (氟化氩激光)"
+          ]
+        },
+        {
+          "tag": "先进制程",
+          "theme_path": []
+        }
+      ],
+      "market_type": "日股",
+      "price": "9883.00",
+      "change": "-582.00 (-5.56%)",
+      "isUp": false,
+      "per": "35.46",
+      "roe": "5.5%",
+      "forward_per": "50.63",
+      "pbr": "2.89",
+      "distHigh": "-23.5%",
+      "ytdChange": "65.17%",
+      "distWeek": "-12.3%",
+      "distMonth": "-16.2%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
       "code": "7911",
       "name": "TOPPANホールディングス",
       "sector": "1.2",
@@ -2947,59 +3000,6 @@
       "distWeek": "-3.5%",
       "distMonth": "-6.4%",
       "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "4369",
-      "name": "トリケミカル研究所",
-      "sector": "1.2",
-      "industry": "1.2.1",
-      "feature": "**行业地位**：日本电子特气龙头之一<br>**主营业务**：半导体电子特气、高纯前驱体、高纯化学品及先进制程材料<br>**竞争优势**：先进制程电子特气技术领先，是东京电子、应用材料及全球晶圆厂的重要供应商<br>**未来方向**：受益EUV、HBM及先进制程扩产，高纯电子材料需求持续增长",
-      "tags": [
-        "电子特气",
-        "高纯化学品",
-        "半导体材料"
-      ],
-      "display_tags": [
-        "电子特气",
-        "高纯化学品",
-        "半导体材料"
-      ],
-      "tag_themes": [
-        {
-          "tag": "电子特气",
-          "theme_path": [
-            "2. 半导体材料",
-            "电子特气",
-            "电子特气"
-          ]
-        },
-        {
-          "tag": "高纯化学品",
-          "theme_path": [
-            "2. 半导体材料",
-            "高纯化学品",
-            "高纯化学品"
-          ]
-        },
-        {
-          "tag": "半导体材料",
-          "theme_path": []
-        }
-      ],
-      "market_type": "日股",
-      "price": "3190.00",
-      "change": "-220.00 (-6.45%)",
-      "isUp": false,
-      "per": "18.80",
-      "roe": "18.1%",
-      "forward_per": "18.89",
-      "pbr": "2.82",
-      "distHigh": "-28.4%",
-      "ytdChange": "14.84%",
-      "distWeek": "-12.2%",
-      "distMonth": "-21.0%",
-      "trend": "熊市空头",
       "source": "yfinance"
     },
     {
@@ -3387,7 +3387,7 @@
       "price": "927.00",
       "change": "-15.00 (-1.59%)",
       "isUp": false,
-      "per": "9.58",
+      "per": "9.59",
       "roe": "5.9%",
       "forward_per": "--",
       "pbr": "0.54",
@@ -4911,7 +4911,7 @@
       "price": "212.75",
       "change": "-6.62 (-3.02%)",
       "isUp": false,
-      "per": "60.27",
+      "per": "62.03",
       "roe": "95.0%",
       "forward_per": "41.51",
       "pbr": "47.69",
@@ -6153,6 +6153,106 @@
       "source": "sina"
     },
     {
+      "code": "6787",
+      "name": "メイコー(MEIKO)",
+      "sector": "1.3",
+      "industry": "1.3.2",
+      "feature": "**行业地位**：高端PCB制造商<br>**主营业务**：高多层PCB、AI服务器PCB、高速PCB<br>**竞争优势**：高多层PCB技术领先，AI服务器电路板核心供应商，技术壁垒高<br>**未来方向**：AI服务器与高速通信需求驱动高多层PCB需求，持续推进高层数PCB技术开发",
+      "tags": [
+        "PCB",
+        "AI服务器"
+      ],
+      "display_tags": [
+        "PCB",
+        "AI服务器"
+      ],
+      "tag_themes": [
+        {
+          "tag": "PCB",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "PCB"
+          ]
+        },
+        {
+          "tag": "AI服务器",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "AI服务器"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "22630.00",
+      "change": "-2170.00 (-8.75%)",
+      "isUp": false,
+      "per": "29.85",
+      "roe": "15.4%",
+      "forward_per": "35.88",
+      "pbr": "4.26",
+      "distHigh": "-50.0%",
+      "ytdChange": "111.62%",
+      "distWeek": "-18.0%",
+      "distMonth": "-44.7%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "COHR",
+      "name": "Coherent",
+      "sector": "1.4",
+      "industry": "1.4.2",
+      "feature": "**行业地位**：全球光通信器件龙头之一<br>**主营业务**：光模块、光芯片（激光器）、光学材料<br>**竞争优势**：光通信器件全产业链布局，激光器与光芯片技术全球领先，AI数据中心核心供应商<br>**未来方向**：AI数据中心高速互联需求驱动光模块需求，1.6T光模块放量推动产品单价上升",
+      "tags": [
+        "光模块",
+        "光芯片",
+        "激光器"
+      ],
+      "display_tags": [
+        "光模块",
+        "光芯片",
+        "激光器"
+      ],
+      "tag_themes": [
+        {
+          "tag": "光模块",
+          "theme_path": [
+            "7. 光通信",
+            "光模块",
+            "光模块"
+          ]
+        },
+        {
+          "tag": "光芯片",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "光芯片"
+          ]
+        },
+        {
+          "tag": "激光器",
+          "theme_path": []
+        }
+      ],
+      "market_type": "美股",
+      "price": "277.60",
+      "change": "+0.64 (+0.23%)",
+      "isUp": true,
+      "per": "131.56",
+      "roe": "4.7%",
+      "forward_per": "33.68",
+      "pbr": "5.08",
+      "distHigh": "-36.9%",
+      "ytdChange": "42.85%",
+      "distWeek": "-14.0%",
+      "distMonth": "-36.9%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
       "code": "LITE",
       "name": "Lumentum",
       "sector": "1.4",
@@ -6824,32 +6924,32 @@
       "source": "yfinance"
     },
     {
-      "code": "6503",
-      "name": "三菱電機",
+      "code": "6501",
+      "name": "日立製作所",
       "sector": "1.5",
       "industry": "1.5.1",
-      "feature": "**行业地位**：日本电力电子与数据中心设备龙头<br>**主营业务**：变频器、UPS、大型配电系统、电力电子设备<br>**竞争优势**：功率半导体自给率优势，SiC MOSFET技术领先，FA与能源管理协同效应强<br>**未来方向**：AI数据中心电力基础设施需求增长，高効率UPS与配电系统受益",
+      "feature": "**行业地位**：日本综合基础设施与能源管理龙头<br>**主营业务**：电网系统、变压器、能源管理、IT基础设施<br>**竞争优势**：电网/变压器市占率全球前列，Lumada平台实现能源与IT融合管理<br>**未来方向**：AI数据中心电力基础设施投资加速，电网升级与配电系统需求增长",
       "tags": [
-        "电力电子",
-        "UPS",
+        "电网",
+        "变压器",
         "フィジカルＡＩ"
       ],
       "display_tags": [
-        "电力电子",
-        "UPS (不间断电源)",
+        "电网",
+        "变压器",
         "フィジカルＡＩ"
       ],
       "tag_themes": [
         {
-          "tag": "电力电子",
+          "tag": "电网",
           "theme_path": []
         },
         {
-          "tag": "UPS (不间断电源)",
+          "tag": "变压器",
           "theme_path": [
             "8. 电力・液冷・数据中心",
             "电力系统",
-            "UPS (不间断电源)"
+            "变压器"
           ]
         },
         {
@@ -6862,17 +6962,60 @@
         }
       ],
       "market_type": "日股",
-      "price": "5370.00",
-      "change": "-296.00 (-5.22%)",
+      "price": "4717.00",
+      "change": "-111.00 (-2.30%)",
       "isUp": false,
-      "per": "27.10",
-      "roe": "10.0%",
-      "forward_per": "32.52",
-      "pbr": "2.45",
-      "distHigh": "-19.7%",
-      "ytdChange": "12.74%",
-      "distWeek": "-8.5%",
-      "distMonth": "-15.4%",
+      "per": "26.74",
+      "roe": "13.3%",
+      "forward_per": "26.48",
+      "pbr": "3.23",
+      "distHigh": "-21.9%",
+      "ytdChange": "-6.39%",
+      "distWeek": "-3.6%",
+      "distMonth": "-5.7%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "6504",
+      "name": "富士電機",
+      "sector": "1.5",
+      "industry": "1.5.1",
+      "feature": "**行业地位**：日本功率电子与电源设备龙头<br>**主营业务**：UPS、电源设备、SiC功率半导体、配电系统<br>**竞争优势**：功率半导体（SiC）技术领先，电源与FA设备一体化供应能力<br>**未来方向**：AI数据中心电源效率要求提升驱动SiC电源与高効率UPS需求增长",
+      "tags": [
+        "UPS",
+        "SiC电源"
+      ],
+      "display_tags": [
+        "UPS (不间断电源)",
+        "SiC电源"
+      ],
+      "tag_themes": [
+        {
+          "tag": "UPS (不间断电源)",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "电力系统",
+            "UPS (不间断电源)"
+          ]
+        },
+        {
+          "tag": "SiC电源",
+          "theme_path": []
+        }
+      ],
+      "market_type": "日股",
+      "price": "12110.00",
+      "change": "-585.00 (-4.61%)",
+      "isUp": false,
+      "per": "18.21",
+      "roe": "12.9%",
+      "forward_per": "19.94",
+      "pbr": "2.23",
+      "distHigh": "-32.0%",
+      "ytdChange": "1.13%",
+      "distWeek": "-9.4%",
+      "distMonth": "-20.9%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -7698,6 +7841,43 @@
       "source": "yfinance"
     },
     {
+      "code": "QBTS",
+      "name": "D-Wave Quantum",
+      "sector": "1.7",
+      "industry": "1.7.1",
+      "feature": "**行业地位**：退火量子计算商业化龙头<br>**主营业务**：退火量子计算、企业级量子应用、优化计算方案<br>**竞争优势**：退火量子计算商业化最成熟，聚焦优化计算与企业级应用，客户基础稳固<br>**未来方向**：企业级量子应用需求增长驱动退火量子计算需求，持续推进性能提升",
+      "tags": [
+        "退火量子计算"
+      ],
+      "display_tags": [
+        "退火量子计算"
+      ],
+      "tag_themes": [
+        {
+          "tag": "退火量子计算",
+          "theme_path": [
+            "11. 量子计算",
+            "量子硬件",
+            "退火量子计算"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "16.73",
+      "change": "-0.19 (-1.12%)",
+      "isUp": false,
+      "per": "-42.28",
+      "roe": "-55.3%",
+      "forward_per": "-42.28",
+      "pbr": "5.51",
+      "distHigh": "-64.2%",
+      "ytdChange": "-40.53%",
+      "distWeek": "-15.0%",
+      "distMonth": "-37.4%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
       "code": "RGTI",
       "name": "Rigetti Computing",
       "sector": "1.7",
@@ -7790,7 +7970,7 @@
       "price": "212.67",
       "change": "-6.38 (-2.91%)",
       "isUp": false,
-      "per": "18.82",
+      "per": "19.39",
       "roe": "35.8%",
       "forward_per": "16.02",
       "pbr": "6.06",
@@ -7849,55 +8029,69 @@
       "source": "sina"
     },
     {
-      "code": "6597",
-      "name": "HPCシステムズ(HPC Systems)",
-      "sector": "1.7",
-      "industry": "1.7.2",
-      "feature": "**行业地位**：日本HPC与量子融合龙头<br>**主营业务**：HPC高性能计算、量子计算云、富岳云计算平台、量子化学<br>**竞争优势**：日本HPC领域深厚积累，量子计算云平台布局前瞻，与富岳超算协同<br>**未来方向**：HPC+量子融合计算需求增长驱动量子云平台需求，持续推进量子化学应用",
+      "code": "6954",
+      "name": "ファナック(发那科)",
+      "sector": "2.1",
+      "industry": "2.1.1",
+      "feature": "**行业地位**：全球工业自动化龙头<br>**主营业务**：工业机器人、CNC系统、FA自动化设备<br>**竞争优势**：CNC系统全球市占率超50%，工业机器人四大家族之一，工厂自动化绝对龙头<br>**未来方向**：AI赋能智能制造驱动FA自动化需求增长，机器人渗透率持续提升",
       "tags": [
-        "HPC",
-        "量子计算",
-        "量子云"
+        "工业机器人",
+        "CNC",
+        "FA自动化",
+        "フィジカルＡＩ"
       ],
       "display_tags": [
-        "HPC (高性能计算)",
-        "量子计算",
-        "量子云"
+        "工业机器人",
+        "CNC (数控系统)",
+        "FA自动化",
+        "フィジカルＡＩ"
       ],
       "tag_themes": [
         {
-          "tag": "HPC (高性能计算)",
+          "tag": "工业机器人",
           "theme_path": [
-            "8. 电力・液冷・数据中心",
-            "数据中心架构",
-            "HPC (高性能计算)"
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "工业机器人"
           ]
         },
         {
-          "tag": "量子计算",
-          "theme_path": []
+          "tag": "CNC (数控系统)",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "CNC数控系统",
+            "CNC (数控系统)"
+          ]
         },
         {
-          "tag": "量子云",
+          "tag": "FA自动化",
           "theme_path": [
-            "11. 量子计算",
-            "量子软件与云",
-            "量子云"
+            "10. 工业自动化与机器人",
+            "智能制造",
+            "FA自动化"
+          ]
+        },
+        {
+          "tag": "フィジカルＡＩ",
+          "theme_path": [
+            "0. 人気テーマ",
+            "フィジカルＡＩ",
+            "フィジカルＡＩ"
           ]
         }
       ],
       "market_type": "日股",
-      "price": "3440.00",
-      "change": "-330.00 (-8.75%)",
+      "price": "6637.00",
+      "change": "-383.00 (-5.46%)",
       "isUp": false,
-      "per": "27.32",
-      "roe": "21.2%",
-      "forward_per": "32.12",
-      "pbr": "4.50",
-      "distHigh": "-54.1%",
-      "ytdChange": "92.20%",
-      "distWeek": "-12.0%",
-      "distMonth": "-39.8%",
+      "per": "37.17",
+      "roe": "9.4%",
+      "forward_per": "38.34",
+      "pbr": "3.32",
+      "distHigh": "-25.3%",
+      "ytdChange": "6.32%",
+      "distWeek": "-7.9%",
+      "distMonth": "-18.7%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -8756,6 +8950,117 @@
       "source": "yfinance"
     },
     {
+      "code": "SPCX",
+      "name": "SpaceX",
+      "sector": "4.1",
+      "industry": "4.1.1",
+      "feature": "**行业地位**：全球航天发射龙头<br>**主营业务**：火箭发射、Starlink卫星互联网、载人航天<br>**竞争优势**：Starlink在轨卫星超6000颗，商业航天估值超2000亿美元，可重复使用火箭技术领先<br>**未来方向**：Starlink全球用户持续增长，星舰（Starship）商业化推进",
+      "tags": [
+        "AI应用"
+      ],
+      "display_tags": [
+        "AI应用"
+      ],
+      "tag_themes": [
+        {
+          "tag": "AI应用",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI应用"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "123.99",
+      "change": "-7.12 (-5.43%)",
+      "isUp": false,
+      "per": "137.31",
+      "roe": "--",
+      "forward_per": "137.31",
+      "pbr": "20.82",
+      "distHigh": "-45.0%",
+      "ytdChange": "-22.96%",
+      "distWeek": "-14.4%",
+      "distMonth": "-34.7%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "RKLB",
+      "name": "Rocket Lab",
+      "sector": "4.1",
+      "industry": "4.1.1",
+      "feature": "**行业地位**：轻型火箭发射龙头<br>**主营业务**：Electron火箭发射、航天系统、卫星组件<br>**竞争优势**：Electron火箭发射次数全球第二，端到端航天系统方案商，Neutron中型火箭开发中<br>**未来方向**：商业航天发射需求增长驱动火箭发射业务，Neutron火箭商业化为新增长点",
+      "tags": [
+        "AI应用"
+      ],
+      "display_tags": [
+        "AI应用"
+      ],
+      "tag_themes": [
+        {
+          "tag": "AI应用",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI应用"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "67.62",
+      "change": "+0.27 (+0.40%)",
+      "isUp": true,
+      "per": "2254.00",
+      "roe": "-13.5%",
+      "forward_per": "2254.00",
+      "pbr": "17.19",
+      "distHigh": "-55.2%",
+      "ytdChange": "-11.01%",
+      "distWeek": "-18.1%",
+      "distMonth": "-38.3%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "ASTS",
+      "name": "AST SpaceMobile",
+      "sector": "4.1",
+      "industry": "4.1.1",
+      "feature": "**行业地位**：太空蜂窝通信网络先驱<br>**主营业务**：手机直连卫星通信、低轨卫星星座<br>**竞争优势**：全球首家实现手机直连卫星通信的商业航天公司，技术先发优势明显<br>**未来方向**：手机直连卫星服务商业化推广，全球通信覆盖拓展",
+      "tags": [
+        "AI应用"
+      ],
+      "display_tags": [
+        "AI应用"
+      ],
+      "tag_themes": [
+        {
+          "tag": "AI应用",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI应用"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "57.80",
+      "change": "+2.79 (+5.07%)",
+      "isUp": true,
+      "per": "-222.14",
+      "roe": "-37.8%",
+      "forward_per": "-222.14",
+      "pbr": "8.30",
+      "distHigh": "-56.8%",
+      "ytdChange": "-30.75%",
+      "distWeek": "-20.3%",
+      "distMonth": "-37.0%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
       "code": "IRDM",
       "name": "铱星通信",
       "sector": "4.1",
@@ -8900,6 +9205,43 @@
       "ytdChange": "430.33%",
       "distWeek": "-34.6%",
       "distMonth": "-50.0%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "GE",
+      "name": "GE Aerospace",
+      "sector": "4.1",
+      "industry": "4.1.2",
+      "feature": "**行业地位**：全球航空发动机巨头<br>**主营业务**：商用航空发动机、军用航空发动机、国防航空动力<br>**竞争优势**：商用航空发动机市占率超50%，国防航空动力核心供应商，技术积累深厚<br>**未来方向**：商用航空复苏驱动航空发动机需求，国防支出增长推动军用业务扩张",
+      "tags": [
+        "AI应用"
+      ],
+      "display_tags": [
+        "AI应用"
+      ],
+      "tag_themes": [
+        {
+          "tag": "AI应用",
+          "theme_path": [
+            "9. 云・模型・应用",
+            "AI应用",
+            "AI应用"
+          ]
+        }
+      ],
+      "market_type": "美股",
+      "price": "348.83",
+      "change": "+3.10 (+0.90%)",
+      "isUp": true,
+      "per": "40.80",
+      "roe": "48.2%",
+      "forward_per": "39.27",
+      "pbr": "20.16",
+      "distHigh": "-8.9%",
+      "ytdChange": "9.05%",
+      "distWeek": "-3.3%",
+      "distMonth": "-8.8%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -9498,6 +9840,65 @@
       "source": "yfinance"
     },
     {
+      "code": "7220",
+      "name": "武蔵精密工業",
+      "sector": "5.1",
+      "industry": "5.2.2",
+      "feature": "**行业地位**：全球汽车传动系统零部件龙头之一<br>**主营业务**：差速器、齿轮、EV驱动系统、机器人关节及储能系统<br>**竞争优势**：本田核心供应商，在机器人关节机构、精密减速及电驱系统具备技术优势<br>**未来方向**：持续拓展机器人、储能及新能源汽车动力系统，打造第二成长曲线",
+      "tags": [
+        "新能源汽车",
+        "机器人",
+        "精密减速器",
+        "储能"
+      ],
+      "display_tags": [
+        "新能源汽车",
+        "机器人",
+        "精密减速器",
+        "储能"
+      ],
+      "tag_themes": [
+        {
+          "tag": "新能源汽车",
+          "theme_path": []
+        },
+        {
+          "tag": "机器人",
+          "theme_path": []
+        },
+        {
+          "tag": "精密减速器",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "执行与传动",
+            "精密减速器"
+          ]
+        },
+        {
+          "tag": "储能",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "储能系统",
+            "储能"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "3030.00",
+      "change": "-340.00 (-10.09%)",
+      "isUp": false,
+      "per": "156.27",
+      "roe": "1.8%",
+      "forward_per": "17.06",
+      "pbr": "1.63",
+      "distHigh": "-71.3%",
+      "ytdChange": "17.50%",
+      "distWeek": "-21.0%",
+      "distMonth": "-47.1%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
       "code": "8001",
       "name": "伊藤忠商事",
       "sector": "5.2",
@@ -9600,7 +10001,7 @@
       "price": "1514.00",
       "change": "-69.00 (-4.36%)",
       "isUp": false,
-      "per": "12.14",
+      "per": "12.15",
       "roe": "13.5%",
       "forward_per": "3.42",
       "pbr": "1.56",
@@ -9868,6 +10269,75 @@
       "source": "yfinance"
     },
     {
+      "code": "6269",
+      "name": "三井海洋開発",
+      "sector": "5.6",
+      "industry": "5.6.1",
+      "feature": "**行业地位**：全球FPSO（浮式生产储卸油装置）龙头之一<br>**主营业务**：FPSO设计、建造、租赁及海洋油气开发服务<br>**竞争优势**：深海油气开发经验丰富，长期运营能力全球领先，国际订单充足<br>**未来方向**：受益全球海上油气投资恢复，并布局海上风电及能源转型业务",
+      "tags": [
+        "海洋工程",
+        "油气设备",
+        "能源"
+      ],
+      "display_tags": [
+        "海洋工程",
+        "油气设备",
+        "能源"
+      ],
+      "tag_themes": [
+        {
+          "tag": "海洋工程",
+          "theme_path": []
+        },
+        {
+          "tag": "油气设备",
+          "theme_path": []
+        },
+        {
+          "tag": "能源",
+          "theme_path": []
+        }
+      ],
+      "market_type": "日股",
+      "price": "9492.00",
+      "change": "-381.00 (-3.86%)",
+      "isUp": false,
+      "per": "11.11",
+      "roe": "32.4%",
+      "forward_per": "26.09",
+      "pbr": "2.64",
+      "distHigh": "-43.2%",
+      "ytdChange": "-23.85%",
+      "distWeek": "-6.9%",
+      "distMonth": "-11.3%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "8306",
+      "name": "三菱UFJフィナンシャル・グループ(MUFG)",
+      "sector": "6.1",
+      "industry": "6.1.1",
+      "feature": "**行业地位**：日本最大金融集团<br>**主营业务**：商业银行、信托银行、证券、资产管理<br>**竞争优势**：2025年度净收益预计创历史新高，受益日本央行加息大幅改善资金利益，推进全社AI浸透运动<br>**未来方向**：AI数字化转型深化，海外业务扩张，加息周期持续改善净息差",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "日股",
+      "price": "3473.00",
+      "change": "-156.00 (-4.30%)",
+      "isUp": false,
+      "per": "16.37",
+      "roe": "9.4%",
+      "forward_per": "22.90",
+      "pbr": "2.00",
+      "distHigh": "-7.0%",
+      "ytdChange": "39.08%",
+      "distWeek": "-7.0%",
+      "distMonth": "-7.0%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
       "code": "8316",
       "name": "三井住友フィナンシャルグループ(SMFG)",
       "sector": "6.1",
@@ -10089,6 +10559,51 @@
       "distWeek": "-2.6%",
       "distMonth": "-4.4%",
       "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "code": "7182",
+      "name": "ゆうちょ銀行",
+      "sector": "6.1",
+      "industry": "6.1.1",
+      "feature": "**行业地位**：日本最大零售银行之一，日本邮政集团核心金融企业<br>**主营业务**：个人存贷款、国债及债券投资、资产管理、支付结算及金融服务<br>**竞争优势**：拥有日本最大的个人存款规模及全国邮政网点渠道，资金成本低，资产配置能力强<br>**未来方向**：推进资产运用多元化，扩大海外投资及财富管理业务，提高资本效率与股东回报",
+      "tags": [
+        "银行",
+        "金融",
+        "资产管理"
+      ],
+      "display_tags": [
+        "银行",
+        "金融",
+        "资产管理"
+      ],
+      "tag_themes": [
+        {
+          "tag": "银行",
+          "theme_path": []
+        },
+        {
+          "tag": "金融",
+          "theme_path": []
+        },
+        {
+          "tag": "资产管理",
+          "theme_path": []
+        }
+      ],
+      "market_type": "日股",
+      "price": "3141.00",
+      "change": "-117.00 (-3.59%)",
+      "isUp": false,
+      "per": "21.37",
+      "roe": "5.9%",
+      "forward_per": "26.79",
+      "pbr": "1.21",
+      "distHigh": "-7.7%",
+      "ytdChange": "41.99%",
+      "distWeek": "-6.6%",
+      "distMonth": "-7.7%",
+      "trend": "熊市空头",
       "source": "yfinance"
     },
     {
