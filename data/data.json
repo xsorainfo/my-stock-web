@@ -2,8 +2,8 @@
   "macro": [
     {
       "name": "标普 500 期货",
-      "price": "7499.25",
-      "change": "+1.50 (+0.02%)",
+      "price": "7499.50",
+      "change": "+1.75 (+0.02%)",
       "isUp": true,
       "type": "futures",
       "badge_label": "期货",
@@ -11,8 +11,8 @@
     },
     {
       "name": "WTI 原油",
-      "price": "84.06",
-      "change": "+1.57 (+1.90%)",
+      "price": "83.89",
+      "change": "+1.40 (+1.70%)",
       "isUp": true,
       "type": "futures",
       "badge_label": "期货",
@@ -20,8 +20,8 @@
     },
     {
       "name": "黄金",
-      "price": "4001.00",
-      "change": "-11.70 (-0.29%)",
+      "price": "3998.20",
+      "change": "-14.50 (-0.36%)",
       "isUp": false,
       "type": "commodity",
       "badge_label": "商品",
@@ -29,17 +29,17 @@
     },
     {
       "name": "白银",
-      "price": "56.08",
-      "change": "+0.04 (+0.07%)",
-      "isUp": true,
+      "price": "56.03",
+      "change": "-0.01 (-0.02%)",
+      "isUp": false,
       "type": "commodity",
       "badge_label": "商品",
       "badge_class": "commodity"
     },
     {
       "name": "铜",
-      "price": "6.27",
-      "change": "+0.05 (+0.80%)",
+      "price": "6.26",
+      "change": "+0.04 (+0.71%)",
       "isUp": true,
       "type": "commodity",
       "badge_label": "商品",
@@ -47,8 +47,8 @@
     },
     {
       "name": "美元/日元",
-      "price": "162.51",
-      "change": "+0.14 (+0.08%)",
+      "price": "162.52",
+      "change": "+0.15 (+0.09%)",
       "isUp": true,
       "type": "forex",
       "badge_label": "FX",
@@ -1656,7 +1656,7 @@
       "per": "22.42",
       "roe": "61.2%",
       "forward_per": "3.81",
-      "pbr": "9.96",
+      "pbr": "--",
       "distHigh": "-20.9%",
       "ytdChange": "-8.32%",
       "distWeek": "-20.9%",
@@ -1821,8 +1821,8 @@
       "distHigh": "-31.9%",
       "ytdChange": "98.85%",
       "distWeek": "-14.4%",
-      "distMonth": "-31.9%",
-      "trend": "熊市空头",
+      "distMonth": "-29.8%",
+      "trend": "牛市多头",
       "source": "yfinance"
     },
     {
@@ -1869,7 +1869,7 @@
       "ytdChange": "172.63%",
       "distWeek": "-20.1%",
       "distMonth": "-38.3%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "source": "yfinance"
     },
     {
@@ -4861,7 +4861,7 @@
       "per": "60.24",
       "roe": "53.9%",
       "forward_per": "30.33",
-      "pbr": "1573.16",
+      "pbr": "1572.90",
       "distHigh": "-12.6%",
       "ytdChange": "50.69%",
       "distWeek": "-5.7%",
@@ -5033,7 +5033,7 @@
       "isUp": false,
       "per": "60.27",
       "roe": "95.0%",
-      "forward_per": "41.46",
+      "forward_per": "41.51",
       "pbr": "47.69",
       "distHigh": "-30.8%",
       "ytdChange": "67.36%",
@@ -5411,6 +5411,53 @@
       "ytdChange": "23.12%",
       "distWeek": "-18.2%",
       "distMonth": "-25.3%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "6361",
+      "name": "荏原製作所",
+      "sector": "1.2",
+      "industry": "1.2.2",
+      "feature": "**行业地位**：CMP设备龙头+AI液冷方案商<br>**主营业务**：CMP设备、液冷泵、干式真空泵、流体机械<br>**竞争优势**：CMP设备全球第二（市占率约37%），液冷泵技术领先，AI数据中心散热核心供应商<br>**未来方向**：CMP设备受益先进制程扩产，液冷泵受益AI数据中心散热需求爆发",
+      "tags": [
+        "CMP",
+        "液冷"
+      ],
+      "display_tags": [
+        "CMP (化学机械抛光)",
+        "液冷"
+      ],
+      "tag_themes": [
+        {
+          "tag": "CMP (化学机械抛光)",
+          "theme_path": [
+            "1. 半导体设备",
+            "CMP设备",
+            "CMP (化学机械抛光)"
+          ]
+        },
+        {
+          "tag": "液冷",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "液冷设备",
+            "液冷"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "5384.00",
+      "change": "-446.00 (-7.65%)",
+      "isUp": false,
+      "per": "32.36",
+      "roe": "9.6%",
+      "forward_per": "35.22",
+      "pbr": "1.96",
+      "distHigh": "-21.9%",
+      "ytdChange": "39.28%",
+      "distWeek": "-14.4%",
+      "distMonth": "-21.4%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -7146,6 +7193,63 @@
       "source": "yfinance"
     },
     {
+      "code": "6367",
+      "name": "ダイキン工業(大金)",
+      "sector": "1.5",
+      "industry": "1.5.2",
+      "feature": "**行业地位**：全球暖通空调与数据中心液冷龙头<br>**主营业务**：机房空调、CDU（冷量分配单元）、芯片直液冷解决方案<br>**竞争优势**：全球空调市占率超20%，CDU与直液冷技术领先，覆盖HVAC+液冷全栈<br>**未来方向**：AI高密度机柜（单柜50kW+）普及驱动CDU与直液冷需求持续增长，HVAC与液冷协同",
+      "tags": [
+        "液冷",
+        "HVAC",
+        "CDU"
+      ],
+      "display_tags": [
+        "液冷",
+        "HVAC (暖通空调)",
+        "CDU (冷量分配单元)"
+      ],
+      "tag_themes": [
+        {
+          "tag": "液冷",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "液冷设备",
+            "液冷"
+          ]
+        },
+        {
+          "tag": "HVAC (暖通空调)",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "HVAC (暖通空调)"
+          ]
+        },
+        {
+          "tag": "CDU (冷量分配单元)",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "液冷设备",
+            "CDU (冷量分配单元)"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "24500.00",
+      "change": "-370.00 (-1.49%)",
+      "isUp": false,
+      "per": "26.11",
+      "roe": "9.3%",
+      "forward_per": "24.74",
+      "pbr": "2.20",
+      "distHigh": "-7.3%",
+      "ytdChange": "22.09%",
+      "distWeek": "-4.4%",
+      "distMonth": "-7.3%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
       "code": "6651",
       "name": "日東工業",
       "sector": "1.5",
@@ -8496,6 +8600,73 @@
       "source": "yfinance"
     },
     {
+      "code": "6273",
+      "name": "SMC",
+      "sector": "2.1",
+      "industry": "2.1.1",
+      "feature": "**行业地位**：全球气动元件龙头<br>**主营业务**：气缸、电磁阀、气动执行机构、FA自动化零部件<br>**竞争优势**：全球气动元件市占率超30%，工业自动化核心零部件供应商，产品线覆盖全行业<br>**未来方向**：智能制造与机器人需求增长驱动气动元件需求，持续推进高精度气动技术开发",
+      "tags": [
+        "气动元件",
+        "执行机构",
+        "FA自动化",
+        "フィジカルＡＩ"
+      ],
+      "display_tags": [
+        "气动元件",
+        "执行机构",
+        "FA自动化",
+        "フィジカルＡＩ"
+      ],
+      "tag_themes": [
+        {
+          "tag": "气动元件",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "执行与传动",
+            "气动元件"
+          ]
+        },
+        {
+          "tag": "执行机构",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "执行与传动",
+            "执行机构"
+          ]
+        },
+        {
+          "tag": "FA自动化",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "智能制造",
+            "FA自动化"
+          ]
+        },
+        {
+          "tag": "フィジカルＡＩ",
+          "theme_path": [
+            "0. 人気テーマ",
+            "フィジカルＡＩ",
+            "フィジカルＡＩ"
+          ]
+        }
+      ],
+      "market_type": "日股",
+      "price": "69230.00",
+      "change": "-4200.00 (-5.72%)",
+      "isUp": false,
+      "per": "26.25",
+      "roe": "8.3%",
+      "forward_per": "21.09",
+      "pbr": "2.07",
+      "distHigh": "-20.2%",
+      "ytdChange": "21.41%",
+      "distWeek": "-9.5%",
+      "distMonth": "-10.4%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
       "code": "6324",
       "name": "ハーモニック(Harmonic)",
       "sector": "2.1",
@@ -9291,7 +9462,7 @@
       "isUp": true,
       "per": "41.14",
       "roe": "48.2%",
-      "forward_per": "39.27",
+      "forward_per": "39.94",
       "pbr": "20.16",
       "distHigh": "-8.9%",
       "ytdChange": "9.05%",
