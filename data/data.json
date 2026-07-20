@@ -2,8 +2,8 @@
   "macro": [
     {
       "name": "标普 500 期货",
-      "price": "7483.25",
-      "change": "-14.50 (-0.19%)",
+      "price": "7475.50",
+      "change": "-22.25 (-0.30%)",
       "isUp": false,
       "type": "futures",
       "badge_label": "期货",
@@ -11,17 +11,17 @@
     },
     {
       "name": "WTI 原油",
-      "price": "82.42",
-      "change": "-0.07 (-0.08%)",
-      "isUp": false,
+      "price": "82.63",
+      "change": "+0.14 (+0.17%)",
+      "isUp": true,
       "type": "futures",
       "badge_label": "期货",
       "badge_class": "futures"
     },
     {
       "name": "黄金",
-      "price": "4011.80",
-      "change": "-0.90 (-0.02%)",
+      "price": "4004.60",
+      "change": "-8.10 (-0.20%)",
       "isUp": false,
       "type": "commodity",
       "badge_label": "商品",
@@ -29,8 +29,8 @@
     },
     {
       "name": "白银",
-      "price": "56.67",
-      "change": "+0.63 (+1.12%)",
+      "price": "56.47",
+      "change": "+0.44 (+0.78%)",
       "isUp": true,
       "type": "commodity",
       "badge_label": "商品",
@@ -38,8 +38,8 @@
     },
     {
       "name": "铜",
-      "price": "6.34",
-      "change": "+0.12 (+1.94%)",
+      "price": "6.33",
+      "change": "+0.11 (+1.82%)",
       "isUp": true,
       "type": "commodity",
       "badge_label": "商品",
@@ -47,9 +47,9 @@
     },
     {
       "name": "美元/日元",
-      "price": "162.47",
-      "change": "+0.10 (+0.06%)",
-      "isUp": true,
+      "price": "162.50",
+      "change": "-0.01 (-0.01%)",
+      "isUp": false,
       "type": "forex",
       "badge_label": "FX",
       "badge_class": "forex"
@@ -542,9 +542,9 @@
     },
     {
       "name": "富时 100",
-      "price": "10524.76",
-      "change": "-75.64 (-0.71%)",
-      "isUp": false,
+      "price": "10600.40",
+      "change": "+28.20 (+0.27%)",
+      "isUp": true,
       "type": "index",
       "badge_label": "",
       "badge_class": "index"
@@ -694,7 +694,7 @@
       "per": "166.75",
       "roe": "8.1%",
       "forward_per": "37.40",
-      "pbr": "--",
+      "pbr": "12.73",
       "distHigh": "-13.9%",
       "ytdChange": "125.34%",
       "distWeek": "-12.3%",
@@ -1033,7 +1033,7 @@
       "per": "386.12",
       "roe": "0.9%",
       "forward_per": "24.76",
-      "pbr": "--",
+      "pbr": "3.09",
       "distHigh": "-24.1%",
       "ytdChange": "126.62%",
       "distWeek": "-13.8%",
@@ -5081,7 +5081,7 @@
       "per": "62.04",
       "roe": "28.7%",
       "forward_per": "32.45",
-      "pbr": "--",
+      "pbr": "16.62",
       "distHigh": "-31.6%",
       "ytdChange": "60.93%",
       "distWeek": "-8.6%",
@@ -8827,7 +8827,7 @@
       "per": "27.39",
       "roe": "12.6%",
       "forward_per": "20.64",
-      "pbr": "--",
+      "pbr": "3.20",
       "distHigh": "-7.1%",
       "ytdChange": "12.06%",
       "distWeek": "-3.6%",
@@ -9463,7 +9463,7 @@
       "per": "40.25",
       "roe": "48.2%",
       "forward_per": "37.91",
-      "pbr": "--",
+      "pbr": "19.72",
       "distHigh": "-10.9%",
       "ytdChange": "6.69%",
       "distWeek": "-5.4%",
@@ -10874,6 +10874,51 @@
       "ytdChange": "-25.10%",
       "distWeek": "-12.2%",
       "distMonth": "-12.2%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "code": "8331",
+      "name": "千葉銀行",
+      "sector": "6.1",
+      "industry": "6.1.2",
+      "feature": "**行业地位**：日本地方银行龙头之一，千叶县市场份额领先<br>**主营业务**：企业及个人贷款、存款、资产管理、证券及区域金融服务<br>**竞争优势**：区域客户基础稳固，贷款资产质量优良，数字化金融布局领先地方银行<br>**未来方向**：受益日本利率正常化，提高净息差，同时扩大财富管理及区域产业金融服务",
+      "tags": [
+        "银行",
+        "地方银行",
+        "金融"
+      ],
+      "display_tags": [
+        "银行",
+        "地方银行",
+        "金融"
+      ],
+      "tag_themes": [
+        {
+          "tag": "银行",
+          "theme_path": []
+        },
+        {
+          "tag": "地方银行",
+          "theme_path": []
+        },
+        {
+          "tag": "金融",
+          "theme_path": []
+        }
+      ],
+      "market_type": "日股",
+      "price": "2536.00",
+      "change": "-158.50 (-5.88%)",
+      "isUp": false,
+      "per": "18.97",
+      "roe": "7.8%",
+      "forward_per": "22.98",
+      "pbr": "1.41",
+      "distHigh": "-9.8%",
+      "ytdChange": "43.49%",
+      "distWeek": "-9.6%",
+      "distMonth": "-9.8%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
