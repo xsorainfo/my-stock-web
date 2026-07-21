@@ -2,8 +2,8 @@
   "macro": [
     {
       "name": "标普 500 期货",
-      "price": "7475.50",
-      "change": "-22.25 (-0.30%)",
+      "price": "7488.25",
+      "change": "-9.50 (-0.13%)",
       "isUp": false,
       "type": "futures",
       "badge_label": "期货",
@@ -11,8 +11,8 @@
     },
     {
       "name": "WTI 原油",
-      "price": "82.63",
-      "change": "+0.14 (+0.17%)",
+      "price": "82.56",
+      "change": "+0.07 (+0.08%)",
       "isUp": true,
       "type": "futures",
       "badge_label": "期货",
@@ -20,8 +20,8 @@
     },
     {
       "name": "黄金",
-      "price": "4004.60",
-      "change": "-8.10 (-0.20%)",
+      "price": "4011.00",
+      "change": "-1.70 (-0.04%)",
       "isUp": false,
       "type": "commodity",
       "badge_label": "商品",
@@ -29,8 +29,8 @@
     },
     {
       "name": "白银",
-      "price": "56.47",
-      "change": "+0.44 (+0.78%)",
+      "price": "56.60",
+      "change": "+0.56 (+1.00%)",
       "isUp": true,
       "type": "commodity",
       "badge_label": "商品",
@@ -38,8 +38,8 @@
     },
     {
       "name": "铜",
-      "price": "6.33",
-      "change": "+0.11 (+1.82%)",
+      "price": "6.34",
+      "change": "+0.12 (+1.97%)",
       "isUp": true,
       "type": "commodity",
       "badge_label": "商品",
@@ -47,8 +47,8 @@
     },
     {
       "name": "美元/日元",
-      "price": "162.50",
-      "change": "-0.01 (-0.01%)",
+      "price": "162.48",
+      "change": "-0.03 (-0.02%)",
       "isUp": false,
       "type": "forex",
       "badge_label": "FX",
@@ -3871,7 +3871,7 @@
       "distHigh": "-32.1%",
       "ytdChange": "106.04%",
       "distWeek": "-16.3%",
-      "distMonth": "-29.9%",
+      "distMonth": "-29.8%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -4082,7 +4082,7 @@
       "distHigh": "-28.5%",
       "ytdChange": "32.63%",
       "distWeek": "-17.8%",
-      "distMonth": "-28.2%",
+      "distMonth": "-28.1%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -4464,7 +4464,7 @@
       "distHigh": "-15.6%",
       "ytdChange": "68.15%",
       "distWeek": "-3.8%",
-      "distMonth": "-9.3%",
+      "distMonth": "-8.7%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -5457,7 +5457,7 @@
       "distHigh": "-21.9%",
       "ytdChange": "39.28%",
       "distWeek": "-14.4%",
-      "distMonth": "-21.4%",
+      "distMonth": "-20.7%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -6315,7 +6315,7 @@
       "distHigh": "-50.0%",
       "ytdChange": "111.62%",
       "distWeek": "-18.0%",
-      "distMonth": "-44.7%",
+      "distMonth": "-43.3%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -7631,7 +7631,7 @@
       "distHigh": "-40.3%",
       "ytdChange": "80.72%",
       "distWeek": "-16.3%",
-      "distMonth": "-40.3%",
+      "distMonth": "-38.8%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -8528,7 +8528,7 @@
       "distHigh": "-24.7%",
       "ytdChange": "18.64%",
       "distWeek": "-7.9%",
-      "distMonth": "-15.0%",
+      "distMonth": "-12.5%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -9393,7 +9393,7 @@
       "distHigh": "-67.5%",
       "ytdChange": "41.97%",
       "distWeek": "-19.2%",
-      "distMonth": "-32.5%",
+      "distMonth": "-27.8%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -10120,7 +10120,7 @@
       "distHigh": "-71.3%",
       "ytdChange": "17.50%",
       "distWeek": "-21.0%",
-      "distMonth": "-47.1%",
+      "distMonth": "-41.2%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -10234,7 +10234,7 @@
       "distHigh": "-22.1%",
       "ytdChange": "10.22%",
       "distWeek": "-5.4%",
-      "distMonth": "-8.9%",
+      "distMonth": "-8.3%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -10291,7 +10291,7 @@
       "distHigh": "-30.2%",
       "ytdChange": "-1.01%",
       "distWeek": "-3.4%",
-      "distMonth": "-3.7%",
+      "distMonth": "-3.4%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -10358,7 +10358,7 @@
       "distHigh": "-23.3%",
       "ytdChange": "32.80%",
       "distWeek": "-12.5%",
-      "distMonth": "-23.3%",
+      "distMonth": "-21.1%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -10783,7 +10783,7 @@
       "distHigh": "-5.5%",
       "ytdChange": "21.07%",
       "distWeek": "-2.6%",
-      "distMonth": "-4.4%",
+      "distMonth": "-3.8%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -11117,7 +11117,7 @@
       "distHigh": "-57.6%",
       "ytdChange": "-30.95%",
       "distWeek": "-6.5%",
-      "distMonth": "-15.1%",
+      "distMonth": "-11.0%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
