@@ -1243,6 +1243,53 @@
       "source": "yfinance"
     },
     {
+      "code": "688802",
+      "name": "沐曦股份",
+      "sector": "1.1",
+      "industry": "1.1.1",
+      "feature": "**行业地位**：国产AI GPU领先企业<br>**主营业务**：高性能GPU芯片、AI训练/推理GPU、高性能计算GPU<br>**竞争优势**：国产GPU营收第一（2025年16.44亿元，毛利率56.5%），性能对标NVIDIA A100<br>**未来方向**：国产AI芯片替代加速驱动GPU需求，AI推理市场拓展与产品线迭代升级",
+      "tags": [
+        "GPU",
+        "AI服务器"
+      ],
+      "display_tags": [
+        "GPU (图形处理器)",
+        "AI服务器"
+      ],
+      "tag_themes": [
+        {
+          "tag": "GPU (图形处理器)",
+          "theme_path": [
+            "3. 算力芯片",
+            "GPU",
+            "GPU (图形处理器)"
+          ]
+        },
+        {
+          "tag": "AI服务器",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "AI服务器"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "688.87",
+      "change": "+16.87 (+2.51%)",
+      "isUp": true,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "-16.83%",
+      "distWeek": "-17.6%",
+      "distMonth": "-33.3%",
+      "trend": "熊市空头",
+      "source": "sina"
+    },
+    {
       "code": "688795",
       "name": "摩尔线程",
       "sector": "1.1",
@@ -1280,6 +1327,53 @@
       "source": "sina"
     },
     {
+      "code": "688041",
+      "name": "海光信息",
+      "sector": "1.1",
+      "industry": "1.1.1",
+      "feature": "**行业地位**：国产CPU与DCU龙头<br>**主营业务**：服务器CPU、DCU（AI加速卡）、信创算力方案<br>**竞争优势**：x86（AMD Zen授权）生态兼容性最强，信创服务器CPU主力供应商，DCU与CPU协同布局<br>**未来方向**：信创市场与AI算力需求驱动CPU/DCU业务增长，持续迭代产品性能",
+      "tags": [
+        "CPU",
+        "AI服务器"
+      ],
+      "display_tags": [
+        "CPU (中央处理器)",
+        "AI服务器"
+      ],
+      "tag_themes": [
+        {
+          "tag": "CPU (中央处理器)",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU",
+            "CPU (中央处理器)"
+          ]
+        },
+        {
+          "tag": "AI服务器",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "AI服务器"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "277.00",
+      "change": "+3.58 (+1.31%)",
+      "isUp": true,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "-25.20%",
+      "distWeek": "-12.3%",
+      "distMonth": "-29.9%",
+      "trend": "熊市空头",
+      "source": "sina"
+    },
+    {
       "code": "688047",
       "name": "龙芯中科",
       "sector": "1.1",
@@ -1313,6 +1407,43 @@
       "ytdChange": "-31.23%",
       "distWeek": "-2.8%",
       "distMonth": "-33.0%",
+      "trend": "熊市空头",
+      "source": "sina"
+    },
+    {
+      "code": "688262",
+      "name": "国芯科技",
+      "sector": "1.1",
+      "industry": "1.1.1",
+      "feature": "**行业地位**：国内嵌入式CPU领先厂商<br>**主营业务**：嵌入式CPU、车规芯片、工控芯片、后量子密码芯片<br>**竞争优势**：国内唯一同时掌握RISC-V/PowerPC/M*Core三大指令集，车规/工控高可靠CPU龙头<br>**未来方向**：汽车电子与工控自动化需求驱动CPU增长，量子安全芯片布局提供新增长点",
+      "tags": [
+        "CPU"
+      ],
+      "display_tags": [
+        "CPU (中央处理器)"
+      ],
+      "tag_themes": [
+        {
+          "tag": "CPU (中央处理器)",
+          "theme_path": [
+            "3. 算力芯片",
+            "CPU",
+            "CPU (中央处理器)"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "23.85",
+      "change": "+1.09 (+4.79%)",
+      "isUp": true,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "-44.83%",
+      "distWeek": "-6.7%",
+      "distMonth": "-50.0%",
       "trend": "熊市空头",
       "source": "sina"
     },
@@ -1581,7 +1712,7 @@
       "isUp": false,
       "per": "18.59",
       "roe": "66.6%",
-      "forward_per": "5.35",
+      "forward_per": "5.29",
       "pbr": "9.23",
       "distHigh": "-34.4%",
       "ytdChange": "161.08%",
@@ -1787,6 +1918,63 @@
       "distMonth": "-51.0%",
       "trend": "熊市空头",
       "source": "yfinance"
+    },
+    {
+      "code": "688008",
+      "name": "澜起科技",
+      "sector": "1.1",
+      "industry": "1.1.2",
+      "feature": "**行业地位**：全球内存接口芯片龙头<br>**主营业务**：DDR5内存接口芯片、MRCD、CXL控制器<br>**竞争优势**：DDR5内存接口芯片市占率全球领先，CXL控制器技术布局前瞻，津逮服务器CPU国产替代核心标的<br>**未来方向**：AI服务器内存带宽需求升级驱动DDR5接口芯片需求，CXL生态推广驱动控制器业务增长",
+      "tags": [
+        "内存接口",
+        "DDR5",
+        "CXL"
+      ],
+      "display_tags": [
+        "内存接口",
+        "DDR5 (第五代内存)",
+        "CXL (Compute Express Link)"
+      ],
+      "tag_themes": [
+        {
+          "tag": "内存接口",
+          "theme_path": [
+            "4. 高带宽内存",
+            "内存接口",
+            "内存接口"
+          ]
+        },
+        {
+          "tag": "DDR5 (第五代内存)",
+          "theme_path": [
+            "4. 高带宽内存",
+            "DRAM",
+            "DDR5 (第五代内存)"
+          ]
+        },
+        {
+          "tag": "CXL (Compute Express Link)",
+          "theme_path": [
+            "3. 算力芯片",
+            "高速互联",
+            "CXL (Compute Express Link)"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "204.90",
+      "change": "+8.12 (+4.13%)",
+      "isUp": true,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "-33.76%",
+      "distWeek": "-12.3%",
+      "distMonth": "-38.3%",
+      "trend": "熊市空头",
+      "source": "sina"
     },
     {
       "code": "WOLF",
@@ -4281,6 +4469,89 @@
       "source": "yfinance"
     },
     {
+      "code": "600703",
+      "name": "三安光电",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**行业地位**：国内化合物半导体IDM龙头<br>**主营业务**：GaN、GaAs、InP、SiC四大材料及器件、高速光芯片、LED<br>**竞争优势**：国内唯一同时布局GaN、GaAs、InP、SiC四大材料的IDM平台，拥有8英寸SiC产线<br>**未来方向**：新能源汽车与AI数据中心驱动第三代半导体需求增长，高速光芯片受益光模块需求爆发",
+      "tags": [
+        "碳化硅 (SiC)",
+        "氮化镓 (GaN)",
+        "磷化铟",
+        "光芯片",
+        "功率半导体",
+        "SiC功率器件"
+      ],
+      "display_tags": [
+        "碳化硅 (SiC)",
+        "氮化镓 (GaN)",
+        "磷化铟 (InP)",
+        "光芯片",
+        "功率半导体",
+        "SiC功率器件"
+      ],
+      "tag_themes": [
+        {
+          "tag": "碳化硅 (SiC)",
+          "theme_path": [
+            "2. 半导体材料",
+            "SiC衬底",
+            "碳化硅 (SiC)"
+          ]
+        },
+        {
+          "tag": "氮化镓 (GaN)",
+          "theme_path": [
+            "2. 半导体材料",
+            "GaN衬底",
+            "氮化镓 (GaN)"
+          ]
+        },
+        {
+          "tag": "磷化铟",
+          "theme_path": []
+        },
+        {
+          "tag": "光芯片",
+          "theme_path": [
+            "7. 光通信",
+            "光芯片",
+            "光芯片"
+          ]
+        },
+        {
+          "tag": "功率半导体",
+          "theme_path": [
+            "3. 算力芯片",
+            "功率半导体",
+            "功率半导体"
+          ]
+        },
+        {
+          "tag": "SiC功率器件",
+          "theme_path": [
+            "3. 算力芯片",
+            "功率半导体",
+            "SiC功率器件"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "12.24",
+      "change": "+0.43 (+3.64%)",
+      "isUp": true,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "-42.32%",
+      "distWeek": "-2.5%",
+      "distMonth": "-43.7%",
+      "trend": "熊市空头",
+      "source": "sina"
+    },
+    {
       "code": "688234",
       "name": "天岳先进",
       "sector": "1.2",
@@ -4413,6 +4684,142 @@
       "ytdChange": "-48.08%",
       "distWeek": "-7.9%",
       "distMonth": "-50.9%",
+      "trend": "熊市空头",
+      "source": "sina"
+    },
+    {
+      "code": "603256",
+      "name": "宏和科技",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**行业地位**：国内高端电子布细分龙头，聚焦极薄布、超薄布及低介电/低热膨胀特种电子布<br>**主营业务**：中高端电子级玻璃纤维布、电子级玻璃纤维超细纱，2025年电子布销量2.10亿米，营收11.71亿同比+40.31%<br>**竞争优势**：打破海外企业在高端电子布领域垄断，特种电子布毛利率高达61.31%，超薄/极薄型T布具备量产能力，国产替代核心标的<br>**未来方向**：AI服务器/5G通信驱动高端电子布需求爆发，2026Q1归母净利1.40亿同比+354%，持续受益电子布涨价与高端产品放量",
+      "tags": [
+        "PCB",
+        "封装基板",
+        "电子布"
+      ],
+      "display_tags": [
+        "PCB",
+        "封装基板",
+        "电子布"
+      ],
+      "tag_themes": [
+        {
+          "tag": "PCB",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "PCB"
+          ]
+        },
+        {
+          "tag": "封装基板",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "封装基板"
+          ]
+        },
+        {
+          "tag": "电子布",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "电子布"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "128.13",
+      "change": "+2.97 (+2.37%)",
+      "isUp": true,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "-51.71%",
+      "distWeek": "-22.2%",
+      "distMonth": "-54.2%",
+      "trend": "熊市空头",
+      "source": "sina"
+    },
+    {
+      "code": "688478",
+      "name": "晶升股份",
+      "sector": "1.2",
+      "industry": "1.2.2",
+      "feature": "**行业地位**：国内SiC长晶设备龙头<br>**主营业务**：SiC单晶炉、长晶设备、半导体晶体生长设备<br>**竞争优势**：专注SiC长晶设备，8英寸设备已实现批量交付，客户覆盖国内主要SiC衬底企业<br>**未来方向**：第三代半导体扩产驱动长晶设备需求增长，持续推进大尺寸SiC长晶设备技术迭代",
+      "tags": [
+        "碳化硅 (SiC)",
+        "长晶炉",
+        "半导体设备",
+        "第三代半导体",
+        "SiC衬底",
+        "国产替代"
+      ],
+      "display_tags": [
+        "碳化硅 (SiC)",
+        "长晶炉",
+        "半导体设备",
+        "第三代半导体",
+        "碳化硅衬底 (SiC)",
+        "国产替代"
+      ],
+      "tag_themes": [
+        {
+          "tag": "碳化硅 (SiC)",
+          "theme_path": [
+            "2. 半导体材料",
+            "SiC衬底",
+            "碳化硅 (SiC)"
+          ]
+        },
+        {
+          "tag": "长晶炉",
+          "theme_path": [
+            "1. 半导体设备",
+            "长晶炉",
+            "长晶炉"
+          ]
+        },
+        {
+          "tag": "半导体设备",
+          "theme_path": []
+        },
+        {
+          "tag": "第三代半导体",
+          "theme_path": []
+        },
+        {
+          "tag": "碳化硅衬底 (SiC)",
+          "theme_path": [
+            "2. 半导体材料",
+            "SiC衬底",
+            "碳化硅衬底 (SiC)"
+          ]
+        },
+        {
+          "tag": "国产替代",
+          "theme_path": [
+            "2. 半导体材料",
+            "其他材料",
+            "国产替代"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "40.69",
+      "change": "+1.74 (+4.47%)",
+      "isUp": true,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "-54.05%",
+      "distWeek": "-11.2%",
+      "distMonth": "-56.9%",
       "trend": "熊市空头",
       "source": "sina"
     },
@@ -5823,6 +6230,49 @@
       "source": "yfinance"
     },
     {
+      "code": "600584",
+      "name": "长电科技",
+      "sector": "1.3",
+      "industry": "1.3.1",
+      "feature": "**行业地位**：中国封测龙头<br>**主营业务**：先进封装、Chiplet封装、系统级封装<br>**竞争优势**：全球封测市占率约10%，先进封装技术布局完善，Chiplet封装核心供应商<br>**未来方向**：AI芯片封装需求增长驱动先进封装需求，持续推进封装技术迭代与产能扩张",
+      "tags": [
+        "先进封装",
+        "Chiplet"
+      ],
+      "display_tags": [
+        "先进封装",
+        "Chiplet (小芯片)"
+      ],
+      "tag_themes": [
+        {
+          "tag": "先进封装",
+          "theme_path": []
+        },
+        {
+          "tag": "Chiplet (小芯片)",
+          "theme_path": [
+            "5. 先进封装",
+            "Chiplet",
+            "Chiplet (小芯片)"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "65.71",
+      "change": "+1.20 (+1.86%)",
+      "isUp": true,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "-36.54%",
+      "distWeek": "-22.0%",
+      "distMonth": "-42.3%",
+      "trend": "熊市空头",
+      "source": "sina"
+    },
+    {
       "code": "6787",
       "name": "メイコー(MEIKO)",
       "sector": "1.3",
@@ -6023,6 +6473,53 @@
       "ytdChange": "-42.09%",
       "distWeek": "-26.7%",
       "distMonth": "-43.6%",
+      "trend": "熊市空头",
+      "source": "sina"
+    },
+    {
+      "code": "600487",
+      "name": "亨通光电",
+      "sector": "1.4",
+      "industry": "1.4.2",
+      "feature": "**行业地位**：全球光纤光缆龙头之一<br>**主营业务**：光纤光缆、海缆、数据中心光网络<br>**竞争优势**：通信光缆市占率全球前三，海缆与数据中心光网络布局完善<br>**未来方向**：AI数据中心传输基础建设驱动光纤光缆需求，海缆业务受益全球能源互联",
+      "tags": [
+        "光纤光缆",
+        "海缆"
+      ],
+      "display_tags": [
+        "光纤光缆",
+        "海缆"
+      ],
+      "tag_themes": [
+        {
+          "tag": "光纤光缆",
+          "theme_path": [
+            "7. 光通信",
+            "光纤光缆",
+            "光纤光缆"
+          ]
+        },
+        {
+          "tag": "海缆",
+          "theme_path": [
+            "7. 光通信",
+            "光纤光缆",
+            "海缆"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "47.61",
+      "change": "+0.41 (+0.87%)",
+      "isUp": true,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "-56.46%",
+      "distWeek": "-14.7%",
+      "distMonth": "-58.0%",
       "trend": "熊市空头",
       "source": "sina"
     },
@@ -7542,10 +8039,10 @@
       "price": "18.08",
       "change": "+0.10 (+0.56%)",
       "isUp": true,
-      "per": "-41.64",
+      "per": "-46.44",
       "roe": "-55.3%",
-      "forward_per": "-41.64",
-      "pbr": "5.34",
+      "forward_per": "-46.44",
+      "pbr": "5.95",
       "distHigh": "-61.3%",
       "ytdChange": "-35.73%",
       "distWeek": "-7.5%",
@@ -9205,6 +9702,79 @@
       "distMonth": "-13.9%",
       "trend": "熊市空头",
       "source": "yfinance"
+    },
+    {
+      "code": "600143",
+      "name": "金发科技",
+      "sector": "5.1",
+      "industry": "5.1.1",
+      "feature": "**行业地位**：全球改性塑料龙头之一<br>**主营业务**：改性塑料、特种工程塑料、完全生物降解塑料、碳纤维及复合材料、医疗健康材料<br>**竞争优势**：改性塑料技术领先，特种工程塑料与碳纤维布局完善，新材料平台化发展<br>**未来方向**：新能源汽车与高端装备需求增长驱动改性塑料需求，持续推进高性能新材料开发",
+      "tags": [
+        "改性塑料",
+        "工程塑料",
+        "生物降解材料",
+        "碳纤维",
+        "新材料"
+      ],
+      "display_tags": [
+        "改性塑料",
+        "工程塑料",
+        "生物降解材料",
+        "碳纤维",
+        "新材料"
+      ],
+      "tag_themes": [
+        {
+          "tag": "改性塑料",
+          "theme_path": [
+            "15. 新材料",
+            "高分子材料",
+            "改性塑料"
+          ]
+        },
+        {
+          "tag": "工程塑料",
+          "theme_path": [
+            "15. 新材料",
+            "高分子材料",
+            "工程塑料"
+          ]
+        },
+        {
+          "tag": "生物降解材料",
+          "theme_path": [
+            "15. 新材料",
+            "高分子材料",
+            "生物降解材料"
+          ]
+        },
+        {
+          "tag": "碳纤维",
+          "theme_path": [
+            "15. 新材料",
+            "纤维材料",
+            "碳纤维"
+          ]
+        },
+        {
+          "tag": "新材料",
+          "theme_path": []
+        }
+      ],
+      "market_type": "A股",
+      "price": "15.46",
+      "change": "+0.96 (+6.62%)",
+      "isUp": true,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "0.06%",
+      "distWeek": "-0.8%",
+      "distMonth": "-11.1%",
+      "trend": "牛市多头",
+      "source": "sina"
     },
     {
       "code": "8012",
