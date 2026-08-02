@@ -1411,43 +1411,6 @@
       "source": "sina"
     },
     {
-      "code": "688262",
-      "name": "国芯科技",
-      "sector": "1.1",
-      "industry": "1.1.1",
-      "feature": "**行业地位**：国内嵌入式CPU领先厂商<br>**主营业务**：嵌入式CPU、车规芯片、工控芯片、后量子密码芯片<br>**竞争优势**：国内唯一同时掌握RISC-V/PowerPC/M*Core三大指令集，车规/工控高可靠CPU龙头<br>**未来方向**：汽车电子与工控自动化需求驱动CPU增长，量子安全芯片布局提供新增长点",
-      "tags": [
-        "CPU"
-      ],
-      "display_tags": [
-        "CPU (中央处理器)"
-      ],
-      "tag_themes": [
-        {
-          "tag": "CPU (中央处理器)",
-          "theme_path": [
-            "3. 算力芯片",
-            "CPU",
-            "CPU (中央处理器)"
-          ]
-        }
-      ],
-      "market_type": "A股",
-      "price": "23.85",
-      "change": "+1.09 (+4.79%)",
-      "isUp": true,
-      "per": "--",
-      "roe": "--",
-      "forward_per": "--",
-      "pbr": "--",
-      "distHigh": "--",
-      "ytdChange": "-44.83%",
-      "distWeek": "-6.7%",
-      "distMonth": "-50.0%",
-      "trend": "熊市空头",
-      "source": "sina"
-    },
-    {
       "code": "600460",
       "name": "士兰微",
       "sector": "1.1",
@@ -2350,17 +2313,17 @@
         }
       ],
       "market_type": "德股",
-      "price": "51.24",
-      "change": "+0.38 (+0.75%)",
-      "isUp": true,
+      "price": "50.40",
+      "change": "-0.84 (-1.64%)",
+      "isUp": false,
       "per": "21.18",
       "roe": "6.1%",
       "forward_per": "17.03",
       "pbr": "1.20",
-      "distHigh": "-6.9%",
-      "ytdChange": "19.33%",
-      "distWeek": "-1.0%",
-      "distMonth": "-1.0%",
+      "distHigh": "-8.4%",
+      "ytdChange": "17.37%",
+      "distWeek": "-2.6%",
+      "distMonth": "-2.6%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
