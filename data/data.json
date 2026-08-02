@@ -1920,63 +1920,6 @@
       "source": "yfinance"
     },
     {
-      "code": "688008",
-      "name": "澜起科技",
-      "sector": "1.1",
-      "industry": "1.1.2",
-      "feature": "**行业地位**：全球内存接口芯片龙头<br>**主营业务**：DDR5内存接口芯片、MRCD、CXL控制器<br>**竞争优势**：DDR5内存接口芯片市占率全球领先，CXL控制器技术布局前瞻，津逮服务器CPU国产替代核心标的<br>**未来方向**：AI服务器内存带宽需求升级驱动DDR5接口芯片需求，CXL生态推广驱动控制器业务增长",
-      "tags": [
-        "内存接口",
-        "DDR5",
-        "CXL"
-      ],
-      "display_tags": [
-        "内存接口",
-        "DDR5 (第五代内存)",
-        "CXL (Compute Express Link)"
-      ],
-      "tag_themes": [
-        {
-          "tag": "内存接口",
-          "theme_path": [
-            "4. 高带宽内存",
-            "内存接口",
-            "内存接口"
-          ]
-        },
-        {
-          "tag": "DDR5 (第五代内存)",
-          "theme_path": [
-            "4. 高带宽内存",
-            "DRAM",
-            "DDR5 (第五代内存)"
-          ]
-        },
-        {
-          "tag": "CXL (Compute Express Link)",
-          "theme_path": [
-            "3. 算力芯片",
-            "高速互联",
-            "CXL (Compute Express Link)"
-          ]
-        }
-      ],
-      "market_type": "A股",
-      "price": "204.90",
-      "change": "+8.12 (+4.13%)",
-      "isUp": true,
-      "per": "--",
-      "roe": "--",
-      "forward_per": "--",
-      "pbr": "--",
-      "distHigh": "--",
-      "ytdChange": "-33.76%",
-      "distWeek": "-12.3%",
-      "distMonth": "-38.3%",
-      "trend": "熊市空头",
-      "source": "sina"
-    },
-    {
       "code": "WOLF",
       "name": "Wolfspeed",
       "sector": "1.2",
@@ -5171,7 +5114,7 @@
       "per": "44.44",
       "roe": "30.9%",
       "forward_per": "43.35",
-      "pbr": "12.20",
+      "pbr": "11.78",
       "distHigh": "-31.7%",
       "ytdChange": "51.69%",
       "distWeek": "-13.4%",
@@ -6071,53 +6014,6 @@
       "distMonth": "-6.8%",
       "trend": "熊市空头",
       "source": "yfinance"
-    },
-    {
-      "code": "688012",
-      "name": "中微公司",
-      "sector": "1.2",
-      "industry": "1.2.2",
-      "feature": "**行业地位**：中国刻蚀设备龙头<br>**主营业务**：CCP刻蚀设备、ICP刻蚀设备、MOCVD设备<br>**竞争优势**：CCP刻蚀国内市占率超80%，5nm制程设备已进入台积电供应链，国产替代核心企业<br>**未来方向**：先进制程扩产驱动刻蚀设备需求，持续推进刻蚀技术迭代与产品线拓展",
-      "tags": [
-        "刻蚀",
-        "MOCVD"
-      ],
-      "display_tags": [
-        "刻蚀",
-        "MOCVD (金属有机化学气相沉积)"
-      ],
-      "tag_themes": [
-        {
-          "tag": "刻蚀",
-          "theme_path": [
-            "1. 半导体设备",
-            "刻蚀设备",
-            "刻蚀"
-          ]
-        },
-        {
-          "tag": "MOCVD (金属有机化学气相沉积)",
-          "theme_path": [
-            "1. 半导体设备",
-            "薄膜沉积设备",
-            "MOCVD (金属有机化学气相沉积)"
-          ]
-        }
-      ],
-      "market_type": "A股",
-      "price": "344.00",
-      "change": "-2.50 (-0.72%)",
-      "isUp": false,
-      "per": "--",
-      "roe": "--",
-      "forward_per": "--",
-      "pbr": "--",
-      "distHigh": "--",
-      "ytdChange": "-26.57%",
-      "distWeek": "-15.2%",
-      "distMonth": "-31.2%",
-      "trend": "熊市空头",
-      "source": "sina"
     },
     {
       "code": "ASX",
@@ -8155,53 +8051,6 @@
       "source": "yfinance"
     },
     {
-      "code": "688262",
-      "name": "国芯科技",
-      "sector": "1.7",
-      "industry": "1.7.3",
-      "feature": "**行业地位**：国产量子安全芯片代表企业<br>**主营业务**：后量子密码（PQC）芯片、量子安全通信方案<br>**竞争优势**：后量子密码技术国内领先，量子安全通信布局前瞻，国产替代核心企业<br>**未来方向**：后量子密码标准落地驱动PQC芯片需求增长，量子安全通信市场拓展",
-      "tags": [
-        "后量子密码",
-        "量子安全"
-      ],
-      "display_tags": [
-        "后量子密码",
-        "量子安全"
-      ],
-      "tag_themes": [
-        {
-          "tag": "后量子密码",
-          "theme_path": [
-            "11. 量子计算",
-            "量子安全",
-            "后量子密码"
-          ]
-        },
-        {
-          "tag": "量子安全",
-          "theme_path": [
-            "11. 量子计算",
-            "量子安全",
-            "量子安全"
-          ]
-        }
-      ],
-      "market_type": "A股",
-      "price": "23.85",
-      "change": "+1.09 (+4.79%)",
-      "isUp": true,
-      "per": "--",
-      "roe": "--",
-      "forward_per": "--",
-      "pbr": "--",
-      "distHigh": "--",
-      "ytdChange": "-44.83%",
-      "distWeek": "-6.7%",
-      "distMonth": "-50.0%",
-      "trend": "熊市空头",
-      "source": "sina"
-    },
-    {
       "code": "6597",
       "name": "HPCシステムズ(HPC Systems)",
       "sector": "1.7",
@@ -8956,73 +8805,6 @@
       "ytdChange": "-33.18%",
       "distWeek": "-21.1%",
       "distMonth": "-36.2%",
-      "trend": "熊市空头",
-      "source": "sina"
-    },
-    {
-      "code": "603131",
-      "name": "上海沪工",
-      "sector": "2.1",
-      "industry": "2.1.1",
-      "feature": "**行业地位**：国内智能焊接设备领先企业<br>**主营业务**：数字化焊接设备、自动化焊接生产线、机器人焊接系统、激光切割设备<br>**竞争优势**：焊接设备技术领先，机器人焊接系统集成能力强，智能制造整体方案布局完善<br>**未来方向**：智能制造与自动化升级驱动焊接设备需求，持续推进机器人焊接系统迭代",
-      "tags": [
-        "焊接设备",
-        "工业机器人",
-        "智能制造解决方案",
-        "激光加工设备"
-      ],
-      "display_tags": [
-        "焊接设备",
-        "工业机器人",
-        "智能制造解决方案",
-        "激光加工设备"
-      ],
-      "tag_themes": [
-        {
-          "tag": "焊接设备",
-          "theme_path": [
-            "10. 工业自动化与机器人",
-            "激光加工",
-            "焊接设备"
-          ]
-        },
-        {
-          "tag": "工业机器人",
-          "theme_path": [
-            "10. 工业自动化与机器人",
-            "工业机器人",
-            "工业机器人"
-          ]
-        },
-        {
-          "tag": "智能制造解决方案",
-          "theme_path": [
-            "10. 工业自动化与机器人",
-            "智能制造",
-            "智能制造解决方案"
-          ]
-        },
-        {
-          "tag": "激光加工设备",
-          "theme_path": [
-            "10. 工业自动化与机器人",
-            "激光加工",
-            "激光加工设备"
-          ]
-        }
-      ],
-      "market_type": "A股",
-      "price": "14.36",
-      "change": "+0.37 (+2.64%)",
-      "isUp": true,
-      "per": "--",
-      "roe": "--",
-      "forward_per": "--",
-      "pbr": "--",
-      "distHigh": "--",
-      "ytdChange": "-15.63%",
-      "distWeek": "-1.0%",
-      "distMonth": "-25.0%",
       "trend": "熊市空头",
       "source": "sina"
     },
