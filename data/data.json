@@ -47,9 +47,9 @@
     },
     {
       "name": "美元/日元",
-      "price": "157.74",
-      "change": "+0.14 (+0.09%)",
-      "isUp": true,
+      "price": "157.78",
+      "change": "-0.62 (-0.39%)",
+      "isUp": false,
       "type": "forex",
       "badge_label": "FX",
       "badge_class": "forex"
@@ -4861,7 +4861,7 @@
       "per": "59.18",
       "roe": "53.9%",
       "forward_per": "29.29",
-      "pbr": "1479.31",
+      "pbr": "1472.61",
       "distHigh": "-12.9%",
       "ytdChange": "50.32%",
       "distWeek": "-1.2%",
