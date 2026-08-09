@@ -20,8 +20,8 @@
     },
     {
       "name": "黄金",
-      "price": "4340.70",
-      "change": "+98.70 (+2.33%)",
+      "price": "4399.70",
+      "change": "+157.70 (+3.72%)",
       "isUp": true,
       "type": "commodity",
       "badge_label": "商品",
@@ -29,8 +29,8 @@
     },
     {
       "name": "白银",
-      "price": "63.33",
-      "change": "+1.89 (+3.08%)",
+      "price": "63.50",
+      "change": "+2.06 (+3.35%)",
       "isUp": true,
       "type": "commodity",
       "badge_label": "商品",
@@ -38,8 +38,8 @@
     },
     {
       "name": "铜",
-      "price": "6.57",
-      "change": "-0.12 (-1.74%)",
+      "price": "6.59",
+      "change": "-0.10 (-1.44%)",
       "isUp": false,
       "type": "commodity",
       "badge_label": "商品",
