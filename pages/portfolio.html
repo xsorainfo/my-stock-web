@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📊 ポートフォリオ</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    
+    <!-- ⭐ 共通样式 -->
+    <link rel="stylesheet" href="../components/common.css">
+    <!-- ⭐ 导航栏样式 -->
+    <link rel="stylesheet" href="../components/navbar.css">
+    
+    <style>
+        /* ============================================================
+           portfolio.html 特有样式
+           ============================================================ */
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 8px;
+        }
+        
+        /* ===== 切换标签 ===== */
+        .portfolio-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 24px;
+            padding: 12px 16px;
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+        }
+        
+        .portfolio-tabs .tab-btn {
+            padding: 8px 20px;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            background: #f1f5f9;
+            color: #475569;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+        
+        .portfolio-tabs .tab-btn:hover {
+            background: #e2e8f0;
+            color: #1e293b;
+            transform: translateY(-1px);
+        }
+        
+        .portfolio-tabs .tab-btn.active {
+            background: #2563eb;
+            color: #ffffff;
+            border-color: #2563eb;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+        
+        .portfolio-tabs .tab-btn .count {
+            font-size: 11px;
+            font-weight: 400;
+            opacity: 0.7;
+            margin-left: 4px;
+        }
+        
+        .portfolio-tabs .tab-btn.active .count {
+            opacity: 0.9;
+        }
+        
+        /* ===== ヘッダー ===== */
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .page-header h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+        
+        .page-header .subtitle {
+            font-size: 13px;
+            color: #94a3b8;
+        }
+        
+        /* ===== 空状态 ===== */
+        .empty-state {
+            text-align: center;
+            padding: 80px 20px;
+            color: #94a3b8;
+        }
+        
+        .empty-state .emoji {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+        
+        .empty-state p {
+            font-size: 16px;
+        }
+        
+        /* ===== レスポンシブ ===== */
+        @media (max-width: 768px) {
+            .portfolio-tabs {
+                padding: 8px 12px;
+                gap: 6px;
+            }
+            .portfolio-tabs .tab-btn {
+                padding: 6px 14px;
+                font-size: 12px;
+            }
+            .page-header h2 {
+                font-size: 17px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .portfolio-tabs .tab-btn {
+                padding: 4px 10px;
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏占位符 -->
+    <div id="navbar-placeholder"></div>
+    
+    <div class="container">
+        <!-- ===== ポートフォリオ切り替えタブ ===== -->
+        <div class="portfolio-tabs" id="portfolioTabs">
+            <!-- JavaScript で生成 -->
+        </div>
+        
+        <!-- ===== ヘッダー ===== -->
+        <div class="page-header">
+            <h2 id="pageTitle">📊 ポートフォリオ</h2>
+            <span class="subtitle" id="stockCount"></span>
+        </div>
+        
+        <!-- ===== 銘柄グリッド ===== -->
+        <div id="stockGridContainer">
+            <div class="empty-state">
+                <div class="emoji">👈</div>
+                <p>ポートフォリオを選択してください</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ⭐ Footer 占位符 -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- 引入脚本 -->
+    <script src="../components/navbar.js"></script>
+    <script src="../components/common.js"></script>
+    <script src="../components/footer.js"></script>
+    
+    <script>
+    // ============================================================
+    // portfolio.html 特有逻辑
+    // ============================================================
+    
+    // ============================================================
+    // 1. ポートフォリオ定義
+    // ============================================================
+    const PORTFOLIO_LISTS = {
+        // ===== 著名投資家 =====
+        "buffett": {
+            name: "バフェット",
+            icon: "🧔",
+            description: "Warren Buffett バークシャー・ハサウェイ",
+            symbols: [
+                "AAPL", "BAC", "AXP", "KO", "CVX",
+                "OXY", "KHC", "MCO", "TMO", "DVA"
+            ]
+        },
+        "blackrock": {
+            name: "ブラックロック",
+            icon: "🏛️",
+            description: "BlackRock 世界最大の資産運用会社",
+            symbols: [
+                "AAPL", "MSFT", "NVDA", "AMZN", "META",
+                "GOOGL", "BRK.B", "LLY", "VTI", "IVV"
+            ]
+        },
+        "vanguard": {
+            name: "バンガード",
+            icon: "📈",
+            description: "Vanguard 世界最大のインデックス運用会社",
+            symbols: [
+                "AAPL", "MSFT", "AMZN", "NVDA", "GOOGL",
+                "META", "BRK.B", "JPM", "VTI", "BND"
+            ]
+        },
+        "softbank": {
+            name: "ソフトバンク",
+            icon: "🗼",
+            description: "SoftBank Group ビジョンファンド",
+            symbols: [
+                "9984.T", "ARM", "NVDA", "TCEHY",
+                "Uber", "CMCSA", "ALNY", "PACB"
+            ]
+        },
+        // ===== AIハードウェア =====
+        "ai_semiconductor": {
+            name: "AI半導体",
+            icon: "🧠",
+            description: "AI半導体関連（GPU・HBM・製造設備）",
+            symbols: [
+                "NVDA", "AMD", "INTC", "TSM", "AVGO",
+                "MU", "AMAT", "LRCX", "KLAC", "ASML"
+            ]
+        },
+        "ai_data_center": {
+            name: "AIデータセンター",
+            icon: "☁️",
+            description: "AIデータセンター・クラウド基盤",
+            symbols: [
+                "AMZN", "MSFT", "GOOGL", "META", "ORCL",
+                "SNOW", "CRWD", "PLTR", "DELL", "SMCI"
+            ]
+        },
+        // ===== 日本株 =====
+        "japan_semiconductor": {
+            name: "日本半導体",
+            icon: "🇯🇵",
+            description: "日本半導体・電子部品",
+            symbols: [
+                "4062.T", "6857.T", "8035.T", "6762.T", "6981.T",
+                "6954.T", "6506.T", "6324.T", "3110.T", "5803.T"
+            ]
+        },
+        "japan_robotics": {
+            name: "日本ロボット",
+            icon: "🤖",
+            description: "日本ロボット・FA関連",
+            symbols: [
+                "6954.T", "6506.T", "6324.T", "6594.T", "6479.T",
+                "6273.T", "6481.T", "6501.T", "6503.T", "6383.T"
+            ]
+        }
+    };
+    
+    // ============================================================
+    // 2. グローバルデータ
+    // ============================================================
+    let allStocks = [];
+    let currentPortfolioId = null;
+    let sectorMappingGlobal = [];
+    
+    // ============================================================
+    // 3. レンダリング関数
+    // ============================================================
+    
+    // タブをレンダリング
+    function renderTabs() {
+        const container = document.getElementById('portfolioTabs');
+        if (!container) return;
+        
+        let html = '';
+        for (const [id, list] of Object.entries(PORTFOLIO_LISTS)) {
+            const matched = getMatchedStocks(id);
+            const count = matched.length;
+            html += `
+                <button class="tab-btn ${id === currentPortfolioId ? 'active' : ''}" 
+                        data-portfolio-id="${id}"
+                        onclick="switchPortfolio('${id}')">
+                    ${list.icon} ${list.name}
+                    <span class="count">(${count})</span>
+                </button>
+            `;
+        }
+        container.innerHTML = html;
+    }
+    
+    // ポートフォリオにマッチする銘柄を取得
+    function getMatchedStocks(portfolioId) {
+        const list = PORTFOLIO_LISTS[portfolioId];
+        if (!list) return [];
+        
+        const symbols = list.symbols || [];
+        return allStocks.filter(stock => {
+            // コードの一致（.T や .SS などの違いを考慮）
+            const stockCode = stock.code;
+            const stockSymbol = stock.code;
+            
+            // 完全一致または.を除いた一致
+            return symbols.some(sym => {
+                const cleanSym = sym.split('.')[0];
+                const cleanStock = stockSymbol.split('.')[0];
+                return cleanStock === cleanSym || stockCode === sym;
+            });
+        });
+    }
+    
+    // ポートフォリオ切り替え
+    function switchPortfolio(portfolioId) {
+        currentPortfolioId = portfolioId;
+        
+        // タブの更新
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.portfolioId === portfolioId);
+        });
+        
+        // 銘柄表示
+        displayPortfolio(portfolioId);
+    }
+    
+    // ポートフォリオ表示
+    function displayPortfolio(portfolioId) {
+        const container = document.getElementById('stockGridContainer');
+        const countEl = document.getElementById('stockCount');
+        const titleEl = document.getElementById('pageTitle');
+        
+        const list = PORTFOLIO_LISTS[portfolioId];
+        if (!list) {
+            container.innerHTML = `
+                <div class="empty-state">
+                    <div class="emoji">❌</div>
+                    <p>ポートフォリオが見つかりません</p>
+                </div>
+            `;
+            countEl.textContent = '';
+            return;
+        }
+        
+        // タイトル更新
+        titleEl.textContent = `${list.icon} ${list.name} ${list.description}`;
+        
+        // マッチする銘柄を取得
+        const matched = getMatchedStocks(portfolioId);
+        countEl.textContent = `共 ${matched.length} 只标的`;
+        
+        if (matched.length === 0) {
+            container.innerHTML = `
+                <div class="empty-state">
+                    <div class="emoji">🔍</div>
+                    <p>${list.name} の銘柄は Watchlist に含まれていません</p>
+                    <p style="font-size:13px;color:#94a3b8;margin-top:8px;">💡 現在のWatchlist: ${allStocks.length}件</p>
+                </div>
+            `;
+            return;
+        }
+        
+        // カードレンダリング（index.html と同じ方式）
+        renderStockCards(matched, container);
+    }
+    
+    // ============================================================
+    // 4. カードレンダリング（index.html から流用）
+    // ============================================================
+    function renderStockCards(stocks, container) {
+        const marketOrder = { '美股': 0, '日股': 1, 'A股': 2, '港股': 3, '韩股': 4, '德股': 5 };
+        const sortedStocks = [...stocks].sort((a, b) => {
+            const orderA = marketOrder[a.market_type] ?? 999;
+            const orderB = marketOrder[b.market_type] ?? 999;
+            return orderA - orderB;
+        });
+        
+        let html = '<div class="stock-grid">';
+        let currentMarket = '';
+        
+        sortedStocks.forEach(stock => {
+            // 市場分隔標題
+            if (stock.market_type !== currentMarket) {
+                currentMarket = stock.market_type;
+                const marketLabel = {
+                    '美股': '🇺🇸 美股',
+                    '日股': '🇯🇵 日股',
+                    'A股': '🇨🇳 A股',
+                    '港股': '🇭🇰 港股',
+                    '韩股': '🇰🇷 韩股',
+                    '德股': '🇩🇪 德股'
+                }[currentMarket] || currentMarket;
+                
+                html += `<div class="market-divider">${marketLabel}</div>`;
+            }
+            
+            // カード生成
+            const formattedFeature = stock.feature.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            const colorClass = stock.isUp ? 'text-up' : 'text-down';
+            const trendClass = stock.trend === '牛市多头' ? 'trend-up-bg' : 'trend-down-bg';
+            
+            const tagsHtml = renderTags(
+                Array.isArray(stock.tags) ? stock.tags : [],
+                Array.isArray(stock.tag_themes) ? stock.tag_themes : [],
+                Array.isArray(stock.display_tags) ? stock.display_tags : []
+            );
+            
+            // ⭐ 空売りリンク
+            const shortBadge = renderShortBadge ? renderShortBadge(stock.code) : '';
+            
+            html += `
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <div class="stock-title">
+                            <a href="${getYahooUrl(stock)}" target="_blank" style="text-decoration: none; color: inherit;">
+                                <h3>${getMarketBadge(stock.market_type)} ${stock.name}</h3>
+                            </a>
+                            <span class="industry-tag">${getIndustryName(stock.sector, stock.industry) || '其他'}</span>
+                            ${shortBadge}
+                        </div>
+                        <div class="stock-actions">
+                            <span class="stock-code" onclick="copyToClipboard('${stock.code}')" title="点击复制代码">
+                                ${stock.code}
+                            </span>
+                            <a href="${getTradingViewUrl(stock)}" target="_blank" class="tv-link" title="在 TradingView 查看走势">
+                                📈
+                            </a>
+                        </div>
+                    </div>
+                    <div class="stock-feature">${formattedFeature}</div>
+                    
+                    <div class="tag-container">
+                        ${tagsHtml}
+                    </div>
+    
+                    <div class="stock-trend-badge ${trendClass}">${stock.trend}</div>
+                    <div class="price-row">
+                        <div class="stock-price ${colorClass}">${stock.price}</div>
+                        <div class="stock-change ${colorClass}">${stock.change}</div>
+                    </div>
+                    
+                    <table class="metrics-table" style="margin-bottom: 6px;">
+                        <thead>
+                            <tr>
+                                <th style="width: 33.33%;">
+                                    <a href="#" onclick="openTargetPrice('${stock.code}'); return false;" style="color: #2563eb; text-decoration: none; cursor: pointer; border-bottom: 1px dashed #2563eb;">
+                                        PER 估值 📊
+                                    </a>
+                                </th>
+                                <th style="width: 33.33%;">ROE</th>
+                                <th style="width: 33.33%;">PBR 溢价</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>${judgeValuation(stock.per, 'PER')}</td>
+                                <td>${judgeROE(stock.roe)}</td>
+                                <td>${judgeValuation(stock.pbr, 'PBR')}</td>                                            
+                            </tr>
+                        </tbody>
+                    </table>
+    
+                    <table class="metrics-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 25%;">距1周高</th>
+                                <th style="width: 25%;">距1月高</th>
+                                <th style="width: 25%;">距52周高</th>
+                                <th style="width: 25%;">年初高</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="font-weight: 600; color: #1e293b; font-size: 12px;">
+                                <td>${stock.distWeek || '--'}</td>
+                                <td>${stock.distMonth || '--'}</td>
+                                <td>${stock.distHigh || '--'}</td>
+                                <td style="color: ${parseFloat(stock.ytdChange) >= 0 ? 'var(--up-color)' : 'var(--down-color)'};">${stock.ytdChange || '--'}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <!-- ⭐ メモ -->
+                    ${typeof renderMemoHTML === 'function' ? renderMemoHTML(stock) : ''}
+                </div>
+            `;
+        });
+        
+        html += '</div>';
+        container.innerHTML = html;
+    }
+    
+    // ============================================================
+    // 5. データ読み込み
+    // ============================================================
+    async function loadPortfolioData() {
+        try {
+            // sector_mapping を先に読み込み
+            await loadSectorMapping();
+            
+            const response = await fetch('/data/data.json?v=' + new Date().getTime());
+            if (!response.ok) throw new Error('データ読み込み失敗');
+            const data = await response.json();
+            
+            allStocks = data.stocks || [];
+            
+            // タブをレンダリング
+            renderTabs();
+            
+            // デフォルトで最初のポートフォリオを表示
+            const firstId = Object.keys(PORTFOLIO_LISTS)[0];
+            if (firstId) {
+                switchPortfolio(firstId);
+            }
+            
+            console.log(`📊 portfolio.html 読み込み完了: ${allStocks.length}件の銘柄`);
+            
+        } catch (error) {
+            console.error('データ読み込み失敗:', error);
+            document.getElementById('stockGridContainer').innerHTML = `
+                <div class="empty-state">
+                    <div class="emoji">⚠️</div>
+                    <p>データ読み込みに失敗しました</p>
+                    <p style="font-size:13px;color:#94a3b8;margin-top:8px;">${error.message}</p>
+                </div>
+            `;
+        }
+    }
+    
+    // ============================================================
+    // 6. 起動
+    // ============================================================
+    window.onload = function() {
+        loadPortfolioData();
+    };
+    </script>
+</body>
+</html>
