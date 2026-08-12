@@ -8,13 +8,19 @@ import time
 import random
 import requests
 
+
+
+
+# fetch_all_data() 関数内で
+output_data["portfolio_lists"] = PORTFOLIO_LISTS
+
 # ⭐ 添加项目根目录到 Python 路径
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from config import MACRO_LIST, WATCHLIST, DEFAULT_STRATEGY, SOURCE_MAP
 from theme_mapping import THEME_MAPPING  # ⭐ 从 theme_mapping.py 导入
 from tag_display_map import TAG_DISPLAY_MAP  # ⭐ 导入显示映射
-
+from portfolio_lists import PORTFOLIO_LISTS
 
 # ============================================================
 # ⭐ Tag 显示名称转换函数
