@@ -454,7 +454,7 @@ def fetch_all_data():
         "theme_mapping": THEME_MAPPING,  # ⭐ 把主题映射写入 data.json
         "tag_display_map": TAG_DISPLAY_MAP,  # ⭐ 把显示映射写入 data.json
         "theme_descriptions": {},  # ⭐ 新增：存储二级分类的注释
-        output_data["portfolio_lists"] = PORTFOLIO_LISTS
+        "portfolio_lists": PORTFOLIO_LISTS
     }
     
     # ⭐ 构建二级分类注释映射
