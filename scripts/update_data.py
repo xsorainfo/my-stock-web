@@ -9,11 +9,6 @@ import random
 import requests
 
 
-
-
-# fetch_all_data() 関数内で
-output_data["portfolio_lists"] = PORTFOLIO_LISTS
-
 # ⭐ 添加项目根目录到 Python 路径
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -458,7 +453,8 @@ def fetch_all_data():
         "ai_report": "",
         "theme_mapping": THEME_MAPPING,  # ⭐ 把主题映射写入 data.json
         "tag_display_map": TAG_DISPLAY_MAP,  # ⭐ 把显示映射写入 data.json
-        "theme_descriptions": {}  # ⭐ 新增：存储二级分类的注释
+        "theme_descriptions": {},  # ⭐ 新增：存储二级分类的注释
+        output_data["portfolio_lists"] = PORTFOLIO_LISTS
     }
     
     # ⭐ 构建二级分类注释映射
