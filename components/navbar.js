@@ -50,6 +50,7 @@ function loadNavbar() {
             <div class="nav-links">
                 <a href="${basePath}/pages/index.html" class="nav-item" data-page="index">首页</a>
                 <a href="${basePath}/pages/sub_ai.html" class="nav-item" data-page="sub_ai" target="_blank">テーマ別</a>
+                <a href="${basePath}/pages/portfolio.html" class="nav-item" data-page="portfolio" target="_blank">リスト別</a>
                 <a href="${basePath}/pages/settings.html" class="nav-item" data-page="settings">策略配置</a>
                 <!-- ⭐ 下拉菜单：研究文档 -->
                 <div class="dropdown">
