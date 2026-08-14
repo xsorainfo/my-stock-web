@@ -686,7 +686,63 @@ function getBigMoveMark(changeStr) {
     }
     return '';
 }
+// ============================================================
+// 21. 返回顶部功能（共通）
+// ============================================================
 
+function initBackToTop() {
+    // 既存のボタンを削除（重複防止）
+    const existingBtn = document.getElementById('backToTop');
+    if (existingBtn) {
+        existingBtn.remove();
+    }
+    
+    // ボタンを作成
+    const btn = document.createElement('button');
+    btn.id = 'backToTop';
+    btn.className = 'back-to-top';
+    btn.innerHTML = '⬆';
+    btn.setAttribute('title', '先頭に戻る');
+    document.body.appendChild(btn);
+    
+    let isScrolling = false;
+    let scrollTimer = null;
+    
+    // スクロール検知
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            btn.classList.add('visible');
+        } else {
+            btn.classList.remove('visible');
+        }
+        
+        isScrolling = true;
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(function() {
+            isScrolling = false;
+        }, 150);
+    }, { passive: true });
+    
+    // クリックでトップへ
+    btn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    
+    console.log('⬆ 返回顶部ボタンが初期化されました');
+}
+
+// ページ読み込み完了時に自動初期化
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initBackToTop);
+} else {
+    initBackToTop();
+}
+
+// グローバルに公開（必要に応じて手動呼び出しも可能）
+window.initBackToTop = initBackToTop;
 // 导出到全局
 window.getChangePercent = getChangePercent;
 window.getBigMoveMark = getBigMoveMark;
