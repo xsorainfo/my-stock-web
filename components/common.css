@@ -691,3 +691,55 @@ body {
 .big-move-mark.static {
     animation: none;
 }
+/* ============================================================
+   返回顶部按钮（共通）
+   ============================================================ */
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 48px;
+    height: 48px;
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-to-top:hover {
+    background: #1d4ed8;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    .back-to-top {
+        width: 42px;
+        height: 42px;
+        font-size: 17px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
