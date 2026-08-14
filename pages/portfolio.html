@@ -110,6 +110,64 @@
             font-size: 16px;
         }
         
+        /* ===== Sector（一级） ===== */
+        .sector-section {
+            margin-bottom: 40px;
+        }
+
+        .sector-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 4px;
+            padding: 10px 16px;
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            border-radius: 8px;
+            border-left: 4px solid #2563eb;
+            color: #ffffff;
+        }
+
+        .sector-comment {
+            font-family: 'Zen Maru Gothic', 'Hiragino Sans', 'Noto Sans SC', sans-serif;
+            font-size: 13px;
+            color: #00035b;
+            margin: -6px 0 18px 16px;
+            padding: 6px 0;
+            background: transparent;
+            border-bottom: 2px dashed #e2e8f0;
+            line-height: 1.8;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== Industry（二级） ===== */
+        .industry-section {
+            margin-bottom: 28px;
+            margin-left: 16px;
+        }
+
+        .industry-title {
+            font-size: 17px;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 4px;
+            padding: 6px 14px;
+            background: #f8fafc;
+            border-radius: 4px;
+            border-left: 3px solid #2563eb;
+        }
+
+        .industry-comment {
+            font-family: 'Zen Maru Gothic', 'Hiragino Sans', 'Noto Sans SC', sans-serif;
+            font-size: 13px;
+            color: #00035b;
+            margin: -4px 0 14px 28px;
+            padding: 4px 0;
+            background: transparent;
+            border-bottom: 1.5px dashed #eaeef5;
+            line-height: 1.8;
+            letter-spacing: 0.5px;
+        }
+        
         /* ===== レスポンシブ ===== */
         @media (max-width: 768px) {
             .portfolio-tabs {
@@ -342,7 +400,9 @@
         displayPortfolio(portfolioId);
     }
 
-    // ポートフォリオ表示
+    // ============================================================
+    // 4. ポートフォリオ表示（sector → industry 分组）
+    // ============================================================
     function displayPortfolio(portfolioId) {
         const container = document.getElementById('stockGridContainer');
         const countEl = document.getElementById('stockCount');
@@ -378,158 +438,212 @@
             return;
         }
         
-        // カードレンダリング
-        renderStockCards(matched, container);
+        // ⭐ sector → industry 分组渲染（index.html と同じ方式）
+        renderGroupedStocks(matched, container);
     }
 
     // ============================================================
-    // 4. カードレンダリング（index.html と同じ方式）
+    // 5. グループ化レンダリング（index.html と同じ方式）
     // ============================================================
-    function renderStockCards(stocks, container) {
+    function renderGroupedStocks(stocks, container) {
         const marketOrder = { '美股': 0, '日股': 1, 'A股': 2, '港股': 3, '韩股': 4, '德股': 5 };
-        const sortedStocks = [...stocks].sort((a, b) => {
-            const orderA = marketOrder[a.market_type] ?? 999;
-            const orderB = marketOrder[b.market_type] ?? 999;
-            return orderA - orderB;
-        });
         
-        let html = '<div class="stock-grid">';
-        let currentMarket = '';
+        // 按 sector 分组
+        const sectorGroups = stocks.reduce((acc, stock) => {
+            const sectorKey = stock.sector || '未分类板块';
+            if (!acc[sectorKey]) acc[sectorKey] = [];
+            acc[sectorKey].push(stock);
+            return acc;
+        }, {});
         
-        sortedStocks.forEach(stock => {
-            // 市場分隔標題
-            if (stock.market_type !== currentMarket) {
-                currentMarket = stock.market_type;
-                const marketLabel = {
-                    '美股': '🇺🇸 美股',
-                    '日股': '🇯🇵 日股',
-                    'A股': '🇨🇳 A股',
-                    '港股': '🇭🇰 港股',
-                    '韩股': '🇰🇷 韩股',
-                    '德股': '🇩🇪 德股'
-                }[currentMarket] || currentMarket;
-                
-                html += `<div class="market-divider">${marketLabel}</div>`;
-            }
-            
-            // カード生成
-            const formattedFeature = stock.feature ? stock.feature.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') : '';
-            const colorClass = stock.isUp ? 'text-up' : 'text-down';
-            const trendClass = stock.trend === '牛市多头' ? 'trend-up-bg' : 'trend-down-bg';
-            
-            // tagsHtml を生成（common.js の renderTags を使用）
-            let tagsHtml = '';
-            if (typeof renderTags === 'function') {
-                tagsHtml = renderTags(
-                    Array.isArray(stock.tags) ? stock.tags : [],
-                    Array.isArray(stock.tag_themes) ? stock.tag_themes : [],
-                    Array.isArray(stock.display_tags) ? stock.display_tags : []
-                );
-            }
-            
-            // 空売りリンク
-            let shortBadge = '';
-            if (typeof renderShortBadge === 'function') {
-                shortBadge = renderShortBadge(stock.code);
-            }
-            
-            // 大暴れマーク
-            let bigMoveMark = '';
-            if (typeof getBigMoveMark === 'function') {
-                bigMoveMark = getBigMoveMark(stock.change);
-            }
-            
-            // メモ
-            let memoHtml = '';
-            if (typeof renderMemoHTML === 'function') {
-                memoHtml = renderMemoHTML(stock);
-            }
+        let html = '';
+        
+        for (const [sector, sectorStocks] of Object.entries(sectorGroups)) {
+            const sectorName = getSectorName(sector);
+            const sectorComment = getSectorComment(sector);
             
             html += `
-                <div class="stock-card">
-                    <div class="stock-header">
-                        <div class="stock-title">
-                            <a href="${getYahooUrl(stock)}" target="_blank" style="text-decoration: none; color: inherit;">
-                                <h3>${getMarketBadge(stock.market_type)} ${stock.name || ''}</h3>
-                            </a>
-                            <span class="industry-tag">${getIndustryName(stock.sector, stock.industry) || '其他'}</span>
-                            ${shortBadge}
-                        </div>
-                        <div class="stock-actions">
-                            <span class="stock-code" onclick="copyToClipboard('${stock.code || ''}')" title="点击复制代码">
-                                ${stock.code || ''}
-                            </span>
-                            <a href="${getTradingViewUrl(stock)}" target="_blank" class="tv-link" title="在 TradingView 查看走势">
-                                📈
-                            </a>
-                        </div>
-                    </div>
-                    <div class="stock-feature">${formattedFeature}</div>
-                    
-                    <div class="tag-container">
-                        ${tagsHtml}
-                    </div>
-
-                    <div class="stock-trend-badge ${trendClass}">${stock.trend || '--'}</div>
-                    <div class="price-row">
-                        <div class="stock-price ${colorClass}">${stock.price || '--'}</div>
-                        <div class="stock-change ${colorClass}">
-                            ${stock.change || '--'}
-                            ${bigMoveMark}
-                        </div>
-                    </div>
-                    
-                    <table class="metrics-table" style="margin-bottom: 6px;">
-                        <thead>
-                            <tr>
-                                <th style="width: 33.33%;">
-                                    <a href="#" onclick="openTargetPrice('${stock.code || ''}'); return false;" style="color: #2563eb; text-decoration: none; cursor: pointer; border-bottom: 1px dashed #2563eb;">
-                                        PER 估值 📊
-                                    </a>
-                                </th>
-                                <th style="width: 33.33%;">ROE</th>
-                                <th style="width: 33.33%;">PBR 溢价</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>${judgeValuation(stock.per, 'PER')}</td>
-                                <td>${judgeROE(stock.roe)}</td>
-                                <td>${judgeValuation(stock.pbr, 'PBR')}</td>                                            
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <table class="metrics-table">
-                        <thead>
-                            <tr>
-                                <th style="width: 25%;">距1周高</th>
-                                <th style="width: 25%;">距1月高</th>
-                                <th style="width: 25%;">距52周高</th>
-                                <th style="width: 25%;">年初高</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr style="font-weight: 600; color: #1e293b; font-size: 12px;">
-                                <td>${stock.distWeek || '--'}</td>
-                                <td>${stock.distMonth || '--'}</td>
-                                <td>${stock.distHigh || '--'}</td>
-                                <td style="color: ${parseFloat(stock.ytdChange) >= 0 ? 'var(--up-color)' : 'var(--down-color)'};">${stock.ytdChange || '--'}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    
-                    ${memoHtml}
-                </div>
+                <div class="sector-section">
+                    <h2 class="sector-title">${sectorName}</h2>
+                    ${sectorComment ? `<p class="sector-comment">${sectorComment}</p>` : ''}
             `;
-        });
+            
+            // 按 industry 分组
+            const industryGroups = sectorStocks.reduce((acc, stock) => {
+                const industryKey = stock.industry || '其他';
+                if (!acc[industryKey]) acc[industryKey] = [];
+                acc[industryKey].push(stock);
+                return acc;
+            }, {});
+            
+            for (const [industry, industryStocks] of Object.entries(industryGroups)) {
+                const industryName = getIndustryName(sector, industry);
+                const industryComment = getIndustryComment(sector, industry);
+                
+                html += `
+                    <div class="industry-section">
+                        <h3 class="industry-title">${industryName}</h3>
+                        ${industryComment ? `<p class="industry-comment">${industryComment}</p>` : ''}
+                        <div class="stock-grid">
+                `;
+                
+                // 按市场排序：美股 → 日股 → A股
+                const sortedStocks = [...industryStocks].sort((a, b) => {
+                    const orderA = marketOrder[a.market_type] ?? 999;
+                    const orderB = marketOrder[b.market_type] ?? 999;
+                    return orderA - orderB;
+                });
+                
+                // 添加市场分隔标题
+                let currentMarket = '';
+                sortedStocks.forEach(stock => {
+                    if (stock.market_type !== currentMarket) {
+                        currentMarket = stock.market_type;
+                        const marketLabel = {
+                            '美股': '🇺🇸 美股',
+                            '日股': '🇯🇵 日股',
+                            'A股': '🇨🇳 A股',
+                            '港股': '🇭🇰 港股',
+                            '韩股': '🇰🇷 韩股',
+                            '德股': '🇩🇪 德股'
+                        }[currentMarket] || currentMarket;
+                        
+                        html += `<div class="market-divider">${marketLabel}</div>`;
+                    }
+                    
+                    // カード生成
+                    html += renderSingleCard(stock);
+                });
+                
+                html += `
+                        </div>
+                    </div>
+                `;
+            }
+            
+            html += `</div>`;
+        }
         
-        html += '</div>';
         container.innerHTML = html;
     }
 
     // ============================================================
-    // 5. データ読み込み
+    // 6. 単一カードレンダリング
+    // ============================================================
+    function renderSingleCard(stock) {
+        const formattedFeature = stock.feature ? stock.feature.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') : '';
+        const colorClass = stock.isUp ? 'text-up' : 'text-down';
+        const trendClass = stock.trend === '牛市多头' ? 'trend-up-bg' : 'trend-down-bg';
+        
+        // tagsHtml を生成
+        let tagsHtml = '';
+        if (typeof renderTags === 'function') {
+            tagsHtml = renderTags(
+                Array.isArray(stock.tags) ? stock.tags : [],
+                Array.isArray(stock.tag_themes) ? stock.tag_themes : [],
+                Array.isArray(stock.display_tags) ? stock.display_tags : []
+            );
+        }
+        
+        // 空売りリンク
+        let shortBadge = '';
+        if (typeof renderShortBadge === 'function') {
+            shortBadge = renderShortBadge(stock.code);
+        }
+        
+        // 大暴れマーク
+        let bigMoveMark = '';
+        if (typeof getBigMoveMark === 'function') {
+            bigMoveMark = getBigMoveMark(stock.change);
+        }
+        
+        // メモ
+        let memoHtml = '';
+        if (typeof renderMemoHTML === 'function') {
+            memoHtml = renderMemoHTML(stock);
+        }
+        
+        return `
+            <div class="stock-card">
+                <div class="stock-header">
+                    <div class="stock-title">
+                        <a href="${getYahooUrl(stock)}" target="_blank" style="text-decoration: none; color: inherit;">
+                            <h3>${getMarketBadge(stock.market_type)} ${stock.name || ''}</h3>
+                        </a>
+                        <span class="industry-tag">${getIndustryName(stock.sector, stock.industry) || '其他'}</span>
+                        ${shortBadge}
+                    </div>
+                    <div class="stock-actions">
+                        <span class="stock-code" onclick="copyToClipboard('${stock.code || ''}')" title="点击复制代码">
+                            ${stock.code || ''}
+                        </span>
+                        <a href="${getTradingViewUrl(stock)}" target="_blank" class="tv-link" title="在 TradingView 查看走势">
+                            📈
+                        </a>
+                    </div>
+                </div>
+                <div class="stock-feature">${formattedFeature}</div>
+                
+                <div class="tag-container">
+                    ${tagsHtml}
+                </div>
+
+                <div class="stock-trend-badge ${trendClass}">${stock.trend || '--'}</div>
+                <div class="price-row">
+                    <div class="stock-price ${colorClass}">${stock.price || '--'}</div>
+                    <div class="stock-change ${colorClass}">
+                        ${stock.change || '--'}
+                        ${bigMoveMark}
+                    </div>
+                </div>
+                
+                <table class="metrics-table" style="margin-bottom: 6px;">
+                    <thead>
+                        <tr>
+                            <th style="width: 33.33%;">
+                                <a href="#" onclick="openTargetPrice('${stock.code || ''}'); return false;" style="color: #2563eb; text-decoration: none; cursor: pointer; border-bottom: 1px dashed #2563eb;">
+                                    PER 估值 📊
+                                </a>
+                            </th>
+                            <th style="width: 33.33%;">ROE</th>
+                            <th style="width: 33.33%;">PBR 溢价</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>${judgeValuation(stock.per, 'PER')}</td>
+                            <td>${judgeROE(stock.roe)}</td>
+                            <td>${judgeValuation(stock.pbr, 'PBR')}</td>                                            
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="metrics-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%;">距1周高</th>
+                            <th style="width: 25%;">距1月高</th>
+                            <th style="width: 25%;">距52周高</th>
+                            <th style="width: 25%;">年初高</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="font-weight: 600; color: #1e293b; font-size: 12px;">
+                            <td>${stock.distWeek || '--'}</td>
+                            <td>${stock.distMonth || '--'}</td>
+                            <td>${stock.distHigh || '--'}</td>
+                            <td style="color: ${parseFloat(stock.ytdChange) >= 0 ? 'var(--up-color)' : 'var(--down-color)'};">${stock.ytdChange || '--'}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                ${memoHtml}
+            </div>
+        `;
+    }
+
+    // ============================================================
+    // 7. データ読み込み
     // ============================================================
     async function loadPortfolioData() {
         try {
@@ -572,7 +686,7 @@
     }
 
     // ============================================================
-    // 6. 起動
+    // 8. 起動
     // ============================================================
     window.onload = function() {
         loadPortfolioData();
