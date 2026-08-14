@@ -28,7 +28,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            margin-bottom: 24px;
+            margin-bottom: 16px;
             padding: 12px 16px;
             background: #ffffff;
             border-radius: 12px;
@@ -73,6 +73,39 @@
             opacity: 0.9;
         }
         
+        /* ===== 表示モード切替ボタン ===== */
+        .view-mode-toggle {
+            display: flex;
+            gap: 4px;
+            padding: 4px;
+            background: #f1f5f9;
+            border-radius: 8px;
+            margin-left: auto;
+        }
+        
+        .view-mode-toggle .mode-btn {
+            padding: 4px 14px;
+            border: none;
+            border-radius: 6px;
+            background: transparent;
+            color: #64748b;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+        
+        .view-mode-toggle .mode-btn:hover {
+            color: #1e293b;
+        }
+        
+        .view-mode-toggle .mode-btn.active {
+            background: #ffffff;
+            color: #2563eb;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+        }
+        
         /* ===== ヘッダー ===== */
         .page-header {
             display: flex;
@@ -81,6 +114,8 @@
             margin-bottom: 20px;
             padding-bottom: 12px;
             border-bottom: 1px solid var(--border-color);
+            flex-wrap: wrap;
+            gap: 8px;
         }
         
         .page-header h2 {
@@ -92,6 +127,12 @@
         .page-header .subtitle {
             font-size: 13px;
             color: #94a3b8;
+        }
+        
+        .page-header-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
         
         /* ===== 空状态 ===== */
@@ -181,12 +222,20 @@
             .page-header h2 {
                 font-size: 17px;
             }
+            .view-mode-toggle .mode-btn {
+                font-size: 11px;
+                padding: 3px 10px;
+            }
         }
         
         @media (max-width: 480px) {
             .portfolio-tabs .tab-btn {
                 padding: 4px 10px;
                 font-size: 11px;
+            }
+            .view-mode-toggle .mode-btn {
+                font-size: 10px;
+                padding: 2px 8px;
             }
         }
     </style>
@@ -203,8 +252,21 @@
         
         <!-- ===== ヘッダー ===== -->
         <div class="page-header">
-            <h2 id="pageTitle">📊 ポートフォリオ</h2>
-            <span class="subtitle" id="stockCount"></span>
+            <div>
+                <h2 id="pageTitle">📊 ポートフォリオ</h2>
+            </div>
+            <div class="page-header-right">
+                <span class="subtitle" id="stockCount"></span>
+                <!-- ⭐ 表示モード切替ボタン -->
+                <div class="view-mode-toggle" id="viewModeToggle">
+                    <button class="mode-btn active" data-mode="group" onclick="setViewMode('group')">
+                        📂 グループ
+                    </button>
+                    <button class="mode-btn" data-mode="flat" onclick="setViewMode('flat')">
+                        📋 フラット
+                    </button>
+                </div>
+            </div>
         </div>
         
         <!-- ===== 銘柄グリッド ===== -->
@@ -298,10 +360,18 @@
         }
     };
 
-    // portfolio_lists.json を読み込む
+    // ============================================================
+    // 2. グローバルデータ
+    // ============================================================
+    let allStocks = [];
+    let currentPortfolioId = null;
+    let currentViewMode = 'group';  // 'group' または 'flat'
+
+    // ============================================================
+    // 3. ポートフォリオリスト読み込み
+    // ============================================================
     async function loadPortfolioLists() {
         try {
-            // 方法1: data.json から読み込む
             const response = await fetch('/data/data.json?v=' + new Date().getTime());
             if (response.ok) {
                 const data = await response.json();
@@ -312,7 +382,6 @@
                 }
             }
             
-            // 方法2: 直接 portfolio_lists.json から読み込む
             const resp2 = await fetch('/data/portfolio_lists.json?v=' + new Date().getTime());
             if (resp2.ok) {
                 const data = await resp2.json();
@@ -323,7 +392,6 @@
                 }
             }
             
-            // 方法3: フォールバック（デフォルトを使用）
             console.warn('⚠️ portfolio_lists が見つかりません。デフォルトを使用します。');
             PORTFOLIO_LISTS = DEFAULT_PORTFOLIO_LISTS;
             
@@ -334,13 +402,7 @@
     }
 
     // ============================================================
-    // 2. グローバルデータ
-    // ============================================================
-    let allStocks = [];
-    let currentPortfolioId = null;
-
-    // ============================================================
-    // 3. レンダリング関数
+    // 4. レンダリング関数
     // ============================================================
 
     // タブをレンダリング
@@ -348,7 +410,6 @@
         const container = document.getElementById('portfolioTabs');
         if (!container) return;
         
-        // PORTFOLIO_LISTS が空の場合はデフォルトをセット
         if (!PORTFOLIO_LISTS || Object.keys(PORTFOLIO_LISTS).length === 0) {
             PORTFOLIO_LISTS = DEFAULT_PORTFOLIO_LISTS;
         }
@@ -391,17 +452,32 @@
     function switchPortfolio(portfolioId) {
         currentPortfolioId = portfolioId;
         
-        // タブの更新
         document.querySelectorAll('.tab-btn').forEach(btn => {
             btn.classList.toggle('active', btn.dataset.portfolioId === portfolioId);
         });
         
-        // 銘柄表示
         displayPortfolio(portfolioId);
     }
 
     // ============================================================
-    // 4. ポートフォリオ表示（sector → industry 分组）
+    // 5. 表示モード切替
+    // ============================================================
+    function setViewMode(mode) {
+        currentViewMode = mode;
+        
+        // ボタンのアクティブ状態を更新
+        document.querySelectorAll('.mode-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.mode === mode);
+        });
+        
+        // 現在のポートフォリオを再表示
+        if (currentPortfolioId) {
+            displayPortfolio(currentPortfolioId);
+        }
+    }
+
+    // ============================================================
+    // 6. ポートフォリオ表示
     // ============================================================
     function displayPortfolio(portfolioId) {
         const container = document.getElementById('stockGridContainer');
@@ -420,10 +496,8 @@
             return;
         }
         
-        // タイトル更新
         titleEl.textContent = `${list.icon || '📊'} ${list.name || portfolioId} ${list.description || ''}`;
         
-        // マッチする銘柄を取得
         const matched = getMatchedStocks(portfolioId);
         countEl.textContent = `共 ${matched.length} 只标的`;
         
@@ -438,17 +512,20 @@
             return;
         }
         
-        // ⭐ sector → industry 分组渲染（index.html と同じ方式）
-        renderGroupedStocks(matched, container);
+        // ⭐ 表示モードに応じてレンダリングを切り替え
+        if (currentViewMode === 'group') {
+            renderGroupedStocks(matched, container);
+        } else {
+            renderFlatStocks(matched, container);
+        }
     }
 
     // ============================================================
-    // 5. グループ化レンダリング（index.html と同じ方式）
+    // 7. グループ表示（Sector → Industry）
     // ============================================================
     function renderGroupedStocks(stocks, container) {
         const marketOrder = { '美股': 0, '日股': 1, 'A股': 2, '港股': 3, '韩股': 4, '德股': 5 };
         
-        // 按 sector 分组
         const sectorGroups = stocks.reduce((acc, stock) => {
             const sectorKey = stock.sector || '未分类板块';
             if (!acc[sectorKey]) acc[sectorKey] = [];
@@ -468,7 +545,6 @@
                     ${sectorComment ? `<p class="sector-comment">${sectorComment}</p>` : ''}
             `;
             
-            // 按 industry 分组
             const industryGroups = sectorStocks.reduce((acc, stock) => {
                 const industryKey = stock.industry || '其他';
                 if (!acc[industryKey]) acc[industryKey] = [];
@@ -487,14 +563,12 @@
                         <div class="stock-grid">
                 `;
                 
-                // 按市场排序：美股 → 日股 → A股
                 const sortedStocks = [...industryStocks].sort((a, b) => {
                     const orderA = marketOrder[a.market_type] ?? 999;
                     const orderB = marketOrder[b.market_type] ?? 999;
                     return orderA - orderB;
                 });
                 
-                // 添加市场分隔标题
                 let currentMarket = '';
                 sortedStocks.forEach(stock => {
                     if (stock.market_type !== currentMarket) {
@@ -511,7 +585,6 @@
                         html += `<div class="market-divider">${marketLabel}</div>`;
                     }
                     
-                    // カード生成
                     html += renderSingleCard(stock);
                 });
                 
@@ -528,14 +601,49 @@
     }
 
     // ============================================================
-    // 6. 単一カードレンダリング
+    // 8. フラット表示（単純グリッド）
+    // ============================================================
+    function renderFlatStocks(stocks, container) {
+        const marketOrder = { '美股': 0, '日股': 1, 'A股': 2, '港股': 3, '韩股': 4, '德股': 5 };
+        const sortedStocks = [...stocks].sort((a, b) => {
+            const orderA = marketOrder[a.market_type] ?? 999;
+            const orderB = marketOrder[b.market_type] ?? 999;
+            return orderA - orderB;
+        });
+        
+        let html = '<div class="stock-grid">';
+        let currentMarket = '';
+        
+        sortedStocks.forEach(stock => {
+            if (stock.market_type !== currentMarket) {
+                currentMarket = stock.market_type;
+                const marketLabel = {
+                    '美股': '🇺🇸 美股',
+                    '日股': '🇯🇵 日股',
+                    'A股': '🇨🇳 A股',
+                    '港股': '🇭🇰 港股',
+                    '韩股': '🇰🇷 韩股',
+                    '德股': '🇩🇪 德股'
+                }[currentMarket] || currentMarket;
+                
+                html += `<div class="market-divider">${marketLabel}</div>`;
+            }
+            
+            html += renderSingleCard(stock);
+        });
+        
+        html += '</div>';
+        container.innerHTML = html;
+    }
+
+    // ============================================================
+    // 9. 単一カードレンダリング
     // ============================================================
     function renderSingleCard(stock) {
         const formattedFeature = stock.feature ? stock.feature.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') : '';
         const colorClass = stock.isUp ? 'text-up' : 'text-down';
         const trendClass = stock.trend === '牛市多头' ? 'trend-up-bg' : 'trend-down-bg';
         
-        // tagsHtml を生成
         let tagsHtml = '';
         if (typeof renderTags === 'function') {
             tagsHtml = renderTags(
@@ -545,19 +653,16 @@
             );
         }
         
-        // 空売りリンク
         let shortBadge = '';
         if (typeof renderShortBadge === 'function') {
             shortBadge = renderShortBadge(stock.code);
         }
         
-        // 大暴れマーク
         let bigMoveMark = '';
         if (typeof getBigMoveMark === 'function') {
             bigMoveMark = getBigMoveMark(stock.change);
         }
         
-        // メモ
         let memoHtml = '';
         if (typeof renderMemoHTML === 'function') {
             memoHtml = renderMemoHTML(stock);
@@ -643,29 +748,24 @@
     }
 
     // ============================================================
-    // 7. データ読み込み
+    // 10. データ読み込み
     // ============================================================
     async function loadPortfolioData() {
         try {
-            // sector_mapping を読み込み
             if (typeof loadSectorMapping === 'function') {
                 await loadSectorMapping();
             }
             
-            // 1. 銘柄データを読み込み
             const response = await fetch('/data/data.json?v=' + new Date().getTime());
             if (!response.ok) throw new Error('データ読み込み失敗');
             const data = await response.json();
             allStocks = data.stocks || [];
             console.log(`📊 銘柄データ読み込み完了: ${allStocks.length}件`);
             
-            // 2. ポートフォリオリストを読み込み
             await loadPortfolioLists();
             
-            // 3. タブをレンダリング
             renderTabs();
             
-            // 4. デフォルトで最初のポートフォリオを表示
             const firstId = Object.keys(PORTFOLIO_LISTS)[0];
             if (firstId) {
                 switchPortfolio(firstId);
@@ -686,11 +786,15 @@
     }
 
     // ============================================================
-    // 8. 起動
+    // 11. 起動
     // ============================================================
     window.onload = function() {
         loadPortfolioData();
     };
+    
+    // グローバルに公開
+    window.setViewMode = setViewMode;
+    window.switchPortfolio = switchPortfolio;
     </script>
 </body>
 </html>
