@@ -311,6 +311,16 @@ function renderMemoHTML(stock) {
     const memoText = loadMemo(symbol);
     const hasMemoText = memoText && memoText.trim().length > 0;
     const charCount = getMemoCharCount(memoText);
+    // ⭐ 空の場合はデフォルトテキストを表示
+    const displayText = hasMemoText ? memoText : '🌺\n9️⃣\n🇩';
+    const displayHasMemo = hasMemoText || true;  // 空でも表示する
+    
+    // デフォルトテキストの場合はインジケーターを表示しない
+    const indicatorClass = hasMemoText ? 'has-memo' : '';
+    
+    // ⭐ 空でない場合は展開（デフォルトテキストも展開）
+    //const isOpen = 'open';
+    //const arrowClass = 'open';
     
     // ⭐ 如果有备忘录内容，默认展开
     const isOpen = hasMemoText ? 'open' : '';
@@ -321,7 +331,7 @@ function renderMemoHTML(stock) {
             <div class="stock-memo-toggle" onclick="toggleMemo('${symbol}')">
                 <span class="memo-icon">📝</span>
                 <span>メモ</span>
-                <span class="memo-indicator ${hasMemoText ? 'has-memo' : ''}"></span>
+                <span class="memo-indicator ${indicatorClass}"></span>
                 <span class="memo-arrow ${arrowClass}" id="memoArrow_${symbol}">▶</span>
             </div>
             <div class="stock-memo-body ${isOpen}" id="memoBody_${symbol}">
@@ -331,9 +341,9 @@ function renderMemoHTML(stock) {
                     placeholder="ここにメモを入力..."
                     maxlength="500"
                     oninput="onMemoInput('${symbol}')"
-                >${memoText.replace(/"/g, '&quot;')}</textarea>
+                >${displayText.replace(/"/g, '&quot;')}</textarea>
                 <div class="stock-memo-actions">
-                    <span class="stock-memo-char-count" id="memoCount_${symbol}">${charCount}/500</span>
+                    <span class="stock-memo-char-count" id="memoCount_${symbol}">${getMemoCharCount(displayText)}/500</span>
                     <button class="stock-memo-save-btn" id="memoSaveBtn_${symbol}" onclick="saveMemoHandler('${symbol}')">
                         💾 保存
                     </button>
