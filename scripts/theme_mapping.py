@@ -762,15 +762,21 @@ THEME_MAPPING = {
         },
     },
     "17. ETF": {
-        "日经225ETF",
-        "半导体ETF",
-        "AI主题ETF",
-        "机器人ETF",
-        "杠杆ETF",
-        "反向ETF",
-        "债券ETF",
-        "商品ETF",
-        "新兴市场ETF",
-        "高股息ETF"
+        "日本株ETF": {
+            "tags": ["日经225ETF", "高股息ETF"],
+            "description": "日本株に連動するETF"
+        },
+        "セクターETF": {
+            "tags": ["半导体ETF", "AI主题ETF", "机器人ETF"],
+            "description": "特定セクター・テーマに連動するETF"
+        },
+        "戦略ETF": {
+            "tags": ["杠杆ETF", "反向ETF"],
+            "description": "レバレッジ・インバース型のETF"
+        },
+        "資産クラスETF": {
+            "tags": ["债券ETF", "商品ETF", "新兴市场ETF"],
+            "description": "債券・コモディティ・新興国など多様な資産クラスに連動するETF"
+        }
     },
 }
