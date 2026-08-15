@@ -226,14 +226,14 @@
       ]
     },
     {
-      "sector_id": "9",
+      "sector_id": "9.1",
       "sector_name": "ETF（Exchange Traded Funds）",
       "sector_comment": "交易所交易基金，提供指数追踪、行业主题、杠杆反向等多种投资工具",
       "industries": [
-        { "industry_id": "9.1", "industry_name": "指数追踪ETF", "industry_comment": "跟踪日经225、TOPIX、标普500等代表性股票指数" },
-        { "industry_id": "9.2", "industry_name": "行业主题ETF", "industry_comment": "聚焦半导体、AI、机器人、新能源等特定行业或主题" },
-        { "industry_id": "9.3", "industry_name": "杠杆/反向ETF", "industry_comment": "提供日经225等指数的2倍杠杆或多倍反向回报" },
-        { "industry_id": "9.4", "industry_name": "债券/商品ETF", "industry_comment": "投资国债、公司债、贵金属、商品等资产类别" }
+        { "industry_id": "9.1.1", "industry_name": "指数追踪ETF", "industry_comment": "跟踪日经225、TOPIX、标普500等代表性股票指数" },
+        { "industry_id": "9.1.2", "industry_name": "行业主题ETF", "industry_comment": "聚焦半导体、AI、机器人、新能源等特定行业或主题" },
+        { "industry_id": "9.1.3", "industry_name": "杠杆/反向ETF", "industry_comment": "提供日经225等指数的2倍杠杆或多倍反向回报" },
+        { "industry_id": "9.1.4", "industry_name": "债券/商品ETF", "industry_comment": "投资国债、公司债、贵金属、商品等资产类别" }
       ]
     },
   ]
