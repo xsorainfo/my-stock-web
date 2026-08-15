@@ -761,7 +761,7 @@ THEME_MAPPING = {
             "description": "医疗IT包括AI医疗、远程医疗、医疗信息系统等，是数字化医疗的核心技术。"
         },
     },
-    17. ETF": {
+    "17. ETF": {
         "日经225ETF",
         "半导体ETF",
         "AI主题ETF",
