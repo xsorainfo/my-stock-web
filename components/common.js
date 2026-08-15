@@ -326,6 +326,10 @@ function renderMemoHTML(stock) {
     const isOpen = hasMemoText ? 'open' : '';
     const arrowClass = hasMemoText ? 'open' : '';
     
+    // ⭐ 行数に応じて初期高さを計算（1行あたり約20px + パディング）
+    const lineCount = (displayText.match(/\n/g) || []).length + 1;
+    const initialHeight = Math.max(56, lineCount * 20 + 16);
+    
     return `
         <div class="stock-memo-section">
             <div class="stock-memo-toggle" onclick="toggleMemo('${symbol}')">
@@ -340,7 +344,8 @@ function renderMemoHTML(stock) {
                     id="memoTextarea_${symbol}"
                     placeholder="ここにメモを入力..."
                     maxlength="500"
-                    oninput="onMemoInput('${symbol}')"
+                    style="min-height:56px;height:${initialHeight}px;overflow-y:hidden;"
+                    oninput="autoResizeMemo('${symbol}')"
                 >${displayText.replace(/"/g, '&quot;')}</textarea>
                 <div class="stock-memo-actions">
                     <span class="stock-memo-char-count" id="memoCount_${symbol}">${getMemoCharCount(displayText)}/500</span>
