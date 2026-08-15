@@ -235,6 +235,6 @@
         { "industry_id": "9.1.3", "industry_name": "杠杆/反向ETF", "industry_comment": "提供日经225等指数的2倍杠杆或多倍反向回报" },
         { "industry_id": "9.1.4", "industry_name": "债券/商品ETF", "industry_comment": "投资国债、公司债、贵金属、商品等资产类别" }
       ]
-    },
+    }
   ]
 }
