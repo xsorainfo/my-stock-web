@@ -2295,7 +2295,7 @@
       "distHigh": "-11.1%",
       "ytdChange": "37.07%",
       "distWeek": "-1.4%",
-      "distMonth": "-1.4%",
+      "distMonth": "-3.4%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -7034,7 +7034,7 @@
       "isUp": true,
       "per": "66.63",
       "roe": "43.9%",
-      "forward_per": "32.30",
+      "forward_per": "32.29",
       "pbr": "26.58",
       "distHigh": "-22.7%",
       "ytdChange": "67.40%",
