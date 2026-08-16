@@ -47,8 +47,8 @@
     },
     {
       "name": "美元/日元",
-      "price": "159.30",
-      "change": "-0.12 (-0.08%)",
+      "price": "159.27",
+      "change": "-0.15 (-0.10%)",
       "isUp": false,
       "type": "forex",
       "badge_label": "FX",
