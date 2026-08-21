@@ -47,8 +47,8 @@
     },
     {
       "name": "美元/日元",
-      "price": "158.86",
-      "change": "+0.59 (+0.37%)",
+      "price": "158.94",
+      "change": "+0.66 (+0.42%)",
       "isUp": true,
       "type": "forex",
       "badge_label": "FX",
@@ -542,8 +542,8 @@
     },
     {
       "name": "富时 100",
-      "price": "10816.56",
-      "change": "+68.36 (+0.64%)",
+      "price": "10748.20",
+      "change": "+4.80 (+0.04%)",
       "isUp": true,
       "type": "index",
       "badge_label": "",
