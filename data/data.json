@@ -2,8 +2,8 @@
   "macro": [
     {
       "name": "标普 500 期货",
-      "price": "7687.75",
-      "change": "+25.25 (+0.33%)",
+      "price": "7691.25",
+      "change": "+28.75 (+0.38%)",
       "isUp": true,
       "type": "futures",
       "badge_label": "期货",
@@ -11,8 +11,8 @@
     },
     {
       "name": "WTI 原油",
-      "price": "86.64",
-      "change": "-1.19 (-1.35%)",
+      "price": "87.06",
+      "change": "-0.77 (-0.88%)",
       "isUp": false,
       "type": "futures",
       "badge_label": "期货",
@@ -20,8 +20,8 @@
     },
     {
       "name": "黄金",
-      "price": "4661.60",
-      "change": "+145.30 (+3.22%)",
+      "price": "4624.10",
+      "change": "+107.80 (+2.39%)",
       "isUp": true,
       "type": "commodity",
       "badge_label": "商品",
@@ -29,8 +29,8 @@
     },
     {
       "name": "白银",
-      "price": "69.01",
-      "change": "+0.98 (+1.45%)",
+      "price": "69.47",
+      "change": "+1.44 (+2.12%)",
       "isUp": true,
       "type": "commodity",
       "badge_label": "商品",
@@ -39,7 +39,7 @@
     {
       "name": "铜",
       "price": "6.58",
-      "change": "+0.12 (+1.86%)",
+      "change": "+0.12 (+1.85%)",
       "isUp": true,
       "type": "commodity",
       "badge_label": "商品",
@@ -381,7 +381,7 @@
     {
       "name": "自動車メーカー CARZ",
       "price": "106.73",
-      "change": "+0.77 (+0.72%)",
+      "change": "+0.77 (+0.73%)",
       "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
@@ -3176,7 +3176,7 @@
       "price": "3217.00",
       "change": "-3.00 (-0.09%)",
       "isUp": false,
-      "per": "14.01",
+      "per": "14.03",
       "roe": "7.1%",
       "forward_per": "13.86",
       "pbr": "0.99",
@@ -6934,7 +6934,7 @@
       "pbr": "6.84",
       "distHigh": "-6.7%",
       "ytdChange": "25.88%",
-      "distWeek": "-4.1%",
+      "distWeek": "-4.2%",
       "distMonth": "-6.7%",
       "trend": "牛市多头",
       "source": "yfinance"
@@ -10284,7 +10284,7 @@
       "price": "4899.00",
       "change": "+125.00 (+2.62%)",
       "isUp": true,
-      "per": "16.85",
+      "per": "16.84",
       "roe": "11.4%",
       "forward_per": "16.67",
       "pbr": "1.55",
