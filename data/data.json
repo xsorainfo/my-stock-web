@@ -5081,7 +5081,7 @@
       "per": "51.54",
       "roe": "36.5%",
       "forward_per": "32.52",
-      "pbr": "17.10",
+      "pbr": "18.71",
       "distHigh": "-23.0%",
       "ytdChange": "81.17%",
       "distWeek": "-15.4%",
@@ -8246,7 +8246,7 @@
       "per": "26.67",
       "roe": "18.1%",
       "forward_per": "31.33",
-      "pbr": "4.39",
+      "pbr": "5.38",
       "distHigh": "-55.3%",
       "ytdChange": "87.45%",
       "distWeek": "-10.5%",
@@ -8721,51 +8721,6 @@
       "distWeek": "-14.4%",
       "distMonth": "-23.8%",
       "trend": "熊市空头",
-      "source": "yfinance"
-    },
-    {
-      "code": "3444",
-      "name": "菊池製作所",
-      "sector": "2.1",
-      "industry": "2.1.1",
-      "feature": "**行业地位**：精密加工企业<br>**主营业务**：机器人零部件、医疗设备、无人机<br>**竞争优势**：精密加工技术领先，机器人零部件与医疗设备双轮驱动，无人机新业务布局<br>**未来方向**：机器人零部件与无人机需求增长驱动精密加工需求，持续推进高端加工技术",
-      "tags": [
-        "机器人零部件",
-        "精密加工",
-        "无人机"
-      ],
-      "display_tags": [
-        "机器人零部件",
-        "精密加工",
-        "无人机"
-      ],
-      "tag_themes": [
-        {
-          "tag": "机器人零部件",
-          "theme_path": []
-        },
-        {
-          "tag": "精密加工",
-          "theme_path": []
-        },
-        {
-          "tag": "无人机",
-          "theme_path": []
-        }
-      ],
-      "market_type": "日股",
-      "price": "1001.00",
-      "change": "-36.00 (-3.47%)",
-      "isUp": false,
-      "per": "117.63",
-      "roe": "0.7%",
-      "forward_per": "137.12",
-      "pbr": "2.02",
-      "distHigh": "-46.8%",
-      "ytdChange": "39.68%",
-      "distWeek": "-11.4%",
-      "distMonth": "-11.4%",
-      "trend": "牛市多头",
       "source": "yfinance"
     },
     {
@@ -9432,43 +9387,6 @@
       "distWeek": "-8.7%",
       "distMonth": "-8.7%",
       "trend": "牛市多头",
-      "source": "yfinance"
-    },
-    {
-      "code": "GE",
-      "name": "GE Aerospace",
-      "sector": "4.1",
-      "industry": "4.1.2",
-      "feature": "**行业地位**：全球航空发动机巨头<br>**主营业务**：商用航空发动机、军用航空发动机、国防航空动力<br>**竞争优势**：商用航空发动机市占率超50%，国防航空动力核心供应商，技术积累深厚<br>**未来方向**：商用航空复苏驱动航空发动机需求，国防支出增长推动军用业务扩张",
-      "tags": [
-        "AI应用"
-      ],
-      "display_tags": [
-        "AI应用"
-      ],
-      "tag_themes": [
-        {
-          "tag": "AI应用",
-          "theme_path": [
-            "9. 云・模型・应用",
-            "AI应用",
-            "AI应用"
-          ]
-        }
-      ],
-      "market_type": "美股",
-      "price": "348.37",
-      "change": "+3.73 (+1.08%)",
-      "isUp": true,
-      "per": "41.13",
-      "roe": "48.2%",
-      "forward_per": "38.39",
-      "pbr": "20.49",
-      "distHigh": "-10.4%",
-      "ytdChange": "8.90%",
-      "distWeek": "-7.2%",
-      "distMonth": "-10.4%",
-      "trend": "熊市空头",
       "source": "yfinance"
     },
     {
@@ -10539,7 +10457,7 @@
       "isUp": false,
       "per": "4.54",
       "roe": "44.0%",
-      "forward_per": "42.47",
+      "forward_per": "--",
       "pbr": "1.42",
       "distHigh": "-67.8%",
       "ytdChange": "384.54%",
@@ -11884,51 +11802,6 @@
       "distWeek": "-10.9%",
       "distMonth": "-15.8%",
       "trend": "熊市空头",
-      "source": "yfinance"
-    },
-    {
-      "code": "7014",
-      "name": "名村造船所",
-      "sector": "3.2",
-      "industry": "3.2.2",
-      "feature": "**行业地位**：日本大型造船企业<br>**主营业务**：船舶建造（商船/军舰）、海洋结构物、大型钢结构<br>**竞争优势**：长期造船技术与国防军工订单积累，在特殊船型建造方面具竞争力<br>**未来方向**：受益全球新造船需求增长，推进数字化造船与绿色船舶技术研发",
-      "tags": [
-        "造船",
-        "海洋工程",
-        "国防军工"
-      ],
-      "display_tags": [
-        "造船",
-        "海洋工程",
-        "国防军工"
-      ],
-      "tag_themes": [
-        {
-          "tag": "造船",
-          "theme_path": []
-        },
-        {
-          "tag": "海洋工程",
-          "theme_path": []
-        },
-        {
-          "tag": "国防军工",
-          "theme_path": []
-        }
-      ],
-      "market_type": "日股",
-      "price": "4420.00",
-      "change": "-165.00 (-3.60%)",
-      "isUp": false,
-      "per": "14.33",
-      "roe": "19.7%",
-      "forward_per": "--",
-      "pbr": "2.22",
-      "distHigh": "-26.9%",
-      "ytdChange": "20.10%",
-      "distWeek": "-10.7%",
-      "distMonth": "-10.7%",
-      "trend": "牛市多头",
       "source": "yfinance"
     },
     {
