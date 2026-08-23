@@ -10,15 +10,6 @@
       "badge_class": "futures"
     },
     {
-      "name": "WTI 原油",
-      "price": "87.06",
-      "change": "-0.77 (-0.88%)",
-      "isUp": false,
-      "type": "futures",
-      "badge_label": "期货",
-      "badge_class": "futures"
-    },
-    {
       "name": "黄金",
       "price": "4680.60",
       "change": "+164.30 (+3.64%)",
