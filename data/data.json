@@ -2,8 +2,8 @@
   "macro": [
     {
       "name": "标普 500 期货",
-      "price": "7694.50",
-      "change": "+24.75 (+0.32%)",
+      "price": "7690.75",
+      "change": "+21.00 (+0.27%)",
       "isUp": true,
       "type": "futures",
       "badge_label": "期货",
@@ -11,8 +11,8 @@
     },
     {
       "name": "WTI 原油",
-      "price": "80.29",
-      "change": "-4.72 (-5.55%)",
+      "price": "81.11",
+      "change": "-3.90 (-4.59%)",
       "isUp": false,
       "type": "futures",
       "badge_label": "期货",
@@ -20,8 +20,8 @@
     },
     {
       "name": "黄金",
-      "price": "4724.30",
-      "change": "+83.50 (+1.80%)",
+      "price": "4715.90",
+      "change": "+75.10 (+1.62%)",
       "isUp": true,
       "type": "commodity",
       "badge_label": "商品",
@@ -29,8 +29,8 @@
     },
     {
       "name": "白银",
-      "price": "68.93",
-      "change": "+0.39 (+0.57%)",
+      "price": "68.63",
+      "change": "+0.09 (+0.13%)",
       "isUp": true,
       "type": "commodity",
       "badge_label": "商品",
@@ -39,7 +39,7 @@
     {
       "name": "铜",
       "price": "6.71",
-      "change": "+0.11 (+1.69%)",
+      "change": "+0.11 (+1.70%)",
       "isUp": true,
       "type": "commodity",
       "badge_label": "商品",
@@ -48,7 +48,7 @@
     {
       "name": "美元/日元",
       "price": "159.20",
-      "change": "+0.30 (+0.19%)",
+      "change": "+0.29 (+0.19%)",
       "isUp": true,
       "type": "forex",
       "badge_label": "FX",
@@ -5080,7 +5080,7 @@
       "isUp": true,
       "per": "50.20",
       "roe": "36.5%",
-      "forward_per": "31.72",
+      "forward_per": "31.45",
       "pbr": "18.25",
       "distHigh": "-24.9%",
       "ytdChange": "76.68%",
