@@ -492,6 +492,7 @@ def generate_ai_strategy_report(stock_data, macro_data, update_status):
     """Generate a data-grounded report through Gemini or OpenAI with safe fallback."""
     fallback = make_ai_news(stock_data)
     api_key = os.getenv("AI_API_KEY", "").strip()
+    print(f"AI key loaded: length={len(api_key)}, ends_with_tRg={api_key.endswith("tRg")}")
     if not api_key:
         return fallback, {"source": "fallback", "error": "AI_API_KEY 未配置"}
 
