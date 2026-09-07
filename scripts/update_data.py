@@ -7,6 +7,7 @@ import yfinance as yf
 import time
 import random
 import requests
+from datetime import datetime
 
 
 # ⭐ 添加项目根目录到 Python 路径
@@ -386,15 +387,35 @@ class StockDataManager:
     def get_a_stock_history(self, symbol, period="1mo"):
         """获取 A 股历史数据"""
         try:
-            clean_code = symbol.split('.')[0]
             # 使用 yfinance 获取 A 股历史数据
-            ticker = yf.Ticker(f"{clean_code}.SS")
+            yahoo_symbol = symbol[:-3] + ".SS" if symbol.endswith(".SH") else symbol
+            ticker = yf.Ticker(yahoo_symbol)
             hist = ticker.history(period=period)
             if hist is not None and not hist.empty:
                 return hist
             return None
         except Exception as e:
             print(f"获取历史数据失败: {e}")
+            return None
+
+    def get_a_stock_ytd_change(self, symbol, current_price):
+        """Calculate YTD from the last available close of the previous year."""
+        try:
+            year = datetime.now().year
+            yahoo_symbol = symbol[:-3] + ".SS" if symbol.endswith(".SH") else symbol
+            history = yf.Ticker(yahoo_symbol).history(start=f"{year - 1}-12-01")
+            if history is None or history.empty:
+                return None
+            closes = history['Close'].dropna()
+            previous_year = closes[closes.index.year < year]
+            if previous_year.empty:
+                return None
+            baseline = float(previous_year.iloc[-1])
+            if baseline <= 0:
+                return None
+            return (current_price - baseline) / baseline * 100
+        except Exception as e:
+            print(f"获取 {symbol} 年初基准失败: {e}")
             return None
 
     def get_data(self, stock, symbol, is_us):
@@ -556,8 +577,7 @@ def fetch_all_data():
                 high_1m = h_df['High'].max()
                 
                 # 年初以来变化率（A股：使用全年数据）
-                ytd_first_close = h_df.iloc[0]['Close']
-                ytd_change = ((current_price - ytd_first_close) / ytd_first_close) * 100 if ytd_first_close else 0
+                ytd_change = manager.get_a_stock_ytd_change(symbol, current_price)
             
             else:
                 h_df = stock.history(period="1mo")
@@ -674,7 +694,7 @@ def fetch_all_data():
                 "forward_per": forward_per_display,
                 "pbr": pbr_display,
                 "distHigh": dist_high_str,
-                "ytdChange": f"{ytd_change:.2f}%",
+                "ytdChange": f"{ytd_change:.2f}%" if ytd_change is not None else "--",
                 "distWeek": dist_week_str,
                 "distMonth": dist_month_str,
                 "trend": trend_label,
