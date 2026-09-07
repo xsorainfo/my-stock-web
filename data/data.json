@@ -47,8 +47,8 @@
     },
     {
       "name": "美元/日元",
-      "price": "154.36",
-      "change": "-1.30 (-0.83%)",
+      "price": "154.32",
+      "change": "-1.34 (-0.86%)",
       "isUp": false,
       "type": "forex",
       "badge_label": "FX",
@@ -533,8 +533,8 @@
     },
     {
       "name": "VIX 恐慌指数",
-      "price": "15.26",
-      "change": "+0.73 (+5.02%)",
+      "price": "15.30",
+      "change": "+0.77 (+5.30%)",
       "isUp": true,
       "type": "sentiment",
       "badge_label": "情绪",
@@ -542,8 +542,8 @@
     },
     {
       "name": "富时 100",
-      "price": "10822.12",
-      "change": "-8.98 (-0.08%)",
+      "price": "10823.04",
+      "change": "-8.06 (-0.07%)",
       "isUp": false,
       "type": "index",
       "badge_label": "",
@@ -560,8 +560,8 @@
     },
     {
       "name": "德国 DAX",
-      "price": "25984.83",
-      "change": "-61.57 (-0.24%)",
+      "price": "25991.34",
+      "change": "-55.06 (-0.21%)",
       "isUp": false,
       "type": "index",
       "badge_label": "",
@@ -569,8 +569,8 @@
     },
     {
       "name": "法国 CAC 40",
-      "price": "8306.15",
-      "change": "+27.38 (+0.33%)",
+      "price": "8305.96",
+      "change": "+27.19 (+0.33%)",
       "isUp": true,
       "type": "index",
       "badge_label": "",
@@ -2580,15 +2580,15 @@
         }
       ],
       "market_type": "德股",
-      "price": "53.06",
-      "change": "-0.30 (-0.56%)",
+      "price": "53.07",
+      "change": "-0.29 (-0.54%)",
       "isUp": false,
       "per": "22.39",
       "roe": "6.1%",
       "forward_per": "17.82",
       "pbr": "1.27",
       "distHigh": "-3.6%",
-      "ytdChange": "23.57%",
+      "ytdChange": "23.59%",
       "distWeek": "-1.7%",
       "distMonth": "-1.7%",
       "trend": "牛市多头",
@@ -9490,17 +9490,17 @@
         }
       ],
       "market_type": "德股",
-      "price": "270.85",
-      "change": "-1.80 (-0.66%)",
+      "price": "270.40",
+      "change": "-2.25 (-0.83%)",
       "isUp": false,
-      "per": "27.06",
+      "per": "27.01",
       "roe": "12.5%",
-      "forward_per": "20.83",
+      "forward_per": "20.79",
       "pbr": "3.07",
-      "distHigh": "-7.1%",
-      "ytdChange": "14.73%",
-      "distWeek": "-4.7%",
-      "distMonth": "-7.1%",
+      "distHigh": "-7.3%",
+      "ytdChange": "14.54%",
+      "distWeek": "-4.8%",
+      "distMonth": "-7.3%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
@@ -15067,6 +15067,60 @@
       "ytdChange": "14.19%",
       "distWeek": "-1.7%",
       "distMonth": "-1.7%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "6104.T",
+      "code": "6104",
+      "name": "芝浦機械(Shibaura Machine)",
+      "sector": "5.6",
+      "industry": "5.6.1",
+      "feature": "**行业地位**：日本产业机械老牌厂商（原东芝机械），射出成形机领域日本前列<br>**主营业务**：成形机（射出成形机/押出成形机/ダイカストマシン）营收占73.1%、工作机械（マシニングセンタ/超精密加工机）占18.8%、制御机械（产业用ロボット/CNC装置）占6.2%<br>**竞争优势**：自1938年创业至今积累深厚技术，8大技术平台支撑，海外网络覆盖美/欧/东南亚，2026年3月期营收1328亿円、时价总额1103亿円<br>**未来方向**：AI・EV向け成形機・工作機械需要に注目、2027年3月期経常利益予想31億円（前期比-38%）、設備投資動向に左右される短期的な业绩波动に注意",
+      "tags": [
+        "产业机械",
+        "工业机器人",
+        "精密加工"
+      ],
+      "display_tags": [
+        "产业机械",
+        "工业机器人",
+        "精密加工"
+      ],
+      "tag_themes": [
+        {
+          "tag": "产业机械",
+          "theme_path": [
+            "13. 综合商社",
+            "产业机械",
+            "产业机械"
+          ]
+        },
+        {
+          "tag": "工业机器人",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "工业机器人",
+            "工业机器人"
+          ]
+        },
+        {
+          "tag": "精密加工",
+          "theme_path": []
+        }
+      ],
+      "market_type": "日股",
+      "price": "4485.00",
+      "change": "-20.00 (-0.44%)",
+      "isUp": false,
+      "per": "101.72",
+      "roe": "0.1%",
+      "forward_per": "8.82",
+      "pbr": "0.89",
+      "distHigh": "-13.2%",
+      "ytdChange": "4.99%",
+      "distWeek": "-1.4%",
+      "distMonth": "-1.4%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
