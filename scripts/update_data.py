@@ -504,7 +504,7 @@ def generate_ai_strategy_report(stock_data, macro_data, update_status):
         "用中文纯文本输出，分成5个短段，每段以“【】”开头，控制在600字以内。\\n\\n"
         "行情快照：\\n" + json.dumps(snapshot, ensure_ascii=False)
     )
-    provider = os.getenv("AI_PROVIDER", "").strip().lower() or "gemini"
+    provider = "gemini"
     model = os.getenv("AI_MODEL", "").strip()
 
     try:
@@ -548,8 +548,8 @@ def generate_ai_strategy_report(stock_data, macro_data, update_status):
         return text, {"source": "openai", "model": model}
     except Exception as exc:
         print(f"⚠️ AI策略生成失败，使用备用策略: {exc}")
-        safe_error = str(exc).replace(api_key, "[REDACTED]")[:240]
-        return fallback, {"source": "fallback", "provider": provider, "error": safe_error}
+        safe_error = str(exc).replace(api_key, "[REDACTED]")[:400]
+        raise RuntimeError(f"Gemini策略生成失败: {safe_error}") from exc
 
 
 def make_ai_news(stock_data):
