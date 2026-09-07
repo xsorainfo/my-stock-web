@@ -8,6 +8,7 @@ import time
 import random
 import requests
 from datetime import datetime
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 
 # ⭐ 添加项目根目录到 Python 路径
@@ -485,6 +486,27 @@ def portfolio_watchlist():
     return result
 
 
+def fetch_macro_item(m, session, badge_map):
+    """Fetch one macro series; failures stay isolated from the batch."""
+    symbol, name = m["symbol"], m["name"]
+    try:
+        print(f"🔄 正在获取大盘数据: {symbol} ({name})")
+        stock = yf.Ticker(symbol, session=session)
+        h_df = stock.history(period="1mo").dropna(subset=["Close"])
+        if len(h_df) < 2:
+            print(f"⚠️ {symbol} 数据不足: {len(h_df)} 行")
+            return None
+        current, previous = h_df["Close"].tail(2).tolist()
+        diff = current - previous
+        pct = (diff / previous) * 100 if previous else 0
+        sign = "+" if diff > 0 else ""
+        badge = badge_map.get(m.get("type", "index"), {"label": "", "class": "index"})
+        return {"name": name, "price": f"{current:.2f}", "change": f"{sign}{diff:.2f} ({sign}{pct:.2f}%)", "isUp": diff > 0, "type": m.get("type", "index"), "badge_label": badge["label"], "badge_class": badge["class"]}
+    except Exception as e:
+        print(f"大盘 {name} 异常: {e}")
+        return None
+
+
 def fetch_all_data():
     output_data = {
         "macro": [],
@@ -518,47 +540,13 @@ def fetch_all_data():
         "crypto": {"label": "加密", "class": "crypto"},
     }
     
-    # 1. 抓取大盘数据
-    for m in MACRO_LIST:
-        try:
-            symbol = m["symbol"]
-            name = m["name"]
-            print(f"🔄 正在获取大盘数据: {symbol} ({name})")
-            data_type = m.get("type", "index")  # 默认为 index
-            
-            
-            stock = yf.Ticker(symbol, session=session)
-            h_df = stock.history(period="1mo")
-            h_df = h_df.dropna(subset=['Close'])
-            # 打印数据行数
-            print(f"   📊 {symbol} 获取到 {len(h_df)} 行数据")
-        
-            if len(h_df) >= 2:
-                closes = h_df['Close'].tail(2).tolist()
-                current = closes[1]
-                prev_close = closes[0]
-                
-                diff = current - prev_close
-                pct = (diff / prev_close) * 100
-                sign = "+" if diff > 0 else ""
-                
-                # ⭐ 根据类型生成标签
-                badge_info = BADGE_MAP.get(data_type, {"label": "", "class": "index"})
-                
-                output_data["macro"].append({
-                    "name": name,  # ✅ 修复：不再使用未定义的 label
-                    "price": f"{current:.2f}",
-                    "change": f"{sign}{diff:.2f} ({sign}{pct:.2f}%)",
-                    "isUp": diff > 0,
-                    "type": data_type,  # 前端可用
-                    "badge_label": badge_info["label"],  # 标签文字
-                    "badge_class": badge_info["class"],  # CSS 类名
-                })
-            else:
-                print(f"⚠️ {symbol} 数据不足: {len(h_df)} 行")            
-            time.sleep(0.1)
-        except Exception as e:
-            print(f"大盘 {m['name']} 异常: {e}")
+    # 1. 并发抓取大盘数据（上限 8，避免压垮外部数据源）
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        futures = [pool.submit(fetch_macro_item, m, session, BADGE_MAP) for m in MACRO_LIST]
+        for future in as_completed(futures):
+            result = future.result()
+            if result:
+                output_data["macro"].append(result)
 
     # 2. 抓取自选个股数据
     for item in portfolio_watchlist():
