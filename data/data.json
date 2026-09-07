@@ -17697,6 +17697,6 @@
     "source": "fallback",
     "provider": "gemini",
     "error": "Gemini HTTP 400: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"INVALID_ARGUMENT\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n     ",
-    "updated_at": "2026-09-07T22:56:13.740945+00:00"
+    "updated_at": "2026-09-07T23:05:03.656355+00:00"
   }
 }
