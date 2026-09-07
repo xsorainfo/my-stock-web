@@ -306,6 +306,7 @@
     
     <!-- 引入脚本 -->
     <script src="../components/navbar.js"></script>
+    <script src="../components/stock-utils.js"></script>
     <script src="../components/common.js"></script>
     <script src="../components/footer.js"></script>
     
@@ -569,10 +570,7 @@
         const query = (document.getElementById('portfolioSearch')?.value || '').trim().toLowerCase();
         const sort = document.getElementById('portfolioSort')?.value || '';
         matched = matched.filter(s => !query || [s.code, s.name].some(v => String(v || '').toLowerCase().includes(query)));
-        const changeValue = s => parseFloat(String(s.change || '').match(/[-+]?\d+(?:\.\d+)?%/)?.[0] || 0);
-        if (sort === 'change-desc') matched.sort((a,b)=>changeValue(b)-changeValue(a));
-        if (sort === 'change-asc') matched.sort((a,b)=>changeValue(a)-changeValue(b));
-        if (sort === 'name') matched.sort((a,b)=>String(a.name).localeCompare(String(b.name)));
+        matched = filterStocks(matched, {query, sort});
         countEl.textContent = `共 ${matched.length} 只标的`;
         
         if (matched.length === 0) {
