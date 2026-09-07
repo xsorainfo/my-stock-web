@@ -44,6 +44,7 @@ jobs:
     - name: 运行 Python 脚本抓取数据
       env:
         AI_API_KEY: ${{ secrets.AI_API_KEY }}
+        AI_PROVIDER: ${{ secrets.AI_PROVIDER }}
         AI_MODEL: ${{ secrets.AI_MODEL }}
       run: python scripts/update_data.py
 
