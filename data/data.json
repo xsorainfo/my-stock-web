@@ -47,8 +47,8 @@
     },
     {
       "name": "美元/日元",
-      "price": "154.39",
-      "change": "-1.27 (-0.82%)",
+      "price": "154.36",
+      "change": "-1.30 (-0.83%)",
       "isUp": false,
       "type": "forex",
       "badge_label": "FX",
@@ -407,8 +407,8 @@
     },
     {
       "name": "日本・食品 ETF",
-      "price": "48090.00",
-      "change": "-690.00 (-1.41%)",
+      "price": "47710.00",
+      "change": "-380.00 (-0.79%)",
       "isUp": false,
       "type": "j-etf",
       "badge_label": "J-ETF",
@@ -443,8 +443,8 @@
     },
     {
       "name": "日本・鉄鋼非鉄 ETF",
-      "price": "63620.00",
-      "change": "+570.00 (+0.90%)",
+      "price": "64630.00",
+      "change": "+1010.00 (+1.59%)",
       "isUp": true,
       "type": "j-etf",
       "badge_label": "J-ETF",
@@ -470,8 +470,8 @@
     },
     {
       "name": "日本・建設・資材 ETF",
-      "price": "44700.00",
-      "change": "+40.00 (+0.09%)",
+      "price": "45340.00",
+      "change": "+640.00 (+1.43%)",
       "isUp": true,
       "type": "j-etf",
       "badge_label": "J-ETF",
@@ -533,8 +533,8 @@
     },
     {
       "name": "VIX 恐慌指数",
-      "price": "15.22",
-      "change": "+0.69 (+4.75%)",
+      "price": "15.26",
+      "change": "+0.73 (+5.02%)",
       "isUp": true,
       "type": "sentiment",
       "badge_label": "情绪",
@@ -542,9 +542,9 @@
     },
     {
       "name": "富时 100",
-      "price": "10831.46",
-      "change": "+0.36 (+0.00%)",
-      "isUp": true,
+      "price": "10822.12",
+      "change": "-8.98 (-0.08%)",
+      "isUp": false,
       "type": "index",
       "badge_label": "",
       "badge_class": "index"
@@ -560,8 +560,8 @@
     },
     {
       "name": "德国 DAX",
-      "price": "25998.61",
-      "change": "-47.79 (-0.18%)",
+      "price": "25984.83",
+      "change": "-61.57 (-0.24%)",
       "isUp": false,
       "type": "index",
       "badge_label": "",
@@ -569,8 +569,8 @@
     },
     {
       "name": "法国 CAC 40",
-      "price": "8310.74",
-      "change": "+31.97 (+0.39%)",
+      "price": "8306.15",
+      "change": "+27.38 (+0.33%)",
       "isUp": true,
       "type": "index",
       "badge_label": "",
@@ -579,6 +579,7 @@
   ],
   "stocks": [
     {
+      "symbol": "NVDA",
       "code": "NVDA",
       "name": "NVIDIA(英伟达)",
       "sector": "1.1",
@@ -646,6 +647,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "AMD",
       "code": "AMD",
       "name": "AMD(超威半导体)",
       "sector": "1.1",
@@ -703,6 +705,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "INTC",
       "code": "INTC",
       "name": "英特尔",
       "sector": "1.1",
@@ -750,6 +753,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "QCOM",
       "code": "QCOM",
       "name": "高通",
       "sector": "1.1",
@@ -797,6 +801,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "AVGO",
       "code": "AVGO",
       "name": "博通",
       "sector": "1.1",
@@ -844,6 +849,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "MRVL",
       "code": "MRVL",
       "name": "迈威尔",
       "sector": "1.1",
@@ -911,6 +917,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "ARM",
       "code": "ARM",
       "name": "ARM Holdings",
       "sector": "1.1",
@@ -948,6 +955,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "AAPL",
       "code": "AAPL",
       "name": "苹果",
       "sector": "1.1",
@@ -995,6 +1003,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "STM",
       "code": "STM",
       "name": "意法半导体",
       "sector": "1.1",
@@ -1042,6 +1051,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6723.T",
       "code": "6723",
       "name": "ルネサス(瑞萨电子)",
       "sector": "1.1",
@@ -1129,6 +1139,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6526.T",
       "code": "6526",
       "name": "ソシオネクスト(Socionext)",
       "sector": "1.1",
@@ -1176,6 +1187,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6963.T",
       "code": "6963",
       "name": "ローム(罗姆)",
       "sector": "1.1",
@@ -1243,6 +1255,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "002049.SZ",
       "code": "002049",
       "name": "紫光国微",
       "sector": "1.1",
@@ -1280,6 +1293,7 @@
       "source": "sina"
     },
     {
+      "symbol": "688802.SH",
       "code": "688802",
       "name": "沐曦股份",
       "sector": "1.1",
@@ -1327,6 +1341,7 @@
       "source": "sina"
     },
     {
+      "symbol": "688795.SH",
       "code": "688795",
       "name": "摩尔线程",
       "sector": "1.1",
@@ -1364,6 +1379,7 @@
       "source": "sina"
     },
     {
+      "symbol": "688041.SH",
       "code": "688041",
       "name": "海光信息",
       "sector": "1.1",
@@ -1411,6 +1427,7 @@
       "source": "sina"
     },
     {
+      "symbol": "688047.SH",
       "code": "688047",
       "name": "龙芯中科",
       "sector": "1.1",
@@ -1448,6 +1465,7 @@
       "source": "sina"
     },
     {
+      "symbol": "688262.SH",
       "code": "688262",
       "name": "国芯科技",
       "sector": "1.1",
@@ -1485,6 +1503,7 @@
       "source": "sina"
     },
     {
+      "symbol": "600460.SH",
       "code": "600460",
       "name": "士兰微",
       "sector": "1.1",
@@ -1552,6 +1571,7 @@
       "source": "sina"
     },
     {
+      "symbol": "003031.SZ",
       "code": "003031",
       "name": "中瓷电子",
       "sector": "1.1",
@@ -1631,6 +1651,7 @@
       "source": "sina"
     },
     {
+      "symbol": "6707.T",
       "code": "6707",
       "name": "サンケン電気(三垦电气)",
       "sector": "1.1",
@@ -1698,6 +1719,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "003031.SZ",
       "code": "003031",
       "name": "中瓷电子",
       "sector": "1.1",
@@ -1777,6 +1799,7 @@
       "source": "sina"
     },
     {
+      "symbol": "SKHY",
       "code": "SKHY",
       "name": "SKhynix(海力士)",
       "sector": "1.1",
@@ -1860,6 +1883,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "MU",
       "code": "MU",
       "name": "美光科技",
       "sector": "1.1",
@@ -1917,6 +1941,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "RGTI",
       "code": "RGTI",
       "name": "Rambus",
       "sector": "1.1",
@@ -1964,6 +1989,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "005930.KS",
       "code": "005930",
       "name": "三星电子",
       "sector": "1.1",
@@ -2021,6 +2047,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "000660.KS",
       "code": "000660",
       "name": "SK海力士",
       "sector": "1.1",
@@ -2068,6 +2095,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "285A.T",
       "code": "285A",
       "name": "キオクシア(铠侠)",
       "sector": "1.1",
@@ -2115,6 +2143,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "688008.SH",
       "code": "688008",
       "name": "澜起科技",
       "sector": "1.1",
@@ -2172,6 +2201,7 @@
       "source": "sina"
     },
     {
+      "symbol": "WOLF",
       "code": "WOLF",
       "name": "Wolfspeed",
       "sector": "1.2",
@@ -2241,6 +2271,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "DOW",
       "code": "DOW",
       "name": "陶氏化学",
       "sector": "1.2",
@@ -2310,6 +2341,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "LIN",
       "code": "LIN",
       "name": "林德集团",
       "sector": "1.2",
@@ -2369,6 +2401,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "PLAB",
       "code": "PLAB",
       "name": "Photronics（福尼克斯）",
       "sector": "1.2",
@@ -2432,6 +2465,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "HOG",
       "code": "HOG",
       "name": "Hoya Corporation（豪雅）",
       "sector": "1.2",
@@ -2495,6 +2529,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "BAS.DE",
       "code": "BAS",
       "name": "巴斯夫",
       "sector": "1.2",
@@ -2545,21 +2580,22 @@
         }
       ],
       "market_type": "德股",
-      "price": "53.09",
-      "change": "-0.27 (-0.51%)",
+      "price": "53.06",
+      "change": "-0.30 (-0.56%)",
       "isUp": false,
-      "per": "22.40",
+      "per": "22.39",
       "roe": "6.1%",
-      "forward_per": "17.83",
+      "forward_per": "17.82",
       "pbr": "1.27",
       "distHigh": "-3.6%",
-      "ytdChange": "23.64%",
-      "distWeek": "-1.6%",
-      "distMonth": "-1.6%",
+      "ytdChange": "23.57%",
+      "distWeek": "-1.7%",
+      "distMonth": "-1.7%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
     {
+      "symbol": "688126.SH",
       "code": "688126",
       "name": "沪硅产业",
       "sector": "1.2",
@@ -2619,6 +2655,7 @@
       "source": "sina"
     },
     {
+      "symbol": "4063.T",
       "code": "4063",
       "name": "信越化学",
       "sector": "1.2",
@@ -2688,6 +2725,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "5016.T",
       "code": "5016",
       "name": "JX金属",
       "sector": "1.2",
@@ -2767,6 +2805,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "3436.T",
       "code": "3436",
       "name": "SUMCO",
       "sector": "1.2",
@@ -2816,6 +2855,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "2962.T",
       "code": "2962",
       "name": "テクニスコ(Tecnisco)",
       "sector": "1.2",
@@ -2895,6 +2935,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "4186.T",
       "code": "4186",
       "name": "東京応化工業",
       "sector": "1.2",
@@ -2958,6 +2999,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "7911.T",
       "code": "7911",
       "name": "TOPPANホールディングス",
       "sector": "1.2",
@@ -3021,6 +3063,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "7912.T",
       "code": "7912",
       "name": "大日本印刷(DNP)",
       "sector": "1.2",
@@ -3084,6 +3127,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "5201.T",
       "code": "5201",
       "name": "AGC(旭硝子)",
       "sector": "1.2",
@@ -3147,6 +3191,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "4092.T",
       "code": "4092",
       "name": "関東化学(关东化学)",
       "sector": "1.2",
@@ -3206,6 +3251,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "4091.T",
       "code": "4091",
       "name": "大陽日酸(大阳日酸)",
       "sector": "1.2",
@@ -3265,6 +3311,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "4369.T",
       "code": "4369",
       "name": "トリケミカル研究所",
       "sector": "1.2",
@@ -3318,6 +3365,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "4901.T",
       "code": "4901",
       "name": "富士フイルム(富士胶片)",
       "sector": "1.2",
@@ -3383,6 +3431,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "4920.T",
       "code": "4920",
       "name": "日本研磨材",
       "sector": "1.2",
@@ -3452,6 +3501,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "4062.T",
       "code": "4062",
       "name": "イビデン(揖斐电)",
       "sector": "1.2",
@@ -3515,6 +3565,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6971.T",
       "code": "6971",
       "name": "京セラ(京瓷)",
       "sector": "1.2",
@@ -3582,6 +3633,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6914.T",
       "code": "6914",
       "name": "三井ハイテック(三井高科技)",
       "sector": "1.2",
@@ -3641,6 +3693,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "7955.T",
       "code": "7955",
       "name": "千住金属",
       "sector": "1.2",
@@ -3714,6 +3767,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "4188.T",
       "code": "4188",
       "name": "三菱ケミカル(三菱化学)",
       "sector": "1.2",
@@ -3783,6 +3837,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "4005.T",
       "code": "4005",
       "name": "住友化学",
       "sector": "1.2",
@@ -3852,6 +3907,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6707.T",
       "code": "6707",
       "name": "サンケン電気(三垦电气)",
       "sector": "1.1",
@@ -3925,6 +3981,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "7282.T",
       "code": "7282",
       "name": "豊田合成(丰田合成)",
       "sector": "1.2",
@@ -3998,6 +4055,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "4004.T",
       "code": "4004",
       "name": "Resonac Holdings",
       "sector": "1.2",
@@ -4071,6 +4129,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "4222.T",
       "code": "4222",
       "name": "日立化成(Resonac)",
       "sector": "1.2",
@@ -4144,6 +4203,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "3110.T",
       "code": "3110",
       "name": "日東紡績",
       "sector": "1.2",
@@ -4217,6 +4277,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6920.T",
       "code": "6920",
       "name": "レーザーテック(激光技术)",
       "sector": "1.2",
@@ -4282,6 +4343,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6890.T",
       "code": "6890",
       "name": "FERROTEC",
       "sector": "1.2",
@@ -4339,6 +4401,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6965.T",
       "code": "6965",
       "name": "浜松ホトニクス(浜松光子)",
       "sector": "1.2",
@@ -4406,6 +4469,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6779.T",
       "code": "6779",
       "name": "日本電波工業",
       "sector": "1.2",
@@ -4479,6 +4543,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6997.T",
       "code": "6997",
       "name": "日本ケミコン(日本化工)",
       "sector": "1.2",
@@ -4544,6 +4609,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6479.T",
       "code": "6479",
       "name": "ミネベアミツミ(美蓓亚三美)",
       "sector": "1.2",
@@ -4613,6 +4679,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "5301.T",
       "code": "5301",
       "name": "東海カーボン",
       "sector": "1.2",
@@ -4664,6 +4731,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "002428.SZ",
       "code": "002428",
       "name": "云南锗业",
       "sector": "1.2",
@@ -4724,6 +4792,7 @@
       "source": "sina"
     },
     {
+      "symbol": "600703.SH",
       "code": "600703",
       "name": "三安光电",
       "sector": "1.2",
@@ -4807,6 +4876,7 @@
       "source": "sina"
     },
     {
+      "symbol": "688234.SH",
       "code": "688234",
       "name": "天岳先进",
       "sector": "1.2",
@@ -4876,6 +4946,7 @@
       "source": "sina"
     },
     {
+      "symbol": "002617.SZ",
       "code": "002617",
       "name": "露笑科技",
       "sector": "1.2",
@@ -4913,6 +4984,7 @@
       "source": "sina"
     },
     {
+      "symbol": "600176.SH",
       "code": "600176",
       "name": "中国巨石",
       "sector": "1.2",
@@ -4980,6 +5052,7 @@
       "source": "sina"
     },
     {
+      "symbol": "603256.SH",
       "code": "603256",
       "name": "宏和科技",
       "sector": "1.2",
@@ -5037,6 +5110,7 @@
       "source": "sina"
     },
     {
+      "symbol": "002080.SZ",
       "code": "002080",
       "name": "中材科技",
       "sector": "1.2",
@@ -5104,6 +5178,7 @@
       "source": "sina"
     },
     {
+      "symbol": "688478.SH",
       "code": "688478",
       "name": "晶升股份",
       "sector": "1.2",
@@ -5183,6 +5258,7 @@
       "source": "sina"
     },
     {
+      "symbol": "ASML",
       "code": "ASML",
       "name": "ASML(阿斯麦)",
       "sector": "1.2",
@@ -5229,6 +5305,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "AMAT",
       "code": "AMAT",
       "name": "应用材料",
       "sector": "1.2",
@@ -5302,6 +5379,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "LRCX",
       "code": "LRCX",
       "name": "泛林半导体",
       "sector": "1.2",
@@ -5349,6 +5427,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "KLAC",
       "code": "KLAC",
       "name": "科磊",
       "sector": "1.2",
@@ -5402,6 +5481,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "TER",
       "code": "TER",
       "name": "泰瑞达",
       "sector": "1.2",
@@ -5449,6 +5529,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "ACLS",
       "code": "ACLS",
       "name": "Axcelis Technologies",
       "sector": "1.2",
@@ -5486,6 +5567,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "8035.T",
       "code": "8035",
       "name": "東京エレクトロン(Tokyo Electron)",
       "sector": "1.2",
@@ -5539,6 +5621,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6857.T",
       "code": "6857",
       "name": "アドバンテスト(爱德万)",
       "sector": "1.2",
@@ -5596,6 +5679,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6146.T",
       "code": "6146",
       "name": "ディスコ(迪斯科)",
       "sector": "1.2",
@@ -5641,6 +5725,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "7735.T",
       "code": "7735",
       "name": "SCREENホールディングス(斯库林)",
       "sector": "1.2",
@@ -5678,6 +5763,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6525.T",
       "code": "6525",
       "name": "KOKUSAI ELECTRIC(国际电气)",
       "sector": "1.2",
@@ -5735,6 +5821,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6315.T",
       "code": "6315",
       "name": "TOWA",
       "sector": "1.2",
@@ -5774,6 +5861,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6361.T",
       "code": "6361",
       "name": "荏原製作所",
       "sector": "1.2",
@@ -5821,6 +5909,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "2802.T",
       "code": "2802",
       "name": "味之素(Ajinomoto)",
       "sector": "1.2",
@@ -5870,6 +5959,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "7729.T",
       "code": "7729",
       "name": "東京精密",
       "sector": "1.2",
@@ -5913,6 +6003,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6323.T",
       "code": "6323",
       "name": "ローツェ(Rorze)",
       "sector": "1.2",
@@ -5956,6 +6047,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6383.T",
       "code": "6383",
       "name": "ダイフク(大福)",
       "sector": "1.2",
@@ -6009,6 +6101,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "7995.T",
       "code": "7995",
       "name": "新川(Shinkawa)",
       "sector": "1.2",
@@ -6062,6 +6155,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "7731.T",
       "code": "7731",
       "name": "ニコン(尼康)",
       "sector": "1.2",
@@ -6105,6 +6199,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6590.T",
       "code": "6590",
       "name": "芝浦メカトロニクス(芝浦机电)",
       "sector": "1.2",
@@ -6144,6 +6239,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6855.T",
       "code": "6855",
       "name": "日本電子材料",
       "sector": "1.2",
@@ -6191,6 +6287,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6871.T",
       "code": "6871",
       "name": "日本マイクロニクス",
       "sector": "1.2",
@@ -6238,6 +6335,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6754.T",
       "code": "6754",
       "name": "アンリツ(安立)",
       "sector": "1.2",
@@ -6285,6 +6383,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6834.T",
       "code": "6834",
       "name": "ニューフレアテクノロジー(纽富来)",
       "sector": "1.2",
@@ -6332,6 +6431,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6951.T",
       "code": "6951",
       "name": "日本電子",
       "sector": "1.2",
@@ -6389,6 +6489,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "7751.T",
       "code": "7751",
       "name": "キヤノン(佳能)",
       "sector": "1.2",
@@ -6432,6 +6533,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "688012.SH",
       "code": "688012",
       "name": "中微公司",
       "sector": "1.2",
@@ -6479,6 +6581,7 @@
       "source": "sina"
     },
     {
+      "symbol": "ASX",
       "code": "ASX",
       "name": "日月光",
       "sector": "1.3",
@@ -6532,6 +6635,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "AMKR",
       "code": "AMKR",
       "name": "安靠科技",
       "sector": "1.3",
@@ -6589,6 +6693,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "600584.SH",
       "code": "600584",
       "name": "长电科技",
       "sector": "1.3",
@@ -6632,6 +6737,7 @@
       "source": "sina"
     },
     {
+      "symbol": "002156.SZ",
       "code": "002156",
       "name": "通富微电",
       "sector": "1.3",
@@ -6671,6 +6777,7 @@
       "source": "sina"
     },
     {
+      "symbol": "6787.T",
       "code": "6787",
       "name": "メイコー(MEIKO)",
       "sector": "1.3",
@@ -6718,6 +6825,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "COHR",
       "code": "COHR",
       "name": "Coherent",
       "sector": "1.4",
@@ -6771,6 +6879,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "LITE",
       "code": "LITE",
       "name": "Lumentum",
       "sector": "1.4",
@@ -6828,6 +6937,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "300308.SZ",
       "code": "300308",
       "name": "中际旭创",
       "sector": "1.4",
@@ -6885,6 +6995,7 @@
       "source": "sina"
     },
     {
+      "symbol": "300502.SZ",
       "code": "300502",
       "name": "新易盛",
       "sector": "1.4",
@@ -6942,6 +7053,7 @@
       "source": "sina"
     },
     {
+      "symbol": "688498.SH",
       "code": "688498",
       "name": "源杰科技",
       "sector": "1.4",
@@ -6989,6 +7101,7 @@
       "source": "sina"
     },
     {
+      "symbol": "600487.SH",
       "code": "600487",
       "name": "亨通光电",
       "sector": "1.4",
@@ -7036,6 +7149,7 @@
       "source": "sina"
     },
     {
+      "symbol": "5801.T",
       "code": "5801",
       "name": "古河電気工業",
       "sector": "1.4",
@@ -7093,6 +7207,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "5802.T",
       "code": "5802",
       "name": "住友電気工業",
       "sector": "1.4",
@@ -7140,6 +7255,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "5803.T",
       "code": "5803",
       "name": "フジクラ(藤仓)",
       "sector": "1.4",
@@ -7187,6 +7303,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "5817.T",
       "code": "5817",
       "name": "JMACS",
       "sector": "1.4",
@@ -7254,6 +7371,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6834.T",
       "code": "6834",
       "name": "精工技研",
       "sector": "1.4",
@@ -7301,6 +7419,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6777.T",
       "code": "6777",
       "name": "santec",
       "sector": "1.4",
@@ -7348,6 +7467,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "CEG",
       "code": "CEG",
       "name": "星座能源",
       "sector": "1.5",
@@ -7395,6 +7515,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "SBGSF",
       "code": "SBGSF",
       "name": "施耐德电气",
       "sector": "1.5",
@@ -7452,6 +7573,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "ETN",
       "code": "ETN",
       "name": "伊顿",
       "sector": "1.5",
@@ -7499,6 +7621,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "VRT",
       "code": "VRT",
       "name": "Vertiv(维谛技术)",
       "sector": "1.5",
@@ -7556,6 +7679,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6501.T",
       "code": "6501",
       "name": "日立製作所",
       "sector": "1.5",
@@ -7609,6 +7733,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6503.T",
       "code": "6503",
       "name": "三菱電機",
       "sector": "1.5",
@@ -7662,6 +7787,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6504.T",
       "code": "6504",
       "name": "富士電機",
       "sector": "1.5",
@@ -7705,6 +7831,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6367.T",
       "code": "6367",
       "name": "ダイキン工業(大金)",
       "sector": "1.5",
@@ -7762,6 +7889,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6651.T",
       "code": "6651",
       "name": "日東工業",
       "sector": "1.5",
@@ -7809,6 +7937,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6762.T",
       "code": "6762",
       "name": "TDK",
       "sector": "1.5",
@@ -7876,6 +8005,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6752.T",
       "code": "6752",
       "name": "パナソニック(松下)",
       "sector": "1.5",
@@ -7933,6 +8063,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "485A.T",
       "code": "485A",
       "name": "PowerX",
       "sector": "1.5",
@@ -7976,6 +8107,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6590.T",
       "code": "6590",
       "name": "芝浦メカトロニクス(芝浦机电)",
       "sector": "1.5",
@@ -8015,6 +8147,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6981.T",
       "code": "6981",
       "name": "村田製作所",
       "sector": "1.5",
@@ -8058,6 +8191,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6976.T",
       "code": "6976",
       "name": "太陽誘電",
       "sector": "1.5",
@@ -8101,6 +8235,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6996.T",
       "code": "6996",
       "name": "ニチコン(尼吉康)",
       "sector": "1.5",
@@ -8148,6 +8283,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6584.T",
       "code": "6584",
       "name": "三桜工業",
       "sector": "1.5",
@@ -8191,6 +8327,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6814.T",
       "code": "6814",
       "name": "古河電池",
       "sector": "1.5",
@@ -8228,6 +8365,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "MSFT",
       "code": "MSFT",
       "name": "微软",
       "sector": "1.6",
@@ -8285,6 +8423,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "AMZN",
       "code": "AMZN",
       "name": "亚马逊",
       "sector": "1.6",
@@ -8332,6 +8471,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "GOOGL",
       "code": "GOOGL",
       "name": "谷歌",
       "sector": "1.6",
@@ -8385,6 +8525,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "CRWV",
       "code": "CRWV",
       "name": "CoreWeave",
       "sector": "1.6",
@@ -8432,6 +8573,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "PLTR",
       "code": "PLTR",
       "name": "Palantir",
       "sector": "1.6",
@@ -8479,6 +8621,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "IONQ",
       "code": "IONQ",
       "name": "IonQ",
       "sector": "1.7",
@@ -8526,6 +8669,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "QBTS",
       "code": "QBTS",
       "name": "D-Wave Quantum",
       "sector": "1.7",
@@ -8563,6 +8707,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "RGTI",
       "code": "RGTI",
       "name": "Rigetti Computing",
       "sector": "1.7",
@@ -8610,6 +8755,7 @@
       "source": "cache"
     },
     {
+      "symbol": "IBM",
       "code": "IBM",
       "name": "IBM",
       "sector": "1.7",
@@ -8667,6 +8813,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "688262.SH",
       "code": "688262",
       "name": "国芯科技",
       "sector": "1.7",
@@ -8714,6 +8861,7 @@
       "source": "sina"
     },
     {
+      "symbol": "6597.T",
       "code": "6597",
       "name": "HPCシステムズ(HPC Systems)",
       "sector": "1.7",
@@ -8767,6 +8915,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6954.T",
       "code": "6954",
       "name": "ファナック(发那科)",
       "sector": "2.1",
@@ -8834,6 +8983,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6861.T",
       "code": "6861",
       "name": "キーエンス(基恩士)",
       "sector": "2.1",
@@ -8901,6 +9051,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6506.T",
       "code": "6506",
       "name": "安川電機",
       "sector": "2.1",
@@ -8968,6 +9119,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6594.T",
       "code": "6594",
       "name": "日本電産(尼得科)",
       "sector": "2.1",
@@ -9045,6 +9197,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6645.T",
       "code": "6645",
       "name": "オムロン(欧姆龙)",
       "sector": "2.1",
@@ -9112,6 +9265,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6273.T",
       "code": "6273",
       "name": "SMC",
       "sector": "2.1",
@@ -9179,6 +9333,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6324.T",
       "code": "6324",
       "name": "ハーモニック(Harmonic)",
       "sector": "2.1",
@@ -9236,6 +9391,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "3444.T",
       "code": "3444",
       "name": "菊池製作所",
       "sector": "2.1",
@@ -9281,6 +9437,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "SIE.DE",
       "code": "SIE",
       "name": "西门子",
       "sector": "2.1",
@@ -9333,21 +9490,22 @@
         }
       ],
       "market_type": "德股",
-      "price": "271.10",
-      "change": "-1.55 (-0.57%)",
+      "price": "270.85",
+      "change": "-1.80 (-0.66%)",
       "isUp": false,
-      "per": "27.08",
+      "per": "27.06",
       "roe": "12.5%",
-      "forward_per": "20.85",
+      "forward_per": "20.83",
       "pbr": "3.07",
       "distHigh": "-7.1%",
-      "ytdChange": "14.83%",
-      "distWeek": "-4.6%",
+      "ytdChange": "14.73%",
+      "distWeek": "-4.7%",
       "distMonth": "-7.1%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
     {
+      "symbol": "ROK",
       "code": "ROK",
       "name": "罗克韦尔自动化",
       "sector": "2.1",
@@ -9405,6 +9563,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "688037.SH",
       "code": "688037",
       "name": "埃斯顿",
       "sector": "2.1",
@@ -9472,6 +9631,7 @@
       "source": "sina"
     },
     {
+      "symbol": "002008.SZ",
       "code": "002008",
       "name": "大族激光",
       "sector": "2.1",
@@ -9519,6 +9679,7 @@
       "source": "sina"
     },
     {
+      "symbol": "603131.SH",
       "code": "603131",
       "name": "上海沪工",
       "sector": "2.1",
@@ -9586,6 +9747,7 @@
       "source": "sina"
     },
     {
+      "symbol": "6702.T",
       "code": "6702",
       "name": "富士通",
       "sector": "3.1",
@@ -9663,6 +9825,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "9101.T",
       "code": "9101",
       "name": "日本郵船",
       "sector": "3.2",
@@ -9687,6 +9850,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "9104.T",
       "code": "9104",
       "name": "商船三井",
       "sector": "3.2",
@@ -9711,6 +9875,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "9107.T",
       "code": "9107",
       "name": "川崎汽船",
       "sector": "3.2",
@@ -9735,6 +9900,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "SPCX",
       "code": "SPCX",
       "name": "SpaceX",
       "sector": "4.1",
@@ -9772,6 +9938,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "RKLB",
       "code": "RKLB",
       "name": "Rocket Lab",
       "sector": "4.1",
@@ -9809,6 +9976,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "ASTS",
       "code": "ASTS",
       "name": "AST SpaceMobile",
       "sector": "4.1",
@@ -9846,6 +10014,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "IRDM",
       "code": "IRDM",
       "name": "铱星通信",
       "sector": "4.1",
@@ -9883,6 +10052,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "9348.T",
       "code": "9348",
       "name": "ispace",
       "sector": "4.1",
@@ -9920,6 +10090,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "186A.T",
       "code": "186A",
       "name": "Astroscale",
       "sector": "4.1",
@@ -9957,6 +10128,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6613.T",
       "code": "6613",
       "name": "QDレーザ(QD激光)",
       "sector": "4.1",
@@ -9994,6 +10166,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "GE",
       "code": "GE",
       "name": "GE Aerospace",
       "sector": "4.1",
@@ -10031,6 +10204,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "RTX",
       "code": "RTX",
       "name": "RTX Corporation",
       "sector": "4.1",
@@ -10068,6 +10242,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "BA",
       "code": "BA",
       "name": "波音",
       "sector": "4.1",
@@ -10105,6 +10280,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "EADSY",
       "code": "EADSY",
       "name": "空客",
       "sector": "4.1",
@@ -10142,6 +10318,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "7011.T",
       "code": "7011",
       "name": "三菱重工",
       "sector": "4.1",
@@ -10189,6 +10366,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "7013.T",
       "code": "7013",
       "name": "IHI",
       "sector": "4.1",
@@ -10226,6 +10404,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "5631.T",
       "code": "5631",
       "name": "日本製鋼所",
       "sector": "4.1",
@@ -10263,6 +10442,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "600143.SH",
       "code": "600143",
       "name": "金发科技",
       "sector": "5.1",
@@ -10336,6 +10516,7 @@
       "source": "sina"
     },
     {
+      "symbol": "8012.T",
       "code": "8012",
       "name": "長瀬産業",
       "sector": "5.1",
@@ -10403,6 +10584,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "8154.T",
       "code": "8154",
       "name": "加賀電子",
       "sector": "5.1",
@@ -10450,6 +10632,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "8088.T",
       "code": "8088",
       "name": "岩谷産業",
       "sector": "5.1",
@@ -10507,6 +10690,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "546A.T",
       "code": "546A",
       "name": "MIRAINIホールディングス",
       "sector": "5.1",
@@ -10574,6 +10758,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "2678.T",
       "code": "2678",
       "name": "ASKUL",
       "sector": "5.1",
@@ -10625,6 +10810,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "7220.T",
       "code": "7220",
       "name": "武蔵精密工業",
       "sector": "5.1",
@@ -10684,6 +10870,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "8001.T",
       "code": "8001",
       "name": "伊藤忠商事",
       "sector": "5.2",
@@ -10741,6 +10928,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "8053.T",
       "code": "8053",
       "name": "住友商事",
       "sector": "5.2",
@@ -10798,6 +10986,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "8031.T",
       "code": "8031",
       "name": "三井物産",
       "sector": "5.2",
@@ -10855,6 +11044,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "4061.T",
       "code": "4061",
       "name": "デンカ(Denka/电化)",
       "sector": "5.4",
@@ -10922,6 +11112,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "8015.T",
       "code": "8015",
       "name": "豊田通商",
       "sector": "5.2",
@@ -10987,6 +11178,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "9984.T",
       "code": "9984",
       "name": "ソフトバンク",
       "sector": "5.2",
@@ -11050,6 +11242,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "3103.T",
       "code": "3103",
       "name": "ユニチカ(Unitika/尤尼吉可)",
       "sector": "5.4",
@@ -11108,6 +11301,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "1515.T",
       "code": "1515",
       "name": "日鐵礦業(Nittetsu Mining)",
       "sector": "5.3",
@@ -11157,6 +11351,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "8136.T",
       "code": "8136",
       "name": "サンリオ(三丽鸥)",
       "sector": "5.5",
@@ -11224,6 +11419,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6269.T",
       "code": "6269",
       "name": "三井海洋開発",
       "sector": "5.6",
@@ -11269,6 +11465,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "8306.T",
       "code": "8306",
       "name": "三菱UFJフィナンシャル・グループ(MUFG)",
       "sector": "6.1",
@@ -11293,6 +11490,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "8316.T",
       "code": "8316",
       "name": "三井住友フィナンシャルグループ(SMFG)",
       "sector": "6.1",
@@ -11317,6 +11515,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "8411.T",
       "code": "8411",
       "name": "みずほフィナンシャルグループ",
       "sector": "6.1",
@@ -11341,6 +11540,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "8309.T",
       "code": "8309",
       "name": "三井住友トラスト・ホールディングス",
       "sector": "6.1",
@@ -11386,6 +11586,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "8308.T",
       "code": "8308",
       "name": "りそなホールディングス",
       "sector": "6.1",
@@ -11410,6 +11611,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "8303.T",
       "code": "8303",
       "name": "SBI新生銀行",
       "sector": "6.1",
@@ -11434,6 +11636,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "3994.T",
       "code": "3994",
       "name": "マネーフォワード(Money Forward)",
       "sector": "6.2",
@@ -11499,6 +11702,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "8725.T",
       "code": "8725",
       "name": "MS&ADインシュアランスグループ",
       "sector": "6.2",
@@ -11538,6 +11742,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "7182.T",
       "code": "7182",
       "name": "ゆうちょ銀行",
       "sector": "6.1",
@@ -11583,6 +11788,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "5838.T",
       "code": "5838",
       "name": "楽天銀行",
       "sector": "6.1",
@@ -11628,6 +11834,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "8331.T",
       "code": "8331",
       "name": "千葉銀行",
       "sector": "6.1",
@@ -11673,6 +11880,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "8334.T",
       "code": "8334",
       "name": "群馬銀行",
       "sector": "6.1",
@@ -11718,6 +11926,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "8410.T",
       "code": "8410",
       "name": "セブン銀行(Seven Bank)",
       "sector": "6.1",
@@ -11757,6 +11966,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "002693.SZ",
       "code": "002693",
       "name": "双成药业",
       "sector": "6.3",
@@ -11830,6 +12040,7 @@
       "source": "sina"
     },
     {
+      "symbol": "4592.T",
       "code": "4592",
       "name": "サンバイオ",
       "sector": "6.3",
@@ -11876,6 +12087,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "4506.T",
       "code": "4506",
       "name": "住友ファーマ(住友製薬)",
       "sector": "6.3",
@@ -11922,6 +12134,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "4889.T",
       "code": "4889",
       "name": "レナセル(Renascience)",
       "sector": "6.3",
@@ -11967,6 +12180,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "4570.T",
       "code": "4570",
       "name": "免疫生物",
       "sector": "6.3",
@@ -12012,6 +12226,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "1801.T",
       "code": "1801",
       "name": "大成建設",
       "sector": "7.2",
@@ -12049,6 +12264,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "1802.T",
       "code": "1802",
       "name": "大林組",
       "sector": "7.2",
@@ -12086,6 +12302,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "1803.T",
       "code": "1803",
       "name": "清水建設",
       "sector": "7.2",
@@ -12123,6 +12340,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "1885.T",
       "code": "1885",
       "name": "東亜建設工業",
       "sector": "7.2",
@@ -12166,6 +12384,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "1812.T",
       "code": "1812",
       "name": "鹿島建設",
       "sector": "7.2",
@@ -12215,6 +12434,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "8058.T",
       "code": "8058",
       "name": "三菱商事",
       "sector": "5.2",
@@ -12278,6 +12498,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "8802.T",
       "code": "8802",
       "name": "三菱地所",
       "sector": "7.1",
@@ -12323,6 +12544,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6758.T",
       "code": "6758",
       "name": "ソニーグループ(Sony Group)",
       "sector": "5.5",
@@ -12382,6 +12604,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "7261.T",
       "code": "7261",
       "name": "マツダ(马自达)",
       "sector": "5.6",
@@ -12421,6 +12644,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6264.T",
       "code": "6264",
       "name": "マルマエ(Marumae)",
       "sector": "5.6",
@@ -12466,6 +12690,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6055.T",
       "code": "6055",
       "name": "ジャパンマテリアル(Japan Material)",
       "sector": "1.2",
@@ -12519,6 +12744,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "7014.T",
       "code": "7014",
       "name": "名村造船所",
       "sector": "3.2",
@@ -12564,6 +12790,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "5706.T",
       "code": "5706",
       "name": "三井金属",
       "sector": "1.2",
@@ -12613,6 +12840,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "7003.T",
       "code": "7003",
       "name": "三井造船",
       "sector": "5.6",
@@ -12662,6 +12890,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6340.T",
       "code": "6340",
       "name": "渋谷工業(Shibuya Kogyo)",
       "sector": "5.6",
@@ -12705,6 +12934,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6330.T",
       "code": "6330",
       "name": "東洋エンジニアリング(Toyo Engineering)",
       "sector": "5.6",
@@ -12754,6 +12984,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "3825.T",
       "code": "3825",
       "name": "リミックスポイント(Remixpoint)",
       "sector": "1.5",
@@ -12803,6 +13034,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6961.T",
       "code": "6961",
       "name": "エンプラス(Enplas)",
       "sector": "1.3",
@@ -12852,6 +13084,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6278.T",
       "code": "6278",
       "name": "ユニオンツール(Union Tool)",
       "sector": "1.2",
@@ -12895,6 +13128,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "4022.T",
       "code": "4022",
       "name": "ラサ工業(Rasa Industries)",
       "sector": "5.4",
@@ -12938,6 +13172,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "2124.T",
       "code": "2124",
       "name": "JACリクルートメント(JAC Recruitment)",
       "sector": "3.1",
@@ -12981,6 +13216,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "4377.T",
       "code": "4377",
       "name": "ONE CAREER",
       "sector": "3.1",
@@ -13024,6 +13260,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "4194.T",
       "code": "4194",
       "name": "ビジョナル(Visional)",
       "sector": "3.1",
@@ -13071,6 +13308,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "2436.T",
       "code": "2436",
       "name": "共同ピーアール(共同PR)",
       "sector": "3.1",
@@ -13108,6 +13346,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6058.T",
       "code": "6058",
       "name": "ベクター(Vector)",
       "sector": "5.1",
@@ -13147,6 +13386,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "2180.T",
       "code": "2180",
       "name": "サニーサイドアップ(Sunny Side Up)",
       "sector": "3.1",
@@ -13184,6 +13424,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6098.T",
       "code": "6098",
       "name": "リクルートホールディングス(Recruit Holdings)",
       "sector": "3.1",
@@ -13231,6 +13472,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "7202.T",
       "code": "7202",
       "name": "いすゞ自動車(五十铃汽车)",
       "sector": "5.6",
@@ -13276,6 +13518,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "1925.T",
       "code": "1925",
       "name": "大和ハウス工業(Daiwa House)",
       "sector": "7.1",
@@ -13325,6 +13568,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "3064.T",
       "code": "3064",
       "name": "モノタロウ(MonotaRO)",
       "sector": "5.1",
@@ -13372,6 +13616,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "8343.T",
       "code": "8343",
       "name": "札幌銀行",
       "sector": "6.1",
@@ -13411,6 +13656,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "7337.T",
       "code": "7337",
       "name": "ひろぎんホールディングス",
       "sector": "6.1",
@@ -13450,6 +13696,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "8418.T",
       "code": "8418",
       "name": "山口フィナンシャルグループ",
       "sector": "6.1",
@@ -13489,6 +13736,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "8341.T",
       "code": "8341",
       "name": "七十七銀行",
       "sector": "6.1",
@@ -13528,6 +13776,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "5830.T",
       "code": "5830",
       "name": "イオン銀行",
       "sector": "6.1",
@@ -13567,6 +13816,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "8377.T",
       "code": "8377",
       "name": "ほくほくフィナンシャルグループ",
       "sector": "6.1",
@@ -13606,6 +13856,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "8381.T",
       "code": "8381",
       "name": "山陰合同銀行",
       "sector": "6.1",
@@ -13645,6 +13896,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "200A.T",
       "code": "200A",
       "name": "NEXTFUNDS日経半導体指数ETF",
       "sector": "9.1",
@@ -13694,6 +13946,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "1570.T",
       "code": "1570",
       "name": "日経平均ETF(野村)",
       "sector": "9.1",
@@ -13722,21 +13975,22 @@
         }
       ],
       "market_type": "日股",
-      "price": "66980.00",
-      "change": "+1720.00 (+2.64%)",
+      "price": "69620.00",
+      "change": "+2640.00 (+3.94%)",
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
-      "distHigh": "-22.5%",
-      "ytdChange": "46.44%",
-      "distWeek": "-4.5%",
-      "distMonth": "-12.9%",
+      "distHigh": "-19.4%",
+      "ytdChange": "52.21%",
+      "distWeek": "-0.9%",
+      "distMonth": "-9.5%",
       "trend": "熊市空头",
       "source": "yfinance"
     },
     {
+      "symbol": "1357.T",
       "code": "1357",
       "name": "日経ダブルインバースETF",
       "sector": "9.1",
@@ -13790,6 +14044,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "1489.T",
       "code": "1489",
       "name": "iFreeETF 新興国債券(日本国債除く)",
       "sector": "9.1",
@@ -13822,21 +14077,22 @@
         }
       ],
       "market_type": "日股",
-      "price": "3578.00",
-      "change": "-43.00 (-1.19%)",
+      "price": "3569.00",
+      "change": "-9.00 (-0.25%)",
       "isUp": false,
       "per": "14.90",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
-      "distHigh": "-2.1%",
-      "ytdChange": "25.78%",
-      "distWeek": "-2.1%",
-      "distMonth": "-2.1%",
+      "distHigh": "-2.4%",
+      "ytdChange": "25.46%",
+      "distWeek": "-2.4%",
+      "distMonth": "-2.4%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
     {
+      "symbol": "540A.T",
       "code": "540A",
       "name": "日経平均ブル2倍ETF",
       "sector": "9.1",
@@ -13880,6 +14136,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "4548.T",
       "code": "4548",
       "name": "生化学工業(Seikagaku)",
       "sector": "6.3",
@@ -13926,6 +14183,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6619.T",
       "code": "6619",
       "name": "ダブル・スコープ(W-SCOPE)",
       "sector": "1.2",
@@ -13979,6 +14237,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "8750.T",
       "code": "8750",
       "name": "第一ライフグループ(第一生命)",
       "sector": "6.2",
@@ -14018,6 +14277,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "278A.T",
       "code": "278A",
       "name": "Terra Drone",
       "sector": "4.1",
@@ -14061,6 +14321,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "593A.T",
       "code": "593A",
       "name": "Tier IV",
       "sector": "3.1",
@@ -14110,6 +14371,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "4755.T",
       "code": "4755",
       "name": "楽天グループ(Rakuten Group)",
       "sector": "3.1",
@@ -14163,6 +14425,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "3632.T",
       "code": "3632",
       "name": "グリー(GREE)",
       "sector": "5.5",
@@ -14210,6 +14473,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "5074.T",
       "code": "5074",
       "name": "テノックス(Tenox)",
       "sector": "7.2",
@@ -14249,6 +14513,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "4075.T",
       "code": "4075",
       "name": "協和発酵バイオ(Kyowa Hakko Bio)",
       "sector": "6.3",
@@ -14295,6 +14560,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6962.T",
       "code": "6962",
       "name": "大真空(Daishinku)",
       "sector": "1.2",
@@ -14338,6 +14604,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "7371.T",
       "code": "7371",
       "name": "ライステクノロジーズ(Laistechnologies)",
       "sector": "3.1",
@@ -14381,6 +14648,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "7600.T",
       "code": "7600",
       "name": "日本エム・ディ・エム(Japan MDM)",
       "sector": "5.1",
@@ -14424,6 +14692,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6138.T",
       "code": "6138",
       "name": "ダイジェット工業(Dijet)",
       "sector": "5.6",
@@ -14467,6 +14736,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "5704.T",
       "code": "5704",
       "name": "JX金属",
       "sector": "1.2",
@@ -14520,6 +14790,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "4443.T",
       "code": "4443",
       "name": "Sansan",
       "sector": "3.1",
@@ -14567,6 +14838,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "4417.T",
       "code": "4417",
       "name": "グローバルセキュリティエキスパート(Global Security Expert)",
       "sector": "3.1",
@@ -14606,6 +14878,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "7777.T",
       "code": "7777",
       "name": "スリー・ディー・マトリックス(3D Matrix)",
       "sector": "6.3",
@@ -14653,6 +14926,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6838.T",
       "code": "6838",
       "name": "三共(Sanko)",
       "sector": "5.6",
@@ -14696,6 +14970,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "4548.T",
       "code": "4548",
       "name": "生化学工業(Seikagaku)",
       "sector": "6.3",
@@ -14742,6 +15017,7 @@
       "source": "yfinance"
     },
     {
+      "symbol": "6619.T",
       "code": "6619",
       "name": "ダブル・スコープ(W-SCOPE)",
       "sector": "1.2",
@@ -14792,6 +15068,731 @@
       "distWeek": "-1.7%",
       "distMonth": "-1.7%",
       "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "318A.T",
+      "code": "318A",
+      "name": "318A.T",
+      "sector": "自选追加",
+      "industry": "自选追加",
+      "feature": "从投资组合手动追加",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "日股",
+      "price": "343.30",
+      "change": "+1.10 (+0.32%)",
+      "isUp": true,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "-58.3%",
+      "ytdChange": "-34.02%",
+      "distWeek": "-8.1%",
+      "distMonth": "-16.3%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "3905.T",
+      "code": "3905",
+      "name": "3905.T",
+      "sector": "自选追加",
+      "industry": "自选追加",
+      "feature": "从投资组合手动追加",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "日股",
+      "price": "1529.00",
+      "change": "-25.00 (-1.61%)",
+      "isUp": false,
+      "per": "17.45",
+      "roe": "45.8%",
+      "forward_per": "--",
+      "pbr": "1.94",
+      "distHigh": "-75.1%",
+      "ytdChange": "-27.50%",
+      "distWeek": "-12.8%",
+      "distMonth": "-23.4%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "BAC",
+      "code": "BAC",
+      "name": "BAC",
+      "sector": "自选追加",
+      "industry": "自选追加",
+      "feature": "从投资组合手动追加",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "美股",
+      "price": "62.68",
+      "change": "-0.04 (-0.06%)",
+      "isUp": false,
+      "per": "14.48",
+      "roe": "11.2%",
+      "forward_per": "11.84",
+      "pbr": "1.59",
+      "distHigh": "-3.9%",
+      "ytdChange": "13.83%",
+      "distWeek": "-0.9%",
+      "distMonth": "-3.4%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "AXP",
+      "code": "AXP",
+      "name": "AXP",
+      "sector": "自选追加",
+      "industry": "自选追加",
+      "feature": "从投资组合手动追加",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "美股",
+      "price": "326.16",
+      "change": "-3.66 (-1.11%)",
+      "isUp": false,
+      "per": "19.80",
+      "roe": "34.4%",
+      "forward_per": "16.22",
+      "pbr": "6.42",
+      "distHigh": "-15.8%",
+      "ytdChange": "-11.98%",
+      "distWeek": "-2.6%",
+      "distMonth": "-7.5%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "KO",
+      "code": "KO",
+      "name": "KO",
+      "sector": "自选追加",
+      "industry": "自选追加",
+      "feature": "从投资组合手动追加",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "美股",
+      "price": "88.07",
+      "change": "-0.74 (-0.83%)",
+      "isUp": false,
+      "per": "26.45",
+      "roe": "42.1%",
+      "forward_per": "24.97",
+      "pbr": "10.48",
+      "distHigh": "-4.8%",
+      "ytdChange": "29.12%",
+      "distWeek": "-1.9%",
+      "distMonth": "-4.8%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "CVX",
+      "code": "CVX",
+      "name": "CVX",
+      "sector": "自选追加",
+      "industry": "自选追加",
+      "feature": "从投资组合手动追加",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "美股",
+      "price": "208.60",
+      "change": "-2.72 (-1.29%)",
+      "isUp": false,
+      "per": "20.08",
+      "roe": "12.2%",
+      "forward_per": "15.53",
+      "pbr": "2.15",
+      "distHigh": "-2.8%",
+      "ytdChange": "37.54%",
+      "distWeek": "-2.2%",
+      "distMonth": "-2.2%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "OXY",
+      "code": "OXY",
+      "name": "OXY",
+      "sector": "自选追加",
+      "industry": "自选追加",
+      "feature": "从投资组合手动追加",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "美股",
+      "price": "60.04",
+      "change": "-0.57 (-0.94%)",
+      "isUp": false,
+      "per": "17.71",
+      "roe": "10.6%",
+      "forward_per": "15.65",
+      "pbr": "1.79",
+      "distHigh": "-11.0%",
+      "ytdChange": "43.00%",
+      "distWeek": "-2.1%",
+      "distMonth": "-3.4%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "KHC",
+      "code": "KHC",
+      "name": "KHC",
+      "sector": "自选追加",
+      "industry": "自选追加",
+      "feature": "从投资组合手动追加",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "美股",
+      "price": "24.85",
+      "change": "-0.17 (-0.68%)",
+      "isUp": false,
+      "per": "11.87",
+      "roe": "-8.8%",
+      "forward_per": "11.87",
+      "pbr": "0.82",
+      "distHigh": "-11.5%",
+      "ytdChange": "7.16%",
+      "distWeek": "-4.5%",
+      "distMonth": "-6.7%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "MCO",
+      "code": "MCO",
+      "name": "MCO",
+      "sector": "自选追加",
+      "industry": "自选追加",
+      "feature": "从投资组合手动追加",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "美股",
+      "price": "493.55",
+      "change": "-10.75 (-2.13%)",
+      "isUp": false,
+      "per": "31.36",
+      "roe": "76.9%",
+      "forward_per": "26.07",
+      "pbr": "28.26",
+      "distHigh": "-9.8%",
+      "ytdChange": "-0.43%",
+      "distWeek": "-3.6%",
+      "distMonth": "-5.2%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "TMO",
+      "code": "TMO",
+      "name": "TMO",
+      "sector": "自选追加",
+      "industry": "自选追加",
+      "feature": "从投资组合手动追加",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "美股",
+      "price": "613.78",
+      "change": "-4.65 (-0.75%)",
+      "isUp": false,
+      "per": "33.00",
+      "roe": "13.5%",
+      "forward_per": "22.30",
+      "pbr": "4.31",
+      "distHigh": "-5.1%",
+      "ytdChange": "3.80%",
+      "distWeek": "-1.5%",
+      "distMonth": "-5.1%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "DVA",
+      "code": "DVA",
+      "name": "DVA",
+      "sector": "自选追加",
+      "industry": "自选追加",
+      "feature": "从投资组合手动追加",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "美股",
+      "price": "183.99",
+      "change": "+2.33 (+1.28%)",
+      "isUp": true,
+      "per": "15.61",
+      "roe": "88.5%",
+      "forward_per": "10.67",
+      "pbr": "-15.38",
+      "distHigh": "-25.7%",
+      "ytdChange": "60.68%",
+      "distWeek": "-0.1%",
+      "distMonth": "-11.8%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "META",
+      "code": "META",
+      "name": "META",
+      "sector": "自选追加",
+      "industry": "自选追加",
+      "feature": "从投资组合手动追加",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "美股",
+      "price": "616.77",
+      "change": "+6.09 (+1.00%)",
+      "isUp": true,
+      "per": "23.26",
+      "roe": "29.8%",
+      "forward_per": "17.64",
+      "pbr": "6.02",
+      "distHigh": "-22.0%",
+      "ytdChange": "-5.00%",
+      "distWeek": "-0.4%",
+      "distMonth": "-0.4%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "LLY",
+      "code": "LLY",
+      "name": "LLY",
+      "sector": "自选追加",
+      "industry": "自选追加",
+      "feature": "从投资组合手动追加",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "美股",
+      "price": "1149.36",
+      "change": "-10.24 (-0.88%)",
+      "isUp": false,
+      "per": "38.61",
+      "roe": "102.3%",
+      "forward_per": "24.32",
+      "pbr": "30.24",
+      "distHigh": "-11.1%",
+      "ytdChange": "6.90%",
+      "distWeek": "-3.3%",
+      "distMonth": "-11.1%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "VTI",
+      "code": "VTI",
+      "name": "VTI",
+      "sector": "自选追加",
+      "industry": "自选追加",
+      "feature": "从投资组合手动追加",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "美股",
+      "price": "379.73",
+      "change": "-1.20 (-0.32%)",
+      "isUp": false,
+      "per": "25.48",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "-1.4%",
+      "ytdChange": "13.59%",
+      "distWeek": "-0.4%",
+      "distMonth": "-1.4%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "IVV",
+      "code": "IVV",
+      "name": "IVV",
+      "sector": "自选追加",
+      "industry": "自选追加",
+      "feature": "从投资组合手动追加",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "美股",
+      "price": "773.92",
+      "change": "-3.21 (-0.41%)",
+      "isUp": false,
+      "per": "24.89",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "1.80",
+      "distHigh": "-1.2%",
+      "ytdChange": "13.39%",
+      "distWeek": "-0.5%",
+      "distMonth": "-1.2%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "JPM",
+      "code": "JPM",
+      "name": "JPM",
+      "sector": "自选追加",
+      "industry": "自选追加",
+      "feature": "从投资组合手动追加",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "美股",
+      "price": "358.64",
+      "change": "-3.42 (-0.94%)",
+      "isUp": false,
+      "per": "15.36",
+      "roe": "17.8%",
+      "forward_per": "14.34",
+      "pbr": "2.70",
+      "distHigh": "-2.1%",
+      "ytdChange": "11.75%",
+      "distWeek": "-1.2%",
+      "distMonth": "-2.1%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "BND",
+      "code": "BND",
+      "name": "BND",
+      "sector": "自选追加",
+      "industry": "自选追加",
+      "feature": "从投资组合手动追加",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "美股",
+      "price": "71.95",
+      "change": "+0.02 (+0.03%)",
+      "isUp": true,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "-4.4%",
+      "ytdChange": "-0.19%",
+      "distWeek": "-0.1%",
+      "distMonth": "-0.7%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "TCEHY",
+      "code": "TCEHY",
+      "name": "TCEHY",
+      "sector": "自选追加",
+      "industry": "自选追加",
+      "feature": "从投资组合手动追加",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "美股",
+      "price": "56.60",
+      "change": "+0.75 (+1.34%)",
+      "isUp": true,
+      "per": "14.93",
+      "roe": "19.9%",
+      "forward_per": "13.56",
+      "pbr": "3.02",
+      "distHigh": "-35.4%",
+      "ytdChange": "-28.91%",
+      "distWeek": "-2.1%",
+      "distMonth": "-10.0%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "UBER",
+      "code": "UBER",
+      "name": "UBER",
+      "sector": "自选追加",
+      "industry": "自选追加",
+      "feature": "从投资组合手动追加",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "美股",
+      "price": "75.76",
+      "change": "-0.20 (-0.26%)",
+      "isUp": false,
+      "per": "16.61",
+      "roe": "37.2%",
+      "forward_per": "17.29",
+      "pbr": "5.66",
+      "distHigh": "-25.7%",
+      "ytdChange": "-8.57%",
+      "distWeek": "-3.3%",
+      "distMonth": "-8.0%",
+      "trend": "熊市空头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "CMCSA",
+      "code": "CMCSA",
+      "name": "CMCSA",
+      "sector": "自选追加",
+      "industry": "自选追加",
+      "feature": "从投资组合手动追加",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "美股",
+      "price": "26.49",
+      "change": "-0.16 (-0.60%)",
+      "isUp": false,
+      "per": "8.49",
+      "roe": "11.5%",
+      "forward_per": "7.31",
+      "pbr": "1.05",
+      "distHigh": "-19.4%",
+      "ytdChange": "-0.74%",
+      "distWeek": "-2.6%",
+      "distMonth": "-3.1%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "ALNY",
+      "code": "ALNY",
+      "name": "ALNY",
+      "sector": "自选追加",
+      "industry": "自选追加",
+      "feature": "从投资组合手动追加",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "美股",
+      "price": "266.11",
+      "change": "+1.61 (+0.61%)",
+      "isUp": true,
+      "per": "46.28",
+      "roe": "96.6%",
+      "forward_per": "21.14",
+      "pbr": "26.28",
+      "distHigh": "-46.3%",
+      "ytdChange": "-33.50%",
+      "distWeek": "-1.9%",
+      "distMonth": "-1.9%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "PACB",
+      "code": "PACB",
+      "name": "PACB",
+      "sector": "自选追加",
+      "industry": "自选追加",
+      "feature": "从投资组合手动追加",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "美股",
+      "price": "1.35",
+      "change": "+0.05 (+3.85%)",
+      "isUp": true,
+      "per": "-3.33",
+      "roe": "-929.3%",
+      "forward_per": "-3.33",
+      "pbr": "-12.62",
+      "distHigh": "-50.5%",
+      "ytdChange": "-26.63%",
+      "distWeek": "-6.3%",
+      "distMonth": "-16.1%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "TSM",
+      "code": "TSM",
+      "name": "TSM",
+      "sector": "自选追加",
+      "industry": "自选追加",
+      "feature": "从投资组合手动追加",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "美股",
+      "price": "428.91",
+      "change": "+11.90 (+2.85%)",
+      "isUp": true,
+      "per": "31.84",
+      "roe": "40.0%",
+      "forward_per": "19.62",
+      "pbr": "88.29",
+      "distHigh": "-10.5%",
+      "ytdChange": "34.89%",
+      "distWeek": "-0.2%",
+      "distMonth": "-1.6%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "ORCL",
+      "code": "ORCL",
+      "name": "ORCL",
+      "sector": "自选追加",
+      "industry": "自选追加",
+      "feature": "从投资组合手动追加",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "美股",
+      "price": "158.78",
+      "change": "+4.74 (+3.08%)",
+      "isUp": true,
+      "per": "27.23",
+      "roe": "53.4%",
+      "forward_per": "14.48",
+      "pbr": "12.18",
+      "distHigh": "-54.1%",
+      "ytdChange": "-18.09%",
+      "distWeek": "-0.6%",
+      "distMonth": "-0.6%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "SNOW",
+      "code": "SNOW",
+      "name": "SNOW",
+      "sector": "自选追加",
+      "industry": "自选追加",
+      "feature": "从投资组合手动追加",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "美股",
+      "price": "337.18",
+      "change": "-19.29 (-5.41%)",
+      "isUp": false,
+      "per": "113.39",
+      "roe": "-48.1%",
+      "forward_per": "113.39",
+      "pbr": "54.78",
+      "distHigh": "-12.3%",
+      "ytdChange": "55.59%",
+      "distWeek": "-12.3%",
+      "distMonth": "-12.3%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "CRWD",
+      "code": "CRWD",
+      "name": "CRWD",
+      "sector": "自选追加",
+      "industry": "自选追加",
+      "feature": "从投资组合手动追加",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "美股",
+      "price": "213.10",
+      "change": "-1.87 (-0.87%)",
+      "isUp": false,
+      "per": "5327.50",
+      "roe": "1.5%",
+      "forward_per": "132.89",
+      "pbr": "42.77",
+      "distHigh": "-8.9%",
+      "ytdChange": "87.93%",
+      "distWeek": "-8.9%",
+      "distMonth": "-8.9%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "DELL",
+      "code": "DELL",
+      "name": "DELL",
+      "sector": "自选追加",
+      "industry": "自选追加",
+      "feature": "从投资组合手动追加",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "美股",
+      "price": "524.14",
+      "change": "+7.75 (+1.50%)",
+      "isUp": true,
+      "per": "30.49",
+      "roe": "--",
+      "forward_per": "18.32",
+      "pbr": "-236.95",
+      "distHigh": "-2.0%",
+      "ytdChange": "313.88%",
+      "distWeek": "-2.0%",
+      "distMonth": "-2.0%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "SMCI",
+      "code": "SMCI",
+      "name": "SMCI",
+      "sector": "自选追加",
+      "industry": "自选追加",
+      "feature": "从投资组合手动追加",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "美股",
+      "price": "39.59",
+      "change": "+1.72 (+4.54%)",
+      "isUp": true,
+      "per": "12.14",
+      "roe": "21.5%",
+      "forward_per": "7.43",
+      "pbr": "2.37",
+      "distHigh": "-32.6%",
+      "ytdChange": "27.87%",
+      "distWeek": "-3.2%",
+      "distMonth": "-6.4%",
+      "trend": "牛市多头",
+      "source": "yfinance"
+    },
+    {
+      "symbol": "6481.T",
+      "code": "6481",
+      "name": "6481.T",
+      "sector": "自选追加",
+      "industry": "自选追加",
+      "feature": "从投资组合手动追加",
+      "tags": [],
+      "display_tags": [],
+      "tag_themes": [],
+      "market_type": "日股",
+      "price": "6348.00",
+      "change": "+39.00 (+0.62%)",
+      "isUp": true,
+      "per": "29.89",
+      "roe": "8.3%",
+      "forward_per": "33.26",
+      "pbr": "2.64",
+      "distHigh": "-23.0%",
+      "ytdChange": "58.84%",
+      "distWeek": "-4.3%",
+      "distMonth": "-18.2%",
+      "trend": "熊市空头",
       "source": "yfinance"
     }
   ],
@@ -16397,7 +17398,8 @@
         "546A.T",
         "8410.T",
         "200A.T",
-        "4506.T"
+        "4506.T",
+        "6920.T"
       ]
     },
     "JiuWanli": {
