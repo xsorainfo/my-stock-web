@@ -440,6 +440,7 @@
 
     <!-- 引入脚本 -->
     <script src="../components/navbar.js"></script>
+    <script src="../components/stock-utils.js"></script>
     <script src="../components/common.js"></script>
     <script src="../components/footer.js"></script>
     
@@ -505,11 +506,7 @@
             const query = (document.getElementById('stockSearch')?.value || '').trim().toLowerCase();
             const market = document.getElementById('marketFilter')?.value || '';
             const sort = document.getElementById('sortFilter')?.value || '';
-            let visibleStocks = data.stocks.filter(s => (!query || [s.code, s.name, ...(s.display_tags || [])].some(v => String(v || '').toLowerCase().includes(query))) && (!market || s.market_type === market));
-            const changeValue = s => parseFloat(String(s.change || '').match(/[-+]?\d+(?:\.\d+)?%/)?.[0] || 0);
-            if (sort === 'change-desc') visibleStocks.sort((a,b)=>changeValue(b)-changeValue(a));
-            if (sort === 'change-asc') visibleStocks.sort((a,b)=>changeValue(a)-changeValue(b));
-            if (sort === 'name') visibleStocks.sort((a,b)=>String(a.name).localeCompare(String(b.name)));
+            let visibleStocks = filterStocks(data.stocks, {query, market, sort});
             container.innerHTML = '';
             
             // 按市场定义排序优先级
