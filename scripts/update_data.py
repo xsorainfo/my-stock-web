@@ -515,7 +515,9 @@ def fetch_all_data():
         "theme_mapping": THEME_MAPPING,  # ⭐ 把主题映射写入 data.json
         "tag_display_map": TAG_DISPLAY_MAP,  # ⭐ 把显示映射写入 data.json
         "theme_descriptions": {},  # ⭐ 新增：存储二级分类的注释
-        "portfolio_lists": PORTFOLIO_LISTS
+        "portfolio_lists": PORTFOLIO_LISTS,
+        "generated_at": datetime.now().astimezone().isoformat(),
+        "update_status": {"expected": 0, "success": 0, "failed": 0, "failed_symbols": []}
     }
     
     # ⭐ 构建二级分类注释映射
@@ -549,7 +551,9 @@ def fetch_all_data():
                 output_data["macro"].append(result)
 
     # 2. 抓取自选个股数据
-    for item in portfolio_watchlist():
+    watchlist_items = portfolio_watchlist()
+    expected_symbols = {item['symbol'] for item in watchlist_items}
+    for item in watchlist_items:
         symbol = item["symbol"]
         market_type = get_market_type(symbol)
 
@@ -717,7 +721,18 @@ def fetch_all_data():
             import traceback
             traceback.print_exc()
 
-    # 3. 注入 AI 简报
+    # 3. 注入更新状态
+    success_symbols = {stock.get("symbol") or stock.get("code") for stock in output_data["stocks"]}
+    failed_symbols = sorted(expected_symbols - success_symbols)
+    output_data["update_status"] = {
+        "expected": len(expected_symbols),
+        "success": len(success_symbols),
+        "failed": len(failed_symbols),
+        "failed_symbols": failed_symbols
+    }
+    output_data["generated_at"] = datetime.now().astimezone().isoformat()
+
+    # 4. 注入 AI 简报
     output_data["ai_report"] = make_ai_news(output_data["stocks"])
 
     # ⭐ 确保 data 目录存在
