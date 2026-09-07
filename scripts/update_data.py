@@ -443,6 +443,91 @@ class StockDataManager:
         return None, "none"
 
 
+
+def _extract_ai_text(payload):
+    """Extract text from the Responses API while tolerating minor response shape changes."""
+    if not isinstance(payload, dict):
+        return ""
+    if payload.get("output_text"):
+        return str(payload["output_text"]).strip()
+    for item in payload.get("output", []):
+        for part in item.get("content", []) if isinstance(item, dict) else []:
+            if isinstance(part, dict) and part.get("text"):
+                return str(part["text"]).strip()
+    return ""
+
+
+def _market_snapshot(stock_data, macro_data, update_status):
+    """Keep the model input compact while covering all supported markets."""
+    ranked = sorted(
+        stock_data,
+        key=lambda item: abs(float(str(item.get("change", "0").split("(")[-1].replace("%)", "") or 0))),
+        reverse=True,
+    )
+    return {
+        "generated_at": datetime.now().astimezone().isoformat(),
+        "update_status": update_status,
+        "macro": macro_data,
+        "stocks": [
+            {
+                key: item.get(key)
+                for key in (
+                    "symbol", "name", "market_type", "price", "change", "trend",
+                    "per", "forward_per", "roe", "pbr", "ytdChange",
+                    "distHigh", "sector", "industry", "display_tags",
+                )
+            }
+            for item in ranked[:80]
+        ],
+        "market_counts": {
+            market: sum(1 for item in stock_data if item.get("market_type") == market)
+            for market in ("美股", "A股", "日股", "港股", "韩股", "德股")
+        },
+    }
+
+
+def generate_ai_strategy_report(stock_data, macro_data, update_status):
+    """Generate a data-grounded strategy report; gracefully fall back when unavailable."""
+    fallback = make_ai_news(stock_data)
+    api_key = os.getenv("AI_API_KEY", "").strip()
+    if not api_key:
+        return fallback, {"source": "fallback", "error": "AI_API_KEY 未配置"}
+
+    snapshot = _market_snapshot(stock_data, macro_data, update_status)
+    prompt = (
+        "你是一个中文量化投研助理。请仅依据下面提供的行情快照生成简洁的盘后/盘前策略简报。"
+        "快照中的价格和涨跌幅是当前任务抓取到的数据，不要编造新闻、财报或宏观事件；数据不足时明确写“数据不足”。"
+        "必须覆盖：1) 全球市场环境；2) 美股、A股、日股分别的观察；"
+        "3) 明日盘前或下一交易时段的观察清单；4) 重点关注的行业/标的及触发条件；"
+        "5) 失效条件和风险。避免直接给出保证收益或无条件买卖指令。"
+        "用中文纯文本输出，分成 5 个短段，每段以“【】”开头，控制在 600 字以内。\n\n"
+        "行情快照：\n" + json.dumps(snapshot, ensure_ascii=False)
+    )
+    body = {
+        "model": os.getenv("AI_MODEL", "").strip() or "gpt-5.5",
+        "store": False,
+        "input": [
+            {"role": "system", "content": [{"type": "input_text", "text": "你输出的是供个人复盘使用的研究摘要，不构成投资建议。"}]},
+            {"role": "user", "content": [{"type": "input_text", "text": prompt}]},
+        ],
+    }
+    try:
+        response = requests.post(
+            os.getenv("AI_API_BASE_URL", "https://api.openai.com/v1/responses"),
+            headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+            json=body,
+            timeout=45,
+        )
+        response.raise_for_status()
+        text = _extract_ai_text(response.json())
+        if not text:
+            raise ValueError("Responses API 未返回文本")
+        return text, {"source": "openai", "model": body["model"]}
+    except Exception as exc:
+        print(f"⚠️ AI策略生成失败，使用备用策略: {exc}")
+        return fallback, {"source": "fallback", "error": str(exc)[:240]}
+
+
 def make_ai_news(stock_data):
     if not stock_data: 
         return "暂无数据"
@@ -733,7 +818,7 @@ def fetch_all_data():
     output_data["generated_at"] = datetime.now().astimezone().isoformat()
 
     # 4. 注入 AI 简报
-    output_data["ai_report"] = make_ai_news(output_data["stocks"])
+    output_data["ai_report"], ai_meta = generate_ai_strategy_report(\n        output_data["stocks"], output_data["macro"], output_data["update_status"]\n    )\n    output_data["ai_report_meta"] = ai_meta
 
     # ⭐ 确保 data 目录存在
     os.makedirs('data', exist_ok=True)
