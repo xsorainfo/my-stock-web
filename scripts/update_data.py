@@ -489,7 +489,7 @@ def _market_snapshot(stock_data, macro_data, update_status):
 
 
 def generate_ai_strategy_report(stock_data, macro_data, update_status):
-    """Generate a data-grounded strategy report; gracefully fall back when unavailable."""
+    """Generate a data-grounded report through Gemini or OpenAI with safe fallback."""
     fallback = make_ai_news(stock_data)
     api_key = os.getenv("AI_API_KEY", "").strip()
     if not api_key:
@@ -497,37 +497,56 @@ def generate_ai_strategy_report(stock_data, macro_data, update_status):
 
     snapshot = _market_snapshot(stock_data, macro_data, update_status)
     prompt = (
-        "你是一个中文量化投研助理。请仅依据下面提供的行情快照生成简洁的盘后/盘前策略简报。"
-        "快照中的价格和涨跌幅是当前任务抓取到的数据，不要编造新闻、财报或宏观事件；数据不足时明确写“数据不足”。"
-        "必须覆盖：1) 全球市场环境；2) 美股、A股、日股分别的观察；"
-        "3) 明日盘前或下一交易时段的观察清单；4) 重点关注的行业/标的及触发条件；"
-        "5) 失效条件和风险。避免直接给出保证收益或无条件买卖指令。"
-        "用中文纯文本输出，分成 5 个短段，每段以“【】”开头，控制在 600 字以内。\n\n"
-        "行情快照：\n" + json.dumps(snapshot, ensure_ascii=False)
+        "你是一个中文量化投研助理。仅依据下面行情快照生成简洁的盘后/盘前策略简报。"
+        "不要编造新闻、财报或宏观事件；数据不足时明确写“数据不足”。"
+        "必须覆盖全球市场环境、美股/A股/日股观察、下一交易时段观察清单、"
+        "重点关注行业或标的及触发条件、失效条件和风险。避免保证收益或无条件买卖指令。"
+        "用中文纯文本输出，分成5个短段，每段以“【】”开头，控制在600字以内。\\n\\n"
+        "行情快照：\\n" + json.dumps(snapshot, ensure_ascii=False)
     )
-    body = {
-        "model": os.getenv("AI_MODEL", "").strip() or "gpt-5.5",
-        "store": False,
-        "input": [
-            {"role": "system", "content": [{"type": "input_text", "text": "你输出的是供个人复盘使用的研究摘要，不构成投资建议。"}]},
-            {"role": "user", "content": [{"type": "input_text", "text": prompt}]},
-        ],
-    }
+    provider = os.getenv("AI_PROVIDER", "openai").strip().lower()
+    model = os.getenv("AI_MODEL", "").strip()
+
     try:
+        if provider == "gemini":
+            model = model or "gemini-2.5-flash"
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+            body = {
+                "systemInstruction": {"parts": [{"text": "你输出的是供个人复盘使用的研究摘要，不构成投资建议。"}]},
+                "contents": [{"role": "user", "parts": [{"text": prompt}]}],
+                "generationConfig": {"temperature": 0.2, "maxOutputTokens": 900},
+            }
+            response = requests.post(
+                url, params={"key": api_key},
+                headers={"Content-Type": "application/json"}, json=body, timeout=45
+            )
+            response.raise_for_status()
+            data = response.json()
+            text = data.get("candidates", [{}])[0].get("content", {}).get("parts", [{}])[0].get("text", "").strip()
+            if not text:
+                raise ValueError("Gemini API 未返回文本")
+            return text, {"source": "gemini", "model": model}
+        model = model or "gpt-5.5"
+        body = {
+            "model": model, "store": False,
+            "input": [
+                {"role": "system", "content": [{"type": "input_text", "text": "你输出的是供个人复盘使用的研究摘要，不构成投资建议。"}]},
+                {"role": "user", "content": [{"type": "input_text", "text": prompt}]},
+            ],
+        }
         response = requests.post(
             os.getenv("AI_API_BASE_URL", "https://api.openai.com/v1/responses"),
             headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
-            json=body,
-            timeout=45,
+            json=body, timeout=45,
         )
         response.raise_for_status()
         text = _extract_ai_text(response.json())
         if not text:
             raise ValueError("Responses API 未返回文本")
-        return text, {"source": "openai", "model": body["model"]}
+        return text, {"source": "openai", "model": model}
     except Exception as exc:
         print(f"⚠️ AI策略生成失败，使用备用策略: {exc}")
-        return fallback, {"source": "fallback", "error": str(exc)[:240]}
+        return fallback, {"source": "fallback", "provider": provider, "error": str(exc)[:240]}
 
 
 def make_ai_news(stock_data):
