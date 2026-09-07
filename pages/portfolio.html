@@ -238,6 +238,15 @@
                 padding: 2px 8px;
             }
         }
+        .symbol-editor { background:white; border:1px solid var(--border-color); border-radius:12px; padding:16px; margin:0 0 20px; }
+        .symbol-editor summary { cursor:pointer; font-weight:600; color:#2563eb; }
+        .symbol-editor label { display:block; margin:12px 0 6px; font-size:13px; }
+        .symbol-editor textarea, .symbol-editor input { box-sizing:border-box; width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:8px; font:inherit; }
+        .symbol-editor button { margin-top:12px; padding:10px 20px; background:#2563eb; color:white; border:0; border-radius:8px; cursor:pointer; }
+        .symbol-editor button:disabled { opacity:.5; cursor:wait; }
+        .symbol-editor p { font-size:13px; color:#64748b; line-height:1.6; }
+        #appendStatus { white-space:pre-wrap; }
+        #pendingSymbols { overflow-wrap:anywhere; font-size:13px; color:#64748b; margin:10px 0; }
     </style>
 </head>
 <body>
@@ -269,6 +278,20 @@
             </div>
         </div>
         
+        <details class="symbol-editor" id="symbolEditor">
+            <summary>＋ 追加股票代码</summary>
+            <form id="appendSymbolsForm">
+                <p>追加到：<strong id="appendTarget">请先选择组合</strong>。保留原有股票，重复代码自动跳过。</p>
+                <label for="symbolsInput">股票代码</label>
+                <textarea id="symbolsInput" rows="3" maxlength="2000" required placeholder="例如：NVDA, 6857.T, 300308.SZ"></textarea>
+                <p>支持逗号、空格或换行分隔；日本股票请加 .T，深圳股票加 .SZ，上海股票加 .SS。</p>
+                <label for="portfolioPassword">编辑密码</label>
+                <input id="portfolioPassword" type="password" required autocomplete="off">
+                <button id="appendSubmit" type="submit" disabled>保存到当前组合</button>
+                <p id="appendStatus" role="status" aria-live="polite"></p>
+            </form>
+        </details>
+        <div id="pendingSymbols"></div>
         <!-- ===== 銘柄グリッド ===== -->
         <div id="stockGridContainer">
             <div class="empty-state">
@@ -431,26 +454,68 @@
     }
 
     // ポートフォリオにマッチする銘柄を取得
-    function getMatchedStocks(portfolioId) {
-        const list = PORTFOLIO_LISTS[portfolioId];
-        if (!list) return [];
-        
-        const symbols = list.symbols || [];
-        if (symbols.length === 0) return [];
-        
-        return allStocks.filter(stock => {
-            const stockSymbol = stock.code || '';
-            return symbols.some(sym => {
-                const cleanSym = String(sym).split('.')[0];
-                const cleanStock = String(stockSymbol).split('.')[0];
-                return cleanStock === cleanSym || stockSymbol === sym;
-            });
-        });
+    function portfolioSymbolKey(symbol) {
+        return String(symbol).toUpperCase().replace(/\.SH$/, '.SS');
     }
+
+    function stockMatchesSymbol(stock, symbol) {
+        const suffix = { '日股': '.T', '港股': '.HK', '韩股': '.KS', '德股': '.DE' }[stock.market_type] ||
+            (stock.market_type === 'A股' ? (String(stock.code).startsWith('6') ? '.SS' : '.SZ') : '');
+        const fullSymbol = stock.symbol || String(stock.code) + suffix;
+        return portfolioSymbolKey(fullSymbol) === portfolioSymbolKey(symbol);
+    }
+
+    function getMatchedStocks(portfolioId) {
+        const symbols = PORTFOLIO_LISTS[portfolioId]?.symbols || [];
+        return allStocks.filter(stock => symbols.some(symbol => stockMatchesSymbol(stock, symbol)));
+    }
+
+    function parseAppendSymbols(text) {
+        const symbols = [...new Set(text.trim().split(/[\s,，;；]+/).filter(Boolean).map(portfolioSymbolKey))];
+        if (!symbols.length) throw new Error('请输入股票代码');
+        if (symbols.some(s => !/^[A-Z0-9.^=-]{1,40}$/.test(s))) throw new Error('代码格式不正确，请使用股票代码和市场后缀');
+        return symbols;
+    }
+
+    let savingSymbols = false;
+    document.getElementById('appendSymbolsForm').addEventListener('submit', async event => {
+        event.preventDefault();
+        if (savingSymbols || !currentPortfolioId) return;
+        const targetId = currentPortfolioId;
+        const input = document.getElementById('symbolsInput');
+        const password = document.getElementById('portfolioPassword');
+        const button = document.getElementById('appendSubmit');
+        const status = document.getElementById('appendStatus');
+        try {
+            const symbols = parseAppendSymbols(input.value);
+            savingSymbols = true; button.disabled = true;
+            status.textContent = '正在保存…';
+            const response = await fetch('/api/update_portfolio', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json', Authorization: 'Bearer ' + encodeURIComponent(password.value)},
+                body: JSON.stringify({listName: targetId, symbols, action: 'append'})
+            });
+            const result = await response.json();
+            if (!response.ok) throw new Error(response.status === 401 ? '编辑密码不正确' : result.error || '保存失败，请重试');
+            PORTFOLIO_LISTS[targetId].symbols = result.updatedSymbols;
+            renderTabs();
+            if (currentPortfolioId) displayPortfolio(currentPortfolioId);
+            input.value = '';
+            status.textContent = '已保存到「' + (PORTFOLIO_LISTS[targetId].name || targetId) + '」。' +
+                (result.refreshTriggered ? '行情正在更新，稍后刷新页面查看。' : '行情刷新暂未启动，将在下一次定时更新后显示。');
+        } catch (error) {
+            status.textContent = error.message || '网络异常，请重试';
+        } finally {
+            password.value = '';
+            savingSymbols = false; button.disabled = !currentPortfolioId;
+        }
+    });
 
     // ポートフォリオ切り替え
     function switchPortfolio(portfolioId) {
         currentPortfolioId = portfolioId;
+        document.getElementById('appendTarget').textContent = PORTFOLIO_LISTS[portfolioId]?.name || portfolioId;
+        document.getElementById('appendSubmit').disabled = savingSymbols;
         
         document.querySelectorAll('.tab-btn').forEach(btn => {
             btn.classList.toggle('active', btn.dataset.portfolioId === portfolioId);
@@ -498,6 +563,8 @@
         
         titleEl.textContent = `${list.icon || '📊'} ${list.name || portfolioId} ${list.description || ''}`;
         
+        const pending = (list.symbols || []).filter(symbol => !allStocks.some(stock => stockMatchesSymbol(stock, symbol)));
+        document.getElementById('pendingSymbols').textContent = pending.length ? '尚无行情（等待更新或数据源暂不可用）：' + pending.join('、') : '';
         const matched = getMatchedStocks(portfolioId);
         countEl.textContent = `共 ${matched.length} 只标的`;
         

@@ -9,55 +9,54 @@ export default async function handler(req, res) {
 
     // 2. 验证 Token（复用 refresh.js 的验证方式）
     const authHeader = req.headers.authorization;
-    const expectedToken = process.env.MY_REPO_TOKEN;
+    const isAppend = req.body?.action === 'append';
+    const expectedToken = isAppend ? process.env.PORTFOLIO_EDIT_PASSWORD : process.env.MY_REPO_TOKEN;
     
-    if (!expectedToken) return res.status(503).json({ error: 'MY_REPO_TOKEN is not configured' });
+    if (!expectedToken) return res.status(503).json({ error: isAppend ? '请先在 Vercel 配置 PORTFOLIO_EDIT_PASSWORD' : 'MY_REPO_TOKEN is not configured' });
 
-    if (!authHeader || authHeader !== `Bearer ${expectedToken}`) {
+    if (!authHeader || authHeader !== `Bearer ${isAppend ? encodeURIComponent(expectedToken) : expectedToken}`) {
         return res.status(401).json({ error: 'Unauthorized' });
     }
 
     const { listName, symbols = [], action = 'add' } = req.body || {}; // action: 'add' | 'remove' | 'update'
 
     if (typeof listName !== 'string' || !/^[\p{L}\p{N}_ -]{1,80}$/u.test(listName) ||
-        !['add', 'remove', 'update'].includes(action) || !Array.isArray(symbols) ||
+        !['add', 'remove', 'update', 'append'].includes(action) || !Array.isArray(symbols) ||
         !symbols.every(s => typeof s === 'string' && /^[A-Za-z0-9.^=-]{1,40}$/.test(s))) {
         return res.status(400).json({ error: 'Invalid request: listName and symbols array required' });
     }
 
     try {
         // 3. 通过 GitHub API 读取并更新 portfolio_lists.py
-        const githubToken = process.env.GITHUB_TOKEN || expectedToken;
+        const githubToken = process.env.GITHUB_TOKEN || process.env.MY_REPO_TOKEN;
+        if (!githubToken) return res.status(503).json({ error: 'GitHub write credentials are not configured' });
 
         const owner = process.env.GITHUB_REPO_OWNER || 'xsorainfo';
         const repo = process.env.GITHUB_REPO_NAME || 'my-stock-web';
         const path = 'scripts/portfolio_lists.py';
 
-        // 读取当前文件
-        let fileSha = null;
-        let currentContent = '';
-        try {
-            const file = { data: await githubRequest(owner, repo, `contents/${path}`, githubToken) };
-            fileSha = file.data.sha;
-            currentContent = Buffer.from(file.data.content, 'base64').toString('utf-8');
-        } catch (error) {
-            if (error.status === 404) {
-                // 文件不存在，创建默认内容
-                currentContent = `# scripts/portfolio_lists.py\n# ポートフォリオ定義（銘柄リスト）\n\nPORTFOLIO_LISTS = {}\n`;
-            } else {
-                throw error;
+        let updatedSymbols = symbols;
+        let changed = false;
+        for (let attempt = 0; attempt < 3; attempt++) {
+            const file = await githubRequest(owner, repo, `contents/${path}`, githubToken);
+            const currentContent = Buffer.from(file.content, 'base64').toString('utf-8');
+            const result = isAppend
+                ? appendPortfolioSymbols(currentContent, listName, symbols)
+                : { content: updatePythonDict(currentContent, listName, symbols, action), symbols };
+            updatedSymbols = result.symbols;
+            if (result.content === currentContent) break;
+            try {
+                await githubRequest(owner, repo, `contents/${path}`, githubToken, 'PUT', {
+                    message: `Update portfolio list: ${listName}`,
+                    content: Buffer.from(result.content, 'utf-8').toString('base64'),
+                    sha: file.sha
+                });
+                changed = true;
+                break;
+            } catch (error) {
+                if (error.status !== 409 || attempt === 2) throw error;
             }
         }
-
-        // 4. 更新 Python dict
-        const updatedContent = updatePythonDict(currentContent, listName, symbols, action);
-
-        // 5. 写回 GitHub
-        await githubRequest(owner, repo, `contents/${path}`, githubToken, 'PUT', {
-            message: `📊 Update portfolio list: ${listName}`,
-            content: Buffer.from(updatedContent, 'utf-8').toString('base64'),
-            sha: fileSha || undefined
-        });
 
         // 保存与刷新分别报告，避免保存成功后因刷新失败而误报整体失败。
         let refreshTriggered = false;
@@ -72,12 +71,13 @@ export default async function handler(req, res) {
             success: true,
             refreshTriggered, 
             message: `Portfolio list "${listName}" updated successfully`,
-            updatedSymbols: symbols 
+            updatedSymbols,
+            changed 
         });
 
     } catch (error) {
         console.error('Error updating portfolio:', error);
-        res.status(500).json({ error: error.message || 'Internal server error' });
+        res.status(error.status === 409 ? 409 : error.status === 404 ? 404 : 500).json({ error: error.message || 'Internal server error' });
     }
 }
 
@@ -205,4 +205,71 @@ function updatePythonDict(content, listName, symbols, action = 'add') {
     result = result.replace(/,\s*\n\s*\}\)/g, '\n    }');
     
     return result;
+}
+
+
+// Locate Python literals without treating braces inside strings/comments as syntax.
+function closingDelimiter(source, start) {
+    const pairs = { '{': '}', '[': ']' };
+    const stack = [];
+    let quote = null, escaped = false, comment = false;
+    for (let i = start; i < source.length; i++) {
+        const ch = source[i];
+        if (comment) { if (ch === '\n') comment = false; continue; }
+        if (quote) {
+            if (escaped) escaped = false;
+            else if (ch === '\\') escaped = true;
+            else if (ch === quote) quote = null;
+            continue;
+        }
+        if (ch === '#') { comment = true; continue; }
+        if (ch === '"' || ch === "'") { quote = ch; continue; }
+        if (pairs[ch]) stack.push(pairs[ch]);
+        else if (ch === '}' || ch === ']') {
+            if (stack.pop() !== ch) throw new Error('Unsupported portfolio format');
+            if (!stack.length) return i;
+        }
+    }
+    throw new Error('Unclosed portfolio literal');
+}
+
+function appendPortfolioSymbols(content, listName, symbols) {
+    const entries = /^[ \t]*"([^"\n]+)"[ \t]*:[ \t]*\{/gm;
+    let match, target;
+    while ((match = entries.exec(content))) {
+        const start = entries.lastIndex - 1;
+        const end = closingDelimiter(content, start);
+        if (match[1] === listName) { target = {start, end}; break; }
+        entries.lastIndex = end + 1;
+    }
+    if (!target) {
+        const error = new Error('组合不存在，请刷新页面后重试');
+        error.status = 404; throw error;
+    }
+    const block = content.slice(target.start, target.end + 1);
+    const field = /"symbols"\s*:\s*\[/.exec(block);
+    if (!field) throw new Error('Missing symbols field');
+    const start = target.start + field.index + field[0].length - 1;
+    const end = closingDelimiter(content, start);
+    // Symbols are a list of plain strings; reject executable Python expressions.
+    const literal = content.slice(start + 1, end).replace(/#[^\n]*/g, '');
+    const existing = [];
+    let remainder = literal;
+    const item = /^\s*(["'])([A-Za-z0-9.^=-]{1,40})\1\s*(,|$)/;
+    while (remainder.trim()) {
+        const value = item.exec(remainder);
+        if (!value) throw new Error('Unsupported symbols format');
+        existing.push(value[2]);
+        remainder = remainder.slice(value[0].length);
+    }
+    const key = s => s.toUpperCase().replace(/\.SH$/, '.SS');
+    const merged = [...existing];
+    const seen = new Set(existing.map(key));
+    for (const symbol of symbols) {
+        const normalized = key(symbol);
+        if (!seen.has(normalized)) { merged.push(normalized); seen.add(normalized); }
+    }
+    if (merged.length === existing.length) return {content, symbols: merged};
+    const updated = content.slice(0, start) + JSON.stringify(merged, null, 4) + content.slice(end + 1);
+    return {content: updated, symbols: merged};
 }

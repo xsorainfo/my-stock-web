@@ -467,6 +467,24 @@ def get_market_type(symbol):
         return "美股"
 
 
+def portfolio_watchlist():
+    """Include symbols added through the portfolio editor in the data pipeline."""
+    result = list(WATCHLIST)
+    normalize = lambda symbol: symbol.upper().replace('.SH', '.SS')
+    seen = {normalize(item["symbol"]) for item in result}
+    for portfolio in PORTFOLIO_LISTS.values():
+        for symbol in portfolio.get("symbols", []):
+            symbol = normalize(symbol)
+            if symbol not in seen:
+                result.append({
+                    "symbol": symbol, "name": symbol,
+                    "sector": "自选追加", "industry": "自选追加",
+                    "feature": "从投资组合手动追加", "tags": []
+                })
+                seen.add(symbol)
+    return result
+
+
 def fetch_all_data():
     output_data = {
         "macro": [],
@@ -543,7 +561,7 @@ def fetch_all_data():
             print(f"大盘 {m['name']} 异常: {e}")
 
     # 2. 抓取自选个股数据
-    for item in WATCHLIST:
+    for item in portfolio_watchlist():
         symbol = item["symbol"]
         market_type = get_market_type(symbol)
 
@@ -677,6 +695,7 @@ def fetch_all_data():
 
             # 构建股票数据对象
             stock_entry = {
+                "symbol": symbol,
                 "code": symbol.split('.')[0] if '.' in symbol else symbol,
                 "name": item["name"],
                 "sector": item.get("sector", "未分类板块"),
