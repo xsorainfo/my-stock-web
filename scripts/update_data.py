@@ -504,7 +504,9 @@ def generate_ai_strategy_report(stock_data, macro_data, update_status):
         "用中文纯文本输出，分成5个短段，每段以“【】”开头，控制在600字以内。\\n\\n"
         "行情快照：\\n" + json.dumps(snapshot, ensure_ascii=False)
     )
-    provider = os.getenv("AI_PROVIDER", "openai").strip().lower()
+    provider = os.getenv("AI_PROVIDER", "").strip().lower()
+    if not provider:
+        provider = "gemini" if api_key.startswith("AIza") else "openai"
     model = os.getenv("AI_MODEL", "").strip()
 
     try:
