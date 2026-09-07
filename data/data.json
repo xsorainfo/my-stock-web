@@ -47,8 +47,8 @@
     },
     {
       "name": "美元/日元",
-      "price": "154.59",
-      "change": "-1.07 (-0.69%)",
+      "price": "154.74",
+      "change": "-0.92 (-0.59%)",
       "isUp": false,
       "type": "forex",
       "badge_label": "FX",
@@ -533,8 +533,8 @@
     },
     {
       "name": "VIX 恐慌指数",
-      "price": "15.05",
-      "change": "+0.52 (+3.58%)",
+      "price": "15.04",
+      "change": "+0.51 (+3.51%)",
       "isUp": true,
       "type": "sentiment",
       "badge_label": "情绪",
@@ -542,8 +542,8 @@
     },
     {
       "name": "富时 100",
-      "price": "10843.60",
-      "change": "+12.50 (+0.12%)",
+      "price": "10847.49",
+      "change": "+16.39 (+0.15%)",
       "isUp": true,
       "type": "index",
       "badge_label": "",
@@ -560,8 +560,8 @@
     },
     {
       "name": "德国 DAX",
-      "price": "25971.37",
-      "change": "-75.03 (-0.29%)",
+      "price": "25975.76",
+      "change": "-70.64 (-0.27%)",
       "isUp": false,
       "type": "index",
       "badge_label": "",
@@ -569,8 +569,8 @@
     },
     {
       "name": "法国 CAC 40",
-      "price": "8289.31",
-      "change": "+10.54 (+0.13%)",
+      "price": "8285.29",
+      "change": "+6.52 (+0.08%)",
       "isUp": true,
       "type": "index",
       "badge_label": "",
@@ -1243,6 +1243,43 @@
       "source": "yfinance"
     },
     {
+      "code": "002049",
+      "name": "紫光国微",
+      "sector": "1.1",
+      "industry": "1.1.1",
+      "feature": "**行业地位**：国内特种芯片与FPGA龙头<br>**主营业务**：FPGA芯片、智能卡安全芯片、高可靠特种IC<br>**竞争优势**：FPGA芯片国内领先，智能卡芯片市占率超30%，特种IC领域国内龙头地位稳固<br>**未来方向**：国产FPGA替代与特种芯片需求增长驱动业务扩张，安全芯片受益物联网与金融信创",
+      "tags": [
+        "FPGA"
+      ],
+      "display_tags": [
+        "FPGA (现场可编程门阵列)"
+      ],
+      "tag_themes": [
+        {
+          "tag": "FPGA (现场可编程门阵列)",
+          "theme_path": [
+            "3. 算力芯片",
+            "FPGA",
+            "FPGA (现场可编程门阵列)"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "62.04",
+      "change": "-0.04 (-0.06%)",
+      "isUp": false,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "-20.99%",
+      "distWeek": "-2.7%",
+      "distMonth": "-9.4%",
+      "trend": "熊市空头",
+      "source": "sina"
+    },
+    {
       "code": "688802",
       "name": "沐曦股份",
       "sector": "1.1",
@@ -1283,7 +1320,7 @@
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-21.81%",
+      "ytdChange": "-1.73%",
       "distWeek": "-17.1%",
       "distMonth": "-28.6%",
       "trend": "熊市空头",
@@ -1320,7 +1357,7 @@
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-30.51%",
+      "ytdChange": "-29.33%",
       "distWeek": "-23.2%",
       "distMonth": "-30.6%",
       "trend": "熊市空头",
@@ -1367,7 +1404,7 @@
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-17.93%",
+      "ytdChange": "8.24%",
       "distWeek": "-5.4%",
       "distMonth": "-18.8%",
       "trend": "熊市空头",
@@ -1404,7 +1441,7 @@
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-5.90%",
+      "ytdChange": "-20.16%",
       "distWeek": "-2.6%",
       "distMonth": "-7.9%",
       "trend": "熊市空头",
@@ -1441,7 +1478,7 @@
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "0.07%",
+      "ytdChange": "-9.59%",
       "distWeek": "-4.4%",
       "distMonth": "-7.4%",
       "trend": "熊市空头",
@@ -1508,9 +1545,88 @@
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-4.88%",
+      "ytdChange": "9.24%",
       "distWeek": "-9.1%",
       "distMonth": "-17.3%",
+      "trend": "熊市空头",
+      "source": "sina"
+    },
+    {
+      "code": "003031",
+      "name": "中瓷电子",
+      "sector": "1.1",
+      "industry": "1.1.1",
+      "feature": "**行业地位**：国内GaN射频器件龙头<br>**主营业务**：GaN射频器件、SiC功率器件、电子陶瓷<br>**竞争优势**：GaN射频器件国内领先，同时布局SiC功率器件和电子陶瓷，第三代半导体国产替代重要企业<br>**未来方向**：5G/卫星通信驱动GaN射频器件需求，新能源汽车驱动SiC功率器件增长",
+      "tags": [
+        "氮化镓 (GaN)",
+        "碳化硅 (SiC)",
+        "射频器件",
+        "电子陶瓷",
+        "第三代半导体",
+        "新能源汽车"
+      ],
+      "display_tags": [
+        "氮化镓 (GaN)",
+        "碳化硅 (SiC)",
+        "射频器件",
+        "电子陶瓷",
+        "第三代半导体",
+        "新能源汽车"
+      ],
+      "tag_themes": [
+        {
+          "tag": "氮化镓 (GaN)",
+          "theme_path": [
+            "2. 半导体材料",
+            "GaN衬底",
+            "氮化镓 (GaN)"
+          ]
+        },
+        {
+          "tag": "碳化硅 (SiC)",
+          "theme_path": [
+            "2. 半导体材料",
+            "SiC衬底",
+            "碳化硅 (SiC)"
+          ]
+        },
+        {
+          "tag": "射频器件",
+          "theme_path": [
+            "2. 半导体材料",
+            "电子材料",
+            "射频器件"
+          ]
+        },
+        {
+          "tag": "电子陶瓷",
+          "theme_path": [
+            "2. 半导体材料",
+            "电子材料",
+            "电子陶瓷"
+          ]
+        },
+        {
+          "tag": "第三代半导体",
+          "theme_path": []
+        },
+        {
+          "tag": "新能源汽车",
+          "theme_path": []
+        }
+      ],
+      "market_type": "A股",
+      "price": "120.72",
+      "change": "+6.94 (+6.10%)",
+      "isUp": true,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "65.51%",
+      "distWeek": "-5.4%",
+      "distMonth": "-19.5%",
       "trend": "熊市空头",
       "source": "sina"
     },
@@ -1580,6 +1696,85 @@
       "distMonth": "-20.7%",
       "trend": "熊市空头",
       "source": "yfinance"
+    },
+    {
+      "code": "003031",
+      "name": "中瓷电子",
+      "sector": "1.1",
+      "industry": "1.1.1",
+      "feature": "**行业地位**：国内GaN射频器件龙头<br>**主营业务**：GaN射频器件、SiC功率器件、电子陶瓷<br>**竞争优势**：GaN射频器件国内领先，同时布局SiC功率器件和电子陶瓷，第三代半导体国产替代重要企业<br>**未来方向**：5G/卫星通信驱动GaN射频器件需求，新能源汽车驱动SiC功率器件增长",
+      "tags": [
+        "氮化镓 (GaN)",
+        "碳化硅 (SiC)",
+        "射频器件",
+        "电子陶瓷",
+        "第三代半导体",
+        "新能源汽车"
+      ],
+      "display_tags": [
+        "氮化镓 (GaN)",
+        "碳化硅 (SiC)",
+        "射频器件",
+        "电子陶瓷",
+        "第三代半导体",
+        "新能源汽车"
+      ],
+      "tag_themes": [
+        {
+          "tag": "氮化镓 (GaN)",
+          "theme_path": [
+            "2. 半导体材料",
+            "GaN衬底",
+            "氮化镓 (GaN)"
+          ]
+        },
+        {
+          "tag": "碳化硅 (SiC)",
+          "theme_path": [
+            "2. 半导体材料",
+            "SiC衬底",
+            "碳化硅 (SiC)"
+          ]
+        },
+        {
+          "tag": "射频器件",
+          "theme_path": [
+            "2. 半导体材料",
+            "电子材料",
+            "射频器件"
+          ]
+        },
+        {
+          "tag": "电子陶瓷",
+          "theme_path": [
+            "2. 半导体材料",
+            "电子材料",
+            "电子陶瓷"
+          ]
+        },
+        {
+          "tag": "第三代半导体",
+          "theme_path": []
+        },
+        {
+          "tag": "新能源汽车",
+          "theme_path": []
+        }
+      ],
+      "market_type": "A股",
+      "price": "120.72",
+      "change": "+6.94 (+6.10%)",
+      "isUp": true,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "65.51%",
+      "distWeek": "-5.4%",
+      "distMonth": "-19.5%",
+      "trend": "熊市空头",
+      "source": "sina"
     },
     {
       "code": "SKHY",
@@ -1970,7 +2165,7 @@
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-8.21%",
+      "ytdChange": "68.25%",
       "distWeek": "-3.2%",
       "distMonth": "-12.6%",
       "trend": "熊市空头",
@@ -2350,17 +2545,17 @@
         }
       ],
       "market_type": "德股",
-      "price": "53.20",
-      "change": "-0.16 (-0.30%)",
+      "price": "53.13",
+      "change": "-0.23 (-0.43%)",
       "isUp": false,
-      "per": "22.45",
+      "per": "22.42",
       "roe": "6.1%",
-      "forward_per": "17.87",
+      "forward_per": "17.84",
       "pbr": "1.27",
-      "distHigh": "-3.4%",
-      "ytdChange": "23.90%",
-      "distWeek": "-1.4%",
-      "distMonth": "-1.4%",
+      "distHigh": "-3.5%",
+      "ytdChange": "23.73%",
+      "distWeek": "-1.6%",
+      "distMonth": "-1.6%",
       "trend": "牛市多头",
       "source": "yfinance"
     },
@@ -2417,7 +2612,7 @@
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-13.21%",
+      "ytdChange": "6.89%",
       "distWeek": "-6.8%",
       "distMonth": "-20.5%",
       "trend": "熊市空头",
@@ -4469,6 +4664,66 @@
       "source": "yfinance"
     },
     {
+      "code": "002428",
+      "name": "云南锗业",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**行业地位**：国内磷化铟衬底龙头<br>**主营业务**：InP衬底、GaAs衬底、锗材料、化合物半导体材料<br>**竞争优势**：国内最大InP衬底供应商，率先实现6英寸磷化铟衬底产业化，持续扩产大尺寸产品<br>**未来方向**：800G/1.6T光模块需求爆发驱动InP衬底需求增长，持续推进大尺寸InP衬底量产",
+      "tags": [
+        "磷化铟",
+        "InP",
+        "光模块",
+        "高速光通信",
+        "化合物半导体"
+      ],
+      "display_tags": [
+        "磷化铟 (InP)",
+        "光模块",
+        "高速光通信",
+        "化合物半导体"
+      ],
+      "tag_themes": [
+        {
+          "tag": "磷化铟",
+          "theme_path": []
+        },
+        {
+          "tag": "InP",
+          "theme_path": []
+        },
+        {
+          "tag": "光模块",
+          "theme_path": [
+            "7. 光通信",
+            "光模块",
+            "光模块"
+          ]
+        },
+        {
+          "tag": "高速光通信",
+          "theme_path": []
+        },
+        {
+          "tag": "化合物半导体",
+          "theme_path": []
+        }
+      ],
+      "market_type": "A股",
+      "price": "92.00",
+      "change": "+4.91 (+5.64%)",
+      "isUp": true,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "189.79%",
+      "distWeek": "-8.9%",
+      "distMonth": "-18.6%",
+      "trend": "熊市空头",
+      "source": "sina"
+    },
+    {
       "code": "600703",
       "name": "三安光电",
       "sector": "1.2",
@@ -4545,7 +4800,7 @@
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-9.37%",
+      "ytdChange": "-7.64%",
       "distWeek": "-6.0%",
       "distMonth": "-12.6%",
       "trend": "熊市空头",
@@ -4614,9 +4869,46 @@
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-2.42%",
+      "ytdChange": "12.52%",
       "distWeek": "-7.8%",
       "distMonth": "-19.3%",
+      "trend": "熊市空头",
+      "source": "sina"
+    },
+    {
+      "code": "002617",
+      "name": "露笑科技",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**行业地位**：碳化硅衬底后起之秀，半绝缘型衬底市占率约20%<br>**主营业务**：6英寸导电型/半绝缘型SiC衬底、蓝宝石衬底、漆包线<br>**竞争优势**：6英寸导电型衬底已量产，8英寸衬底研发顺利，国内少数同时覆盖导电型与半绝缘型的厂商<br>**未来方向**：8英寸衬底量产导入，受益碳化硅板块行情持续活跃，2025年前三季度毛利率21.98%",
+      "tags": [
+        "碳化硅 (SiC)"
+      ],
+      "display_tags": [
+        "碳化硅 (SiC)"
+      ],
+      "tag_themes": [
+        {
+          "tag": "碳化硅 (SiC)",
+          "theme_path": [
+            "2. 半导体材料",
+            "SiC衬底",
+            "碳化硅 (SiC)"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "6.13",
+      "change": "+0.02 (+0.33%)",
+      "isUp": true,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "-24.32%",
+      "distWeek": "-3.5%",
+      "distMonth": "-9.2%",
       "trend": "熊市空头",
       "source": "sina"
     },
@@ -4681,7 +4973,7 @@
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-6.04%",
+      "ytdChange": "144.99%",
       "distWeek": "-9.3%",
       "distMonth": "-11.5%",
       "trend": "熊市空头",
@@ -4738,9 +5030,76 @@
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-22.03%",
+      "ytdChange": "236.50%",
       "distWeek": "-18.5%",
       "distMonth": "-25.2%",
+      "trend": "熊市空头",
+      "source": "sina"
+    },
+    {
+      "code": "002080",
+      "name": "中材科技",
+      "sector": "1.2",
+      "industry": "1.2.1",
+      "feature": "**行业地位**：中国建材集团旗下特种纤维复合材料龙头，风电叶片全球销量第一<br>**主营业务**：风电叶片（营收125.9亿）、玻璃纤维及制品（泰山玻纤，营收78亿）、锂电池隔膜三大板块<br>**竞争优势**：国内唯一、全球第二家规模化生产低膨胀布供应商，特种纤维布覆盖低介电一代/二代/低膨胀/超低损耗全品类，已完成国内外头部客户认证及批量供货，2025年特种纤维布销量1917万米<br>**未来方向**：AI算力需求驱动特种电子布成为新利润增长极，2026Q1归母净利5.07亿同比+40%，在建3个特种纤维布投资项目加速扩产",
+      "tags": [
+        "PCB",
+        "封装基板",
+        "数据中心架构",
+        "电子布"
+      ],
+      "display_tags": [
+        "PCB",
+        "封装基板",
+        "数据中心架构",
+        "电子布"
+      ],
+      "tag_themes": [
+        {
+          "tag": "PCB",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "PCB"
+          ]
+        },
+        {
+          "tag": "封装基板",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "封装基板"
+          ]
+        },
+        {
+          "tag": "数据中心架构",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "数据中心架构"
+          ]
+        },
+        {
+          "tag": "电子布",
+          "theme_path": [
+            "2. 半导体材料",
+            "封装基板",
+            "电子布"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "50.20",
+      "change": "+2.76 (+5.82%)",
+      "isUp": true,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "38.93%",
+      "distWeek": "-7.8%",
+      "distMonth": "-21.2%",
       "trend": "熊市空头",
       "source": "sina"
     },
@@ -4817,7 +5176,7 @@
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-12.14%",
+      "ytdChange": "14.94%",
       "distWeek": "-9.8%",
       "distMonth": "-24.8%",
       "trend": "熊市空头",
@@ -6113,7 +6472,7 @@
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-6.43%",
+      "ytdChange": "88.16%",
       "distWeek": "-5.4%",
       "distMonth": "-13.9%",
       "trend": "熊市空头",
@@ -6266,9 +6625,48 @@
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-11.25%",
+      "ytdChange": "87.81%",
       "distWeek": "-9.7%",
       "distMonth": "-21.1%",
+      "trend": "熊市空头",
+      "source": "sina"
+    },
+    {
+      "code": "002156",
+      "name": "通富微电",
+      "sector": "1.3",
+      "industry": "1.3.1",
+      "feature": "**行业地位**：中国封测第二极<br>**主营业务**：先进封装、CPU/GPU封装、Chiplet封装<br>**竞争优势**：AMD核心封测合作伙伴，先进封装产能持续扩张，大客户绑定优势明显<br>**未来方向**：AMD CPU/GPU需求增长驱动封装需求，持续推进先进封装产能建设",
+      "tags": [
+        "先进封装",
+        "AMD"
+      ],
+      "display_tags": [
+        "先进封装",
+        "AMD"
+      ],
+      "tag_themes": [
+        {
+          "tag": "先进封装",
+          "theme_path": []
+        },
+        {
+          "tag": "AMD",
+          "theme_path": []
+        }
+      ],
+      "market_type": "A股",
+      "price": "59.15",
+      "change": "+2.28 (+4.01%)",
+      "isUp": true,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "57.07%",
+      "distWeek": "-8.4%",
+      "distMonth": "-18.5%",
       "trend": "熊市空头",
       "source": "sina"
     },
@@ -6430,6 +6828,120 @@
       "source": "yfinance"
     },
     {
+      "code": "300308",
+      "name": "中际旭创",
+      "sector": "1.4",
+      "industry": "1.4.2",
+      "feature": "**行业地位**：全球800G/1.6T光模块龙头<br>**主营业务**：800G光模块、1.6T光模块、AI数据中心光互联<br>**竞争优势**：800G/1.6T光模块市占率超30%，微软、Meta等云厂商深度绑定，先发优势明显<br>**未来方向**：AI数据中心互联带宽升级驱动高速光模块需求，1.6T光模块放量驱动持续高增长",
+      "tags": [
+        "光模块",
+        "800G",
+        "1.6T"
+      ],
+      "display_tags": [
+        "光模块",
+        "800G (光模块)",
+        "1.6T (光模块)"
+      ],
+      "tag_themes": [
+        {
+          "tag": "光模块",
+          "theme_path": [
+            "7. 光通信",
+            "光模块",
+            "光模块"
+          ]
+        },
+        {
+          "tag": "800G (光模块)",
+          "theme_path": [
+            "7. 光通信",
+            "光模块",
+            "800G (光模块)"
+          ]
+        },
+        {
+          "tag": "1.6T (光模块)",
+          "theme_path": [
+            "7. 光通信",
+            "光模块",
+            "1.6T (光模块)"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "898.46",
+      "change": "+84.46 (+10.38%)",
+      "isUp": true,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "47.46%",
+      "distWeek": "-0.4%",
+      "distMonth": "-11.5%",
+      "trend": "牛市多头",
+      "source": "sina"
+    },
+    {
+      "code": "300502",
+      "name": "新易盛",
+      "sector": "1.4",
+      "industry": "1.4.2",
+      "feature": "**行业地位**：高速光模块核心厂商<br>**主营业务**：800G光模块、1.6T光模块、高速互联方案<br>**竞争优势**：800G产品快速放量，1.6T技术储备领先，客户拓展能力强<br>**未来方向**：AI数据中心互联带宽升级驱动高速光模块需求，持续拓展大客户份额",
+      "tags": [
+        "光模块",
+        "800G",
+        "1.6T"
+      ],
+      "display_tags": [
+        "光模块",
+        "800G (光模块)",
+        "1.6T (光模块)"
+      ],
+      "tag_themes": [
+        {
+          "tag": "光模块",
+          "theme_path": [
+            "7. 光通信",
+            "光模块",
+            "光模块"
+          ]
+        },
+        {
+          "tag": "800G (光模块)",
+          "theme_path": [
+            "7. 光通信",
+            "光模块",
+            "800G (光模块)"
+          ]
+        },
+        {
+          "tag": "1.6T (光模块)",
+          "theme_path": [
+            "7. 光通信",
+            "光模块",
+            "1.6T (光模块)"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "417.20",
+      "change": "+31.20 (+8.08%)",
+      "isUp": true,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "35.80%",
+      "distWeek": "-0.5%",
+      "distMonth": "-11.6%",
+      "trend": "牛市多头",
+      "source": "sina"
+    },
+    {
       "code": "688498",
       "name": "源杰科技",
       "sector": "1.4",
@@ -6470,7 +6982,7 @@
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "25.56%",
+      "ytdChange": "284.66%",
       "distWeek": "-0.2%",
       "distMonth": "-0.2%",
       "trend": "牛市多头",
@@ -6517,7 +7029,7 @@
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "7.53%",
+      "ytdChange": "159.44%",
       "distWeek": "-7.2%",
       "distMonth": "-11.4%",
       "trend": "牛市多头",
@@ -8195,7 +8707,7 @@
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "0.07%",
+      "ytdChange": "-9.59%",
       "distWeek": "-4.4%",
       "distMonth": "-7.4%",
       "trend": "熊市空头",
@@ -8821,16 +9333,16 @@
         }
       ],
       "market_type": "德股",
-      "price": "271.00",
-      "change": "-1.65 (-0.61%)",
+      "price": "270.85",
+      "change": "-1.80 (-0.66%)",
       "isUp": false,
-      "per": "27.07",
+      "per": "27.06",
       "roe": "12.5%",
-      "forward_per": "20.84",
+      "forward_per": "20.83",
       "pbr": "3.07",
       "distHigh": "-7.1%",
-      "ytdChange": "14.79%",
-      "distWeek": "-4.6%",
+      "ytdChange": "14.73%",
+      "distWeek": "-4.7%",
       "distMonth": "-7.1%",
       "trend": "熊市空头",
       "source": "yfinance"
@@ -8953,10 +9465,57 @@
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "9.36%",
+      "ytdChange": "128.93%",
       "distWeek": "-8.1%",
       "distMonth": "-10.3%",
       "trend": "熊市空头",
+      "source": "sina"
+    },
+    {
+      "code": "002008",
+      "name": "大族激光",
+      "sector": "2.1",
+      "industry": "2.1.1",
+      "feature": "**行业地位**：国产激光装备龙头<br>**主营业务**：激光切割设备、激光焊接设备、自动化产线<br>**竞争优势**：中国激光设备市占率超20%，智能制造激光加工核心方案商，产品线覆盖全行业<br>**未来方向**：智能制造需求增长驱动激光设备需求，持续推进高端激光技术开发",
+      "tags": [
+        "激光加工",
+        "自动化产线"
+      ],
+      "display_tags": [
+        "激光加工",
+        "自动化产线"
+      ],
+      "tag_themes": [
+        {
+          "tag": "激光加工",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "激光加工",
+            "激光加工"
+          ]
+        },
+        {
+          "tag": "自动化产线",
+          "theme_path": [
+            "10. 工业自动化与机器人",
+            "智能制造",
+            "自动化产线"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "93.77",
+      "change": "+6.10 (+6.96%)",
+      "isUp": true,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "127.97%",
+      "distWeek": "-5.8%",
+      "distMonth": "-7.7%",
+      "trend": "牛市多头",
       "source": "sina"
     },
     {
@@ -9020,7 +9579,7 @@
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-8.79%",
+      "ytdChange": "-52.33%",
       "distWeek": "-3.0%",
       "distMonth": "-11.5%",
       "trend": "熊市空头",
@@ -9770,7 +10329,7 @@
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-15.10%",
+      "ytdChange": "-28.56%",
       "distWeek": "-2.3%",
       "distMonth": "-16.5%",
       "trend": "熊市空头",
@@ -11196,6 +11755,79 @@
       "distMonth": "-3.1%",
       "trend": "牛市多头",
       "source": "yfinance"
+    },
+    {
+      "code": "002693",
+      "name": "双成药业",
+      "sector": "6.3",
+      "industry": "6.3.1",
+      "feature": "**行业地位**：国内多肽药物特色企业<br>**主营业务**：多肽原料药、多肽制剂、CDMO/CMO服务、特色仿制药及创新药研发<br>**竞争优势**：聚焦糖尿病、心脑血管及内分泌领域，具备多肽药物产业化能力，CDMO业务成长性强<br>**未来方向**：多肽药物市场需求增长驱动原料药与制剂业务，CDMO业务持续拓展",
+      "tags": [
+        "多肽药物",
+        "原料药",
+        "制剂",
+        "CDMO",
+        "创新药"
+      ],
+      "display_tags": [
+        "多肽药物",
+        "原料药",
+        "制剂",
+        "CDMO",
+        "创新药"
+      ],
+      "tag_themes": [
+        {
+          "tag": "多肽药物",
+          "theme_path": [
+            "16. 医疗健康",
+            "医薬品",
+            "多肽药物"
+          ]
+        },
+        {
+          "tag": "原料药",
+          "theme_path": [
+            "16. 医疗健康",
+            "医薬品",
+            "原料药"
+          ]
+        },
+        {
+          "tag": "制剂",
+          "theme_path": [
+            "16. 医疗健康",
+            "医薬品",
+            "制剂"
+          ]
+        },
+        {
+          "tag": "CDMO",
+          "theme_path": []
+        },
+        {
+          "tag": "创新药",
+          "theme_path": [
+            "16. 医疗健康",
+            "医薬品",
+            "创新药"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "8.80",
+      "change": "+0.05 (+0.57%)",
+      "isUp": true,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "26.44%",
+      "distWeek": "-4.3%",
+      "distMonth": "-14.1%",
+      "trend": "熊市空头",
+      "source": "sina"
     },
     {
       "code": "4592",
