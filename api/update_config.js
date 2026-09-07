@@ -1,7 +1,7 @@
 export default async function handler(req, res) {
   const password = process.env.CONFIG_EDIT_PASSWORD;
   if (!password) return res.status(503).json({error:'请先配置 CONFIG_EDIT_PASSWORD'});
-  if (req.headers.authorization !== \`Bearer \${password}\`) return res.status(401).json({error:'密码错误'});
+  if (req.headers.authorization !== `Bearer ${password}`) return res.status(401).json({error:'密码错误'});
   const files = {watchlist:'config.py',sector_mapping:'data/sector_mapping.json',tag_display_map:'scripts/tag_display_map.py',theme_mapping:'scripts/theme_mapping.py',portfolio_lists:'scripts/portfolio_lists.py'};
   const key = req.query?.key || req.body?.key;
   if (!files[key]) return res.status(400).json({error:'未知配置'});
@@ -19,4 +19,4 @@ export default async function handler(req, res) {
     return res.status(200).json({success:true});
   } catch(e){return res.status(e.status===409?409:500).json({error:e.message});}
 }
-async function gh(owner,repo,path,token,method='GET',body){const r=await fetch(\`https://api.github.com/repos/\${owner}/\${repo}/\${path}\`,{method,headers:{Accept:'application/vnd.github+json',Authorization:'Bearer '+token,'Content-Type':'application/json'},...(body?{body:JSON.stringify(body)}:{})});if(!r.ok){const e=new Error('GitHub request failed ('+r.status+')');e.status=r.status;throw e;}return r.status===204?null:r.json();}
+async function gh(owner,repo,path,token,method='GET',body){const r=await fetch(`https://api.github.com/repos/${owner}/${repo}/${path}`,{method,headers:{Accept:'application/vnd.github+json',Authorization:'Bearer '+token,'Content-Type':'application/json'},...(body?{body:JSON.stringify(body)}:{})});if(!r.ok){const e=new Error('GitHub request failed ('+r.status+')');e.status=r.status;throw e;}return r.status===204?null:r.json();}
