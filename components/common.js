@@ -332,7 +332,7 @@ function renderMemoHTML(stock) {
     
     return `
         <div class="stock-memo-section">
-            <div class="stock-memo-toggle" onclick="toggleMemo('${symbol}')">
+            <div class="stock-memo-toggle" onclick="toggleMemo('${symbol}', this)">
                 <span class="memo-icon">📝</span>
                 <span>メモ</span>
                 <span class="memo-indicator ${indicatorClass}"></span>
@@ -345,11 +345,11 @@ function renderMemoHTML(stock) {
                     placeholder="ここにメモを入力..."
                     maxlength="500"
                     style="min-height:56px;height:${initialHeight}px;overflow-y:hidden;"
-                    oninput="autoResizeMemo('${symbol}')"
-                >${displayText.replace(/"/g, '&quot;')}</textarea>
+                    oninput="autoResizeMemo('${symbol}', this)"
+                >${displayText.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')}</textarea>
                 <div class="stock-memo-actions">
                     <span class="stock-memo-char-count" id="memoCount_${symbol}">${getMemoCharCount(displayText)}/500</span>
-                    <button class="stock-memo-save-btn" id="memoSaveBtn_${symbol}" onclick="saveMemoHandler('${symbol}')">
+                    <button class="stock-memo-save-btn" id="memoSaveBtn_${symbol}" onclick="saveMemoHandler('${symbol}', this)">
                         💾 保存
                     </button>
                 </div>
@@ -358,16 +358,17 @@ function renderMemoHTML(stock) {
     `;
 }
 // ⭐ 切换备忘录展开/收起
-function toggleMemo(symbol) {
-    const body = document.getElementById(`memoBody_${symbol}`);
-    const arrow = document.getElementById(`memoArrow_${symbol}`);
+function toggleMemo(symbol, trigger) {
+    const section = trigger?.closest('.stock-memo-section');
+    const body = section ? section.querySelector('.stock-memo-body') : document.getElementById(`memoBody_${symbol}`);
+    const arrow = section ? section.querySelector('.memo-arrow') : document.getElementById(`memoArrow_${symbol}`);
     if (body) {
         body.classList.toggle('open');
         if (arrow) {
             arrow.classList.toggle('open');
         }
         if (body.classList.contains('open')) {
-            const textarea = document.getElementById(`memoTextarea_${symbol}`);
+            const textarea = body.querySelector('textarea');
             if (textarea && !textarea.value.trim()) {
                 setTimeout(() => textarea.focus(), 100);
             }
@@ -376,9 +377,10 @@ function toggleMemo(symbol) {
 }
 
 // ⭐ 备忘录输入事件
-function onMemoInput(symbol) {
-    const textarea = document.getElementById(`memoTextarea_${symbol}`);
-    const countEl = document.getElementById(`memoCount_${symbol}`);
+function onMemoInput(symbol, input) {
+    const textarea = input || document.getElementById(`memoTextarea_${symbol}`);
+    const section = textarea?.closest('.stock-memo-section');
+    const countEl = section ? section.querySelector('.stock-memo-char-count') : document.getElementById(`memoCount_${symbol}`);
     if (textarea && countEl) {
         const len = textarea.value.length;
         countEl.textContent = `${len}/500`;
@@ -386,11 +388,20 @@ function onMemoInput(symbol) {
     }
 }
 
-// ⭐ 保存备忘录处理
-function saveMemoHandler(symbol) {
-    const textarea = document.getElementById(`memoTextarea_${symbol}`);
-    const btn = document.getElementById(`memoSaveBtn_${symbol}`);
+function autoResizeMemo(symbol, input) {
+    const textarea = input || document.getElementById(`memoTextarea_${symbol}`);
     if (!textarea) return;
+    textarea.style.height = 'auto';
+    textarea.style.height = Math.max(56, textarea.scrollHeight) + 'px';
+    onMemoInput(symbol, textarea);
+}
+
+// ⭐ 保存备忘录处理
+function saveMemoHandler(symbol, trigger) {
+    const section = trigger?.closest('.stock-memo-section');
+    const textarea = section ? section.querySelector('textarea') : document.getElementById(`memoTextarea_${symbol}`);
+    const btn = trigger || document.getElementById(`memoSaveBtn_${symbol}`);
+    if (!textarea || !btn) return;
     
     const text = textarea.value;
     const success = saveMemo(symbol, text);
@@ -635,6 +646,7 @@ window.deleteMemo = deleteMemo;
 window.renderMemoHTML = renderMemoHTML;
 window.toggleMemo = toggleMemo;
 window.onMemoInput = onMemoInput;
+window.autoResizeMemo = autoResizeMemo;
 window.saveMemoHandler = saveMemoHandler;
 window.deleteMemoHandler = deleteMemoHandler;
 window.exportAllMemos = exportAllMemos;
