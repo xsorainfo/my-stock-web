@@ -419,6 +419,7 @@
             <div class="macro-grid" id="macroGrid"></div>
         </div>
 
+        <div id="dataStatus" style="font-size:13px;color:#64748b;margin:8px 0;"></div>
         <h2 class="section-title">AI 半导体与全要素核心标的集群</h2>
         <div class="stock-filters" style="display:flex;gap:8px;flex-wrap:wrap;margin:12px 0;"><input id="stockSearch" placeholder="搜索代码或名称" style="padding:8px;border:1px solid #cbd5e1;border-radius:8px;"><select id="marketFilter" style="padding:8px;border:1px solid #cbd5e1;border-radius:8px;"><option value="">全部市场</option><option>美股</option><option>日股</option><option>A股</option><option>港股</option><option>韩股</option><option>德股</option></select><select id="sortFilter" style="padding:8px;border:1px solid #cbd5e1;border-radius:8px;"><option value="">默认排序</option><option value="change-desc">涨幅从高到低</option><option value="change-asc">跌幅从高到低</option><option value="name">名称排序</option></select></div><div id="industryContainer"></div>
     </div>
@@ -456,6 +457,9 @@
             const data = await response.json();
     
             document.getElementById('aiReport').innerText = data.ai_report || '💡 数据就绪。';
+            const status = data.update_status || {};
+            const statusEl = document.getElementById('dataStatus');
+            if (statusEl) { const time = data.generated_at ? new Date(data.generated_at).toLocaleString() : '未知'; statusEl.textContent = `数据更新：${time}　成功 ${status.success ?? data.stocks?.length ?? 0}　失败 ${status.failed ?? 0}` + (status.failed_symbols?.length ? `　失败代码：${status.failed_symbols.slice(0, 8).join(', ')}` : ''); }
     
             // ⭐ 宏观数据渲染（带卡片颜色和标签）
             const macroGrid = document.getElementById('macroGrid');
