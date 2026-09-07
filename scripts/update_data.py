@@ -546,7 +546,8 @@ def generate_ai_strategy_report(stock_data, macro_data, update_status):
         return text, {"source": "openai", "model": model}
     except Exception as exc:
         print(f"⚠️ AI策略生成失败，使用备用策略: {exc}")
-        return fallback, {"source": "fallback", "provider": provider, "error": str(exc)[:240]}
+        safe_error = str(exc).replace(api_key, "[REDACTED]")[:240]
+        return fallback, {"source": "fallback", "provider": provider, "error": safe_error}
 
 
 def make_ai_news(stock_data):
