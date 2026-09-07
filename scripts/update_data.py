@@ -509,12 +509,10 @@ def generate_ai_strategy_report(stock_data, macro_data, update_status):
 
     try:
         if provider == "gemini":
-            model = model or "gemini-2.5-flash"
+            model = model or "gemini-flash-latest"
             url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
             body = {
-                "systemInstruction": {"parts": [{"text": "你输出的是供个人复盘使用的研究摘要，不构成投资建议。"}]},
-                "contents": [{"role": "user", "parts": [{"text": prompt}]}],
-                "generationConfig": {"temperature": 0.2, "maxOutputTokens": 900},
+                "contents": [{"parts": [{"text": prompt}]}],
             }
             response = requests.post(
                 url,
