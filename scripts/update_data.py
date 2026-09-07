@@ -459,11 +459,13 @@ def _extract_ai_text(payload):
 
 def _market_snapshot(stock_data, macro_data, update_status):
     """Keep the model input compact while covering all supported markets."""
-    ranked = sorted(
-        stock_data,
-        key=lambda item: abs(float(str(item.get("change", "0").split("(")[-1].replace("%)", "") or 0))),
-        reverse=True,
-    )
+    def change_abs(item):
+        try:
+            return abs(float(str(item.get("change", "0")).split("(")[-1].replace("%)", "")))
+        except (TypeError, ValueError):
+            return 0.0
+
+    ranked = sorted(stock_data, key=change_abs, reverse=True)
     return {
         "generated_at": datetime.now().astimezone().isoformat(),
         "update_status": update_status,
