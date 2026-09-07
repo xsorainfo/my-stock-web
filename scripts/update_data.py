@@ -820,7 +820,10 @@ def fetch_all_data():
     output_data["generated_at"] = datetime.now().astimezone().isoformat()
 
     # 4. 注入 AI 简报
-    output_data["ai_report"], ai_meta = generate_ai_strategy_report(\n        output_data["stocks"], output_data["macro"], output_data["update_status"]\n    )\n    output_data["ai_report_meta"] = ai_meta
+    output_data["ai_report"], ai_meta = generate_ai_strategy_report(
+        output_data["stocks"], output_data["macro"], output_data["update_status"]
+    )
+    output_data["ai_report_meta"] = ai_meta
 
     # ⭐ 确保 data 目录存在
     os.makedirs('data', exist_ok=True)
