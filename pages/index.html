@@ -420,7 +420,7 @@
         </div>
 
         <h2 class="section-title">AI 半导体与全要素核心标的集群</h2>
-        <div id="industryContainer"></div>
+        <div class="stock-filters" style="display:flex;gap:8px;flex-wrap:wrap;margin:12px 0;"><input id="stockSearch" placeholder="搜索代码或名称" style="padding:8px;border:1px solid #cbd5e1;border-radius:8px;"><select id="marketFilter" style="padding:8px;border:1px solid #cbd5e1;border-radius:8px;"><option value="">全部市场</option><option>美股</option><option>日股</option><option>A股</option><option>港股</option><option>韩股</option><option>德股</option></select><select id="sortFilter" style="padding:8px;border:1px solid #cbd5e1;border-radius:8px;"><option value="">默认排序</option><option value="change-desc">涨幅从高到低</option><option value="change-asc">跌幅从高到低</option><option value="name">名称排序</option></select></div><div id="industryContainer"></div>
     </div>
     <!-- ⭐ 在 footer 之前添加备份工具条 -->
     <div class="memo-tools">
@@ -502,13 +502,21 @@
     
             // ⭐ 两层分组 + 按市场排序
             const container = document.getElementById('industryContainer');
+            const query = (document.getElementById('stockSearch')?.value || '').trim().toLowerCase();
+            const market = document.getElementById('marketFilter')?.value || '';
+            const sort = document.getElementById('sortFilter')?.value || '';
+            let visibleStocks = data.stocks.filter(s => (!query || [s.code, s.name, ...(s.display_tags || [])].some(v => String(v || '').toLowerCase().includes(query))) && (!market || s.market_type === market));
+            const changeValue = s => parseFloat(String(s.change || '').match(/[-+]?\d+(?:\.\d+)?%/)?.[0] || 0);
+            if (sort === 'change-desc') visibleStocks.sort((a,b)=>changeValue(b)-changeValue(a));
+            if (sort === 'change-asc') visibleStocks.sort((a,b)=>changeValue(a)-changeValue(b));
+            if (sort === 'name') visibleStocks.sort((a,b)=>String(a.name).localeCompare(String(b.name)));
             container.innerHTML = '';
             
             // 按市场定义排序优先级
             const marketOrder = { '美股': 0, '日股': 1, 'A股': 2, '港股': 3, '韩股': 4, '德股': 5 };
             
             // 按 sector 分组
-            const sectorGroups = data.stocks.reduce((acc, stock) => {
+            const sectorGroups = visibleStocks.reduce((acc, stock) => {
                 const sectorKey = stock.sector || '未分类板块';
                 if (!acc[sectorKey]) acc[sectorKey] = [];
                 acc[sectorKey].push(stock);
@@ -694,6 +702,7 @@
         arrow.classList.toggle('open');
     });
 
+    ['stockSearch','marketFilter','sortFilter'].forEach(id => document.getElementById(id)?.addEventListener('input', loadDashboardData));
     window.onload = async function() {
         await loadSectorMapping();
         await loadDashboardData();

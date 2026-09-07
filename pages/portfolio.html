@@ -293,7 +293,7 @@
         </details>
         <div id="pendingSymbols"></div>
         <!-- ===== 銘柄グリッド ===== -->
-        <div id="stockGridContainer">
+        <div class="stock-filters" style="display:flex;gap:8px;flex-wrap:wrap;margin:12px 0;"><input id="portfolioSearch" placeholder="搜索代码或名称" style="padding:8px;border:1px solid #cbd5e1;border-radius:8px;"><select id="portfolioSort" style="padding:8px;border:1px solid #cbd5e1;border-radius:8px;"><option value="">默认排序</option><option value="change-desc">涨幅从高到低</option><option value="change-asc">跌幅从高到低</option><option value="name">名称排序</option></select></div><div id="stockGridContainer">
             <div class="empty-state">
                 <div class="emoji">👈</div>
                 <p>ポートフォリオを選択してください</p>
@@ -565,7 +565,14 @@
         
         const pending = (list.symbols || []).filter(symbol => !allStocks.some(stock => stockMatchesSymbol(stock, symbol)));
         document.getElementById('pendingSymbols').textContent = pending.length ? '尚无行情（等待更新或数据源暂不可用）：' + pending.join('、') : '';
-        const matched = getMatchedStocks(portfolioId);
+        let matched = getMatchedStocks(portfolioId);
+        const query = (document.getElementById('portfolioSearch')?.value || '').trim().toLowerCase();
+        const sort = document.getElementById('portfolioSort')?.value || '';
+        matched = matched.filter(s => !query || [s.code, s.name].some(v => String(v || '').toLowerCase().includes(query)));
+        const changeValue = s => parseFloat(String(s.change || '').match(/[-+]?\d+(?:\.\d+)?%/)?.[0] || 0);
+        if (sort === 'change-desc') matched.sort((a,b)=>changeValue(b)-changeValue(a));
+        if (sort === 'change-asc') matched.sort((a,b)=>changeValue(a)-changeValue(b));
+        if (sort === 'name') matched.sort((a,b)=>String(a.name).localeCompare(String(b.name)));
         countEl.textContent = `共 ${matched.length} 只标的`;
         
         if (matched.length === 0) {
@@ -855,6 +862,7 @@
     // ============================================================
     // 11. 起動
     // ============================================================
+    ['portfolioSearch','portfolioSort'].forEach(id => document.getElementById(id)?.addEventListener('input', () => currentPortfolioId && displayPortfolio(currentPortfolioId)));
     window.onload = function() {
         loadPortfolioData();
     };
