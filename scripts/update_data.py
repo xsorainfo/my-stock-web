@@ -520,7 +520,9 @@ def generate_ai_strategy_report(stock_data, macro_data, update_status):
                 url, params={"key": api_key},
                 headers={"Content-Type": "application/json"}, json=body, timeout=45
             )
-            response.raise_for_status()
+            if not response.ok:
+                detail = response.text.replace(api_key, "[REDACTED]")[:400]
+                raise RuntimeError(f"Gemini HTTP {response.status_code}: {detail}")
             data = response.json()
             text = data.get("candidates", [{}])[0].get("content", {}).get("parts", [{}])[0].get("text", "").strip()
             if not text:
