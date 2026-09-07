@@ -11,23 +11,25 @@ export default async function handler(req, res) {
     const authHeader = req.headers.authorization;
     const expectedToken = process.env.MY_REPO_TOKEN;
     
+    if (!expectedToken) return res.status(503).json({ error: 'MY_REPO_TOKEN is not configured' });
+
     if (!authHeader || authHeader !== `Bearer ${expectedToken}`) {
         return res.status(401).json({ error: 'Unauthorized' });
     }
 
-    const { listName, symbols, action } = req.body; // action: 'add' | 'remove' | 'update'
+    const { listName, symbols = [], action = 'add' } = req.body || {}; // action: 'add' | 'remove' | 'update'
 
-    if (!listName || !symbols || !Array.isArray(symbols)) {
+    if (typeof listName !== 'string' || !/^[\p{L}\p{N}_ -]{1,80}$/u.test(listName) ||
+        !['add', 'remove', 'update'].includes(action) || !Array.isArray(symbols) ||
+        !symbols.every(s => typeof s === 'string' && /^[A-Za-z0-9.^=-]{1,40}$/.test(s))) {
         return res.status(400).json({ error: 'Invalid request: listName and symbols array required' });
     }
 
     try {
         // 3. 通过 GitHub API 读取并更新 portfolio_lists.py
-        const octokit = new (require('@octokit/rest')).Octokit({
-            auth: process.env.GITHUB_TOKEN
-        });
+        const githubToken = process.env.GITHUB_TOKEN || expectedToken;
 
-        const owner = process.env.GITHUB_REPO_OWNER || 'your-username';
+        const owner = process.env.GITHUB_REPO_OWNER || 'xsorainfo';
         const repo = process.env.GITHUB_REPO_NAME || 'my-stock-web';
         const path = 'scripts/portfolio_lists.py';
 
@@ -35,11 +37,7 @@ export default async function handler(req, res) {
         let fileSha = null;
         let currentContent = '';
         try {
-            const file = await octokit.repos.getContent({
-                owner,
-                repo,
-                path
-            });
+            const file = { data: await githubRequest(owner, repo, `contents/${path}`, githubToken) };
             fileSha = file.data.sha;
             currentContent = Buffer.from(file.data.content, 'base64').toString('utf-8');
         } catch (error) {
@@ -55,26 +53,24 @@ export default async function handler(req, res) {
         const updatedContent = updatePythonDict(currentContent, listName, symbols, action);
 
         // 5. 写回 GitHub
-        await octokit.repos.createOrUpdateFileContents({
-            owner,
-            repo,
-            path,
+        await githubRequest(owner, repo, `contents/${path}`, githubToken, 'PUT', {
             message: `📊 Update portfolio list: ${listName}`,
             content: Buffer.from(updatedContent, 'utf-8').toString('base64'),
             sha: fileSha || undefined
         });
 
-        // 6. 触发 data.json 重新生成（复用 refresh 机制）
-        const refreshUrl = `${req.headers.origin || 'https://my-stock-web-ashen.vercel.app'}/api/refresh`;
-        await fetch(refreshUrl, {
-            method: 'POST',
-            headers: {
-                'Authorization': `Bearer ${process.env.MY_REPO_TOKEN}`
-            }
-        });
+        // 保存与刷新分别报告，避免保存成功后因刷新失败而误报整体失败。
+        let refreshTriggered = false;
+        try {
+            await githubRequest(owner, repo, 'dispatches', githubToken, 'POST', { event_type: 'web_refresh' });
+            refreshTriggered = true;
+        } catch (error) {
+            console.error('Portfolio saved, but refresh failed:', error.message);
+        }
 
         res.status(200).json({ 
-            success: true, 
+            success: true,
+            refreshTriggered, 
             message: `Portfolio list "${listName}" updated successfully`,
             updatedSymbols: symbols 
         });
@@ -83,6 +79,20 @@ export default async function handler(req, res) {
         console.error('Error updating portfolio:', error);
         res.status(500).json({ error: error.message || 'Internal server error' });
     }
+}
+
+async function githubRequest(owner, repo, path, token, method = 'GET', body) {
+    const response = await fetch(`https://api.github.com/repos/${encodeURIComponent(owner)}/${encodeURIComponent(repo)}/${path}`, {
+        method,
+        headers: { Accept: 'application/vnd.github+json', Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+        ...(body === undefined ? {} : { body: JSON.stringify(body) })
+    });
+    if (!response.ok) {
+        const error = new Error(`GitHub request failed (${response.status})`);
+        error.status = response.status;
+        throw error;
+    }
+    return response.status === 204 ? null : response.json();
 }
 
 // Python dict 更新函数
@@ -102,14 +112,12 @@ function updatePythonDict(content, listName, symbols, action = 'add') {
         afterDict = dictContent.substring(dictContent.lastIndexOf('}') + 1);
     } else {
         // 没有找到，在末尾追加
-        beforeDict = dictContent + '\n\nPORTFOLIO_LISTS = {';
-        innerContent = '';
-        afterDict = '}\n';
+        throw new Error('Unsupported portfolio file format; no changes written');
     }
 
     // 解析现有的列表
     const lines = innerContent.split('\n');
-    const listEntries = [];
+    let listEntries = [];
     let currentList = null;
     let inList = false;
     let braceDepth = 0;
@@ -173,7 +181,8 @@ function updatePythonDict(content, listName, symbols, action = 'add') {
         
         if (targetList) {
             // 更新现有列表
-            targetList.content = newListContent + ',\n';
+            if (!/"symbols"\s*:\s*\[[\s\S]*?\]/.test(targetList.content)) throw new Error('Missing symbols field');
+            targetList.content = targetList.content.replace(/("symbols"\s*:\s*)\[[\s\S]*?\]/, (_, prefix) => prefix + symbolsStr);
         } else {
             // 添加新列表
             listEntries.push({
