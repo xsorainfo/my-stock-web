@@ -17695,7 +17695,8 @@
   },
   "ai_report_meta": {
     "source": "fallback",
-    "provider": "openai",
-    "error": "429 Client Error: Too Many Requests for url: https://api.openai.com/v1/responses"
+    "provider": "gemini",
+    "error": "400 Client Error: Bad Request for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=[REDACTED]",
+    "updated_at": "2026-09-07T17:03:30.182443+00:00"
   }
 }
