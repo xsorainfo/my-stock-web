@@ -517,8 +517,10 @@ def generate_ai_strategy_report(stock_data, macro_data, update_status):
                 "generationConfig": {"temperature": 0.2, "maxOutputTokens": 900},
             }
             response = requests.post(
-                url, params={"key": api_key},
-                headers={"Content-Type": "application/json"}, json=body, timeout=45
+                url,
+                headers={"x-goog-api-key": api_key, "Content-Type": "application/json"},
+                json=body,
+                timeout=45,
             )
             if not response.ok:
                 detail = response.text.replace(api_key, "[REDACTED]")[:400]
