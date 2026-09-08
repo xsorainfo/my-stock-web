@@ -569,17 +569,26 @@ def make_ai_news(stock_data):
             f"配合距52周高位的 {stock_data[0]['distHigh']} 回撤，市场已进入结构性调仓阶段。")
 
 
-def build_intraday_signal(percent, trend_label, dist_week_str):
-    """Create a transparent intraday bias from existing daily indicators."""
-    if percent >= 2 and trend_label == "牛市多头":
-        return {"label": "日内偏强", "class": "signal-up", "reason": "当日涨幅明显且站上20日均线"}
-    if percent <= -2 and trend_label == "熊市空头":
-        return {"label": "日内偏弱", "class": "signal-down", "reason": "当日跌幅明显且低于20日均线"}
-    if percent > 0.8 and trend_label == "牛市多头":
-        return {"label": "偏强观察", "class": "signal-up", "reason": "涨幅为正且趋势偏多"}
-    if percent < -0.8 and trend_label == "熊市空头":
-        return {"label": "偏弱观察", "class": "signal-down", "reason": "跌幅为负且趋势偏空"}
-    return {"label": "震荡观察", "class": "signal-flat", "reason": "涨跌幅与均线趋势未形成一致信号"}
+def build_intraday_signal(percent, trend_label, rsi, volume_ratio):
+    """Combine daily move, trend, RSI and volume into a transparent score."""
+    score = 50
+    score += 15 if trend_label == "牛市多头" else -15
+    score += 15 if percent >= 1 else -15 if percent <= -1 else 0
+    score += 10 if rsi >= 55 else -10 if rsi <= 45 else 0
+    score += 10 if volume_ratio >= 1.2 and percent > 0 else -10 if volume_ratio >= 1.2 and percent < 0 else 0
+    score = max(0, min(100, score))
+    if score >= 70:
+        label, css = "日内偏强", "signal-up"
+    elif score >= 55:
+        label, css = "偏强观察", "signal-up"
+    elif score <= 30:
+        label, css = "日内偏弱", "signal-down"
+    elif score <= 45:
+        label, css = "偏弱观察", "signal-down"
+    else:
+        label, css = "震荡观察", "signal-flat"
+    reason = f"综合分 {score}/100 · RSI {rsi:.0f} · 量比 {volume_ratio:.1f}x"
+    return {"label": label, "class": css, "reason": reason, "score": score, "rsi": round(rsi, 1), "volume_ratio": round(volume_ratio, 2)}
 
 def get_market_type(symbol):
     if symbol.endswith('.T'):
@@ -798,7 +807,15 @@ def fetch_all_data():
             # 均线
             ma20 = h_df['Close'].tail(20).mean() if len(h_df) >= 20 else current_price
             trend_label = "牛市多头" if current_price >= ma20 else "熊市空头"
-            intraday_signal = build_intraday_signal(percent, trend_label, dist_week_str)
+            ma5 = h_df["Close"].tail(5).mean() if len(h_df) >= 5 else current_price
+            delta = h_df["Close"].diff().dropna().tail(14)
+            gains = delta[delta > 0].sum()
+            losses = -delta[delta < 0].sum()
+            rsi = 100 if losses == 0 and gains > 0 else (100 - (100 / (1 + gains / losses)) if losses else 50)
+            avg_volume = h_df["Volume"].tail(5).mean() if "Volume" in h_df and h_df["Volume"].tail(5).mean() else 0
+            latest_volume = float(h_df["Volume"].iloc[-1]) if "Volume" in h_df and len(h_df) else 0
+            volume_ratio = latest_volume / avg_volume if avg_volume else 1.0
+            intraday_signal = build_intraday_signal(percent, trend_label, rsi, volume_ratio)
 
             # ⭐ 获取原始 tags 并合并
             raw_tags = item.get("tags", [])
