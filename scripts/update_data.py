@@ -863,9 +863,17 @@ def fetch_all_data():
     output_data["generated_at"] = datetime.now().astimezone().isoformat()
 
     # 4. 注入 AI 简报
-    output_data["ai_report"], ai_meta = generate_ai_strategy_report(
-        output_data["stocks"], output_data["macro"], output_data["update_status"]
-    )
+    try:
+        output_data["ai_report"], ai_meta = generate_ai_strategy_report(
+            output_data["stocks"], output_data["macro"], output_data["update_status"]
+        )
+    except Exception as exc:
+        print(f"⚠️ AI策略失败，但股票数据继续提交: {exc}")
+        output_data["ai_report"] = make_ai_news(output_data["stocks"])
+        ai_meta = {
+            "source": "fallback",
+            "error": "AI策略暂时不可用，股票数据已正常更新",
+        }
     output_data["ai_report_meta"] = ai_meta
 
     # ⭐ 确保 data 目录存在
