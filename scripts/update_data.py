@@ -590,6 +590,20 @@ def build_intraday_signal(percent, trend_label, rsi, volume_ratio):
     reason = f"综合分 {score}/100 · RSI {rsi:.0f} · 量比 {volume_ratio:.1f}x"
     return {"label": label, "class": css, "reason": reason, "score": score, "rsi": round(rsi, 1), "volume_ratio": round(volume_ratio, 2)}
 
+def build_flow_proxy(percent, trend_label, volume_ratio):
+    """Estimate price-volume flow; this is not institutional order data."""
+    if volume_ratio >= 1.5 and percent > 0.5:
+        label, css, reason = "疑似流入", "signal-up", "上涨伴随明显放量"
+    elif volume_ratio >= 1.5 and percent < -0.5:
+        label, css, reason = "疑似流出", "signal-down", "下跌伴随明显放量"
+    elif volume_ratio >= 1.2 and trend_label == "牛市多头":
+        label, css, reason = "偏流入", "signal-up", "多头趋势且量能高于均值"
+    elif volume_ratio >= 1.2 and trend_label == "熊市空头":
+        label, css, reason = "偏流出", "signal-down", "空头趋势且量能高于均值"
+    else:
+        label, css, reason = "资金观望", "signal-flat", "量能未出现明显异常"
+    return {"label": label, "class": css, "reason": reason, "volume_ratio": round(volume_ratio, 2)}
+
 def get_market_type(symbol):
     if symbol.endswith('.T'):
         return "日股"
@@ -816,6 +830,7 @@ def fetch_all_data():
             latest_volume = float(h_df["Volume"].iloc[-1]) if "Volume" in h_df and len(h_df) else 0
             volume_ratio = latest_volume / avg_volume if avg_volume else 1.0
             intraday_signal = build_intraday_signal(percent, trend_label, rsi, volume_ratio)
+            flow_proxy = build_flow_proxy(percent, trend_label, volume_ratio)
 
             # ⭐ 获取原始 tags 并合并
             raw_tags = item.get("tags", [])
@@ -856,6 +871,7 @@ def fetch_all_data():
                 "distMonth": dist_month_str,
                 "trend": trend_label,
                 "intraday_signal": intraday_signal,
+                "flow_proxy": flow_proxy,
                 "source": source,
             }
             
