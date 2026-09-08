@@ -464,6 +464,18 @@
     // index.html 特有逻辑
     // ============================================================
     
+    function getIntradaySignal(stock) {
+        if (stock.intraday_signal?.label) return stock.intraday_signal;
+        const match = String(stock.change || "").match(/\\(([-+]?\\d+(?:\\.\\d+)?)%\\)/);
+        const percent = match ? Number(match[1]) : 0;
+        const trend = stock.trend || "";
+        if (percent >= 2 && trend === "牛市多头") return {label:"日内偏强", class:"signal-up", reason:"当日涨幅明显且站上20日均线"};
+        if (percent <= -2 && trend === "熊市空头") return {label:"日内偏弱", class:"signal-down", reason:"当日跌幅明显且低于20日均线"};
+        if (percent > 0.8 && trend === "牛市多头") return {label:"偏强观察", class:"signal-up", reason:"涨幅为正且趋势偏多"};
+        if (percent < -0.8 && trend === "熊市空头") return {label:"偏弱观察", class:"signal-down", reason:"跌幅为负且趋势偏空"};
+        return {label:"震荡观察", class:"signal-flat", reason:"涨跌幅与均线趋势未形成一致信号"};
+    }
+
     async function loadDashboardData() {
         const refreshButton = document.getElementById("refreshData");
         if (refreshButton) { refreshButton.disabled = true; refreshButton.textContent = "⟳ 加载中..."; }
@@ -655,7 +667,7 @@
                                 </div>
                     
                                 <div class="stock-trend-badge ${trendClass}">${stock.trend}</div>
-                                <div class="intraday-signal ${stock.intraday_signal?.class || "signal-flat"}" title="根据当日涨跌幅与20日均线计算">${stock.intraday_signal?.label || "震荡观察"} · ${stock.intraday_signal?.reason || "指标不足"}</div>
+                                ${(() => { const signal = getIntradaySignal(stock); return `<div class="intraday-signal ${signal.class}" title="根据当日涨跌幅与20日均线计算">${signal.label} · ${signal.reason}</div>`; })()}
 
                                 
                                 <div class="price-row">
