@@ -751,3 +751,5 @@ body {
 .signal-badges{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:6px!important;margin:8px 0 6px!important}.signal-badges .intraday-signal{display:block!important;box-sizing:border-box!important;width:100%!important;margin:0!important;padding:6px 10px!important;border-radius:7px!important;font-size:12px!important;line-height:1.45!important;font-weight:600!important;white-space:normal!important}.signal-badges .intraday-signal.signal-up{color:#991b1b!important;background:#fee2e2!important}.signal-badges .intraday-signal.signal-down{color:#166534!important;background:#dcfce7!important}.signal-badges .intraday-signal.signal-flat{color:#92400e!important;background:#fef3c7!important}
 
 .signal-plan{font-size:11px;line-height:1.45;color:#475569;background:#f8fafc;border-left:3px solid #94a3b8;padding:5px 8px;border-radius:5px}
+
+.signal-divergence{font-size:11px;line-height:1.4;color:#9a3412;background:#ffedd5;border-left:3px solid #f97316;padding:5px 8px;border-radius:5px}
