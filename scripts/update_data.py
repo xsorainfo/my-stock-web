@@ -514,12 +514,19 @@ def generate_ai_strategy_report(stock_data, macro_data, update_status):
             body = {
                 "contents": [{"parts": [{"text": prompt}]}],
             }
-            response = requests.post(
-                url,
-                headers={"x-goog-api-key": api_key, "Content-Type": "application/json"},
-                json=body,
-                timeout=45,
-            )
+            response = None
+            for attempt in range(3):
+                response = requests.post(
+                    url,
+                    headers={"x-goog-api-key": api_key, "Content-Type": "application/json"},
+                    json=body,
+                    timeout=45,
+                )
+                if response.status_code not in (429, 500, 502, 503, 504) or attempt == 2:
+                    break
+                wait_seconds = 2 ** attempt
+                print(f"Gemini 暂时不可用（HTTP {response.status_code}），{wait_seconds} 秒后重试...")
+                time.sleep(wait_seconds)
             if not response.ok:
                 detail = response.text.replace(api_key, "[REDACTED]")[:400]
                 raise RuntimeError(f"Gemini HTTP {response.status_code}: {detail}")
