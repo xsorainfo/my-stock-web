@@ -20,3 +20,30 @@ function renderSharedSignalBadges(stock) {
     (divergence ? '<div class="signal-divergence">⚠️ 信号分歧：趋势与资金方向不一致</div>' : '') +
     '</div>';
 }
+
+function getHoldingCost(symbol) {
+  const value = Number(localStorage.getItem("holding_cost_" + symbol));
+  return Number.isFinite(value) && value > 0 ? value : "";
+}
+function updateHoldingCost(symbol, value) {
+  const cost = Number(value);
+  if (Number.isFinite(cost) && cost > 0) localStorage.setItem("holding_cost_" + symbol, cost);
+  else localStorage.removeItem("holding_cost_" + symbol);
+  const result = document.querySelector('[data-holding-result="' + symbol + '"]');
+  if (result) result.textContent = formatHoldingResult(symbol, cost);
+}
+function formatHoldingResult(symbol, cost) {
+  const card = document.querySelector('[data-stock-symbol="' + symbol + '"]');
+  const current = card ? Number(card.dataset.currentPrice) : NaN;
+  if (!Number.isFinite(cost) || cost <= 0 || !Number.isFinite(current)) return "填写成本价后显示盈亏";
+  const pnl = current - cost;
+  const pct = cost ? pnl / cost * 100 : 0;
+  return (pnl >= 0 ? "当前浮盈 " : "当前浮亏 ") + Math.abs(pnl).toFixed(2) + "（" + (pnl >= 0 ? "+" : "") + pct.toFixed(2) + "%）";
+}
+function renderHoldingCost(stock) {
+  const symbol = stock.symbol || stock.code || "";
+  const cost = getHoldingCost(symbol);
+  return '<div class="holding-cost" data-stock-symbol="' + symbol + '" data-current-price="' + (Number(stock.price) || 0) + '">' +
+    '<label>💼 持仓成本</label><input type="number" min="0" step="0.01" placeholder="输入成本价" value="' + cost + '" onchange="updateHoldingCost(\'' + symbol + '\', this.value)">' +
+    '<span class="holding-result" data-holding-result="' + symbol + '">' + formatHoldingResult(symbol, cost) + '</span></div>';
+}

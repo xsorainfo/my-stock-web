@@ -753,3 +753,5 @@ body {
 .signal-plan{font-size:11px;line-height:1.45;color:#475569;background:#f8fafc;border-left:3px solid #94a3b8;padding:5px 8px;border-radius:5px}
 
 .signal-divergence{font-size:11px;line-height:1.4;color:#9a3412;background:#ffedd5;border-left:3px solid #f97316;padding:5px 8px;border-radius:5px}
+
+.holding-cost{display:grid;grid-template-columns:auto 130px 1fr;align-items:center;gap:8px;margin-top:10px;padding-top:8px;border-top:1px dashed #e2e8f0;font-size:11px;color:#64748b}.holding-cost input{width:100%;box-sizing:border-box;padding:5px 7px;border:1px solid #cbd5e1;border-radius:5px;background:#fff}.holding-result{color:#475569;font-weight:600}@media(max-width:600px){.holding-cost{grid-template-columns:1fr 120px}.holding-result{grid-column:1/-1}}
