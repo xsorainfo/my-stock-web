@@ -587,8 +587,9 @@ def build_intraday_signal(percent, trend_label, rsi, volume_ratio):
         label, css = "偏弱观察", "signal-down"
     else:
         label, css = "震荡观察", "signal-flat"
-    reason = f"综合分 {score}/100 · RSI {rsi:.0f} · 量比 {volume_ratio:.1f}x"
-    return {"label": label, "class": css, "reason": reason, "score": score, "rsi": round(rsi, 1), "volume_ratio": round(volume_ratio, 2)}
+    confidence = "高" if score >= 75 or score <= 25 else "中" if score >= 60 or score <= 40 else "低"
+    reason = f"综合分 {score}/100 · 置信度{confidence} · RSI {rsi:.0f} · 量比 {volume_ratio:.1f}x"
+    return {"label": label, "class": css, "reason": reason, "score": score, "confidence": confidence, "rsi": round(rsi, 1), "volume_ratio": round(volume_ratio, 2)}
 
 def build_flow_proxy(percent, trend_label, volume_ratio):
     """Estimate price-volume flow; this is not institutional order data."""
