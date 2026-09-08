@@ -831,6 +831,10 @@ def fetch_all_data():
             latest_volume = float(h_df["Volume"].iloc[-1]) if "Volume" in h_df and len(h_df) else 0
             volume_ratio = latest_volume / avg_volume if avg_volume else 1.0
             intraday_signal = build_intraday_signal(percent, trend_label, rsi, volume_ratio)
+            if trend_label == "牛市多头":
+                intraday_signal["plan"] = f"触发：放量突破近1周高点 {float(high_1w):.2f}；失效：跌回MA5 {float(ma5):.2f} 下方"
+            else:
+                intraday_signal["plan"] = f"触发：重新站上MA5 {float(ma5):.2f} 且量比>1.2；失效：跌破近1周低位"
             flow_proxy = build_flow_proxy(percent, trend_label, volume_ratio)
 
             # ⭐ 获取原始 tags 并合并

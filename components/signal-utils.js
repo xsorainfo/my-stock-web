@@ -14,6 +14,7 @@ function renderSharedSignalBadges(stock) {
   const flow = stock.flow_proxy;
   return '<div class="signal-badges">' +
     '<div class="intraday-signal ' + signal.class + '" title="根据指标计算">📈 策略：' + signal.label + ' · ' + signal.reason + '</div>' +
+    (signal.plan ? '<div class="signal-plan">🧭 ' + signal.plan + '</div>' : '') +
     (flow && flow.label ? '<div class="intraday-signal ' + flow.class + '" title="根据价格与成交量估算，不代表真实机构订单">💰 资金：' + flow.label + ' · ' + flow.reason + ' · 量比 ' + flow.volume_ratio + 'x</div>' : '') +
     '</div>';
 }
