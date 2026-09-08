@@ -12,9 +12,11 @@ function getSharedIntradaySignal(stock) {
 function renderSharedSignalBadges(stock) {
   const signal = getSharedIntradaySignal(stock);
   const flow = stock.flow_proxy;
+  const divergence = flow && ((signal.class === "signal-up" && flow.class === "signal-down") || (signal.class === "signal-down" && flow.class === "signal-up"));
   return '<div class="signal-badges">' +
     '<div class="intraday-signal ' + signal.class + '" title="根据指标计算">📈 策略：' + signal.label + ' · ' + signal.reason + '</div>' +
     (signal.plan ? '<div class="signal-plan">🧭 ' + signal.plan + '</div>' : '') +
     (flow && flow.label ? '<div class="intraday-signal ' + flow.class + '" title="根据价格与成交量估算，不代表真实机构订单">💰 资金：' + flow.label + ' · ' + flow.reason + ' · 量比 ' + flow.volume_ratio + 'x</div>' : '') +
+    (divergence ? '<div class="signal-divergence">⚠️ 信号分歧：趋势与资金方向不一致</div>' : '') +
     '</div>';
 }
