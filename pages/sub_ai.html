@@ -373,6 +373,7 @@
     <!-- 引入脚本 -->
     <script src="../components/navbar.js"></script>
     <script src="../components/common.js"></script>
+    <script src="../components/signal-utils.js"></script>
     <script>
         // ============================================================
         // 1. 全局数据
@@ -928,6 +929,7 @@
                         </div>
                         
                         <div class="stock-trend-badge ${trendClass}">${stock.trend}</div>
+                        ${renderSharedSignalBadges(stock)}
 
 
                         <div class="price-row">

@@ -743,3 +743,6 @@ body {
         right: 20px;
     }
 }
+
+/* 共通策略与资金提示 */
+.signal-badges{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 4px}.signal-badges .intraday-signal{margin:0}.intraday-signal.signal-up{color:#991b1b;background:#fee2e2}.intraday-signal.signal-down{color:#166534;background:#dcfce7}.intraday-signal.signal-flat{color:#92400e;background:#fef3c7}
