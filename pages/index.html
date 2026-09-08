@@ -299,6 +299,12 @@
             letter-spacing: 0.5px;
         }
 
+        .data-status-row { display:flex; align-items:center; justify-content:space-between; gap:12px; margin:8px 0; }
+        .refresh-data-btn { border:1px solid #bfdbfe; background:#eff6ff; color:#1d4ed8; border-radius:8px; padding:6px 12px; cursor:pointer; transition:all .2s ease; }
+        .refresh-data-btn:hover { background:#dbeafe; transform:translateY(-1px); }
+        .refresh-data-btn:disabled { opacity:.6; cursor:wait; transform:none; }
+        @media (max-width: 600px) { .data-status-row { align-items:flex-start; flex-direction:column; } }
+
         /* ===== 股票卡片 ===== */
         .stock-card .stock-feature {
             min-height: 52px;        
@@ -419,7 +425,7 @@
             <div class="macro-grid" id="macroGrid"></div>
         </div>
 
-        <div id="dataStatus" style="font-size:13px;color:#64748b;margin:8px 0;"></div>
+        <div class="data-status-row"><div id="dataStatus" style="font-size:13px;color:#64748b;margin:8px 0;"></div><button id="refreshData" class="refresh-data-btn" type="button">↻ 刷新显示</button></div>
         <h2 class="section-title">AI 半导体与全要素核心标的集群</h2>
         <div class="stock-filters" style="display:flex;gap:8px;flex-wrap:wrap;margin:12px 0;"><input id="stockSearch" placeholder="搜索代码或名称" style="padding:8px;border:1px solid #cbd5e1;border-radius:8px;"><select id="marketFilter" style="padding:8px;border:1px solid #cbd5e1;border-radius:8px;"><option value="">全部市场</option><option>美股</option><option>日股</option><option>A股</option><option>港股</option><option>韩股</option><option>德股</option></select><select id="sortFilter" style="padding:8px;border:1px solid #cbd5e1;border-radius:8px;"><option value="">默认排序</option><option value="change-desc">涨幅从高到低</option><option value="change-asc">跌幅从高到低</option><option value="name">名称排序</option></select></div><div id="industryContainer"></div>
     </div>
@@ -451,12 +457,17 @@
     // ============================================================
     
     async function loadDashboardData() {
+        const refreshButton = document.getElementById("refreshData");
+        if (refreshButton) { refreshButton.disabled = true; refreshButton.textContent = "⟳ 加载中..."; }
         try {
             const response = await fetch('/data/data.json?v=' + new Date().getTime());
             if (!response.ok) throw new Error('数据加载失败');
             const data = await response.json();
     
             document.getElementById('aiReport').innerText = data.ai_report || '💡 数据就绪。';
+            const aiMeta = data.ai_report_meta || {};
+            const aiTitle = document.querySelector('.ai-title');
+            if (aiTitle && aiMeta.updated_at) aiTitle.title = `策略更新时间：${new Date(aiMeta.updated_at).toLocaleString()}`;
             const status = data.update_status || {};
             const statusEl = document.getElementById('dataStatus');
             if (statusEl) { const time = data.generated_at ? new Date(data.generated_at).toLocaleString() : '未知'; statusEl.textContent = `数据更新：${time}　成功 ${status.success ?? data.stocks?.length ?? 0}　失败 ${status.failed ?? 0}` + (status.failed_symbols?.length ? `　失败代码：${status.failed_symbols.slice(0, 8).join(', ')}` : ''); }
@@ -693,6 +704,10 @@
             
         } catch (error) { 
             console.error('加载数据失败:', error);
+            const statusEl = document.getElementById('dataStatus');
+            if (statusEl) statusEl.textContent = '数据加载失败，请稍后重试';
+        } finally {
+            if (refreshButton) { refreshButton.disabled = false; refreshButton.textContent = '↻ 刷新显示'; }
         }
     }
     // ⭐ 宏观数据折叠切换
@@ -702,6 +717,8 @@
         wrapper.classList.toggle('open');
         arrow.classList.toggle('open');
     });
+
+    document.getElementById('refreshData')?.addEventListener('click', loadDashboardData);
 
     ['stockSearch','marketFilter','sortFilter'].forEach(id => document.getElementById(id)?.addEventListener('input', loadDashboardData));
     window.onload = async function() {
