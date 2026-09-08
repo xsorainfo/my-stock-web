@@ -59,7 +59,10 @@
         .ai-content {
             font-size: 14px;
             color: #334155;
+            white-space: pre-line;
+            line-height: 1.8;
         }
+        .ai-meta { margin-top: 10px; font-size: 12px; color: #64748b; }
         /* ===== 宏观数据折叠 ===== */
         .macro-toggle {
             display: flex;
@@ -375,7 +378,7 @@
     <div class="container">
         <div class="ai-briefboard">
             <div class="ai-title">🤖 首席硬科技策略师 · 盘后多头思维复盘</div>
-            <div class="ai-content" id="aiReport">正在读取策略官核心简报流...</div>
+            <div class="ai-content" id="aiReport">正在读取策略官核心简报流...</div><div class="ai-meta" id="aiMeta"></div>
         </div>
         <!-- ===== 快捷链接 ===== -->
         <div class="quick-links">
@@ -468,6 +471,12 @@
             const aiMeta = data.ai_report_meta || {};
             const aiTitle = document.querySelector('.ai-title');
             if (aiTitle && aiMeta.updated_at) aiTitle.title = `策略更新时间：${new Date(aiMeta.updated_at).toLocaleString()}`;
+            const aiMetaEl = document.getElementById('aiMeta');
+            if (aiMetaEl) {
+                const updated = aiMeta.updated_at ? new Date(aiMeta.updated_at).toLocaleString() : '时间未知';
+                const source = aiMeta.source === 'gemini' ? 'Gemini AI' : (aiMeta.source || '自动策略');
+                aiMetaEl.textContent = `来源：${source}　更新时间：${updated}`;
+            }
             const status = data.update_status || {};
             const statusEl = document.getElementById('dataStatus');
             if (statusEl) { const time = data.generated_at ? new Date(data.generated_at).toLocaleString() : '未知'; statusEl.textContent = `数据更新：${time}　成功 ${status.success ?? data.stocks?.length ?? 0}　失败 ${status.failed ?? 0}` + (status.failed_symbols?.length ? `　失败代码：${status.failed_symbols.slice(0, 8).join(', ')}` : ''); }
