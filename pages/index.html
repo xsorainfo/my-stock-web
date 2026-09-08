@@ -668,6 +668,7 @@
                     
                                 <div class="stock-trend-badge ${trendClass}">${stock.trend}</div>
                                 ${(() => { const signal = getIntradaySignal(stock); return `<div class="intraday-signal ${signal.class}" title="根据当日涨跌幅与20日均线计算">${signal.label} · ${signal.reason}</div>`; })()}
+                                ${stock.flow_proxy?.label ? `<div class="intraday-signal ${stock.flow_proxy.class}" title="根据价格与成交量估算，不代表真实机构订单">资金行为：${stock.flow_proxy.label} · ${stock.flow_proxy.reason} · 量比 ${stock.flow_proxy.volume_ratio}x</div>` : ""}
 
                                 
                                 <div class="price-row">
