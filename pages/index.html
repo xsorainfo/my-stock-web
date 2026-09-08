@@ -729,7 +729,13 @@
 
     document.getElementById('refreshData')?.addEventListener('click', loadDashboardData);
 
-    ['stockSearch','marketFilter','sortFilter'].forEach(id => document.getElementById(id)?.addEventListener('input', loadDashboardData));
+    let filterTimer;
+    function scheduleFilterRefresh(event) {
+        clearTimeout(filterTimer);
+        const delay = event?.target?.id === 'stockSearch' ? 250 : 0;
+        filterTimer = setTimeout(loadDashboardData, delay);
+    }
+    ['stockSearch','marketFilter','sortFilter'].forEach(id => document.getElementById(id)?.addEventListener('input', scheduleFilterRefresh));
     window.onload = async function() {
         await loadSectorMapping();
         await loadDashboardData();
