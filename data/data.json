@@ -1,6 +1,15 @@
 {
   "macro": [
     {
+      "name": "白银",
+      "price": "66.05",
+      "change": "-0.30 (-0.45%)",
+      "isUp": false,
+      "type": "commodity",
+      "badge_label": "商品",
+      "badge_class": "commodity"
+    },
+    {
       "name": "纳斯达克综合",
       "price": "26506.99",
       "change": "+85.58 (+0.32%)",
@@ -10,18 +19,9 @@
       "badge_class": "index"
     },
     {
-      "name": "黄金",
-      "price": "4429.80",
-      "change": "+29.80 (+0.68%)",
-      "isUp": true,
-      "type": "commodity",
-      "badge_label": "商品",
-      "badge_class": "commodity"
-    },
-    {
       "name": "铜",
       "price": "6.60",
-      "change": "-0.18 (-2.66%)",
+      "change": "-0.17 (-2.58%)",
       "isUp": false,
       "type": "commodity",
       "badge_label": "商品",
@@ -30,7 +30,7 @@
     {
       "name": "WTI 原油",
       "price": "91.48",
-      "change": "-2.77 (-2.94%)",
+      "change": "-3.02 (-3.20%)",
       "isUp": false,
       "type": "futures",
       "badge_label": "期货",
@@ -39,17 +39,44 @@
     {
       "name": "标普 500 期货",
       "price": "7722.00",
-      "change": "+43.75 (+0.57%)",
+      "change": "+45.50 (+0.59%)",
       "isUp": true,
       "type": "futures",
       "badge_label": "期货",
       "badge_class": "futures"
     },
     {
-      "name": "白银",
-      "price": "66.05",
-      "change": "-0.33 (-0.49%)",
+      "name": "美元/日元",
+      "price": "153.85",
+      "change": "+0.38 (+0.24%)",
+      "isUp": true,
+      "type": "forex",
+      "badge_label": "FX",
+      "badge_class": "forex"
+    },
+    {
+      "name": "日经 225",
+      "price": "65020.94",
+      "change": "-1378.90 (-2.08%)",
       "isUp": false,
+      "type": "index",
+      "badge_label": "",
+      "badge_class": "index"
+    },
+    {
+      "name": "AI半导体指数ETF-CHPS",
+      "price": "83.82",
+      "change": "-1.67 (-1.95%)",
+      "isUp": false,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
+      "name": "黄金",
+      "price": "4429.80",
+      "change": "+29.30 (+0.67%)",
+      "isUp": true,
       "type": "commodity",
       "badge_label": "商品",
       "badge_class": "commodity"
@@ -64,6 +91,15 @@
       "badge_class": "index"
     },
     {
+      "name": "韩国 KOSPI",
+      "price": "6687.21",
+      "change": "-308.18 (-4.41%)",
+      "isUp": false,
+      "type": "index",
+      "badge_label": "",
+      "badge_class": "index"
+    },
+    {
       "name": "费城半导体指数",
       "price": "11735.26",
       "change": "-152.61 (-1.28%)",
@@ -73,18 +109,9 @@
       "badge_class": "index"
     },
     {
-      "name": "半导体ETF-SOXX",
-      "price": "519.86",
-      "change": "-8.54 (-1.62%)",
-      "isUp": false,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
-      "name": "AI半导体指数ETF-CHPS",
-      "price": "83.82",
-      "change": "-1.67 (-1.95%)",
+      "name": "半导体设备/材料-SMH",
+      "price": "567.01",
+      "change": "-6.72 (-1.17%)",
       "isUp": false,
       "type": "etf",
       "badge_label": "ETF",
@@ -100,46 +127,10 @@
       "badge_class": "etf"
     },
     {
-      "name": "韩国 KOSPI",
-      "price": "6687.21",
-      "change": "-308.18 (-4.41%)",
+      "name": "半导体ETF-SOXX",
+      "price": "519.86",
+      "change": "-8.54 (-1.62%)",
       "isUp": false,
-      "type": "index",
-      "badge_label": "",
-      "badge_class": "index"
-    },
-    {
-      "name": "AI基础设施ETF-TCAI",
-      "price": "47.24",
-      "change": "-1.00 (-2.07%)",
-      "isUp": false,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
-      "name": "日经 225",
-      "price": "65020.94",
-      "change": "-1378.90 (-2.08%)",
-      "isUp": false,
-      "type": "index",
-      "badge_label": "",
-      "badge_class": "index"
-    },
-    {
-      "name": "美元/日元",
-      "price": "156.20",
-      "change": "+2.34 (+1.52%)",
-      "isUp": true,
-      "type": "forex",
-      "badge_label": "FX",
-      "badge_class": "forex"
-    },
-    {
-      "name": "机器人/AI ETF-BOTZ",
-      "price": "35.95",
-      "change": "+0.34 (+0.95%)",
-      "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
       "badge_class": "etf"
@@ -154,6 +145,15 @@
       "badge_class": "etf"
     },
     {
+      "name": "AI基础设施ETF-TCAI",
+      "price": "47.24",
+      "change": "-1.00 (-2.07%)",
+      "isUp": false,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
       "name": "机器人与自动化指数ETF-ROBO",
       "price": "80.57",
       "change": "+0.92 (+1.16%)",
@@ -163,54 +163,9 @@
       "badge_class": "etf"
     },
     {
-      "name": "半导体设备/材料-SMH",
-      "price": "567.01",
-      "change": "-6.72 (-1.17%)",
-      "isUp": false,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
-      "name": "医療機器 XHE",
-      "price": "94.20",
-      "change": "+1.88 (+2.04%)",
-      "isUp": true,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
-      "name": "産業機械 XLI",
-      "price": "175.27",
-      "change": "+0.85 (+0.49%)",
-      "isUp": true,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
-      "name": "日本・機械 ETF",
-      "price": "82520.00",
-      "change": "-1480.00 (-1.76%)",
-      "isUp": false,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
-      "name": "製薬・医療 XLV",
-      "price": "171.45",
-      "change": "+4.32 (+2.58%)",
-      "isUp": true,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
-      "name": "原材料 XLB",
-      "price": "52.44",
-      "change": "+0.50 (+0.96%)",
+      "name": "机器人/AI ETF-BOTZ",
+      "price": "35.95",
+      "change": "+0.34 (+0.95%)",
       "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
@@ -226,9 +181,45 @@
       "badge_class": "etf"
     },
     {
-      "name": "情報技術 VGT",
-      "price": "121.27",
-      "change": "+0.22 (+0.18%)",
+      "name": "日本・電機精密 ETF",
+      "price": "64520.00",
+      "change": "+2520.00 (+4.06%)",
+      "isUp": true,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
+    },
+    {
+      "name": "医療機器 XHE",
+      "price": "94.20",
+      "change": "+1.88 (+2.04%)",
+      "isUp": true,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
+      "name": "製薬・医療 XLV",
+      "price": "171.45",
+      "change": "+4.32 (+2.58%)",
+      "isUp": true,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
+      "name": "日本・機械 ETF",
+      "price": "84000.00",
+      "change": "+2330.00 (+2.85%)",
+      "isUp": true,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
+    },
+    {
+      "name": "原材料 XLB",
+      "price": "52.44",
+      "change": "+0.50 (+0.96%)",
       "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
@@ -236,17 +227,8 @@
     },
     {
       "name": "日本・情報通信 ETF",
-      "price": "48530.00",
-      "change": "-230.00 (-0.47%)",
-      "isUp": false,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
-      "name": "日本・電機精密 ETF",
-      "price": "63180.00",
-      "change": "-1340.00 (-2.08%)",
+      "price": "48760.00",
+      "change": "-450.00 (-0.91%)",
       "isUp": false,
       "type": "j-etf",
       "badge_label": "J-ETF",
@@ -254,53 +236,26 @@
     },
     {
       "name": "日本・素材・化学 ETF",
-      "price": "36540.00",
-      "change": "-130.00 (-0.35%)",
-      "isUp": false,
+      "price": "36670.00",
+      "change": "+600.00 (+1.66%)",
+      "isUp": true,
       "type": "j-etf",
       "badge_label": "J-ETF",
       "badge_class": "j-etf"
     },
     {
-      "name": "金融・保険 XLF",
-      "price": "58.10",
-      "change": "+0.80 (+1.40%)",
+      "name": "産業機械 XLI",
+      "price": "175.27",
+      "change": "+0.85 (+0.49%)",
       "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
       "badge_class": "etf"
     },
     {
-      "name": "日本・医薬品 ETF",
-      "price": "30410.00",
-      "change": "+370.00 (+1.23%)",
-      "isUp": true,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
-      "name": "宇宙・防衛 ITA",
-      "price": "225.61",
-      "change": "+2.08 (+0.93%)",
-      "isUp": true,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
-      "name": "日本・金融 ETF",
-      "price": "43610.00",
-      "change": "+160.00 (+0.37%)",
-      "isUp": true,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
-      "name": "銀行 KBE",
-      "price": "69.34",
-      "change": "+0.94 (+1.37%)",
+      "name": "情報技術 VGT",
+      "price": "121.27",
+      "change": "+0.22 (+0.18%)",
       "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
@@ -325,37 +280,82 @@
       "badge_class": "etf"
     },
     {
-      "name": "日本・エネルギー ETF",
-      "price": "35210.00",
-      "change": "-650.00 (-1.81%)",
-      "isUp": false,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
-      "name": "防衛テック ETF",
-      "price": "820.00",
-      "change": "-9.00 (-1.09%)",
-      "isUp": false,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
-      "name": "日本・銀行 ETF",
-      "price": "42480.00",
-      "change": "+380.00 (+0.90%)",
+      "name": "日本・医薬品 ETF",
+      "price": "30040.00",
+      "change": "+55.00 (+0.18%)",
       "isUp": true,
       "type": "j-etf",
       "badge_label": "J-ETF",
       "badge_class": "j-etf"
     },
     {
+      "name": "銀行 KBE",
+      "price": "69.34",
+      "change": "+0.94 (+1.37%)",
+      "isUp": true,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
+      "name": "宇宙・防衛 ITA",
+      "price": "225.61",
+      "change": "+2.08 (+0.93%)",
+      "isUp": true,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
       "name": "日本・電力ガス ETF",
-      "price": "12600.00",
-      "change": "-270.00 (-2.10%)",
+      "price": "12870.00",
+      "change": "+180.00 (+1.42%)",
+      "isUp": true,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
+    },
+    {
+      "name": "金融・保険 XLF",
+      "price": "58.10",
+      "change": "+0.80 (+1.40%)",
+      "isUp": true,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
+      "name": "日本・金融 ETF",
+      "price": "43450.00",
+      "change": "+550.00 (+1.28%)",
+      "isUp": true,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
+    },
+    {
+      "name": "日本・エネルギー ETF",
+      "price": "35860.00",
+      "change": "-330.00 (-0.91%)",
       "isUp": false,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
+    },
+    {
+      "name": "生活必需品 XLP",
+      "price": "84.58",
+      "change": "+0.56 (+0.67%)",
+      "isUp": true,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
+      "name": "防衛テック ETF",
+      "price": "829.00",
+      "change": "+29.00 (+3.62%)",
+      "isUp": true,
       "type": "j-etf",
       "badge_label": "J-ETF",
       "badge_class": "j-etf"
@@ -370,9 +370,36 @@
       "badge_class": "etf"
     },
     {
-      "name": "生活必需品 XLP",
-      "price": "84.58",
-      "change": "+0.56 (+0.67%)",
+      "name": "自動車メーカー CARZ",
+      "price": "106.39",
+      "change": "-1.19 (-1.10%)",
+      "isUp": false,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
+      "name": "日本・銀行 ETF",
+      "price": "42100.00",
+      "change": "+470.00 (+1.13%)",
+      "isUp": true,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
+    },
+    {
+      "name": "金属鉱業 XME",
+      "price": "118.62",
+      "change": "-1.33 (-1.11%)",
+      "isUp": false,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
+      "name": "Eコマース IBUY",
+      "price": "71.67",
+      "change": "+2.22 (+3.20%)",
       "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
@@ -388,64 +415,55 @@
       "badge_class": "etf"
     },
     {
-      "name": "金属鉱業 XME",
-      "price": "118.62",
-      "change": "-1.33 (-1.11%)",
-      "isUp": false,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
+      "name": "日本・自動車 ETF",
+      "price": "30040.00",
+      "change": "+55.00 (+0.18%)",
+      "isUp": true,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
     },
     {
       "name": "日本・食品 ETF",
-      "price": "48090.00",
-      "change": "+380.00 (+0.80%)",
-      "isUp": true,
+      "price": "47710.00",
+      "change": "-90.00 (-0.19%)",
+      "isUp": false,
       "type": "j-etf",
       "badge_label": "J-ETF",
       "badge_class": "j-etf"
-    },
-    {
-      "name": "日本・自動車 ETF",
-      "price": "30410.00",
-      "change": "+370.00 (+1.23%)",
-      "isUp": true,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
-      "name": "Eコマース IBUY",
-      "price": "71.67",
-      "change": "+2.22 (+3.20%)",
-      "isUp": true,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
     },
     {
       "name": "日本・小売 ETF",
-      "price": "37550.00",
-      "change": "+290.00 (+0.78%)",
+      "price": "37260.00",
+      "change": "-400.00 (-1.06%)",
+      "isUp": false,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
+    },
+    {
+      "name": "日本・不動産 ETF",
+      "price": "48490.00",
+      "change": "-610.00 (-1.24%)",
+      "isUp": false,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
+    },
+    {
+      "name": "日本・建設・資材 ETF",
+      "price": "45340.00",
+      "change": "+740.00 (+1.66%)",
       "isUp": true,
       "type": "j-etf",
       "badge_label": "J-ETF",
       "badge_class": "j-etf"
     },
     {
-      "name": "日本・鉄鋼非鉄 ETF",
-      "price": "63620.00",
-      "change": "-1010.00 (-1.56%)",
-      "isUp": false,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
-      "name": "自動車メーカー CARZ",
-      "price": "106.39",
-      "change": "-1.19 (-1.10%)",
-      "isUp": false,
+      "name": "Global X半导体ETF-2243.T",
+      "price": "4376.00",
+      "change": "+59.00 (+1.37%)",
+      "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
       "badge_class": "etf"
@@ -460,28 +478,64 @@
       "badge_class": "etf"
     },
     {
-      "name": "日本・商社・卸売 ETF",
-      "price": "275.50",
-      "change": "-4.70 (-1.68%)",
-      "isUp": false,
+      "name": "日本・鉄鋼非鉄 ETF",
+      "price": "64630.00",
+      "change": "+1580.00 (+2.51%)",
+      "isUp": true,
       "type": "j-etf",
       "badge_label": "J-ETF",
       "badge_class": "j-etf"
     },
     {
-      "name": "Global X半导体ETF-2243.T",
-      "price": "4244.00",
-      "change": "-132.00 (-3.02%)",
-      "isUp": false,
+      "name": "日本・商社・卸売 ETF",
+      "price": "280.20",
+      "change": "+1.90 (+0.68%)",
+      "isUp": true,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
+    },
+    {
+      "name": "NF・日経半導体ETF-200A.T",
+      "price": "4533.00",
+      "change": "+148.00 (+3.38%)",
+      "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
       "badge_class": "etf"
     },
     {
-      "name": "NF・日経半導体ETF-200A.T",
-      "price": "4309.00",
-      "change": "-224.00 (-4.94%)",
-      "isUp": false,
+      "name": "标普 500",
+      "price": "7718.60",
+      "change": "+45.08 (+0.59%)",
+      "isUp": true,
+      "type": "index",
+      "badge_label": "",
+      "badge_class": "index"
+    },
+    {
+      "name": "德国 DAX",
+      "price": "26046.40",
+      "change": "+39.87 (+0.15%)",
+      "isUp": true,
+      "type": "index",
+      "badge_label": "",
+      "badge_class": "index"
+    },
+    {
+      "name": "富时 100",
+      "price": "10831.10",
+      "change": "+9.00 (+0.08%)",
+      "isUp": true,
+      "type": "index",
+      "badge_label": "",
+      "badge_class": "index"
+    },
+    {
+      "name": "纳指100ETF-QQQ",
+      "price": "718.96",
+      "change": "+0.60 (+0.08%)",
+      "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
       "badge_class": "etf"
@@ -496,22 +550,13 @@
       "badge_class": "bond"
     },
     {
-      "name": "日本・建設・資材 ETF",
-      "price": "44700.00",
-      "change": "-640.00 (-1.41%)",
+      "name": "5年国债收益率",
+      "price": "4.55",
+      "change": "-0.02 (-0.50%)",
       "isUp": false,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
-      "name": "日本・不動産 ETF",
-      "price": "48980.00",
-      "change": "+490.00 (+1.01%)",
-      "isUp": true,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
+      "type": "bond",
+      "badge_label": "债券",
+      "badge_class": "bond"
     },
     {
       "name": "VIX 恐慌指数",
@@ -523,54 +568,9 @@
       "badge_class": "sentiment"
     },
     {
-      "name": "纳指100ETF-QQQ",
-      "price": "718.96",
-      "change": "+0.60 (+0.08%)",
-      "isUp": true,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
-      "name": "5年国债收益率",
-      "price": "4.55",
-      "change": "-0.02 (-0.50%)",
-      "isUp": false,
-      "type": "bond",
-      "badge_label": "债券",
-      "badge_class": "bond"
-    },
-    {
-      "name": "标普 500",
-      "price": "7718.60",
-      "change": "+45.08 (+0.59%)",
-      "isUp": true,
-      "type": "index",
-      "badge_label": "",
-      "badge_class": "index"
-    },
-    {
-      "name": "德国 DAX",
-      "price": "26006.53",
-      "change": "-1.10 (-0.00%)",
-      "isUp": false,
-      "type": "index",
-      "badge_label": "",
-      "badge_class": "index"
-    },
-    {
-      "name": "富时 100",
-      "price": "10822.10",
-      "change": "+10.44 (+0.10%)",
-      "isUp": true,
-      "type": "index",
-      "badge_label": "",
-      "badge_class": "index"
-    },
-    {
       "name": "法国 CAC 40",
-      "price": "8306.15",
-      "change": "-11.83 (-0.14%)",
+      "price": "8278.77",
+      "change": "-27.38 (-0.33%)",
       "isUp": false,
       "type": "index",
       "badge_label": "",
@@ -988,7 +988,7 @@
       "per": "74.64",
       "roe": "16.5%",
       "forward_per": "33.54",
-      "pbr": "10.67",
+      "pbr": "10.83",
       "distHigh": "-31.7%",
       "ytdChange": "152.53%",
       "distWeek": "-2.8%",
@@ -2226,7 +2226,7 @@
       "per": "11.09",
       "roe": "354.1%",
       "forward_per": "5.44",
-      "pbr": "6.96",
+      "pbr": "7.07",
       "distHigh": "-4.7%",
       "ytdChange": "10.44%",
       "distWeek": "-2.2%",
@@ -2563,7 +2563,7 @@
       "price": "57410.00",
       "change": "-2120.00 (-3.56%)",
       "isUp": false,
-      "per": "56.73",
+      "per": "58.82",
       "roe": "87.1%",
       "forward_per": "--",
       "pbr": "13.09",
@@ -3124,33 +3124,33 @@
         }
       ],
       "market_type": "德股",
-      "price": "53.67",
-      "change": "+0.31 (+0.58%)",
-      "isUp": true,
+      "price": "53.36",
+      "change": "-0.15 (-0.28%)",
+      "isUp": false,
       "per": "22.55",
       "roe": "6.1%",
       "forward_per": "18.03",
       "pbr": "1.28",
-      "distHigh": "-2.5%",
-      "ytdChange": "24.99%",
-      "distWeek": "-0.6%",
-      "distMonth": "-0.6%",
+      "distHigh": "-3.1%",
+      "ytdChange": "24.27%",
+      "distWeek": "-1.1%",
+      "distMonth": "-1.1%",
       "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏强",
         "class": "signal-up",
-        "reason": "综合分 75/100 · 置信度高 · RSI 74 · 量比 0.8x",
+        "reason": "综合分 75/100 · 置信度高 · RSI 75 · 量比 0.6x",
         "score": 75,
         "confidence": "高",
-        "rsi": 73.9,
-        "volume_ratio": 0.84,
-        "plan": "触发：放量突破近1周高点 53.98；失效：跌回MA5 53.39 下方"
+        "rsi": 74.7,
+        "volume_ratio": 0.64,
+        "plan": "触发：放量突破近1周高点 53.98；失效：跌回MA5 53.25 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
         "class": "signal-flat",
         "reason": "量能未出现明显异常",
-        "volume_ratio": 0.84
+        "volume_ratio": 0.64
       },
       "source": "yfinance"
     },
@@ -3547,7 +3547,7 @@
       "price": "1565.00",
       "change": "-33.00 (-2.07%)",
       "isUp": false,
-      "per": "2445.31",
+      "per": "2484.13",
       "roe": "0.3%",
       "forward_per": "--",
       "pbr": "8.17",
@@ -3627,7 +3627,7 @@
       "price": "8104.00",
       "change": "-375.00 (-4.42%)",
       "isUp": false,
-      "per": "24.20",
+      "per": "25.32",
       "roe": "5.5%",
       "forward_per": "41.52",
       "pbr": "2.37",
@@ -3707,7 +3707,7 @@
       "price": "5020.00",
       "change": "-226.00 (-4.31%)",
       "isUp": false,
-      "per": "23.09",
+      "per": "22.12",
       "roe": "5.6%",
       "forward_per": "18.79",
       "pbr": "1.02",
@@ -3867,7 +3867,7 @@
       "price": "5452.00",
       "change": "-218.00 (-3.84%)",
       "isUp": false,
-      "per": "13.26",
+      "per": "12.76",
       "roe": "6.1%",
       "forward_per": "13.21",
       "pbr": "0.76",
@@ -3943,7 +3943,7 @@
       "price": "5100.00",
       "change": "-280.00 (-5.20%)",
       "isUp": false,
-      "per": "15.39",
+      "per": "16.23",
       "roe": "5.0%",
       "forward_per": "13.23",
       "pbr": "0.79",
@@ -4257,7 +4257,7 @@
       "price": "1130.00",
       "change": "-10.00 (-0.88%)",
       "isUp": false,
-      "per": "6.98",
+      "per": "7.04",
       "roe": "8.5%",
       "forward_per": "--",
       "pbr": "0.55",
@@ -4497,7 +4497,7 @@
       "price": "3000.00",
       "change": "-145.00 (-4.61%)",
       "isUp": false,
-      "per": "14.51",
+      "per": "13.85",
       "roe": "13.9%",
       "forward_per": "17.58",
       "pbr": "1.79",
@@ -4587,7 +4587,7 @@
       "price": "963.00",
       "change": "-17.00 (-1.73%)",
       "isUp": false,
-      "per": "9.96",
+      "per": "10.13",
       "roe": "6.4%",
       "forward_per": "--",
       "pbr": "0.56",
@@ -4759,7 +4759,7 @@
       "price": "568.10",
       "change": "-22.30 (-3.78%)",
       "isUp": false,
-      "per": "15.30",
+      "per": "15.90",
       "roe": "13.2%",
       "forward_per": "14.59",
       "pbr": "0.85",
@@ -4939,7 +4939,7 @@
       "price": "5053.00",
       "change": "-427.00 (-7.79%)",
       "isUp": false,
-      "per": "10.23",
+      "per": "11.10",
       "roe": "12.0%",
       "forward_per": "14.36",
       "pbr": "1.02",
@@ -5119,7 +5119,7 @@
       "price": "705.00",
       "change": "-23.00 (-3.16%)",
       "isUp": false,
-      "per": "0.47",
+      "per": "0.48",
       "roe": "6.1%",
       "forward_per": "--",
       "pbr": "0.38",
@@ -5209,7 +5209,7 @@
       "price": "2935.00",
       "change": "-180.00 (-5.78%)",
       "isUp": false,
-      "per": "13.57",
+      "per": "12.79",
       "roe": "28.4%",
       "forward_per": "9.90",
       "pbr": "3.01",
@@ -5291,7 +5291,7 @@
       "price": "34910.00",
       "change": "-680.00 (-1.91%)",
       "isUp": false,
-      "per": "40.53",
+      "per": "41.32",
       "roe": "33.9%",
       "forward_per": "31.96",
       "pbr": "12.68",
@@ -5365,7 +5365,7 @@
       "price": "9130.00",
       "change": "-510.00 (-5.29%)",
       "isUp": false,
-      "per": "34.96",
+      "per": "33.11",
       "roe": "10.7%",
       "forward_per": "20.74",
       "pbr": "1.52",
@@ -5449,7 +5449,7 @@
       "price": "2225.00",
       "change": "-134.50 (-5.70%)",
       "isUp": false,
-      "per": "48.61",
+      "per": "51.54",
       "roe": "5.5%",
       "forward_per": "26.38",
       "pbr": "2.03",
@@ -5539,7 +5539,7 @@
       "price": "2519.00",
       "change": "-174.00 (-6.46%)",
       "isUp": false,
-      "per": "28.09",
+      "per": "30.03",
       "roe": "7.6%",
       "forward_per": "14.52",
       "pbr": "1.76",
@@ -5775,7 +5775,7 @@
       "price": "1812.00",
       "change": "-63.50 (-3.39%)",
       "isUp": false,
-      "per": "20.38",
+      "per": "21.10",
       "roe": "6.8%",
       "forward_per": "20.70",
       "pbr": "1.14",
@@ -6784,7 +6784,7 @@
       "per": "51.11",
       "roe": "36.5%",
       "forward_per": "31.93",
-      "pbr": "16.94",
+      "pbr": "18.53",
       "distHigh": "-23.7%",
       "ytdChange": "79.47%",
       "distWeek": "-1.5%",
@@ -6905,7 +6905,7 @@
       "price": "54000.00",
       "change": "-1840.00 (-3.30%)",
       "isUp": false,
-      "per": "44.64",
+      "per": "43.10",
       "roe": "30.9%",
       "forward_per": "42.18",
       "pbr": "11.46",
@@ -7041,7 +7041,7 @@
       "price": "53890.00",
       "change": "-3260.00 (-5.70%)",
       "isUp": false,
-      "per": "45.87",
+      "per": "43.29",
       "roe": "27.4%",
       "forward_per": "39.60",
       "pbr": "10.04",
@@ -7225,7 +7225,7 @@
       "price": "2187.00",
       "change": "-122.00 (-5.28%)",
       "isUp": false,
-      "per": "37.73",
+      "per": "35.71",
       "roe": "10.0%",
       "forward_per": "11.32",
       "pbr": "2.17",
@@ -7475,7 +7475,7 @@
       "price": "3655.00",
       "change": "-189.00 (-4.92%)",
       "isUp": false,
-      "per": "33.48",
+      "per": "35.21",
       "roe": "15.2%",
       "forward_per": "26.59",
       "pbr": "4.64",
@@ -7615,7 +7615,7 @@
       "price": "6260.00",
       "change": "-340.00 (-5.15%)",
       "isUp": false,
-      "per": "21.51",
+      "per": "22.68",
       "roe": "13.5%",
       "forward_per": "17.19",
       "pbr": "1.97",
@@ -7731,7 +7731,7 @@
       "price": "3910.00",
       "change": "-200.00 (-4.87%)",
       "isUp": false,
-      "per": "24.16",
+      "per": "22.99",
       "roe": "20.5%",
       "forward_per": "5.25",
       "pbr": "4.79",
@@ -7923,7 +7923,7 @@
       "price": "3085.00",
       "change": "-166.00 (-5.11%)",
       "isUp": false,
-      "per": "33.89",
+      "per": "35.71",
       "roe": "11.3%",
       "forward_per": "44.25",
       "pbr": "2.96",
@@ -7987,7 +7987,7 @@
       "price": "5100.00",
       "change": "-400.00 (-7.27%)",
       "isUp": false,
-      "per": "36.65",
+      "per": "39.53",
       "roe": "23.5%",
       "forward_per": "31.02",
       "pbr": "6.40",
@@ -8061,7 +8061,7 @@
       "price": "6829.00",
       "change": "-234.00 (-3.31%)",
       "isUp": false,
-      "per": "16.34",
+      "per": "15.80",
       "roe": "11.3%",
       "forward_per": "12.47",
       "pbr": "2.36",
@@ -8121,7 +8121,7 @@
       "price": "4362.00",
       "change": "-140.00 (-3.11%)",
       "isUp": false,
-      "per": "11.02",
+      "per": "11.38",
       "roe": "10.4%",
       "forward_per": "12.03",
       "pbr": "1.06",
@@ -9003,7 +9003,7 @@
       "price": "3666.00",
       "change": "-174.00 (-4.53%)",
       "isUp": false,
-      "per": "35.62",
+      "per": "37.31",
       "roe": "22.6%",
       "forward_per": "12.36",
       "pbr": "5.90",
@@ -9067,7 +9067,7 @@
       "price": "2071.00",
       "change": "-130.50 (-5.93%)",
       "isUp": false,
-      "per": "17.49",
+      "per": "17.48",
       "roe": "15.8%",
       "forward_per": "9.37",
       "pbr": "2.28",
@@ -9131,7 +9131,7 @@
       "price": "5083.00",
       "change": "-158.00 (-3.01%)",
       "isUp": false,
-      "per": "53.58",
+      "per": "55.25",
       "roe": "39.0%",
       "forward_per": "16.78",
       "pbr": "13.83",
@@ -9215,7 +9215,7 @@
       "price": "1061.00",
       "change": "-38.00 (-3.46%)",
       "isUp": false,
-      "per": "14.90",
+      "per": "15.43",
       "roe": "1.3%",
       "forward_per": "--",
       "pbr": "1.12",
@@ -9279,7 +9279,7 @@
       "price": "5100.00",
       "change": "-400.00 (-7.27%)",
       "isUp": false,
-      "per": "36.65",
+      "per": "39.53",
       "roe": "23.5%",
       "forward_per": "31.02",
       "pbr": "6.40",
@@ -9689,7 +9689,7 @@
       "price": "5187.00",
       "change": "-171.00 (-3.19%)",
       "isUp": false,
-      "per": "29.34",
+      "per": "30.30",
       "roe": "--",
       "forward_per": "29.12",
       "pbr": "3.54",
@@ -10041,7 +10041,7 @@
       "price": "2775.00",
       "change": "-205.50 (-6.89%)",
       "isUp": false,
-      "per": "26.99",
+      "per": "28.98",
       "roe": "11.6%",
       "forward_per": "25.96",
       "pbr": "2.29",
@@ -10115,7 +10115,7 @@
       "price": "4164.00",
       "change": "-257.00 (-5.81%)",
       "isUp": false,
-      "per": "54.35",
+      "per": "51.28",
       "roe": "5.2%",
       "forward_per": "24.66",
       "pbr": "1.80",
@@ -10231,7 +10231,7 @@
       "price": "3910.00",
       "change": "-200.00 (-4.87%)",
       "isUp": false,
-      "per": "24.16",
+      "per": "22.99",
       "roe": "20.5%",
       "forward_per": "5.25",
       "pbr": "4.79",
@@ -11255,7 +11255,7 @@
       "price": "3615.00",
       "change": "-15.00 (-0.41%)",
       "isUp": false,
-      "per": "30.27",
+      "per": "30.40",
       "roe": "18.1%",
       "forward_per": "33.75",
       "pbr": "5.79",
@@ -11601,7 +11601,7 @@
       "price": "2722.00",
       "change": "-90.00 (-3.20%)",
       "isUp": false,
-      "per": "26.81",
+      "per": "25.97",
       "roe": "6.3%",
       "forward_per": "14.36",
       "pbr": "1.77",
@@ -11685,7 +11685,7 @@
       "price": "5980.00",
       "change": "-310.00 (-4.93%)",
       "isUp": false,
-      "per": "36.23",
+      "per": "34.36",
       "roe": "5.1%",
       "forward_per": "22.06",
       "pbr": "1.41",
@@ -11905,7 +11905,7 @@
       "price": "1020.00",
       "change": "-25.00 (-2.39%)",
       "isUp": false,
-      "per": "122.01",
+      "per": "119.02",
       "roe": "0.7%",
       "forward_per": "139.73",
       "pbr": "2.05",
@@ -11986,27 +11986,27 @@
         }
       ],
       "market_type": "德股",
-      "price": "272.50",
-      "change": "-0.15 (-0.06%)",
-      "isUp": false,
+      "price": "272.65",
+      "change": "+2.05 (+0.76%)",
+      "isUp": true,
       "per": "27.25",
       "roe": "12.5%",
       "forward_per": "20.90",
       "pbr": "3.09",
-      "distHigh": "-6.6%",
-      "ytdChange": "15.43%",
-      "distWeek": "-4.1%",
-      "distMonth": "-6.6%",
+      "distHigh": "-6.5%",
+      "ytdChange": "15.49%",
+      "distWeek": "-5.9%",
+      "distMonth": "-6.5%",
       "trend": "熊市空头",
       "intraday_signal": {
-        "label": "偏弱观察",
+        "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 35/100 · 置信度中 · RSI 46 · 量比 0.8x",
-        "score": 35,
-        "confidence": "中",
-        "rsi": 45.8,
+        "reason": "综合分 25/100 · 置信度高 · RSI 39 · 量比 0.8x",
+        "score": 25,
+        "confidence": "高",
+        "rsi": 39.4,
         "volume_ratio": 0.75,
-        "plan": "触发：重新站上MA5 273.48 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：重新站上MA5 276.10 且量比>1.2；失效：跌破近1周低位"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -12389,7 +12389,7 @@
       "price": "3775.00",
       "change": "-56.00 (-1.46%)",
       "isUp": false,
-      "per": "21.61",
+      "per": "21.60",
       "roe": "16.2%",
       "forward_per": "24.88",
       "pbr": "3.22",
@@ -13170,7 +13170,7 @@
       "price": "3708.00",
       "change": "-121.00 (-3.16%)",
       "isUp": false,
-      "per": "52.92",
+      "per": "54.64",
       "roe": "14.7%",
       "forward_per": "40.01",
       "pbr": "3.93",
@@ -13516,7 +13516,7 @@
       "price": "4725.00",
       "change": "-180.00 (-3.67%)",
       "isUp": false,
-      "per": "7.81",
+      "per": "7.53",
       "roe": "18.7%",
       "forward_per": "12.03",
       "pbr": "1.18",
@@ -13806,7 +13806,7 @@
       "price": "2684.00",
       "change": "-326.00 (-10.83%)",
       "isUp": false,
-      "per": "156.23",
+      "per": "138.92",
       "roe": "2.0%",
       "forward_per": "15.11",
       "pbr": "1.41",
@@ -14274,7 +14274,7 @@
       "price": "6556.00",
       "change": "+339.00 (+5.45%)",
       "isUp": true,
-      "per": "7.13",
+      "per": "7.51",
       "roe": "32.0%",
       "forward_per": "22.20",
       "pbr": "2.05",
@@ -14351,7 +14351,7 @@
       "isUp": false,
       "per": "4.59",
       "roe": "44.0%",
-      "forward_per": "42.53",
+      "forward_per": "--",
       "pbr": "1.42",
       "distHigh": "-67.8%",
       "ytdChange": "385.22%",
@@ -14415,7 +14415,7 @@
       "price": "3530.00",
       "change": "+40.00 (+1.15%)",
       "isUp": true,
-      "per": "19.79",
+      "per": "19.57",
       "roe": "11.1%",
       "forward_per": "--",
       "pbr": "1.73",
@@ -14499,7 +14499,7 @@
       "price": "1252.00",
       "change": "-11.50 (-0.91%)",
       "isUp": false,
-      "per": "27.99",
+      "per": "28.25",
       "roe": "--",
       "forward_per": "9.54",
       "pbr": "9.30",
@@ -14602,7 +14602,7 @@
       "price": "3656.00",
       "change": "-55.00 (-1.48%)",
       "isUp": false,
-      "per": "15.47",
+      "per": "15.70",
       "roe": "9.5%",
       "forward_per": "24.10",
       "pbr": "1.81",
@@ -14746,7 +14746,7 @@
       "price": "1756.50",
       "change": "-25.50 (-1.43%)",
       "isUp": false,
-      "per": "13.49",
+      "per": "13.30",
       "roe": "10.8%",
       "forward_per": "4.73",
       "pbr": "1.32",
@@ -14787,7 +14787,7 @@
       "price": "2491.00",
       "change": "-51.50 (-2.03%)",
       "isUp": false,
-      "per": "21.87",
+      "per": "22.32",
       "roe": "9.2%",
       "forward_per": "28.29",
       "pbr": "1.86",
@@ -14828,7 +14828,7 @@
       "price": "1548.00",
       "change": "-33.50 (-2.12%)",
       "isUp": false,
-      "per": "11.26",
+      "per": "11.51",
       "roe": "--",
       "forward_per": "--",
       "pbr": "1.12",
@@ -14910,7 +14910,7 @@
       "price": "6045.00",
       "change": "-176.00 (-2.83%)",
       "isUp": false,
-      "per": "79.36",
+      "per": "76.92",
       "roe": "8.6%",
       "forward_per": "849.02",
       "pbr": "7.52",
@@ -15090,7 +15090,7 @@
       "price": "6523.00",
       "change": "-84.00 (-1.27%)",
       "isUp": false,
-      "per": "15.60",
+      "per": "15.80",
       "roe": "20.0%",
       "forward_per": "21.79",
       "pbr": "2.89",
@@ -15214,7 +15214,7 @@
       "price": "2859.00",
       "change": "-31.00 (-1.07%)",
       "isUp": false,
-      "per": "18.66",
+      "per": "18.45",
       "roe": "10.3%",
       "forward_per": "42.99",
       "pbr": "1.71",
@@ -15664,7 +15664,7 @@
       "price": "13145.00",
       "change": "+320.00 (+2.50%)",
       "isUp": true,
-      "per": "12.50",
+      "per": "12.82",
       "roe": "--",
       "forward_per": "27.62",
       "pbr": "2.30",
@@ -15832,7 +15832,7 @@
       "price": "2104.00",
       "change": "-34.00 (-1.59%)",
       "isUp": false,
-      "per": "8.61",
+      "per": "8.47",
       "roe": "17.7%",
       "forward_per": "15.74",
       "pbr": "1.40",
@@ -15978,7 +15978,7 @@
       "price": "4927.00",
       "change": "-63.00 (-1.26%)",
       "isUp": false,
-      "per": "23.51",
+      "per": "23.81",
       "roe": "10.1%",
       "forward_per": "23.24",
       "pbr": "1.87",
@@ -16040,7 +16040,7 @@
       "price": "3660.00",
       "change": "-4.00 (-0.11%)",
       "isUp": false,
-      "per": "20.16",
+      "per": "20.12",
       "roe": "10.7%",
       "forward_per": "24.29",
       "pbr": "1.62",
@@ -16116,7 +16116,7 @@
       "price": "3654.00",
       "change": "-126.00 (-3.33%)",
       "isUp": false,
-      "per": "20.28",
+      "per": "19.61",
       "roe": "13.2%",
       "forward_per": "19.95",
       "pbr": "2.56",
@@ -16234,7 +16234,7 @@
       "price": "1933.00",
       "change": "-96.00 (-4.73%)",
       "isUp": false,
-      "per": "32.08",
+      "per": "32.05",
       "roe": "25.5%",
       "forward_per": "18.30",
       "pbr": "3.57",
@@ -16304,7 +16304,7 @@
       "price": "2196.00",
       "change": "-42.00 (-1.88%)",
       "isUp": false,
-      "per": "21.29",
+      "per": "21.69",
       "roe": "20.3%",
       "forward_per": "20.85",
       "pbr": "3.59",
@@ -16366,7 +16366,7 @@
       "price": "4865.00",
       "change": "-215.00 (-4.23%)",
       "isUp": false,
-      "per": "15.78",
+      "per": "16.47",
       "roe": "19.7%",
       "forward_per": "--",
       "pbr": "2.45",
@@ -16558,7 +16558,7 @@
       "price": "5150.00",
       "change": "-200.00 (-3.74%)",
       "isUp": false,
-      "per": "14.47",
+      "per": "13.93",
       "roe": "9.0%",
       "forward_per": "12.39",
       "pbr": "1.20",
@@ -16756,7 +16756,7 @@
       "price": "9740.00",
       "change": "-680.00 (-6.53%)",
       "isUp": false,
-      "per": "16.75",
+      "per": "17.92",
       "roe": "11.2%",
       "forward_per": "15.16",
       "pbr": "1.37",
@@ -16876,7 +16876,7 @@
       "price": "1939.00",
       "change": "-108.00 (-5.28%)",
       "isUp": false,
-      "per": "17.38",
+      "per": "18.35",
       "roe": "15.3%",
       "forward_per": "5.69",
       "pbr": "2.35",
@@ -16936,7 +16936,7 @@
       "price": "968.00",
       "change": "-1.00 (-0.10%)",
       "isUp": false,
-      "per": "17.07",
+      "per": "17.04",
       "roe": "44.8%",
       "forward_per": "6.80",
       "pbr": "7.05",
@@ -17060,7 +17060,7 @@
       "price": "8920.00",
       "change": "+42.00 (+0.47%)",
       "isUp": true,
-      "per": "20.62",
+      "per": "20.70",
       "roe": "24.3%",
       "forward_per": "20.63",
       "pbr": "4.38",
@@ -17114,7 +17114,7 @@
       "price": "592.00",
       "change": "-3.00 (-0.50%)",
       "isUp": false,
-      "per": "10.98",
+      "per": "11.04",
       "roe": "24.4%",
       "forward_per": "--",
       "pbr": "2.23",
@@ -17288,7 +17288,7 @@
       "price": "15690.00",
       "change": "-450.00 (-2.79%)",
       "isUp": false,
-      "per": "45.21",
+      "per": "46.51",
       "roe": "36.2%",
       "forward_per": "51.85",
       "pbr": "12.31",
@@ -17480,7 +17480,7 @@
       "price": "1963.00",
       "change": "+62.00 (+3.26%)",
       "isUp": true,
-      "per": "27.32",
+      "per": "26.46",
       "roe": "29.9%",
       "forward_per": "32.25",
       "pbr": "7.99",
@@ -17592,7 +17592,7 @@
       "price": "2335.50",
       "change": "-60.50 (-2.53%)",
       "isUp": false,
-      "per": "16.03",
+      "per": "16.45",
       "roe": "8.2%",
       "forward_per": "--",
       "pbr": "1.15",
@@ -17648,7 +17648,7 @@
       "price": "3144.00",
       "change": "-86.00 (-2.66%)",
       "isUp": false,
-      "per": "19.99",
+      "per": "20.53",
       "roe": "5.7%",
       "forward_per": "28.95",
       "pbr": "0.93",
@@ -17816,7 +17816,7 @@
       "price": "8076.00",
       "change": "-259.00 (-3.11%)",
       "isUp": false,
-      "per": "16.71",
+      "per": "17.24",
       "roe": "9.7%",
       "forward_per": "35.70",
       "pbr": "1.28",
@@ -17935,33 +17935,33 @@
         }
       ],
       "market_type": "日股",
-      "price": "4533.00",
-      "change": "+224.00 (+5.20%)",
-      "isUp": true,
+      "price": "4385.00",
+      "change": "-148.00 (-3.26%)",
+      "isUp": false,
       "per": "38.03",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
-      "distHigh": "-32.0%",
-      "ytdChange": "81.79%",
-      "distWeek": "-0.0%",
-      "distMonth": "-7.0%",
-      "trend": "牛市多头",
+      "distHigh": "-34.2%",
+      "ytdChange": "75.86%",
+      "distWeek": "-4.7%",
+      "distMonth": "-10.1%",
+      "trend": "熊市空头",
       "intraday_signal": {
-        "label": "日内偏强",
-        "class": "signal-up",
-        "reason": "综合分 90/100 · 置信度高 · RSI 47 · 量比 1.5x",
-        "score": 90,
+        "label": "日内偏弱",
+        "class": "signal-down",
+        "reason": "综合分 20/100 · 置信度高 · RSI 54 · 量比 1.1x",
+        "score": 20,
         "confidence": "高",
-        "rsi": 46.6,
-        "volume_ratio": 1.49,
-        "plan": "触发：放量突破近1周高点 4535.00；失效：跌回MA5 4314.20 下方"
+        "rsi": 53.9,
+        "volume_ratio": 1.11,
+        "plan": "触发：重新站上MA5 4330.80 且量比>1.2；失效：跌破近1周低位"
       },
       "flow_proxy": {
-        "label": "偏流入",
-        "class": "signal-up",
-        "reason": "多头趋势且量能高于均值",
-        "volume_ratio": 1.49
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 1.11
       },
       "source": "yfinance"
     },
@@ -17995,33 +17995,33 @@
         }
       ],
       "market_type": "日股",
-      "price": "69620.00",
-      "change": "+2640.00 (+3.94%)",
-      "isUp": true,
+      "price": "67360.00",
+      "change": "-2260.00 (-3.25%)",
+      "isUp": false,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
-      "distHigh": "-19.4%",
-      "ytdChange": "52.21%",
-      "distWeek": "-0.9%",
-      "distMonth": "-9.5%",
+      "distHigh": "-22.0%",
+      "ytdChange": "47.27%",
+      "distWeek": "-4.5%",
+      "distMonth": "-12.4%",
       "trend": "熊市空头",
       "intraday_signal": {
-        "label": "偏弱观察",
+        "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 40/100 · 置信度中 · RSI 43 · 量比 0.9x",
-        "score": 40,
-        "confidence": "中",
-        "rsi": 43.0,
-        "volume_ratio": 0.94,
-        "plan": "触发：重新站上MA5 67322.00 且量比>1.2；失效：跌破近1周低位"
+        "reason": "综合分 20/100 · 置信度高 · RSI 49 · 量比 0.9x",
+        "score": 20,
+        "confidence": "高",
+        "rsi": 48.9,
+        "volume_ratio": 0.89,
+        "plan": "触发：重新站上MA5 66914.00 且量比>1.2；失效：跌破近1周低位"
       },
       "flow_proxy": {
         "label": "资金观望",
         "class": "signal-flat",
         "reason": "量能未出现明显异常",
-        "volume_ratio": 0.94
+        "volume_ratio": 0.89
       },
       "source": "yfinance"
     },
@@ -18065,33 +18065,33 @@
         }
       ],
       "market_type": "日股",
-      "price": "2719.00",
-      "change": "-110.00 (-3.89%)",
-      "isUp": false,
+      "price": "2804.00",
+      "change": "+85.00 (+3.13%)",
+      "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
-      "distHigh": "-67.4%",
-      "ytdChange": "-50.46%",
-      "distWeek": "-7.8%",
-      "distMonth": "-7.8%",
-      "trend": "熊市空头",
+      "distHigh": "-66.4%",
+      "ytdChange": "-48.92%",
+      "distWeek": "-4.9%",
+      "distMonth": "-4.9%",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
-        "class": "signal-down",
-        "reason": "综合分 10/100 · 置信度高 · RSI 55 · 量比 1.2x",
-        "score": 10,
+        "label": "日内偏强",
+        "class": "signal-up",
+        "reason": "综合分 80/100 · 置信度高 · RSI 49 · 量比 1.0x",
+        "score": 80,
         "confidence": "高",
-        "rsi": 54.6,
-        "volume_ratio": 1.21,
-        "plan": "触发：重新站上MA5 2821.40 且量比>1.2；失效：跌破近1周低位"
+        "rsi": 49.4,
+        "volume_ratio": 0.99,
+        "plan": "触发：放量突破近1周高点 2948.00；失效：跌回MA5 2833.20 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
-        "volume_ratio": 1.21
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.99
       },
       "source": "yfinance"
     },
@@ -18129,33 +18129,33 @@
         }
       ],
       "market_type": "日股",
-      "price": "3569.00",
-      "change": "-9.00 (-0.25%)",
+      "price": "3499.00",
+      "change": "-70.00 (-1.96%)",
       "isUp": false,
       "per": "14.61",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
-      "distHigh": "-2.4%",
-      "ytdChange": "25.46%",
-      "distWeek": "-2.4%",
-      "distMonth": "-2.4%",
-      "trend": "牛市多头",
+      "distHigh": "-4.3%",
+      "ytdChange": "23.00%",
+      "distWeek": "-3.8%",
+      "distMonth": "-4.3%",
+      "trend": "熊市空头",
       "intraday_signal": {
-        "label": "偏强观察",
-        "class": "signal-up",
-        "reason": "综合分 65/100 · 置信度中 · RSI 54 · 量比 1.1x",
-        "score": 65,
-        "confidence": "中",
-        "rsi": 54.1,
-        "volume_ratio": 1.05,
-        "plan": "触发：放量突破近1周高点 3655.00；失效：跌回MA5 3600.80 下方"
+        "label": "日内偏弱",
+        "class": "signal-down",
+        "reason": "综合分 20/100 · 置信度高 · RSI 54 · 量比 0.7x",
+        "score": 20,
+        "confidence": "高",
+        "rsi": 54.4,
+        "volume_ratio": 0.68,
+        "plan": "触发：重新站上MA5 3570.40 且量比>1.2；失效：跌破近1周低位"
       },
       "flow_proxy": {
         "label": "资金观望",
         "class": "signal-flat",
         "reason": "量能未出现明显异常",
-        "volume_ratio": 1.05
+        "volume_ratio": 0.68
       },
       "source": "yfinance"
     },
@@ -18189,33 +18189,33 @@
         }
       ],
       "market_type": "日股",
-      "price": "2102.00",
-      "change": "-38.00 (-1.78%)",
+      "price": "2085.00",
+      "change": "-17.00 (-0.81%)",
       "isUp": false,
       "per": "17.47",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
-      "distHigh": "-2.9%",
-      "ytdChange": "40.13%",
-      "distWeek": "-2.9%",
-      "distMonth": "-2.9%",
+      "distHigh": "-3.7%",
+      "ytdChange": "39.00%",
+      "distWeek": "-3.7%",
+      "distMonth": "-3.7%",
       "trend": "牛市多头",
       "intraday_signal": {
-        "label": "震荡观察",
-        "class": "signal-flat",
-        "reason": "综合分 50/100 · 置信度低 · RSI 52 · 量比 0.6x",
-        "score": 50,
-        "confidence": "低",
-        "rsi": 51.7,
-        "volume_ratio": 0.64,
-        "plan": "触发：放量突破近1周高点 2165.00；失效：跌回MA5 2124.20 下方"
+        "label": "日内偏强",
+        "class": "signal-up",
+        "reason": "综合分 75/100 · 置信度高 · RSI 62 · 量比 0.9x",
+        "score": 75,
+        "confidence": "高",
+        "rsi": 61.9,
+        "volume_ratio": 0.94,
+        "plan": "触发：放量突破近1周高点 2165.00；失效：跌回MA5 2117.00 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
         "class": "signal-flat",
         "reason": "量能未出现明显异常",
-        "volume_ratio": 0.64
+        "volume_ratio": 0.94
       },
       "source": "yfinance"
     },
@@ -18255,7 +18255,7 @@
       "price": "704.00",
       "change": "-1.00 (-0.14%)",
       "isUp": false,
-      "per": "26.07",
+      "per": "26.11",
       "roe": "2.3%",
       "forward_per": "14.22",
       "pbr": "0.52",
@@ -18641,7 +18641,7 @@
       "price": "411.00",
       "change": "-3.00 (-0.72%)",
       "isUp": false,
-      "per": "17.45",
+      "per": "17.33",
       "roe": "4.1%",
       "forward_per": "14.65",
       "pbr": "0.74",
@@ -18697,7 +18697,7 @@
       "price": "594.00",
       "change": "-24.00 (-3.88%)",
       "isUp": false,
-      "per": "19.73",
+      "per": "20.53",
       "roe": "4.7%",
       "forward_per": "22.12",
       "pbr": "0.80",
@@ -18760,7 +18760,7 @@
       "price": "1282.00",
       "change": "-38.00 (-2.88%)",
       "isUp": false,
-      "per": "40.47",
+      "per": "41.66",
       "roe": "8.6%",
       "forward_per": "39.09",
       "pbr": "4.30",
@@ -18820,7 +18820,7 @@
       "price": "734.00",
       "change": "-33.00 (-4.30%)",
       "isUp": false,
-      "per": "55.65",
+      "per": "58.16",
       "roe": "--",
       "forward_per": "15.79",
       "pbr": "0.60",
@@ -18940,7 +18940,7 @@
       "price": "624.00",
       "change": "-59.00 (-8.64%)",
       "isUp": false,
-      "per": "62.59",
+      "per": "68.50",
       "roe": "-0.9%",
       "forward_per": "10.26",
       "pbr": "0.66",
@@ -19000,7 +19000,7 @@
       "price": "1971.00",
       "change": "-54.00 (-2.67%)",
       "isUp": false,
-      "per": "7.47",
+      "per": "7.67",
       "roe": "11.9%",
       "forward_per": "--",
       "pbr": "0.58",
@@ -19134,7 +19134,7 @@
       "price": "1995.00",
       "change": "-45.00 (-2.21%)",
       "isUp": false,
-      "per": "38.46",
+      "per": "37.59",
       "roe": "36.5%",
       "forward_per": "56.37",
       "pbr": "11.98",
@@ -19190,7 +19190,7 @@
       "price": "4270.00",
       "change": "-170.00 (-3.83%)",
       "isUp": false,
-      "per": "43.32",
+      "per": "45.05",
       "roe": "40.8%",
       "forward_per": "21.00",
       "pbr": "14.43",
@@ -19377,7 +19377,7 @@
       "price": "704.00",
       "change": "-1.00 (-0.14%)",
       "isUp": false,
-      "per": "26.07",
+      "per": "26.11",
       "roe": "2.3%",
       "forward_per": "14.22",
       "pbr": "0.52",
@@ -19967,6 +19967,940 @@
       "source": "yfinance"
     },
     {
+      "symbol": "002046.SZ",
+      "code": "002046",
+      "name": "国机精工",
+      "sector": "18",
+      "industry": "18.1",
+      "feature": "**第一梯队｜金刚石铜**：已形成单晶金刚石、多晶金刚石和金刚石铜复合材料；CVD金刚石进入头部客户验证，金刚石铜已向重点客户送样。民用散热仍以验证和小批量为主。",
+      "tags": [
+        "金刚石铜",
+        "CVD金刚石",
+        "芯片散热",
+        "先进热管理",
+        "客户验证"
+      ],
+      "display_tags": [
+        "金刚石铜",
+        "CVD金刚石",
+        "芯片散热",
+        "先进热管理",
+        "客户验证"
+      ],
+      "tag_themes": [
+        {
+          "tag": "金刚石铜",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "金刚石铜",
+            "金刚石铜"
+          ]
+        },
+        {
+          "tag": "CVD金刚石",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "金刚石铜",
+            "CVD金刚石"
+          ]
+        },
+        {
+          "tag": "芯片散热",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "金刚石铜",
+            "芯片散热"
+          ]
+        },
+        {
+          "tag": "先进热管理",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "先进热管理",
+            "先进热管理"
+          ]
+        },
+        {
+          "tag": "客户验证",
+          "theme_path": []
+        }
+      ],
+      "market_type": "A股",
+      "price": "54.04",
+      "change": "+2.43 (+4.71%)",
+      "isUp": true,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "25.54%",
+      "distWeek": "-2.6%",
+      "distMonth": "-2.6%",
+      "trend": "牛市多头",
+      "intraday_signal": {
+        "label": "日内偏强",
+        "class": "signal-up",
+        "reason": "综合分 100/100 · 置信度高 · RSI 66 · 量比 1.4x",
+        "score": 100,
+        "confidence": "高",
+        "rsi": 66.0,
+        "volume_ratio": 1.42,
+        "plan": "触发：放量突破近1周高点 55.50；失效：跌回MA5 52.16 下方"
+      },
+      "flow_proxy": {
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
+        "volume_ratio": 1.42
+      },
+      "source": "sina"
+    },
+    {
+      "symbol": "601137.SH",
+      "code": "601137",
+      "name": "博威合金",
+      "sector": "18",
+      "industry": "18.1",
+      "feature": "**第一梯队｜方案推进**：针对 Rubin 架构研究微通道散热、3D打印散热结构和铜金刚石复合材料，当前处于方案推进阶段。",
+      "tags": [
+        "金刚石铜",
+        "微通道散热",
+        "3D打印散热",
+        "先进热管理",
+        "Rubin"
+      ],
+      "display_tags": [
+        "金刚石铜",
+        "微通道散热",
+        "3D打印散热",
+        "先进热管理",
+        "Rubin"
+      ],
+      "tag_themes": [
+        {
+          "tag": "金刚石铜",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "金刚石铜",
+            "金刚石铜"
+          ]
+        },
+        {
+          "tag": "微通道散热",
+          "theme_path": []
+        },
+        {
+          "tag": "3D打印散热",
+          "theme_path": []
+        },
+        {
+          "tag": "先进热管理",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "先进热管理",
+            "先进热管理"
+          ]
+        },
+        {
+          "tag": "Rubin",
+          "theme_path": []
+        }
+      ],
+      "market_type": "A股",
+      "price": "20.15",
+      "change": "-0.55 (-2.66%)",
+      "isUp": false,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "-5.51%",
+      "distWeek": "-6.5%",
+      "distMonth": "-8.7%",
+      "trend": "牛市多头",
+      "intraday_signal": {
+        "label": "偏强观察",
+        "class": "signal-up",
+        "reason": "综合分 60/100 · 置信度中 · RSI 65 · 量比 1.1x",
+        "score": 60,
+        "confidence": "中",
+        "rsi": 64.8,
+        "volume_ratio": 1.11,
+        "plan": "触发：放量突破近1周高点 21.55；失效：跌回MA5 20.71 下方"
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 1.11
+      },
+      "source": "sina"
+    },
+    {
+      "symbol": "000969.SZ",
+      "code": "000969",
+      "name": "安泰科技",
+      "sector": "18",
+      "industry": "18.1",
+      "feature": "**第一梯队｜性能优化**：拥有金刚石铜复合热沉、CVD单晶和多晶金刚石产品，当前主要处于性能优化阶段，商业化确定性仍需跟踪。",
+      "tags": [
+        "金刚石铜",
+        "CVD金刚石",
+        "芯片散热",
+        "先进热管理",
+        "性能优化"
+      ],
+      "display_tags": [
+        "金刚石铜",
+        "CVD金刚石",
+        "芯片散热",
+        "先进热管理",
+        "性能优化"
+      ],
+      "tag_themes": [
+        {
+          "tag": "金刚石铜",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "金刚石铜",
+            "金刚石铜"
+          ]
+        },
+        {
+          "tag": "CVD金刚石",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "金刚石铜",
+            "CVD金刚石"
+          ]
+        },
+        {
+          "tag": "芯片散热",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "金刚石铜",
+            "芯片散热"
+          ]
+        },
+        {
+          "tag": "先进热管理",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "先进热管理",
+            "先进热管理"
+          ]
+        },
+        {
+          "tag": "性能优化",
+          "theme_path": []
+        }
+      ],
+      "market_type": "A股",
+      "price": "17.31",
+      "change": "-0.12 (-0.69%)",
+      "isUp": false,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "-16.94%",
+      "distWeek": "-1.6%",
+      "distMonth": "-4.8%",
+      "trend": "牛市多头",
+      "intraday_signal": {
+        "label": "日内偏强",
+        "class": "signal-up",
+        "reason": "综合分 75/100 · 置信度高 · RSI 61 · 量比 0.7x",
+        "score": 75,
+        "confidence": "高",
+        "rsi": 61.0,
+        "volume_ratio": 0.75,
+        "plan": "触发：放量突破近1周高点 17.60；失效：跌回MA5 17.30 下方"
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.75
+      },
+      "source": "sina"
+    },
+    {
+      "symbol": "688102.SH",
+      "code": "688102",
+      "name": "斯瑞新材",
+      "sector": "18",
+      "industry": "18.2",
+      "feature": "**第二梯队｜光模块与散热**：覆盖光模块芯片基座和铜合金散热壳体，受益于高速光通信与热管理需求。",
+      "tags": [
+        "光模块",
+        "芯片散热",
+        "铜合金",
+        "先进热管理"
+      ],
+      "display_tags": [
+        "光模块",
+        "芯片散热",
+        "铜合金",
+        "先进热管理"
+      ],
+      "tag_themes": [
+        {
+          "tag": "光模块",
+          "theme_path": [
+            "7. 光通信",
+            "光模块",
+            "光模块"
+          ]
+        },
+        {
+          "tag": "芯片散热",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "金刚石铜",
+            "芯片散热"
+          ]
+        },
+        {
+          "tag": "铜合金",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "先进热管理",
+            "铜合金"
+          ]
+        },
+        {
+          "tag": "先进热管理",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "先进热管理",
+            "先进热管理"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "31.50",
+      "change": "-0.98 (-3.02%)",
+      "isUp": false,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "-18.49%",
+      "distWeek": "-3.5%",
+      "distMonth": "-26.5%",
+      "trend": "熊市空头",
+      "intraday_signal": {
+        "label": "日内偏弱",
+        "class": "signal-down",
+        "reason": "综合分 10/100 · 置信度高 · RSI 33 · 量比 1.1x",
+        "score": 10,
+        "confidence": "高",
+        "rsi": 33.0,
+        "volume_ratio": 1.09,
+        "plan": "触发：重新站上MA5 31.51 且量比>1.2；失效：跌破近1周低位"
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 1.09
+      },
+      "source": "sina"
+    },
+    {
+      "symbol": "300684.SZ",
+      "code": "300684",
+      "name": "中石科技",
+      "sector": "18",
+      "industry": "18.2",
+      "feature": "**第二梯队｜导热材料**：布局导热材料与热管理，关注 AI 服务器和通信设备散热需求。",
+      "tags": [
+        "导热材料",
+        "芯片散热",
+        "先进热管理",
+        "AI服务器"
+      ],
+      "display_tags": [
+        "导热材料",
+        "芯片散热",
+        "先进热管理",
+        "AI服务器"
+      ],
+      "tag_themes": [
+        {
+          "tag": "导热材料",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "先进热管理",
+            "导热材料"
+          ]
+        },
+        {
+          "tag": "芯片散热",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "金刚石铜",
+            "芯片散热"
+          ]
+        },
+        {
+          "tag": "先进热管理",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "先进热管理",
+            "先进热管理"
+          ]
+        },
+        {
+          "tag": "AI服务器",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "AI服务器"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "88.23",
+      "change": "-16.13 (-15.46%)",
+      "isUp": false,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "81.36%",
+      "distWeek": "-17.3%",
+      "distMonth": "-17.3%",
+      "trend": "牛市多头",
+      "intraday_signal": {
+        "label": "震荡观察",
+        "class": "signal-flat",
+        "reason": "综合分 50/100 · 置信度低 · RSI 51 · 量比 1.2x",
+        "score": 50,
+        "confidence": "低",
+        "rsi": 51.3,
+        "volume_ratio": 1.17,
+        "plan": "触发：放量突破近1周高点 106.68；失效：跌回MA5 91.94 下方"
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 1.17
+      },
+      "source": "sina"
+    },
+    {
+      "symbol": "300602.SZ",
+      "code": "300602",
+      "name": "飞荣达",
+      "sector": "18",
+      "industry": "18.2",
+      "feature": "**第二梯队｜传统散热**：覆盖服务器及通信设备散热，属于数据中心热管理产业链。",
+      "tags": [
+        "芯片散热",
+        "服务器散热",
+        "先进热管理",
+        "AI服务器"
+      ],
+      "display_tags": [
+        "芯片散热",
+        "服务器散热",
+        "先进热管理",
+        "AI服务器"
+      ],
+      "tag_themes": [
+        {
+          "tag": "芯片散热",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "金刚石铜",
+            "芯片散热"
+          ]
+        },
+        {
+          "tag": "服务器散热",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "数据中心热管理",
+            "服务器散热"
+          ]
+        },
+        {
+          "tag": "先进热管理",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "先进热管理",
+            "先进热管理"
+          ]
+        },
+        {
+          "tag": "AI服务器",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "AI服务器"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "39.74",
+      "change": "-2.48 (-5.87%)",
+      "isUp": false,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "20.00%",
+      "distWeek": "-15.0%",
+      "distMonth": "-15.0%",
+      "trend": "熊市空头",
+      "intraday_signal": {
+        "label": "日内偏弱",
+        "class": "signal-down",
+        "reason": "综合分 10/100 · 置信度高 · RSI 49 · 量比 1.2x",
+        "score": 10,
+        "confidence": "高",
+        "rsi": 49.4,
+        "volume_ratio": 1.21,
+        "plan": "触发：重新站上MA5 43.22 且量比>1.2；失效：跌破近1周低位"
+      },
+      "flow_proxy": {
+        "label": "偏流出",
+        "class": "signal-down",
+        "reason": "空头趋势且量能高于均值",
+        "volume_ratio": 1.21
+      },
+      "source": "sina"
+    },
+    {
+      "symbol": "002837.SZ",
+      "code": "002837",
+      "name": "英维克",
+      "sector": "18",
+      "industry": "18.2",
+      "feature": "**第二梯队｜液冷**：数据中心液冷方案提供商；液冷负责把芯片热量带走，与金刚石铜快速导热形成互补。",
+      "tags": [
+        "液冷",
+        "数据中心散热",
+        "先进热管理",
+        "AI服务器"
+      ],
+      "display_tags": [
+        "液冷",
+        "数据中心散热",
+        "先进热管理",
+        "AI服务器"
+      ],
+      "tag_themes": [
+        {
+          "tag": "液冷",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "液冷设备",
+            "液冷"
+          ]
+        },
+        {
+          "tag": "数据中心散热",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "数据中心热管理",
+            "数据中心散热"
+          ]
+        },
+        {
+          "tag": "先进热管理",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "先进热管理",
+            "先进热管理"
+          ]
+        },
+        {
+          "tag": "AI服务器",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "AI服务器"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "63.00",
+      "change": "-1.47 (-2.28%)",
+      "isUp": false,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "-23.19%",
+      "distWeek": "-10.8%",
+      "distMonth": "-10.8%",
+      "trend": "牛市多头",
+      "intraday_signal": {
+        "label": "偏强观察",
+        "class": "signal-up",
+        "reason": "综合分 60/100 · 置信度中 · RSI 67 · 量比 0.8x",
+        "score": 60,
+        "confidence": "中",
+        "rsi": 67.3,
+        "volume_ratio": 0.77,
+        "plan": "触发：放量突破近1周高点 70.62；失效：跌回MA5 65.22 下方"
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.77
+      },
+      "source": "sina"
+    },
+    {
+      "symbol": "301018.SZ",
+      "code": "301018",
+      "name": "申菱环境",
+      "sector": "18",
+      "industry": "18.2",
+      "feature": "**第二梯队｜温控**：覆盖数据中心温控和热管理设备，关注 AI 算力基础设施扩容。",
+      "tags": [
+        "液冷",
+        "数据中心散热",
+        "先进热管理",
+        "AI服务器"
+      ],
+      "display_tags": [
+        "液冷",
+        "数据中心散热",
+        "先进热管理",
+        "AI服务器"
+      ],
+      "tag_themes": [
+        {
+          "tag": "液冷",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "液冷设备",
+            "液冷"
+          ]
+        },
+        {
+          "tag": "数据中心散热",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "数据中心热管理",
+            "数据中心散热"
+          ]
+        },
+        {
+          "tag": "先进热管理",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "先进热管理",
+            "先进热管理"
+          ]
+        },
+        {
+          "tag": "AI服务器",
+          "theme_path": [
+            "8. 电力・液冷・数据中心",
+            "数据中心架构",
+            "AI服务器"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "101.41",
+      "change": "-5.11 (-4.80%)",
+      "isUp": false,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "123.93%",
+      "distWeek": "-12.6%",
+      "distMonth": "-12.6%",
+      "trend": "牛市多头",
+      "intraday_signal": {
+        "label": "偏强观察",
+        "class": "signal-up",
+        "reason": "综合分 60/100 · 置信度中 · RSI 61 · 量比 0.8x",
+        "score": 60,
+        "confidence": "中",
+        "rsi": 61.4,
+        "volume_ratio": 0.85,
+        "plan": "触发：放量突破近1周高点 116.00；失效：跌回MA5 106.08 下方"
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.85
+      },
+      "source": "sina"
+    },
+    {
+      "symbol": "300179.SZ",
+      "code": "300179",
+      "name": "四方达",
+      "sector": "18",
+      "industry": "18.3",
+      "feature": "**第三梯队｜上游人造金刚石**：工业金刚石相关企业，需区分培育钻石/工业磨料与芯片级金刚石铜散热材料。",
+      "tags": [
+        "人造金刚石",
+        "工业金刚石",
+        "金刚石材料",
+        "上游材料"
+      ],
+      "display_tags": [
+        "人造金刚石",
+        "工业金刚石",
+        "金刚石材料",
+        "上游材料"
+      ],
+      "tag_themes": [
+        {
+          "tag": "人造金刚石",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "上游人造金刚石",
+            "人造金刚石"
+          ]
+        },
+        {
+          "tag": "工业金刚石",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "上游人造金刚石",
+            "工业金刚石"
+          ]
+        },
+        {
+          "tag": "金刚石材料",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "金刚石铜",
+            "金刚石材料"
+          ]
+        },
+        {
+          "tag": "上游材料",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "上游人造金刚石",
+            "上游材料"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "39.41",
+      "change": "+0.82 (+2.12%)",
+      "isUp": true,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "162.54%",
+      "distWeek": "-3.4%",
+      "distMonth": "-3.8%",
+      "trend": "牛市多头",
+      "intraday_signal": {
+        "label": "日内偏强",
+        "class": "signal-up",
+        "reason": "综合分 90/100 · 置信度高 · RSI 60 · 量比 1.0x",
+        "score": 90,
+        "confidence": "高",
+        "rsi": 59.9,
+        "volume_ratio": 1.03,
+        "plan": "触发：放量突破近1周高点 40.80；失效：跌回MA5 37.56 下方"
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 1.03
+      },
+      "source": "sina"
+    },
+    {
+      "symbol": "600172.SH",
+      "code": "600172",
+      "name": "黄河旋风",
+      "sector": "18",
+      "industry": "18.3",
+      "feature": "**第三梯队｜上游人造金刚石**：金刚石材料概念标的，芯片级散热材料商业化受益程度需谨慎评估。",
+      "tags": [
+        "人造金刚石",
+        "工业金刚石",
+        "金刚石材料",
+        "上游材料"
+      ],
+      "display_tags": [
+        "人造金刚石",
+        "工业金刚石",
+        "金刚石材料",
+        "上游材料"
+      ],
+      "tag_themes": [
+        {
+          "tag": "人造金刚石",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "上游人造金刚石",
+            "人造金刚石"
+          ]
+        },
+        {
+          "tag": "工业金刚石",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "上游人造金刚石",
+            "工业金刚石"
+          ]
+        },
+        {
+          "tag": "金刚石材料",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "金刚石铜",
+            "金刚石材料"
+          ]
+        },
+        {
+          "tag": "上游材料",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "上游人造金刚石",
+            "上游材料"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "16.50",
+      "change": "+0.61 (+3.84%)",
+      "isUp": true,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "188.97%",
+      "distWeek": "-1.7%",
+      "distMonth": "-1.7%",
+      "trend": "牛市多头",
+      "intraday_signal": {
+        "label": "日内偏强",
+        "class": "signal-up",
+        "reason": "综合分 90/100 · 置信度高 · RSI 66 · 量比 0.8x",
+        "score": 90,
+        "confidence": "高",
+        "rsi": 66.0,
+        "volume_ratio": 0.85,
+        "plan": "触发：放量突破近1周高点 16.78；失效：跌回MA5 15.77 下方"
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.85
+      },
+      "source": "sina"
+    },
+    {
+      "symbol": "301071.SZ",
+      "code": "301071",
+      "name": "力量钻石",
+      "sector": "18",
+      "industry": "18.3",
+      "feature": "**第三梯队｜上游人造金刚石**：人造金刚石和培育钻石相关，不能直接等同于芯片级散热材料供应商。",
+      "tags": [
+        "人造金刚石",
+        "培育钻石",
+        "金刚石材料",
+        "上游材料"
+      ],
+      "display_tags": [
+        "人造金刚石",
+        "培育钻石",
+        "金刚石材料",
+        "上游材料"
+      ],
+      "tag_themes": [
+        {
+          "tag": "人造金刚石",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "上游人造金刚石",
+            "人造金刚石"
+          ]
+        },
+        {
+          "tag": "培育钻石",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "上游人造金刚石",
+            "培育钻石"
+          ]
+        },
+        {
+          "tag": "金刚石材料",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "金刚石铜",
+            "金刚石材料"
+          ]
+        },
+        {
+          "tag": "上游材料",
+          "theme_path": [
+            "18. 金刚石铜与先进热管理",
+            "上游人造金刚石",
+            "上游材料"
+          ]
+        }
+      ],
+      "market_type": "A股",
+      "price": "62.07",
+      "change": "+0.69 (+1.12%)",
+      "isUp": true,
+      "per": "--",
+      "roe": "--",
+      "forward_per": "--",
+      "pbr": "--",
+      "distHigh": "--",
+      "ytdChange": "74.14%",
+      "distWeek": "-5.7%",
+      "distMonth": "-6.2%",
+      "trend": "牛市多头",
+      "intraday_signal": {
+        "label": "日内偏强",
+        "class": "signal-up",
+        "reason": "综合分 80/100 · 置信度高 · RSI 55 · 量比 1.0x",
+        "score": 80,
+        "confidence": "高",
+        "rsi": 54.9,
+        "volume_ratio": 0.96,
+        "plan": "触发：放量突破近1周高点 65.85；失效：跌回MA5 61.26 下方"
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.96
+      },
+      "source": "sina"
+    },
+    {
       "symbol": "318A.T",
       "code": "318A",
       "name": "318A.T",
@@ -19977,33 +20911,33 @@
       "display_tags": [],
       "tag_themes": [],
       "market_type": "日股",
-      "price": "343.30",
-      "change": "+1.10 (+0.32%)",
-      "isUp": true,
+      "price": "342.50",
+      "change": "-0.80 (-0.23%)",
+      "isUp": false,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
-      "distHigh": "-58.3%",
-      "ytdChange": "-34.02%",
-      "distWeek": "-8.1%",
-      "distMonth": "-16.3%",
+      "distHigh": "-58.4%",
+      "ytdChange": "-34.17%",
+      "distWeek": "-8.3%",
+      "distMonth": "-16.5%",
       "trend": "熊市空头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 25/100 · 置信度高 · RSI 26 · 量比 0.6x",
+        "reason": "综合分 25/100 · 置信度高 · RSI 25 · 量比 1.0x",
         "score": 25,
         "confidence": "高",
-        "rsi": 26.3,
-        "volume_ratio": 0.59,
-        "plan": "触发：重新站上MA5 355.20 且量比>1.2；失效：跌破近1周低位"
+        "rsi": 25.3,
+        "volume_ratio": 1.01,
+        "plan": "触发：重新站上MA5 351.52 且量比>1.2；失效：跌破近1周低位"
       },
       "flow_proxy": {
         "label": "资金观望",
         "class": "signal-flat",
         "reason": "量能未出现明显异常",
-        "volume_ratio": 0.59
+        "volume_ratio": 1.01
       },
       "source": "yfinance"
     },
@@ -20141,33 +21075,33 @@
       "display_tags": [],
       "tag_themes": [],
       "market_type": "日股",
-      "price": "1279.00",
-      "change": "+6.00 (+0.47%)",
-      "isUp": true,
+      "price": "1253.00",
+      "change": "-26.00 (-2.03%)",
+      "isUp": false,
       "per": "29.59",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
-      "distHigh": "-3.6%",
-      "ytdChange": "11.66%",
-      "distWeek": "-1.1%",
-      "distMonth": "-1.1%",
-      "trend": "牛市多头",
+      "distHigh": "-5.6%",
+      "ytdChange": "9.39%",
+      "distWeek": "-2.9%",
+      "distMonth": "-3.1%",
+      "trend": "熊市空头",
       "intraday_signal": {
-        "label": "偏强观察",
-        "class": "signal-up",
-        "reason": "综合分 65/100 · 置信度中 · RSI 55 · 量比 0.9x",
-        "score": 65,
-        "confidence": "中",
-        "rsi": 54.8,
-        "volume_ratio": 0.88,
-        "plan": "触发：放量突破近1周高点 1293.00；失效：跌回MA5 1279.80 下方"
+        "label": "日内偏弱",
+        "class": "signal-down",
+        "reason": "综合分 0/100 · 置信度高 · RSI 41 · 量比 1.9x",
+        "score": 0,
+        "confidence": "高",
+        "rsi": 41.5,
+        "volume_ratio": 1.95,
+        "plan": "触发：重新站上MA5 1272.00 且量比>1.2；失效：跌破近1周低位"
       },
       "flow_proxy": {
-        "label": "资金观望",
-        "class": "signal-flat",
-        "reason": "量能未出现明显异常",
-        "volume_ratio": 0.88
+        "label": "疑似流出",
+        "class": "signal-down",
+        "reason": "下跌伴随明显放量",
+        "volume_ratio": 1.95
       },
       "source": "yfinance"
     },
@@ -20185,7 +21119,7 @@
       "price": "2010.00",
       "change": "-58.00 (-2.80%)",
       "isUp": false,
-      "per": "24.42",
+      "per": "25.12",
       "roe": "8.8%",
       "forward_per": "28.78",
       "pbr": "1.86",
@@ -20474,7 +21408,7 @@
       "isUp": true,
       "per": "20.19",
       "roe": "12.2%",
-      "forward_per": "15.62",
+      "forward_per": "15.57",
       "pbr": "2.17",
       "distHigh": "-2.3%",
       "ytdChange": "38.33%",
@@ -20803,7 +21737,7 @@
       "per": "25.34",
       "roe": "--",
       "forward_per": "--",
-      "pbr": "2.71",
+      "pbr": "--",
       "distHigh": "-2.0%",
       "ytdChange": "12.95%",
       "distWeek": "-1.0%",
@@ -21415,7 +22349,7 @@
       "price": "6050.00",
       "change": "-458.00 (-7.04%)",
       "isUp": false,
-      "per": "27.75",
+      "per": "29.85",
       "roe": "8.3%",
       "forward_per": "30.92",
       "pbr": "2.46",
@@ -21443,7 +22377,7 @@
       "source": "yfinance"
     }
   ],
-  "ai_report": "【全球市场环境】\n美股指小幅收涨，标普500涨0.59%，纳指涨0.32%，VIX降至15.30（-2.67%）；美债收益率轻微下行，10年期收于4.78%。大宗商品方面，黄金反弹至4429.80美元（+0.68%），WTI原油与铜分别重挫2.94%与2.66%，能源及顺周期承压。外汇端美元/日元大幅反弹1.52%至156.20。全球风险偏好中性偏分化，大宗走弱压制原材料及能源链表现。\n\n【美股/A股/日股观察】\n美股硬件与光通信领涨，英特尔（+9.05%）、Lumentum（+11.04%）、CoreWeave（+11.72%）强劲，但半导体指数跌1.28%，软硬件分化显著。日股表现疲软，日经225重挫2.08%，被动元件与半导体供应链承压明显，村田制作所（-7.83%）、太阳诱电（-7.92%）、迪斯科（-5.70%）等放量下探。A股在快照中缺少具体标的成交与涨跌明细，数据不足，仅恒生指数上涨0.94%反映部分港股溢价。\n\n【下一交易时段观察清单】\n1. 日经225能否在65000点附近止跌企稳，以及美元/日元在156上方的波动对出口链的传导。\n2. 美股半导体ETF（SOXX、SMH）与费半指数能否止跌修复。\n3. 大宗商品（原油、铜）下挫对能源板块（XLE）及金属矿业（XME）的压制持续性。\n4. 补齐A股相关标的盘面数据进行多空对比。\n\n【重点关注行业或标的及触发条件】\n关注光通信与算力链（美股LITE、COHR；港股/海外硬件映射标的）：触发条件为美股AI算力ETF企稳且光模块核心标的站稳短期均线上方；关注日股超跌修复（如村田制作所6981.T、迪斯科6146.T）：触发条件为日经半导体ETF（200A.T）回升放量且日元汇率趋于稳定。\n\n【失效条件与风险】\n失效条件：美股光通信个股回吐前日涨幅超5%，或费城半导体指数进一步跌破11500点支撑；日股被动元件跌破阶段前低。\n风险提示：半导体整体估值回调加剧；WTI油价下挫拖累周期板块风险蔓延；外汇剧烈波动扰动跨市场资金流向；快照中部分标的（如A股成分）数据不足带来的评估局限。",
+  "ai_report": "【全球市场环境】\n宏观层面风险情绪分化。美股标普500（+0.59%）及纳指（+0.32%）小幅收涨，标普期货（+0.59%）偏强，VIX回落2.67%至15.30；美",
   "theme_mapping": {
     "0. 人気テーマ": {
       "フィジカルＡＩ": {
@@ -22742,6 +23676,44 @@
         ],
         "description": "債券・コモディティ・新興国など多様な資産クラスに連動するETF"
       }
+    },
+    "18. 金刚石铜与先进热管理": {
+      "金刚石铜": {
+        "tags": [
+          "金刚石铜",
+          "CVD金刚石",
+          "金刚石材料",
+          "芯片散热"
+        ],
+        "description": "金刚石铜复合材料、CVD金刚石和金刚石铜热沉是高功率芯片先进散热方向，需区分送样/验证、性能优化与批量供货阶段。"
+      },
+      "先进热管理": {
+        "tags": [
+          "先进热管理",
+          "导热材料",
+          "芯片散热",
+          "铜合金"
+        ],
+        "description": "先进热管理覆盖芯片散热、导热材料和铜合金热沉等环节，关注材料性能、客户验证和量产进展。"
+      },
+      "数据中心热管理": {
+        "tags": [
+          "液冷",
+          "数据中心散热",
+          "服务器散热",
+          "AI服务器"
+        ],
+        "description": "液冷和传统服务器散热负责把芯片热量带走，与金刚石铜快速导热形成互补。"
+      },
+      "上游人造金刚石": {
+        "tags": [
+          "人造金刚石",
+          "工业金刚石",
+          "培育钻石",
+          "上游材料"
+        ],
+        "description": "上游人造金刚石企业可能受益于材料需求，但培育钻石或工业磨料不等同于芯片级散热材料。"
+      }
     }
   },
   "tag_display_map": {
@@ -22870,7 +23842,25 @@
     "Qiskit": "Qiskit (量子开发套件)",
     "ADC": "ADC (抗体药物偶联物)",
     "CAR-T": "CAR-T (嵌合抗原受体T细胞)",
-    "GLP-1": "GLP-1 (胰高血糖素样肽-1)"
+    "GLP-1": "GLP-1 (胰高血糖素样肽-1)",
+    "金刚石铜": "金刚石铜",
+    "CVD金刚石": "CVD金刚石",
+    "芯片散热": "芯片散热",
+    "先进热管理": "先进热管理",
+    "微通道散热": "微通道散热",
+    "3D打印散热": "3D打印散热",
+    "导热材料": "导热材料",
+    "液冷": "液冷",
+    "数据中心散热": "数据中心散热",
+    "服务器散热": "服务器散热",
+    "人造金刚石": "人造金刚石",
+    "工业金刚石": "工业金刚石",
+    "金刚石材料": "金刚石材料",
+    "培育钻石": "培育钻石",
+    "Rubin": "Rubin",
+    "客户验证": "客户验证",
+    "性能优化": "性能优化",
+    "上游材料": "上游材料"
   },
   "theme_descriptions": {
     "フィジカルＡＩ": "https://kabutan.jp/themes/?theme=フィジカルAI",
@@ -23009,7 +23999,11 @@
     "日本株ETF": "日本株に連動するETF",
     "セクターETF": "特定セクター・テーマに連動するETF",
     "戦略ETF": "レバレッジ・インバース型のETF",
-    "資産クラスETF": "債券・コモディティ・新興国など多様な資産クラスに連動するETF"
+    "資産クラスETF": "債券・コモディティ・新興国など多様な資産クラスに連動するETF",
+    "金刚石铜": "金刚石铜复合材料、CVD金刚石和金刚石铜热沉是高功率芯片先进散热方向，需区分送样/验证、性能优化与批量供货阶段。",
+    "先进热管理": "先进热管理覆盖芯片散热、导热材料和铜合金热沉等环节，关注材料性能、客户验证和量产进展。",
+    "数据中心热管理": "液冷和传统服务器散热负责把芯片热量带走，与金刚石铜快速导热形成互补。",
+    "上游人造金刚石": "上游人造金刚石企业可能受益于材料需求，但培育钻石或工业磨料不等同于芯片级散热材料。"
   },
   "portfolio_lists": {
     "HuaQi": {
@@ -23307,11 +24301,11 @@
       ]
     }
   },
-  "generated_at": "2026-09-08T21:45:26.373529+00:00",
+  "generated_at": "2026-09-08T23:53:08.428038+00:00",
   "update_status": {
-    "expected": 323,
-    "success": 312,
-    "failed": 11,
+    "expected": 335,
+    "success": 323,
+    "failed": 12,
     "failed_symbols": [
       "4185.T",
       "5727.T",
@@ -23320,6 +24314,7 @@
       "6201.T",
       "6967.T",
       "8036.T",
+      "920172.BJ",
       "ASMI",
       "AXT",
       "BRK.B",
@@ -23328,7 +24323,6 @@
   },
   "ai_report_meta": {
     "source": "gemini",
-    "model": "gemini-flash-latest",
-    "updated_at": "2026-09-08T21:55:42.097228+00:00"
+    "model": "gemini-flash-latest"
   }
 }
