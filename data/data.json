@@ -1,69 +1,6 @@
 {
   "macro": [
     {
-      "name": "美元/日元",
-      "price": "156.20",
-      "change": "+2.97 (+1.94%)",
-      "isUp": true,
-      "type": "forex",
-      "badge_label": "FX",
-      "badge_class": "forex"
-    },
-    {
-      "name": "白银",
-      "price": "66.05",
-      "change": "-1.25 (-1.86%)",
-      "isUp": false,
-      "type": "commodity",
-      "badge_label": "商品",
-      "badge_class": "commodity"
-    },
-    {
-      "name": "黄金",
-      "price": "4429.80",
-      "change": "-38.60 (-0.86%)",
-      "isUp": false,
-      "type": "commodity",
-      "badge_label": "商品",
-      "badge_class": "commodity"
-    },
-    {
-      "name": "铜",
-      "price": "6.60",
-      "change": "-0.17 (-2.50%)",
-      "isUp": false,
-      "type": "commodity",
-      "badge_label": "商品",
-      "badge_class": "commodity"
-    },
-    {
-      "name": "标普 500 期货",
-      "price": "7722.00",
-      "change": "+8.00 (+0.10%)",
-      "isUp": true,
-      "type": "futures",
-      "badge_label": "期货",
-      "badge_class": "futures"
-    },
-    {
-      "name": "纳斯达克综合",
-      "price": "26584.06",
-      "change": "+77.07 (+0.29%)",
-      "isUp": true,
-      "type": "index",
-      "badge_label": "",
-      "badge_class": "index"
-    },
-    {
-      "name": "WTI 原油",
-      "price": "91.48",
-      "change": "-1.20 (-1.29%)",
-      "isUp": false,
-      "type": "futures",
-      "badge_label": "期货",
-      "badge_class": "futures"
-    },
-    {
       "name": "日经 225",
       "price": "66399.84",
       "change": "-45.29 (-0.07%)",
@@ -73,54 +10,72 @@
       "badge_class": "index"
     },
     {
-      "name": "费城半导体指数",
-      "price": "11352.13",
-      "change": "-383.13 (-3.26%)",
+      "name": "WTI 原油",
+      "price": "91.48",
+      "change": "-1.43 (-1.54%)",
       "isUp": false,
-      "type": "index",
-      "badge_label": "",
-      "badge_class": "index"
+      "type": "futures",
+      "badge_label": "期货",
+      "badge_class": "futures"
+    },
+    {
+      "name": "白银",
+      "price": "66.05",
+      "change": "-1.57 (-2.33%)",
+      "isUp": false,
+      "type": "commodity",
+      "badge_label": "商品",
+      "badge_class": "commodity"
     },
     {
       "name": "恒生指数",
       "price": "25413.12",
-      "change": "+109.04 (+0.43%)",
+      "change": "+118.79 (+0.47%)",
       "isUp": true,
       "type": "index",
       "badge_label": "",
       "badge_class": "index"
     },
     {
-      "name": "AI基础设施ETF-TCAI",
-      "price": "45.50",
-      "change": "-1.74 (-3.68%)",
+      "name": "铜",
+      "price": "6.60",
+      "change": "-0.19 (-2.79%)",
       "isUp": false,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
+      "type": "commodity",
+      "badge_label": "商品",
+      "badge_class": "commodity"
     },
     {
-      "name": "存储芯片ETF-DRAM",
-      "price": "55.99",
-      "change": "-3.70 (-6.20%)",
-      "isUp": false,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
+      "name": "美元/日元",
+      "price": "156.20",
+      "change": "+2.96 (+1.93%)",
+      "isUp": true,
+      "type": "forex",
+      "badge_label": "FX",
+      "badge_class": "forex"
     },
     {
-      "name": "韩国 KOSPI",
-      "price": "6995.39",
-      "change": "-128.67 (-1.81%)",
+      "name": "黄金",
+      "price": "4429.80",
+      "change": "-49.80 (-1.11%)",
       "isUp": false,
-      "type": "index",
-      "badge_label": "",
-      "badge_class": "index"
+      "type": "commodity",
+      "badge_label": "商品",
+      "badge_class": "commodity"
     },
     {
-      "name": "AI半导体指数ETF-CHPS",
-      "price": "80.70",
-      "change": "-3.12 (-3.72%)",
+      "name": "标普 500 期货",
+      "price": "7722.00",
+      "change": "-0.75 (-0.01%)",
+      "isUp": false,
+      "type": "futures",
+      "badge_label": "期货",
+      "badge_class": "futures"
+    },
+    {
+      "name": "半导体ETF-SOXX",
+      "price": "502.20",
+      "change": "-17.66 (-3.40%)",
       "isUp": false,
       "type": "etf",
       "badge_label": "ETF",
@@ -136,9 +91,9 @@
       "badge_class": "etf"
     },
     {
-      "name": "半导体ETF-SOXX",
-      "price": "502.20",
-      "change": "-17.66 (-3.40%)",
+      "name": "AI半导体指数ETF-CHPS",
+      "price": "80.70",
+      "change": "-3.12 (-3.72%)",
       "isUp": false,
       "type": "etf",
       "badge_label": "ETF",
@@ -154,13 +109,49 @@
       "badge_class": "etf"
     },
     {
-      "name": "人形机器人ETF-BOTT",
-      "price": "41.86",
-      "change": "-0.80 (-1.86%)",
+      "name": "AI基础设施ETF-TCAI",
+      "price": "45.50",
+      "change": "-1.74 (-3.68%)",
       "isUp": false,
       "type": "etf",
       "badge_label": "ETF",
       "badge_class": "etf"
+    },
+    {
+      "name": "费城半导体指数",
+      "price": "11352.13",
+      "change": "-383.13 (-3.26%)",
+      "isUp": false,
+      "type": "index",
+      "badge_label": "",
+      "badge_class": "index"
+    },
+    {
+      "name": "存储芯片ETF-DRAM",
+      "price": "55.99",
+      "change": "-3.70 (-6.20%)",
+      "isUp": false,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
+      "name": "韩国 KOSPI",
+      "price": "6995.39",
+      "change": "-156.02 (-2.18%)",
+      "isUp": false,
+      "type": "index",
+      "badge_label": "",
+      "badge_class": "index"
+    },
+    {
+      "name": "纳斯达克综合",
+      "price": "26584.06",
+      "change": "+77.07 (+0.29%)",
+      "isUp": true,
+      "type": "index",
+      "badge_label": "",
+      "badge_class": "index"
     },
     {
       "name": "机器人与自动化指数ETF-ROBO",
@@ -172,10 +163,19 @@
       "badge_class": "etf"
     },
     {
-      "name": "医療機器 XHE",
-      "price": "94.28",
-      "change": "+0.08 (+0.08%)",
-      "isUp": true,
+      "name": "人形机器人ETF-BOTT",
+      "price": "41.86",
+      "change": "-0.80 (-1.86%)",
+      "isUp": false,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
+      "name": "産業機械 XLI",
+      "price": "174.56",
+      "change": "-0.71 (-0.41%)",
+      "isUp": false,
       "type": "etf",
       "badge_label": "ETF",
       "badge_class": "etf"
@@ -190,10 +190,10 @@
       "badge_class": "etf"
     },
     {
-      "name": "産業機械 XLI",
-      "price": "174.56",
-      "change": "-0.71 (-0.41%)",
-      "isUp": false,
+      "name": "製薬・医療 XLV",
+      "price": "173.26",
+      "change": "+1.81 (+1.06%)",
+      "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
       "badge_class": "etf"
@@ -217,18 +217,9 @@
       "badge_class": "etf"
     },
     {
-      "name": "日本・電機精密 ETF",
-      "price": "64520.00",
-      "change": "+1110.00 (+1.75%)",
-      "isUp": true,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
-      "name": "製薬・医療 XLV",
-      "price": "173.26",
-      "change": "+1.81 (+1.06%)",
+      "name": "医療機器 XHE",
+      "price": "94.28",
+      "change": "+0.08 (+0.08%)",
       "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
@@ -244,13 +235,31 @@
       "badge_class": "j-etf"
     },
     {
-      "name": "日本・素材・化学 ETF",
-      "price": "36670.00",
-      "change": "+570.00 (+1.58%)",
+      "name": "日本・電機精密 ETF",
+      "price": "64520.00",
+      "change": "+1110.00 (+1.75%)",
       "isUp": true,
       "type": "j-etf",
       "badge_label": "J-ETF",
       "badge_class": "j-etf"
+    },
+    {
+      "name": "日本・医薬品 ETF",
+      "price": "30040.00",
+      "change": "+70.00 (+0.23%)",
+      "isUp": true,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
+    },
+    {
+      "name": "金融・保険 XLF",
+      "price": "58.56",
+      "change": "+0.46 (+0.79%)",
+      "isUp": true,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
     },
     {
       "name": "日本・情報通信 ETF",
@@ -262,9 +271,9 @@
       "badge_class": "j-etf"
     },
     {
-      "name": "日本・医薬品 ETF",
-      "price": "30040.00",
-      "change": "+70.00 (+0.23%)",
+      "name": "日本・素材・化学 ETF",
+      "price": "36670.00",
+      "change": "+570.00 (+1.58%)",
       "isUp": true,
       "type": "j-etf",
       "badge_label": "J-ETF",
@@ -289,22 +298,13 @@
       "badge_class": "etf"
     },
     {
-      "name": "金融・保険 XLF",
-      "price": "58.56",
-      "change": "+0.46 (+0.79%)",
+      "name": "日本・銀行 ETF",
+      "price": "42100.00",
+      "change": "+100.00 (+0.24%)",
       "isUp": true,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
-      "name": "宇宙・防衛 ITA",
-      "price": "225.98",
-      "change": "+0.37 (+0.16%)",
-      "isUp": true,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
     },
     {
       "name": "日本・金融 ETF",
@@ -316,18 +316,45 @@
       "badge_class": "j-etf"
     },
     {
-      "name": "日本・銀行 ETF",
-      "price": "42100.00",
-      "change": "+100.00 (+0.24%)",
+      "name": "宇宙・防衛 ITA",
+      "price": "225.98",
+      "change": "+0.37 (+0.16%)",
       "isUp": true,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
     },
     {
       "name": "電力 XLU",
       "price": "43.03",
       "change": "-0.05 (-0.12%)",
+      "isUp": false,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
+      "name": "日本・エネルギー ETF",
+      "price": "35860.00",
+      "change": "-420.00 (-1.16%)",
+      "isUp": false,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
+    },
+    {
+      "name": "金属鉱業 XME",
+      "price": "118.38",
+      "change": "-0.24 (-0.20%)",
+      "isUp": false,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
+      "name": "自動車メーカー CARZ",
+      "price": "105.70",
+      "change": "-0.69 (-0.65%)",
       "isUp": false,
       "type": "etf",
       "badge_label": "ETF",
@@ -343,42 +370,6 @@
       "badge_class": "j-etf"
     },
     {
-      "name": "防衛テック ETF",
-      "price": "829.00",
-      "change": "+15.00 (+1.84%)",
-      "isUp": true,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
-      "name": "日本・エネルギー ETF",
-      "price": "35860.00",
-      "change": "-420.00 (-1.16%)",
-      "isUp": false,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
-      "name": "生活必需品 XLP",
-      "price": "85.26",
-      "change": "+0.68 (+0.80%)",
-      "isUp": true,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
-      "name": "自動車メーカー CARZ",
-      "price": "105.70",
-      "change": "-0.69 (-0.65%)",
-      "isUp": false,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
       "name": "バイオテクノロジー IBB",
       "price": "213.81",
       "change": "+1.89 (+0.89%)",
@@ -388,27 +379,9 @@
       "badge_class": "etf"
     },
     {
-      "name": "金属鉱業 XME",
-      "price": "118.38",
-      "change": "-0.24 (-0.20%)",
-      "isUp": false,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
-      "name": "ディスカウントストア XRT",
-      "price": "86.73",
-      "change": "-0.86 (-0.98%)",
-      "isUp": false,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
-      "name": "Eコマース IBUY",
-      "price": "72.12",
-      "change": "+0.45 (+0.63%)",
+      "name": "生活必需品 XLP",
+      "price": "85.26",
+      "change": "+0.68 (+0.80%)",
       "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
@@ -424,9 +397,45 @@
       "badge_class": "j-etf"
     },
     {
+      "name": "ディスカウントストア XRT",
+      "price": "86.73",
+      "change": "-0.86 (-0.98%)",
+      "isUp": false,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
+      "name": "防衛テック ETF",
+      "price": "829.00",
+      "change": "+15.00 (+1.84%)",
+      "isUp": true,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
+    },
+    {
       "name": "日本・食品 ETF",
       "price": "47710.00",
       "change": "+30.00 (+0.06%)",
+      "isUp": true,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
+    },
+    {
+      "name": "Eコマース IBUY",
+      "price": "72.12",
+      "change": "+0.45 (+0.63%)",
+      "isUp": true,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
+      "name": "日本・建設・資材 ETF",
+      "price": "45340.00",
+      "change": "+230.00 (+0.51%)",
       "isUp": true,
       "type": "j-etf",
       "badge_label": "J-ETF",
@@ -442,15 +451,6 @@
       "badge_class": "j-etf"
     },
     {
-      "name": "日本・小売 ETF",
-      "price": "37260.00",
-      "change": "-110.00 (-0.29%)",
-      "isUp": false,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
       "name": "日本・不動産 ETF",
       "price": "48490.00",
       "change": "-300.00 (-0.61%)",
@@ -460,13 +460,31 @@
       "badge_class": "j-etf"
     },
     {
-      "name": "日本・建設・資材 ETF",
-      "price": "45340.00",
-      "change": "+230.00 (+0.51%)",
-      "isUp": true,
+      "name": "日本・小売 ETF",
+      "price": "37260.00",
+      "change": "-110.00 (-0.29%)",
+      "isUp": false,
       "type": "j-etf",
       "badge_label": "J-ETF",
       "badge_class": "j-etf"
+    },
+    {
+      "name": "不動産 VNQ",
+      "price": "96.66",
+      "change": "+0.64 (+0.67%)",
+      "isUp": true,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
+      "name": "纳指100ETF-QQQ",
+      "price": "717.67",
+      "change": "-1.29 (-0.18%)",
+      "isUp": false,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
     },
     {
       "name": "日本・商社・卸売 ETF",
@@ -478,18 +496,36 @@
       "badge_class": "j-etf"
     },
     {
+      "name": "5年国债收益率",
+      "price": "4.51",
+      "change": "-0.04 (-0.90%)",
+      "isUp": false,
+      "type": "bond",
+      "badge_label": "债券",
+      "badge_class": "bond"
+    },
+    {
+      "name": "标普 500",
+      "price": "7747.71",
+      "change": "+29.11 (+0.38%)",
+      "isUp": true,
+      "type": "index",
+      "badge_label": "",
+      "badge_class": "index"
+    },
+    {
+      "name": "VIX 恐慌指数",
+      "price": "14.53",
+      "change": "-0.77 (-5.03%)",
+      "isUp": false,
+      "type": "sentiment",
+      "badge_label": "情绪",
+      "badge_class": "sentiment"
+    },
+    {
       "name": "Global X半导体ETF-2243.T",
       "price": "4376.00",
       "change": "+28.00 (+0.64%)",
-      "isUp": true,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
-      "name": "不動産 VNQ",
-      "price": "96.66",
-      "change": "+0.64 (+0.67%)",
       "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
@@ -514,54 +550,18 @@
       "badge_class": "bond"
     },
     {
-      "name": "5年国债收益率",
-      "price": "4.51",
-      "change": "-0.04 (-0.90%)",
-      "isUp": false,
-      "type": "bond",
-      "badge_label": "债券",
-      "badge_class": "bond"
-    },
-    {
-      "name": "纳指100ETF-QQQ",
-      "price": "717.67",
-      "change": "-1.29 (-0.18%)",
-      "isUp": false,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
-      "name": "VIX 恐慌指数",
-      "price": "14.53",
-      "change": "-0.77 (-5.03%)",
-      "isUp": false,
-      "type": "sentiment",
-      "badge_label": "情绪",
-      "badge_class": "sentiment"
+      "name": "德国 DAX",
+      "price": "26046.40",
+      "change": "+39.87 (+0.15%)",
+      "isUp": true,
+      "type": "index",
+      "badge_label": "",
+      "badge_class": "index"
     },
     {
       "name": "富时 100",
       "price": "10831.10",
       "change": "+9.00 (+0.08%)",
-      "isUp": true,
-      "type": "index",
-      "badge_label": "",
-      "badge_class": "index"
-    },
-    {
-      "name": "标普 500",
-      "price": "7747.71",
-      "change": "+29.11 (+0.38%)",
-      "isUp": true,
-      "type": "index",
-      "badge_label": "",
-      "badge_class": "index"
-    },
-    {
-      "name": "德国 DAX",
-      "price": "26046.40",
-      "change": "+39.87 (+0.15%)",
       "isUp": true,
       "type": "index",
       "badge_label": "",
@@ -652,6 +652,12 @@
         "rsi": 53.7,
         "volume_ratio": 1.02
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 1.02
+      },
       "source": "yfinance"
     },
     {
@@ -718,6 +724,12 @@
         "rsi": 40.1,
         "volume_ratio": 1.31
       },
+      "flow_proxy": {
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
+        "volume_ratio": 1.31
+      },
       "source": "yfinance"
     },
     {
@@ -772,6 +784,12 @@
         "reason": "综合分 80/100 · RSI 38 · 量比 1.3x",
         "score": 80,
         "rsi": 37.6,
+        "volume_ratio": 1.29
+      },
+      "flow_proxy": {
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.29
       },
       "source": "yfinance"
@@ -830,6 +848,12 @@
         "rsi": 63.3,
         "volume_ratio": 0.95
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.95
+      },
       "source": "yfinance"
     },
     {
@@ -884,6 +908,12 @@
         "reason": "综合分 25/100 · RSI 29 · 量比 0.9x",
         "score": 25,
         "rsi": 29.2,
+        "volume_ratio": 0.95
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.95
       },
       "source": "yfinance"
@@ -948,7 +978,7 @@
       "per": "74.02",
       "roe": "16.5%",
       "forward_per": "33.26",
-      "pbr": "10.58",
+      "pbr": "10.75",
       "distHigh": "-32.2%",
       "ytdChange": "150.45%",
       "distWeek": "-0.1%",
@@ -960,6 +990,12 @@
         "reason": "综合分 50/100 · RSI 46 · 量比 1.0x",
         "score": 50,
         "rsi": 46.3,
+        "volume_ratio": 1.05
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 1.05
       },
       "source": "yfinance"
@@ -1006,6 +1042,12 @@
         "reason": "综合分 50/100 · RSI 40 · 量比 1.3x",
         "score": 50,
         "rsi": 39.8,
+        "volume_ratio": 1.32
+      },
+      "flow_proxy": {
+        "label": "偏流出",
+        "class": "signal-down",
+        "reason": "空头趋势且量能高于均值",
         "volume_ratio": 1.32
       },
       "source": "yfinance"
@@ -1064,6 +1106,12 @@
         "rsi": 63.6,
         "volume_ratio": 0.96
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.96
+      },
       "source": "yfinance"
     },
     {
@@ -1118,6 +1166,12 @@
         "reason": "综合分 70/100 · RSI 39 · 量比 1.0x",
         "score": 70,
         "rsi": 38.9,
+        "volume_ratio": 1.04
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 1.04
       },
       "source": "yfinance"
@@ -1216,6 +1270,12 @@
         "rsi": 40.4,
         "volume_ratio": 0.48
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.48
+      },
       "source": "yfinance"
     },
     {
@@ -1270,6 +1330,12 @@
         "reason": "综合分 45/100 · RSI 58 · 量比 0.4x",
         "score": 45,
         "rsi": 58.2,
+        "volume_ratio": 0.43
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.43
       },
       "source": "yfinance"
@@ -1348,6 +1414,12 @@
         "rsi": 58.6,
         "volume_ratio": 0.36
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.36
+      },
       "source": "yfinance"
     },
     {
@@ -1374,25 +1446,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "61.79",
-      "change": "-0.25 (-0.40%)",
+      "price": "61.66",
+      "change": "-0.38 (-0.61%)",
       "isUp": false,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-21.31%",
-      "distWeek": "-2.2%",
-      "distMonth": "-9.8%",
+      "ytdChange": "-21.48%",
+      "distWeek": "-2.5%",
+      "distMonth": "-10.0%",
       "trend": "熊市空头",
       "intraday_signal": {
         "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 35/100 · RSI 47 · 量比 0.5x",
+        "reason": "综合分 35/100 · RSI 46 · 量比 0.6x",
         "score": 35,
-        "rsi": 47.2,
-        "volume_ratio": 0.51
+        "rsi": 46.5,
+        "volume_ratio": 0.6
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.6
       },
       "source": "sina"
     },
@@ -1430,25 +1508,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "561.77",
-      "change": "-8.31 (-1.46%)",
+      "price": "560.01",
+      "change": "-10.07 (-1.77%)",
       "isUp": false,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-3.16%",
-      "distWeek": "-16.3%",
-      "distMonth": "-29.6%",
+      "ytdChange": "-3.46%",
+      "distWeek": "-16.6%",
+      "distMonth": "-29.8%",
       "trend": "熊市空头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · RSI 19 · 量比 1.2x",
+        "reason": "综合分 0/100 · RSI 19 · 量比 1.3x",
         "score": 0,
-        "rsi": 19.1,
-        "volume_ratio": 1.22
+        "rsi": 19.0,
+        "volume_ratio": 1.29
+      },
+      "flow_proxy": {
+        "label": "偏流出",
+        "class": "signal-down",
+        "reason": "空头趋势且量能高于均值",
+        "volume_ratio": 1.29
       },
       "source": "sina"
     },
@@ -1476,25 +1560,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "400.05",
-      "change": "-15.44 (-3.72%)",
+      "price": "401.54",
+      "change": "-13.95 (-3.36%)",
       "isUp": false,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-31.95%",
-      "distWeek": "-25.4%",
-      "distMonth": "-33.2%",
+      "ytdChange": "-31.70%",
+      "distWeek": "-25.1%",
+      "distMonth": "-32.9%",
       "trend": "熊市空头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · RSI 13 · 量比 2.5x",
+        "reason": "综合分 0/100 · RSI 13 · 量比 2.6x",
         "score": 0,
-        "rsi": 12.8,
-        "volume_ratio": 2.55
+        "rsi": 12.9,
+        "volume_ratio": 2.6
+      },
+      "flow_proxy": {
+        "label": "疑似流出",
+        "class": "signal-down",
+        "reason": "下跌伴随明显放量",
+        "volume_ratio": 2.6
       },
       "source": "sina"
     },
@@ -1532,25 +1622,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "239.88",
-      "change": "-2.83 (-1.17%)",
+      "price": "240.05",
+      "change": "-2.66 (-1.10%)",
       "isUp": false,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "6.98%",
-      "distWeek": "-4.6%",
+      "ytdChange": "7.05%",
+      "distWeek": "-4.5%",
       "distMonth": "-19.2%",
       "trend": "熊市空头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 10/100 · RSI 36 · 量比 0.7x",
+        "reason": "综合分 10/100 · RSI 36 · 量比 0.8x",
         "score": 10,
         "rsi": 35.7,
-        "volume_ratio": 0.74
+        "volume_ratio": 0.81
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.81
       },
       "source": "sina"
     },
@@ -1578,25 +1674,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "103.06",
-      "change": "-2.42 (-2.29%)",
+      "price": "102.72",
+      "change": "-2.76 (-2.62%)",
       "isUp": false,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-21.99%",
-      "distWeek": "-4.1%",
-      "distMonth": "-10.0%",
+      "ytdChange": "-22.25%",
+      "distWeek": "-4.4%",
+      "distMonth": "-10.3%",
       "trend": "熊市空头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 10/100 · RSI 43 · 量比 0.8x",
+        "reason": "综合分 10/100 · RSI 42 · 量比 0.9x",
         "score": 10,
-        "rsi": 42.9,
-        "volume_ratio": 0.79
+        "rsi": 42.4,
+        "volume_ratio": 0.88
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.88
       },
       "source": "sina"
     },
@@ -1624,25 +1726,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "27.40",
-      "change": "-0.04 (-0.15%)",
+      "price": "27.25",
+      "change": "-0.19 (-0.69%)",
       "isUp": false,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-9.72%",
-      "distWeek": "-4.3%",
-      "distMonth": "-7.5%",
+      "ytdChange": "-10.21%",
+      "distWeek": "-4.8%",
+      "distMonth": "-8.0%",
       "trend": "熊市空头",
       "intraday_signal": {
         "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 45/100 · RSI 56 · 量比 0.6x",
-        "score": 45,
-        "rsi": 56.0,
-        "volume_ratio": 0.6
+        "reason": "综合分 35/100 · RSI 55 · 量比 0.7x",
+        "score": 35,
+        "rsi": 54.8,
+        "volume_ratio": 0.68
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.68
       },
       "source": "sina"
     },
@@ -1700,25 +1808,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "30.81",
-      "change": "-0.15 (-0.48%)",
+      "price": "30.68",
+      "change": "-0.28 (-0.90%)",
       "isUp": false,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "8.71%",
-      "distWeek": "-3.0%",
-      "distMonth": "-17.7%",
+      "ytdChange": "8.25%",
+      "distWeek": "-3.4%",
+      "distMonth": "-18.0%",
       "trend": "熊市空头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
         "reason": "综合分 25/100 · RSI 38 · 量比 0.6x",
         "score": 25,
-        "rsi": 38.1,
-        "volume_ratio": 0.57
+        "rsi": 37.8,
+        "volume_ratio": 0.62
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.62
       },
       "source": "sina"
     },
@@ -1788,25 +1902,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "119.75",
-      "change": "-0.97 (-0.80%)",
+      "price": "119.09",
+      "change": "-1.63 (-1.35%)",
       "isUp": false,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "64.18%",
-      "distWeek": "-1.7%",
-      "distMonth": "-20.2%",
+      "ytdChange": "63.28%",
+      "distWeek": "-2.3%",
+      "distMonth": "-20.6%",
       "trend": "熊市空头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 25/100 · RSI 42 · 量比 0.5x",
-        "score": 25,
-        "rsi": 42.4,
-        "volume_ratio": 0.54
+        "reason": "综合分 10/100 · RSI 42 · 量比 0.6x",
+        "score": 10,
+        "rsi": 42.0,
+        "volume_ratio": 0.61
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.61
       },
       "source": "sina"
     },
@@ -1884,6 +2004,12 @@
         "rsi": 31.9,
         "volume_ratio": 0.41
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.41
+      },
       "source": "yfinance"
     },
     {
@@ -1952,25 +2078,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "119.75",
-      "change": "-0.97 (-0.80%)",
+      "price": "119.09",
+      "change": "-1.63 (-1.35%)",
       "isUp": false,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "64.18%",
-      "distWeek": "-1.7%",
-      "distMonth": "-20.2%",
+      "ytdChange": "63.28%",
+      "distWeek": "-2.3%",
+      "distMonth": "-20.6%",
       "trend": "熊市空头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 25/100 · RSI 42 · 量比 0.5x",
-        "score": 25,
-        "rsi": 42.4,
-        "volume_ratio": 0.54
+        "reason": "综合分 10/100 · RSI 42 · 量比 0.6x",
+        "score": 10,
+        "rsi": 42.0,
+        "volume_ratio": 0.61
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.61
       },
       "source": "sina"
     },
@@ -2050,7 +2182,7 @@
       "per": "10.58",
       "roe": "354.1%",
       "forward_per": "5.19",
-      "pbr": "6.64",
+      "pbr": "6.75",
       "distHigh": "-9.1%",
       "ytdChange": "5.35%",
       "distWeek": "-0.4%",
@@ -2062,6 +2194,12 @@
         "reason": "综合分 90/100 · RSI 54 · 量比 1.5x",
         "score": 90,
         "rsi": 54.2,
+        "volume_ratio": 1.48
+      },
+      "flow_proxy": {
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.48
       },
       "source": "yfinance"
@@ -2130,6 +2268,12 @@
         "rsi": 50.7,
         "volume_ratio": 1.34
       },
+      "flow_proxy": {
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
+        "volume_ratio": 1.34
+      },
       "source": "yfinance"
     },
     {
@@ -2186,6 +2330,12 @@
         "rsi": 32.8,
         "volume_ratio": 0.89
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.89
+      },
       "source": "yfinance"
     },
     {
@@ -2232,25 +2382,31 @@
         }
       ],
       "market_type": "韩股",
-      "price": "276500.00",
-      "change": "+6500.00 (+2.41%)",
+      "price": "277500.00",
+      "change": "+7500.00 (+2.78%)",
       "isUp": true,
-      "per": "3.99",
+      "per": "4.00",
       "roe": "30.8%",
-      "forward_per": "3.99",
+      "forward_per": "4.00",
       "pbr": "--",
-      "distHigh": "-26.2%",
-      "ytdChange": "115.86%",
-      "distWeek": "-0.5%",
-      "distMonth": "-4.0%",
+      "distHigh": "-25.9%",
+      "ytdChange": "116.64%",
+      "distWeek": "-0.2%",
+      "distMonth": "-3.6%",
       "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏强",
         "class": "signal-up",
-        "reason": "综合分 90/100 · RSI 62 · 量比 0.7x",
+        "reason": "综合分 90/100 · RSI 63 · 量比 0.8x",
         "score": 90,
-        "rsi": 62.3,
-        "volume_ratio": 0.7
+        "rsi": 62.6,
+        "volume_ratio": 0.77
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.77
       },
       "source": "yfinance"
     },
@@ -2288,25 +2444,31 @@
         }
       ],
       "market_type": "韩股",
-      "price": "1857000.00",
-      "change": "+74000.00 (+4.15%)",
+      "price": "1869000.00",
+      "change": "+86000.00 (+4.82%)",
       "isUp": true,
-      "per": "3.93",
+      "per": "3.95",
       "roe": "354.1%",
-      "forward_per": "3.93",
+      "forward_per": "3.95",
       "pbr": "--",
-      "distHigh": "-37.8%",
-      "ytdChange": "174.91%",
-      "distWeek": "-0.2%",
-      "distMonth": "-0.2%",
+      "distHigh": "-37.4%",
+      "ytdChange": "176.69%",
+      "distWeek": "-0.1%",
+      "distMonth": "-0.1%",
       "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏强",
         "class": "signal-up",
-        "reason": "综合分 90/100 · RSI 72 · 量比 0.7x",
+        "reason": "综合分 90/100 · RSI 72 · 量比 0.8x",
         "score": 90,
-        "rsi": 71.7,
-        "volume_ratio": 0.7
+        "rsi": 72.1,
+        "volume_ratio": 0.77
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.77
       },
       "source": "yfinance"
     },
@@ -2364,6 +2526,12 @@
         "rsi": 68.2,
         "volume_ratio": 0.67
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.67
+      },
       "source": "yfinance"
     },
     {
@@ -2410,25 +2578,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "199.20",
-      "change": "+1.38 (+0.70%)",
+      "price": "198.40",
+      "change": "+0.58 (+0.29%)",
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "69.42%",
-      "distWeek": "-1.0%",
-      "distMonth": "-12.0%",
+      "ytdChange": "68.74%",
+      "distWeek": "-1.4%",
+      "distMonth": "-12.4%",
       "trend": "熊市空头",
       "intraday_signal": {
         "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 35/100 · RSI 50 · 量比 0.6x",
+        "reason": "综合分 35/100 · RSI 49 · 量比 0.7x",
         "score": 35,
-        "rsi": 49.5,
-        "volume_ratio": 0.65
+        "rsi": 49.1,
+        "volume_ratio": 0.7
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.7
       },
       "source": "sina"
     },
@@ -2506,6 +2680,12 @@
         "reason": "综合分 40/100 · RSI 32 · 量比 0.8x",
         "score": 40,
         "rsi": 31.8,
+        "volume_ratio": 0.8
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.8
       },
       "source": "yfinance"
@@ -2586,6 +2766,12 @@
         "rsi": 40.3,
         "volume_ratio": 1.1
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 1.1
+      },
       "source": "yfinance"
     },
     {
@@ -2652,6 +2838,12 @@
         "reason": "综合分 35/100 · RSI 56 · 量比 1.3x",
         "score": 35,
         "rsi": 55.6,
+        "volume_ratio": 1.26
+      },
+      "flow_proxy": {
+        "label": "偏流出",
+        "class": "signal-down",
+        "reason": "空头趋势且量能高于均值",
         "volume_ratio": 1.26
       },
       "source": "yfinance"
@@ -2726,6 +2918,12 @@
         "rsi": 29.2,
         "volume_ratio": 0.65
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.65
+      },
       "source": "yfinance"
     },
     {
@@ -2796,6 +2994,12 @@
         "reason": "综合分 90/100 · RSI 62 · 量比 0.8x",
         "score": 90,
         "rsi": 62.4,
+        "volume_ratio": 0.84
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.84
       },
       "source": "yfinance"
@@ -2872,6 +3076,12 @@
         "rsi": 74.7,
         "volume_ratio": 0.64
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.64
+      },
       "source": "yfinance"
     },
     {
@@ -2920,25 +3130,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "23.15",
-      "change": "+0.02 (+0.09%)",
-      "isUp": true,
+      "price": "23.09",
+      "change": "-0.04 (-0.17%)",
+      "isUp": false,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "6.98%",
-      "distWeek": "-3.5%",
-      "distMonth": "-20.4%",
+      "ytdChange": "6.70%",
+      "distWeek": "-3.8%",
+      "distMonth": "-20.6%",
       "trend": "熊市空头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 25/100 · RSI 27 · 量比 0.5x",
+        "reason": "综合分 25/100 · RSI 27 · 量比 0.6x",
         "score": 25,
-        "rsi": 27.0,
-        "volume_ratio": 0.54
+        "rsi": 26.7,
+        "volume_ratio": 0.6
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.6
       },
       "source": "sina"
     },
@@ -3016,6 +3232,12 @@
         "reason": "综合分 25/100 · RSI 25 · 量比 0.5x",
         "score": 25,
         "rsi": 24.7,
+        "volume_ratio": 0.49
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.49
       },
       "source": "yfinance"
@@ -3106,6 +3328,12 @@
         "rsi": 63.2,
         "volume_ratio": 1.06
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 1.06
+      },
       "source": "yfinance"
     },
     {
@@ -3162,6 +3390,12 @@
         "reason": "综合分 10/100 · RSI 37 · 量比 0.5x",
         "score": 10,
         "rsi": 36.7,
+        "volume_ratio": 0.47
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.47
       },
       "source": "yfinance"
@@ -3252,6 +3486,12 @@
         "rsi": 44.8,
         "volume_ratio": 0.4
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.4
+      },
       "source": "yfinance"
     },
     {
@@ -3322,6 +3562,12 @@
         "reason": "综合分 25/100 · RSI 42 · 量比 0.4x",
         "score": 25,
         "rsi": 42.1,
+        "volume_ratio": 0.36
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.36
       },
       "source": "yfinance"
@@ -3396,6 +3642,12 @@
         "rsi": 50.5,
         "volume_ratio": 0.26
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.26
+      },
       "source": "yfinance"
     },
     {
@@ -3466,6 +3718,12 @@
         "reason": "综合分 10/100 · RSI 22 · 量比 0.3x",
         "score": 10,
         "rsi": 21.8,
+        "volume_ratio": 0.34
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.34
       },
       "source": "yfinance"
@@ -3540,6 +3798,12 @@
         "rsi": 47.6,
         "volume_ratio": 0.29
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.29
+      },
       "source": "yfinance"
     },
     {
@@ -3606,6 +3870,12 @@
         "reason": "综合分 20/100 · RSI 47 · 量比 0.6x",
         "score": 20,
         "rsi": 47.0,
+        "volume_ratio": 0.62
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.62
       },
       "source": "yfinance"
@@ -3676,6 +3946,12 @@
         "rsi": 36.1,
         "volume_ratio": 0.28
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.28
+      },
       "source": "yfinance"
     },
     {
@@ -3736,6 +4012,12 @@
         "reason": "综合分 35/100 · RSI 50 · 量比 0.2x",
         "score": 35,
         "rsi": 49.7,
+        "volume_ratio": 0.22
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.22
       },
       "source": "yfinance"
@@ -3810,6 +4092,12 @@
         "reason": "综合分 45/100 · RSI 58 · 量比 0.4x",
         "score": 45,
         "rsi": 58.3,
+        "volume_ratio": 0.43
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.43
       },
       "source": "yfinance"
@@ -3890,6 +4178,12 @@
         "rsi": 57.5,
         "volume_ratio": 1.67
       },
+      "flow_proxy": {
+        "label": "疑似流出",
+        "class": "signal-down",
+        "reason": "下跌伴随明显放量",
+        "volume_ratio": 1.67
+      },
       "source": "yfinance"
     },
     {
@@ -3960,6 +4254,12 @@
         "reason": "综合分 60/100 · RSI 63 · 量比 0.6x",
         "score": 60,
         "rsi": 62.7,
+        "volume_ratio": 0.65
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.65
       },
       "source": "yfinance"
@@ -4038,6 +4338,12 @@
         "rsi": 34.1,
         "volume_ratio": 0.33
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.33
+      },
       "source": "yfinance"
     },
     {
@@ -4104,6 +4410,12 @@
         "reason": "综合分 10/100 · RSI 36 · 量比 0.6x",
         "score": 10,
         "rsi": 36.4,
+        "volume_ratio": 0.57
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.57
       },
       "source": "yfinance"
@@ -4188,6 +4500,12 @@
         "rsi": 47.1,
         "volume_ratio": 0.62
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.62
+      },
       "source": "yfinance"
     },
     {
@@ -4266,6 +4584,12 @@
         "rsi": 60.2,
         "volume_ratio": 0.21
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.21
+      },
       "source": "yfinance"
     },
     {
@@ -4342,6 +4666,12 @@
         "reason": "综合分 60/100 · RSI 70 · 量比 0.2x",
         "score": 60,
         "rsi": 69.7,
+        "volume_ratio": 0.24
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.24
       },
       "source": "yfinance"
@@ -4426,6 +4756,12 @@
         "rsi": 31.9,
         "volume_ratio": 0.41
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.41
+      },
       "source": "yfinance"
     },
     {
@@ -4506,6 +4842,12 @@
         "reason": "综合分 20/100 · RSI 55 · 量比 0.8x",
         "score": 20,
         "rsi": 54.8,
+        "volume_ratio": 0.8
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.8
       },
       "source": "yfinance"
@@ -4590,6 +4932,12 @@
         "rsi": 55.3,
         "volume_ratio": 0.63
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.63
+      },
       "source": "yfinance"
     },
     {
@@ -4670,6 +5018,12 @@
         "reason": "综合分 75/100 · RSI 63 · 量比 0.5x",
         "score": 75,
         "rsi": 62.6,
+        "volume_ratio": 0.47
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.47
       },
       "source": "yfinance"
@@ -4754,6 +5108,12 @@
         "rsi": 51.5,
         "volume_ratio": 0.6
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.6
+      },
       "source": "yfinance"
     },
     {
@@ -4828,6 +5188,12 @@
         "rsi": 49.8,
         "volume_ratio": 0.47
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.47
+      },
       "source": "yfinance"
     },
     {
@@ -4892,6 +5258,12 @@
         "reason": "综合分 60/100 · RSI 67 · 量比 0.4x",
         "score": 60,
         "rsi": 66.7,
+        "volume_ratio": 0.42
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.42
       },
       "source": "yfinance"
@@ -4968,6 +5340,12 @@
         "reason": "综合分 10/100 · RSI 44 · 量比 0.4x",
         "score": 10,
         "rsi": 43.9,
+        "volume_ratio": 0.37
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.37
       },
       "source": "yfinance"
@@ -5052,6 +5430,12 @@
         "rsi": 40.3,
         "volume_ratio": 0.69
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.69
+      },
       "source": "yfinance"
     },
     {
@@ -5124,6 +5508,12 @@
         "reason": "综合分 20/100 · RSI 47 · 量比 0.5x",
         "score": 20,
         "rsi": 47.3,
+        "volume_ratio": 0.53
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.53
       },
       "source": "yfinance"
@@ -5204,6 +5594,12 @@
         "rsi": 48.3,
         "volume_ratio": 0.5
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.5
+      },
       "source": "yfinance"
     },
     {
@@ -5264,6 +5660,12 @@
         "rsi": 61.1,
         "volume_ratio": 0.32
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.32
+      },
       "source": "yfinance"
     },
     {
@@ -5313,25 +5715,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "91.17",
-      "change": "-0.83 (-0.90%)",
+      "price": "91.14",
+      "change": "-0.86 (-0.93%)",
       "isUp": false,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "187.18%",
+      "ytdChange": "187.08%",
       "distWeek": "-4.4%",
       "distMonth": "-19.3%",
       "trend": "熊市空头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 25/100 · RSI 34 · 量比 0.6x",
+        "reason": "综合分 25/100 · RSI 34 · 量比 0.7x",
         "score": 25,
         "rsi": 33.6,
-        "volume_ratio": 0.62
+        "volume_ratio": 0.69
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.69
       },
       "source": "sina"
     },
@@ -5405,25 +5813,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "12.97",
-      "change": "-0.08 (-0.61%)",
+      "price": "12.95",
+      "change": "-0.10 (-0.77%)",
       "isUp": false,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-8.21%",
-      "distWeek": "-6.6%",
-      "distMonth": "-13.1%",
+      "ytdChange": "-8.35%",
+      "distWeek": "-6.8%",
+      "distMonth": "-13.3%",
       "trend": "熊市空头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 25/100 · RSI 44 · 量比 0.3x",
+        "reason": "综合分 25/100 · RSI 44 · 量比 0.4x",
         "score": 25,
-        "rsi": 44.4,
-        "volume_ratio": 0.34
+        "rsi": 44.3,
+        "volume_ratio": 0.38
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.38
       },
       "source": "sina"
     },
@@ -5483,25 +5897,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "99.99",
-      "change": "-0.02 (-0.02%)",
+      "price": "99.46",
+      "change": "-0.55 (-0.55%)",
       "isUp": false,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "12.50%",
-      "distWeek": "-4.1%",
-      "distMonth": "-19.4%",
+      "ytdChange": "11.90%",
+      "distWeek": "-4.6%",
+      "distMonth": "-19.8%",
       "trend": "熊市空头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 25/100 · RSI 33 · 量比 0.6x",
+        "reason": "综合分 25/100 · RSI 32 · 量比 0.6x",
         "score": 25,
-        "rsi": 32.7,
-        "volume_ratio": 0.56
+        "rsi": 32.3,
+        "volume_ratio": 0.62
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.62
       },
       "source": "sina"
     },
@@ -5529,25 +5949,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "6.17",
-      "change": "+0.04 (+0.65%)",
+      "price": "6.18",
+      "change": "+0.05 (+0.82%)",
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-23.83%",
-      "distWeek": "-1.8%",
-      "distMonth": "-8.6%",
+      "ytdChange": "-23.70%",
+      "distWeek": "-1.6%",
+      "distMonth": "-8.4%",
       "trend": "熊市空头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 25/100 · RSI 44 · 量比 0.5x",
+        "reason": "综合分 25/100 · RSI 45 · 量比 0.6x",
         "score": 25,
-        "rsi": 44.3,
-        "volume_ratio": 0.5
+        "rsi": 44.9,
+        "volume_ratio": 0.58
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.58
       },
       "source": "sina"
     },
@@ -5605,25 +6031,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "42.35",
-      "change": "+0.65 (+1.56%)",
+      "price": "42.05",
+      "change": "+0.35 (+0.84%)",
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "148.81%",
-      "distWeek": "-5.5%",
-      "distMonth": "-10.1%",
+      "ytdChange": "147.04%",
+      "distWeek": "-6.2%",
+      "distMonth": "-10.7%",
       "trend": "熊市空头",
       "intraday_signal": {
-        "label": "偏强观察",
-        "class": "signal-up",
-        "reason": "综合分 60/100 · RSI 55 · 量比 0.6x",
-        "score": 60,
-        "rsi": 55.4,
-        "volume_ratio": 0.55
+        "label": "偏弱观察",
+        "class": "signal-down",
+        "reason": "综合分 35/100 · RSI 55 · 量比 0.6x",
+        "score": 35,
+        "rsi": 54.6,
+        "volume_ratio": 0.62
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.62
       },
       "source": "sina"
     },
@@ -5671,25 +6103,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "130.28",
-      "change": "+6.46 (+5.22%)",
+      "price": "129.28",
+      "change": "+5.46 (+4.41%)",
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "254.05%",
-      "distWeek": "-7.8%",
-      "distMonth": "-21.3%",
+      "ytdChange": "251.34%",
+      "distWeek": "-8.5%",
+      "distMonth": "-21.9%",
       "trend": "熊市空头",
       "intraday_signal": {
         "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 40/100 · RSI 42 · 量比 0.7x",
+        "reason": "综合分 40/100 · RSI 41 · 量比 0.8x",
         "score": 40,
-        "rsi": 41.8,
-        "volume_ratio": 0.71
+        "rsi": 40.9,
+        "volume_ratio": 0.78
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.78
       },
       "source": "sina"
     },
@@ -5747,25 +6185,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "50.66",
-      "change": "+0.46 (+0.92%)",
+      "price": "50.63",
+      "change": "+0.43 (+0.86%)",
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "40.20%",
-      "distWeek": "-2.3%",
+      "ytdChange": "40.12%",
+      "distWeek": "-2.4%",
       "distMonth": "-20.5%",
       "trend": "熊市空头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 25/100 · RSI 41 · 量比 0.6x",
+        "reason": "综合分 25/100 · RSI 41 · 量比 0.7x",
         "score": 25,
-        "rsi": 41.1,
-        "volume_ratio": 0.64
+        "rsi": 41.0,
+        "volume_ratio": 0.72
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.72
       },
       "source": "sina"
     },
@@ -5835,17 +6279,17 @@
         }
       ],
       "market_type": "A股",
-      "price": "42.82",
-      "change": "-0.18 (-0.42%)",
+      "price": "42.80",
+      "change": "-0.20 (-0.47%)",
       "isUp": false,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "14.46%",
-      "distWeek": "-4.4%",
-      "distMonth": "-25.1%",
+      "ytdChange": "14.41%",
+      "distWeek": "-4.5%",
+      "distMonth": "-25.2%",
       "trend": "熊市空头",
       "intraday_signal": {
         "label": "日内偏弱",
@@ -5853,7 +6297,13 @@
         "reason": "综合分 25/100 · RSI 30 · 量比 0.5x",
         "score": 25,
         "rsi": 30.0,
-        "volume_ratio": 0.45
+        "volume_ratio": 0.5
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.5
       },
       "source": "sina"
     },
@@ -5908,6 +6358,12 @@
         "reason": "综合分 40/100 · RSI 28 · 量比 1.1x",
         "score": 40,
         "rsi": 27.7,
+        "volume_ratio": 1.11
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 1.11
       },
       "source": "yfinance"
@@ -5992,6 +6448,12 @@
         "rsi": 17.7,
         "volume_ratio": 0.94
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.94
+      },
       "source": "yfinance"
     },
     {
@@ -6046,6 +6508,12 @@
         "reason": "综合分 40/100 · RSI 33 · 量比 1.2x",
         "score": 40,
         "rsi": 33.4,
+        "volume_ratio": 1.17
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 1.17
       },
       "source": "yfinance"
@@ -6110,6 +6578,12 @@
         "rsi": 31.4,
         "volume_ratio": 1.44
       },
+      "flow_proxy": {
+        "label": "偏流出",
+        "class": "signal-down",
+        "reason": "空头趋势且量能高于均值",
+        "volume_ratio": 1.44
+      },
       "source": "yfinance"
     },
     {
@@ -6152,7 +6626,7 @@
       "per": "49.04",
       "roe": "36.5%",
       "forward_per": "30.64",
-      "pbr": "16.25",
+      "pbr": "17.78",
       "distHigh": "-26.8%",
       "ytdChange": "72.22%",
       "distWeek": "-1.3%",
@@ -6164,6 +6638,12 @@
         "reason": "综合分 40/100 · RSI 24 · 量比 1.1x",
         "score": 40,
         "rsi": 23.7,
+        "volume_ratio": 1.1
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 1.1
       },
       "source": "yfinance"
@@ -6210,6 +6690,12 @@
         "reason": "综合分 50/100 · RSI 22 · 量比 1.3x",
         "score": 50,
         "rsi": 22.0,
+        "volume_ratio": 1.35
+      },
+      "flow_proxy": {
+        "label": "偏流出",
+        "class": "signal-down",
+        "reason": "空头趋势且量能高于均值",
         "volume_ratio": 1.35
       },
       "source": "yfinance"
@@ -6272,6 +6758,12 @@
         "reason": "综合分 45/100 · RSI 56 · 量比 0.4x",
         "score": 45,
         "rsi": 55.7,
+        "volume_ratio": 0.4
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.4
       },
       "source": "yfinance"
@@ -6340,6 +6832,12 @@
         "rsi": 49.7,
         "volume_ratio": 0.69
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.69
+      },
       "source": "yfinance"
     },
     {
@@ -6394,6 +6892,12 @@
         "rsi": 35.4,
         "volume_ratio": 0.51
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.51
+      },
       "source": "yfinance"
     },
     {
@@ -6438,6 +6942,12 @@
         "reason": "综合分 90/100 · RSI 61 · 量比 0.5x",
         "score": 90,
         "rsi": 61.5,
+        "volume_ratio": 0.53
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.53
       },
       "source": "yfinance"
@@ -6506,6 +7016,12 @@
         "rsi": 72.9,
         "volume_ratio": 0.87
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.87
+      },
       "source": "yfinance"
     },
     {
@@ -6552,6 +7068,12 @@
         "reason": "综合分 20/100 · RSI 51 · 量比 0.4x",
         "score": 20,
         "rsi": 51.0,
+        "volume_ratio": 0.42
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.42
       },
       "source": "yfinance"
@@ -6608,6 +7130,12 @@
         "reason": "综合分 25/100 · RSI 32 · 量比 0.4x",
         "score": 25,
         "rsi": 32.1,
+        "volume_ratio": 0.43
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.43
       },
       "source": "yfinance"
@@ -6668,6 +7196,12 @@
         "rsi": 42.4,
         "volume_ratio": 0.25
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.25
+      },
       "source": "yfinance"
     },
     {
@@ -6720,6 +7254,12 @@
         "rsi": 47.9,
         "volume_ratio": 0.32
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.32
+      },
       "source": "yfinance"
     },
     {
@@ -6770,6 +7310,12 @@
         "reason": "综合分 25/100 · RSI 44 · 量比 0.3x",
         "score": 25,
         "rsi": 43.6,
+        "volume_ratio": 0.32
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.32
       },
       "source": "yfinance"
@@ -6834,6 +7380,12 @@
         "rsi": 42.7,
         "volume_ratio": 0.19
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.19
+      },
       "source": "yfinance"
     },
     {
@@ -6896,6 +7448,12 @@
         "rsi": 52.6,
         "volume_ratio": 0.42
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.42
+      },
       "source": "yfinance"
     },
     {
@@ -6948,6 +7506,12 @@
         "rsi": 37.8,
         "volume_ratio": 0.23
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.23
+      },
       "source": "yfinance"
     },
     {
@@ -6994,6 +7558,12 @@
         "reason": "综合分 35/100 · RSI 49 · 量比 0.3x",
         "score": 35,
         "rsi": 48.6,
+        "volume_ratio": 0.31
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.31
       },
       "source": "yfinance"
@@ -7052,6 +7622,12 @@
         "rsi": 49.6,
         "volume_ratio": 0.74
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.74
+      },
       "source": "yfinance"
     },
     {
@@ -7106,6 +7682,12 @@
         "reason": "综合分 25/100 · RSI 38 · 量比 0.5x",
         "score": 25,
         "rsi": 37.6,
+        "volume_ratio": 0.54
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.54
       },
       "source": "yfinance"
@@ -7164,6 +7746,12 @@
         "rsi": 37.8,
         "volume_ratio": 0.31
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.31
+      },
       "source": "yfinance"
     },
     {
@@ -7218,6 +7806,12 @@
         "reason": "综合分 60/100 · RSI 57 · 量比 0.3x",
         "score": 60,
         "rsi": 56.6,
+        "volume_ratio": 0.28
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.28
       },
       "source": "yfinance"
@@ -7286,6 +7880,12 @@
         "rsi": 49.2,
         "volume_ratio": 0.33
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.33
+      },
       "source": "yfinance"
     },
     {
@@ -7338,6 +7938,12 @@
         "rsi": 46.3,
         "volume_ratio": 0.39
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.39
+      },
       "source": "yfinance"
     },
     {
@@ -7374,25 +7980,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "339.40",
-      "change": "-4.60 (-1.34%)",
+      "price": "337.80",
+      "change": "-6.20 (-1.80%)",
       "isUp": false,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "85.64%",
-      "distWeek": "-3.3%",
-      "distMonth": "-15.1%",
+      "ytdChange": "84.77%",
+      "distWeek": "-3.8%",
+      "distMonth": "-15.5%",
       "trend": "熊市空头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 10/100 · RSI 33 · 量比 0.8x",
+        "reason": "综合分 10/100 · RSI 32 · 量比 0.9x",
         "score": 10,
-        "rsi": 32.6,
-        "volume_ratio": 0.84
+        "rsi": 32.1,
+        "volume_ratio": 0.9
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.9
       },
       "source": "sina"
     },
@@ -7442,7 +8054,7 @@
       "per": "45.74",
       "roe": "17.0%",
       "forward_per": "19.20",
-      "pbr": "6.72",
+      "pbr": "6.73",
       "distHigh": "-17.6%",
       "ytdChange": "124.72%",
       "distWeek": "-1.8%",
@@ -7454,6 +8066,12 @@
         "reason": "综合分 35/100 · RSI 39 · 量比 1.3x",
         "score": 35,
         "rsi": 39.3,
+        "volume_ratio": 1.25
+      },
+      "flow_proxy": {
+        "label": "偏流出",
+        "class": "signal-down",
+        "reason": "空头趋势且量能高于均值",
         "volume_ratio": 1.25
       },
       "source": "yfinance"
@@ -7522,6 +8140,12 @@
         "rsi": 24.6,
         "volume_ratio": 1.03
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 1.03
+      },
       "source": "yfinance"
     },
     {
@@ -7554,25 +8178,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "69.62",
-      "change": "+0.62 (+0.90%)",
+      "price": "69.23",
+      "change": "+0.23 (+0.33%)",
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "89.50%",
-      "distWeek": "-4.0%",
-      "distMonth": "-20.4%",
+      "ytdChange": "88.43%",
+      "distWeek": "-4.5%",
+      "distMonth": "-20.9%",
       "trend": "熊市空头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 25/100 · RSI 33 · 量比 0.7x",
+        "reason": "综合分 25/100 · RSI 32 · 量比 0.7x",
         "score": 25,
-        "rsi": 33.2,
-        "volume_ratio": 0.66
+        "rsi": 32.1,
+        "volume_ratio": 0.72
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.72
       },
       "source": "sina"
     },
@@ -7602,25 +8232,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "59.44",
-      "change": "+0.29 (+0.49%)",
+      "price": "59.20",
+      "change": "+0.05 (+0.08%)",
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "57.84%",
-      "distWeek": "-2.2%",
-      "distMonth": "-18.1%",
+      "ytdChange": "57.21%",
+      "distWeek": "-2.6%",
+      "distMonth": "-18.4%",
       "trend": "熊市空头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 25/100 · RSI 39 · 量比 0.7x",
+        "reason": "综合分 25/100 · RSI 38 · 量比 0.7x",
         "score": 25,
-        "rsi": 38.5,
-        "volume_ratio": 0.65
+        "rsi": 37.7,
+        "volume_ratio": 0.72
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.72
       },
       "source": "sina"
     },
@@ -7676,6 +8312,12 @@
         "reason": "综合分 60/100 · RSI 61 · 量比 0.4x",
         "score": 60,
         "rsi": 60.9,
+        "volume_ratio": 0.37
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.37
       },
       "source": "yfinance"
@@ -7738,6 +8380,12 @@
         "reason": "综合分 40/100 · RSI 27 · 量比 1.0x",
         "score": 40,
         "rsi": 26.8,
+        "volume_ratio": 1.05
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 1.05
       },
       "source": "yfinance"
@@ -7806,6 +8454,12 @@
         "rsi": 42.1,
         "volume_ratio": 1.07
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 1.07
+      },
       "source": "yfinance"
     },
     {
@@ -7852,25 +8506,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "919.70",
-      "change": "+21.24 (+2.36%)",
+      "price": "915.99",
+      "change": "+17.53 (+1.95%)",
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "50.95%",
-      "distWeek": "-1.5%",
-      "distMonth": "-9.4%",
+      "ytdChange": "50.34%",
+      "distWeek": "-1.9%",
+      "distMonth": "-9.7%",
       "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏强",
         "class": "signal-up",
-        "reason": "综合分 80/100 · RSI 54 · 量比 0.7x",
+        "reason": "综合分 80/100 · RSI 53 · 量比 0.8x",
         "score": 80,
-        "rsi": 53.6,
-        "volume_ratio": 0.71
+        "rsi": 53.0,
+        "volume_ratio": 0.77
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.77
       },
       "source": "sina"
     },
@@ -7918,25 +8578,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "426.00",
-      "change": "+8.80 (+2.11%)",
+      "price": "424.46",
+      "change": "+7.26 (+1.74%)",
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "38.67%",
-      "distWeek": "-1.2%",
-      "distMonth": "-9.7%",
+      "ytdChange": "38.16%",
+      "distWeek": "-1.6%",
+      "distMonth": "-10.1%",
       "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏强",
         "class": "signal-up",
-        "reason": "综合分 80/100 · RSI 55 · 量比 0.7x",
+        "reason": "综合分 80/100 · RSI 54 · 量比 0.8x",
         "score": 80,
-        "rsi": 54.6,
-        "volume_ratio": 0.71
+        "rsi": 54.2,
+        "volume_ratio": 0.77
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.77
       },
       "source": "sina"
     },
@@ -7974,25 +8640,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "1753.00",
-      "change": "+51.00 (+3.00%)",
+      "price": "1733.74",
+      "change": "+31.74 (+1.86%)",
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "296.19%",
-      "distWeek": "-1.2%",
-      "distMonth": "-1.2%",
+      "ytdChange": "291.84%",
+      "distWeek": "-2.3%",
+      "distMonth": "-2.3%",
       "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏强",
         "class": "signal-up",
-        "reason": "综合分 90/100 · RSI 66 · 量比 0.8x",
+        "reason": "综合分 90/100 · RSI 65 · 量比 0.8x",
         "score": 90,
-        "rsi": 65.9,
-        "volume_ratio": 0.76
+        "rsi": 65.0,
+        "volume_ratio": 0.84
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.84
       },
       "source": "sina"
     },
@@ -8030,25 +8702,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "65.26",
-      "change": "+1.26 (+1.97%)",
+      "price": "65.00",
+      "change": "+1.00 (+1.56%)",
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "164.55%",
-      "distWeek": "-5.1%",
-      "distMonth": "-9.6%",
+      "ytdChange": "163.49%",
+      "distWeek": "-5.5%",
+      "distMonth": "-10.0%",
       "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏强",
         "class": "signal-up",
-        "reason": "综合分 90/100 · RSI 61 · 量比 0.6x",
+        "reason": "综合分 90/100 · RSI 61 · 量比 0.7x",
         "score": 90,
-        "rsi": 61.3,
-        "volume_ratio": 0.64
+        "rsi": 61.0,
+        "volume_ratio": 0.7
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.7
       },
       "source": "sina"
     },
@@ -8116,6 +8794,12 @@
         "rsi": 52.6,
         "volume_ratio": 0.53
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.53
+      },
       "source": "yfinance"
     },
     {
@@ -8172,6 +8856,12 @@
         "rsi": 44.0,
         "volume_ratio": 0.57
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.57
+      },
       "source": "yfinance"
     },
     {
@@ -8226,6 +8916,12 @@
         "reason": "综合分 50/100 · RSI 49 · 量比 0.6x",
         "score": 50,
         "rsi": 49.5,
+        "volume_ratio": 0.63
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.63
       },
       "source": "yfinance"
@@ -8304,6 +9000,12 @@
         "rsi": 69.6,
         "volume_ratio": 0.32
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.32
+      },
       "source": "yfinance"
     },
     {
@@ -8358,6 +9060,12 @@
         "reason": "综合分 60/100 · RSI 57 · 量比 0.3x",
         "score": 60,
         "rsi": 56.6,
+        "volume_ratio": 0.28
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.28
       },
       "source": "yfinance"
@@ -8416,6 +9124,12 @@
         "rsi": 61.3,
         "volume_ratio": 0.43
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.43
+      },
       "source": "yfinance"
     },
     {
@@ -8470,6 +9184,12 @@
         "reason": "综合分 90/100 · RSI 65 · 量比 1.0x",
         "score": 90,
         "rsi": 64.9,
+        "volume_ratio": 1.04
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 1.04
       },
       "source": "yfinance"
@@ -8538,6 +9258,12 @@
         "rsi": 35.7,
         "volume_ratio": 0.47
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.47
+      },
       "source": "yfinance"
     },
     {
@@ -8592,6 +9318,12 @@
         "reason": "综合分 40/100 · RSI 30 · 量比 1.0x",
         "score": 40,
         "rsi": 30.5,
+        "volume_ratio": 1.03
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 1.03
       },
       "source": "yfinance"
@@ -8660,6 +9392,12 @@
         "rsi": 44.1,
         "volume_ratio": 0.88
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.88
+      },
       "source": "yfinance"
     },
     {
@@ -8720,6 +9458,12 @@
         "reason": "综合分 20/100 · RSI 53 · 量比 0.4x",
         "score": 20,
         "rsi": 53.0,
+        "volume_ratio": 0.36
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.36
       },
       "source": "yfinance"
@@ -8784,6 +9528,12 @@
         "rsi": 30.4,
         "volume_ratio": 0.34
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.34
+      },
       "source": "yfinance"
     },
     {
@@ -8834,6 +9584,12 @@
         "reason": "综合分 10/100 · RSI 43 · 量比 0.4x",
         "score": 10,
         "rsi": 43.0,
+        "volume_ratio": 0.45
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.45
       },
       "source": "yfinance"
@@ -8902,6 +9658,12 @@
         "rsi": 45.3,
         "volume_ratio": 0.24
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.24
+      },
       "source": "yfinance"
     },
     {
@@ -8956,6 +9718,12 @@
         "reason": "综合分 20/100 · RSI 53 · 量比 0.4x",
         "score": 20,
         "rsi": 53.2,
+        "volume_ratio": 0.36
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.36
       },
       "source": "yfinance"
@@ -9034,6 +9802,12 @@
         "rsi": 39.2,
         "volume_ratio": 0.38
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.38
+      },
       "source": "yfinance"
     },
     {
@@ -9100,6 +9874,12 @@
         "rsi": 47.6,
         "volume_ratio": 0.46
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.46
+      },
       "source": "yfinance"
     },
     {
@@ -9152,6 +9932,12 @@
         "rsi": 61.7,
         "volume_ratio": 0.66
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.66
+      },
       "source": "yfinance"
     },
     {
@@ -9198,6 +9984,12 @@
         "reason": "综合分 35/100 · RSI 49 · 量比 0.3x",
         "score": 35,
         "rsi": 48.6,
+        "volume_ratio": 0.31
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.31
       },
       "source": "yfinance"
@@ -9252,6 +10044,12 @@
         "rsi": 48.1,
         "volume_ratio": 0.59
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.59
+      },
       "source": "yfinance"
     },
     {
@@ -9302,6 +10100,12 @@
         "reason": "综合分 10/100 · RSI 44 · 量比 0.6x",
         "score": 10,
         "rsi": 44.3,
+        "volume_ratio": 0.64
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.64
       },
       "source": "yfinance"
@@ -9360,6 +10164,12 @@
         "rsi": 43.2,
         "volume_ratio": 0.28
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.28
+      },
       "source": "yfinance"
     },
     {
@@ -9412,6 +10222,12 @@
         "rsi": 38.9,
         "volume_ratio": 0.67
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.67
+      },
       "source": "yfinance"
     },
     {
@@ -9456,6 +10272,12 @@
         "reason": "综合分 60/100 · RSI 60 · 量比 0.4x",
         "score": 60,
         "rsi": 60.3,
+        "volume_ratio": 0.35
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.35
       },
       "source": "yfinance"
@@ -9524,6 +10346,12 @@
         "rsi": 62.8,
         "volume_ratio": 0.85
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.85
+      },
       "source": "yfinance"
     },
     {
@@ -9578,6 +10406,12 @@
         "reason": "综合分 35/100 · RSI 47 · 量比 1.0x",
         "score": 35,
         "rsi": 47.2,
+        "volume_ratio": 0.96
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.96
       },
       "source": "yfinance"
@@ -9642,6 +10476,12 @@
         "rsi": 44.5,
         "volume_ratio": 0.94
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.94
+      },
       "source": "yfinance"
     },
     {
@@ -9696,6 +10536,12 @@
         "reason": "综合分 50/100 · RSI 28 · 量比 1.2x",
         "score": 50,
         "rsi": 28.3,
+        "volume_ratio": 1.23
+      },
+      "flow_proxy": {
+        "label": "偏流出",
+        "class": "signal-down",
+        "reason": "空头趋势且量能高于均值",
         "volume_ratio": 1.23
       },
       "source": "yfinance"
@@ -9754,6 +10600,12 @@
         "rsi": 51.3,
         "volume_ratio": 0.89
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.89
+      },
       "source": "yfinance"
     },
     {
@@ -9810,6 +10662,12 @@
         "rsi": 35.2,
         "volume_ratio": 0.7
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.7
+      },
       "source": "yfinance"
     },
     {
@@ -9854,6 +10712,12 @@
         "reason": "综合分 10/100 · RSI 30 · 量比 1.1x",
         "score": 10,
         "rsi": 29.9,
+        "volume_ratio": 1.09
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 1.09
       },
       "source": "yfinance"
@@ -9910,6 +10774,12 @@
         "reason": "综合分 25/100 · RSI 33 · 量比 0.9x",
         "score": 25,
         "rsi": 32.8,
+        "volume_ratio": 0.89
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.89
       },
       "source": "cache"
@@ -9978,6 +10848,12 @@
         "rsi": 56.6,
         "volume_ratio": 0.84
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.84
+      },
       "source": "yfinance"
     },
     {
@@ -10014,25 +10890,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "27.43",
-      "change": "-0.01 (-0.04%)",
+      "price": "27.30",
+      "change": "-0.14 (-0.51%)",
       "isUp": false,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-9.62%",
-      "distWeek": "-4.2%",
-      "distMonth": "-7.4%",
+      "ytdChange": "-10.05%",
+      "distWeek": "-4.6%",
+      "distMonth": "-7.8%",
       "trend": "熊市空头",
       "intraday_signal": {
         "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 45/100 · RSI 56 · 量比 0.6x",
+        "reason": "综合分 45/100 · RSI 55 · 量比 0.7x",
         "score": 45,
-        "rsi": 56.2,
-        "volume_ratio": 0.62
+        "rsi": 55.2,
+        "volume_ratio": 0.68
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.68
       },
       "source": "sina"
     },
@@ -10094,6 +10976,12 @@
         "reason": "综合分 90/100 · RSI 60 · 量比 0.4x",
         "score": 90,
         "rsi": 59.7,
+        "volume_ratio": 0.37
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.37
       },
       "source": "yfinance"
@@ -10172,6 +11060,12 @@
         "rsi": 42.4,
         "volume_ratio": 0.35
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.35
+      },
       "source": "yfinance"
     },
     {
@@ -10248,6 +11142,12 @@
         "rsi": 45.7,
         "volume_ratio": 0.26
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.26
+      },
       "source": "yfinance"
     },
     {
@@ -10322,6 +11222,12 @@
         "reason": "综合分 10/100 · RSI 32 · 量比 0.4x",
         "score": 10,
         "rsi": 32.2,
+        "volume_ratio": 0.44
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.44
       },
       "source": "yfinance"
@@ -10410,6 +11316,12 @@
         "rsi": 57.5,
         "volume_ratio": 0.3
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.3
+      },
       "source": "yfinance"
     },
     {
@@ -10486,6 +11398,12 @@
         "rsi": 39.4,
         "volume_ratio": 0.39
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.39
+      },
       "source": "yfinance"
     },
     {
@@ -10545,7 +11463,7 @@
       "price": "67460.00",
       "change": "-1130.00 (-1.65%)",
       "isUp": false,
-      "per": "25.03",
+      "per": "25.55",
       "roe": "9.8%",
       "forward_per": "20.55",
       "pbr": "1.97",
@@ -10560,6 +11478,12 @@
         "reason": "综合分 10/100 · RSI 35 · 量比 0.2x",
         "score": 10,
         "rsi": 34.7,
+        "volume_ratio": 0.23
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.23
       },
       "source": "yfinance"
@@ -10628,6 +11552,12 @@
         "rsi": 59.4,
         "volume_ratio": 0.51
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.51
+      },
       "source": "yfinance"
     },
     {
@@ -10680,6 +11610,12 @@
         "reason": "综合分 75/100 · RSI 61 · 量比 0.3x",
         "score": 75,
         "rsi": 60.5,
+        "volume_ratio": 0.34
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.34
       },
       "source": "yfinance"
@@ -10758,6 +11694,12 @@
         "rsi": 39.4,
         "volume_ratio": 0.75
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.75
+      },
       "source": "yfinance"
     },
     {
@@ -10824,6 +11766,12 @@
         "rsi": 41.3,
         "volume_ratio": 0.67
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.67
+      },
       "source": "yfinance"
     },
     {
@@ -10880,25 +11828,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "339.99",
-      "change": "+0.05 (+0.01%)",
-      "isUp": true,
+      "price": "339.61",
+      "change": "-0.33 (-0.10%)",
+      "isUp": false,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "128.96%",
-      "distWeek": "-3.0%",
-      "distMonth": "-10.3%",
+      "ytdChange": "128.70%",
+      "distWeek": "-3.1%",
+      "distMonth": "-10.4%",
       "trend": "熊市空头",
       "intraday_signal": {
         "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 35/100 · RSI 48 · 量比 0.4x",
+        "reason": "综合分 35/100 · RSI 48 · 量比 0.5x",
         "score": 35,
-        "rsi": 48.3,
-        "volume_ratio": 0.45
+        "rsi": 48.2,
+        "volume_ratio": 0.55
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.55
       },
       "source": "sina"
     },
@@ -10936,25 +11890,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "94.13",
-      "change": "+0.36 (+0.38%)",
-      "isUp": true,
+      "price": "93.55",
+      "change": "-0.22 (-0.23%)",
+      "isUp": false,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "128.84%",
-      "distWeek": "-2.3%",
-      "distMonth": "-7.3%",
+      "ytdChange": "127.43%",
+      "distWeek": "-2.9%",
+      "distMonth": "-7.9%",
       "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏强",
         "class": "signal-up",
         "reason": "综合分 75/100 · RSI 57 · 量比 0.5x",
         "score": 75,
-        "rsi": 57.2,
-        "volume_ratio": 0.48
+        "rsi": 56.5,
+        "volume_ratio": 0.53
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.53
       },
       "source": "sina"
     },
@@ -11012,25 +11972,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "14.51",
-      "change": "+0.09 (+0.62%)",
+      "price": "14.48",
+      "change": "+0.06 (+0.42%)",
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-52.03%",
-      "distWeek": "-2.4%",
-      "distMonth": "-11.0%",
+      "ytdChange": "-52.13%",
+      "distWeek": "-2.6%",
+      "distMonth": "-11.2%",
       "trend": "熊市空头",
       "intraday_signal": {
         "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 35/100 · RSI 53 · 量比 0.5x",
+        "reason": "综合分 35/100 · RSI 52 · 量比 0.5x",
         "score": 35,
-        "rsi": 53.3,
-        "volume_ratio": 0.46
+        "rsi": 52.4,
+        "volume_ratio": 0.51
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.51
       },
       "source": "sina"
     },
@@ -11118,6 +12084,12 @@
         "rsi": 58.7,
         "volume_ratio": 0.27
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.27
+      },
       "source": "yfinance"
     },
     {
@@ -11149,6 +12121,12 @@
         "reason": "综合分 75/100 · RSI 69 · 量比 0.5x",
         "score": 75,
         "rsi": 68.6,
+        "volume_ratio": 0.49
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.49
       },
       "source": "yfinance"
@@ -11184,6 +12162,12 @@
         "rsi": 56.6,
         "volume_ratio": 0.33
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.33
+      },
       "source": "yfinance"
     },
     {
@@ -11215,6 +12199,12 @@
         "reason": "综合分 75/100 · RSI 64 · 量比 0.4x",
         "score": 75,
         "rsi": 63.7,
+        "volume_ratio": 0.37
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.37
       },
       "source": "yfinance"
@@ -11263,6 +12253,12 @@
         "rsi": 52.2,
         "volume_ratio": 0.73
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.73
+      },
       "source": "yfinance"
     },
     {
@@ -11307,6 +12303,12 @@
         "reason": "综合分 25/100 · RSI 13 · 量比 0.9x",
         "score": 25,
         "rsi": 12.8,
+        "volume_ratio": 0.93
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.93
       },
       "source": "yfinance"
@@ -11355,6 +12357,12 @@
         "rsi": 37.3,
         "volume_ratio": 0.93
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.93
+      },
       "source": "yfinance"
     },
     {
@@ -11399,6 +12407,12 @@
         "reason": "综合分 25/100 · RSI 29 · 量比 0.8x",
         "score": 25,
         "rsi": 29.0,
+        "volume_ratio": 0.8
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.8
       },
       "source": "yfinance"
@@ -11447,6 +12461,12 @@
         "rsi": 38.9,
         "volume_ratio": 0.38
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.38
+      },
       "source": "yfinance"
     },
     {
@@ -11491,6 +12511,12 @@
         "reason": "综合分 25/100 · RSI 38 · 量比 0.4x",
         "score": 25,
         "rsi": 37.9,
+        "volume_ratio": 0.37
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.37
       },
       "source": "yfinance"
@@ -11539,6 +12565,12 @@
         "rsi": 50.3,
         "volume_ratio": 0.59
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.59
+      },
       "source": "yfinance"
     },
     {
@@ -11583,6 +12615,12 @@
         "reason": "综合分 40/100 · RSI 32 · 量比 0.8x",
         "score": 40,
         "rsi": 32.3,
+        "volume_ratio": 0.82
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.82
       },
       "source": "yfinance"
@@ -11631,6 +12669,12 @@
         "rsi": 21.8,
         "volume_ratio": 0.77
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.77
+      },
       "source": "yfinance"
     },
     {
@@ -11677,6 +12721,12 @@
         "rsi": 27.3,
         "volume_ratio": 0.83
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.83
+      },
       "source": "yfinance"
     },
     {
@@ -11721,6 +12771,12 @@
         "reason": "综合分 40/100 · RSI 28 · 量比 0.8x",
         "score": 40,
         "rsi": 27.5,
+        "volume_ratio": 0.8
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.8
       },
       "source": "yfinance"
@@ -11779,6 +12835,12 @@
         "rsi": 30.8,
         "volume_ratio": 0.48
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.48
+      },
       "source": "yfinance"
     },
     {
@@ -11825,6 +12887,12 @@
         "rsi": 44.3,
         "volume_ratio": 0.52
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.52
+      },
       "source": "yfinance"
     },
     {
@@ -11869,6 +12937,12 @@
         "reason": "综合分 10/100 · RSI 36 · 量比 0.3x",
         "score": 10,
         "rsi": 35.7,
+        "volume_ratio": 0.33
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.33
       },
       "source": "yfinance"
@@ -11933,25 +13007,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "13.76",
-      "change": "-0.02 (-0.15%)",
+      "price": "13.78",
+      "change": "0.00 (0.00%)",
       "isUp": false,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-28.66%",
-      "distWeek": "-1.9%",
-      "distMonth": "-16.5%",
+      "ytdChange": "-28.56%",
+      "distWeek": "-1.8%",
+      "distMonth": "-16.3%",
       "trend": "熊市空头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
         "reason": "综合分 25/100 · RSI 23 · 量比 0.5x",
         "score": 25,
-        "rsi": 22.8,
-        "volume_ratio": 0.46
+        "rsi": 23.1,
+        "volume_ratio": 0.51
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.51
       },
       "source": "sina"
     },
@@ -12029,6 +13109,12 @@
         "rsi": 32.1,
         "volume_ratio": 0.2
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.2
+      },
       "source": "yfinance"
     },
     {
@@ -12068,7 +13154,7 @@
       "price": "4830.00",
       "change": "-75.00 (-1.53%)",
       "isUp": false,
-      "per": "7.71",
+      "per": "7.69",
       "roe": "18.7%",
       "forward_per": "12.30",
       "pbr": "1.20",
@@ -12083,6 +13169,12 @@
         "reason": "综合分 20/100 · RSI 46 · 量比 0.2x",
         "score": 20,
         "rsi": 46.5,
+        "volume_ratio": 0.25
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.25
       },
       "source": "yfinance"
@@ -12149,6 +13241,12 @@
         "reason": "综合分 25/100 · RSI 42 · 量比 0.6x",
         "score": 25,
         "rsi": 42.3,
+        "volume_ratio": 0.55
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.55
       },
       "source": "yfinance"
@@ -12227,6 +13325,12 @@
         "rsi": 59.2,
         "volume_ratio": 0.39
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.39
+      },
       "source": "yfinance"
     },
     {
@@ -12273,6 +13377,12 @@
         "reason": "综合分 75/100 · RSI 59 · 量比 0.3x",
         "score": 75,
         "rsi": 59.2,
+        "volume_ratio": 0.34
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.34
       },
       "source": "yfinance"
@@ -12343,6 +13453,12 @@
         "rsi": 29.0,
         "volume_ratio": 0.71
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.71
+      },
       "source": "yfinance"
     },
     {
@@ -12407,6 +13523,12 @@
         "reason": "综合分 75/100 · RSI 88 · 量比 0.4x",
         "score": 75,
         "rsi": 87.5,
+        "volume_ratio": 0.4
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.4
       },
       "source": "yfinance"
@@ -12475,6 +13597,12 @@
         "rsi": 74.3,
         "volume_ratio": 0.4
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.4
+      },
       "source": "yfinance"
     },
     {
@@ -12539,6 +13667,12 @@
         "reason": "综合分 75/100 · RSI 66 · 量比 0.3x",
         "score": 75,
         "rsi": 65.8,
+        "volume_ratio": 0.33
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.33
       },
       "source": "yfinance"
@@ -12617,6 +13751,12 @@
         "rsi": 51.5,
         "volume_ratio": 0.78
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.78
+      },
       "source": "yfinance"
     },
     {
@@ -12674,7 +13814,7 @@
       "price": "7623.00",
       "change": "-57.00 (-0.74%)",
       "isUp": false,
-      "per": "21.44",
+      "per": "21.72",
       "roe": "16.1%",
       "forward_per": "21.67",
       "pbr": "2.76",
@@ -12689,6 +13829,12 @@
         "reason": "综合分 75/100 · RSI 72 · 量比 0.4x",
         "score": 75,
         "rsi": 71.6,
+        "volume_ratio": 0.37
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.37
       },
       "source": "yfinance"
@@ -12763,6 +13909,12 @@
         "rsi": 73.7,
         "volume_ratio": 1.03
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 1.03
+      },
       "source": "yfinance"
     },
     {
@@ -12815,7 +13967,7 @@
       "isUp": false,
       "per": "4.58",
       "roe": "44.0%",
-      "forward_per": "42.77",
+      "forward_per": "--",
       "pbr": "1.43",
       "distHigh": "-67.6%",
       "ytdChange": "387.97%",
@@ -12828,6 +13980,12 @@
         "reason": "综合分 25/100 · RSI 45 · 量比 0.4x",
         "score": 25,
         "rsi": 44.9,
+        "volume_ratio": 0.39
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.39
       },
       "source": "yfinance"
@@ -12886,6 +14044,12 @@
         "reason": "综合分 90/100 · RSI 56 · 量比 0.3x",
         "score": 90,
         "rsi": 55.9,
+        "volume_ratio": 0.31
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.31
       },
       "source": "yfinance"
@@ -12964,6 +14128,12 @@
         "rsi": 61.9,
         "volume_ratio": 0.49
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.49
+      },
       "source": "yfinance"
     },
     {
@@ -13018,6 +14188,12 @@
         "rsi": 49.6,
         "volume_ratio": 0.46
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.46
+      },
       "source": "yfinance"
     },
     {
@@ -13049,6 +14225,12 @@
         "reason": "综合分 75/100 · RSI 70 · 量比 0.4x",
         "score": 75,
         "rsi": 70.1,
+        "volume_ratio": 0.44
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.44
       },
       "source": "yfinance"
@@ -13084,6 +14266,12 @@
         "rsi": 77.1,
         "volume_ratio": 0.47
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.47
+      },
       "source": "yfinance"
     },
     {
@@ -13115,6 +14303,12 @@
         "reason": "综合分 75/100 · RSI 86 · 量比 0.4x",
         "score": 75,
         "rsi": 86.3,
+        "volume_ratio": 0.42
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.42
       },
       "source": "yfinance"
@@ -13171,6 +14365,12 @@
         "rsi": 68.7,
         "volume_ratio": 0.25
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.25
+      },
       "source": "yfinance"
     },
     {
@@ -13204,6 +14404,12 @@
         "rsi": 78.1,
         "volume_ratio": 0.59
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.59
+      },
       "source": "yfinance"
     },
     {
@@ -13235,6 +14441,12 @@
         "reason": "综合分 35/100 · RSI 55 · 量比 0.5x",
         "score": 35,
         "rsi": 54.6,
+        "volume_ratio": 0.54
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.54
       },
       "source": "yfinance"
@@ -13311,6 +14523,12 @@
         "rsi": 55.1,
         "volume_ratio": 0.27
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.27
+      },
       "source": "yfinance"
     },
     {
@@ -13357,6 +14575,12 @@
         "reason": "综合分 75/100 · RSI 64 · 量比 0.3x",
         "score": 75,
         "rsi": 64.1,
+        "volume_ratio": 0.27
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.27
       },
       "source": "yfinance"
@@ -13413,6 +14637,12 @@
         "rsi": 64.1,
         "volume_ratio": 0.34
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.34
+      },
       "source": "yfinance"
     },
     {
@@ -13465,6 +14695,12 @@
         "reason": "综合分 75/100 · RSI 68 · 量比 0.4x",
         "score": 75,
         "rsi": 68.1,
+        "volume_ratio": 0.43
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.43
       },
       "source": "yfinance"
@@ -13521,6 +14757,12 @@
         "rsi": 59.6,
         "volume_ratio": 0.33
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.33
+      },
       "source": "yfinance"
     },
     {
@@ -13575,6 +14817,12 @@
         "rsi": 90.8,
         "volume_ratio": 0.23
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.23
+      },
       "source": "yfinance"
     },
     {
@@ -13621,6 +14869,12 @@
         "reason": "综合分 75/100 · RSI 63 · 量比 0.3x",
         "score": 75,
         "rsi": 62.7,
+        "volume_ratio": 0.27
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.27
       },
       "source": "yfinance"
@@ -13685,25 +14939,31 @@
         }
       ],
       "market_type": "A股",
-      "price": "8.80",
-      "change": "0.00 (0.00%)",
-      "isUp": false,
+      "price": "8.84",
+      "change": "+0.04 (+0.45%)",
+      "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "26.44%",
-      "distWeek": "-2.9%",
-      "distMonth": "-14.1%",
+      "ytdChange": "27.01%",
+      "distWeek": "-2.4%",
+      "distMonth": "-13.8%",
       "trend": "熊市空头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 25/100 · RSI 42 · 量比 0.5x",
+        "reason": "综合分 25/100 · RSI 43 · 量比 0.5x",
         "score": 25,
-        "rsi": 42.3,
-        "volume_ratio": 0.45
+        "rsi": 42.9,
+        "volume_ratio": 0.53
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.53
       },
       "source": "sina"
     },
@@ -13758,6 +15018,12 @@
         "reason": "综合分 50/100 · RSI 45 · 量比 0.7x",
         "score": 50,
         "rsi": 45.2,
+        "volume_ratio": 0.69
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.69
       },
       "source": "yfinance"
@@ -13815,6 +15081,12 @@
         "rsi": 76.3,
         "volume_ratio": 0.51
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.51
+      },
       "source": "yfinance"
     },
     {
@@ -13867,6 +15139,12 @@
         "reason": "综合分 40/100 · RSI 41 · 量比 0.3x",
         "score": 40,
         "rsi": 40.6,
+        "volume_ratio": 0.28
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.28
       },
       "source": "yfinance"
@@ -13923,6 +15201,12 @@
         "rsi": 70.4,
         "volume_ratio": 1.03
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 1.03
+      },
       "source": "yfinance"
     },
     {
@@ -13967,6 +15251,12 @@
         "reason": "综合分 90/100 · RSI 66 · 量比 0.7x",
         "score": 90,
         "rsi": 65.6,
+        "volume_ratio": 0.68
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.68
       },
       "source": "yfinance"
@@ -14015,6 +15305,12 @@
         "rsi": 65.9,
         "volume_ratio": 0.58
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.58
+      },
       "source": "yfinance"
     },
     {
@@ -14059,6 +15355,12 @@
         "reason": "综合分 90/100 · RSI 70 · 量比 0.5x",
         "score": 90,
         "rsi": 70.2,
+        "volume_ratio": 0.54
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.54
       },
       "source": "yfinance"
@@ -14111,6 +15413,12 @@
         "reason": "综合分 75/100 · RSI 68 · 量比 0.3x",
         "score": 75,
         "rsi": 67.5,
+        "volume_ratio": 0.29
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.29
       },
       "source": "yfinance"
@@ -14169,6 +15477,12 @@
         "reason": "综合分 90/100 · RSI 73 · 量比 0.5x",
         "score": 90,
         "rsi": 72.9,
+        "volume_ratio": 0.51
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.51
       },
       "source": "yfinance"
@@ -14243,6 +15557,12 @@
         "rsi": 64.6,
         "volume_ratio": 0.41
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.41
+      },
       "source": "yfinance"
     },
     {
@@ -14295,6 +15615,12 @@
         "reason": "综合分 45/100 · RSI 56 · 量比 0.3x",
         "score": 45,
         "rsi": 56.1,
+        "volume_ratio": 0.35
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.35
       },
       "source": "yfinance"
@@ -14365,6 +15691,12 @@
         "rsi": 49.2,
         "volume_ratio": 0.57
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.57
+      },
       "source": "yfinance"
     },
     {
@@ -14411,6 +15743,12 @@
         "reason": "综合分 20/100 · RSI 48 · 量比 0.8x",
         "score": 20,
         "rsi": 47.5,
+        "volume_ratio": 0.76
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.76
       },
       "source": "yfinance"
@@ -14465,6 +15803,12 @@
         "reason": "综合分 20/100 · RSI 49 · 量比 0.4x",
         "score": 20,
         "rsi": 49.4,
+        "volume_ratio": 0.35
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.35
       },
       "source": "yfinance"
@@ -14529,6 +15873,12 @@
         "rsi": 69.5,
         "volume_ratio": 0.91
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.91
+      },
       "source": "yfinance"
     },
     {
@@ -14583,6 +15933,12 @@
         "rsi": 66.5,
         "volume_ratio": 0.62
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.62
+      },
       "source": "yfinance"
     },
     {
@@ -14624,7 +15980,7 @@
       "price": "25905.00",
       "change": "+105.00 (+0.41%)",
       "isUp": true,
-      "per": "16.14",
+      "per": "16.25",
       "roe": "30.6%",
       "forward_per": "43.07",
       "pbr": "3.51",
@@ -14639,6 +15995,12 @@
         "reason": "综合分 25/100 · RSI 39 · 量比 0.4x",
         "score": 25,
         "rsi": 39.2,
+        "volume_ratio": 0.37
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.37
       },
       "source": "yfinance"
@@ -14699,6 +16061,12 @@
         "rsi": 63.8,
         "volume_ratio": 0.4
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.4
+      },
       "source": "yfinance"
     },
     {
@@ -14749,6 +16117,12 @@
         "reason": "综合分 75/100 · RSI 59 · 量比 0.3x",
         "score": 75,
         "rsi": 58.6,
+        "volume_ratio": 0.32
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.32
       },
       "source": "yfinance"
@@ -14809,6 +16183,12 @@
         "rsi": 64.7,
         "volume_ratio": 0.86
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.86
+      },
       "source": "yfinance"
     },
     {
@@ -14865,6 +16245,12 @@
         "reason": "综合分 30/100 · RSI 56 · 量比 0.3x",
         "score": 30,
         "rsi": 55.8,
+        "volume_ratio": 0.32
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.32
       },
       "source": "yfinance"
@@ -14925,6 +16311,12 @@
         "rsi": 52.9,
         "volume_ratio": 0.36
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.36
+      },
       "source": "yfinance"
     },
     {
@@ -14975,6 +16367,12 @@
         "reason": "综合分 10/100 · RSI 36 · 量比 0.3x",
         "score": 10,
         "rsi": 36.1,
+        "volume_ratio": 0.33
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.33
       },
       "source": "yfinance"
@@ -15029,6 +16427,12 @@
         "rsi": 34.4,
         "volume_ratio": 0.63
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.63
+      },
       "source": "yfinance"
     },
     {
@@ -15081,6 +16485,12 @@
         "rsi": 42.9,
         "volume_ratio": 0.53
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.53
+      },
       "source": "yfinance"
     },
     {
@@ -15131,6 +16541,12 @@
         "reason": "综合分 20/100 · RSI 46 · 量比 0.5x",
         "score": 20,
         "rsi": 45.7,
+        "volume_ratio": 0.47
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.47
       },
       "source": "yfinance"
@@ -15189,6 +16605,12 @@
         "rsi": 46.9,
         "volume_ratio": 0.28
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.28
+      },
       "source": "yfinance"
     },
     {
@@ -15233,6 +16655,12 @@
         "reason": "综合分 25/100 · RSI 32 · 量比 0.3x",
         "score": 25,
         "rsi": 31.6,
+        "volume_ratio": 0.29
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.29
       },
       "source": "yfinance"
@@ -15283,6 +16711,12 @@
         "rsi": 62.1,
         "volume_ratio": 0.59
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.59
+      },
       "source": "yfinance"
     },
     {
@@ -15327,6 +16761,12 @@
         "reason": "综合分 35/100 · RSI 45 · 量比 2.5x",
         "score": 35,
         "rsi": 45.5,
+        "volume_ratio": 2.49
+      },
+      "flow_proxy": {
+        "label": "偏流出",
+        "class": "signal-down",
+        "reason": "空头趋势且量能高于均值",
         "volume_ratio": 2.49
       },
       "source": "yfinance"
@@ -15385,6 +16825,12 @@
         "rsi": 50.8,
         "volume_ratio": 0.3
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.3
+      },
       "source": "yfinance"
     },
     {
@@ -15437,6 +16883,12 @@
         "reason": "综合分 20/100 · RSI 49 · 量比 0.5x",
         "score": 20,
         "rsi": 48.7,
+        "volume_ratio": 0.55
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.55
       },
       "source": "yfinance"
@@ -15497,6 +16949,12 @@
         "rsi": 58.1,
         "volume_ratio": 0.21
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.21
+      },
       "source": "yfinance"
     },
     {
@@ -15553,6 +17011,12 @@
         "rsi": 64.7,
         "volume_ratio": 0.63
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.63
+      },
       "source": "yfinance"
     },
     {
@@ -15599,6 +17063,12 @@
         "reason": "综合分 60/100 · RSI 62 · 量比 0.6x",
         "score": 60,
         "rsi": 62.0,
+        "volume_ratio": 0.62
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.62
       },
       "source": "yfinance"
@@ -15649,6 +17119,12 @@
         "rsi": 64.7,
         "volume_ratio": 0.24
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.24
+      },
       "source": "yfinance"
     },
     {
@@ -15695,6 +17171,12 @@
         "reason": "综合分 60/100 · RSI 64 · 量比 0.4x",
         "score": 60,
         "rsi": 63.5,
+        "volume_ratio": 0.37
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.37
       },
       "source": "yfinance"
@@ -15745,6 +17227,12 @@
         "rsi": 73.8,
         "volume_ratio": 0.28
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.28
+      },
       "source": "yfinance"
     },
     {
@@ -15791,6 +17279,12 @@
         "reason": "综合分 30/100 · RSI 57 · 量比 0.4x",
         "score": 30,
         "rsi": 57.1,
+        "volume_ratio": 0.43
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.43
       },
       "source": "yfinance"
@@ -15841,6 +17335,12 @@
         "rsi": 63.0,
         "volume_ratio": 0.51
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.51
+      },
       "source": "yfinance"
     },
     {
@@ -15872,7 +17372,7 @@
       "price": "2600.00",
       "change": "-29.00 (-1.10%)",
       "isUp": false,
-      "per": "17.35",
+      "per": "17.23",
       "roe": "8.1%",
       "forward_per": "--",
       "pbr": "1.20",
@@ -15887,6 +17387,12 @@
         "reason": "综合分 60/100 · RSI 59 · 量比 0.4x",
         "score": 60,
         "rsi": 59.2,
+        "volume_ratio": 0.4
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.4
       },
       "source": "yfinance"
@@ -15947,6 +17453,12 @@
         "rsi": 63.1,
         "volume_ratio": 0.69
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.69
+      },
       "source": "yfinance"
     },
     {
@@ -15997,6 +17509,12 @@
         "reason": "综合分 45/100 · RSI 57 · 量比 0.5x",
         "score": 45,
         "rsi": 57.0,
+        "volume_ratio": 0.51
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.51
       },
       "source": "yfinance"
@@ -16061,6 +17579,12 @@
         "rsi": 41.8,
         "volume_ratio": 0.65
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.65
+      },
       "source": "yfinance"
     },
     {
@@ -16117,6 +17641,12 @@
         "rsi": 58.8,
         "volume_ratio": 0.37
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.37
+      },
       "source": "yfinance"
     },
     {
@@ -16167,6 +17697,12 @@
         "reason": "综合分 75/100 · RSI 66 · 量比 0.7x",
         "score": 75,
         "rsi": 65.7,
+        "volume_ratio": 0.7
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.7
       },
       "source": "yfinance"
@@ -16222,6 +17758,12 @@
         "reason": "综合分 35/100 · RSI 48 · 量比 0.9x",
         "score": 35,
         "rsi": 48.1,
+        "volume_ratio": 0.93
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.93
       },
       "source": "yfinance"
@@ -16286,6 +17828,12 @@
         "rsi": 69.4,
         "volume_ratio": 0.61
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.61
+      },
       "source": "yfinance"
     },
     {
@@ -16332,6 +17880,12 @@
         "reason": "综合分 75/100 · RSI 67 · 量比 0.2x",
         "score": 75,
         "rsi": 66.9,
+        "volume_ratio": 0.25
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.25
       },
       "source": "yfinance"
@@ -16384,6 +17938,12 @@
         "reason": "综合分 90/100 · RSI 69 · 量比 0.5x",
         "score": 90,
         "rsi": 68.7,
+        "volume_ratio": 0.53
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.53
       },
       "source": "yfinance"
@@ -16442,6 +18002,12 @@
         "reason": "综合分 90/100 · RSI 69 · 量比 0.7x",
         "score": 90,
         "rsi": 69.5,
+        "volume_ratio": 0.69
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.69
       },
       "source": "yfinance"
@@ -16506,6 +18072,12 @@
         "rsi": 42.9,
         "volume_ratio": 0.37
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.37
+      },
       "source": "yfinance"
     },
     {
@@ -16562,6 +18134,12 @@
         "rsi": 43.1,
         "volume_ratio": 0.53
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.53
+      },
       "source": "yfinance"
     },
     {
@@ -16608,6 +18186,12 @@
         "reason": "综合分 20/100 · RSI 50 · 量比 0.3x",
         "score": 20,
         "rsi": 50.0,
+        "volume_ratio": 0.29
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.29
       },
       "source": "yfinance"
@@ -16665,6 +18249,12 @@
         "rsi": 62.7,
         "volume_ratio": 0.12
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.12
+      },
       "source": "yfinance"
     },
     {
@@ -16715,6 +18305,12 @@
         "reason": "综合分 10/100 · RSI 42 · 量比 0.4x",
         "score": 10,
         "rsi": 41.7,
+        "volume_ratio": 0.36
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.36
       },
       "source": "yfinance"
@@ -16769,6 +18365,12 @@
         "rsi": 84.0,
         "volume_ratio": 0.19
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.19
+      },
       "source": "yfinance"
     },
     {
@@ -16821,6 +18423,12 @@
         "rsi": 26.9,
         "volume_ratio": 0.58
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.58
+      },
       "source": "yfinance"
     },
     {
@@ -16871,6 +18479,12 @@
         "reason": "综合分 75/100 · RSI 56 · 量比 0.2x",
         "score": 75,
         "rsi": 55.5,
+        "volume_ratio": 0.19
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.19
       },
       "source": "yfinance"
@@ -16935,6 +18549,12 @@
         "rsi": 63.3,
         "volume_ratio": 0.06
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.06
+      },
       "source": "yfinance"
     },
     {
@@ -16991,6 +18611,12 @@
         "rsi": 48.6,
         "volume_ratio": 0.82
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.82
+      },
       "source": "yfinance"
     },
     {
@@ -17037,6 +18663,12 @@
         "reason": "综合分 20/100 · RSI 47 · 量比 0.7x",
         "score": 20,
         "rsi": 47.5,
+        "volume_ratio": 0.67
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.67
       },
       "source": "yfinance"
@@ -17095,6 +18727,12 @@
         "rsi": 50.0,
         "volume_ratio": 0.55
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.55
+      },
       "source": "yfinance"
     },
     {
@@ -17145,6 +18783,12 @@
         "reason": "综合分 75/100 · RSI 66 · 量比 0.4x",
         "score": 75,
         "rsi": 65.9,
+        "volume_ratio": 0.38
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.38
       },
       "source": "yfinance"
@@ -17200,6 +18844,12 @@
         "reason": "综合分 35/100 · RSI 48 · 量比 0.9x",
         "score": 35,
         "rsi": 48.1,
+        "volume_ratio": 0.93
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.93
       },
       "source": "yfinance"
@@ -17264,6 +18914,12 @@
         "rsi": 69.4,
         "volume_ratio": 0.61
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.61
+      },
       "source": "yfinance"
     },
     {
@@ -17326,6 +18982,12 @@
         "rsi": 64.9,
         "volume_ratio": 0.42
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.42
+      },
       "source": "yfinance"
     },
     {
@@ -17374,6 +19036,12 @@
         "rsi": 82.9,
         "volume_ratio": 0.45
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.45
+      },
       "source": "yfinance"
     },
     {
@@ -17405,6 +19073,12 @@
         "reason": "综合分 10/100 · RSI 24 · 量比 0.4x",
         "score": 10,
         "rsi": 24.2,
+        "volume_ratio": 0.43
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.43
       },
       "source": "yfinance"
@@ -17440,6 +19114,12 @@
         "rsi": 45.3,
         "volume_ratio": 0.33
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.33
+      },
       "source": "yfinance"
     },
     {
@@ -17471,6 +19151,12 @@
         "reason": "综合分 55/100 · RSI 44 · 量比 0.9x",
         "score": 55,
         "rsi": 44.1,
+        "volume_ratio": 0.87
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.87
       },
       "source": "yfinance"
@@ -17506,6 +19192,12 @@
         "rsi": 38.0,
         "volume_ratio": 0.88
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.88
+      },
       "source": "yfinance"
     },
     {
@@ -17537,6 +19229,12 @@
         "reason": "综合分 35/100 · RSI 55 · 量比 1.0x",
         "score": 35,
         "rsi": 54.6,
+        "volume_ratio": 0.98
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.98
       },
       "source": "yfinance"
@@ -17572,6 +19270,12 @@
         "rsi": 64.4,
         "volume_ratio": 0.68
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.68
+      },
       "source": "yfinance"
     },
     {
@@ -17603,6 +19307,12 @@
         "reason": "综合分 75/100 · RSI 55 · 量比 1.0x",
         "score": 75,
         "rsi": 55.4,
+        "volume_ratio": 1.01
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 1.01
       },
       "source": "yfinance"
@@ -17638,6 +19348,12 @@
         "rsi": 55.4,
         "volume_ratio": 1.09
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 1.09
+      },
       "source": "yfinance"
     },
     {
@@ -17669,6 +19385,12 @@
         "reason": "综合分 30/100 · RSI 58 · 量比 0.6x",
         "score": 30,
         "rsi": 58.3,
+        "volume_ratio": 0.62
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.62
       },
       "source": "yfinance"
@@ -17704,6 +19426,12 @@
         "rsi": 63.3,
         "volume_ratio": 0.82
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.82
+      },
       "source": "yfinance"
     },
     {
@@ -17735,6 +19463,12 @@
         "reason": "综合分 90/100 · RSI 63 · 量比 0.8x",
         "score": 90,
         "rsi": 63.4,
+        "volume_ratio": 0.81
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.81
       },
       "source": "yfinance"
@@ -17770,6 +19504,12 @@
         "rsi": 69.9,
         "volume_ratio": 0.98
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.98
+      },
       "source": "yfinance"
     },
     {
@@ -17803,6 +19543,12 @@
         "rsi": 43.4,
         "volume_ratio": 0.87
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.87
+      },
       "source": "yfinance"
     },
     {
@@ -17822,7 +19568,7 @@
       "per": "25.48",
       "roe": "--",
       "forward_per": "--",
-      "pbr": "2.72",
+      "pbr": "--",
       "distHigh": "-1.4%",
       "ytdChange": "13.59%",
       "distWeek": "-0.4%",
@@ -17834,6 +19580,12 @@
         "reason": "综合分 65/100 · RSI 45 · 量比 0.9x",
         "score": 65,
         "rsi": 45.4,
+        "volume_ratio": 0.94
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.94
       },
       "source": "yfinance"
@@ -17869,6 +19621,12 @@
         "rsi": 47.7,
         "volume_ratio": 1.21
       },
+      "flow_proxy": {
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
+        "volume_ratio": 1.21
+      },
       "source": "yfinance"
     },
     {
@@ -17900,6 +19658,12 @@
         "reason": "综合分 65/100 · RSI 47 · 量比 0.8x",
         "score": 65,
         "rsi": 47.0,
+        "volume_ratio": 0.85
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.85
       },
       "source": "yfinance"
@@ -17935,6 +19699,12 @@
         "rsi": 51.1,
         "volume_ratio": 0.94
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.94
+      },
       "source": "yfinance"
     },
     {
@@ -17966,6 +19736,12 @@
         "reason": "综合分 50/100 · RSI 49 · 量比 0.9x",
         "score": 50,
         "rsi": 49.1,
+        "volume_ratio": 0.91
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.91
       },
       "source": "yfinance"
@@ -18001,6 +19777,12 @@
         "rsi": 52.3,
         "volume_ratio": 1.01
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 1.01
+      },
       "source": "yfinance"
     },
     {
@@ -18032,6 +19814,12 @@
         "reason": "综合分 75/100 · RSI 59 · 量比 0.9x",
         "score": 75,
         "rsi": 59.2,
+        "volume_ratio": 0.86
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.86
       },
       "source": "yfinance"
@@ -18067,6 +19855,12 @@
         "rsi": 75.5,
         "volume_ratio": 0.72
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.72
+      },
       "source": "yfinance"
     },
     {
@@ -18098,6 +19892,12 @@
         "reason": "综合分 90/100 · RSI 56 · 量比 0.5x",
         "score": 90,
         "rsi": 56.4,
+        "volume_ratio": 0.53
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.53
       },
       "source": "yfinance"
@@ -18133,6 +19933,12 @@
         "rsi": 48.7,
         "volume_ratio": 1.49
       },
+      "flow_proxy": {
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
+        "volume_ratio": 1.49
+      },
       "source": "yfinance"
     },
     {
@@ -18164,6 +19970,12 @@
         "reason": "综合分 90/100 · RSI 62 · 量比 1.1x",
         "score": 90,
         "rsi": 61.5,
+        "volume_ratio": 1.15
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 1.15
       },
       "source": "yfinance"
@@ -18199,6 +20011,12 @@
         "rsi": 52.3,
         "volume_ratio": 0.84
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.84
+      },
       "source": "yfinance"
     },
     {
@@ -18230,6 +20048,12 @@
         "reason": "综合分 65/100 · RSI 50 · 量比 0.7x",
         "score": 65,
         "rsi": 49.7,
+        "volume_ratio": 0.65
+      },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
         "volume_ratio": 0.65
       },
       "source": "yfinance"
@@ -18265,6 +20089,12 @@
         "rsi": 59.0,
         "volume_ratio": 0.61
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.61
+      },
       "source": "yfinance"
     },
     {
@@ -18296,6 +20126,12 @@
         "reason": "综合分 90/100 · RSI 54 · 量比 1.6x",
         "score": 90,
         "rsi": 54.4,
+        "volume_ratio": 1.57
+      },
+      "flow_proxy": {
+        "label": "疑似流入",
+        "class": "signal-up",
+        "reason": "上涨伴随明显放量",
         "volume_ratio": 1.57
       },
       "source": "yfinance"
@@ -18331,10 +20167,16 @@
         "rsi": 27.0,
         "volume_ratio": 0.35
       },
+      "flow_proxy": {
+        "label": "资金观望",
+        "class": "signal-flat",
+        "reason": "量能未出现明显异常",
+        "volume_ratio": 0.35
+      },
       "source": "yfinance"
     }
   ],
-  "ai_report": "【全球市场环境】市场情绪偏稳，VIX恐慌指数跌至14.53（-5.03%）。美股标普500（+0.38%）微涨，但费城半导体指数大跌3.26%，存储芯片ETF（-6.20%）及AI半导体ETF普遍回调。大宗商品全线承压，铜（-2.50%）、白银（-1.86%）与原油走弱。美债收益率小幅下行，美元兑日元大涨1.94%至156.20。\n\n【美股/A股/日股观察】美股板块分化显著，存储及部分设备股如海力士ADR（+8.14%）、美光科技（+6.10%）逆势上冲，但苹果（-2.51%）等走弱。日经225微跌0.07%，软银（+6.92%）表现强势，但电子元器件（太阳诱电-5.44%、村田制作所-5.01%）大幅杀跌。A股主要指数数据不足，结构上光通信与材料类如源杰科技（+3.00%）、中际旭创（+2.36%）维持多头上涨。\n\n【重点关注行业及触发条件】重点关注具备相对强度的存储链与光通信板块。触发条件：半导体类ETF（SOXX、SMH）结束单日重挫、在关键支撑位出现缩量企稳或反弹信号，且个股（如美光科技、中际旭创）回踩均线获得放量承接，展现抗跌独立性。\n\n【观察清单与失效条件】下一时段观察清单包含美光科技（MU）、SKhynix（SKHY）、中际旭创（300308.SZ）及软银（9984.T）。失效条件：费半指数延续破位下行并带动权重股杀跌，或观察标的跌破前一交易日低点、牛市多头趋势被破坏，则多头逻辑失效。\n\n【风险提示】防范半导体指数及AI相关ETF大幅回调带来的系统性扩散风险、大宗商品走弱对应的顺周期下行风险，以及日元大幅贬值对外汇和跨境资金流动引发的扰动。",
+  "ai_report": "【盘后策略官·自动决策】：今日全球硬科技标的整体呈现 弱势震荡 态势。 当前重点观察：PER TTM 估值在 29.16 附近的垄断类资产， 配合距52周高位的 -2.6% 回撤，市场已进入结构性调仓阶段。",
   "theme_mapping": {
     "0. 人気テーマ": {
       "フィジカルＡＩ": {
@@ -20159,7 +22001,7 @@
       ]
     }
   },
-  "generated_at": "2026-09-08T03:09:34.434759+00:00",
+  "generated_at": "2026-09-08T03:44:44.445750+00:00",
   "update_status": {
     "expected": 309,
     "success": 299,
@@ -20178,7 +22020,7 @@
     ]
   },
   "ai_report_meta": {
-    "source": "gemini",
-    "model": "gemini-flash-latest"
+    "source": "fallback",
+    "error": "AI策略暂时不可用，股票数据已正常更新"
   }
 }
