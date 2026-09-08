@@ -308,6 +308,11 @@
         .refresh-data-btn:disabled { opacity:.6; cursor:wait; transform:none; }
         @media (max-width: 600px) { .data-status-row { align-items:flex-start; flex-direction:column; } }
 
+        .intraday-signal { display:inline-flex; align-items:center; gap:5px; margin:8px 0 4px; padding:4px 8px; border-radius:6px; font-size:12px; font-weight:600; }
+        .intraday-signal.signal-up { color:#166534; background:#dcfce7; }
+        .intraday-signal.signal-down { color:#991b1b; background:#fee2e2; }
+        .intraday-signal.signal-flat { color:#92400e; background:#fef3c7; }
+
         /* ===== 股票卡片 ===== */
         .stock-card .stock-feature {
             min-height: 52px;        
@@ -650,6 +655,7 @@
                                 </div>
                     
                                 <div class="stock-trend-badge ${trendClass}">${stock.trend}</div>
+                                <div class="intraday-signal ${stock.intraday_signal?.class || "signal-flat"}" title="根据当日涨跌幅与20日均线计算">${stock.intraday_signal?.label || "震荡观察"} · ${stock.intraday_signal?.reason || "指标不足"}</div>
 
                                 
                                 <div class="price-row">

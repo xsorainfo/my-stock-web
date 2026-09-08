@@ -569,6 +569,18 @@ def make_ai_news(stock_data):
             f"配合距52周高位的 {stock_data[0]['distHigh']} 回撤，市场已进入结构性调仓阶段。")
 
 
+def build_intraday_signal(percent, trend_label, dist_week_str):
+    """Create a transparent intraday bias from existing daily indicators."""
+    if percent >= 2 and trend_label == "牛市多头":
+        return {"label": "日内偏强", "class": "signal-up", "reason": "当日涨幅明显且站上20日均线"}
+    if percent <= -2 and trend_label == "熊市空头":
+        return {"label": "日内偏弱", "class": "signal-down", "reason": "当日跌幅明显且低于20日均线"}
+    if percent > 0.8 and trend_label == "牛市多头":
+        return {"label": "偏强观察", "class": "signal-up", "reason": "涨幅为正且趋势偏多"}
+    if percent < -0.8 and trend_label == "熊市空头":
+        return {"label": "偏弱观察", "class": "signal-down", "reason": "跌幅为负且趋势偏空"}
+    return {"label": "震荡观察", "class": "signal-flat", "reason": "涨跌幅与均线趋势未形成一致信号"}
+
 def get_market_type(symbol):
     if symbol.endswith('.T'):
         return "日股"
@@ -786,6 +798,7 @@ def fetch_all_data():
             # 均线
             ma20 = h_df['Close'].tail(20).mean() if len(h_df) >= 20 else current_price
             trend_label = "牛市多头" if current_price >= ma20 else "熊市空头"
+            intraday_signal = build_intraday_signal(percent, trend_label, dist_week_str)
 
             # ⭐ 获取原始 tags 并合并
             raw_tags = item.get("tags", [])
@@ -825,6 +838,7 @@ def fetch_all_data():
                 "distWeek": dist_week_str,
                 "distMonth": dist_month_str,
                 "trend": trend_label,
+                "intraday_signal": intraday_signal,
                 "source": source,
             }
             
