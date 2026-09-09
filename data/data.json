@@ -22368,7 +22368,7 @@
       "source": "yfinance"
     }
   ],
-  "ai_report": "【盘后策略官·自动决策】：今日全球硬科技标的整体呈现 多头回补 态势。 当前重点观察：PER TTM 估值在 28.57 附近的垄断类资产， 配合距52周高位的 -4.6% 回撤，市场已进入结构性调仓阶段。",
+  "ai_report": "【全球市场环境】\n美债收益率小幅下行（",
   "theme_mapping": {
     "0. 人気テーマ": {
       "フィジカルＡＩ": {
@@ -24313,7 +24313,8 @@
     ]
   },
   "ai_report_meta": {
-    "source": "fallback",
-    "error": "AI策略暂时不可用，股票数据已正常更新"
+    "source": "gemini",
+    "model": "gemini-flash-latest",
+    "updated_at": "2026-09-09T11:34:21.158863+00:00"
   }
 }
