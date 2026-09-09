@@ -473,7 +473,19 @@ function deleteMemoHandler(symbol) {
 // 17. 备忘录备份功能
 // ============================================================
 
-// ⭐ 导出所有备忘录为 JSON 文件
+// ⭐ 导出所有备忘录与持仓成本为 JSON 文件
+function collectHoldingCosts() {
+    const holdingCosts = {};
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (!key || !key.startsWith('holding_cost_')) continue;
+        const symbol = key.replace('holding_cost_', '');
+        const value = Number(localStorage.getItem(key));
+        if (symbol && Number.isFinite(value) && value > 0) holdingCosts[symbol] = value;
+    }
+    return holdingCosts;
+}
+
 function exportAllMemos() {
     const allMemos = {};
     let count = 0;
@@ -495,11 +507,14 @@ function exportAllMemos() {
         return;
     }
     
+    const holdingCosts = collectHoldingCosts();
     const backupData = {
         exportedAt: new Date().toISOString(),
-        version: '1.0',
+        version: '1.1',
         totalMemos: count,
-        memos: allMemos
+        totalHoldingCosts: Object.keys(holdingCosts).length,
+        memos: allMemos,
+        holdingCosts
     };
     
     const blob = new Blob([JSON.stringify(backupData, null, 2)], { type: 'application/json' });
@@ -530,21 +545,29 @@ function importAllMemos(file) {
             }
             
             const memos = data.memos;
+            const holdingCosts = data.holdingCosts && typeof data.holdingCosts === 'object' ? data.holdingCosts : {};
             let count = 0;
             let overwritten = 0;
             
             for (const [symbol, memo] of Object.entries(memos)) {
-                if (memo && memo.trim().length > 0) {
+                if (typeof memo === 'string' && memo.trim().length > 0) {
                     const existing = localStorage.getItem(`stock_memo_${symbol}`);
-                    if (existing && existing.trim().length > 0) {
-                        overwritten++;
-                    }
+                    if (existing && existing.trim().length > 0) overwritten++;
                     localStorage.setItem(`stock_memo_${symbol}`, memo);
                     count++;
                 }
             }
+
+            let holdingCostCount = 0;
+            for (const [symbol, value] of Object.entries(holdingCosts)) {
+                const cost = Number(value);
+                if (symbol && Number.isFinite(cost) && cost > 0) {
+                    localStorage.setItem(`holding_cost_${symbol}`, String(cost));
+                    holdingCostCount++;
+                }
+            }
             
-            const msg = `✅ ${count}件のメモをインポートしました。\n${overwritten > 0 ? `⚠️ ${overwritten}件は上書きされました。` : ''}`;
+            const msg = `✅ ${count}件のメモ、${holdingCostCount}件の持仓成本已恢复。\\n${overwritten > 0 ? `⚠️ ${overwritten}件は上書きされました。` : ''}`;
             alert(msg);
             console.log(msg);
             
@@ -578,11 +601,14 @@ function exportAllMemosSilent() {
     
     if (count === 0) return;
     
+    const holdingCosts = collectHoldingCosts();
     const backupData = {
         exportedAt: new Date().toISOString(),
-        version: '1.0',
+        version: '1.1',
         totalMemos: count,
-        memos: allMemos
+        totalHoldingCosts: Object.keys(holdingCosts).length,
+        memos: allMemos,
+        holdingCosts
     };
     
     const blob = new Blob([JSON.stringify(backupData, null, 2)], { type: 'application/json' });
