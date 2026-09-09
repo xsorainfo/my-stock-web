@@ -30,7 +30,20 @@ function updateHoldingCost(symbol, value) {
   if (Number.isFinite(cost) && cost > 0) localStorage.setItem("holding_cost_" + symbol, cost);
   else localStorage.removeItem("holding_cost_" + symbol);
   const result = document.querySelector('[data-holding-result="' + symbol + '"]');
-  if (result) result.textContent = formatHoldingResult(symbol, cost);
+  if (result) {
+    result.textContent = formatHoldingResult(symbol, cost);
+    result.classList.toggle("holding-profit", Number.isFinite(cost) && cost > 0 && formatHoldingResult(symbol, cost).includes("浮盈"));
+    result.classList.toggle("holding-loss", Number.isFinite(cost) && cost > 0 && formatHoldingResult(symbol, cost).includes("浮亏"));
+  }
+}
+function saveHoldingCost(symbol) {
+  const input = document.querySelector('[data-holding-input="' + symbol + '"]');
+  if (input) updateHoldingCost(symbol, input.value);
+  const button = document.querySelector('[data-holding-save="' + symbol + '"]');
+  if (button) {
+    button.textContent = "已保存";
+    setTimeout(() => { button.textContent = "保存成本"; }, 1200);
+  }
 }
 function formatHoldingResult(symbol, cost) {
   const card = document.querySelector('[data-stock-symbol="' + symbol + '"]');
@@ -44,6 +57,7 @@ function renderHoldingCost(stock) {
   const symbol = stock.symbol || stock.code || "";
   const cost = getHoldingCost(symbol);
   return '<div class="holding-cost" data-stock-symbol="' + symbol + '" data-current-price="' + (Number(stock.price) || 0) + '">' +
-    '<label>💼 持仓成本</label><input type="number" min="0" step="0.01" placeholder="输入成本价" value="' + cost + '" onchange="updateHoldingCost(\'' + symbol + '\', this.value)">' +
+    '<div class="holding-cost-row"><label>💼 持仓成本</label><input data-holding-input="' + symbol + '" type="number" min="0" step="0.01" placeholder="输入成本价" value="' + cost + '"></div>' +
+    '<button type="button" class="holding-save-btn" data-holding-save="' + symbol + '" onclick="saveHoldingCost(\'' + symbol + '\')">保存成本</button>' +
     '<span class="holding-result" data-holding-result="' + symbol + '">' + formatHoldingResult(symbol, cost) + '</span></div>';
 }
