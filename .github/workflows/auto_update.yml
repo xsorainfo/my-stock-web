@@ -66,7 +66,7 @@ jobs:
           # 增加 -v 参数可以看到 push 时的详细交互，有助于分析权限错误
           # git push -v origin main
           # 自动获取当前分支名，防止以后分支名变更
-          git push -v origin HEAD:$(git branch --show-current)
+          git push -v origin HEAD:data-updates
         fi
 
   
