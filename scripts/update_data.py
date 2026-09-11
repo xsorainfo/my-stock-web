@@ -649,6 +649,8 @@ def fetch_macro_item(m, session, badge_map):
             print(f"⚠️ {symbol} 数据不足: {len(h_df)} 行")
             return None
         current, previous = h_df["Close"].tail(2).tolist()
+        latest_date = h_df.index[-1]
+        print(f"✅ {symbol} ({name}) 日期={latest_date} 收盘={current:.4f}")
         diff = current - previous
         pct = (diff / previous) * 100 if previous else 0
         sign = "+" if diff > 0 else ""
