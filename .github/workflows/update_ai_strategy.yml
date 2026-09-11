@@ -2,8 +2,6 @@ name: 单独更新 AI 策略
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '20 * * * *'
 
 permissions:
   contents: write
