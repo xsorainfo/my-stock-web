@@ -51,6 +51,7 @@ function loadNavbar() {
                 <a href="${basePath}/pages/index.html" class="nav-item" data-page="index">首页</a>
                 <a href="${basePath}/pages/sub_ai.html" class="nav-item" data-page="sub_ai" target="_blank">テーマ別</a>
                 <a href="${basePath}/pages/portfolio.html" class="nav-item" data-page="portfolio" target="_blank">リスト別</a>
+                <a href="${basePath}/pages/intraday.html" class="nav-item" data-page="intraday">⏱️ 日内工具</a>
                 <a href="${basePath}/pages/settings.html" class="nav-item" data-page="settings">策略配置</a>
                 <a href="${basePath}/pages/config_admin.html" class="nav-item" data-page="config_admin">配置管理</a>
                 <!-- ⭐ 下拉菜单：研究文档 -->
@@ -86,6 +87,7 @@ function loadNavbar() {
     const pageMap = {
         'index.html': 'index',
         'sub_ai.html': 'sub_ai',
+        'intraday.html': 'intraday',
         'settings.html': 'settings',
         'md.html': 'md'
     };
