@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日内工具台</title>
+<link rel="stylesheet" href="../components/common.css"><link rel="stylesheet" href="../components/navbar.css">
+<script src="../components/signal-utils.js?v=holding-cost-2"></script>
+<style>
+:root{--ink:#172033;--muted:#64748b;--line:#e2e8f0;--panel:#fff;--soft:#f8fafc;--blue:#2563eb}
+body{background:#f1f5f9;color:var(--ink)}.intraday-wrap{max-width:1400px;margin:auto;padding:22px}
+.intraday-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-end;margin-bottom:18px}.eyebrow{color:var(--blue);font-weight:700;font-size:12px;letter-spacing:.08em}.intraday-head h1{margin:5px 0 3px;font-size:28px}.intraday-head p{margin:0;color:var(--muted)}.clock{background:#0f172a;color:#fff;border-radius:12px;padding:12px 16px;text-align:right;min-width:130px}.clock b{display:block;font-size:22px}.clock span{font-size:11px;color:#cbd5e1}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:0 8px 22px rgba(15,23,42,.05)}.market-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:12px;margin-bottom:16px}.market-item{padding:12px;border-radius:11px;background:var(--soft)}.market-item small{display:block;color:var(--muted);font-size:11px}.market-item strong{font-size:18px}.market-item em{font-style:normal;font-size:12px;margin-left:6px}.up{color:#dc2626}.down{color:#16a34a}.flat{color:#92400e}
+.tool-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;margin-bottom:16px}.section{padding:16px}.section-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.section-title h2{font-size:16px;margin:0}.section-title span{font-size:12px;color:var(--muted)}.checklist{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.check{border:1px solid var(--line);border-radius:10px;padding:11px;background:#fff}.check b{display:block;font-size:13px}.check span{display:block;color:var(--muted);font-size:11px;margin-top:5px;line-height:1.45}.check input{accent-color:var(--blue);margin-right:5px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}.filters input,.filters select{border:1px solid #cbd5e1;border-radius:8px;padding:8px 10px;background:#fff}.filters input{flex:1;min-width:160px}.quick-tabs button{border:0;border-radius:999px;padding:7px 12px;background:#e2e8f0;cursor:pointer}.quick-tabs button.active{background:var(--blue);color:#fff}.signal-list{display:grid;gap:9px;max-height:560px;overflow:auto}.signal-card{border:1px solid var(--line);border-radius:11px;padding:11px;background:#fff}.signal-card-head{display:flex;justify-content:space-between;gap:8px;align-items:center}.signal-card-head b{font-size:14px}.signal-card-head small{color:var(--muted)}.signal-line{margin-top:7px;font-size:12px;display:flex;gap:7px;flex-wrap:wrap}.pill{border-radius:999px;padding:3px 8px;background:#f1f5f9;color:#475569}.pill.up{background:#fee2e2}.pill.down{background:#dcfce7}.pill.warn{background:#fef3c7}.pnl{font-weight:700}.empty{color:var(--muted);padding:25px;text-align:center}
+@media(max-width:900px){.tool-grid{grid-template-columns:1fr}.market-strip{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.intraday-wrap{padding:12px}.intraday-head{align-items:flex-start;flex-direction:column}.clock{width:100%;box-sizing:border-box}.checklist{grid-template-columns:1fr}.market-strip{padding:8px}.market-item strong{font-size:16px}}
+</style>
+</head>
+<body><div id="navbar-placeholder"></div>
+<main class="intraday-wrap">
+<header class="intraday-head"><div><div class="eyebrow">TRADING DESK / INTRADAY</div><h1>日内工具台</h1><p>盘前确认方向，盘中盯住异动，收盘复盘信号。</p></div><div class="clock"><b id="clock">--:--:--</b><span id="session">检测交易时段中</span></div></header>
+<section class="panel market-strip" id="marketStrip"><div class="market-item"><small>数据状态</small><strong>加载中</strong></div></section>
+<div class="tool-grid">
+<section class="panel section"><div class="section-title"><h2>今日操作清单</h2><span>勾选后会保留在本机</span></div><div class="checklist">
+<label class="check"><b><input type="checkbox" data-task="open">开盘前</b><span>看隔夜美股、期指、汇率与宏观新闻。</span></label>
+<label class="check"><b><input type="checkbox" data-task="risk">风险确认</b><span>确认持仓成本、止损线和今日不追涨条件。</span></label>
+<label class="check"><b><input type="checkbox" data-task="close">收盘复盘</b><span>记录策略、资金信号与实际走势是否一致。</span></label>
+</div></section>
+<section class="panel section"><div class="section-title"><h2>日内观察框架</h2><span>快速提醒</span></div><div class="signal-line"><span class="pill up">红色：偏强/浮盈</span><span class="pill down">绿色：偏弱/浮亏</span><span class="pill warn">黄色：震荡等待</span></div><p style="font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:0">先看市场方向，再看个股相对强弱；策略和资金信号分歧时，降低追单频率。</p></section>
+</div>
+<section class="panel section"><div class="section-title"><h2>个股日内雷达</h2><span id="count">0 只</span></div>
+<div class="filters"><input id="search" placeholder="搜索代码或名称"><select id="market"><option value="">全部市场</option><option>美股</option><option>A股</option><option>日股</option></select><div class="quick-tabs"><button class="active" data-mode="all">全部</button><button data-mode="strong">偏强</button><button data-mode="weak">偏弱</button><button data-mode="holding">有持仓成本</button></div></div>
+<div class="signal-list" id="radar"><div class="empty">正在加载行情数据…</div></div></section>
+</main>
+<script src="../components/navbar.js"></script>
+<script>
+const state={stocks:[],mode:'all'};
+const $=s=>document.querySelector(s);
+function pct(s){const m=String(s||'').match(/([-+]?\d+(?:\.\d+)?)%/);return m?Number(m[1]):0}
+function tone(n){return n>0.8?'up':n<-0.8?'down':'flat'}
+function refreshClock(){const d=new Date();$('#clock').textContent=d.toLocaleTimeString('zh-CN',{hour12:false});const h=d.getHours()+d.getMinutes()/60;$('#session').textContent=h<9?'盘前准备':h<15?'盘中观察':'收盘复盘'}
+function renderMarket(data){const macro=(data.macro||[]).slice(0,4);$('#marketStrip').innerHTML=macro.map(x=>'<div class="market-item"><small>'+x.name+'</small><strong>'+x.price+'</strong><em class="'+(x.isUp?'up':'down')+'">'+x.change+'</em></div>').join('')||'<div class="market-item"><strong>暂无宏观数据</strong></div>'}
+function render(){let list=state.stocks.slice();const q=$('#search').value.trim().toLowerCase(),m=$('#market').value;
+list=list.filter(x=>(!q||String(x.name||'').toLowerCase().includes(q)||String(x.code||x.symbol||'').toLowerCase().includes(q))&&(!m||x.market_type===m||x.market===m));
+list=list.filter(x=>{const n=pct(x.change),has=!!localStorage.getItem('holding_cost_'+(x.symbol||x.code));return state.mode==='all'||state.mode==='strong'&&n>0.8||state.mode==='weak'&&n<-0.8||state.mode==='holding'&&has});
+$('#count').textContent=list.length+' 只';$('#radar').innerHTML=list.map(x=>{const n=pct(x.change),t=tone(n),sig=typeof getSharedIntradaySignal==='function'?getSharedIntradaySignal(x):{label:'震荡观察',reason:'指标不足',class:'signal-flat'};const cost=Number(localStorage.getItem('holding_cost_'+(x.symbol||x.code)));const pnl=Number.isFinite(cost)&&cost>0&&Number(x.price)?Number(x.price)-cost:null;return '<article class="signal-card"><div class="signal-card-head"><b>'+(x.name||x.code)+'</b><small>'+(x.code||x.symbol||'')+'</small></div><div class="signal-line"><span class="pill '+t+'">📈 '+sig.label+'</span><span class="pill '+t+'">'+(x.change||'暂无涨跌')+'</span>'+(x.flow_proxy?'<span class="pill '+(x.flow_proxy.class||'warn')+'">💰 '+x.flow_proxy.label+'</span>':'')+'</div>'+(pnl===null?'':'<div class="signal-line"><span class="pill '+(pnl>=0?'up':'down')+' pnl">💼 '+(pnl>=0?'浮盈 ':'浮亏 ')+Math.abs(pnl).toFixed(2)+'</span></div>')+'<div class="signal-line"><span class="pill">'+(sig.reason||'结合涨跌幅与趋势判断')+'</span></div></article>'}).join('')||'<div class="empty">没有符合条件的标的</div>'}
+async function load(){try{const r=await fetch('/data/data.json?v='+Date.now());const d=await r.json();state.stocks=d.stocks||d.watchlist||[];renderMarket(d);render()}catch(e){$('#radar').innerHTML='<div class="empty">行情数据加载失败，请稍后重试</div>'}}
+document.querySelectorAll('.quick-tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.quick-tabs button').forEach(x=>x.classList.remove('active'));b.classList.add('active');state.mode=b.dataset.mode;render()});$('#search').oninput=render;$('#market').onchange=render;document.querySelectorAll('[data-task]').forEach(x=>{x.checked=localStorage.getItem('intraday_task_'+x.dataset.task)==='1';x.onchange=()=>localStorage.setItem('intraday_task_'+x.dataset.task,x.checked?'1':'0')});setInterval(refreshClock,1000);refreshClock();load();
+</script>
+</body></html>
