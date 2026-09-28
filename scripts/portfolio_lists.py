@@ -37,7 +37,8 @@ PORTFOLIO_LISTS = {
     "200A.T",
     "4506.T",
     "6920.T",
-    "593A.T"
+    "593A.T",
+    "6787.T"
 ]
     },
     "JiuWanli": {
