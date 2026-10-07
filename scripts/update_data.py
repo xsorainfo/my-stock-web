@@ -766,6 +766,17 @@ def fetch_all_data():
             diff = current_price - prev_close
             percent = (diff / prev_close) * 100 if prev_close != 0 else 0
             sign = "+" if diff > 0 else ""
+
+            # 计算真实周收益：当前收盘价相对 5 个交易日前收盘价
+            week_change = None
+            try:
+                close_series = h_df['Close'].dropna()
+                if len(close_series) >= 6:
+                    week_base = float(close_series.iloc[-6])
+                    if week_base > 0:
+                        week_change = (float(current_price) - week_base) / week_base * 100
+            except Exception as week_error:
+                print(f"计算 {symbol} 周收益失败: {week_error}")
             
             # 回撤计算
             dist_high_str = "--"
@@ -867,6 +878,7 @@ def fetch_all_data():
                 "market_type": market_type,
                 "price": f"{current_price:.2f}",
                 "change": f"{sign}{diff:.2f} ({sign}{percent:.2f}%)",
+                "week_change": round(week_change, 2) if week_change is not None else None,
                 "isUp": diff > 0,
                 "per": per_display,
                 "roe": roe_display,
