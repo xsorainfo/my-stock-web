@@ -64,10 +64,8 @@ jobs:
         else
           git commit -m "自动更新股票数据 [skip ci]"
           # 增加 -v 参数可以看到 push 时的详细交互，有助于分析权限错误
-          # git push -v origin main
-          # 自动获取当前分支名，防止以后分支名变更
-          git fetch origin data-updates || true
-          git push --force-with-lease -v origin HEAD:data-updates
+          # 直接推送到 Vercel 使用的 main 分支，确保网站读取最新 data.json
+          git push -v origin HEAD:main
         fi
 
   
