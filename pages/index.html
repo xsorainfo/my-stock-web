@@ -756,7 +756,9 @@
         filterTimer = setTimeout(loadDashboardData, delay);
     }
     ['stockSearch','marketFilter','sortFilter'].forEach(id => document.getElementById(id)?.addEventListener('input', scheduleFilterRefresh));
-    window.onload = async function() {
+    function focusIndustry(name){if(!name)return;const targets=[...document.querySelectorAll('.industry-title')];const target=targets.find(el=>el.textContent.trim().includes(name));if(target){target.scrollIntoView({behavior:'smooth',block:'center'});target.style.outline='3px solid #2563eb';target.style.outlineOffset='6px';setTimeout(()=>{target.style.outline='';target.style.outlineOffset=''},2400)}}
+window.addEventListener('message',event=>{if(event.data?.type==='focus-industry'){setTimeout(()=>focusIndustry(event.data.name),200)}});
+window.onload = async function() {
         await loadSectorMapping();
         await loadDashboardData();
         // ⭐ 初始化自动备份状态
