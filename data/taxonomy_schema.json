@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "description": "Normalized taxonomy contract. Runtime migration is incremental; legacy sector/industry/tags remain supported until each stock is migrated.",
+  "layers": [
+    {
+      "id": "market",
+      "field": "market",
+      "meaning": "交易市场"
+    },
+    {
+      "id": "sector",
+      "field": "sector_id",
+      "meaning": "行业一级分类"
+    },
+    {
+      "id": "industry",
+      "field": "industry_id",
+      "meaning": "行业二级分类"
+    },
+    {
+      "id": "theme",
+      "field": "theme_ids",
+      "meaning": "投资主题，可多选"
+    },
+    {
+      "id": "tag",
+      "field": "tag_ids",
+      "meaning": "技术/业务标签，可多选"
+    }
+  ],
+  "rules": {
+    "sector_id": "稳定的一级行业ID，例如 1.1",
+    "industry_id": "稳定的二级行业ID，例如 1.1.1",
+    "theme_ids": "主题ID数组，不使用行业编号",
+    "tag_ids": "规范化标签ID数组，显示名称由 tag_display_map 生成",
+    "legacy_compatibility": [
+      "sector",
+      "industry",
+      "tags"
+    ]
+  },
+  "migration_order": [
+    "建立sector/industry规范名称与ID的唯一字典",
+    "为theme_mapping增加稳定theme_id与display_name",
+    "将tags去重并拆分为technology/business标签",
+    "逐批迁移WATCHLIST，保持旧字段兼容",
+    "更新页面读取规范字段，最后移除旧字段"
+  ]
+}
