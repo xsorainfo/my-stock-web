@@ -7,14 +7,20 @@ on:
       - "data/*catalog.json"
       - "data/taxonomy_schema.json"
       - "scripts/taxonomy_utils.py"
+      - "scripts/update_data.py"
       - "scripts/validate_taxonomy.py"
+      - "scripts/taxonomy_report.py"
+      - "scripts/export_normalized_watchlist.py"
   pull_request:
     paths:
       - "config.py"
       - "data/*catalog.json"
       - "data/taxonomy_schema.json"
       - "scripts/taxonomy_utils.py"
+      - "scripts/update_data.py"
       - "scripts/validate_taxonomy.py"
+      - "scripts/taxonomy_report.py"
+      - "scripts/export_normalized_watchlist.py"
 
 jobs:
   validate:
@@ -26,3 +32,5 @@ jobs:
           python-version: "3.12"
       - name: Validate taxonomy
         run: python scripts/validate_taxonomy.py
+      - name: Report migration coverage
+        run: python scripts/taxonomy_report.py
