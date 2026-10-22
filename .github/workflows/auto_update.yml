@@ -2,19 +2,18 @@ name: Batch更新股票数据
 
 on:
   repository_dispatch:
-    types: [web_refresh] # 这一行非常重要
+    types: [web_refresh]
   workflow_dispatch:
-  
   schedule:
-    # 全天每小时执行一次（UTC 时间）
     - cron: '5 * * * *'
 
-
-# 🌟【超级核心加固】：彻底解决 git push 报 exit code 1 的权限拉闸问题
 permissions:
   contents: write
 
-# 🌟【体验加固】：强制开启官方推荐的 Node.js 24 容器，彻底抹除讨厌的黄色警告
+concurrency:
+  group: stock-data-publish
+  cancel-in-progress: false
+
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
@@ -22,52 +21,82 @@ jobs:
   update-data:
     runs-on: ubuntu-latest
     steps:
-    # 升级到高版本 checkout，配合 permissions 顺畅读写
-    - name: 检查代码
-      uses: actions/checkout@v4
-      with:
-        ref: data-updates
+      - name: 读取 main 最新代码和配置
+        uses: actions/checkout@v4
+        with:
+          ref: main
 
-    - name: 设置 Python 环境
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.10'
-        cache: 'pip'
-        cache-dependency-path: requirements.txt
+      - name: 准备独立的数据分支目录
+        uses: actions/checkout@v4
+        with:
+          ref: data-updates
+          path: published-data
 
-    # yfinance 如果要请求大盘和 AI，通常也需要 requests 库作为底层依赖
-    - name: 安装 yfinance 及网络依赖包
-      run: |
-        pip install --upgrade pip
-        pip install yfinance requests
+      - name: 设置 Python 环境
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: pip
+          cache-dependency-path: requirements.txt
 
-      
-    # 🛠️【终极修复】：在这里把通道正式打通，将 GitHub 后台的 Secret 送进 Python
-    - name: 运行 Python 脚本抓取数据
-      env:
-        AI_API_KEY: ${{ secrets.AI_API_KEY }}
-        AI_PROVIDER: ${{ secrets.AI_PROVIDER }}
-        AI_MODEL: ${{ secrets.AI_MODEL }}
-      run: python scripts/update_data.py
+      - name: 安装 yfinance 及网络依赖包
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install yfinance requests
 
-    - name: 把最新数据提交回 GitHub 仓库
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
+      - name: 运行 main 的 Python 脚本抓取数据
+        env:
+          AI_API_KEY: ${{ secrets.AI_API_KEY }}
+          AI_PROVIDER: ${{ secrets.AI_PROVIDER }}
+          AI_MODEL: ${{ secrets.AI_MODEL }}
+        run: |
+          echo "代码与配置来源: main"
+          git log -1 --format='%h %s'
+          python scripts/update_data.py
 
-        # ⭐ 先拉取远程最新代码（自动合并）
-        git pull origin data-updates --no-rebase
-        
-        git add data/data.json
-        
-        # 调试：查看是否有改动需要提交
-        if git diff --cached --quiet; then
-          echo "没有数据变化，跳过提交"
-        else
+      - name: 检查生成文件并复制到数据分支
+        run: |
+          python - <<'PY'
+          import json
+          import shutil
+          from pathlib import Path
+
+          source = Path("data/data.json")
+          with source.open(encoding="utf-8") as handle:
+              data = json.load(handle)
+          if not isinstance(data.get("stocks"), list) or not data["stocks"]:
+              raise SystemExit("股票数据为空，停止发布")
+          if not data.get("generated_at"):
+              raise SystemExit("缺少 generated_at，停止发布")
+          print("generated_at:", data["generated_at"])
+          print("stocks:", len(data["stocks"]))
+          destination = Path("published-data/data/data.json")
+          destination.parent.mkdir(parents=True, exist_ok=True)
+          shutil.copyfile(source, destination)
+          print("发布目标: data-updates/data/data.json")
+          PY
+
+      - name: 仅向 data-updates 提交行情
+        working-directory: published-data
+        run: |
+          set -euo pipefail
+          test "$(git branch --show-current)" = "data-updates"
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -- data/data.json
+          if git diff --cached --quiet; then
+            echo "没有数据变化，跳过提交"
+            exit 0
+          fi
           git commit -m "自动更新股票数据 [skip ci]"
-          # 增加 -v 参数可以看到 push 时的详细交互，有助于分析权限错误
-          # 只推送到数据分支，避免行情更新触发 Vercel 部署
-          git push -v origin HEAD:data-updates
-        fi
-
-  
+          # 禁止 force push；并发修改时保留远程历史。
+          for attempt in 1 2 3; do
+            git fetch origin data-updates
+            git rebase origin/data-updates
+            if git push origin HEAD:refs/heads/data-updates; then
+              echo "已发布 data-updates；main 未写入行情"
+              exit 0
+            fi
+          done
+          echo "数据分支推送失败"
+          exit 1
