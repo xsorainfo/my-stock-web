@@ -22,6 +22,7 @@ on:
       - "scripts/validate_taxonomy.py"
       - "scripts/taxonomy_report.py"
       - "scripts/export_normalized_watchlist.py"
+      - "scripts/watchlist_quality_report.py"
 
 jobs:
   validate:
