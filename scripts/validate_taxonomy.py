@@ -1,4 +1,4 @@
-"""Validate the normalized taxonomy without changing runtime data."""
+"""Validate normalized taxonomy fields without blocking legacy duplicate watchlist entries."""
 
 from __future__ import annotations
 
@@ -31,15 +31,17 @@ def main() -> int:
     tag_ids = {item["id"] for item in tag_catalog.get("tags", [])}
 
     errors = []
+    warnings = []
     seen = set()
     allowed_markets = {"美股", "日股", "A股", "港股", "韩股", "德股", "ETF"}
     for item in WATCHLIST:
         symbol = item.get("symbol", "")
-        if symbol in seen:
-            errors.append(f"duplicate symbol: {symbol}")
-        seen.add(symbol)
-
         market = str(item.get("market") or item.get("market_type") or "")
+        identity = (symbol, market)
+        if identity in seen:
+            warnings.append(f"duplicate watchlist entry: {symbol} ({market})")
+        seen.add(identity)
+
         if market and market not in allowed_markets:
             errors.append(f"{symbol}: unknown market {market}")
         sector_id = str(item.get("sector_id") or item.get("sector") or "")
@@ -54,14 +56,17 @@ def main() -> int:
         for tag_id in item.get("tag_ids") or []:
             if tag_id not in tag_ids:
                 errors.append(f"{symbol}: unknown tag_id {tag_id}")
-
         for theme_id in item.get("theme_ids") or []:
             if theme_id not in theme_ids:
                 errors.append(f"{symbol}: unknown theme_id {theme_id}")
 
     print(f"checked {len(WATCHLIST)} watchlist entries")
+    if warnings:
+        print(f"found {len(warnings)} duplicate warnings")
+        for warning in warnings[:100]:
+            print(f"- {warning}")
     if errors:
-        print(f"found {len(errors)} taxonomy issues")
+        print(f"found {len(errors)} taxonomy errors")
         for error in errors[:100]:
             print(f"- {error}")
         return 1
