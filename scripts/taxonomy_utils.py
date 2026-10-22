@@ -45,7 +45,7 @@ def normalize_taxonomy(stock: Mapping[str, Any]) -> dict[str, Any]:
 
 def canonical_key(value: str) -> str:
     """Create a stable lookup key for aliases without changing display text."""
-    value = re.sub(r"\\s+", " ", str(value or "").strip().lower())
+    value = re.sub(r"\s+", " ", str(value or "").strip().lower())
     return value.replace("（", "(").replace("）", ")")
 
 
@@ -57,7 +57,7 @@ def theme_ids_from_paths(tag_theme_list: list[Mapping[str, Any]]) -> list[str]:
         if not path:
             continue
         level1 = str(path[0]).strip()
-        match = re.match(r"^(\\d+)\\.\\s*(.*)$", level1)
+        match = re.match(r"^(\d+)\.\s*(.*)$", level1)
         if match:
             value = f"{int(match.group(1)):02d}_{canonical_key(match.group(2)).replace(' ', '_')}"
         else:
