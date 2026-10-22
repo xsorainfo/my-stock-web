@@ -721,6 +721,76 @@
       "id": "上游材料",
       "raw_name": "上游材料",
       "display_name": "上游材料"
+    },
+    {
+      "id": "网络安全",
+      "raw_name": "网络安全",
+      "display_name": "网络安全"
+    },
+    {
+      "id": "waf",
+      "raw_name": "WAF",
+      "display_name": "WAF"
+    },
+    {
+      "id": "云安全",
+      "raw_name": "云安全",
+      "display_name": "云安全"
+    },
+    {
+      "id": "终端安全",
+      "raw_name": "终端安全",
+      "display_name": "终端安全"
+    },
+    {
+      "id": "恶意软件防护",
+      "raw_name": "恶意软件防护",
+      "display_name": "恶意软件防护"
+    },
+    {
+      "id": "漏洞诊断",
+      "raw_name": "漏洞诊断",
+      "display_name": "漏洞诊断"
+    },
+    {
+      "id": "安全咨询",
+      "raw_name": "安全咨询",
+      "display_name": "安全咨询"
+    },
+    {
+      "id": "邮件安全",
+      "raw_name": "邮件安全",
+      "display_name": "邮件安全"
+    },
+    {
+      "id": "云邮件",
+      "raw_name": "云邮件",
+      "display_name": "云邮件"
+    },
+    {
+      "id": "电子认证",
+      "raw_name": "电子认证",
+      "display_name": "电子认证"
+    },
+    {
+      "id": "linux/oss",
+      "raw_name": "Linux/OSS",
+      "display_name": "Linux/OSS"
+    },
+    {
+      "id": "电子签名",
+      "raw_name": "电子签名",
+      "display_name": "电子签名"
+    },
+    {
+      "id": "日志管理",
+      "raw_name": "日志管理",
+      "display_name": "日志管理"
+    },
+    {
+      "id": "siem",
+      "raw_name": "SIEM",
+      "display_name": "SIEM"
     }
   ]
 }
