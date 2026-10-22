@@ -65,3 +65,18 @@ def theme_ids_from_paths(tag_theme_list: list[Mapping[str, Any]]) -> list[str]:
         if value and value not in result:
             result.append(value)
     return result
+
+
+def tag_ids_from_raw(tags: list[str], catalog: Mapping[str, Any] | None = None) -> list[str]:
+    """Resolve legacy tag strings to catalog IDs, with a deterministic fallback."""
+    lookup = {}
+    for item in (catalog or {}).get("tags", []):
+        if item.get("raw_name"):
+            lookup[str(item["raw_name"])] = str(item.get("id") or "")
+    result = []
+    for tag in tags or []:
+        raw = str(tag).strip()
+        value = lookup.get(raw) or canonical_key(raw).replace(" ", "_")
+        if value and value not in result:
+            result.append(value)
+    return result
