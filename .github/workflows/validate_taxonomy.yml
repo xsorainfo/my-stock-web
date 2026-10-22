@@ -1,0 +1,36 @@
+name: Validate taxonomy
+
+on:
+  push:
+    paths:
+      - "config.py"
+      - "data/*catalog.json"
+      - "data/taxonomy_schema.json"
+      - "scripts/taxonomy_utils.py"
+      - "scripts/update_data.py"
+      - "scripts/validate_taxonomy.py"
+      - "scripts/taxonomy_report.py"
+      - "scripts/export_normalized_watchlist.py"
+  pull_request:
+    paths:
+      - "config.py"
+      - "data/*catalog.json"
+      - "data/taxonomy_schema.json"
+      - "scripts/taxonomy_utils.py"
+      - "scripts/update_data.py"
+      - "scripts/validate_taxonomy.py"
+      - "scripts/taxonomy_report.py"
+      - "scripts/export_normalized_watchlist.py"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate taxonomy
+        run: python scripts/validate_taxonomy.py
+      - name: Report migration coverage
+        run: python scripts/taxonomy_report.py
