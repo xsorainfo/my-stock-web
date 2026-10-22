@@ -18,7 +18,10 @@ from config import MACRO_LIST, WATCHLIST, DEFAULT_STRATEGY, SOURCE_MAP
 from theme_mapping import THEME_MAPPING  # ⭐ 从 theme_mapping.py 导入
 from tag_display_map import TAG_DISPLAY_MAP  # ⭐ 导入显示映射
 from portfolio_lists import PORTFOLIO_LISTS
-from taxonomy_utils import normalize_taxonomy, theme_ids_from_paths
+from taxonomy_utils import normalize_taxonomy, theme_ids_from_paths, tag_ids_from_raw
+
+with open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "tag_catalog.json"), encoding="utf-8") as _tag_catalog_file:
+    TAG_CATALOG = json.load(_tag_catalog_file)
 
 # ============================================================
 # ⭐ Tag 显示名称转换函数
@@ -883,7 +886,7 @@ def fetch_all_data():
                 "sector_id": taxonomy["sector_id"],
                 "industry_id": taxonomy["industry_id"],
                 "theme_ids": taxonomy["theme_ids"] or theme_ids_from_paths(tag_theme_list),
-                "tag_ids": taxonomy["tag_ids"],
+                "tag_ids": tag_ids_from_raw(raw_tags, TAG_CATALOG),
                 "price": f"{current_price:.2f}",
                 "change": f"{sign}{diff:.2f} ({sign}{percent:.2f}%)",
                 "week_change": round(week_change, 2) if week_change is not None else None,
