@@ -45,5 +45,15 @@
     "将tags去重并拆分为technology/business标签",
     "逐批迁移WATCHLIST，保持旧字段兼容",
     "更新页面读取规范字段，最后移除旧字段"
-  ]
+  ],
+  "catalogs": {
+    "sector": "data/sector_catalog.json",
+    "theme": "data/theme_catalog.json",
+    "tag_display": "scripts/tag_display_map.py"
+  },
+  "migration_status": {
+    "phase": "dual_write",
+    "legacy_fields_retained": true,
+    "normalized_fields_written_by": "scripts/update_data.py"
+  }
 }
