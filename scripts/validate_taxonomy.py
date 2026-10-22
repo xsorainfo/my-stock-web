@@ -32,12 +32,16 @@ def main() -> int:
 
     errors = []
     seen = set()
+    allowed_markets = {"美股", "日股", "A股", "港股", "韩股", "德股", "ETF"}
     for item in WATCHLIST:
         symbol = item.get("symbol", "")
         if symbol in seen:
             errors.append(f"duplicate symbol: {symbol}")
         seen.add(symbol)
 
+        market = str(item.get("market") or item.get("market_type") or "")
+        if market and market not in allowed_markets:
+            errors.append(f"{symbol}: unknown market {market}")
         sector_id = str(item.get("sector_id") or item.get("sector") or "")
         industry_id = str(item.get("industry_id") or item.get("industry") or "")
         if sector_id and sector_id not in sector_ids:
