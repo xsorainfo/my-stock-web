@@ -791,6 +791,76 @@
       "id": "siem",
       "raw_name": "SIEM",
       "display_name": "SIEM"
+    },
+    {
+      "id": "ai应用",
+      "raw_name": "AI应用",
+      "display_name": "AI应用"
+    },
+    {
+      "id": "it服务",
+      "raw_name": "IT服务",
+      "display_name": "IT服务"
+    },
+    {
+      "id": "测试测量",
+      "raw_name": "测试测量",
+      "display_name": "测试测量"
+    },
+    {
+      "id": "通信测试",
+      "raw_name": "通信测试",
+      "display_name": "通信测试"
+    },
+    {
+      "id": "汽车电子",
+      "raw_name": "汽车电子",
+      "display_name": "汽车电子"
+    },
+    {
+      "id": "建设机械",
+      "raw_name": "建设机械",
+      "display_name": "建设机械"
+    },
+    {
+      "id": "矿山机械",
+      "raw_name": "矿山机械",
+      "display_name": "矿山机械"
+    },
+    {
+      "id": "智能施工",
+      "raw_name": "智能施工",
+      "display_name": "智能施工"
+    },
+    {
+      "id": "汽车制造",
+      "raw_name": "汽车制造",
+      "display_name": "汽车制造"
+    },
+    {
+      "id": "汽车电动化",
+      "raw_name": "汽车电动化",
+      "display_name": "汽车电动化"
+    },
+    {
+      "id": "航空航天",
+      "raw_name": "航空航天",
+      "display_name": "航空航天"
+    },
+    {
+      "id": "碳纤维",
+      "raw_name": "碳纤维",
+      "display_name": "碳纤维"
+    },
+    {
+      "id": "复合材料",
+      "raw_name": "复合材料",
+      "display_name": "复合材料"
+    },
+    {
+      "id": "高性能高分子材料",
+      "raw_name": "高性能高分子材料",
+      "display_name": "高性能高分子材料"
     }
   ]
 }

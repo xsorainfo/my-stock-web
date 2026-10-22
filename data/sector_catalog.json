@@ -661,6 +661,20 @@
           "order": 3
         }
       ]
+    },
+    {
+      "id": "5.7",
+      "name": "汽车与交通设备（Automotive）",
+      "description": "乘用车及相关交通设备制造",
+      "order": 25,
+      "industries": [
+        {
+          "id": "5.7.1",
+          "name": "汽车制造",
+          "description": "乘用车整车研发、生产与销售",
+          "order": 1
+        }
+      ]
     }
   ]
 }

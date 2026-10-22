@@ -557,6 +557,18 @@
           "industry_comment": "工业金刚石、人造金刚石、培育钻石及相关超硬材料，上游受益逻辑需结合具体用途判断"
         }
       ]
+    },
+    {
+      "sector_id": "5.7",
+      "sector_name": "汽车与交通设备（Automotive）",
+      "sector_comment": "乘用车及相关交通设备制造",
+      "industries": [
+        {
+          "industry_id": "5.7.1",
+          "industry_name": "汽车制造",
+          "industry_comment": "乘用车整车研发、生产与销售"
+        }
+      ]
     }
   ]
 }
