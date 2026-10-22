@@ -18,7 +18,7 @@ from config import MACRO_LIST, WATCHLIST, DEFAULT_STRATEGY, SOURCE_MAP
 from theme_mapping import THEME_MAPPING  # ⭐ 从 theme_mapping.py 导入
 from tag_display_map import TAG_DISPLAY_MAP  # ⭐ 导入显示映射
 from portfolio_lists import PORTFOLIO_LISTS
-from taxonomy_utils import normalize_taxonomy
+from taxonomy_utils import normalize_taxonomy, theme_ids_from_paths
 
 # ============================================================
 # ⭐ Tag 显示名称转换函数
@@ -882,7 +882,7 @@ def fetch_all_data():
                 "market": taxonomy["market"] or market_type,
                 "sector_id": taxonomy["sector_id"],
                 "industry_id": taxonomy["industry_id"],
-                "theme_ids": taxonomy["theme_ids"],
+                "theme_ids": taxonomy["theme_ids"] or theme_ids_from_paths(tag_theme_list),
                 "tag_ids": taxonomy["tag_ids"],
                 "price": f"{current_price:.2f}",
                 "change": f"{sign}{diff:.2f} ({sign}{percent:.2f}%)",
