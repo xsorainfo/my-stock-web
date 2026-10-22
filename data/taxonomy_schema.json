@@ -37,7 +37,8 @@
       "sector",
       "industry",
       "tags"
-    ]
+    ],
+    "tag_type": "每个标签目录项可标记 technology、business 或 theme，页面按场景决定是否显示"
   },
   "migration_order": [
     "建立sector/industry规范名称与ID的唯一字典",
@@ -56,5 +57,34 @@
     "phase": "dual_write",
     "legacy_fields_retained": true,
     "normalized_fields_written_by": "scripts/update_data.py"
-  }
+  },
+  "tag_types": [
+    {
+      "id": "technology",
+      "name": "技术标签",
+      "examples": [
+        "GPU",
+        "HBM",
+        "液冷"
+      ]
+    },
+    {
+      "id": "business",
+      "name": "业务标签",
+      "examples": [
+        "AI服务器",
+        "数据中心",
+        "医疗器械"
+      ]
+    },
+    {
+      "id": "theme",
+      "name": "主题标签",
+      "examples": [
+        "人工智能",
+        "机器人",
+        "新能源"
+      ]
+    }
+  ]
 }
