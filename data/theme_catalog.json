@@ -2,112 +2,130 @@
   "version": 1,
   "themes": [
     {
-      "id": "popular",
+      "id": "00_热门主题",
       "name": "热门主题",
       "description": "关注度与市场情绪主题",
-      "order": 0
+      "order": 0,
+      "legacy_name": "0. 人気テーマ"
     },
     {
-      "id": "ai_infrastructure",
+      "id": "01_半导体设备",
       "name": "AI基础设施",
       "description": "芯片、存储、网络、电力和数据中心基础设施",
-      "order": 1
+      "order": 1,
+      "legacy_name": "1. AI基础设施"
     },
     {
-      "id": "compute_memory",
+      "id": "02_半导体材料",
       "name": "算力与存储",
       "description": "CPU、GPU、ASIC、HBM和存储芯片",
-      "order": 2
+      "order": 2,
+      "legacy_name": "2. 算力与存储"
     },
     {
-      "id": "advanced_packaging",
+      "id": "03_算力芯片",
       "name": "先进封装",
       "description": "CoWoS、Chiplet、3D封装和键合技术",
-      "order": 3
+      "order": 3,
+      "legacy_name": "3. 先进封装"
     },
     {
-      "id": "semiconductor_equipment",
+      "id": "04_高带宽内存",
       "name": "半导体设备",
       "description": "光刻、刻蚀、沉积、检测和测试设备",
-      "order": 4
+      "order": 4,
+      "legacy_name": "4. 半导体设备"
     },
     {
-      "id": "semiconductor_materials",
+      "id": "05_先进封装",
       "name": "半导体材料",
       "description": "硅片、光刻胶、封装材料和电子化学品",
-      "order": 5
+      "order": 5,
+      "legacy_name": "5. 半导体材料"
     },
     {
-      "id": "optical_communication",
+      "id": "06_网络互联",
       "name": "光通信",
       "description": "光模块、光芯片、激光器和高速互联",
-      "order": 6
+      "order": 6,
+      "legacy_name": "6. 光通信"
     },
     {
-      "id": "power_data_center",
+      "id": "07_光通信",
       "name": "电力与数据中心",
       "description": "电源、液冷、服务器和数据中心架构",
-      "order": 7
+      "order": 7,
+      "legacy_name": "7. 电力与数据中心"
     },
     {
-      "id": "cloud_ai_apps",
+      "id": "08_电力_液冷_数据中心",
       "name": "云与AI应用",
       "description": "云服务、基础模型、AI平台和智能体",
-      "order": 8
+      "order": 8,
+      "legacy_name": "8. 云与AI应用"
     },
     {
-      "id": "industrial_robotics",
+      "id": "09_云_模型_应用",
       "name": "工业自动化与机器人",
       "description": "机器人、CNC、伺服、PLC和智能制造",
-      "order": 9
+      "order": 9,
+      "legacy_name": "9. 工业自动化与机器人"
     },
     {
-      "id": "quantum_computing",
+      "id": "10_工业自动化与机器人",
       "name": "量子计算",
       "description": "量子硬件、软件、云和量子安全",
-      "order": 10
+      "order": 10,
+      "legacy_name": "10. 量子计算"
     },
     {
-      "id": "ip_entertainment",
+      "id": "11_量子计算",
       "name": "IP运营与娱乐",
       "description": "IP授权、游戏、动画和娱乐产业",
-      "order": 11
+      "order": 11,
+      "legacy_name": "11. IP运营与娱乐"
     },
     {
-      "id": "trading_houses",
+      "id": "12_IP运营与娱乐",
       "name": "综合商社",
       "description": "资源、化学品、电子材料和基础设施投资",
-      "order": 12
+      "order": 12,
+      "legacy_name": "12. 综合商社"
     },
     {
-      "id": "new_energy",
+      "id": "13_综合商社",
       "name": "新能源",
       "description": "动力电池、储能、光伏、风电和核电",
-      "order": 13
+      "order": 13,
+      "legacy_name": "13. 新能源"
     },
     {
-      "id": "advanced_materials",
+      "id": "14_新能源",
       "name": "新材料",
       "description": "高分子、碳纤维、陶瓷、磁性和纳米材料",
-      "order": 14
+      "order": 14,
+      "legacy_name": "14. 新材料"
     },
     {
-      "id": "healthcare",
+      "id": "15_新材料",
       "name": "医疗健康",
       "description": "医药品、医疗器械、生物技术和医疗IT",
-      "order": 15
+      "order": 15,
+      "legacy_name": "15. 医疗健康"
     },
     {
-      "id": "etf",
+      "id": "16_医疗健康",
       "name": "ETF",
       "description": "日本股、行业、策略和资产类别ETF",
-      "order": 16
+      "order": 16,
+      "legacy_name": "16. ETF"
     },
     {
-      "id": "diamond_copper_thermal",
+      "id": "17_ETF",
       "name": "金刚石铜与先进热管理",
       "description": "金刚石铜、芯片散热、液冷和上游材料",
-      "order": 17
+      "order": 17,
+      "legacy_name": "17. 金刚石铜与先进热管理"
     }
   ]
 }
