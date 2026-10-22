@@ -11,6 +11,7 @@ on:
       - "scripts/validate_taxonomy.py"
       - "scripts/taxonomy_report.py"
       - "scripts/export_normalized_watchlist.py"
+      - "scripts/watchlist_quality_report.py"
   pull_request:
     paths:
       - "config.py"
@@ -34,3 +35,5 @@ jobs:
         run: python scripts/validate_taxonomy.py
       - name: Report migration coverage
         run: python scripts/taxonomy_report.py
+      - name: Audit watchlist quality
+        run: python scripts/watchlist_quality_report.py
