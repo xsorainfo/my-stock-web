@@ -49,7 +49,8 @@
   "catalogs": {
     "sector": "data/sector_catalog.json",
     "theme": "data/theme_catalog.json",
-    "tag_display": "scripts/tag_display_map.py"
+    "tag_display": "scripts/tag_display_map.py",
+    "tag": "data/tag_catalog.json"
   },
   "migration_status": {
     "phase": "dual_write",
