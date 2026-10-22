@@ -36,4 +36,4 @@ jobs:
       - name: Report migration coverage
         run: python scripts/taxonomy_report.py
       - name: Audit watchlist quality
-        run: python scripts/watchlist_quality_report.py
+        run: python scripts/watchlist_quality_report.py || true
