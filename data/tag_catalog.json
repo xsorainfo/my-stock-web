@@ -1,0 +1,726 @@
+{
+  "version": 1,
+  "description": "规范化标签目录；raw_name用于兼容旧tags，display_name用于页面显示",
+  "tags": [
+    {
+      "id": "sic",
+      "raw_name": "SiC",
+      "display_name": "碳化硅 (SiC)"
+    },
+    {
+      "id": "sic衬底",
+      "raw_name": "SiC衬底",
+      "display_name": "碳化硅衬底 (SiC)"
+    },
+    {
+      "id": "碳化硅衬底",
+      "raw_name": "碳化硅衬底",
+      "display_name": "碳化硅衬底 (SiC)"
+    },
+    {
+      "id": "gan",
+      "raw_name": "GaN",
+      "display_name": "氮化镓 (GaN)"
+    },
+    {
+      "id": "氮化镓",
+      "raw_name": "氮化镓",
+      "display_name": "氮化镓 (GaN)"
+    },
+    {
+      "id": "gan衬底",
+      "raw_name": "GaN衬底",
+      "display_name": "氮化镓衬底 (GaN)"
+    },
+    {
+      "id": "氮化镓衬底",
+      "raw_name": "氮化镓衬底",
+      "display_name": "氮化镓衬底 (GaN)"
+    },
+    {
+      "id": "gaas",
+      "raw_name": "GaAs",
+      "display_name": "砷化镓 (GaAs)"
+    },
+    {
+      "id": "砷化镓",
+      "raw_name": "砷化镓",
+      "display_name": "砷化镓 (GaAs)"
+    },
+    {
+      "id": "inp",
+      "raw_name": "InP",
+      "display_name": "磷化铟 (InP)"
+    },
+    {
+      "id": "磷化铟",
+      "raw_name": "磷化铟",
+      "display_name": "磷化铟 (InP)"
+    },
+    {
+      "id": "2_5d",
+      "raw_name": "2.5D",
+      "display_name": "2.5D封装"
+    },
+    {
+      "id": "3d",
+      "raw_name": "3D",
+      "display_name": "3D封装"
+    },
+    {
+      "id": "cowos",
+      "raw_name": "CoWoS",
+      "display_name": "CoWoS (晶圆级封装)"
+    },
+    {
+      "id": "sip",
+      "raw_name": "SiP",
+      "display_name": "SiP (系统级封装)"
+    },
+    {
+      "id": "fc_bga",
+      "raw_name": "FC-BGA",
+      "display_name": "FC-BGA (倒装芯片球栅阵列)"
+    },
+    {
+      "id": "soic",
+      "raw_name": "SoIC",
+      "display_name": "SoIC (集成芯片系统)"
+    },
+    {
+      "id": "foplp",
+      "raw_name": "FOPLP",
+      "display_name": "FOPLP (面板级封装)"
+    },
+    {
+      "id": "fo_wlp",
+      "raw_name": "FO-WLP",
+      "display_name": "FO-WLP (晶圆级扇出封装)"
+    },
+    {
+      "id": "hybrid_bonding",
+      "raw_name": "Hybrid Bonding",
+      "display_name": "混合键合 (Hybrid Bonding)"
+    },
+    {
+      "id": "异构封装",
+      "raw_name": "异构封装",
+      "display_name": "异构封装 (Heterogeneous Integration)"
+    },
+    {
+      "id": "chiplet",
+      "raw_name": "Chiplet",
+      "display_name": "Chiplet (小芯片)"
+    },
+    {
+      "id": "duv",
+      "raw_name": "DUV",
+      "display_name": "DUV (深紫外光刻)"
+    },
+    {
+      "id": "euv",
+      "raw_name": "EUV",
+      "display_name": "EUV (极紫外光刻)"
+    },
+    {
+      "id": "nil",
+      "raw_name": "NIL",
+      "display_name": "NIL (纳米压印光刻)"
+    },
+    {
+      "id": "arf",
+      "raw_name": "ArF",
+      "display_name": "ArF (氟化氩激光)"
+    },
+    {
+      "id": "krf",
+      "raw_name": "KrF",
+      "display_name": "KrF (氟化氪激光)"
+    },
+    {
+      "id": "icp",
+      "raw_name": "ICP",
+      "display_name": "ICP (电感耦合等离子体刻蚀)"
+    },
+    {
+      "id": "ccp",
+      "raw_name": "CCP",
+      "display_name": "CCP (电容耦合等离子体刻蚀)"
+    },
+    {
+      "id": "rie",
+      "raw_name": "RIE",
+      "display_name": "RIE (反应离子刻蚀)"
+    },
+    {
+      "id": "drie",
+      "raw_name": "DRIE",
+      "display_name": "DRIE (深反应离子刻蚀)"
+    },
+    {
+      "id": "cvd",
+      "raw_name": "CVD",
+      "display_name": "CVD (化学气相沉积)"
+    },
+    {
+      "id": "pvd",
+      "raw_name": "PVD",
+      "display_name": "PVD (物理气相沉积)"
+    },
+    {
+      "id": "ald",
+      "raw_name": "ALD",
+      "display_name": "ALD (原子层沉积)"
+    },
+    {
+      "id": "mocvd",
+      "raw_name": "MOCVD",
+      "display_name": "MOCVD (金属有机化学气相沉积)"
+    },
+    {
+      "id": "lpcvd",
+      "raw_name": "LPCVD",
+      "display_name": "LPCVD (低压化学气相沉积)"
+    },
+    {
+      "id": "pecvd",
+      "raw_name": "PECVD",
+      "display_name": "PECVD (等离子体增强化学气相沉积)"
+    },
+    {
+      "id": "cmp",
+      "raw_name": "CMP",
+      "display_name": "CMP (化学机械抛光)"
+    },
+    {
+      "id": "mask_writer",
+      "raw_name": "Mask Writer",
+      "display_name": "光罩描画 (Mask Writer)"
+    },
+    {
+      "id": "sem",
+      "raw_name": "SEM",
+      "display_name": "SEM (扫描电子显微镜)"
+    },
+    {
+      "id": "tem",
+      "raw_name": "TEM",
+      "display_name": "TEM (透射电子显微镜)"
+    },
+    {
+      "id": "probe_card",
+      "raw_name": "Probe Card",
+      "display_name": "探针卡 (Probe Card)"
+    },
+    {
+      "id": "cd_sem",
+      "raw_name": "CD-SEM",
+      "display_name": "CD-SEM (关键尺寸扫描电镜)"
+    },
+    {
+      "id": "ate",
+      "raw_name": "ATE",
+      "display_name": "ATE (自动测试设备)"
+    },
+    {
+      "id": "cp测试",
+      "raw_name": "CP测试",
+      "display_name": "CP测试 (晶圆测试)"
+    },
+    {
+      "id": "ft测试",
+      "raw_name": "FT测试",
+      "display_name": "FT测试 (最终测试)"
+    },
+    {
+      "id": "soi硅片",
+      "raw_name": "SOI硅片",
+      "display_name": "SOI硅片"
+    },
+    {
+      "id": "mask",
+      "raw_name": "Mask",
+      "display_name": "光掩膜 (Mask)"
+    },
+    {
+      "id": "mask_blank",
+      "raw_name": "Mask Blank",
+      "display_name": "光刻基板 (Mask Blank)"
+    },
+    {
+      "id": "low_cte玻纤布",
+      "raw_name": "Low CTE玻纤布",
+      "display_name": "Low CTE玻纤布"
+    },
+    {
+      "id": "emc",
+      "raw_name": "EMC",
+      "display_name": "EMC (环氧塑封料)"
+    },
+    {
+      "id": "mlcc",
+      "raw_name": "MLCC",
+      "display_name": "MLCC (多层陶瓷电容)"
+    },
+    {
+      "id": "pi薄膜",
+      "raw_name": "PI薄膜",
+      "display_name": "PI薄膜 (聚酰亚胺)"
+    },
+    {
+      "id": "lcp",
+      "raw_name": "LCP",
+      "display_name": "LCP (液晶聚合物)"
+    },
+    {
+      "id": "pps",
+      "raw_name": "PPS",
+      "display_name": "PPS (聚苯硫醚)"
+    },
+    {
+      "id": "peek",
+      "raw_name": "PEEK",
+      "display_name": "PEEK (聚醚醚酮)"
+    },
+    {
+      "id": "tgv",
+      "raw_name": "TGV",
+      "display_name": "TGV (玻璃通孔)"
+    },
+    {
+      "id": "underfill",
+      "raw_name": "Underfill",
+      "display_name": "Underfill (底部填充)"
+    },
+    {
+      "id": "gpu",
+      "raw_name": "GPU",
+      "display_name": "GPU (图形处理器)"
+    },
+    {
+      "id": "cpu",
+      "raw_name": "CPU",
+      "display_name": "CPU (中央处理器)"
+    },
+    {
+      "id": "asic",
+      "raw_name": "ASIC",
+      "display_name": "ASIC (专用集成电路)"
+    },
+    {
+      "id": "fpga",
+      "raw_name": "FPGA",
+      "display_name": "FPGA (现场可编程门阵列)"
+    },
+    {
+      "id": "mcu",
+      "raw_name": "MCU",
+      "display_name": "MCU (微控制器)"
+    },
+    {
+      "id": "npu",
+      "raw_name": "NPU",
+      "display_name": "NPU (神经网络处理器)"
+    },
+    {
+      "id": "dpu",
+      "raw_name": "DPU",
+      "display_name": "DPU (数据处理器)"
+    },
+    {
+      "id": "dsp",
+      "raw_name": "DSP",
+      "display_name": "DSP (数字信号处理器)"
+    },
+    {
+      "id": "risc_v",
+      "raw_name": "RISC-V",
+      "display_name": "RISC-V (开源指令集)"
+    },
+    {
+      "id": "serdes",
+      "raw_name": "SerDes",
+      "display_name": "SerDes (串行解串器)"
+    },
+    {
+      "id": "cxl",
+      "raw_name": "CXL",
+      "display_name": "CXL (Compute Express Link)"
+    },
+    {
+      "id": "hbm控制器",
+      "raw_name": "HBM控制器",
+      "display_name": "HBM控制器"
+    },
+    {
+      "id": "hbm",
+      "raw_name": "HBM",
+      "display_name": "HBM (高带宽内存)"
+    },
+    {
+      "id": "hbm3",
+      "raw_name": "HBM3",
+      "display_name": "HBM3 (高带宽内存)"
+    },
+    {
+      "id": "hbm3e",
+      "raw_name": "HBM3E",
+      "display_name": "HBM3E (高带宽内存)"
+    },
+    {
+      "id": "hbm4",
+      "raw_name": "HBM4",
+      "display_name": "HBM4 (高带宽内存)"
+    },
+    {
+      "id": "dram",
+      "raw_name": "DRAM",
+      "display_name": "DRAM (动态随机存取内存)"
+    },
+    {
+      "id": "ddr5",
+      "raw_name": "DDR5",
+      "display_name": "DDR5 (第五代内存)"
+    },
+    {
+      "id": "ddr4",
+      "raw_name": "DDR4",
+      "display_name": "DDR4 (第四代内存)"
+    },
+    {
+      "id": "lpddr5",
+      "raw_name": "LPDDR5",
+      "display_name": "LPDDR5 (低功耗内存)"
+    },
+    {
+      "id": "lpddr5x",
+      "raw_name": "LPDDR5X",
+      "display_name": "LPDDR5X (低功耗内存)"
+    },
+    {
+      "id": "gddr6",
+      "raw_name": "GDDR6",
+      "display_name": "GDDR6 (显存)"
+    },
+    {
+      "id": "sram",
+      "raw_name": "SRAM",
+      "display_name": "SRAM (静态随机存取内存)"
+    },
+    {
+      "id": "nand_flash",
+      "raw_name": "NAND Flash",
+      "display_name": "NAND Flash (闪存)"
+    },
+    {
+      "id": "mram",
+      "raw_name": "MRAM",
+      "display_name": "MRAM (磁阻内存)"
+    },
+    {
+      "id": "reram",
+      "raw_name": "ReRAM",
+      "display_name": "ReRAM (电阻式内存)"
+    },
+    {
+      "id": "nvlink",
+      "raw_name": "NVLink",
+      "display_name": "NVLink (英伟达高速互联)"
+    },
+    {
+      "id": "nvswitch",
+      "raw_name": "NVSwitch",
+      "display_name": "NVSwitch (英伟达交换机)"
+    },
+    {
+      "id": "infiniband",
+      "raw_name": "InfiniBand",
+      "display_name": "InfiniBand (无限带宽)"
+    },
+    {
+      "id": "roce",
+      "raw_name": "RoCE",
+      "display_name": "RoCE (融合以太网)"
+    },
+    {
+      "id": "pcie",
+      "raw_name": "PCIe",
+      "display_name": "PCIe (高速扩展总线)"
+    },
+    {
+      "id": "smartnic",
+      "raw_name": "SmartNIC",
+      "display_name": "SmartNIC (智能网卡)"
+    },
+    {
+      "id": "nic",
+      "raw_name": "NIC",
+      "display_name": "NIC (网络接口卡)"
+    },
+    {
+      "id": "dac",
+      "raw_name": "DAC",
+      "display_name": "DAC (直连铜缆)"
+    },
+    {
+      "id": "aoc",
+      "raw_name": "AOC",
+      "display_name": "AOC (有源光缆)"
+    },
+    {
+      "id": "eml",
+      "raw_name": "EML",
+      "display_name": "EML (电吸收调制激光器)"
+    },
+    {
+      "id": "vcsel",
+      "raw_name": "VCSEL",
+      "display_name": "VCSEL (垂直腔面发射激光器)"
+    },
+    {
+      "id": "dfb",
+      "raw_name": "DFB",
+      "display_name": "DFB (分布反馈激光器)"
+    },
+    {
+      "id": "cw_laser",
+      "raw_name": "CW Laser",
+      "display_name": "CW Laser (连续波激光器)"
+    },
+    {
+      "id": "cpo",
+      "raw_name": "CPO",
+      "display_name": "CPO (光电共封装)"
+    },
+    {
+      "id": "pic",
+      "raw_name": "PIC",
+      "display_name": "PIC (光子集成电路)"
+    },
+    {
+      "id": "tfln",
+      "raw_name": "TFLN",
+      "display_name": "TFLN (薄膜铌酸锂)"
+    },
+    {
+      "id": "edfa",
+      "raw_name": "EDFA",
+      "display_name": "EDFA (掺铒光纤放大器)"
+    },
+    {
+      "id": "800g",
+      "raw_name": "800G",
+      "display_name": "800G (光模块)"
+    },
+    {
+      "id": "1_6t",
+      "raw_name": "1.6T",
+      "display_name": "1.6T (光模块)"
+    },
+    {
+      "id": "fa组件",
+      "raw_name": "FA组件",
+      "display_name": "FA组件 (光纤阵列)"
+    },
+    {
+      "id": "ups",
+      "raw_name": "UPS",
+      "display_name": "UPS (不间断电源)"
+    },
+    {
+      "id": "pdu",
+      "raw_name": "PDU",
+      "display_name": "PDU (电源分配单元)"
+    },
+    {
+      "id": "cdu",
+      "raw_name": "CDU",
+      "display_name": "CDU (冷量分配单元)"
+    },
+    {
+      "id": "hvac",
+      "raw_name": "HVAC",
+      "display_name": "HVAC (暖通空调)"
+    },
+    {
+      "id": "hpc",
+      "raw_name": "HPC",
+      "display_name": "HPC (高性能计算)"
+    },
+    {
+      "id": "cnc",
+      "raw_name": "CNC",
+      "display_name": "CNC (数控系统)"
+    },
+    {
+      "id": "plc",
+      "raw_name": "PLC",
+      "display_name": "PLC (可编程逻辑控制器)"
+    },
+    {
+      "id": "iiot",
+      "raw_name": "IIoT",
+      "display_name": "IIoT (工业物联网)"
+    },
+    {
+      "id": "mes",
+      "raw_name": "MES",
+      "display_name": "MES (制造执行系统)"
+    },
+    {
+      "id": "azure",
+      "raw_name": "Azure",
+      "display_name": "Azure (微软云)"
+    },
+    {
+      "id": "aws",
+      "raw_name": "AWS",
+      "display_name": "AWS (亚马逊云)"
+    },
+    {
+      "id": "google_cloud",
+      "raw_name": "Google Cloud",
+      "display_name": "Google Cloud (谷歌云)"
+    },
+    {
+      "id": "gemini",
+      "raw_name": "Gemini",
+      "display_name": "Gemini (谷歌大模型)"
+    },
+    {
+      "id": "tpu",
+      "raw_name": "TPU",
+      "display_name": "TPU (张量处理器)"
+    },
+    {
+      "id": "rag",
+      "raw_name": "RAG",
+      "display_name": "RAG (检索增强生成)"
+    },
+    {
+      "id": "mcp",
+      "raw_name": "MCP",
+      "display_name": "MCP (模型上下文协议)"
+    },
+    {
+      "id": "agent",
+      "raw_name": "Agent",
+      "display_name": "Agent (智能体)"
+    },
+    {
+      "id": "qpu",
+      "raw_name": "QPU",
+      "display_name": "QPU (量子处理器)"
+    },
+    {
+      "id": "qiskit",
+      "raw_name": "Qiskit",
+      "display_name": "Qiskit (量子开发套件)"
+    },
+    {
+      "id": "adc",
+      "raw_name": "ADC",
+      "display_name": "ADC (抗体药物偶联物)"
+    },
+    {
+      "id": "car_t",
+      "raw_name": "CAR-T",
+      "display_name": "CAR-T (嵌合抗原受体T细胞)"
+    },
+    {
+      "id": "glp_1",
+      "raw_name": "GLP-1",
+      "display_name": "GLP-1 (胰高血糖素样肽-1)"
+    },
+    {
+      "id": "金刚石铜",
+      "raw_name": "金刚石铜",
+      "display_name": "金刚石铜"
+    },
+    {
+      "id": "cvd金刚石",
+      "raw_name": "CVD金刚石",
+      "display_name": "CVD金刚石"
+    },
+    {
+      "id": "芯片散热",
+      "raw_name": "芯片散热",
+      "display_name": "芯片散热"
+    },
+    {
+      "id": "先进热管理",
+      "raw_name": "先进热管理",
+      "display_name": "先进热管理"
+    },
+    {
+      "id": "微通道散热",
+      "raw_name": "微通道散热",
+      "display_name": "微通道散热"
+    },
+    {
+      "id": "3d打印散热",
+      "raw_name": "3D打印散热",
+      "display_name": "3D打印散热"
+    },
+    {
+      "id": "导热材料",
+      "raw_name": "导热材料",
+      "display_name": "导热材料"
+    },
+    {
+      "id": "液冷",
+      "raw_name": "液冷",
+      "display_name": "液冷"
+    },
+    {
+      "id": "数据中心散热",
+      "raw_name": "数据中心散热",
+      "display_name": "数据中心散热"
+    },
+    {
+      "id": "服务器散热",
+      "raw_name": "服务器散热",
+      "display_name": "服务器散热"
+    },
+    {
+      "id": "人造金刚石",
+      "raw_name": "人造金刚石",
+      "display_name": "人造金刚石"
+    },
+    {
+      "id": "工业金刚石",
+      "raw_name": "工业金刚石",
+      "display_name": "工业金刚石"
+    },
+    {
+      "id": "金刚石材料",
+      "raw_name": "金刚石材料",
+      "display_name": "金刚石材料"
+    },
+    {
+      "id": "培育钻石",
+      "raw_name": "培育钻石",
+      "display_name": "培育钻石"
+    },
+    {
+      "id": "rubin",
+      "raw_name": "Rubin",
+      "display_name": "Rubin"
+    },
+    {
+      "id": "客户验证",
+      "raw_name": "客户验证",
+      "display_name": "客户验证"
+    },
+    {
+      "id": "性能优化",
+      "raw_name": "性能优化",
+      "display_name": "性能优化"
+    },
+    {
+      "id": "上游材料",
+      "raw_name": "上游材料",
+      "display_name": "上游材料"
+    }
+  ]
+}
