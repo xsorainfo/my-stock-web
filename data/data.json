@@ -3,17 +3,8 @@
     {
       "name": "白银",
       "price": "54.76",
-      "change": "+0.74 (+1.37%)",
+      "change": "+0.89 (+1.66%)",
       "isUp": true,
-      "type": "commodity",
-      "badge_label": "商品",
-      "badge_class": "commodity"
-    },
-    {
-      "name": "铜",
-      "price": "6.36",
-      "change": "-0.08 (-1.30%)",
-      "isUp": false,
       "type": "commodity",
       "badge_label": "商品",
       "badge_class": "commodity"
@@ -21,8 +12,26 @@
     {
       "name": "标普 500 期货",
       "price": "7704.50",
-      "change": "+5.00 (+0.06%)",
+      "change": "+34.75 (+0.45%)",
       "isUp": true,
+      "type": "futures",
+      "badge_label": "期货",
+      "badge_class": "futures"
+    },
+    {
+      "name": "黄金",
+      "price": "4060.40",
+      "change": "+20.60 (+0.51%)",
+      "isUp": true,
+      "type": "commodity",
+      "badge_label": "商品",
+      "badge_class": "commodity"
+    },
+    {
+      "name": "WTI 原油",
+      "price": "99.47",
+      "change": "-1.44 (-1.43%)",
+      "isUp": false,
       "type": "futures",
       "badge_label": "期货",
       "badge_class": "futures"
@@ -37,6 +46,15 @@
       "badge_class": "index"
     },
     {
+      "name": "美元/日元",
+      "price": "158.13",
+      "change": "+1.71 (+1.09%)",
+      "isUp": true,
+      "type": "forex",
+      "badge_label": "FX",
+      "badge_class": "forex"
+    },
+    {
       "name": "日经 225",
       "price": "62907.84",
       "change": "+214.68 (+0.34%)",
@@ -46,37 +64,19 @@
       "badge_class": "index"
     },
     {
-      "name": "WTI 原油",
-      "price": "99.47",
-      "change": "-1.41 (-1.40%)",
+      "name": "铜",
+      "price": "6.36",
+      "change": "-0.11 (-1.66%)",
       "isUp": false,
-      "type": "futures",
-      "badge_label": "期货",
-      "badge_class": "futures"
-    },
-    {
-      "name": "黄金",
-      "price": "4060.40",
-      "change": "+32.60 (+0.81%)",
-      "isUp": true,
       "type": "commodity",
       "badge_label": "商品",
       "badge_class": "commodity"
     },
     {
-      "name": "美元/日元",
-      "price": "158.13",
-      "change": "+1.05 (+0.67%)",
-      "isUp": true,
-      "type": "forex",
-      "badge_label": "FX",
-      "badge_class": "forex"
-    },
-    {
-      "name": "费城半导体指数",
-      "price": "11505.56",
-      "change": "+773.58 (+7.21%)",
-      "isUp": true,
+      "name": "恒生指数",
+      "price": "22934.68",
+      "change": "-158.69 (-0.69%)",
+      "isUp": false,
       "type": "index",
       "badge_label": "",
       "badge_class": "index"
@@ -91,27 +91,27 @@
       "badge_class": "index"
     },
     {
-      "name": "恒生指数",
-      "price": "22934.68",
-      "change": "-257.39 (-1.11%)",
-      "isUp": false,
+      "name": "费城半导体指数",
+      "price": "11505.56",
+      "change": "+773.58 (+7.21%)",
+      "isUp": true,
       "type": "index",
       "badge_label": "",
       "badge_class": "index"
     },
     {
-      "name": "存储芯片ETF-DRAM",
-      "price": "49.16",
-      "change": "+3.48 (+7.62%)",
+      "name": "AI半导体指数ETF-CHPS",
+      "price": "80.13",
+      "change": "+5.26 (+7.03%)",
       "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
       "badge_class": "etf"
     },
     {
-      "name": "AI半导体指数ETF-CHPS",
-      "price": "80.13",
-      "change": "+5.26 (+7.03%)",
+      "name": "存储芯片ETF-DRAM",
+      "price": "49.16",
+      "change": "+3.48 (+7.62%)",
       "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
@@ -154,18 +154,18 @@
       "badge_class": "etf"
     },
     {
-      "name": "人形机器人ETF-BOTT",
-      "price": "37.58",
-      "change": "+1.29 (+3.56%)",
+      "name": "机器人与自动化指数ETF-ROBO",
+      "price": "77.55",
+      "change": "+2.71 (+3.62%)",
       "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
       "badge_class": "etf"
     },
     {
-      "name": "机器人与自动化指数ETF-ROBO",
-      "price": "77.55",
-      "change": "+2.71 (+3.62%)",
+      "name": "人形机器人ETF-BOTT",
+      "price": "37.58",
+      "change": "+1.29 (+3.56%)",
       "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
@@ -190,6 +190,15 @@
       "badge_class": "etf"
     },
     {
+      "name": "情報技術 VGT",
+      "price": "122.25",
+      "change": "+3.65 (+3.08%)",
+      "isUp": true,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
       "name": "産業機械 XLI",
       "price": "168.31",
       "change": "+1.58 (+0.95%)",
@@ -199,13 +208,22 @@
       "badge_class": "etf"
     },
     {
-      "name": "情報技術 VGT",
-      "price": "122.25",
-      "change": "+3.65 (+3.08%)",
-      "isUp": true,
+      "name": "製薬・医療 XLV",
+      "price": "178.94",
+      "change": "-2.36 (-1.30%)",
+      "isUp": false,
       "type": "etf",
       "badge_label": "ETF",
       "badge_class": "etf"
+    },
+    {
+      "name": "日本・電機精密 ETF",
+      "price": "62330.00",
+      "change": "+510.00 (+0.82%)",
+      "isUp": true,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
     },
     {
       "name": "原材料 XLB",
@@ -226,9 +244,9 @@
       "badge_class": "j-etf"
     },
     {
-      "name": "日本・電機精密 ETF",
-      "price": "62330.00",
-      "change": "+510.00 (+0.82%)",
+      "name": "日本・情報通信 ETF",
+      "price": "49730.00",
+      "change": "+690.00 (+1.41%)",
       "isUp": true,
       "type": "j-etf",
       "badge_label": "J-ETF",
@@ -244,6 +262,15 @@
       "badge_class": "j-etf"
     },
     {
+      "name": "金融・保険 XLF",
+      "price": "56.04",
+      "change": "-0.61 (-1.08%)",
+      "isUp": false,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
       "name": "日本・素材・化学 ETF",
       "price": "36710.00",
       "change": "-80.00 (-0.22%)",
@@ -253,36 +280,9 @@
       "badge_class": "j-etf"
     },
     {
-      "name": "製薬・医療 XLV",
-      "price": "178.94",
-      "change": "-2.36 (-1.30%)",
-      "isUp": false,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
-      "name": "日本・情報通信 ETF",
-      "price": "49730.00",
-      "change": "+690.00 (+1.41%)",
-      "isUp": true,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
-      "name": "銀行 KBE",
-      "price": "64.30",
-      "change": "-1.53 (-2.32%)",
-      "isUp": false,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
-      "name": "金融・保険 XLF",
-      "price": "56.04",
-      "change": "-0.61 (-1.08%)",
+      "name": "電力 XLU",
+      "price": "42.00",
+      "change": "-0.87 (-2.03%)",
       "isUp": false,
       "type": "etf",
       "badge_label": "ETF",
@@ -298,13 +298,13 @@
       "badge_class": "etf"
     },
     {
-      "name": "日本・金融 ETF",
-      "price": "43520.00",
-      "change": "+220.00 (+0.51%)",
-      "isUp": true,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
+      "name": "銀行 KBE",
+      "price": "64.30",
+      "change": "-1.53 (-2.32%)",
+      "isUp": false,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
     },
     {
       "name": "宇宙・防衛 ITA",
@@ -316,24 +316,6 @@
       "badge_class": "etf"
     },
     {
-      "name": "電力 XLU",
-      "price": "42.00",
-      "change": "-0.87 (-2.03%)",
-      "isUp": false,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
-      "name": "日本・エネルギー ETF",
-      "price": "36620.00",
-      "change": "+80.00 (+0.22%)",
-      "isUp": true,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
       "name": "日本・銀行 ETF",
       "price": "38140.00",
       "change": "+990.00 (+2.66%)",
@@ -343,9 +325,9 @@
       "badge_class": "j-etf"
     },
     {
-      "name": "防衛テック ETF",
-      "price": "802.00",
-      "change": "+10.00 (+1.26%)",
+      "name": "日本・エネルギー ETF",
+      "price": "36620.00",
+      "change": "+80.00 (+0.22%)",
       "isUp": true,
       "type": "j-etf",
       "badge_label": "J-ETF",
@@ -361,9 +343,27 @@
       "badge_class": "j-etf"
     },
     {
-      "name": "生活必需品 XLP",
-      "price": "87.11",
-      "change": "-2.88 (-3.20%)",
+      "name": "防衛テック ETF",
+      "price": "802.00",
+      "change": "+10.00 (+1.26%)",
+      "isUp": true,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
+    },
+    {
+      "name": "自動車メーカー CARZ",
+      "price": "100.71",
+      "change": "+3.97 (+4.10%)",
+      "isUp": true,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
+      "name": "ディスカウントストア XRT",
+      "price": "86.59",
+      "change": "-2.53 (-2.84%)",
       "isUp": false,
       "type": "etf",
       "badge_label": "ETF",
@@ -379,13 +379,31 @@
       "badge_class": "etf"
     },
     {
-      "name": "自動車メーカー CARZ",
-      "price": "100.71",
-      "change": "+3.97 (+4.10%)",
+      "name": "金属鉱業 XME",
+      "price": "101.29",
+      "change": "+4.70 (+4.87%)",
       "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
       "badge_class": "etf"
+    },
+    {
+      "name": "生活必需品 XLP",
+      "price": "87.11",
+      "change": "-2.88 (-3.20%)",
+      "isUp": false,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
+      "name": "日本・金融 ETF",
+      "price": "43520.00",
+      "change": "+220.00 (+0.51%)",
+      "isUp": true,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
     },
     {
       "name": "日本・食品 ETF",
@@ -397,15 +415,6 @@
       "badge_class": "j-etf"
     },
     {
-      "name": "金属鉱業 XME",
-      "price": "101.29",
-      "change": "+4.70 (+4.87%)",
-      "isUp": true,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
       "name": "Eコマース IBUY",
       "price": "70.53",
       "change": "-0.88 (-1.23%)",
@@ -415,36 +424,9 @@
       "badge_class": "etf"
     },
     {
-      "name": "ディスカウントストア XRT",
-      "price": "86.59",
-      "change": "-2.53 (-2.84%)",
-      "isUp": false,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
-      "name": "日本・鉄鋼非鉄 ETF",
-      "price": "55490.00",
-      "change": "+990.00 (+1.82%)",
-      "isUp": true,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
       "name": "日本・小売 ETF",
       "price": "37990.00",
       "change": "-280.00 (-0.73%)",
-      "isUp": false,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
-      "name": "日本・不動産 ETF",
-      "price": "49580.00",
-      "change": "-1160.00 (-2.29%)",
       "isUp": false,
       "type": "j-etf",
       "badge_label": "J-ETF",
@@ -458,24 +440,6 @@
       "type": "etf",
       "badge_label": "ETF",
       "badge_class": "etf"
-    },
-    {
-      "name": "日本・建設・資材 ETF",
-      "price": "42800.00",
-      "change": "-100.00 (-0.23%)",
-      "isUp": false,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
-      "name": "日本・商社・卸売 ETF",
-      "price": "277.30",
-      "change": "+1.40 (+0.51%)",
-      "isUp": true,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
     },
     {
       "name": "纳指100ETF-QQQ",
@@ -496,27 +460,72 @@
       "badge_class": "etf"
     },
     {
-      "name": "VIX 恐慌指数",
-      "price": "16.68",
-      "change": "-2.35 (-12.35%)",
+      "name": "日本・建設・資材 ETF",
+      "price": "42800.00",
+      "change": "-100.00 (-0.23%)",
       "isUp": false,
-      "type": "sentiment",
-      "badge_label": "情绪",
-      "badge_class": "sentiment"
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
+    },
+    {
+      "name": "日本・不動産 ETF",
+      "price": "49580.00",
+      "change": "-1160.00 (-2.29%)",
+      "isUp": false,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
+    },
+    {
+      "name": "日本・鉄鋼非鉄 ETF",
+      "price": "55490.00",
+      "change": "+990.00 (+1.82%)",
+      "isUp": true,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
+    },
+    {
+      "name": "日本・商社・卸売 ETF",
+      "price": "277.30",
+      "change": "+1.40 (+0.51%)",
+      "isUp": true,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
+    },
+    {
+      "name": "NF・日経半導体ETF-200A.T",
+      "price": "3735.00",
+      "change": "+5.00 (+0.13%)",
+      "isUp": true,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
+      "name": "10年国债收益率",
+      "price": "4.95",
+      "change": "-0.01 (-0.16%)",
+      "isUp": false,
+      "type": "bond",
+      "badge_label": "债券",
+      "badge_class": "bond"
     },
     {
       "name": "5年国债收益率",
-      "price": "4.97",
-      "change": "+0.20 (+4.28%)",
-      "isUp": true,
+      "price": "4.77",
+      "change": "-0.01 (-0.31%)",
+      "isUp": false,
       "type": "bond",
       "badge_label": "债券",
       "badge_class": "bond"
     },
     {
       "name": "富时 100",
-      "price": "10752.90",
-      "change": "+27.90 (+0.26%)",
+      "price": "10725.00",
+      "change": "+67.85 (+0.64%)",
       "isUp": true,
       "type": "index",
       "badge_label": "",
@@ -533,39 +542,30 @@
     },
     {
       "name": "德国 DAX",
-      "price": "25645.04",
-      "change": "+273.29 (+1.08%)",
+      "price": "25371.75",
+      "change": "+252.41 (+1.00%)",
       "isUp": true,
       "type": "index",
       "badge_label": "",
       "badge_class": "index"
-    },
-    {
-      "name": "10年国债收益率",
-      "price": "5.15",
-      "change": "+0.19 (+3.90%)",
-      "isUp": true,
-      "type": "bond",
-      "badge_label": "债券",
-      "badge_class": "bond"
-    },
-    {
-      "name": "NF・日経半導体ETF-200A.T",
-      "price": "3735.00",
-      "change": "+5.00 (+0.13%)",
-      "isUp": true,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
     },
     {
       "name": "法国 CAC 40",
-      "price": "7921.68",
-      "change": "+110.42 (+1.41%)",
+      "price": "7811.26",
+      "change": "+68.31 (+0.88%)",
       "isUp": true,
       "type": "index",
       "badge_label": "",
       "badge_class": "index"
+    },
+    {
+      "name": "VIX 恐慌指数",
+      "price": "19.03",
+      "change": "-1.21 (-5.98%)",
+      "isUp": false,
+      "type": "sentiment",
+      "badge_label": "情绪",
+      "badge_class": "sentiment"
     }
   ],
   "stocks": [
@@ -757,7 +757,7 @@
       "change": "-44.79 (-8.10%)",
       "week_change": -9.66,
       "isUp": false,
-      "per": "141.09",
+      "per": "129.57",
       "roe": "10.2%",
       "forward_per": "32.22",
       "pbr": "12.33",
@@ -1152,7 +1152,7 @@
       "change": "-21.29 (-8.70%)",
       "week_change": -7.37,
       "isUp": false,
-      "per": "80.38",
+      "per": "73.51",
       "roe": "16.5%",
       "forward_per": "30.49",
       "pbr": "10.57",
@@ -1216,7 +1216,7 @@
       "change": "-16.49 (-7.28%)",
       "week_change": -14.17,
       "isUp": false,
-      "per": "233.44",
+      "per": "216.60",
       "roe": "13.4%",
       "forward_per": "68.51",
       "pbr": "26.00",
@@ -1740,14 +1740,14 @@
         "score": 80,
         "confidence": "高",
         "rsi": 41.7,
-        "volume_ratio": 1.48,
+        "volume_ratio": 1.49,
         "plan": "触发：放量突破近1周高点 56.44；失效：跌回MA5 54.22 下方"
       },
       "flow_proxy": {
         "label": "偏流入",
         "class": "signal-up",
         "reason": "多头趋势且量能高于均值",
-        "volume_ratio": 1.48
+        "volume_ratio": 1.49
       },
       "source": "sina"
     },
@@ -1796,34 +1796,34 @@
         "gpu",
         "ai服务器"
       ],
-      "price": "486.55",
-      "change": "+56.46 (+13.13%)",
-      "week_change": 17.04,
+      "price": "488.00",
+      "change": "+57.91 (+13.46%)",
+      "week_change": 17.38,
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-16.13%",
-      "distWeek": "-1.5%",
-      "distMonth": "-16.9%",
+      "ytdChange": "-15.88%",
+      "distWeek": "-1.2%",
+      "distMonth": "-16.7%",
       "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏强",
         "class": "signal-up",
-        "reason": "综合分 80/100 · 置信度高 · RSI 43 · 量比 1.3x",
+        "reason": "综合分 80/100 · 置信度高 · RSI 44 · 量比 1.3x",
         "score": 80,
         "confidence": "高",
-        "rsi": 43.2,
-        "volume_ratio": 1.31,
-        "plan": "触发：放量突破近1周高点 493.96；失效：跌回MA5 449.04 下方"
+        "rsi": 43.5,
+        "volume_ratio": 1.32,
+        "plan": "触发：放量突破近1周高点 493.97；失效：跌回MA5 449.33 下方"
       },
       "flow_proxy": {
         "label": "偏流入",
         "class": "signal-up",
         "reason": "多头趋势且量能高于均值",
-        "volume_ratio": 1.31
+        "volume_ratio": 1.32
       },
       "source": "sina"
     },
@@ -1860,18 +1860,18 @@
       "tag_ids": [
         "gpu"
       ],
-      "price": "384.01",
-      "change": "+39.02 (+11.31%)",
-      "week_change": 17.39,
+      "price": "384.18",
+      "change": "+39.19 (+11.36%)",
+      "week_change": 17.45,
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-34.68%",
+      "ytdChange": "-34.65%",
       "distWeek": "-1.2%",
-      "distMonth": "-14.5%",
+      "distMonth": "-14.4%",
       "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏强",
@@ -1879,15 +1879,15 @@
         "reason": "综合分 80/100 · 置信度高 · RSI 44 · 量比 1.4x",
         "score": 80,
         "confidence": "高",
-        "rsi": 43.7,
-        "volume_ratio": 1.38,
-        "plan": "触发：放量突破近1周高点 388.84；失效：跌回MA5 356.09 下方"
+        "rsi": 43.8,
+        "volume_ratio": 1.39,
+        "plan": "触发：放量突破近1周高点 388.84；失效：跌回MA5 356.12 下方"
       },
       "flow_proxy": {
         "label": "偏流入",
         "class": "signal-up",
         "reason": "多头趋势且量能高于均值",
-        "volume_ratio": 1.38
+        "volume_ratio": 1.39
       },
       "source": "sina"
     },
@@ -1936,18 +1936,18 @@
         "cpu",
         "ai服务器"
       ],
-      "price": "200.89",
-      "change": "+9.87 (+5.17%)",
-      "week_change": 4.34,
+      "price": "201.10",
+      "change": "+10.08 (+5.28%)",
+      "week_change": 4.45,
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-10.41%",
-      "distWeek": "-1.3%",
-      "distMonth": "-22.7%",
+      "ytdChange": "-10.32%",
+      "distWeek": "-1.2%",
+      "distMonth": "-22.6%",
       "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏强",
@@ -1955,15 +1955,15 @@
         "reason": "综合分 80/100 · 置信度高 · RSI 19 · 量比 1.4x",
         "score": 80,
         "confidence": "高",
-        "rsi": 18.5,
-        "volume_ratio": 1.36,
-        "plan": "触发：放量突破近1周高点 203.48；失效：跌回MA5 193.74 下方"
+        "rsi": 18.8,
+        "volume_ratio": 1.37,
+        "plan": "触发：放量突破近1周高点 203.48；失效：跌回MA5 193.78 下方"
       },
       "flow_proxy": {
         "label": "偏流入",
         "class": "signal-up",
         "reason": "多头趋势且量能高于均值",
-        "volume_ratio": 1.36
+        "volume_ratio": 1.37
       },
       "source": "sina"
     },
@@ -2000,18 +2000,18 @@
       "tag_ids": [
         "cpu"
       ],
-      "price": "94.85",
-      "change": "+3.35 (+3.66%)",
-      "week_change": 5.61,
+      "price": "95.00",
+      "change": "+3.50 (+3.83%)",
+      "week_change": 5.78,
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-28.20%",
-      "distWeek": "-0.3%",
-      "distMonth": "-12.4%",
+      "ytdChange": "-28.09%",
+      "distWeek": "-0.2%",
+      "distMonth": "-12.3%",
       "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏强",
@@ -2019,9 +2019,9 @@
         "reason": "综合分 80/100 · 置信度高 · RSI 37 · 量比 1.5x",
         "score": 80,
         "confidence": "高",
-        "rsi": 36.9,
+        "rsi": 37.4,
         "volume_ratio": 1.49,
-        "plan": "触发：放量突破近1周高点 95.16；失效：跌回MA5 92.10 下方"
+        "plan": "触发：放量突破近1周高点 95.16；失效：跌回MA5 92.13 下方"
       },
       "flow_proxy": {
         "label": "偏流入",
@@ -2087,18 +2087,18 @@
         "后量子密码",
         "量子安全"
       ],
-      "price": "24.67",
-      "change": "+0.98 (+4.14%)",
-      "week_change": 10.28,
+      "price": "24.72",
+      "change": "+1.03 (+4.35%)",
+      "week_change": 10.51,
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-18.71%",
-      "distWeek": "-1.1%",
-      "distMonth": "-20.6%",
+      "ytdChange": "-18.55%",
+      "distWeek": "-0.9%",
+      "distMonth": "-20.5%",
       "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏强",
@@ -2106,15 +2106,15 @@
         "reason": "综合分 80/100 · 置信度高 · RSI 32 · 量比 1.4x",
         "score": 80,
         "confidence": "高",
-        "rsi": 31.6,
-        "volume_ratio": 1.42,
-        "plan": "触发：放量突破近1周高点 24.94；失效：跌回MA5 23.58 下方"
+        "rsi": 32.0,
+        "volume_ratio": 1.43,
+        "plan": "触发：放量突破近1周高点 24.94；失效：跌回MA5 23.59 下方"
       },
       "flow_proxy": {
         "label": "偏流入",
         "class": "signal-up",
         "reason": "多头趋势且量能高于均值",
-        "volume_ratio": 1.42
+        "volume_ratio": 1.43
       },
       "source": "sina"
     },
@@ -2205,14 +2205,14 @@
         "score": 80,
         "confidence": "高",
         "rsi": 18.3,
-        "volume_ratio": 1.27,
+        "volume_ratio": 1.28,
         "plan": "触发：放量突破近1周高点 26.40；失效：跌回MA5 25.83 下方"
       },
       "flow_proxy": {
         "label": "偏流入",
         "class": "signal-up",
         "reason": "多头趋势且量能高于均值",
-        "volume_ratio": 1.27
+        "volume_ratio": 1.28
       },
       "source": "sina"
     },
@@ -2296,18 +2296,18 @@
         "第三代半导体",
         "新能源汽车"
       ],
-      "price": "95.94",
-      "change": "+0.01 (+0.01%)",
-      "week_change": -4.83,
+      "price": "96.15",
+      "change": "+0.22 (+0.23%)",
+      "week_change": -4.62,
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "31.79%",
-      "distWeek": "-8.1%",
-      "distMonth": "-29.7%",
+      "ytdChange": "32.07%",
+      "distWeek": "-7.9%",
+      "distMonth": "-29.5%",
       "trend": "牛市多头",
       "intraday_signal": {
         "label": "偏强观察",
@@ -2315,15 +2315,15 @@
         "reason": "综合分 65/100 · 置信度中 · RSI 20 · 量比 1.5x",
         "score": 65,
         "confidence": "中",
-        "rsi": 19.6,
-        "volume_ratio": 1.46,
-        "plan": "触发：放量突破近1周高点 104.42；失效：跌回MA5 98.33 下方"
+        "rsi": 20.1,
+        "volume_ratio": 1.47,
+        "plan": "触发：放量突破近1周高点 104.42；失效：跌回MA5 98.37 下方"
       },
       "flow_proxy": {
         "label": "偏流入",
         "class": "signal-up",
         "reason": "多头趋势且量能高于均值",
-        "volume_ratio": 1.46
+        "volume_ratio": 1.47
       },
       "source": "sina"
     },
@@ -2638,14 +2638,14 @@
         "score": 55,
         "confidence": "低",
         "rsi": 20.5,
-        "volume_ratio": 1.05,
+        "volume_ratio": 1.08,
         "plan": "触发：放量突破近1周高点 228000.00；失效：跌回MA5 216600.00 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
         "class": "signal-flat",
         "reason": "量能未出现明显异常",
-        "volume_ratio": 1.05
+        "volume_ratio": 1.08
       },
       "source": "yfinance"
     },
@@ -2713,14 +2713,14 @@
         "score": 70,
         "confidence": "中",
         "rsi": 17.4,
-        "volume_ratio": 1.07,
+        "volume_ratio": 1.14,
         "plan": "触发：放量突破近1周高点 1329000.00；失效：跌回MA5 1258800.00 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
         "class": "signal-flat",
         "reason": "量能未出现明显异常",
-        "volume_ratio": 1.07
+        "volume_ratio": 1.14
       },
       "source": "yfinance"
     },
@@ -2772,7 +2772,7 @@
       "change": "+160.00 (+1.27%)",
       "week_change": -4.64,
       "isUp": true,
-      "per": "16.41",
+      "per": "15.30",
       "roe": "87.1%",
       "forward_per": "--",
       "pbr": "8.72",
@@ -2855,18 +2855,18 @@
         "ddr5",
         "cxl"
       ],
-      "price": "179.70",
-      "change": "+4.57 (+2.61%)",
-      "week_change": 6.33,
+      "price": "180.00",
+      "change": "+4.87 (+2.78%)",
+      "week_change": 6.5,
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "53.01%",
-      "distWeek": "-1.2%",
-      "distMonth": "-21.8%",
+      "ytdChange": "53.27%",
+      "distWeek": "-1.0%",
+      "distMonth": "-21.6%",
       "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏强",
@@ -2874,15 +2874,15 @@
         "reason": "综合分 80/100 · 置信度高 · RSI 33 · 量比 1.4x",
         "score": 80,
         "confidence": "高",
-        "rsi": 33.2,
-        "volume_ratio": 1.4,
-        "plan": "触发：放量突破近1周高点 181.88；失效：跌回MA5 173.42 下方"
+        "rsi": 33.5,
+        "volume_ratio": 1.41,
+        "plan": "触发：放量突破近1周高点 181.88；失效：跌回MA5 173.48 下方"
       },
       "flow_proxy": {
         "label": "偏流入",
         "class": "signal-up",
         "reason": "多头趋势且量能高于均值",
-        "volume_ratio": 1.4
+        "volume_ratio": 1.41
       },
       "source": "sina"
     },
@@ -3063,7 +3063,7 @@
       "week_change": 7.25,
       "isUp": true,
       "per": "17.86",
-      "roe": "-5.5%",
+      "roe": "-3.2%",
       "forward_per": "17.86",
       "pbr": "1.43",
       "distHigh": "-25.6%",
@@ -3431,34 +3431,34 @@
         "先进制程",
         "先进封装"
       ],
-      "price": "52.58",
-      "change": "-0.05 (-0.10%)",
-      "week_change": 0.23,
-      "isUp": false,
+      "price": "52.38",
+      "change": "+0.01 (+0.02%)",
+      "week_change": -1.6,
+      "isUp": true,
       "per": "21.82",
       "roe": "6.1%",
       "forward_per": "17.90",
       "pbr": "1.25",
-      "distHigh": "-4.5%",
-      "ytdChange": "22.45%",
-      "distWeek": "-1.5%",
-      "distMonth": "-1.5%",
+      "distHigh": "-4.9%",
+      "ytdChange": "21.99%",
+      "distWeek": "-1.6%",
+      "distMonth": "-1.9%",
       "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏强",
         "class": "signal-up",
-        "reason": "综合分 75/100 · 置信度高 · RSI 79 · 量比 0.7x",
+        "reason": "综合分 75/100 · 置信度高 · RSI 72 · 量比 0.5x",
         "score": 75,
         "confidence": "高",
-        "rsi": 79.0,
-        "volume_ratio": 0.75,
-        "plan": "触发：放量突破近1周高点 53.39；失效：跌回MA5 52.75 下方"
+        "rsi": 72.0,
+        "volume_ratio": 0.49,
+        "plan": "触发：放量突破近1周高点 53.21；失效：跌回MA5 52.53 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
         "class": "signal-flat",
         "reason": "量能未出现明显异常",
-        "volume_ratio": 0.75
+        "volume_ratio": 0.49
       },
       "source": "yfinance"
     },
@@ -3536,7 +3536,7 @@
       "intraday_signal": {
         "label": "日内偏强",
         "class": "signal-up",
-        "reason": "综合分 80/100 · 置信度高 · RSI 17 · 量比 1.3x",
+        "reason": "综合分 80/100 · 置信度高 · RSI 17 · 量比 1.4x",
         "score": 80,
         "confidence": "高",
         "rsi": 17.4,
@@ -4861,7 +4861,7 @@
       "change": "-61.00 (-1.73%)",
       "week_change": -4.74,
       "isUp": false,
-      "per": "33.99",
+      "per": "33.66",
       "roe": "5.1%",
       "forward_per": "38.63",
       "pbr": "1.35",
@@ -6554,14 +6554,14 @@
         "score": 90,
         "confidence": "高",
         "rsi": 46.3,
-        "volume_ratio": 1.29,
+        "volume_ratio": 1.31,
         "plan": "触发：放量突破近1周高点 86.50；失效：跌回MA5 80.88 下方"
       },
       "flow_proxy": {
         "label": "偏流入",
         "class": "signal-up",
         "reason": "多头趋势且量能高于均值",
-        "volume_ratio": 1.29
+        "volume_ratio": 1.31
       },
       "source": "sina"
     },
@@ -6671,14 +6671,14 @@
         "score": 70,
         "confidence": "中",
         "rsi": 30.5,
-        "volume_ratio": 1.15,
+        "volume_ratio": 1.16,
         "plan": "触发：放量突破近1周高点 10.20；失效：跌回MA5 9.93 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
         "class": "signal-flat",
         "reason": "量能未出现明显异常",
-        "volume_ratio": 1.15
+        "volume_ratio": 1.16
       },
       "source": "sina"
     },
@@ -6752,18 +6752,18 @@
         "功率半导体",
         "新能源汽车"
       ],
-      "price": "86.03",
-      "change": "+1.53 (+1.81%)",
-      "week_change": -0.12,
+      "price": "85.88",
+      "change": "+1.38 (+1.63%)",
+      "week_change": -0.29,
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-3.21%",
-      "distWeek": "-12.3%",
-      "distMonth": "-25.8%",
+      "ytdChange": "-3.38%",
+      "distWeek": "-12.5%",
+      "distMonth": "-25.9%",
       "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏强",
@@ -6771,9 +6771,9 @@
         "reason": "综合分 70/100 · 置信度中 · RSI 32 · 量比 1.1x",
         "score": 70,
         "confidence": "中",
-        "rsi": 32.3,
+        "rsi": 32.1,
         "volume_ratio": 1.1,
-        "plan": "触发：放量突破近1周高点 98.15；失效：跌回MA5 89.13 下方"
+        "plan": "触发：放量突破近1周高点 98.15；失效：跌回MA5 89.10 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -6913,16 +6913,16 @@
         "散热片",
         "电子布"
       ],
-      "price": "32.89",
-      "change": "+0.33 (+1.01%)",
-      "week_change": -2.98,
+      "price": "32.90",
+      "change": "+0.34 (+1.04%)",
+      "week_change": -2.95,
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "95.10%",
+      "ytdChange": "95.16%",
       "distWeek": "-8.0%",
       "distMonth": "-28.1%",
       "trend": "牛市多头",
@@ -6932,15 +6932,15 @@
         "reason": "综合分 70/100 · 置信度中 · RSI 20 · 量比 1.2x",
         "score": 70,
         "confidence": "中",
-        "rsi": 19.9,
-        "volume_ratio": 1.17,
-        "plan": "触发：放量突破近1周高点 35.76；失效：跌回MA5 33.68 下方"
+        "rsi": 20.0,
+        "volume_ratio": 1.18,
+        "plan": "触发：放量突破近1周高点 35.76；失效：跌回MA5 33.69 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
         "class": "signal-flat",
         "reason": "量能未出现明显异常",
-        "volume_ratio": 1.17
+        "volume_ratio": 1.18
       },
       "source": "sina"
     },
@@ -7019,14 +7019,14 @@
         "score": 30,
         "confidence": "中",
         "rsi": 9.2,
-        "volume_ratio": 1.48,
+        "volume_ratio": 1.49,
         "plan": "触发：放量突破近1周高点 108.38；失效：跌回MA5 97.20 下方"
       },
       "flow_proxy": {
         "label": "偏流入",
         "class": "signal-up",
         "reason": "多头趋势且量能高于均值",
-        "volume_ratio": 1.48
+        "volume_ratio": 1.49
       },
       "source": "sina"
     },
@@ -7097,17 +7097,17 @@
         "数据中心架构",
         "电子布"
       ],
-      "price": "40.30",
-      "change": "+0.13 (+0.32%)",
-      "week_change": -5.53,
+      "price": "40.29",
+      "change": "+0.12 (+0.30%)",
+      "week_change": -5.56,
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "11.53%",
-      "distWeek": "-8.4%",
+      "ytdChange": "11.50%",
+      "distWeek": "-8.5%",
       "distMonth": "-36.1%",
       "trend": "牛市多头",
       "intraday_signal": {
@@ -7116,15 +7116,15 @@
         "reason": "综合分 65/100 · 置信度中 · RSI 17 · 量比 1.3x",
         "score": 65,
         "confidence": "中",
-        "rsi": 17.2,
-        "volume_ratio": 1.33,
+        "rsi": 17.1,
+        "volume_ratio": 1.34,
         "plan": "触发：放量突破近1周高点 44.01；失效：跌回MA5 41.25 下方"
       },
       "flow_proxy": {
         "label": "偏流入",
         "class": "signal-up",
         "reason": "多头趋势且量能高于均值",
-        "volume_ratio": 1.33
+        "volume_ratio": 1.34
       },
       "source": "sina"
     },
@@ -7209,34 +7209,34 @@
         "sic衬底",
         "国产替代"
       ],
-      "price": "36.00",
-      "change": "+0.59 (+1.67%)",
-      "week_change": -4.26,
+      "price": "35.96",
+      "change": "+0.55 (+1.55%)",
+      "week_change": -4.36,
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-3.77%",
-      "distWeek": "-8.4%",
+      "ytdChange": "-3.88%",
+      "distWeek": "-8.5%",
       "distMonth": "-35.4%",
       "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏强",
         "class": "signal-up",
-        "reason": "综合分 70/100 · 置信度中 · RSI 12 · 量比 1.2x",
-        "score": 70,
-        "confidence": "中",
-        "rsi": 12.1,
-        "volume_ratio": 1.19,
-        "plan": "触发：放量突破近1周高点 39.29；失效：跌回MA5 36.84 下方"
+        "reason": "综合分 80/100 · 置信度高 · RSI 12 · 量比 1.2x",
+        "score": 80,
+        "confidence": "高",
+        "rsi": 11.9,
+        "volume_ratio": 1.2,
+        "plan": "触发：放量突破近1周高点 39.29；失效：跌回MA5 36.83 下方"
       },
       "flow_proxy": {
-        "label": "资金观望",
-        "class": "signal-flat",
-        "reason": "量能未出现明显异常",
-        "volume_ratio": 1.19
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
+        "volume_ratio": 1.2
       },
       "source": "sina"
     },
@@ -7467,7 +7467,7 @@
       "week_change": -17.05,
       "isUp": false,
       "per": "39.96",
-      "roe": "65.1%",
+      "roe": "70.1%",
       "forward_per": "19.56",
       "pbr": "23.09",
       "distHigh": "-47.5%",
@@ -7623,7 +7623,7 @@
       "change": "-36.74 (-10.63%)",
       "week_change": -10.04,
       "isUp": false,
-      "per": "47.43",
+      "per": "42.41",
       "roe": "36.5%",
       "forward_per": "26.29",
       "pbr": "14.05",
@@ -7929,9 +7929,9 @@
       "week_change": -8.47,
       "isUp": false,
       "per": "33.52",
-      "roe": "27.4%",
+      "roe": "27.9%",
       "forward_per": "36.22",
-      "pbr": "9.10",
+      "pbr": "8.51",
       "distHigh": "-46.2%",
       "ytdChange": "-2.66%",
       "distWeek": "-10.3%",
@@ -9214,14 +9214,14 @@
         "score": 65,
         "confidence": "中",
         "rsi": 9.6,
-        "volume_ratio": 1.28,
+        "volume_ratio": 1.29,
         "plan": "触发：放量突破近1周高点 296.99；失效：跌回MA5 272.13 下方"
       },
       "flow_proxy": {
         "label": "偏流入",
         "class": "signal-up",
         "reason": "多头趋势且量能高于均值",
-        "volume_ratio": 1.28
+        "volume_ratio": 1.29
       },
       "source": "sina"
     },
@@ -9433,34 +9433,34 @@
         "先进封装",
         "chiplet"
       ],
-      "price": "59.77",
-      "change": "+0.77 (+1.31%)",
-      "week_change": 4.93,
+      "price": "59.78",
+      "change": "+0.78 (+1.32%)",
+      "week_change": 4.95,
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "62.80%",
+      "ytdChange": "62.83%",
       "distWeek": "-1.4%",
       "distMonth": "-17.5%",
       "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏强",
         "class": "signal-up",
-        "reason": "综合分 80/100 · 置信度高 · RSI 29 · 量比 1.4x",
+        "reason": "综合分 80/100 · 置信度高 · RSI 29 · 量比 1.5x",
         "score": 80,
         "confidence": "高",
         "rsi": 29.4,
-        "volume_ratio": 1.45,
+        "volume_ratio": 1.46,
         "plan": "触发：放量突破近1周高点 60.64；失效：跌回MA5 57.92 下方"
       },
       "flow_proxy": {
         "label": "偏流入",
         "class": "signal-up",
         "reason": "多头趋势且量能高于均值",
-        "volume_ratio": 1.45
+        "volume_ratio": 1.46
       },
       "source": "sina"
     },
@@ -9514,18 +9514,18 @@
       "intraday_signal": {
         "label": "日内偏强",
         "class": "signal-up",
-        "reason": "综合分 80/100 · 置信度高 · RSI 19 · 量比 1.3x",
+        "reason": "综合分 80/100 · 置信度高 · RSI 19 · 量比 1.4x",
         "score": 80,
         "confidence": "高",
         "rsi": 18.8,
-        "volume_ratio": 1.35,
+        "volume_ratio": 1.36,
         "plan": "触发：放量突破近1周高点 49.38；失效：跌回MA5 47.91 下方"
       },
       "flow_proxy": {
         "label": "偏流入",
         "class": "signal-up",
         "reason": "多头趋势且量能高于均值",
-        "volume_ratio": 1.35
+        "volume_ratio": 1.36
       },
       "source": "sina"
     },
@@ -9828,18 +9828,18 @@
         "800g",
         "1_6t"
       ],
-      "price": "613.39",
-      "change": "+23.28 (+3.95%)",
-      "week_change": -8.45,
+      "price": "612.63",
+      "change": "+22.52 (+3.82%)",
+      "week_change": -8.56,
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "0.83%",
-      "distWeek": "-9.3%",
-      "distMonth": "-34.6%",
+      "ytdChange": "0.71%",
+      "distWeek": "-9.4%",
+      "distMonth": "-34.7%",
       "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏强",
@@ -9847,9 +9847,9 @@
         "reason": "综合分 80/100 · 置信度高 · RSI 16 · 量比 1.5x",
         "score": 80,
         "confidence": "高",
-        "rsi": 15.9,
+        "rsi": 15.7,
         "volume_ratio": 1.54,
-        "plan": "触发：放量突破近1周高点 675.99；失效：跌回MA5 631.77 下方"
+        "plan": "触发：放量突破近1周高点 675.99；失效：跌回MA5 631.62 下方"
       },
       "flow_proxy": {
         "label": "疑似流入",
@@ -9914,17 +9914,17 @@
         "800g",
         "1_6t"
       ],
-      "price": "261.26",
-      "change": "+3.25 (+1.26%)",
-      "week_change": -14.87,
+      "price": "261.00",
+      "change": "+2.99 (+1.16%)",
+      "week_change": -14.96,
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-14.96%",
-      "distWeek": "-16.3%",
+      "ytdChange": "-15.04%",
+      "distWeek": "-16.4%",
       "distMonth": "-43.5%",
       "trend": "牛市多头",
       "intraday_signal": {
@@ -9933,15 +9933,15 @@
         "reason": "综合分 80/100 · 置信度高 · RSI 6 · 量比 1.6x",
         "score": 80,
         "confidence": "高",
-        "rsi": 5.7,
-        "volume_ratio": 1.57,
-        "plan": "触发：放量突破近1周高点 312.16；失效：跌回MA5 283.91 下方"
+        "rsi": 5.6,
+        "volume_ratio": 1.58,
+        "plan": "触发：放量突破近1周高点 312.16；失效：跌回MA5 283.86 下方"
       },
       "flow_proxy": {
         "label": "疑似流入",
         "class": "signal-up",
         "reason": "上涨伴随明显放量",
-        "volume_ratio": 1.57
+        "volume_ratio": 1.58
       },
       "source": "sina"
     },
@@ -9989,18 +9989,18 @@
         "光芯片",
         "eml"
       ],
-      "price": "928.39",
-      "change": "+8.39 (+0.91%)",
-      "week_change": -9.74,
+      "price": "925.15",
+      "change": "+5.15 (+0.56%)",
+      "week_change": -10.06,
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "109.94%",
-      "distWeek": "-12.4%",
-      "distMonth": "-48.7%",
+      "ytdChange": "109.21%",
+      "distWeek": "-12.7%",
+      "distMonth": "-48.9%",
       "trend": "牛市多头",
       "intraday_signal": {
         "label": "偏强观察",
@@ -10008,15 +10008,15 @@
         "reason": "综合分 65/100 · 置信度中 · RSI 13 · 量比 1.3x",
         "score": 65,
         "confidence": "中",
-        "rsi": 12.9,
-        "volume_ratio": 1.26,
-        "plan": "触发：放量突破近1周高点 1059.26；失效：跌回MA5 976.37 下方"
+        "rsi": 12.6,
+        "volume_ratio": 1.27,
+        "plan": "触发：放量突破近1周高点 1059.26；失效：跌回MA5 975.72 下方"
       },
       "flow_proxy": {
         "label": "偏流入",
         "class": "signal-up",
         "reason": "多头趋势且量能高于均值",
-        "volume_ratio": 1.26
+        "volume_ratio": 1.27
       },
       "source": "sina"
     },
@@ -10064,18 +10064,18 @@
         "光纤光缆",
         "海缆"
       ],
-      "price": "52.29",
-      "change": "+0.87 (+1.69%)",
-      "week_change": 14.47,
+      "price": "52.32",
+      "change": "+0.90 (+1.75%)",
+      "week_change": 14.54,
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "111.97%",
-      "distWeek": "-1.7%",
-      "distMonth": "-28.9%",
+      "ytdChange": "112.09%",
+      "distWeek": "-1.6%",
+      "distMonth": "-28.8%",
       "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏强",
@@ -10083,15 +10083,15 @@
         "reason": "综合分 70/100 · 置信度中 · RSI 33 · 量比 1.0x",
         "score": 70,
         "confidence": "中",
-        "rsi": 32.6,
-        "volume_ratio": 0.96,
+        "rsi": 32.7,
+        "volume_ratio": 0.97,
         "plan": "触发：放量突破近1周高点 53.17；失效：跌回MA5 51.50 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
         "class": "signal-flat",
         "reason": "量能未出现明显异常",
-        "volume_ratio": 0.96
+        "volume_ratio": 0.97
       },
       "source": "sina"
     },
@@ -10480,7 +10480,7 @@
       "change": "-40.00 (-0.75%)",
       "week_change": -9.76,
       "isUp": false,
-      "per": "33.94",
+      "per": "31.51",
       "roe": "23.5%",
       "forward_per": "32.06",
       "pbr": "6.62",
@@ -10555,7 +10555,7 @@
       "change": "-400.00 (-2.20%)",
       "week_change": -13.72,
       "isUp": false,
-      "per": "25.39",
+      "per": "23.26",
       "roe": "36.0%",
       "forward_per": "40.23",
       "pbr": "7.26",
@@ -10630,7 +10630,7 @@
       "change": "-15.53 (-5.74%)",
       "week_change": -7.2,
       "isUp": false,
-      "per": "26.47",
+      "per": "24.95",
       "roe": "15.1%",
       "forward_per": "19.18",
       "pbr": "2.84",
@@ -10716,7 +10716,7 @@
       "change": "-25.49 (-8.82%)",
       "week_change": -9.77,
       "isUp": false,
-      "per": "24.91",
+      "per": "27.29",
       "roe": "18.6%",
       "forward_per": "25.73",
       "pbr": "5.42",
@@ -12204,9 +12204,9 @@
       "change": "-6.22 (-10.06%)",
       "week_change": -20.22,
       "isUp": false,
-      "per": "-29.28",
+      "per": "-29.15",
       "roe": "-43.6%",
-      "forward_per": "-29.28",
+      "forward_per": "-29.15",
       "pbr": "6.10",
       "distHigh": "-60.8%",
       "ytdChange": "-29.90%",
@@ -12580,9 +12580,9 @@
       "week_change": 7.68,
       "isUp": true,
       "per": "21.51",
-      "roe": "34.5%",
+      "roe": "34.8%",
       "forward_per": "19.05",
-      "pbr": "7.24",
+      "pbr": "6.70",
       "distHigh": "-24.2%",
       "ytdChange": "-11.75%",
       "distWeek": "-1.6%",
@@ -13514,34 +13514,34 @@
         "工业软件",
         "iiot"
       ],
-      "price": "266.75",
-      "change": "+6.50 (+2.50%)",
-      "week_change": -3.02,
+      "price": "256.10",
+      "change": "+0.40 (+0.16%)",
+      "week_change": -5.38,
       "isUp": true,
-      "per": "24.52",
+      "per": "25.61",
       "roe": "12.5%",
-      "forward_per": "19.66",
+      "forward_per": "19.69",
       "pbr": "2.90",
-      "distHigh": "-8.6%",
-      "ytdChange": "12.99%",
-      "distWeek": "-2.2%",
-      "distMonth": "-6.8%",
+      "distHigh": "-12.2%",
+      "ytdChange": "8.48%",
+      "distWeek": "-5.1%",
+      "distMonth": "-10.5%",
       "trend": "熊市空头",
       "intraday_signal": {
-        "label": "震荡观察",
-        "class": "signal-flat",
-        "reason": "综合分 50/100 · 置信度低 · RSI 46 · 量比 0.7x",
-        "score": 50,
-        "confidence": "低",
-        "rsi": 45.6,
-        "volume_ratio": 0.75,
-        "plan": "触发：重新站上MA5 266.90 且量比>1.2；失效：跌破近1周低位"
+        "label": "日内偏弱",
+        "class": "signal-down",
+        "reason": "综合分 25/100 · 置信度高 · RSI 35 · 量比 0.3x",
+        "score": 25,
+        "confidence": "高",
+        "rsi": 35.4,
+        "volume_ratio": 0.31,
+        "plan": "触发：重新站上MA5 261.00 且量比>1.2；失效：跌破近1周低位"
       },
       "flow_proxy": {
         "label": "资金观望",
         "class": "signal-flat",
         "reason": "量能未出现明显异常",
-        "volume_ratio": 0.75
+        "volume_ratio": 0.31
       },
       "source": "yfinance"
     },
@@ -13719,14 +13719,14 @@
         "score": 70,
         "confidence": "中",
         "rsi": 17.9,
-        "volume_ratio": 1.17,
+        "volume_ratio": 1.18,
         "plan": "触发：放量突破近1周高点 304.35；失效：跌回MA5 272.07 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
         "class": "signal-flat",
         "reason": "量能未出现明显异常",
-        "volume_ratio": 1.17
+        "volume_ratio": 1.18
       },
       "source": "sina"
     },
@@ -13774,16 +13774,16 @@
         "激光加工",
         "自动化产线"
       ],
-      "price": "61.90",
-      "change": "+1.36 (+2.25%)",
-      "week_change": -3.05,
+      "price": "61.89",
+      "change": "+1.35 (+2.23%)",
+      "week_change": -3.07,
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "50.49%",
+      "ytdChange": "50.46%",
       "distWeek": "-6.8%",
       "distMonth": "-35.4%",
       "trend": "牛市多头",
@@ -13794,14 +13794,14 @@
         "score": 80,
         "confidence": "高",
         "rsi": 14.2,
-        "volume_ratio": 1.39,
+        "volume_ratio": 1.4,
         "plan": "触发：放量突破近1周高点 66.40；失效：跌回MA5 62.87 下方"
       },
       "flow_proxy": {
         "label": "偏流入",
         "class": "signal-up",
         "reason": "多头趋势且量能高于均值",
-        "volume_ratio": 1.39
+        "volume_ratio": 1.4
       },
       "source": "sina"
     },
@@ -13871,34 +13871,34 @@
         "智能制造解决方案",
         "激光加工设备"
       ],
-      "price": "13.50",
-      "change": "+0.42 (+3.21%)",
-      "week_change": 2.43,
+      "price": "13.48",
+      "change": "+0.40 (+3.06%)",
+      "week_change": 2.28,
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "-55.37%",
-      "distWeek": "-5.5%",
-      "distMonth": "-5.5%",
+      "ytdChange": "-55.44%",
+      "distWeek": "-5.6%",
+      "distMonth": "-5.6%",
       "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏强",
         "class": "signal-up",
-        "reason": "综合分 90/100 · 置信度高 · RSI 47 · 量比 1.3x",
+        "reason": "综合分 90/100 · 置信度高 · RSI 46 · 量比 1.3x",
         "score": 90,
         "confidence": "高",
-        "rsi": 46.8,
-        "volume_ratio": 1.28,
-        "plan": "触发：放量突破近1周高点 14.28；失效：跌回MA5 13.35 下方"
+        "rsi": 46.5,
+        "volume_ratio": 1.29,
+        "plan": "触发：放量突破近1周高点 14.28；失效：跌回MA5 13.34 下方"
       },
       "flow_proxy": {
         "label": "偏流入",
         "class": "signal-up",
         "reason": "多头趋势且量能高于均值",
-        "volume_ratio": 1.28
+        "volume_ratio": 1.29
       },
       "source": "sina"
     },
@@ -14705,7 +14705,7 @@
       "per": "31.66",
       "roe": "12.8%",
       "forward_per": "24.26",
-      "pbr": "3.80",
+      "pbr": "3.79",
       "distHigh": "-14.2%",
       "ytdChange": "5.11%",
       "distWeek": "-1.2%",
@@ -15153,14 +15153,14 @@
         "score": 90,
         "confidence": "高",
         "rsi": 52.0,
-        "volume_ratio": 1.31,
+        "volume_ratio": 1.32,
         "plan": "触发：放量突破近1周高点 13.08；失效：跌回MA5 12.70 下方"
       },
       "flow_proxy": {
         "label": "偏流入",
         "class": "signal-up",
         "reason": "多头趋势且量能高于均值",
-        "volume_ratio": 1.31
+        "volume_ratio": 1.32
       },
       "source": "sina"
     },
@@ -16464,7 +16464,7 @@
       "change": "-23.50 (-1.77%)",
       "week_change": -0.34,
       "isUp": false,
-      "per": "28.96",
+      "per": "28.51",
       "roe": "--",
       "forward_per": "9.93",
       "pbr": "9.68",
@@ -17148,7 +17148,7 @@
       "change": "-165.00 (-2.76%)",
       "week_change": -3.01,
       "isUp": false,
-      "per": "13.61",
+      "per": "13.15",
       "roe": "20.0%",
       "forward_per": "19.40",
       "pbr": "2.58",
@@ -17457,26 +17457,26 @@
         "cdmo",
         "创新药"
       ],
-      "price": "9.06",
-      "change": "+0.08 (+0.89%)",
-      "week_change": -3.82,
+      "price": "9.07",
+      "change": "+0.09 (+1.00%)",
+      "week_change": -3.72,
       "isUp": true,
       "per": "--",
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
       "distHigh": "--",
-      "ytdChange": "30.17%",
-      "distWeek": "-4.1%",
-      "distMonth": "-13.6%",
+      "ytdChange": "30.32%",
+      "distWeek": "-4.0%",
+      "distMonth": "-13.5%",
       "trend": "牛市多头",
       "intraday_signal": {
-        "label": "偏强观察",
+        "label": "日内偏强",
         "class": "signal-up",
-        "reason": "综合分 65/100 · 置信度中 · RSI 50 · 量比 0.8x",
-        "score": 65,
-        "confidence": "中",
-        "rsi": 49.6,
+        "reason": "综合分 80/100 · 置信度高 · RSI 50 · 量比 0.8x",
+        "score": 80,
+        "confidence": "高",
+        "rsi": 49.7,
         "volume_ratio": 0.83,
         "plan": "触发：放量突破近1周高点 9.45；失效：跌回MA5 9.11 下方"
       },
@@ -17753,7 +17753,7 @@
       "change": "+5.00 (+0.50%)",
       "week_change": -4.57,
       "isUp": true,
-      "per": "26.25",
+      "per": "25.36",
       "roe": "21.3%",
       "forward_per": "--",
       "pbr": "4.95",
@@ -18414,7 +18414,7 @@
       "change": "+1.50 (+0.14%)",
       "week_change": -3.12,
       "isUp": true,
-      "per": "19.70",
+      "per": "19.51",
       "roe": "5.9%",
       "forward_per": "3.96",
       "pbr": "0.36",
@@ -19524,7 +19524,7 @@
       "change": "-24.00 (-4.01%)",
       "week_change": -6.21,
       "isUp": false,
-      "per": "10.72",
+      "per": "10.65",
       "roe": "24.4%",
       "forward_per": "--",
       "pbr": "2.16",
@@ -20351,7 +20351,7 @@
       "change": "-78.00 (-3.72%)",
       "week_change": -12.22,
       "isUp": false,
-      "per": "12.33",
+      "per": "11.81",
       "roe": "8.1%",
       "forward_per": "--",
       "pbr": "0.93",
@@ -20586,7 +20586,7 @@
       "roe": "--",
       "forward_per": "--",
       "pbr": "--",
-      "distHigh": "-54.6%",
+      "distHigh": "-54.3%",
       "ytdChange": "-46.37%",
       "distWeek": "-3.9%",
       "distMonth": "-3.9%",
@@ -23013,14 +23013,14 @@
         "score": 80,
         "confidence": "高",
         "rsi": 38.7,
-        "volume_ratio": 1.48,
+        "volume_ratio": 1.47,
         "plan": "触发：放量突破近1周高点 55.86；失效：跌回MA5 52.24 下方"
       },
       "flow_proxy": {
         "label": "偏流入",
         "class": "signal-up",
         "reason": "多头趋势且量能高于均值",
-        "volume_ratio": 1.48
+        "volume_ratio": 1.47
       },
       "source": "sina"
     },
@@ -23213,14 +23213,14 @@
         "score": 80,
         "confidence": "高",
         "rsi": 29.1,
-        "volume_ratio": 1.62,
+        "volume_ratio": 1.61,
         "plan": "触发：放量突破近1周高点 15.24；失效：跌回MA5 14.87 下方"
       },
       "flow_proxy": {
         "label": "疑似流入",
         "class": "signal-up",
         "reason": "上涨伴随明显放量",
-        "volume_ratio": 1.62
+        "volume_ratio": 1.61
       },
       "source": "sina"
     },
@@ -23409,14 +23409,14 @@
         "score": 55,
         "confidence": "低",
         "rsi": 10.0,
-        "volume_ratio": 1.19,
+        "volume_ratio": 1.18,
         "plan": "触发：放量突破近1周高点 82.77；失效：跌回MA5 76.99 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
         "class": "signal-flat",
         "reason": "量能未出现明显异常",
-        "volume_ratio": 1.19
+        "volume_ratio": 1.18
       },
       "source": "sina"
     },
@@ -23507,14 +23507,14 @@
         "score": 80,
         "confidence": "高",
         "rsi": 32.5,
-        "volume_ratio": 1.29,
+        "volume_ratio": 1.28,
         "plan": "触发：放量突破近1周高点 32.26；失效：跌回MA5 31.06 下方"
       },
       "flow_proxy": {
         "label": "偏流入",
         "class": "signal-up",
         "reason": "多头趋势且量能高于均值",
-        "volume_ratio": 1.29
+        "volume_ratio": 1.28
       },
       "source": "sina"
     },
@@ -23601,7 +23601,7 @@
       "intraday_signal": {
         "label": "日内偏强",
         "class": "signal-up",
-        "reason": "综合分 80/100 · 置信度高 · RSI 18 · 量比 1.6x",
+        "reason": "综合分 80/100 · 置信度高 · RSI 18 · 量比 1.5x",
         "score": 80,
         "confidence": "高",
         "rsi": 18.3,
@@ -23994,14 +23994,14 @@
         "score": 80,
         "confidence": "高",
         "rsi": 21.1,
-        "volume_ratio": 1.23,
+        "volume_ratio": 1.22,
         "plan": "触发：放量突破近1周高点 53.01；失效：跌回MA5 50.55 下方"
       },
       "flow_proxy": {
         "label": "偏流入",
         "class": "signal-up",
         "reason": "多头趋势且量能高于均值",
-        "volume_ratio": 1.23
+        "volume_ratio": 1.22
       },
       "source": "sina"
     },
@@ -26044,9 +26044,9 @@
       "change": "-17.48 (-2.52%)",
       "week_change": -2.86,
       "isUp": false,
-      "per": "36.61",
+      "per": "35.68",
       "roe": "13.4%",
-      "forward_per": "24.39",
+      "forward_per": "24.37",
       "pbr": "4.57",
       "distHigh": "-4.1%",
       "ytdChange": "14.50%",
@@ -26139,9 +26139,9 @@
       "week_change": -11.93,
       "isUp": false,
       "per": "22.14",
-      "roe": "29.8%",
+      "roe": "32.3%",
       "forward_per": "18.65",
-      "pbr": "7.56",
+      "pbr": "6.08",
       "distHigh": "-16.8%",
       "ytdChange": "0.02%",
       "distWeek": "-12.1%",
@@ -26416,34 +26416,34 @@
       "industry_id": "自选追加",
       "theme_ids": [],
       "tag_ids": [],
-      "price": "49.55",
-      "change": "-0.80 (-1.59%)",
-      "week_change": -7.56,
-      "isUp": false,
+      "price": "49.60",
+      "change": "+0.05 (+0.10%)",
+      "week_change": -5.97,
+      "isUp": true,
       "per": "13.63",
       "roe": "19.9%",
       "forward_per": "11.93",
       "pbr": "2.63",
-      "distHigh": "-42.4%",
-      "ytdChange": "-37.77%",
-      "distWeek": "-7.8%",
-      "distMonth": "-12.1%",
+      "distHigh": "-42.3%",
+      "ytdChange": "-37.70%",
+      "distWeek": "-7.1%",
+      "distMonth": "-12.0%",
       "trend": "熊市空头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 10/100 · 置信度高 · RSI 35 · 量比 1.0x",
-        "score": 10,
+        "reason": "综合分 25/100 · 置信度高 · RSI 24 · 量比 0.0x",
+        "score": 25,
         "confidence": "高",
-        "rsi": 35.0,
-        "volume_ratio": 1.04,
-        "plan": "触发：重新站上MA5 51.49 且量比>1.2；失效：跌破近1周低位"
+        "rsi": 24.4,
+        "volume_ratio": 0.0,
+        "plan": "触发：重新站上MA5 50.86 且量比>1.2；失效：跌破近1周低位"
       },
       "flow_proxy": {
         "label": "资金观望",
         "class": "signal-flat",
         "reason": "量能未出现明显异常",
-        "volume_ratio": 1.04
+        "volume_ratio": 0.0
       },
       "source": "yfinance"
     },
@@ -26515,9 +26515,9 @@
       "week_change": 4.92,
       "isUp": true,
       "per": "7.23",
-      "roe": "11.5%",
-      "forward_per": "6.41",
-      "pbr": "0.85",
+      "roe": "11.4%",
+      "forward_per": "6.40",
+      "pbr": "0.88",
       "distHigh": "-30.5%",
       "ytdChange": "-13.08%",
       "distWeek": "-1.9%",
@@ -26937,7 +26937,7 @@
       "change": "-105.00 (-1.85%)",
       "week_change": -10.79,
       "isUp": false,
-      "per": "26.87",
+      "per": "25.32",
       "roe": "8.3%",
       "forward_per": "28.47",
       "pbr": "2.26",
@@ -28929,7 +28929,7 @@
       ]
     }
   },
-  "generated_at": "2026-10-23T07:15:51.981429+00:00",
+  "generated_at": "2026-10-23T13:17:30.990841+00:00",
   "update_status": {
     "expected": 351,
     "success": 338,
