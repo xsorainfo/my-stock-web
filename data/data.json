@@ -1,6 +1,42 @@
 {
   "macro": [
     {
+      "name": "白银",
+      "price": "54.76",
+      "change": "+1.05 (+1.96%)",
+      "isUp": true,
+      "type": "commodity",
+      "badge_label": "商品",
+      "badge_class": "commodity"
+    },
+    {
+      "name": "日经 225",
+      "price": "62907.84",
+      "change": "+214.68 (+0.34%)",
+      "isUp": true,
+      "type": "index",
+      "badge_label": "",
+      "badge_class": "index"
+    },
+    {
+      "name": "铜",
+      "price": "6.36",
+      "change": "-0.11 (-1.75%)",
+      "isUp": false,
+      "type": "commodity",
+      "badge_label": "商品",
+      "badge_class": "commodity"
+    },
+    {
+      "name": "纳斯达克综合",
+      "price": "26008.86",
+      "change": "+53.52 (+0.21%)",
+      "isUp": true,
+      "type": "index",
+      "badge_label": "",
+      "badge_class": "index"
+    },
+    {
       "name": "黄金",
       "price": "4060.40",
       "change": "+52.50 (+1.31%)",
@@ -28,33 +64,6 @@
       "badge_class": "futures"
     },
     {
-      "name": "白银",
-      "price": "54.76",
-      "change": "+1.05 (+1.96%)",
-      "isUp": true,
-      "type": "commodity",
-      "badge_label": "商品",
-      "badge_class": "commodity"
-    },
-    {
-      "name": "纳斯达克综合",
-      "price": "26008.86",
-      "change": "+53.52 (+0.21%)",
-      "isUp": true,
-      "type": "index",
-      "badge_label": "",
-      "badge_class": "index"
-    },
-    {
-      "name": "日经 225",
-      "price": "62907.84",
-      "change": "+214.68 (+0.34%)",
-      "isUp": true,
-      "type": "index",
-      "badge_label": "",
-      "badge_class": "index"
-    },
-    {
       "name": "美元/日元",
       "price": "158.13",
       "change": "+1.32 (+0.84%)",
@@ -64,13 +73,13 @@
       "badge_class": "forex"
     },
     {
-      "name": "铜",
-      "price": "6.36",
-      "change": "-0.11 (-1.75%)",
+      "name": "韩国 KOSPI",
+      "price": "5533.77",
+      "change": "-16.53 (-0.30%)",
       "isUp": false,
-      "type": "commodity",
-      "badge_label": "商品",
-      "badge_class": "commodity"
+      "type": "index",
+      "badge_label": "",
+      "badge_class": "index"
     },
     {
       "name": "恒生指数",
@@ -91,27 +100,9 @@
       "badge_class": "index"
     },
     {
-      "name": "韩国 KOSPI",
-      "price": "5533.77",
-      "change": "-16.53 (-0.30%)",
-      "isUp": false,
-      "type": "index",
-      "badge_label": "",
-      "badge_class": "index"
-    },
-    {
       "name": "存储芯片ETF-DRAM",
       "price": "45.68",
       "change": "-1.38 (-2.93%)",
-      "isUp": false,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
-      "name": "半导体ETF-SOXX",
-      "price": "475.69",
-      "change": "-2.51 (-0.52%)",
       "isUp": false,
       "type": "etf",
       "badge_label": "ETF",
@@ -127,6 +118,24 @@
       "badge_class": "etf"
     },
     {
+      "name": "半导体ETF-SOXX",
+      "price": "475.69",
+      "change": "-2.51 (-0.52%)",
+      "isUp": false,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
+      "name": "半导体设备/材料-SMH",
+      "price": "523.35",
+      "change": "-3.85 (-0.73%)",
+      "isUp": false,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
       "name": "AI基础设施ETF-TCAI",
       "price": "38.02",
       "change": "+0.38 (+1.01%)",
@@ -136,9 +145,18 @@
       "badge_class": "etf"
     },
     {
-      "name": "半导体设备/材料-SMH",
-      "price": "523.35",
-      "change": "-3.85 (-0.73%)",
+      "name": "机器人与自动化指数ETF-ROBO",
+      "price": "74.84",
+      "change": "+0.04 (+0.05%)",
+      "isUp": true,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
+      "name": "人形机器人ETF-BOTT",
+      "price": "36.29",
+      "change": "-0.96 (-2.59%)",
       "isUp": false,
       "type": "etf",
       "badge_label": "ETF",
@@ -154,27 +172,18 @@
       "badge_class": "etf"
     },
     {
-      "name": "人形机器人ETF-BOTT",
-      "price": "36.29",
-      "change": "-0.96 (-2.59%)",
-      "isUp": false,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
-      "name": "机器人与自动化指数ETF-ROBO",
-      "price": "74.84",
-      "change": "+0.04 (+0.05%)",
+      "name": "医療機器 XHE",
+      "price": "93.34",
+      "change": "+0.26 (+0.28%)",
       "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
       "badge_class": "etf"
     },
     {
-      "name": "医療機器 XHE",
-      "price": "93.34",
-      "change": "+0.26 (+0.28%)",
+      "name": "消費電子製品 XLY",
+      "price": "115.01",
+      "change": "+1.91 (+1.69%)",
       "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
@@ -208,15 +217,6 @@
       "badge_class": "etf"
     },
     {
-      "name": "消費電子製品 XLY",
-      "price": "115.01",
-      "change": "+1.91 (+1.69%)",
-      "isUp": true,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
       "name": "日本・電機精密 ETF",
       "price": "62330.00",
       "change": "+510.00 (+0.82%)",
@@ -244,15 +244,6 @@
       "badge_class": "etf"
     },
     {
-      "name": "日本・素材・化学 ETF",
-      "price": "36710.00",
-      "change": "-80.00 (-0.22%)",
-      "isUp": false,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
       "name": "日本・情報通信 ETF",
       "price": "49730.00",
       "change": "+690.00 (+1.41%)",
@@ -262,13 +253,22 @@
       "badge_class": "j-etf"
     },
     {
-      "name": "日本・医薬品 ETF",
-      "price": "32190.00",
-      "change": "+120.00 (+0.37%)",
-      "isUp": true,
+      "name": "日本・素材・化学 ETF",
+      "price": "36710.00",
+      "change": "-80.00 (-0.22%)",
+      "isUp": false,
       "type": "j-etf",
       "badge_label": "J-ETF",
       "badge_class": "j-etf"
+    },
+    {
+      "name": "銀行 KBE",
+      "price": "65.83",
+      "change": "-0.04 (-0.06%)",
+      "isUp": false,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
     },
     {
       "name": "金融・保険 XLF",
@@ -280,18 +280,18 @@
       "badge_class": "etf"
     },
     {
+      "name": "日本・医薬品 ETF",
+      "price": "32190.00",
+      "change": "+120.00 (+0.37%)",
+      "isUp": true,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
+    },
+    {
       "name": "石油・ガス XLE",
       "price": "67.57",
       "change": "-1.76 (-2.54%)",
-      "isUp": false,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
-      "name": "銀行 KBE",
-      "price": "65.83",
-      "change": "-0.04 (-0.06%)",
       "isUp": false,
       "type": "etf",
       "badge_label": "ETF",
@@ -316,15 +316,6 @@
       "badge_class": "j-etf"
     },
     {
-      "name": "日本・銀行 ETF",
-      "price": "38140.00",
-      "change": "+990.00 (+2.66%)",
-      "isUp": true,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
       "name": "電力 XLU",
       "price": "42.87",
       "change": "+0.31 (+0.73%)",
@@ -332,6 +323,15 @@
       "type": "etf",
       "badge_label": "ETF",
       "badge_class": "etf"
+    },
+    {
+      "name": "日本・銀行 ETF",
+      "price": "38140.00",
+      "change": "+990.00 (+2.66%)",
+      "isUp": true,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
     },
     {
       "name": "日本・電力ガス ETF",
@@ -361,6 +361,24 @@
       "badge_class": "j-etf"
     },
     {
+      "name": "バイオテクノロジー IBB",
+      "price": "209.54",
+      "change": "+1.80 (+0.87%)",
+      "isUp": true,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
+      "name": "自動車メーカー CARZ",
+      "price": "96.74",
+      "change": "-0.24 (-0.25%)",
+      "isUp": false,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
       "name": "生活必需品 XLP",
       "price": "89.99",
       "change": "+1.73 (+1.96%)",
@@ -388,18 +406,9 @@
       "badge_class": "etf"
     },
     {
-      "name": "自動車メーカー CARZ",
-      "price": "96.74",
-      "change": "-0.24 (-0.25%)",
-      "isUp": false,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
-      "name": "バイオテクノロジー IBB",
-      "price": "209.54",
-      "change": "+1.80 (+0.87%)",
+      "name": "Eコマース IBUY",
+      "price": "71.41",
+      "change": "+0.69 (+0.98%)",
       "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
@@ -424,19 +433,19 @@
       "badge_class": "j-etf"
     },
     {
-      "name": "Eコマース IBUY",
-      "price": "71.41",
-      "change": "+0.69 (+0.98%)",
-      "isUp": true,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
       "name": "日本・鉄鋼非鉄 ETF",
       "price": "55490.00",
       "change": "+990.00 (+1.82%)",
       "isUp": true,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
+    },
+    {
+      "name": "日本・不動産 ETF",
+      "price": "49580.00",
+      "change": "-1160.00 (-2.29%)",
+      "isUp": false,
       "type": "j-etf",
       "badge_label": "J-ETF",
       "badge_class": "j-etf"
@@ -451,15 +460,6 @@
       "badge_class": "etf"
     },
     {
-      "name": "日本・不動産 ETF",
-      "price": "49580.00",
-      "change": "-1160.00 (-2.29%)",
-      "isUp": false,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
       "name": "日本・商社・卸売 ETF",
       "price": "277.30",
       "change": "+1.40 (+0.51%)",
@@ -469,27 +469,18 @@
       "badge_class": "j-etf"
     },
     {
-      "name": "日本・建設・資材 ETF",
-      "price": "42800.00",
-      "change": "-100.00 (-0.23%)",
-      "isUp": false,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
-      "name": "纳指100ETF-QQQ",
-      "price": "704.47",
-      "change": "+0.07 (+0.01%)",
+      "name": "Global X半导体ETF-2243.T",
+      "price": "4147.00",
+      "change": "+83.00 (+2.04%)",
       "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
       "badge_class": "etf"
     },
     {
-      "name": "Global X半导体ETF-2243.T",
-      "price": "4147.00",
-      "change": "+83.00 (+2.04%)",
+      "name": "NF・日経半導体ETF-200A.T",
+      "price": "3735.00",
+      "change": "+5.00 (+0.13%)",
       "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
@@ -505,13 +496,13 @@
       "badge_class": "bond"
     },
     {
-      "name": "NF・日経半導体ETF-200A.T",
-      "price": "3735.00",
-      "change": "+5.00 (+0.13%)",
-      "isUp": true,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
+      "name": "日本・建設・資材 ETF",
+      "price": "42800.00",
+      "change": "-100.00 (-0.23%)",
+      "isUp": false,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
     },
     {
       "name": "5年国债收益率",
@@ -523,6 +514,15 @@
       "badge_class": "bond"
     },
     {
+      "name": "富时 100",
+      "price": "10725.00",
+      "change": "+34.60 (+0.32%)",
+      "isUp": true,
+      "type": "index",
+      "badge_label": "",
+      "badge_class": "index"
+    },
+    {
       "name": "VIX 恐慌指数",
       "price": "19.03",
       "change": "-0.42 (-2.16%)",
@@ -532,13 +532,13 @@
       "badge_class": "sentiment"
     },
     {
-      "name": "德国 DAX",
-      "price": "25371.75",
-      "change": "+190.10 (+0.75%)",
+      "name": "纳指100ETF-QQQ",
+      "price": "704.47",
+      "change": "+0.07 (+0.01%)",
       "isUp": true,
-      "type": "index",
-      "badge_label": "",
-      "badge_class": "index"
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
     },
     {
       "name": "标普 500",
@@ -550,18 +550,18 @@
       "badge_class": "index"
     },
     {
-      "name": "法国 CAC 40",
-      "price": "7811.26",
-      "change": "+28.44 (+0.37%)",
+      "name": "德国 DAX",
+      "price": "25371.75",
+      "change": "+190.10 (+0.75%)",
       "isUp": true,
       "type": "index",
       "badge_label": "",
       "badge_class": "index"
     },
     {
-      "name": "富时 100",
-      "price": "10725.00",
-      "change": "+34.60 (+0.32%)",
+      "name": "法国 CAC 40",
+      "price": "7811.26",
+      "change": "+28.44 (+0.37%)",
       "isUp": true,
       "type": "index",
       "badge_label": "",
@@ -28929,7 +28929,7 @@
       ]
     }
   },
-  "generated_at": "2026-10-24T23:03:20.743208+00:00",
+  "generated_at": "2026-10-25T00:59:12.824122+00:00",
   "update_status": {
     "expected": 351,
     "success": 338,
