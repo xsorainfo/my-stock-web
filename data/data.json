@@ -10,54 +10,27 @@
       "badge_class": "index"
     },
     {
-      "name": "标普 500 期货",
-      "price": "7704.50",
-      "change": "+44.75 (+0.58%)",
-      "isUp": true,
-      "type": "futures",
-      "badge_label": "期货",
-      "badge_class": "futures"
-    },
-    {
       "name": "美元/日元",
       "price": "156.49",
-      "change": "-0.50 (-0.32%)",
+      "change": "-0.37 (-0.24%)",
       "isUp": false,
       "type": "forex",
       "badge_label": "FX",
       "badge_class": "forex"
     },
     {
-      "name": "纳斯达克综合",
-      "price": "26008.86",
-      "change": "+53.52 (+0.21%)",
-      "isUp": true,
-      "type": "index",
-      "badge_label": "",
-      "badge_class": "index"
-    },
-    {
-      "name": "白银",
-      "price": "54.76",
-      "change": "+0.81 (+1.51%)",
-      "isUp": true,
+      "name": "铜",
+      "price": "6.48",
+      "change": "-0.01 (-0.19%)",
+      "isUp": false,
       "type": "commodity",
       "badge_label": "商品",
       "badge_class": "commodity"
     },
     {
-      "name": "WTI 原油",
-      "price": "99.47",
-      "change": "-3.80 (-3.68%)",
-      "isUp": false,
-      "type": "futures",
-      "badge_label": "期货",
-      "badge_class": "futures"
-    },
-    {
-      "name": "铜",
-      "price": "6.36",
-      "change": "-0.14 (-2.23%)",
+      "name": "白银",
+      "price": "53.71",
+      "change": "-0.24 (-0.45%)",
       "isUp": false,
       "type": "commodity",
       "badge_label": "商品",
@@ -65,8 +38,8 @@
     },
     {
       "name": "黄金",
-      "price": "4060.40",
-      "change": "+52.50 (+1.31%)",
+      "price": "4007.90",
+      "change": "+1.50 (+0.04%)",
       "isUp": true,
       "type": "commodity",
       "badge_label": "商品",
@@ -80,6 +53,24 @@
       "type": "index",
       "badge_label": "",
       "badge_class": "index"
+    },
+    {
+      "name": "纳斯达克综合",
+      "price": "26008.86",
+      "change": "+53.52 (+0.21%)",
+      "isUp": true,
+      "type": "index",
+      "badge_label": "",
+      "badge_class": "index"
+    },
+    {
+      "name": "WTI 原油",
+      "price": "103.27",
+      "change": "+1.08 (+1.06%)",
+      "isUp": true,
+      "type": "futures",
+      "badge_label": "期货",
+      "badge_class": "futures"
     },
     {
       "name": "韩国 KOSPI",
@@ -100,10 +91,10 @@
       "badge_class": "index"
     },
     {
-      "name": "存储芯片ETF-DRAM",
-      "price": "45.68",
-      "change": "-1.38 (-2.93%)",
-      "isUp": false,
+      "name": "AI基础设施ETF-TCAI",
+      "price": "38.02",
+      "change": "+0.38 (+1.01%)",
+      "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
       "badge_class": "etf"
@@ -112,6 +103,15 @@
       "name": "半导体ETF-SOXX",
       "price": "475.69",
       "change": "-2.51 (-0.52%)",
+      "isUp": false,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
+      "name": "半导体设备/材料-SMH",
+      "price": "523.35",
+      "change": "-3.85 (-0.73%)",
       "isUp": false,
       "type": "etf",
       "badge_label": "ETF",
@@ -127,28 +127,19 @@
       "badge_class": "etf"
     },
     {
-      "name": "AI基础设施ETF-TCAI",
-      "price": "38.02",
-      "change": "+0.38 (+1.01%)",
-      "isUp": true,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
-      "name": "半导体设备/材料-SMH",
-      "price": "523.35",
-      "change": "-3.85 (-0.73%)",
+      "name": "存储芯片ETF-DRAM",
+      "price": "45.68",
+      "change": "-1.38 (-2.93%)",
       "isUp": false,
       "type": "etf",
       "badge_label": "ETF",
       "badge_class": "etf"
     },
     {
-      "name": "机器人与自动化指数ETF-ROBO",
-      "price": "74.84",
-      "change": "+0.04 (+0.05%)",
-      "isUp": true,
+      "name": "机器人/AI ETF-BOTZ",
+      "price": "32.68",
+      "change": "-0.34 (-1.03%)",
+      "isUp": false,
       "type": "etf",
       "badge_label": "ETF",
       "badge_class": "etf"
@@ -163,10 +154,10 @@
       "badge_class": "etf"
     },
     {
-      "name": "机器人/AI ETF-BOTZ",
-      "price": "32.68",
-      "change": "-0.34 (-1.03%)",
-      "isUp": false,
+      "name": "机器人与自动化指数ETF-ROBO",
+      "price": "74.84",
+      "change": "+0.04 (+0.05%)",
+      "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
       "badge_class": "etf"
@@ -217,15 +208,6 @@
       "badge_class": "etf"
     },
     {
-      "name": "日本・電機精密 ETF",
-      "price": "62330.00",
-      "change": "+510.00 (+0.82%)",
-      "isUp": true,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
       "name": "製薬・医療 XLV",
       "price": "181.30",
       "change": "+2.02 (+1.13%)",
@@ -235,18 +217,18 @@
       "badge_class": "etf"
     },
     {
-      "name": "日本・機械 ETF",
-      "price": "78510.00",
-      "change": "+630.00 (+0.81%)",
+      "name": "日本・電機精密 ETF",
+      "price": "62330.00",
+      "change": "+510.00 (+0.82%)",
       "isUp": true,
       "type": "j-etf",
       "badge_label": "J-ETF",
       "badge_class": "j-etf"
     },
     {
-      "name": "日本・情報通信 ETF",
-      "price": "49730.00",
-      "change": "+690.00 (+1.41%)",
+      "name": "日本・機械 ETF",
+      "price": "78510.00",
+      "change": "+630.00 (+0.81%)",
       "isUp": true,
       "type": "j-etf",
       "badge_label": "J-ETF",
@@ -280,10 +262,28 @@
       "badge_class": "etf"
     },
     {
+      "name": "日本・情報通信 ETF",
+      "price": "49730.00",
+      "change": "+690.00 (+1.41%)",
+      "isUp": true,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
+    },
+    {
       "name": "銀行 KBE",
       "price": "65.83",
       "change": "-0.04 (-0.06%)",
       "isUp": false,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
+      "name": "宇宙・防衛 ITA",
+      "price": "204.48",
+      "change": "+2.25 (+1.11%)",
+      "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
       "badge_class": "etf"
@@ -307,36 +307,9 @@
       "badge_class": "etf"
     },
     {
-      "name": "宇宙・防衛 ITA",
-      "price": "204.48",
-      "change": "+2.25 (+1.11%)",
-      "isUp": true,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
       "name": "日本・金融 ETF",
       "price": "43520.00",
       "change": "+220.00 (+0.51%)",
-      "isUp": true,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
-      "name": "日本・銀行 ETF",
-      "price": "38140.00",
-      "change": "+990.00 (+2.66%)",
-      "isUp": true,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
-      "name": "日本・電力ガス ETF",
-      "price": "12170.00",
-      "change": "+70.00 (+0.58%)",
       "isUp": true,
       "type": "j-etf",
       "badge_label": "J-ETF",
@@ -352,6 +325,15 @@
       "badge_class": "j-etf"
     },
     {
+      "name": "日本・電力ガス ETF",
+      "price": "12170.00",
+      "change": "+70.00 (+0.58%)",
+      "isUp": true,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
+    },
+    {
       "name": "防衛テック ETF",
       "price": "802.00",
       "change": "+10.00 (+1.26%)",
@@ -361,18 +343,27 @@
       "badge_class": "j-etf"
     },
     {
-      "name": "バイオテクノロジー IBB",
-      "price": "209.54",
-      "change": "+1.80 (+0.87%)",
+      "name": "日本・銀行 ETF",
+      "price": "38140.00",
+      "change": "+990.00 (+2.66%)",
+      "isUp": true,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
+    },
+    {
+      "name": "生活必需品 XLP",
+      "price": "89.99",
+      "change": "+1.73 (+1.96%)",
       "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
       "badge_class": "etf"
     },
     {
-      "name": "生活必需品 XLP",
-      "price": "89.99",
-      "change": "+1.73 (+1.96%)",
+      "name": "バイオテクノロジー IBB",
+      "price": "209.54",
+      "change": "+1.80 (+0.87%)",
       "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
@@ -406,15 +397,6 @@
       "badge_class": "etf"
     },
     {
-      "name": "Eコマース IBUY",
-      "price": "71.41",
-      "change": "+0.69 (+0.98%)",
-      "isUp": true,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
       "name": "日本・食品 ETF",
       "price": "49780.00",
       "change": "-270.00 (-0.54%)",
@@ -433,27 +415,18 @@
       "badge_class": "j-etf"
     },
     {
+      "name": "Eコマース IBUY",
+      "price": "71.41",
+      "change": "+0.69 (+0.98%)",
+      "isUp": true,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
       "name": "日本・鉄鋼非鉄 ETF",
       "price": "55490.00",
       "change": "+990.00 (+1.82%)",
-      "isUp": true,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
-      "name": "日本・不動産 ETF",
-      "price": "49580.00",
-      "change": "-1160.00 (-2.29%)",
-      "isUp": false,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
-      "name": "日本・商社・卸売 ETF",
-      "price": "277.30",
-      "change": "+1.40 (+0.51%)",
       "isUp": true,
       "type": "j-etf",
       "badge_label": "J-ETF",
@@ -469,10 +442,28 @@
       "badge_class": "etf"
     },
     {
+      "name": "日本・不動産 ETF",
+      "price": "49580.00",
+      "change": "-1160.00 (-2.29%)",
+      "isUp": false,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
+    },
+    {
       "name": "日本・建設・資材 ETF",
       "price": "42800.00",
       "change": "-100.00 (-0.23%)",
       "isUp": false,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
+    },
+    {
+      "name": "日本・商社・卸売 ETF",
+      "price": "277.30",
+      "change": "+1.40 (+0.51%)",
+      "isUp": true,
       "type": "j-etf",
       "badge_label": "J-ETF",
       "badge_class": "j-etf"
@@ -485,6 +476,15 @@
       "type": "etf",
       "badge_label": "ETF",
       "badge_class": "etf"
+    },
+    {
+      "name": "10年国债收益率",
+      "price": "4.95",
+      "change": "-0.03 (-0.70%)",
+      "isUp": false,
+      "type": "bond",
+      "badge_label": "债券",
+      "badge_class": "bond"
     },
     {
       "name": "纳指100ETF-QQQ",
@@ -505,15 +505,6 @@
       "badge_class": "etf"
     },
     {
-      "name": "10年国债收益率",
-      "price": "4.95",
-      "change": "-0.03 (-0.70%)",
-      "isUp": false,
-      "type": "bond",
-      "badge_label": "债券",
-      "badge_class": "bond"
-    },
-    {
       "name": "5年国债收益率",
       "price": "4.77",
       "change": "-0.04 (-0.77%)",
@@ -521,6 +512,24 @@
       "type": "bond",
       "badge_label": "债券",
       "badge_class": "bond"
+    },
+    {
+      "name": "VIX 恐慌指数",
+      "price": "19.03",
+      "change": "-0.42 (-2.16%)",
+      "isUp": false,
+      "type": "sentiment",
+      "badge_label": "情绪",
+      "badge_class": "sentiment"
+    },
+    {
+      "name": "富时 100",
+      "price": "10725.00",
+      "change": "+34.60 (+0.32%)",
+      "isUp": true,
+      "type": "index",
+      "badge_label": "",
+      "badge_class": "index"
     },
     {
       "name": "标普 500",
@@ -539,24 +548,6 @@
       "type": "index",
       "badge_label": "",
       "badge_class": "index"
-    },
-    {
-      "name": "富时 100",
-      "price": "10725.00",
-      "change": "+34.60 (+0.32%)",
-      "isUp": true,
-      "type": "index",
-      "badge_label": "",
-      "badge_class": "index"
-    },
-    {
-      "name": "VIX 恐慌指数",
-      "price": "19.03",
-      "change": "-0.42 (-2.16%)",
-      "isUp": false,
-      "type": "sentiment",
-      "badge_label": "情绪",
-      "badge_class": "sentiment"
     },
     {
       "name": "法国 CAC 40",
@@ -2772,7 +2763,7 @@
       "change": "+160.00 (+1.27%)",
       "week_change": -4.64,
       "isUp": true,
-      "per": "15.11",
+      "per": "15.30",
       "roe": "87.1%",
       "forward_per": "--",
       "pbr": "8.72",
@@ -3339,7 +3330,7 @@
       "change": "-0.15 (-0.52%)",
       "week_change": 8.22,
       "isUp": false,
-      "per": "15.91",
+      "per": "14.93",
       "roe": "6.1%",
       "forward_per": "14.47",
       "pbr": "0.97",
@@ -4762,7 +4753,7 @@
       "change": "-86.00 (-1.00%)",
       "week_change": -12.82,
       "isUp": false,
-      "per": "80.81",
+      "per": "73.13",
       "roe": "12.7%",
       "forward_per": "27.55",
       "pbr": "8.35",
@@ -5056,7 +5047,7 @@
       "change": "-5.00 (-0.56%)",
       "week_change": -2.0,
       "isUp": false,
-      "per": "9.10",
+      "per": "8.35",
       "roe": "6.4%",
       "forward_per": "--",
       "pbr": "0.51",
@@ -8891,7 +8882,7 @@
       "change": "-260.00 (-2.22%)",
       "week_change": -14.87,
       "isUp": false,
-      "per": "24.15",
+      "per": "25.87",
       "roe": "26.2%",
       "forward_per": "52.28",
       "pbr": "4.86",
@@ -9280,7 +9271,7 @@
       "change": "+0.95 (+2.52%)",
       "week_change": -2.12,
       "isUp": true,
-      "per": "46.06",
+      "per": "51.59",
       "roe": "17.0%",
       "forward_per": "18.03",
       "pbr": "7.08",
@@ -9578,7 +9569,7 @@
       "change": "-500.00 (-2.65%)",
       "week_change": -14.81,
       "isUp": false,
-      "per": "29.19",
+      "per": "28.42",
       "roe": "15.3%",
       "forward_per": "29.17",
       "pbr": "3.33",
@@ -10480,7 +10471,7 @@
       "change": "-40.00 (-0.75%)",
       "week_change": -9.76,
       "isUp": false,
-      "per": "31.75",
+      "per": "31.51",
       "roe": "23.5%",
       "forward_per": "32.06",
       "pbr": "6.62",
@@ -11275,7 +11266,7 @@
       "change": "-40.00 (-0.95%)",
       "week_change": -4.01,
       "isUp": false,
-      "per": "13.10",
+      "per": "13.24",
       "roe": "10.2%",
       "forward_per": "15.26",
       "pbr": "1.29",
@@ -12220,14 +12211,14 @@
         "score": 10,
         "confidence": "高",
         "rsi": 18.5,
-        "volume_ratio": 0.58,
+        "volume_ratio": 0.59,
         "plan": "触发：重新站上MA5 58.98 且量比>1.2；失效：跌破近1周低位"
       },
       "flow_proxy": {
         "label": "资金观望",
         "class": "signal-flat",
         "reason": "量能未出现明显异常",
-        "volume_ratio": 0.58
+        "volume_ratio": 0.59
       },
       "source": "yfinance"
     },
@@ -12279,7 +12270,7 @@
       "change": "+0.56 (+0.29%)",
       "week_change": 5.76,
       "isUp": true,
-      "per": "169.61",
+      "per": "174.12",
       "roe": "38.1%",
       "forward_per": "83.71",
       "pbr": "48.37",
@@ -14040,16 +14031,16 @@
       "ytdChange": "44.38%",
       "distWeek": "-3.5%",
       "distMonth": "-6.0%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
-        "class": "signal-down",
-        "reason": "综合分 20/100 · 置信度高 · RSI 50 · 量比 1.0x",
-        "score": 20,
-        "confidence": "高",
+        "label": "震荡观察",
+        "class": "signal-flat",
+        "reason": "综合分 50/100 · 置信度低 · RSI 50 · 量比 1.0x",
+        "score": 50,
+        "confidence": "低",
         "rsi": 49.6,
         "volume_ratio": 1.01,
-        "plan": "触发：重新站上MA5 7262.40 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 7389.00；失效：跌回MA5 7262.40 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -14087,21 +14078,21 @@
       "ytdChange": "56.91%",
       "distWeek": "-4.6%",
       "distMonth": "-6.5%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
+        "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 10/100 · 置信度高 · RSI 52 · 量比 1.3x",
-        "score": 10,
-        "confidence": "高",
+        "reason": "综合分 40/100 · 置信度中 · RSI 52 · 量比 1.3x",
+        "score": 40,
+        "confidence": "中",
         "rsi": 51.9,
         "volume_ratio": 1.26,
-        "plan": "触发：重新站上MA5 7399.60 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 7554.00；失效：跌回MA5 7399.60 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.26
       },
       "source": "yfinance"
@@ -14134,16 +14125,16 @@
       "ytdChange": "58.92%",
       "distWeek": "-4.1%",
       "distMonth": "-5.3%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
-        "class": "signal-down",
-        "reason": "综合分 20/100 · 置信度高 · RSI 54 · 量比 1.0x",
-        "score": 20,
-        "confidence": "高",
+        "label": "震荡观察",
+        "class": "signal-flat",
+        "reason": "综合分 50/100 · 置信度低 · RSI 54 · 量比 1.0x",
+        "score": 50,
+        "confidence": "低",
         "rsi": 54.1,
         "volume_ratio": 1.04,
-        "plan": "触发：重新站上MA5 3400.00 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 3470.00；失效：跌回MA5 3400.00 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -14190,10 +14181,10 @@
       "change": "+2.74 (+1.89%)",
       "week_change": 1.0,
       "isUp": true,
-      "per": "62.55",
+      "per": "641.26",
       "roe": "--",
-      "forward_per": "62.55",
-      "pbr": "15.27",
+      "forward_per": "59.00",
+      "pbr": "11.33",
       "distHigh": "-34.6%",
       "ytdChange": "-8.36%",
       "distWeek": "-11.2%",
@@ -14453,22 +14444,22 @@
       "distHigh": "-47.3%",
       "ytdChange": "-20.09%",
       "distWeek": "-3.9%",
-      "distMonth": "-11.0%",
-      "trend": "熊市空头",
+      "distMonth": "-10.3%",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 36 · 量比 1.2x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 36 · 量比 1.2x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 36.0,
         "volume_ratio": 1.22,
-        "plan": "触发：重新站上MA5 377.80 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 389.00；失效：跌回MA5 377.80 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.22
       },
       "source": "yfinance"
@@ -14518,21 +14509,21 @@
       "ytdChange": "49.49%",
       "distWeek": "-4.8%",
       "distMonth": "-19.9%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "偏弱观察",
-        "class": "signal-down",
-        "reason": "综合分 35/100 · 置信度中 · RSI 36 · 量比 1.4x",
-        "score": 35,
+        "label": "偏强观察",
+        "class": "signal-up",
+        "reason": "综合分 65/100 · 置信度中 · RSI 36 · 量比 1.4x",
+        "score": 65,
         "confidence": "中",
         "rsi": 35.8,
         "volume_ratio": 1.42,
-        "plan": "触发：重新站上MA5 1040.20 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 1085.00；失效：跌回MA5 1040.20 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.42
       },
       "source": "yfinance"
@@ -14582,16 +14573,16 @@
       "ytdChange": "500.90%",
       "distWeek": "-5.3%",
       "distMonth": "-17.8%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
-        "class": "signal-down",
-        "reason": "综合分 25/100 · 置信度高 · RSI 36 · 量比 1.2x",
-        "score": 25,
-        "confidence": "高",
+        "label": "偏强观察",
+        "class": "signal-up",
+        "reason": "综合分 55/100 · 置信度低 · RSI 36 · 量比 1.2x",
+        "score": 55,
+        "confidence": "低",
         "rsi": 36.1,
         "volume_ratio": 1.17,
-        "plan": "触发：重新站上MA5 2015.00 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 2114.00；失效：跌回MA5 2015.00 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -14912,22 +14903,22 @@
       "distHigh": "-30.6%",
       "ytdChange": "-12.60%",
       "distWeek": "-5.0%",
-      "distMonth": "-8.8%",
-      "trend": "熊市空头",
+      "distMonth": "-8.3%",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 39 · 量比 1.4x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 39 · 量比 1.4x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 39.4,
         "volume_ratio": 1.35,
-        "plan": "触发：重新站上MA5 3697.80 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 3803.00；失效：跌回MA5 3697.80 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.35
       },
       "source": "yfinance"
@@ -14976,22 +14967,22 @@
       "distHigh": "-47.9%",
       "ytdChange": "-17.81%",
       "distWeek": "-5.3%",
-      "distMonth": "-16.6%",
-      "trend": "熊市空头",
+      "distMonth": "-12.9%",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
+        "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 15/100 · 置信度高 · RSI 33 · 量比 1.3x",
-        "score": 15,
-        "confidence": "高",
+        "reason": "综合分 45/100 · 置信度低 · RSI 33 · 量比 1.3x",
+        "score": 45,
+        "confidence": "低",
         "rsi": 33.1,
         "volume_ratio": 1.26,
-        "plan": "触发：重新站上MA5 2491.50 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 2588.00；失效：跌回MA5 2491.50 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.26
       },
       "source": "yfinance"
@@ -15041,16 +15032,16 @@
       "ytdChange": "-22.58%",
       "distWeek": "-7.8%",
       "distMonth": "-18.6%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 27 · 量比 1.5x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 27 · 量比 1.5x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 26.6,
         "volume_ratio": 1.53,
-        "plan": "触发：重新站上MA5 6367.00 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 6665.00；失效：跌回MA5 6367.00 下方"
       },
       "flow_proxy": {
         "label": "疑似流出",
@@ -15243,21 +15234,21 @@
       "ytdChange": "23.30%",
       "distWeek": "-3.9%",
       "distMonth": "-5.9%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
-        "class": "signal-down",
-        "reason": "综合分 20/100 · 置信度高 · RSI 55 · 量比 1.2x",
-        "score": 20,
-        "confidence": "高",
+        "label": "震荡观察",
+        "class": "signal-flat",
+        "reason": "综合分 50/100 · 置信度低 · RSI 55 · 量比 1.2x",
+        "score": 50,
+        "confidence": "低",
         "rsi": 55.5,
         "volume_ratio": 1.23,
-        "plan": "触发：重新站上MA5 1195.00 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 1225.50；失效：跌回MA5 1195.00 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.23
       },
       "source": "yfinance"
@@ -15319,16 +15310,16 @@
       "ytdChange": "39.25%",
       "distWeek": "-4.8%",
       "distMonth": "-7.9%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "偏弱观察",
-        "class": "signal-down",
-        "reason": "综合分 35/100 · 置信度中 · RSI 50 · 量比 1.0x",
-        "score": 35,
+        "label": "偏强观察",
+        "class": "signal-up",
+        "reason": "综合分 65/100 · 置信度中 · RSI 50 · 量比 1.0x",
+        "score": 65,
         "confidence": "中",
         "rsi": 49.6,
         "volume_ratio": 0.96,
-        "plan": "触发：重新站上MA5 5374.00 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 5600.00；失效：跌回MA5 5374.00 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -15406,16 +15397,16 @@
       "ytdChange": "17.21%",
       "distWeek": "-3.2%",
       "distMonth": "-11.5%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
-        "class": "signal-down",
-        "reason": "综合分 25/100 · 置信度高 · RSI 27 · 量比 1.1x",
-        "score": 25,
-        "confidence": "高",
+        "label": "偏强观察",
+        "class": "signal-up",
+        "reason": "综合分 55/100 · 置信度低 · RSI 27 · 量比 1.1x",
+        "score": 55,
+        "confidence": "低",
         "rsi": 27.0,
         "volume_ratio": 1.12,
-        "plan": "触发：重新站上MA5 1896.30 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 1943.00；失效：跌回MA5 1896.30 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -15505,16 +15496,16 @@
       "ytdChange": "38.25%",
       "distWeek": "-7.9%",
       "distMonth": "-10.8%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
-        "class": "signal-down",
-        "reason": "综合分 25/100 · 置信度高 · RSI 38 · 量比 1.1x",
-        "score": 25,
-        "confidence": "高",
+        "label": "偏强观察",
+        "class": "signal-up",
+        "reason": "综合分 55/100 · 置信度低 · RSI 38 · 量比 1.1x",
+        "score": 55,
+        "confidence": "低",
         "rsi": 37.7,
         "volume_ratio": 1.13,
-        "plan": "触发：重新站上MA5 2490.60 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 2634.00；失效：跌回MA5 2490.60 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -15569,17 +15560,17 @@
       "distHigh": "-19.3%",
       "ytdChange": "-12.86%",
       "distWeek": "-2.0%",
-      "distMonth": "-3.6%",
-      "trend": "熊市空头",
+      "distMonth": "-3.5%",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "偏弱观察",
-        "class": "signal-down",
-        "reason": "综合分 35/100 · 置信度中 · RSI 51 · 量比 1.2x",
-        "score": 35,
+        "label": "偏强观察",
+        "class": "signal-up",
+        "reason": "综合分 65/100 · 置信度中 · RSI 51 · 量比 1.2x",
+        "score": 65,
         "confidence": "中",
         "rsi": 51.0,
         "volume_ratio": 1.17,
-        "plan": "触发：重新站上MA5 1205.80 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 1225.00；失效：跌回MA5 1205.80 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -15660,21 +15651,21 @@
       "ytdChange": "-5.74%",
       "distWeek": "-13.3%",
       "distMonth": "-25.1%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 14 · 量比 1.4x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 14 · 量比 1.4x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 13.5,
         "volume_ratio": 1.39,
-        "plan": "触发：重新站上MA5 2590.60 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 2786.00；失效：跌回MA5 2590.60 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.39
       },
       "source": "yfinance"
@@ -15834,21 +15825,21 @@
       "ytdChange": "24.49%",
       "distWeek": "-3.8%",
       "distMonth": "-6.0%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
+        "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 15/100 · 置信度高 · RSI 44 · 量比 1.4x",
-        "score": 15,
-        "confidence": "高",
+        "reason": "综合分 45/100 · 置信度低 · RSI 44 · 量比 1.4x",
+        "score": 45,
+        "confidence": "低",
         "rsi": 43.6,
         "volume_ratio": 1.38,
-        "plan": "触发：重新站上MA5 1716.40 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 1757.50；失效：跌回MA5 1716.40 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.38
       },
       "source": "yfinance"
@@ -15920,7 +15911,7 @@
       "distHigh": "-26.0%",
       "ytdChange": "6.42%",
       "distWeek": "-1.7%",
-      "distMonth": "-3.2%",
+      "distMonth": "-1.7%",
       "trend": "牛市多头",
       "intraday_signal": {
         "label": "偏强观察",
@@ -16018,21 +16009,21 @@
       "ytdChange": "12.00%",
       "distWeek": "-3.8%",
       "distMonth": "-10.9%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "震荡观察",
-        "class": "signal-flat",
-        "reason": "综合分 50/100 · 置信度低 · RSI 40 · 量比 1.4x",
-        "score": 50,
-        "confidence": "低",
+        "label": "日内偏强",
+        "class": "signal-up",
+        "reason": "综合分 80/100 · 置信度高 · RSI 40 · 量比 1.4x",
+        "score": 80,
+        "confidence": "高",
         "rsi": 39.7,
         "volume_ratio": 1.4,
-        "plan": "触发：重新站上MA5 3010.20 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 3105.00；失效：跌回MA5 3010.20 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.4
       },
       "source": "yfinance"
@@ -16114,16 +16105,16 @@
       "ytdChange": "33.82%",
       "distWeek": "-4.9%",
       "distMonth": "-4.9%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
-        "class": "signal-down",
-        "reason": "综合分 20/100 · 置信度高 · RSI 49 · 量比 1.2x",
-        "score": 20,
-        "confidence": "高",
+        "label": "震荡观察",
+        "class": "signal-flat",
+        "reason": "综合分 50/100 · 置信度低 · RSI 49 · 量比 1.2x",
+        "score": 50,
+        "confidence": "低",
         "rsi": 48.9,
         "volume_ratio": 1.19,
-        "plan": "触发：重新站上MA5 7420.20 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 7604.00；失效：跌回MA5 7420.20 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -16207,22 +16198,22 @@
       "distHigh": "-52.9%",
       "ytdChange": "-7.13%",
       "distWeek": "-12.7%",
-      "distMonth": "-37.0%",
-      "trend": "熊市空头",
+      "distMonth": "-36.5%",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
+        "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 15/100 · 置信度高 · RSI 14 · 量比 1.3x",
-        "score": 15,
-        "confidence": "高",
+        "reason": "综合分 45/100 · 置信度低 · RSI 14 · 量比 1.3x",
+        "score": 45,
+        "confidence": "低",
         "rsi": 14.2,
         "volume_ratio": 1.33,
-        "plan": "触发：重新站上MA5 4520.40 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 4900.00；失效：跌回MA5 4520.40 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.33
       },
       "source": "yfinance"
@@ -16297,16 +16288,16 @@
       "ytdChange": "312.37%",
       "distWeek": "-14.8%",
       "distMonth": "-26.2%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
+        "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 10/100 · 置信度高 · RSI 25 · 量比 1.1x",
-        "score": 10,
-        "confidence": "高",
+        "reason": "综合分 40/100 · 置信度中 · RSI 25 · 量比 1.1x",
+        "score": 40,
+        "confidence": "中",
         "rsi": 24.8,
         "volume_ratio": 1.09,
-        "plan": "触发：重新站上MA5 1279.20 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 1409.00；失效：跌回MA5 1279.20 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -16374,22 +16365,22 @@
       "distHigh": "-41.3%",
       "ytdChange": "22.74%",
       "distWeek": "-11.4%",
-      "distMonth": "-23.6%",
-      "trend": "熊市空头",
+      "distMonth": "-20.3%",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 25 · 量比 1.5x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 25 · 量比 1.5x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 25.5,
         "volume_ratio": 1.47,
-        "plan": "触发：重新站上MA5 2802.00 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 3005.00；失效：跌回MA5 2802.00 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.47
       },
       "source": "yfinance"
@@ -16464,7 +16455,7 @@
       "change": "-23.50 (-1.77%)",
       "week_change": -0.34,
       "isUp": false,
-      "per": "29.03",
+      "per": "28.51",
       "roe": "--",
       "forward_per": "9.93",
       "pbr": "9.68",
@@ -16543,17 +16534,17 @@
       "distHigh": "-53.9%",
       "ytdChange": "-38.22%",
       "distWeek": "-7.1%",
-      "distMonth": "-18.1%",
-      "trend": "熊市空头",
+      "distMonth": "-16.3%",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
+        "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 10/100 · 置信度高 · RSI 26 · 量比 0.9x",
-        "score": 10,
-        "confidence": "高",
+        "reason": "综合分 40/100 · 置信度中 · RSI 26 · 量比 0.9x",
+        "score": 40,
+        "confidence": "中",
         "rsi": 25.7,
         "volume_ratio": 0.94,
-        "plan": "触发：重新站上MA5 7971.80 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 8290.00；失效：跌回MA5 7971.80 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -16583,7 +16574,7 @@
       "change": "-78.00 (-2.31%)",
       "week_change": -5.18,
       "isUp": false,
-      "per": "13.93",
+      "per": "14.26",
       "roe": "9.5%",
       "forward_per": "21.72",
       "pbr": "1.63",
@@ -16591,16 +16582,16 @@
       "ytdChange": "33.67%",
       "distWeek": "-5.3%",
       "distMonth": "-11.1%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 37 · 量比 1.7x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 37 · 量比 1.7x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 37.2,
         "volume_ratio": 1.67,
-        "plan": "触发：重新站上MA5 3385.60 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 3478.00；失效：跌回MA5 3385.60 下方"
       },
       "flow_proxy": {
         "label": "疑似流出",
@@ -16630,7 +16621,7 @@
       "change": "-57.00 (-1.80%)",
       "week_change": -4.95,
       "isUp": false,
-      "per": "14.52",
+      "per": "14.18",
       "roe": "8.6%",
       "forward_per": "9.80",
       "pbr": "1.47",
@@ -16638,16 +16629,16 @@
       "ytdChange": "25.22%",
       "distWeek": "-4.9%",
       "distMonth": "-10.6%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 38 · 量比 1.5x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 38 · 量比 1.5x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 38.0,
         "volume_ratio": 1.51,
-        "plan": "触发：重新站上MA5 3185.60 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 3274.00；失效：跌回MA5 3185.60 下方"
       },
       "flow_proxy": {
         "label": "疑似流出",
@@ -16685,21 +16676,21 @@
       "ytdChange": "29.91%",
       "distWeek": "-7.6%",
       "distMonth": "-16.0%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 33 · 量比 1.4x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 33 · 量比 1.4x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 33.0,
         "volume_ratio": 1.43,
-        "plan": "触发：重新站上MA5 7755.60 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 8096.00；失效：跌回MA5 7755.60 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.43
       },
       "source": "yfinance"
@@ -16757,21 +16748,21 @@
       "ytdChange": "36.01%",
       "distWeek": "-5.1%",
       "distMonth": "-10.9%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 34 · 量比 1.3x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 34 · 量比 1.3x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 34.1,
         "volume_ratio": 1.32,
-        "plan": "触发：重新站上MA5 1633.40 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 1686.00；失效：跌回MA5 1633.40 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.32
       },
       "source": "yfinance"
@@ -16804,16 +16795,16 @@
       "ytdChange": "39.97%",
       "distWeek": "-8.5%",
       "distMonth": "-18.2%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 32 · 量比 1.5x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 32 · 量比 1.5x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 32.4,
         "volume_ratio": 1.54,
-        "plan": "触发：重新站上MA5 2232.40 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 2340.00；失效：跌回MA5 2232.40 下方"
       },
       "flow_proxy": {
         "label": "疑似流出",
@@ -16851,21 +16842,21 @@
       "ytdChange": "-11.07%",
       "distWeek": "-2.6%",
       "distMonth": "-6.8%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
-        "class": "signal-down",
-        "reason": "综合分 25/100 · 置信度高 · RSI 51 · 量比 1.3x",
-        "score": 25,
-        "confidence": "高",
+        "label": "偏强观察",
+        "class": "signal-up",
+        "reason": "综合分 55/100 · 置信度低 · RSI 51 · 量比 1.3x",
+        "score": 55,
+        "confidence": "低",
         "rsi": 51.3,
         "volume_ratio": 1.27,
-        "plan": "触发：重新站上MA5 1501.90 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 1548.00；失效：跌回MA5 1501.90 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.27
       },
       "source": "yfinance"
@@ -17076,7 +17067,7 @@
       "change": "-54.50 (-1.81%)",
       "week_change": -4.53,
       "isUp": false,
-      "per": "18.02",
+      "per": "17.88",
       "roe": "6.6%",
       "forward_per": "25.26",
       "pbr": "1.14",
@@ -17084,16 +17075,16 @@
       "ytdChange": "33.87%",
       "distWeek": "-5.1%",
       "distMonth": "-15.8%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 26 · 量比 1.6x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 26 · 量比 1.6x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 25.9,
         "volume_ratio": 1.64,
-        "plan": "触发：重新站上MA5 3026.90 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 3121.00；失效：跌回MA5 3026.90 下方"
       },
       "flow_proxy": {
         "label": "疑似流出",
@@ -17148,7 +17139,7 @@
       "change": "-165.00 (-2.76%)",
       "week_change": -3.01,
       "isUp": false,
-      "per": "13.53",
+      "per": "13.15",
       "roe": "20.0%",
       "forward_per": "19.40",
       "pbr": "2.58",
@@ -17156,16 +17147,16 @@
       "ytdChange": "-16.65%",
       "distWeek": "-7.9%",
       "distMonth": "-11.7%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
+        "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 10/100 · 置信度高 · RSI 41 · 量比 1.1x",
-        "score": 10,
-        "confidence": "高",
+        "reason": "综合分 40/100 · 置信度中 · RSI 41 · 量比 1.1x",
+        "score": 40,
+        "confidence": "中",
         "rsi": 40.9,
         "volume_ratio": 1.07,
-        "plan": "触发：重新站上MA5 5972.80 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 6309.00；失效：跌回MA5 5972.80 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -17228,16 +17219,16 @@
       "ytdChange": "35.71%",
       "distWeek": "-8.9%",
       "distMonth": "-18.1%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 29 · 量比 1.6x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 29 · 量比 1.6x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 28.9,
         "volume_ratio": 1.59,
-        "plan": "触发：重新站上MA5 2492.40 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 2603.00；失效：跌回MA5 2492.40 下方"
       },
       "flow_proxy": {
         "label": "疑似流出",
@@ -17300,16 +17291,16 @@
       "ytdChange": "41.48%",
       "distWeek": "-12.8%",
       "distMonth": "-23.7%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 24 · 量比 1.6x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 24 · 量比 1.6x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 23.6,
         "volume_ratio": 1.62,
-        "plan": "触发：重新站上MA5 2616.20 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 2792.00；失效：跌回MA5 2616.20 下方"
       },
       "flow_proxy": {
         "label": "疑似流出",
@@ -17365,16 +17356,16 @@
       "ytdChange": "14.35%",
       "distWeek": "-3.3%",
       "distMonth": "-4.8%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
-        "class": "signal-down",
-        "reason": "综合分 25/100 · 置信度高 · RSI 45 · 量比 1.2x",
-        "score": 25,
-        "confidence": "高",
+        "label": "偏强观察",
+        "class": "signal-up",
+        "reason": "综合分 55/100 · 置信度低 · RSI 45 · 量比 1.2x",
+        "score": 55,
+        "confidence": "低",
         "rsi": 44.6,
         "volume_ratio": 1.17,
-        "plan": "触发：重新站上MA5 335.60 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 343.90；失效：跌回MA5 335.60 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -17543,21 +17534,21 @@
       "ytdChange": "-43.56%",
       "distWeek": "-4.4%",
       "distMonth": "-14.5%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "偏强观察",
+        "label": "日内偏强",
         "class": "signal-up",
-        "reason": "综合分 60/100 · 置信度中 · RSI 49 · 量比 1.3x",
-        "score": 60,
-        "confidence": "中",
+        "reason": "综合分 90/100 · 置信度高 · RSI 49 · 量比 1.3x",
+        "score": 90,
+        "confidence": "高",
         "rsi": 48.7,
         "volume_ratio": 1.25,
-        "plan": "触发：重新站上MA5 922.20 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 967.00；失效：跌回MA5 922.20 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.25
       },
       "source": "yfinance"
@@ -17609,7 +17600,7 @@
       "change": "-50.50 (-2.65%)",
       "week_change": 0.71,
       "isUp": false,
-      "per": "7.58",
+      "per": "7.77",
       "roe": "38.5%",
       "forward_per": "108.20",
       "pbr": "2.04",
@@ -17689,21 +17680,21 @@
       "ytdChange": "-30.51%",
       "distWeek": "-5.2%",
       "distMonth": "-24.4%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "偏弱观察",
-        "class": "signal-down",
-        "reason": "综合分 35/100 · 置信度中 · RSI 28 · 量比 2.1x",
-        "score": 35,
+        "label": "偏强观察",
+        "class": "signal-up",
+        "reason": "综合分 65/100 · 置信度中 · RSI 28 · 量比 2.1x",
+        "score": 65,
         "confidence": "中",
         "rsi": 28.3,
         "volume_ratio": 2.08,
-        "plan": "触发：重新站上MA5 1008.60 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 1048.00；失效：跌回MA5 1008.60 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 2.08
       },
       "source": "yfinance"
@@ -17760,22 +17751,22 @@
       "distHigh": "-73.7%",
       "ytdChange": "-48.97%",
       "distWeek": "-5.6%",
-      "distMonth": "-18.1%",
-      "trend": "熊市空头",
+      "distMonth": "-17.7%",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "偏弱观察",
-        "class": "signal-down",
-        "reason": "综合分 35/100 · 置信度中 · RSI 29 · 量比 1.2x",
-        "score": 35,
+        "label": "偏强观察",
+        "class": "signal-up",
+        "reason": "综合分 65/100 · 置信度中 · RSI 29 · 量比 1.2x",
+        "score": 65,
         "confidence": "中",
         "rsi": 29.4,
         "volume_ratio": 1.24,
-        "plan": "触发：重新站上MA5 1016.60 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 1062.00；失效：跌回MA5 1016.60 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.24
       },
       "source": "yfinance"
@@ -17824,17 +17815,17 @@
       "distHigh": "-45.7%",
       "ytdChange": "-24.64%",
       "distWeek": "-2.9%",
-      "distMonth": "-11.5%",
-      "trend": "熊市空头",
+      "distMonth": "-9.6%",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
-        "class": "signal-down",
-        "reason": "综合分 25/100 · 置信度高 · RSI 32 · 量比 1.1x",
-        "score": 25,
-        "confidence": "高",
+        "label": "偏强观察",
+        "class": "signal-up",
+        "reason": "综合分 55/100 · 置信度低 · RSI 32 · 量比 1.1x",
+        "score": 55,
+        "confidence": "低",
         "rsi": 32.5,
         "volume_ratio": 1.14,
-        "plan": "触发：重新站上MA5 11328.00 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 11575.00；失效：跌回MA5 11328.00 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -17889,16 +17880,16 @@
       "ytdChange": "-9.47%",
       "distWeek": "-0.9%",
       "distMonth": "-4.6%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
-        "class": "signal-down",
-        "reason": "综合分 25/100 · 置信度高 · RSI 44 · 量比 1.0x",
-        "score": 25,
-        "confidence": "高",
+        "label": "偏强观察",
+        "class": "signal-up",
+        "reason": "综合分 55/100 · 置信度低 · RSI 44 · 量比 1.0x",
+        "score": 55,
+        "confidence": "低",
         "rsi": 43.9,
         "volume_ratio": 0.96,
-        "plan": "触发：重新站上MA5 2903.20 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 2943.50；失效：跌回MA5 2903.20 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -17952,17 +17943,17 @@
       "distHigh": "-43.9%",
       "ytdChange": "-22.97%",
       "distWeek": "-1.0%",
-      "distMonth": "-13.3%",
-      "trend": "熊市空头",
+      "distMonth": "-9.0%",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
-        "class": "signal-down",
-        "reason": "综合分 25/100 · 置信度高 · RSI 42 · 量比 1.1x",
-        "score": 25,
-        "confidence": "高",
+        "label": "偏强观察",
+        "class": "signal-up",
+        "reason": "综合分 55/100 · 置信度低 · RSI 42 · 量比 1.1x",
+        "score": 55,
+        "confidence": "低",
         "rsi": 41.6,
         "volume_ratio": 1.14,
-        "plan": "触发：重新站上MA5 2017.50 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 2049.50；失效：跌回MA5 2017.50 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -18023,17 +18014,17 @@
       "distHigh": "-56.5%",
       "ytdChange": "-27.85%",
       "distWeek": "-3.2%",
-      "distMonth": "-6.4%",
-      "trend": "熊市空头",
+      "distMonth": "-5.4%",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "偏弱观察",
-        "class": "signal-down",
-        "reason": "综合分 35/100 · 置信度中 · RSI 45 · 量比 1.2x",
-        "score": 35,
+        "label": "偏强观察",
+        "class": "signal-up",
+        "reason": "综合分 65/100 · 置信度中 · RSI 45 · 量比 1.2x",
+        "score": 65,
         "confidence": "中",
         "rsi": 45.1,
         "volume_ratio": 1.18,
-        "plan": "触发：重新站上MA5 2054.80 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 2104.00；失效：跌回MA5 2054.80 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -18102,16 +18093,16 @@
       "ytdChange": "-18.65%",
       "distWeek": "-1.3%",
       "distMonth": "-4.5%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
-        "class": "signal-down",
-        "reason": "综合分 25/100 · 置信度高 · RSI 40 · 量比 1.1x",
-        "score": 25,
-        "confidence": "高",
+        "label": "偏强观察",
+        "class": "signal-up",
+        "reason": "综合分 55/100 · 置信度低 · RSI 40 · 量比 1.1x",
+        "score": 55,
+        "confidence": "低",
         "rsi": 40.0,
         "volume_ratio": 1.14,
-        "plan": "触发：重新站上MA5 4743.20 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 4807.00；失效：跌回MA5 4743.20 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -18194,7 +18185,7 @@
       "distHigh": "-21.6%",
       "ytdChange": "32.01%",
       "distWeek": "-2.5%",
-      "distMonth": "-3.5%",
+      "distMonth": "-2.5%",
       "trend": "牛市多头",
       "intraday_signal": {
         "label": "偏弱观察",
@@ -18414,24 +18405,24 @@
       "change": "+1.50 (+0.14%)",
       "week_change": -3.12,
       "isUp": true,
-      "per": "19.49",
+      "per": "19.51",
       "roe": "5.9%",
       "forward_per": "3.96",
       "pbr": "0.36",
       "distHigh": "-22.2%",
       "ytdChange": "-8.52%",
       "distWeek": "-3.4%",
-      "distMonth": "-5.5%",
-      "trend": "熊市空头",
+      "distMonth": "-5.2%",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "偏弱观察",
-        "class": "signal-down",
-        "reason": "综合分 45/100 · 置信度低 · RSI 55 · 量比 1.1x",
-        "score": 45,
-        "confidence": "低",
+        "label": "日内偏强",
+        "class": "signal-up",
+        "reason": "综合分 75/100 · 置信度高 · RSI 55 · 量比 1.1x",
+        "score": 75,
+        "confidence": "高",
         "rsi": 55.4,
         "volume_ratio": 1.07,
-        "plan": "触发：重新站上MA5 1094.30 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 1123.00；失效：跌回MA5 1094.30 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -18494,16 +18485,16 @@
       "ytdChange": "42.56%",
       "distWeek": "-15.5%",
       "distMonth": "-31.8%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
+        "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 10/100 · 置信度高 · RSI 30 · 量比 1.2x",
-        "score": 10,
-        "confidence": "高",
+        "reason": "综合分 40/100 · 置信度中 · RSI 30 · 量比 1.2x",
+        "score": 40,
+        "confidence": "中",
         "rsi": 30.3,
         "volume_ratio": 1.15,
-        "plan": "触发：重新站上MA5 1770.40 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 1951.00；失效：跌回MA5 1770.40 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -18576,21 +18567,21 @@
       "ytdChange": "26.38%",
       "distWeek": "-9.3%",
       "distMonth": "-19.6%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 24 · 量比 1.4x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 24 · 量比 1.4x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 24.0,
         "volume_ratio": 1.42,
-        "plan": "触发：重新站上MA5 2048.60 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 2160.00；失效：跌回MA5 2048.60 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.42
       },
       "source": "yfinance"
@@ -18647,22 +18638,22 @@
       "distHigh": "-31.6%",
       "ytdChange": "13.20%",
       "distWeek": "-9.1%",
-      "distMonth": "-19.4%",
-      "trend": "熊市空头",
+      "distMonth": "-15.7%",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
+        "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 15/100 · 置信度高 · RSI 29 · 量比 1.3x",
-        "score": 15,
-        "confidence": "高",
+        "reason": "综合分 45/100 · 置信度低 · RSI 29 · 量比 1.3x",
+        "score": 45,
+        "confidence": "低",
         "rsi": 29.1,
         "volume_ratio": 1.27,
-        "plan": "触发：重新站上MA5 4292.00 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 4555.00；失效：跌回MA5 4292.00 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.27
       },
       "source": "yfinance"
@@ -18726,21 +18717,21 @@
       "ytdChange": "19.55%",
       "distWeek": "-12.8%",
       "distMonth": "-27.5%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 33 · 量比 1.3x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 33 · 量比 1.3x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 32.6,
         "volume_ratio": 1.28,
-        "plan": "触发：重新站上MA5 2191.60 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 2383.00；失效：跌回MA5 2191.60 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.28
       },
       "source": "yfinance"
@@ -18803,17 +18794,17 @@
       "distHigh": "-58.4%",
       "ytdChange": "-37.50%",
       "distWeek": "-9.1%",
-      "distMonth": "-22.0%",
-      "trend": "熊市空头",
+      "distMonth": "-18.5%",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 22 · 量比 1.5x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 22 · 量比 1.5x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 22.4,
         "volume_ratio": 1.52,
-        "plan": "触发：重新站上MA5 3652.40 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 3862.00；失效：跌回MA5 3652.40 下方"
       },
       "flow_proxy": {
         "label": "疑似流出",
@@ -18875,16 +18866,16 @@
       "ytdChange": "54.14%",
       "distWeek": "-9.0%",
       "distMonth": "-14.2%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
-        "class": "signal-down",
-        "reason": "综合分 25/100 · 置信度高 · RSI 40 · 量比 0.9x",
-        "score": 25,
-        "confidence": "高",
+        "label": "偏强观察",
+        "class": "signal-up",
+        "reason": "综合分 55/100 · 置信度低 · RSI 40 · 量比 0.9x",
+        "score": 55,
+        "confidence": "低",
         "rsi": 40.0,
         "volume_ratio": 0.89,
-        "plan": "触发：重新站上MA5 5386.00 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 5760.00；失效：跌回MA5 5386.00 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -18952,22 +18943,22 @@
       "distHigh": "-76.0%",
       "ytdChange": "-36.53%",
       "distWeek": "-7.9%",
-      "distMonth": "-28.5%",
-      "trend": "熊市空头",
+      "distMonth": "-25.2%",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 21 · 量比 1.3x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 21 · 量比 1.3x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 20.8,
         "volume_ratio": 1.31,
-        "plan": "触发：重新站上MA5 2186.20 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 2282.00；失效：跌回MA5 2186.20 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.31
       },
       "source": "yfinance"
@@ -19031,16 +19022,16 @@
       "ytdChange": "-14.67%",
       "distWeek": "-9.4%",
       "distMonth": "-11.8%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
-        "class": "signal-down",
-        "reason": "综合分 25/100 · 置信度高 · RSI 40 · 量比 0.9x",
-        "score": 25,
-        "confidence": "高",
+        "label": "偏强观察",
+        "class": "signal-up",
+        "reason": "综合分 55/100 · 置信度低 · RSI 40 · 量比 0.9x",
+        "score": 55,
+        "confidence": "低",
         "rsi": 39.8,
         "volume_ratio": 0.89,
-        "plan": "触发：重新站上MA5 239.40 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 256.00；失效：跌回MA5 239.40 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -19101,7 +19092,7 @@
       "change": "-200.00 (-2.29%)",
       "week_change": -12.41,
       "isUp": false,
-      "per": "14.68",
+      "per": "11.59",
       "roe": "11.2%",
       "forward_per": "13.29",
       "pbr": "1.20",
@@ -19109,16 +19100,16 @@
       "ytdChange": "-9.18%",
       "distWeek": "-12.3%",
       "distMonth": "-28.8%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 29 · 量比 1.7x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 29 · 量比 1.7x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 29.1,
         "volume_ratio": 1.74,
-        "plan": "触发：重新站上MA5 9052.00 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 9740.00；失效：跌回MA5 9052.00 下方"
       },
       "flow_proxy": {
         "label": "疑似流出",
@@ -19172,7 +19163,7 @@
       "change": "-350.00 (-2.77%)",
       "week_change": -11.2,
       "isUp": false,
-      "per": "23.80",
+      "per": "25.38",
       "roe": "9.5%",
       "forward_per": "31.93",
       "pbr": "2.00",
@@ -19180,16 +19171,16 @@
       "ytdChange": "42.39%",
       "distWeek": "-15.5%",
       "distMonth": "-28.5%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
+        "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 10/100 · 置信度高 · RSI 20 · 量比 1.1x",
-        "score": 10,
-        "confidence": "高",
+        "reason": "综合分 40/100 · 置信度中 · RSI 20 · 量比 1.1x",
+        "score": 40,
+        "confidence": "中",
         "rsi": 20.1,
         "volume_ratio": 1.15,
-        "plan": "触发：重新站上MA5 13164.00 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 14550.00；失效：跌回MA5 13164.00 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -19251,16 +19242,16 @@
       "ytdChange": "31.15%",
       "distWeek": "-12.1%",
       "distMonth": "-27.7%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
+        "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 10/100 · 置信度高 · RSI 21 · 量比 1.1x",
-        "score": 10,
-        "confidence": "高",
+        "reason": "综合分 40/100 · 置信度中 · RSI 21 · 量比 1.1x",
+        "score": 40,
+        "confidence": "中",
         "rsi": 21.0,
         "volume_ratio": 1.12,
-        "plan": "触发：重新站上MA5 1668.20 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 1789.00；失效：跌回MA5 1668.20 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -19532,16 +19523,16 @@
       "ytdChange": "14.80%",
       "distWeek": "-7.1%",
       "distMonth": "-8.2%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
-        "class": "signal-down",
-        "reason": "综合分 20/100 · 置信度高 · RSI 47 · 量比 1.1x",
-        "score": 20,
-        "confidence": "高",
+        "label": "震荡观察",
+        "class": "signal-flat",
+        "reason": "综合分 50/100 · 置信度低 · RSI 47 · 量比 1.1x",
+        "score": 50,
+        "confidence": "低",
         "rsi": 47.3,
         "volume_ratio": 1.09,
-        "plan": "触发：重新站上MA5 596.00 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 618.00；失效：跌回MA5 596.00 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -19749,7 +19740,7 @@
       "distHigh": "-27.8%",
       "ytdChange": "-10.69%",
       "distWeek": "-2.1%",
-      "distMonth": "-2.7%",
+      "distMonth": "-2.4%",
       "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏强",
@@ -19961,7 +19952,7 @@
       "change": "+14.00 (+1.01%)",
       "week_change": -10.51,
       "isUp": true,
-      "per": "13.98",
+      "per": "15.06",
       "roe": "5.0%",
       "forward_per": "--",
       "pbr": "0.67",
@@ -19969,21 +19960,21 @@
       "ytdChange": "84.51%",
       "distWeek": "-10.4%",
       "distMonth": "-33.4%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "震荡观察",
-        "class": "signal-flat",
-        "reason": "综合分 50/100 · 置信度低 · RSI 13 · 量比 1.3x",
-        "score": 50,
-        "confidence": "低",
+        "label": "日内偏强",
+        "class": "signal-up",
+        "reason": "综合分 80/100 · 置信度高 · RSI 13 · 量比 1.3x",
+        "score": 80,
+        "confidence": "高",
         "rsi": 13.5,
         "volume_ratio": 1.35,
-        "plan": "触发：重新站上MA5 1447.80 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 1568.00；失效：跌回MA5 1447.80 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.35
       },
       "source": "yfinance"
@@ -20026,7 +20017,7 @@
       "change": "-32.00 (-1.50%)",
       "week_change": -7.29,
       "isUp": false,
-      "per": "14.25",
+      "per": "13.63",
       "roe": "8.2%",
       "forward_per": "--",
       "pbr": "1.03",
@@ -20034,21 +20025,21 @@
       "ytdChange": "35.92%",
       "distWeek": "-7.1%",
       "distMonth": "-14.6%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 29 · 量比 1.3x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 29 · 量比 1.3x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 29.3,
         "volume_ratio": 1.25,
-        "plan": "触发：重新站上MA5 2173.80 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 2265.00；失效：跌回MA5 2173.80 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.25
       },
       "source": "yfinance"
@@ -20099,21 +20090,21 @@
       "ytdChange": "42.17%",
       "distWeek": "-9.3%",
       "distMonth": "-17.0%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 32 · 量比 1.3x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 32 · 量比 1.3x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 31.7,
         "volume_ratio": 1.35,
-        "plan": "触发：重新站上MA5 3144.40 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 3309.00；失效：跌回MA5 3144.40 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.35
       },
       "source": "yfinance"
@@ -20164,21 +20155,21 @@
       "ytdChange": "34.76%",
       "distWeek": "-10.8%",
       "distMonth": "-20.3%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 25 · 量比 1.2x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 25 · 量比 1.2x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 25.3,
         "volume_ratio": 1.23,
-        "plan": "触发：重新站上MA5 3566.80 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 3789.00；失效：跌回MA5 3566.80 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.23
       },
       "source": "yfinance"
@@ -20229,16 +20220,16 @@
       "ytdChange": "24.07%",
       "distWeek": "-9.2%",
       "distMonth": "-21.7%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
+        "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 10/100 · 置信度高 · RSI 21 · 量比 1.2x",
-        "score": 10,
-        "confidence": "高",
+        "reason": "综合分 40/100 · 置信度中 · RSI 21 · 量比 1.2x",
+        "score": 40,
+        "confidence": "中",
         "rsi": 21.4,
         "volume_ratio": 1.17,
-        "plan": "触发：重新站上MA5 3319.40 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 3490.00；失效：跌回MA5 3319.40 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -20294,16 +20285,16 @@
       "ytdChange": "59.54%",
       "distWeek": "-11.4%",
       "distMonth": "-26.3%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 21 · 量比 1.7x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 21 · 量比 1.7x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 20.7,
         "volume_ratio": 1.71,
-        "plan": "触发：重新站上MA5 730.90 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 777.70；失效：跌回MA5 730.90 下方"
       },
       "flow_proxy": {
         "label": "疑似流出",
@@ -20359,16 +20350,16 @@
       "ytdChange": "37.82%",
       "distWeek": "-11.4%",
       "distMonth": "-24.3%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 20 · 量比 1.9x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 20 · 量比 1.9x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 19.9,
         "volume_ratio": 1.94,
-        "plan": "触发：重新站上MA5 2144.00 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 2280.00；失效：跌回MA5 2144.00 下方"
       },
       "flow_proxy": {
         "label": "疑似流出",
@@ -20437,21 +20428,21 @@
       "ytdChange": "49.89%",
       "distWeek": "-8.0%",
       "distMonth": "-24.0%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
+        "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 15/100 · 置信度高 · RSI 20 · 量比 1.7x",
-        "score": 15,
-        "confidence": "高",
+        "reason": "综合分 45/100 · 置信度低 · RSI 20 · 量比 1.7x",
+        "score": 45,
+        "confidence": "低",
         "rsi": 19.9,
         "volume_ratio": 1.69,
-        "plan": "触发：重新站上MA5 3853.00 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 4053.00；失效：跌回MA5 3853.00 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.69
       },
       "source": "yfinance"
@@ -20508,21 +20499,21 @@
       "ytdChange": "36.16%",
       "distWeek": "-8.0%",
       "distMonth": "-21.9%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
+        "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 15/100 · 置信度高 · RSI 29 · 量比 1.2x",
-        "score": 15,
-        "confidence": "高",
+        "reason": "综合分 45/100 · 置信度低 · RSI 29 · 量比 1.2x",
+        "score": 45,
+        "confidence": "低",
         "rsi": 29.2,
         "volume_ratio": 1.22,
-        "plan": "触发：重新站上MA5 64592.00 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 67670.00；失效：跌回MA5 64592.00 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.22
       },
       "source": "yfinance"
@@ -20736,16 +20727,16 @@
       "ytdChange": "24.78%",
       "distWeek": "-5.8%",
       "distMonth": "-13.0%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 30 · 量比 2.2x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 30 · 量比 2.2x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 29.6,
         "volume_ratio": 2.2,
-        "plan": "触发：重新站上MA5 1908.20 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 1967.00；失效：跌回MA5 1908.20 下方"
       },
       "flow_proxy": {
         "label": "疑似流出",
@@ -20801,21 +20792,21 @@
       "ytdChange": "41.92%",
       "distWeek": "-3.1%",
       "distMonth": "-4.9%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
-        "class": "signal-down",
-        "reason": "综合分 25/100 · 置信度高 · RSI 54 · 量比 1.2x",
-        "score": 25,
-        "confidence": "高",
+        "label": "偏强观察",
+        "class": "signal-up",
+        "reason": "综合分 55/100 · 置信度低 · RSI 54 · 量比 1.2x",
+        "score": 55,
+        "confidence": "低",
         "rsi": 54.4,
         "volume_ratio": 1.2,
-        "plan": "触发：重新站上MA5 1826.30 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 1877.00；失效：跌回MA5 1826.30 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.2
       },
       "source": "yfinance"
@@ -20871,17 +20862,17 @@
       "distHigh": "-52.3%",
       "ytdChange": "427.91%",
       "distWeek": "-14.5%",
-      "distMonth": "-47.5%",
-      "trend": "熊市空头",
+      "distMonth": "-44.8%",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
+        "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 10/100 · 置信度高 · RSI 10 · 量比 1.1x",
-        "score": 10,
-        "confidence": "高",
+        "reason": "综合分 40/100 · 置信度中 · RSI 10 · 量比 1.1x",
+        "score": 40,
+        "confidence": "中",
         "rsi": 10.4,
         "volume_ratio": 1.11,
-        "plan": "触发：重新站上MA5 5994.00 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 6530.00；失效：跌回MA5 5994.00 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -20950,16 +20941,16 @@
       "ytdChange": "98.13%",
       "distWeek": "-7.2%",
       "distMonth": "-27.3%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "震荡观察",
-        "class": "signal-flat",
-        "reason": "综合分 50/100 · 置信度低 · RSI 54 · 量比 0.8x",
-        "score": 50,
-        "confidence": "低",
+        "label": "日内偏强",
+        "class": "signal-up",
+        "reason": "综合分 80/100 · 置信度高 · RSI 54 · 量比 0.8x",
+        "score": 80,
+        "confidence": "高",
         "rsi": 53.6,
         "volume_ratio": 0.78,
-        "plan": "触发：重新站上MA5 1995.20 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 2166.00；失效：跌回MA5 1995.20 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -21031,17 +21022,17 @@
       "distHigh": "-40.6%",
       "ytdChange": "-36.80%",
       "distWeek": "-2.8%",
-      "distMonth": "-10.7%",
-      "trend": "熊市空头",
+      "distMonth": "-8.9%",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
-        "class": "signal-down",
-        "reason": "综合分 25/100 · 置信度高 · RSI 42 · 量比 1.0x",
-        "score": 25,
-        "confidence": "高",
+        "label": "偏强观察",
+        "class": "signal-up",
+        "reason": "综合分 55/100 · 置信度低 · RSI 42 · 量比 1.0x",
+        "score": 55,
+        "confidence": "低",
         "rsi": 42.0,
         "volume_ratio": 0.97,
-        "plan": "触发：重新站上MA5 638.82 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 652.50；失效：跌回MA5 638.82 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -21196,22 +21187,22 @@
       "distHigh": "-67.7%",
       "ytdChange": "31.54%",
       "distWeek": "-4.7%",
-      "distMonth": "-21.2%",
-      "trend": "熊市空头",
+      "distMonth": "-19.6%",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
+        "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 15/100 · 置信度高 · RSI 27 · 量比 1.3x",
-        "score": 15,
-        "confidence": "高",
+        "reason": "综合分 45/100 · 置信度低 · RSI 27 · 量比 1.3x",
+        "score": 45,
+        "confidence": "低",
         "rsi": 26.6,
         "volume_ratio": 1.27,
-        "plan": "触发：重新站上MA5 473.20 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 488.00；失效：跌回MA5 473.20 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.27
       },
       "source": "yfinance"
@@ -21270,17 +21261,17 @@
       "distHigh": "-42.9%",
       "ytdChange": "44.98%",
       "distWeek": "-10.9%",
-      "distMonth": "-30.7%",
-      "trend": "熊市空头",
+      "distMonth": "-26.8%",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
+        "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 10/100 · 置信度高 · RSI 34 · 量比 0.9x",
-        "score": 10,
-        "confidence": "高",
+        "reason": "综合分 40/100 · 置信度中 · RSI 34 · 量比 0.9x",
+        "score": 40,
+        "confidence": "中",
         "rsi": 34.0,
         "volume_ratio": 0.95,
-        "plan": "触发：重新站上MA5 1232.20 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 1346.00；失效：跌回MA5 1232.20 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -21342,21 +21333,21 @@
       "ytdChange": "27.09%",
       "distWeek": "-8.6%",
       "distMonth": "-20.9%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
+        "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 15/100 · 置信度高 · RSI 20 · 量比 1.4x",
-        "score": 15,
-        "confidence": "高",
+        "reason": "综合分 45/100 · 置信度低 · RSI 20 · 量比 1.4x",
+        "score": 45,
+        "confidence": "低",
         "rsi": 20.0,
         "volume_ratio": 1.45,
-        "plan": "触发：重新站上MA5 738.60 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 782.00；失效：跌回MA5 738.60 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.45
       },
       "source": "yfinance"
@@ -21412,17 +21403,17 @@
       "distHigh": "-7.3%",
       "ytdChange": "19.95%",
       "distWeek": "-2.9%",
-      "distMonth": "-6.5%",
-      "trend": "熊市空头",
+      "distMonth": "-5.8%",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
+        "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 10/100 · 置信度高 · RSI 37 · 量比 1.1x",
-        "score": 10,
-        "confidence": "高",
+        "reason": "综合分 40/100 · 置信度中 · RSI 37 · 量比 1.1x",
+        "score": 40,
+        "confidence": "中",
         "rsi": 36.7,
         "volume_ratio": 1.06,
-        "plan": "触发：重新站上MA5 773.40 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 787.00；失效：跌回MA5 773.40 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -21483,17 +21474,17 @@
       "distHigh": "-40.3%",
       "ytdChange": "24.38%",
       "distWeek": "-3.5%",
-      "distMonth": "-11.9%",
-      "trend": "熊市空头",
+      "distMonth": "-10.6%",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
+        "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 10/100 · 置信度高 · RSI 46 · 量比 1.6x",
-        "score": 10,
-        "confidence": "高",
+        "reason": "综合分 40/100 · 置信度中 · RSI 46 · 量比 1.6x",
+        "score": 40,
+        "confidence": "中",
         "rsi": 45.7,
         "volume_ratio": 1.59,
-        "plan": "触发：重新站上MA5 609.20 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 622.00；失效：跌回MA5 609.20 下方"
       },
       "flow_proxy": {
         "label": "疑似流出",
@@ -21547,7 +21538,7 @@
       "change": "-24.00 (-1.26%)",
       "week_change": -6.34,
       "isUp": false,
-      "per": "5.08",
+      "per": "5.18",
       "roe": "11.9%",
       "forward_per": "--",
       "pbr": "0.55",
@@ -21555,21 +21546,21 @@
       "ytdChange": "101.82%",
       "distWeek": "-7.2%",
       "distMonth": "-12.8%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 36 · 量比 1.3x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 36 · 量比 1.3x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 35.5,
         "volume_ratio": 1.34,
-        "plan": "触发：重新站上MA5 1935.40 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 2021.00；失效：跌回MA5 1935.40 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.34
       },
       "source": "yfinance"
@@ -21637,16 +21628,16 @@
       "ytdChange": "-12.87%",
       "distWeek": "-11.4%",
       "distMonth": "-17.1%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
+        "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 10/100 · 置信度高 · RSI 9 · 量比 1.0x",
-        "score": 10,
-        "confidence": "高",
+        "reason": "综合分 40/100 · 置信度中 · RSI 9 · 量比 1.0x",
+        "score": 40,
+        "confidence": "中",
         "rsi": 9.2,
         "volume_ratio": 1.01,
-        "plan": "触发：重新站上MA5 341.60 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 367.00；失效：跌回MA5 341.60 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -21775,7 +21766,7 @@
       "change": "-230.00 (-2.89%)",
       "week_change": 4.74,
       "isUp": false,
-      "per": "75.00",
+      "per": "78.24",
       "roe": "40.8%",
       "forward_per": "38.02",
       "pbr": "26.12",
@@ -21857,22 +21848,22 @@
       "distHigh": "-54.2%",
       "ytdChange": "0.00%",
       "distWeek": "-7.4%",
-      "distMonth": "-19.2%",
-      "trend": "熊市空头",
+      "distMonth": "-18.2%",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "偏弱观察",
-        "class": "signal-down",
-        "reason": "综合分 35/100 · 置信度中 · RSI 32 · 量比 1.3x",
-        "score": 35,
+        "label": "偏强观察",
+        "class": "signal-up",
+        "reason": "综合分 65/100 · 置信度中 · RSI 32 · 量比 1.3x",
+        "score": 65,
         "confidence": "中",
         "rsi": 31.6,
         "volume_ratio": 1.29,
-        "plan": "触发：重新站上MA5 373.60 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 392.00；失效：跌回MA5 373.60 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.29
       },
       "source": "yfinance"
@@ -21929,21 +21920,21 @@
       "ytdChange": "60.62%",
       "distWeek": "-11.2%",
       "distMonth": "-25.9%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 17 · 量比 1.4x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 17 · 量比 1.4x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 16.7,
         "volume_ratio": 1.36,
-        "plan": "触发：重新站上MA5 1186.80 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 1277.00；失效：跌回MA5 1186.80 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.36
       },
       "source": "yfinance"
@@ -22002,22 +21993,22 @@
       "distHigh": "-30.5%",
       "ytdChange": "-17.43%",
       "distWeek": "-2.2%",
-      "distMonth": "-15.9%",
-      "trend": "熊市空头",
+      "distMonth": "-7.0%",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
-        "class": "signal-down",
-        "reason": "综合分 25/100 · 置信度高 · RSI 49 · 量比 1.3x",
-        "score": 25,
-        "confidence": "高",
+        "label": "偏强观察",
+        "class": "signal-up",
+        "reason": "综合分 55/100 · 置信度低 · RSI 49 · 量比 1.3x",
+        "score": 55,
+        "confidence": "低",
         "rsi": 49.2,
         "volume_ratio": 1.34,
-        "plan": "触发：重新站上MA5 570.60 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 583.00；失效：跌回MA5 570.60 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.34
       },
       "source": "yfinance"
@@ -22085,17 +22076,17 @@
       "distHigh": "-69.1%",
       "ytdChange": "-24.32%",
       "distWeek": "-21.1%",
-      "distMonth": "-28.2%",
-      "trend": "熊市空头",
+      "distMonth": "-27.3%",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
+        "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 10/100 · 置信度高 · RSI 25 · 量比 1.0x",
-        "score": 10,
-        "confidence": "高",
+        "reason": "综合分 40/100 · 置信度中 · RSI 25 · 量比 1.0x",
+        "score": 40,
+        "confidence": "中",
         "rsi": 25.0,
         "volume_ratio": 0.95,
-        "plan": "触发：重新站上MA5 126.40 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 142.00；失效：跌回MA5 126.40 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -22169,21 +22160,21 @@
       "ytdChange": "13.68%",
       "distWeek": "-3.2%",
       "distMonth": "-6.2%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "偏弱观察",
-        "class": "signal-down",
-        "reason": "综合分 35/100 · 置信度中 · RSI 45 · 量比 1.4x",
-        "score": 35,
+        "label": "偏强观察",
+        "class": "signal-up",
+        "reason": "综合分 65/100 · 置信度中 · RSI 45 · 量比 1.4x",
+        "score": 65,
         "confidence": "中",
         "rsi": 44.8,
         "volume_ratio": 1.38,
-        "plan": "触发：重新站上MA5 4815.00 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 4945.00；失效：跌回MA5 4815.00 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.38
       },
       "source": "yfinance"
@@ -22589,7 +22580,7 @@
       "per": "43.00",
       "roe": "-2.0%",
       "forward_per": "43.00",
-      "pbr": "0.43",
+      "pbr": "0.42",
       "distHigh": "-44.9%",
       "ytdChange": "-25.86%",
       "distWeek": "-1.5%",
@@ -22744,16 +22735,16 @@
       "ytdChange": "-53.25%",
       "distWeek": "-19.3%",
       "distMonth": "-41.2%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 23 · 量比 2.1x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 23 · 量比 2.1x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 23.4,
         "volume_ratio": 2.13,
-        "plan": "触发：重新站上MA5 168.20 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 187.00；失效：跌回MA5 168.20 下方"
       },
       "flow_proxy": {
         "label": "疑似流出",
@@ -22818,17 +22809,17 @@
       "distHigh": "-43.4%",
       "ytdChange": "-2.14%",
       "distWeek": "-2.6%",
-      "distMonth": "-32.4%",
-      "trend": "熊市空头",
+      "distMonth": "-25.5%",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "震荡观察",
-        "class": "signal-flat",
-        "reason": "综合分 50/100 · 置信度低 · RSI 24 · 量比 2.1x",
-        "score": 50,
-        "confidence": "低",
+        "label": "日内偏强",
+        "class": "signal-up",
+        "reason": "综合分 80/100 · 置信度高 · RSI 24 · 量比 2.1x",
+        "score": 80,
+        "confidence": "高",
         "rsi": 23.5,
         "volume_ratio": 2.12,
-        "plan": "触发：重新站上MA5 2977.20 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 3055.00；失效：跌回MA5 2977.20 下方"
       },
       "flow_proxy": {
         "label": "疑似流入",
@@ -24083,16 +24074,16 @@
       "ytdChange": "4.53%",
       "distWeek": "-5.0%",
       "distMonth": "-7.2%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
+        "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 10/100 · 置信度高 · RSI 37 · 量比 0.9x",
-        "score": 10,
-        "confidence": "高",
+        "reason": "综合分 40/100 · 置信度中 · RSI 37 · 量比 0.9x",
+        "score": 40,
+        "confidence": "中",
         "rsi": 36.8,
         "volume_ratio": 0.93,
-        "plan": "触发：重新站上MA5 2889.80 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 2992.50；失效：跌回MA5 2889.80 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -24271,22 +24262,22 @@
       "distHigh": "-74.7%",
       "ytdChange": "13.86%",
       "distWeek": "-5.6%",
-      "distMonth": "-26.5%",
-      "trend": "熊市空头",
+      "distMonth": "-23.3%",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
+        "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 15/100 · 置信度高 · RSI 22 · 量比 1.4x",
-        "score": 15,
-        "confidence": "高",
+        "reason": "综合分 45/100 · 置信度低 · RSI 22 · 量比 1.4x",
+        "score": 45,
+        "confidence": "低",
         "rsi": 21.6,
         "volume_ratio": 1.43,
-        "plan": "触发：重新站上MA5 1066.60 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 1105.00；失效：跌回MA5 1066.60 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.43
       },
       "source": "yfinance"
@@ -25128,21 +25119,21 @@
       "ytdChange": "36.09%",
       "distWeek": "-7.9%",
       "distMonth": "-15.9%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 31 · 量比 1.4x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 31 · 量比 1.4x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 30.5,
         "volume_ratio": 1.4,
-        "plan": "触发：重新站上MA5 6956.60 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 7287.00；失效：跌回MA5 6956.60 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.4
       },
       "source": "yfinance"
@@ -25300,21 +25291,21 @@
       "ytdChange": "15.09%",
       "distWeek": "-5.1%",
       "distMonth": "-6.7%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
+        "label": "偏弱观察",
         "class": "signal-down",
-        "reason": "综合分 15/100 · 置信度高 · RSI 40 · 量比 1.3x",
-        "score": 15,
-        "confidence": "高",
+        "reason": "综合分 45/100 · 置信度低 · RSI 40 · 量比 1.3x",
+        "score": 45,
+        "confidence": "低",
         "rsi": 40.1,
         "volume_ratio": 1.32,
-        "plan": "触发：重新站上MA5 1208.90 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 1247.50；失效：跌回MA5 1208.90 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.32
       },
       "source": "yfinance"
@@ -25347,16 +25338,16 @@
       "ytdChange": "-27.45%",
       "distWeek": "0.0%",
       "distMonth": "-35.4%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "震荡观察",
-        "class": "signal-flat",
-        "reason": "综合分 50/100 · 置信度低 · RSI 30 · 量比 3.2x",
-        "score": 50,
-        "confidence": "低",
+        "label": "日内偏强",
+        "class": "signal-up",
+        "reason": "综合分 80/100 · 置信度高 · RSI 30 · 量比 3.2x",
+        "score": 80,
+        "confidence": "高",
         "rsi": 30.2,
         "volume_ratio": 3.23,
-        "plan": "触发：重新站上MA5 1335.60 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 1530.00；失效：跌回MA5 1335.60 下方"
       },
       "flow_proxy": {
         "label": "疑似流入",
@@ -25488,21 +25479,21 @@
       "ytdChange": "11.67%",
       "distWeek": "-2.3%",
       "distMonth": "-3.3%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 36 · 量比 1.4x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 36 · 量比 1.4x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 36.4,
         "volume_ratio": 1.44,
-        "plan": "触发：重新站上MA5 1273.80 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 1287.00；失效：跌回MA5 1273.80 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.44
       },
       "source": "yfinance"
@@ -25534,17 +25525,17 @@
       "distHigh": "-60.5%",
       "ytdChange": "-6.28%",
       "distWeek": "-3.9%",
-      "distMonth": "-11.5%",
-      "trend": "熊市空头",
+      "distMonth": "-9.8%",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
-        "class": "signal-down",
-        "reason": "综合分 25/100 · 置信度高 · RSI 38 · 量比 1.1x",
-        "score": 25,
-        "confidence": "高",
+        "label": "偏强观察",
+        "class": "signal-up",
+        "reason": "综合分 55/100 · 置信度低 · RSI 38 · 量比 1.1x",
+        "score": 55,
+        "confidence": "低",
         "rsi": 38.2,
         "volume_ratio": 1.13,
-        "plan": "触发：重新站上MA5 1880.00 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 1941.00；失效：跌回MA5 1880.00 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -25581,17 +25572,17 @@
       "distHigh": "-55.6%",
       "ytdChange": "-48.72%",
       "distWeek": "-11.8%",
-      "distMonth": "-23.1%",
-      "trend": "熊市空头",
+      "distMonth": "-22.1%",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 33 · 量比 1.7x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 33 · 量比 1.7x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 33.3,
         "volume_ratio": 1.71,
-        "plan": "触发：重新站上MA5 62.40 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 68.00；失效：跌回MA5 62.40 下方"
       },
       "flow_proxy": {
         "label": "疑似流出",
@@ -25628,17 +25619,17 @@
       "distHigh": "-46.8%",
       "ytdChange": "-30.36%",
       "distWeek": "-2.9%",
-      "distMonth": "-9.1%",
-      "trend": "熊市空头",
+      "distMonth": "-7.0%",
+      "trend": "牛市多头",
       "intraday_signal": {
-        "label": "日内偏弱",
-        "class": "signal-down",
-        "reason": "综合分 25/100 · 置信度高 · RSI 34 · 量比 1.1x",
-        "score": 25,
-        "confidence": "高",
+        "label": "偏强观察",
+        "class": "signal-up",
+        "reason": "综合分 55/100 · 置信度低 · RSI 34 · 量比 1.1x",
+        "score": 55,
+        "confidence": "低",
         "rsi": 34.2,
         "volume_ratio": 1.14,
-        "plan": "触发：重新站上MA5 504.54 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 515.00；失效：跌回MA5 504.54 下方"
       },
       "flow_proxy": {
         "label": "资金观望",
@@ -25676,16 +25667,16 @@
       "ytdChange": "-55.36%",
       "distWeek": "-10.7%",
       "distMonth": "-41.9%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 20 · 量比 1.5x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 20 · 量比 1.5x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 20.0,
         "volume_ratio": 1.55,
-        "plan": "触发：重新站上MA5 53.00 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 56.00；失效：跌回MA5 53.00 下方"
       },
       "flow_proxy": {
         "label": "疑似流出",
@@ -25858,7 +25849,7 @@
       "isUp": true,
       "per": "22.45",
       "roe": "12.2%",
-      "forward_per": "15.36",
+      "forward_per": "14.84",
       "pbr": "2.41",
       "distHigh": "-0.2%",
       "ytdChange": "53.77%",
@@ -25997,10 +25988,10 @@
       "change": "-7.60 (-1.55%)",
       "week_change": -0.33,
       "isUp": false,
-      "per": "30.68",
+      "per": "28.90",
       "roe": "76.7%",
-      "forward_per": "25.77",
-      "pbr": "27.68",
+      "forward_per": "25.87",
+      "pbr": "25.56",
       "distHigh": "-11.6%",
       "ytdChange": "-2.47%",
       "distWeek": "-2.2%",
@@ -26140,7 +26131,7 @@
       "isUp": false,
       "per": "21.92",
       "roe": "32.3%",
-      "forward_per": "18.46",
+      "forward_per": "18.33",
       "pbr": "6.03",
       "distHigh": "-17.6%",
       "ytdChange": "-0.94%",
@@ -26235,7 +26226,7 @@
       "per": "23.57",
       "roe": "--",
       "forward_per": "--",
-      "pbr": "2.67",
+      "pbr": "--",
       "distHigh": "-3.1%",
       "ytdChange": "11.86%",
       "distWeek": "-1.8%",
@@ -26945,21 +26936,21 @@
       "ytdChange": "39.40%",
       "distWeek": "-10.7%",
       "distMonth": "-19.3%",
-      "trend": "熊市空头",
+      "trend": "牛市多头",
       "intraday_signal": {
         "label": "日内偏弱",
         "class": "signal-down",
-        "reason": "综合分 0/100 · 置信度高 · RSI 29 · 量比 1.2x",
-        "score": 0,
-        "confidence": "高",
+        "reason": "综合分 30/100 · 置信度中 · RSI 29 · 量比 1.2x",
+        "score": 30,
+        "confidence": "中",
         "rsi": 29.0,
         "volume_ratio": 1.23,
-        "plan": "触发：重新站上MA5 5897.80 且量比>1.2；失效：跌破近1周低位"
+        "plan": "触发：放量突破近1周高点 6240.00；失效：跌回MA5 5897.80 下方"
       },
       "flow_proxy": {
-        "label": "偏流出",
-        "class": "signal-down",
-        "reason": "空头趋势且量能高于均值",
+        "label": "偏流入",
+        "class": "signal-up",
+        "reason": "多头趋势且量能高于均值",
         "volume_ratio": 1.23
       },
       "source": "yfinance"
@@ -28929,7 +28920,7 @@
       ]
     }
   },
-  "generated_at": "2026-10-25T21:37:12.378633+00:00",
+  "generated_at": "2026-10-26T00:02:34.117469+00:00",
   "update_status": {
     "expected": 351,
     "success": 338,
