@@ -1,31 +1,13 @@
 {
   "macro": [
     {
-      "name": "日经 225",
-      "price": "59444.21",
-      "change": "+3007.56 (+5.33%)",
+      "name": "黄金",
+      "price": "3685.50",
+      "change": "+170.10 (+4.84%)",
       "isUp": true,
-      "type": "index",
-      "badge_label": "",
-      "badge_class": "index"
-    },
-    {
-      "name": "美元/日元",
-      "price": "159.38",
-      "change": "-0.33 (-0.20%)",
-      "isUp": false,
-      "type": "forex",
-      "badge_label": "FX",
-      "badge_class": "forex"
-    },
-    {
-      "name": "标普 500 期货",
-      "price": "7197.25",
-      "change": "+262.25 (+3.78%)",
-      "isUp": true,
-      "type": "futures",
-      "badge_label": "期货",
-      "badge_class": "futures"
+      "type": "commodity",
+      "badge_label": "商品",
+      "badge_class": "commodity"
     },
     {
       "name": "WTI 原油",
@@ -37,9 +19,18 @@
       "badge_class": "futures"
     },
     {
-      "name": "黄金",
-      "price": "3685.50",
-      "change": "+170.10 (+4.84%)",
+      "name": "美元/日元",
+      "price": "159.38",
+      "change": "-0.33 (-0.20%)",
+      "isUp": false,
+      "type": "forex",
+      "badge_label": "FX",
+      "badge_class": "forex"
+    },
+    {
+      "name": "铜",
+      "price": "5.62",
+      "change": "+0.14 (+2.55%)",
       "isUp": true,
       "type": "commodity",
       "badge_label": "商品",
@@ -55,13 +46,22 @@
       "badge_class": "commodity"
     },
     {
-      "name": "铜",
-      "price": "5.62",
-      "change": "+0.14 (+2.55%)",
+      "name": "标普 500 期货",
+      "price": "7197.25",
+      "change": "+262.25 (+3.78%)",
       "isUp": true,
-      "type": "commodity",
-      "badge_label": "商品",
-      "badge_class": "commodity"
+      "type": "futures",
+      "badge_label": "期货",
+      "badge_class": "futures"
+    },
+    {
+      "name": "日经 225",
+      "price": "59444.21",
+      "change": "+3007.56 (+5.33%)",
+      "isUp": true,
+      "type": "index",
+      "badge_label": "",
+      "badge_class": "index"
     },
     {
       "name": "纳斯达克综合",
@@ -100,9 +100,9 @@
       "badge_class": "index"
     },
     {
-      "name": "AI半导体指数ETF-CHPS",
-      "price": "64.96",
-      "change": "+6.90 (+11.89%)",
+      "name": "半导体ETF-SOXX",
+      "price": "137.95",
+      "change": "+14.55 (+11.79%)",
       "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
@@ -118,9 +118,9 @@
       "badge_class": "etf"
     },
     {
-      "name": "半导体ETF-SOXX",
-      "price": "137.95",
-      "change": "+14.55 (+11.79%)",
+      "name": "AI半导体指数ETF-CHPS",
+      "price": "64.96",
+      "change": "+6.90 (+11.89%)",
       "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
@@ -145,6 +145,15 @@
       "badge_class": "etf"
     },
     {
+      "name": "机器人/AI ETF-BOTZ",
+      "price": "29.00",
+      "change": "+1.66 (+6.07%)",
+      "isUp": true,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
       "name": "机器人与自动化指数ETF-ROBO",
       "price": "67.09",
       "change": "+4.53 (+7.24%)",
@@ -157,24 +166,6 @@
       "name": "人形机器人ETF-BOTT",
       "price": "32.47",
       "change": "+2.63 (+8.80%)",
-      "isUp": true,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
-      "name": "机器人/AI ETF-BOTZ",
-      "price": "29.00",
-      "change": "+1.66 (+6.07%)",
-      "isUp": true,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
-      "name": "医療機器 XHE",
-      "price": "91.00",
-      "change": "+1.65 (+1.85%)",
       "isUp": true,
       "type": "etf",
       "badge_label": "ETF",
@@ -208,6 +199,15 @@
       "badge_class": "etf"
     },
     {
+      "name": "医療機器 XHE",
+      "price": "91.00",
+      "change": "+1.65 (+1.85%)",
+      "isUp": true,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
       "name": "原材料 XLB",
       "price": "49.42",
       "change": "+1.08 (+2.23%)",
@@ -217,13 +217,13 @@
       "badge_class": "etf"
     },
     {
-      "name": "日本・電機精密 ETF",
-      "price": "54900.00",
-      "change": "+2840.00 (+5.46%)",
+      "name": "製薬・医療 XLV",
+      "price": "177.46",
+      "change": "+0.22 (+0.12%)",
       "isUp": true,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
     },
     {
       "name": "日本・機械 ETF",
@@ -235,13 +235,13 @@
       "badge_class": "j-etf"
     },
     {
-      "name": "製薬・医療 XLV",
-      "price": "177.46",
-      "change": "+0.22 (+0.12%)",
+      "name": "日本・電機精密 ETF",
+      "price": "54900.00",
+      "change": "+2840.00 (+5.46%)",
       "isUp": true,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
     },
     {
       "name": "日本・情報通信 ETF",
@@ -307,24 +307,6 @@
       "badge_class": "etf"
     },
     {
-      "name": "日本・銀行 ETF",
-      "price": "37020.00",
-      "change": "+1830.00 (+5.20%)",
-      "isUp": true,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
-      "name": "日本・金融 ETF",
-      "price": "42670.00",
-      "change": "+220.00 (+0.52%)",
-      "isUp": true,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
       "name": "銀行 KBE",
       "price": "63.25",
       "change": "+0.92 (+1.48%)",
@@ -343,9 +325,18 @@
       "badge_class": "j-etf"
     },
     {
-      "name": "防衛テック ETF",
-      "price": "666.00",
-      "change": "+33.00 (+5.21%)",
+      "name": "日本・金融 ETF",
+      "price": "42670.00",
+      "change": "+220.00 (+0.52%)",
+      "isUp": true,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
+    },
+    {
+      "name": "日本・銀行 ETF",
+      "price": "37020.00",
+      "change": "+1830.00 (+5.20%)",
       "isUp": true,
       "type": "j-etf",
       "badge_label": "J-ETF",
@@ -359,6 +350,15 @@
       "type": "j-etf",
       "badge_label": "J-ETF",
       "badge_class": "j-etf"
+    },
+    {
+      "name": "生活必需品 XLP",
+      "price": "89.86",
+      "change": "-0.60 (-0.66%)",
+      "isUp": false,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
     },
     {
       "name": "バイオテクノロジー IBB",
@@ -379,40 +379,13 @@
       "badge_class": "etf"
     },
     {
-      "name": "日本・食品 ETF",
-      "price": "46920.00",
-      "change": "+1960.00 (+4.36%)",
+      "name": "防衛テック ETF",
+      "price": "666.00",
+      "change": "+33.00 (+5.21%)",
       "isUp": true,
       "type": "j-etf",
       "badge_label": "J-ETF",
       "badge_class": "j-etf"
-    },
-    {
-      "name": "金属鉱業 XME",
-      "price": "85.38",
-      "change": "+5.08 (+6.33%)",
-      "isUp": true,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
-      "name": "ディスカウントストア XRT",
-      "price": "87.74",
-      "change": "+1.25 (+1.45%)",
-      "isUp": true,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
-    },
-    {
-      "name": "生活必需品 XLP",
-      "price": "89.86",
-      "change": "-0.60 (-0.66%)",
-      "isUp": false,
-      "type": "etf",
-      "badge_label": "ETF",
-      "badge_class": "etf"
     },
     {
       "name": "Eコマース IBUY",
@@ -424,9 +397,45 @@
       "badge_class": "etf"
     },
     {
+      "name": "金属鉱業 XME",
+      "price": "85.38",
+      "change": "+5.08 (+6.33%)",
+      "isUp": true,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
+      "name": "日本・食品 ETF",
+      "price": "46920.00",
+      "change": "+1960.00 (+4.36%)",
+      "isUp": true,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
+    },
+    {
+      "name": "ディスカウントストア XRT",
+      "price": "87.74",
+      "change": "+1.25 (+1.45%)",
+      "isUp": true,
+      "type": "etf",
+      "badge_label": "ETF",
+      "badge_class": "etf"
+    },
+    {
       "name": "日本・小売 ETF",
       "price": "41300.00",
       "change": "+590.00 (+1.45%)",
+      "isUp": true,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
+    },
+    {
+      "name": "日本・不動産 ETF",
+      "price": "51740.00",
+      "change": "+1670.00 (+3.34%)",
       "isUp": true,
       "type": "j-etf",
       "badge_label": "J-ETF",
@@ -460,24 +469,6 @@
       "badge_class": "j-etf"
     },
     {
-      "name": "日本・不動産 ETF",
-      "price": "51740.00",
-      "change": "+1670.00 (+3.34%)",
-      "isUp": true,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
-      "name": "日本・商社・卸売 ETF",
-      "price": "267.30",
-      "change": "+8.30 (+3.20%)",
-      "isUp": true,
-      "type": "j-etf",
-      "badge_label": "J-ETF",
-      "badge_class": "j-etf"
-    },
-    {
       "name": "Global X半导体ETF-2243.T",
       "price": "3715.00",
       "change": "+237.00 (+6.81%)",
@@ -496,6 +487,15 @@
       "badge_class": "etf"
     },
     {
+      "name": "日本・商社・卸売 ETF",
+      "price": "267.30",
+      "change": "+8.30 (+3.20%)",
+      "isUp": true,
+      "type": "j-etf",
+      "badge_label": "J-ETF",
+      "badge_class": "j-etf"
+    },
+    {
       "name": "NF・日経半導体ETF-200A.T",
       "price": "3077.00",
       "change": "+238.00 (+8.38%)",
@@ -505,27 +505,9 @@
       "badge_class": "etf"
     },
     {
-      "name": "VIX 恐慌指数",
-      "price": "28.44",
-      "change": "-7.45 (-20.76%)",
-      "isUp": false,
-      "type": "sentiment",
-      "badge_label": "情绪",
-      "badge_class": "sentiment"
-    },
-    {
       "name": "10年国债收益率",
       "price": "5.05",
       "change": "+0.14 (+2.85%)",
-      "isUp": true,
-      "type": "bond",
-      "badge_label": "债券",
-      "badge_class": "bond"
-    },
-    {
-      "name": "5年国债收益率",
-      "price": "4.87",
-      "change": "+0.16 (+3.51%)",
       "isUp": true,
       "type": "bond",
       "badge_label": "债券",
@@ -541,18 +523,36 @@
       "badge_class": "index"
     },
     {
-      "name": "德国 DAX",
-      "price": "25463.81",
-      "change": "+661.03 (+2.67%)",
+      "name": "5年国债收益率",
+      "price": "4.87",
+      "change": "+0.16 (+3.51%)",
+      "isUp": true,
+      "type": "bond",
+      "badge_label": "债券",
+      "badge_class": "bond"
+    },
+    {
+      "name": "VIX 恐慌指数",
+      "price": "28.44",
+      "change": "-7.45 (-20.76%)",
+      "isUp": false,
+      "type": "sentiment",
+      "badge_label": "情绪",
+      "badge_class": "sentiment"
+    },
+    {
+      "name": "标普 500",
+      "price": "7175.83",
+      "change": "+265.44 (+3.84%)",
       "isUp": true,
       "type": "index",
       "badge_label": "",
       "badge_class": "index"
     },
     {
-      "name": "标普 500",
-      "price": "7175.83",
-      "change": "+265.44 (+3.84%)",
+      "name": "德国 DAX",
+      "price": "25463.81",
+      "change": "+661.03 (+2.67%)",
       "isUp": true,
       "type": "index",
       "badge_label": "",
@@ -1055,7 +1055,7 @@
       "isUp": false,
       "per": "38.88",
       "roe": "44.2%",
-      "forward_per": "15.70",
+      "forward_per": "15.68",
       "pbr": "14.58",
       "distHigh": "-38.5%",
       "ytdChange": "-11.95%",
@@ -5677,7 +5677,7 @@
       "change": "-55.00 (-10.09%)",
       "week_change": -20.45,
       "isUp": false,
-      "per": "4.48",
+      "per": "4.23",
       "roe": "6.9%",
       "forward_per": "--",
       "pbr": "0.26",
@@ -8891,7 +8891,7 @@
       "change": "-1098.00 (-11.09%)",
       "week_change": -17.51,
       "isUp": false,
-      "per": "13.90",
+      "per": "15.67",
       "roe": "31.4%",
       "forward_per": "40.19",
       "pbr": "3.45",
@@ -9123,7 +9123,7 @@
       "change": "-17.00 (-0.35%)",
       "week_change": -0.75,
       "isUp": false,
-      "per": "12.17",
+      "per": "12.13",
       "roe": "11.0%",
       "forward_per": "13.23",
       "pbr": "1.20",
@@ -10632,7 +10632,7 @@
       "isUp": false,
       "per": "19.08",
       "roe": "18.3%",
-      "forward_per": "17.73",
+      "forward_per": "17.74",
       "pbr": "2.55",
       "distHigh": "-37.7%",
       "ytdChange": "-34.79%",
@@ -14318,9 +14318,9 @@
       "change": "-2.28 (-8.92%)",
       "week_change": -28.62,
       "isUp": false,
-      "per": "-14.90",
+      "per": "-17.06",
       "roe": "-43.2%",
-      "forward_per": "-14.90",
+      "forward_per": "-17.06",
       "pbr": "4.05",
       "distHigh": "-82.6%",
       "ytdChange": "-72.12%",
@@ -16796,7 +16796,7 @@
       "change": "-115.50 (-5.54%)",
       "week_change": -12.77,
       "isUp": false,
-      "per": "17.29",
+      "per": "15.30",
       "roe": "9.8%",
       "forward_per": "22.34",
       "pbr": "1.47",
@@ -17076,7 +17076,7 @@
       "change": "-101.50 (-3.32%)",
       "week_change": -5.88,
       "isUp": false,
-      "per": "15.97",
+      "per": "16.00",
       "roe": "7.2%",
       "forward_per": "25.21",
       "pbr": "1.13",
@@ -17609,7 +17609,7 @@
       "change": "-76.00 (-4.01%)",
       "week_change": -10.28,
       "isUp": false,
-      "per": "17.27",
+      "per": "17.26",
       "roe": "13.3%",
       "forward_per": "106.22",
       "pbr": "1.89",
@@ -19172,7 +19172,7 @@
       "change": "-820.00 (-7.91%)",
       "week_change": -16.74,
       "isUp": false,
-      "per": "14.75",
+      "per": "15.98",
       "roe": "12.1%",
       "forward_per": "24.81",
       "pbr": "1.52",
@@ -19524,7 +19524,7 @@
       "change": "-27.00 (-5.41%)",
       "week_change": -7.45,
       "isUp": false,
-      "per": "8.76",
+      "per": "8.75",
       "roe": "23.8%",
       "forward_per": "--",
       "pbr": "1.73",
@@ -26235,7 +26235,7 @@
       "per": "20.87",
       "roe": "--",
       "forward_per": "--",
-      "pbr": "--",
+      "pbr": "2.44",
       "distHigh": "-11.7%",
       "ytdChange": "1.97%",
       "distWeek": "-7.9%",
@@ -26845,7 +26845,7 @@
       "isUp": false,
       "per": "16.16",
       "roe": "--",
-      "forward_per": "9.07",
+      "forward_per": "9.10",
       "pbr": "-124.67",
       "distHigh": "-53.3%",
       "ytdChange": "119.84%",
@@ -28929,7 +28929,7 @@
       ]
     }
   },
-  "generated_at": "2026-11-22T09:34:52.514219+00:00",
+  "generated_at": "2026-11-22T17:45:41.815318+00:00",
   "update_status": {
     "expected": 351,
     "success": 338,
